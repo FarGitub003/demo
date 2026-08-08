@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Osteria al Forno di Agnese — Civita di Bagnoregio, dal 1968</title>
+<meta name="description" content="Osteria di famiglia dentro Civita di Bagnoregio, aperta nel 1968 dalla Signora Agnese: sale sotto la pergola di glicine, cucina di Civita fatta in casa, il Pollo alla Civitonica. Sito dimostrativo.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Osteria al Forno di Agnese — Civita di Bagnoregio, dal 1968">
+<meta property="og:description" content="Dentro il borgo dove si arriva solo a piedi dal ponte: la pergola di glicine, la stanza in pietra e la cucina di Civita, dal 1968.">
+<meta property="og:image" content="https://demo.francescoar.com/osteria-da-agnese-civita/img/pergola.jpg">
+<!-- 🪤 Senza width/height WhatsApp non disegna la miniatura e ripiega
+     sull'anteprima di solo testo: provato il 06/08 incollando il link. -->
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="886">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:url" content="https://demo.francescoar.com/osteria-da-agnese-civita/">
+<meta property="og:site_name" content="Osteria al Forno di Agnese">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 72'%3E%3Crect width='72' height='72' rx='14' fill='%2333313C'/%3E%3Cg transform='translate(0,16)'%3E%3Cpath d='M2 31 L20 29 L20 38 L20 29 L38 25.5 L38 38 L38 25.5 L48 22 L52 11 L57 8 L59 3 L64 3 L64 7 L68 7 L69 13 L70.5 24 L71 31' fill='none' stroke='%23B9AEDA' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Figtree:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Osteria al Forno di Agnese",
+  "description": "Osteria di famiglia a Civita di Bagnoregio, aperta nel 1968 dalla Signora Agnese. Cucina tipica di Civita, sale sotto la pergola e in una stanza in pietra.",
+  "foundingDate": "1968",
+  "servesCuisine": ["Cucina tipica di Civita di Bagnoregio", "Cucina laziale"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via S. Maria del Cassero, Civita di Bagnoregio",
+    "addressLocality": "Bagnoregio",
+    "postalCode": "01022",
+    "addressRegion": "VT",
+    "addressCountry": "IT"
+  },
+  "telephone": "+390761792571",
+  "email": "info@daagnesecivitadibagnoregio.it",
+  "url": "https://www.daagnesecivitadibagnoregio.it/",
+  "sameAs": ["https://www.facebook.com/alfornodi.agnese"],
+  "acceptsReservations": "https://www.daagnesecivitadibagnoregio.it/"
+}
+</script>
+<style>
+:root{
+  --calce:#F3F0EA;
+  --calce-2:#EAE6DE;
+  --ponte:#33313C;
+  --ponte-2:#413E4C;
+  --glicine:#8A79B8;
+  --glicine-chiaro:#B9AEDA;
+  --glicine-scuro:#695C8C;  /* testo sui fondi chiari: AA (5,26 e 4,81:1) */
+  --brace:#C0631B;
+  --brace-fondo:#AF5A19;    /* fondo dei bottoni, bianco sopra: AA (4,88:1) */
+  --brace-scuro:#9A4F16;    /* testo sui fondi chiari: AA (5,27 e 4,82:1) */
+  --tufo:#A98F79;
+  --tufo-chiaro:#C3AB92;  /* micro-testi sulle bande scure: AA */
+  --tufo-scuro:#7A6553;   /* micro-testi sui fondi chiari: AA */
+  --oliva:#6E7C5D;
+  --oliva-scuro:#5C684E;    /* testo sui fondi chiari: AA (5,21 e 4,76:1) */
+  --inchiostro:#262430;
+  --ease-arco:cubic-bezier(.16,.84,.28,1);
+  --ease-soft:cubic-bezier(.3,.6,.3,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Figtree',system-ui,sans-serif;
+  font-weight:300;
+  color:var(--inchiostro);
+  background:var(--calce);
+  line-height:1.68;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:'Crimson Pro',Georgia,serif;font-weight:400;line-height:1.06}
+.voce{font-family:'Crimson Pro',Georgia,serif;font-style:italic;font-weight:300}
+
+/* ---------- accessibilità ---------- */
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--brace-fondo);color:#fff;padding:.85rem 1.4rem;z-index:200;font-weight:600;text-decoration:none}
+.skip-link:focus{left:0}
+:focus-visible{outline:3px solid var(--brace);outline-offset:3px;border-radius:2px}
+
+/* ---------- eyebrow ---------- */
+.eyebrow{
+  font-size:.7rem;letter-spacing:.34em;text-transform:uppercase;font-weight:600;
+  display:flex;align-items:flex-start;gap:.85rem;
+}
+.eyebrow::before{content:"";width:2rem;height:1px;background:currentColor;opacity:.6;flex:none;margin-top:.72em}
+.eyebrow::after{margin-top:.72em}
+
+/* ---------- nav ---------- */
+/* z-index 130: la barra (e quindi la X del burger) deve stare SOPRA il menu
+   full-screen (110), altrimenti l'overlay intercetta il click e il menu non si chiude */
+.nav{
+  position:fixed;inset:0 0 auto 0;z-index:130;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.05rem clamp(1.1rem,4vw,3rem);
+  transition:background .45s var(--ease-soft),box-shadow .45s;
+  color:#F6F3EC;
+}
+/* da trasparente la barra stava sopra il glicine chiaro e il marchio faceva 3,09:1.
+   Velo dietro la barra, che si spegne quando diventa solida.
+   Assoluto = fuori dal flusso flex, non diventa un elemento della barra */
+.nav::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(38,36,48,.84) 0%,rgba(38,36,48,.46) 62%,rgba(38,36,48,0) 100%);
+  transition:opacity .45s var(--ease-soft)}
+.nav.solid::before{opacity:0}
+.nav.solid{background:rgba(51,49,60,.94);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(246,243,236,.1)}
+.nav-brand{display:flex;align-items:center;gap:.65rem;text-decoration:none;font-family:'Crimson Pro',serif;font-size:1.02rem;letter-spacing:.2em;text-transform:uppercase}
+/* 🪤 Alzare la soglia del burger non basta: appena SOPRA la soglia ricompaiono
+   link e CTA e per una manciata di pixel il marchio non ci sta piu' e va a capo
+   (su Case del Merlo succedeva in una finestra di 7 pixel, 1001-1007, che uno
+   sweep ogni 10px scavalca in pieno). La causa vera e' che il marchio si lascia
+   comprimere: qui non si comprime e non va a capo, cosi' quella classe di
+   difetto non puo' piu' tornare a nessuna larghezza. */
+.nav-brand{flex-shrink:0;white-space:nowrap}
+.nav-brand svg{width:56px;height:31px;flex:none}
+
+/* 🪤 A 320px (iPhone SE, Galaxy Fold chiuso) il marchio andava a capo e la
+   barra cresceva di 17px sopra la piega. 320px e' la larghezza minima che le
+   WCAG chiedono di reggere senza perdite, quindi il marchio si stringe. */
+@media (max-width:360px){
+  .nav-brand{font-size:.86rem;letter-spacing:.1em;gap:.45rem}
+  .nav-brand svg,.nav-brand .merlo{width:42px}
+}.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{
+  text-decoration:none;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;
+  padding-bottom:.25rem;background:linear-gradient(var(--glicine-chiaro),var(--glicine-chiaro)) bottom left/0 1.5px no-repeat;
+  transition:background-size .4s var(--ease-soft);
+}
+.nav-links a:hover{background-size:100% 1.5px}
+.nav-cta{
+  border:1px solid var(--brace-fondo);background:var(--brace-fondo);color:#fff;
+  padding:.55rem 1.25rem;border-radius:2px;text-decoration:none;
+  font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;
+  transition:background .3s,color .3s,transform .3s var(--ease-soft);
+}
+.nav-cta:hover{background:transparent;color:#fff;transform:translateY(-1px)}
+.burger{display:none;background:none;border:0;cursor:pointer;z-index:120;width:44px;height:44px;position:relative;color:inherit}
+.burger span{position:absolute;left:9px;right:9px;height:1.5px;background:currentColor;transition:transform .4s var(--ease-soft),opacity .3s,top .4s}
+.burger span:nth-child(1){top:15px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:27px}
+.burger[aria-expanded="true"] span:nth-child(1){top:21px;transform:rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){top:21px;transform:rotate(-45deg)}
+
+/* 🪤 Il burger compariva solo sotto i 700px, ma i link della barra smettono di
+   entrarci molto prima: fra 701-860px il marchio e i link
+   andavano A CAPO e la barra raddoppiava di altezza, sopra la piega, sui tablet
+   in verticale (iPad = 768px, iPad Air = 820px). Misurato larghezza per
+   larghezza. Il menu a scomparsa parte percio' da 880px. */
+@media (max-width:880px){
+  .nav-links,.nav .nav-cta{display:none}
+  .burger{display:block}
+}.mobile-menu{
+  position:fixed;inset:0;background:var(--ponte);z-index:110;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1.3rem;
+  opacity:0;visibility:hidden;transition:opacity .45s var(--ease-soft),visibility .45s;
+}
+.mobile-menu.open{opacity:1;visibility:visible}
+.mobile-menu a{color:var(--calce);font-family:'Crimson Pro',serif;font-size:2.1rem;text-decoration:none}
+.mobile-menu a:hover{color:var(--glicine-chiaro)}
+.mobile-menu .mm-note{color:var(--tufo-chiaro);font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;margin-top:1.8rem}
+
+/* ---------- firma: il ponte ---------- */
+.ponte-line{overflow:visible}
+.ponte-line path{fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#FBF9F4;overflow:hidden;isolation:isolate}
+.hero-media{position:absolute;inset:0;z-index:-2}
+.hero-media img{width:100%;height:100%;object-fit:cover;animation:kenburns 28s var(--ease-soft) both}
+@keyframes kenburns{from{transform:scale(1.13) translate(1%,-1%)}to{transform:scale(1) translate(0,0)}}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;
+  /* la fascia centrale era a .16 e lasciava l'occhiello sopra la pietra chiara */
+  background:linear-gradient(178deg,rgba(51,49,60,.66) 0%,rgba(51,49,60,.18) 24%,rgba(51,49,60,.7) 44%,rgba(51,49,60,.84) 60%,rgba(38,36,48,.94) 100%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;
+  /* allargata verso l'alto: copre la COLONNA del testo senza spegnere la foto a
+     destra. Prima l'occhiello faceva 1,91:1 e non passava */
+  background:radial-gradient(135% 108% at 15% 94%,rgba(38,36,48,.88) 0%,rgba(38,36,48,.46) 44%,transparent 76%)}
+.hero-inner{width:min(1220px,92vw);margin-inline:auto;padding:0 0 clamp(5.4rem,10vh,8rem)}
+.hero-eyebrow{color:#DCD3F0;text-shadow:0 1px 3px rgba(38,36,48,.98),0 0 18px rgba(38,36,48,.9)}
+.hero .ponte-line{width:min(430px,72vw);height:auto;margin-bottom:1.3rem;color:#DCD3F0;filter:drop-shadow(0 2px 4px rgba(38,36,48,.95)) drop-shadow(0 0 16px rgba(38,36,48,.7))}
+.hero .ponte-line path{stroke-width:3.1}
+.hero h1{
+  font-size:clamp(3rem,11vw,8.2rem);
+  font-weight:300;letter-spacing:-.012em;margin:.22em 0 .2em;text-wrap:balance;
+  text-shadow:0 2px 26px rgba(38,36,48,.5);
+}
+.hero h1 em{font-style:italic;font-weight:300}
+.hero-tag{font-size:clamp(1rem,1.9vw,1.2rem);max-width:44ch;color:#EDE8E0;font-weight:300}
+.hero-ctas{display:flex;gap:.85rem;flex-wrap:wrap;margin-top:2.1rem}
+.btn{
+  display:inline-flex;align-items:center;gap:.6rem;
+  padding:1rem 1.9rem;border-radius:2px;text-decoration:none;
+  font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;
+  transition:transform .3s var(--ease-soft),background .3s,color .3s,border-color .3s;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--brace-fondo);color:#fff}
+.btn-primary:hover{background:#D6742B}
+.btn-ghost{border:1px solid rgba(251,249,244,.5);color:#FBF9F4}
+.btn-ghost:hover{border-color:#FBF9F4;background:rgba(251,249,244,.1)}
+.hero-ribbon{
+  position:absolute;left:0;right:0;bottom:0;
+  display:flex;justify-content:center;
+  background:rgba(38,36,48,.55);backdrop-filter:blur(10px);
+  border-top:1px solid rgba(246,243,236,.16);
+}
+.hero-ribbon div{
+  padding:.9rem 2.1rem;font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;font-weight:500;color:#EDE8E0;
+  display:flex;align-items:center;gap:.7rem;
+}
+.hero-ribbon div+div{border-left:1px solid rgba(246,243,236,.16)}
+.hero-ribbon svg{width:15px;height:15px;flex:none;color:var(--glicine-chiaro)}
+.hero .cascade{opacity:0;transform:translateY(28px);animation:rise 1.05s var(--ease-arco) forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+.hero .cascade:nth-child(1){animation-delay:.12s}
+.hero .cascade:nth-child(2){animation-delay:.3s}
+.hero .cascade:nth-child(3){animation-delay:.46s}
+.hero .cascade:nth-child(4){animation-delay:.64s}
+.hero .cascade:nth-child(5){animation-delay:.84s}
+
+/* ---------- sezioni base ---------- */
+/* la barra e' fissa (73px desktop, 78px mobile): senza questo margine di scroll
+   ogni ancora parcheggia il titolo della sezione dietro la barra */
+#storia,#sale,#cucina,#menu,#tiramisu,#civita,#gallery,#prenota{scroll-margin-top:96px}
+.section{padding:clamp(4.6rem,9vw,7.8rem) 0}
+.wrap{width:min(1220px,92vw);margin-inline:auto}
+[data-reveal]{opacity:0;transform:translateY(30px);transition:opacity .9s var(--ease-soft),transform .9s var(--ease-soft)}
+[data-reveal].in{opacity:1;transform:none}
+
+/* divisore: lo stesso ponte, si ridisegna */
+.divider{display:flex;justify-content:center;padding:.2rem 0;color:var(--tufo)}
+.divider svg{width:250px;height:auto}
+.divider path{stroke-width:1.8;opacity:.9}
+
+/* ---------- archivio 1968 ---------- */
+.archivio{background:var(--ponte);color:var(--calce);position:relative;overflow:hidden}
+.grain::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.55;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='150' height='150' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.archivio-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,5vw,4.4rem);align-items:center}
+.duotone{position:relative;overflow:hidden;border-radius:3px;isolation:isolate}
+.duotone img{filter:grayscale(1) contrast(1.07) brightness(1.03);width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center 45%}
+.duotone::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(158deg,var(--glicine) 0%,var(--brace) 100%);
+  mix-blend-mode:color;opacity:.34;
+}
+.duotone figcaption{
+  position:absolute;left:0;right:0;bottom:0;z-index:2;
+  padding:1.5rem 1.3rem .95rem;
+  background:linear-gradient(180deg,transparent 0%,rgba(38,36,48,.7) 24%,rgba(38,36,48,.9) 48%,rgba(38,36,48,.96) 100%);
+  font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:#E4DCD2;font-weight:500;
+}
+.anno{
+  font-family:'Crimson Pro',serif;font-weight:300;line-height:.86;
+  font-size:clamp(5.5rem,15vw,11rem);color:var(--glicine-chiaro);letter-spacing:-.03em;
+  display:block;margin-bottom:.1em;
+}
+.archivio h2{font-size:clamp(1.75rem,3.6vw,2.6rem);margin:.4rem 0 1.1rem;max-width:20ch;font-weight:300}
+.archivio p{color:#D3CCC3;max-width:50ch}
+.archivio .voce{color:var(--calce);font-size:1.14rem;max-width:46ch;display:block;margin-bottom:1rem}
+.conta{display:flex;gap:2.6rem;margin-top:2.4rem;flex-wrap:wrap}
+.conta div{border-top:1px solid rgba(169,143,121,.45);padding-top:.85rem}
+.conta b{display:block;font-family:'Crimson Pro',serif;font-weight:400;font-size:2.3rem;line-height:1;color:var(--calce)}
+.conta div>span{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--tufo-chiaro);font-weight:500;display:block}
+.conta b span{font:inherit;color:inherit;letter-spacing:inherit;text-transform:none}
+
+/* ---------- le due sale ---------- */
+.sale{background:var(--calce)}
+.sale-head{max-width:60ch;margin-bottom:3rem}
+.sale-head .eyebrow{color:var(--oliva-scuro)}
+.sale-head h2{font-size:clamp(1.9rem,4.4vw,3.2rem);margin:1.2rem 0 1rem;max-width:20ch;font-weight:300}
+.sale-head blockquote{
+  font-family:'Crimson Pro',serif;font-style:italic;font-weight:300;
+  font-size:clamp(1.1rem,2.1vw,1.4rem);color:#4A4655;max-width:52ch;
+  border-left:2px solid var(--glicine);padding-left:1.3rem;
+}
+.sale-head cite{display:block;margin-top:.9rem;font-style:normal;font-family:'Figtree',sans-serif;font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--tufo-scuro);font-weight:600}
+.sale-due{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.4vw,1.8rem)}
+.sala{position:relative;overflow:hidden;border-radius:3px;aspect-ratio:5/4}
+.sala img{width:100%;height:100%;object-fit:cover;transition:transform 1.3s var(--ease-soft)}
+.sala:hover img{transform:scale(1.05)}
+.sala figcaption{
+  position:absolute;inset:auto 0 0 0;padding:2.2rem 1.6rem 1.4rem;
+  background:linear-gradient(180deg,transparent 0%,rgba(38,36,48,.7) 24%,rgba(38,36,48,.9) 48%,rgba(38,36,48,.96) 100%);color:#FBF9F4;
+}
+.sala figcaption strong{font-family:'Crimson Pro',serif;font-weight:400;font-size:1.5rem;display:block;letter-spacing:.01em}
+.sala figcaption span{font-size:.9rem;color:#DDD6CC;font-weight:300}
+
+/* ---------- cucina (split scuro) ---------- */
+.cucina{background:var(--ponte-2);color:var(--calce);position:relative;overflow:hidden}
+.split{display:grid;grid-template-columns:1fr .78fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.split-media{position:relative;overflow:hidden;border-radius:3px}
+.split-media img{aspect-ratio:3/4;object-fit:cover;width:100%;transition:transform 1.3s var(--ease-soft)}
+.split-media:hover img{transform:scale(1.045)}
+.split-media::after{content:"";position:absolute;inset:12px;border:1px solid rgba(243,240,234,.28);border-radius:2px;pointer-events:none}
+.cucina .eyebrow{color:var(--glicine-chiaro)}
+.cucina h2{font-size:clamp(1.9rem,4.2vw,3rem);margin:1.2rem 0 1.1rem;max-width:17ch;font-weight:300}
+.cucina p{color:#CFC8BE;max-width:50ch}
+.cucina .voce{color:var(--calce);font-size:1.15rem;display:block;margin-bottom:.9rem;max-width:44ch}
+.note-lista{list-style:none;margin-top:2rem;display:grid;gap:.85rem}
+.note-lista li{display:flex;gap:.9rem;font-size:.96rem;color:#E0D9CF;align-items:flex-start}
+.note-lista svg{width:17px;height:17px;flex:none;color:var(--glicine-chiaro);margin-top:.32rem}
+
+/* ---------- menù tipografico ---------- */
+.menu{background:var(--calce-2)}
+.menu-head{text-align:center;max-width:56ch;margin:0 auto 3.4rem}
+.menu-head .eyebrow{justify-content:center;color:var(--oliva-scuro)}
+.menu-head .eyebrow::after{content:"";width:2rem;height:1px;background:currentColor;opacity:.6}
+.menu-head h2{font-size:clamp(2rem,4.6vw,3.3rem);margin:1.2rem 0 .8rem;font-weight:300}
+.menu-head p{color:#5C5769}
+.menu-cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem)}
+.corso{margin-bottom:2.6rem}
+.corso h3{
+  font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;font-family:'Figtree',sans-serif;font-weight:600;
+  color:var(--glicine-scuro);padding-bottom:.7rem;border-bottom:1px solid rgba(138,121,184,.32);margin-bottom:1.1rem;
+}
+.corso ul{list-style:none;display:grid;gap:.75rem}
+.corso li{font-family:'Crimson Pro',serif;font-size:1.24rem;font-weight:400;line-height:1.35;color:var(--inchiostro)}
+.corso li small{display:block;font-family:'Figtree',sans-serif;font-size:.82rem;color:#5B5568;font-weight:300;letter-spacing:.01em;margin-top:.1rem}
+.vanto{
+  background:var(--calce);border:1px solid rgba(192,99,27,.3);border-radius:3px;
+  padding:1.5rem 1.6rem;margin:.4rem 0 2.6rem;position:relative;
+}
+.vanto span{font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;color:var(--brace-scuro);font-weight:600}
+.vanto h4{font-family:'Crimson Pro',serif;font-weight:400;font-size:1.6rem;margin:.5rem 0 .5rem;line-height:1.15}
+.vanto q{font-family:'Crimson Pro',serif;font-style:italic;font-weight:300;color:#4A4655;font-size:1.06rem}
+.menu-foto{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+.menu-foto figure{overflow:hidden;border-radius:3px;position:relative}
+.menu-foto img{aspect-ratio:4/3;object-fit:cover;width:100%;transition:transform 1.2s var(--ease-soft)}
+.menu-foto figure:hover img{transform:scale(1.06)}
+.menu-foto figcaption{
+  position:absolute;inset:auto 0 0 0;padding:1.6rem .95rem .75rem;
+  background:linear-gradient(180deg,transparent 0%,rgba(38,36,48,.7) 24%,rgba(38,36,48,.9) 48%,rgba(38,36,48,.96) 100%);
+  color:#FBF9F4;font-size:.78rem;letter-spacing:.06em;font-weight:400;
+}
+.menu-fine{margin-top:2.8rem;text-align:center}
+.menu-fine p{display:inline-block;font-family:'Crimson Pro',serif;font-style:italic;font-weight:300;font-size:1.1rem;color:#5C5769;border-top:1px solid rgba(169,143,121,.5);padding-top:1.2rem;max-width:60ch;text-wrap:balance}
+
+/* ---------- tiramisù ---------- */
+.dolci{background:var(--calce);text-align:center}
+.dolci>.wrap>.eyebrow{justify-content:center;color:var(--brace-scuro)}
+.dolci .eyebrow::after{content:"";width:2rem;height:1px;background:currentColor;opacity:.6}
+.dolci h2{font-size:clamp(1.9rem,4.4vw,3rem);margin:1.2rem 0 .8rem;font-weight:300}
+.dolci>.wrap>p{color:#5C5769;max-width:48ch;margin:0 auto}
+.quattro{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:3rem}
+.gusto{
+  border:1px solid rgba(169,143,121,.42);border-radius:3px;overflow:hidden;
+  display:flex;flex-direction:column;background:var(--calce-2);
+  transition:transform .45s var(--ease-soft),box-shadow .45s,border-color .45s;
+}
+.gusto:hover{transform:translateY(-5px);box-shadow:0 20px 36px -24px rgba(38,36,48,.5);border-color:var(--glicine)}
+.gusto img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.gusto .senza-foto{aspect-ratio:4/3;display:grid;place-items:center;position:relative;overflow:hidden;
+  background:linear-gradient(152deg,#EFE9F3 0%,#DED6E8 55%,#D2C8E0 100%);color:var(--glicine)}
+.gusto .senza-foto::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(58% 58% at 50% 42%,rgba(255,255,255,.75) 0%,transparent 70%)}
+.gusto .senza-foto svg{width:78px;height:78px;position:relative;stroke-width:1.2;opacity:.9}
+.gusto b{font-family:'Crimson Pro',serif;font-weight:400;font-size:1.3rem;padding:1.05rem .9rem 1.2rem;display:block}
+
+/* ---------- civita (banda archivio) ---------- */
+.civita{position:relative;color:#FBF9F4;isolation:isolate;padding:clamp(5.5rem,12vw,9rem) 0;overflow:hidden}
+.civita-media{position:absolute;inset:0;z-index:-2}
+.civita-media img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.06)}
+.civita::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(96deg,rgba(38,36,48,.94) 4%,rgba(51,49,60,.72) 48%,rgba(51,49,60,.4) 100%)}
+.civita::after{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(158deg,var(--glicine) 0%,var(--brace) 100%);mix-blend-mode:color;opacity:.3}
+.civita .eyebrow{color:var(--glicine-chiaro)}
+.civita h2{font-size:clamp(1.9rem,4.4vw,3.1rem);margin:1.2rem 0 1.1rem;max-width:18ch;font-weight:300}
+.civita blockquote{
+  font-family:'Crimson Pro',serif;font-style:italic;font-weight:300;
+  font-size:clamp(1.15rem,2.3vw,1.5rem);max-width:40ch;color:#EDE8E0;
+}
+.civita cite{display:block;margin-top:.9rem;font-style:normal;font-family:'Figtree',sans-serif;font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--glicine-chiaro);font-weight:600}
+.civita .arrivo{margin-top:2.6rem;max-width:44ch;color:#DDD6CC}
+
+/* ---------- gallery ---------- */
+.gallery{background:var(--calce-2)}
+.gallery-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:2.6rem}
+.gallery-head .eyebrow{color:var(--oliva-scuro)}
+.gallery-head h2{font-size:clamp(1.9rem,4.4vw,3rem);margin-top:1.1rem;font-weight:300}
+.gallery-head p{font-size:.85rem;color:#5B5568;max-width:26ch}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;grid-auto-flow:dense}
+.gallery-grid button{
+  display:block;width:100%;border:0;padding:0;background:none;cursor:zoom-in;
+  border-radius:3px;overflow:hidden;position:relative;aspect-ratio:1/1;
+}
+.gallery-grid button.wide{grid-column:span 2}
+.gallery-grid button.tall{grid-row:span 2;aspect-ratio:auto}
+.gallery-grid img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease-soft)}
+.gallery-grid button:hover img{transform:scale(1.05)}
+.gallery-grid button::after{
+  content:attr(data-tag);position:absolute;left:.85rem;bottom:.8rem;
+  font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:#FBF9F4;
+  background:rgba(38,36,48,.6);padding:.32rem .7rem;border-radius:99px;backdrop-filter:blur(6px);
+  opacity:0;transform:translateY(6px);transition:opacity .4s,transform .4s;font-weight:500;
+}
+.gallery-grid button:hover::after,.gallery-grid button:focus-visible::after{opacity:1;transform:none}
+.lightbox{
+  position:fixed;inset:0;z-index:150;background:rgba(30,28,38,.95);
+  display:none;align-items:center;justify-content:center;flex-direction:column;padding:3.6rem 1.2rem 2rem;
+}
+.lightbox.open{display:flex}
+.lightbox img{max-width:min(1100px,94vw);max-height:78vh;object-fit:contain;border-radius:3px}
+.lightbox figcaption{color:var(--calce);font-family:'Crimson Pro',serif;font-style:italic;margin-top:1.1rem;font-size:1rem}
+/* 🪤 I controlli della lightbox avevano un fondo CHIARO traslucido (.08) con il
+   glifo chiaro: sul desktop la foto e' limitata e i bottoni cadono sul velo
+   scuro fisso, ma su telefono la foto occupa quasi tutta la larghezza e i
+   bottoni ci finiscono SOPRA — sopra una foto chiara il glifo spariva del tutto
+   (misurato fino a 1,00:1 su un minimo di 4,5, e succedeva su 4 demo su 5).
+   Fondo scuro coprente: il glifo chiaro ha sempre il suo contrasto, qualunque
+   foto ci sia sotto. */
+.lb-close,.lb-prev,.lb-next{
+  position:absolute;background:rgba(38,36,48,.78);backdrop-filter:blur(8px);border:1px solid rgba(243,240,234,.42);color:var(--calce);
+  width:46px;height:46px;border-radius:50%;cursor:pointer;font-size:1.05rem;display:grid;place-items:center;
+  transition:background .3s;
+}
+.lb-close:hover,.lb-prev:hover,.lb-next:hover{background:rgba(38,36,48,.94)}
+.lb-close{top:1.2rem;right:1.2rem}
+.lb-prev{left:1.2rem;top:50%;transform:translateY(-50%)}
+.lb-next{right:1.2rem;top:50%;transform:translateY(-50%)}
+
+/* ---------- prenota ---------- */
+.finale{position:relative;color:#FBF9F4;isolation:isolate;padding:clamp(5.5rem,12vw,9rem) 0}
+.finale-media{position:absolute;inset:0;z-index:-2}
+.finale-media img{width:100%;height:100%;object-fit:cover;object-position:72% center}
+.finale::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(102deg,rgba(38,36,48,.95) 6%,rgba(45,43,55,.8) 52%,rgba(51,49,60,.5) 100%)}
+.finale .eyebrow{color:var(--glicine-chiaro)}
+.finale h2{font-size:clamp(2rem,4.8vw,3.3rem);max-width:16ch;margin:1.2rem 0 1rem;font-weight:300}
+.finale>.wrap>.voce{max-width:44ch;color:#EDE8E0;font-size:1.15rem;display:block}
+.contatti{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:2.6rem;max-width:720px}
+.contatto{
+  border:1px solid rgba(243,240,234,.24);border-radius:3px;padding:1.3rem 1.35rem;
+  background:rgba(38,36,48,.42);backdrop-filter:blur(8px);
+}
+.contatto .k{font-size:.64rem;letter-spacing:.26em;text-transform:uppercase;color:var(--glicine-chiaro);font-weight:600;display:block;margin-bottom:.55rem}
+.contatto a{color:#FBF9F4;text-decoration:none;border-bottom:1px solid rgba(243,240,234,.34);transition:border-color .3s}
+.contatto a:hover{border-color:var(--brace)}
+.contatto p{font-size:.94rem;color:#EDE8E0}
+.contatto p+p{margin-top:.35rem}
+.contatto .reg{font-size:.86rem;color:#D3CCC3}
+
+/* ---------- footer ---------- */
+footer{background:#25232E;color:var(--tufo);padding:2.9rem 0 2.5rem;font-size:.8rem}
+.footer-inner{display:flex;flex-direction:column;gap:1.05rem;align-items:center;text-align:center}
+.footer-brand{display:flex;align-items:center;gap:.6rem;font-family:'Crimson Pro',serif;color:var(--calce);font-size:1rem;letter-spacing:.2em;text-transform:uppercase}
+.footer-brand svg{width:50px;height:28px}
+.footer-social{display:flex;gap:1.4rem;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.footer-social a{text-decoration:none;color:var(--calce);opacity:.85;transition:opacity .3s,color .3s}
+.footer-social a:hover{opacity:1;color:var(--glicine-chiaro)}
+.ai-label{
+  border:1px solid rgba(138,121,184,.5);color:var(--glicine-chiaro);
+  padding:.6rem 1.15rem;border-radius:99px;font-size:.72rem;letter-spacing:.03em;max-width:92vw;line-height:1.5;
+}
+footer .fine{font-size:.74rem;color:#C4B4A3;max-width:60ch;line-height:1.6}
+
+/* ---------- responsive ---------- */
+@media (max-width:1040px){
+  .archivio-grid{grid-template-columns:1fr}
+  .split{grid-template-columns:1fr}
+  .split-media img{aspect-ratio:16/10}
+  .quattro{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .menu-cols{grid-template-columns:1fr;gap:0}
+  .sale-due{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .gallery-grid button.tall{grid-row:span 1;aspect-ratio:1/1}
+}
+@media (max-width:700px){
+  .contatti{grid-template-columns:1fr}
+  .nav-links,.nav .nav-cta{display:none}
+  .burger{display:block}
+  .hero-ribbon{display:none}
+  .hero-inner{padding-bottom:4rem}
+  .menu-foto{grid-template-columns:1fr;gap:.8rem}
+  .conta{gap:1.6rem}
+  /* 🪤 su .civita e .finale il velo e' un gradiente ORIZZONTALE (96deg/102deg):
+     serve al desktop, dove il testo sta in una colonna stretta sul lato scuro.
+     A 390px il testo occupa tutta la larghezza e finisce sul lato chiaro della
+     foto: la citazione di Tecchi stava a 3,53:1, la sua firma a 2,51:1 e il
+     capoverso «come si arriva» a 2,46:1. Su telefono il velo va reso pieno. */
+  .civita::before{background:linear-gradient(180deg,rgba(38,36,48,.93) 0%,rgba(45,43,55,.9) 50%,rgba(38,36,48,.93) 100%)}
+  .finale::before{background:linear-gradient(180deg,rgba(38,36,48,.95) 0%,rgba(45,43,55,.9) 50%,rgba(38,36,48,.95) 100%)}
+}
+@media (max-width:420px){
+  .gallery-grid button.wide{grid-column:span 2}
+}
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  html{scroll-behavior:auto}
+  [data-reveal]{opacity:1;transform:none}
+  .hero .cascade{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Salta al contenuto</a>
+
+<header class="nav" id="nav">
+  <a class="nav-brand" href="#top" aria-label="Osteria al Forno di Agnese, torna su">
+    <svg class="ponte-line" viewBox="0 0 72 40" aria-hidden="true"><path d="M2 31 L20 29 L20 38 L20 29 L38 25.5 L38 38 L38 25.5 L48 22 L52 11 L57 8 L59 3 L64 3 L64 7 L68 7 L69 13 L70.5 24 L71 31"/></svg>
+    Al Forno di Agnese
+  </a>
+  <nav aria-label="Principale">
+    <ul class="nav-links">
+      <li><a href="#storia">Il 1968</a></li>
+      <li><a href="#sale">Le sale</a></li>
+      <li><a href="#menu">Il menù</a></li>
+      <li><a href="#civita">Civita</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+    </ul>
+  </nav>
+  <a class="nav-cta" href="#prenota">Prenota</a>
+  <button class="burger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Apri il menu"><span></span><span></span><span></span></button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#storia">Il 1968</a>
+  <a href="#sale">Le sale</a>
+  <a href="#menu">Il menù</a>
+  <a href="#civita">Civita</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#prenota">Prenota un tavolo</a>
+  <p class="mm-note">Civita di Bagnoregio</p>
+</div>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="hero-media">
+    <picture>
+      <source media="(max-width:700px)" srcset="img/pergola-mobile.jpg">
+      <img src="img/pergola.jpg" alt="I tavoli apparecchiati dell'osteria sotto la pergola di glicine in fiore, tra i muri in tufo di Civita di Bagnoregio" fetchpriority="high">
+    </picture>
+  </div>
+  <div class="hero-inner">
+    <svg class="ponte-line cascade" viewBox="0 0 360 112" aria-hidden="true">
+      <path id="pontePath" d="M6 88 L52 82 L52 110 L52 82 L100 76 L100 110 L100 76 L148 69 L148 108 L148 69 L196 62 L212 55 L222 35 L234 27 L240 16 L252 16 L252 9 L264 9 L264 18 L278 18 L278 11 L292 11 L292 25 L303 25 L313 47 L325 77 L339 97 L356 107"/>
+    </svg>
+    <p class="eyebrow hero-eyebrow cascade">Osteria dal 1968 · Civita di Bagnoregio</p>
+    <h1 class="cascade">Al Forno <em>di Agnese</em></h1>
+    <p class="hero-tag cascade">Sale all'aperto sotto una pergola di glicine e una stanza in pietra, dentro il borgo dove si arriva soltanto a piedi, passando il ponte.</p>
+    <div class="hero-ctas cascade">
+      <a class="btn btn-primary" href="tel:+390761792571">Prenota al telefono</a>
+      <a class="btn btn-ghost" href="#menu">Guarda il menù</a>
+    </div>
+  </div>
+  <div class="hero-ribbon">
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 20h16M6 20V10l6-4 6 4v10"/><path d="M10 20v-5h4v5"/></svg>Aperta nel 1968</div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 8h18M6 8v10M18 8v10M9 8c0-3 1.5-4 3-4s3 1 3 4"/></svg>Sotto la pergola</div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 17h20M5 17V9M12 17V7M19 17v-6"/></svg>Si arriva a piedi</div>
+  </div>
+</section>
+
+<section class="section archivio grain" id="storia">
+  <div class="wrap archivio-grid">
+    <figure class="duotone" data-reveal>
+      <img src="img/agnese-1968.jpg" alt="Fotografia storica in bianco e nero della Signora Agnese che accende il forno a legna con le fascine" loading="lazy">
+      <figcaption>La Signora Agnese al forno a legna · archivio di famiglia</figcaption>
+    </figure>
+    <div>
+      <p class="eyebrow" data-reveal style="color:var(--tufo-chiaro)">La fondatrice</p>
+      <span class="anno" data-reveal>1968</span>
+      <h2 data-reveal>L'osteria l'ha aperta la nonna.</h2>
+      <span class="voce" data-reveal>«L'Osteria al Forno di Agnese nasce nel 1968, aperta proprio dalla Signora Agnese, nonna degli attuali titolari.»</span>
+      <p data-reveal>Nella fotografia è lei, che accende il forno con le fascine. Da allora in cucina si fa la stessa cosa: le antiche ricette di Civita che si tramandano da generazioni, tutte fatte in casa.</p>
+      <div class="conta" data-reveal>
+        <div><b><span id="anni">58</span></b><span>anni di osteria</span></div>
+        <div><b>Nonna e nipoti</b><span>chi sta in cucina</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true"><svg class="ponte-line" viewBox="0 0 360 112" preserveAspectRatio="xMidYMid meet"><path class="ponte-div" d="M6 88 L52 82 L52 110 L52 82 L100 76 L100 110 L100 76 L148 69 L148 108 L148 69 L196 62 L212 55 L222 35 L234 27 L240 16 L252 16 L252 9 L264 9 L264 18 L278 18 L278 11 L292 11 L292 25 L303 25 L313 47 L325 77 L339 97 L356 107"/></svg></div>
+
+<section class="section sale" id="sale">
+  <div class="wrap">
+    <div class="sale-head">
+      <p class="eyebrow" data-reveal>Dove si mangia</p>
+      <h2 data-reveal>Due sale, una sotto il glicine.</h2>
+      <blockquote class="voce" data-reveal>«Con sale sia all'aperto, sotto una splendida pergola, sia al chiuso, in una stanza con arredamento caratteristico, potrete degustare i nostri cibi nell'atmosfera che solo Civita di Bagnoregio sa offrire.»
+        <cite>La presentazione dell'osteria</cite>
+      </blockquote>
+    </div>
+    <div class="sale-due">
+      <figure class="sala" data-reveal>
+        <img src="img/pergola.jpg" alt="La sala all'aperto con i tavoli apparecchiati sotto la pergola di glicine" loading="lazy">
+        <figcaption><strong>Sotto la pergola</strong><span>Tavoli all'aperto tra i muri in tufo, il glicine e l'ulivo.</span></figcaption>
+      </figure>
+      <figure class="sala" data-reveal>
+        <img src="img/sala-pietra.jpg" alt="La sala interna con il muro in pietra a vista, le travi in legno e le tavole apparecchiate" loading="lazy">
+        <figcaption><strong>La stanza in pietra</strong><span>Muro a vista, travi di legno e pavimento in cotto, per quando fuori fa fresco.</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section cucina grain" id="cucina">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow" data-reveal>In cucina</p>
+      <h2 data-reveal>Ricette di qui, fatte in casa.</h2>
+      <span class="voce" data-reveal>«Antipasti caserecci preparati con prodotti genuini e conditi dall'olio extravergine d'oliva di nostra produzione.»</span>
+      <p data-reveal>La ricerca è quella delle ricette antiche di Civita, alcune quasi perdute: paste ripiene, ravioli, zuppe e primi caserecci, con qualche accostamento nuovo che sul menù si riconosce subito.</p>
+      <ul class="note-lista" data-reveal>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg>Olio extravergine di produzione dell'osteria</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg>Sedanini disponibili anche in versione senza glutine</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg>Vini da tutta Italia, con un occhio alle produzioni del centro</li>
+      </ul>
+    </div>
+    <figure class="split-media" data-reveal>
+      <img src="img/tavola.jpg" alt="Dettaglio di un coperto apparecchiato: tovagliolo arancio, posate e sottopiatto in vimini" loading="lazy">
+    </figure>
+  </div>
+</section>
+
+<section class="section menu" id="menu">
+  <div class="wrap">
+    <div class="menu-head">
+      <p class="eyebrow" data-reveal>Il menù</p>
+      <h2 data-reveal>Quello che trovi in tavola</h2>
+      <p data-reveal>Le portate cambiano con la stagione e con la spesa. Questi sono i piatti che l'osteria racconta di sé.</p>
+    </div>
+
+    <div class="vanto" data-reveal>
+      <span>Il piatto di casa</span>
+      <h4>Pollo alla Civitonica</h4>
+      <q>Nostro vanto ed unici a seguire la vera ricetta.</q>
+    </div>
+
+    <div class="menu-cols">
+      <div>
+        <section class="corso" data-reveal>
+          <h3>Antipasti</h3>
+          <ul>
+            <li>Antipasti caserecci<small>Prodotti genuini, formaggi e salumi, conditi con l'olio dell'osteria</small></li>
+          </ul>
+        </section>
+        <section class="corso" data-reveal>
+          <h3>Primi</h3>
+          <ul>
+            <li>Sedanini con salsiccia, granella di nocciole e panna<small>Disponibili anche senza glutine</small></li>
+            <li>Mezzelune di carne al ragù</li>
+            <li>Pincinelle al pesto di pistacchio</li>
+            <li>Zuppa di farro e legumi</li>
+          </ul>
+        </section>
+        <section class="corso" data-reveal>
+          <h3>Secondi</h3>
+          <ul>
+            <li>Pollo alla Civitonica</li>
+            <li>Fagioli in salsa di alici</li>
+            <li>Baffo al pomodoro</li>
+            <li>Bistecche di maiale e di manzo</li>
+            <li>Straccetti con rucola e pinoli</li>
+          </ul>
+        </section>
+      </div>
+      <div>
+        <section class="corso" data-reveal>
+          <h3>Insalate</h3>
+          <ul>
+            <li>Insalata di Agnese<small>Insalata verde, rucola, olive nere, pomodoro pachino, mozzarella</small></li>
+            <li>Insalata di fragole<small>Insalata mista, mozzarella, fragole</small></li>
+            <li>Insalata di noci e pecorino<small>Noci, pecorino primo sale, insalata mista</small></li>
+            <li>Panzanella e insalata di lenticchie</li>
+          </ul>
+        </section>
+        <section class="corso" data-reveal>
+          <h3>Dolci</h3>
+          <ul>
+            <li>Torta al cioccolato con ricotta e pere</li>
+            <li>Il tiramisù dell'osteria<small>Un gusto per stagione, quattro in tutto</small></li>
+          </ul>
+        </section>
+        <section class="corso" data-reveal>
+          <h3>Cantina</h3>
+          <ul>
+            <li>Vini da tutta Italia<small>Con un occhio particolare per le produzioni del centro Italia</small></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <div class="menu-foto" data-reveal>
+      <figure><img src="img/pollo-civitonica.jpg" alt="Il Pollo alla Civitonica servito in un piatto di ceramica dipinta a mano" loading="lazy"><figcaption>Pollo alla Civitonica</figcaption></figure>
+      <figure><img src="img/sedanini.jpg" alt="Sedanini con salsiccia, granella di nocciole e panna" loading="lazy"><figcaption>Sedanini, nocciole e salsiccia</figcaption></figure>
+      <figure><img src="img/insalata-agnese.jpg" alt="L'Insalata di Agnese con mozzarella, pomodoro, olive nere e rucola" loading="lazy"><figcaption>Insalata di Agnese</figcaption></figure>
+    </div>
+
+    <div class="menu-fine" data-reveal>
+      <p>I prezzi sono esposti in osteria. Una passeggiata tra le vie di Civita è la giusta conclusione del pasto.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section dolci" id="tiramisu">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>I dolci</p>
+    <h2 data-reveal>Un gusto per stagione</h2>
+    <p data-reveal>Il tiramisù dell'osteria non è uno solo: cambia con il periodo dell'anno, e sono quattro.</p>
+    <div class="quattro">
+      <article class="gusto" data-reveal>
+        <img src="img/tiramisu-mandarino.jpg" alt="Tiramisù al mandarino con spicchi freschi sopra la crema" loading="lazy">
+        <b>Al mandarino</b>
+      </article>
+      <article class="gusto" data-reveal>
+        <div class="senza-foto" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="24" cy="26" r="12"/><path d="M24 14c0-4 2-6 5-7-1 3 0 5 1 6"/><path d="M18 26h12M20 31h8"/></svg></div>
+        <b>Al limone</b>
+      </article>
+      <article class="gusto" data-reveal>
+        <div class="senza-foto" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M24 40c-7-4-11-9-11-15a11 11 0 0 1 22 0c0 6-4 11-11 15z"/><path d="M24 14V8M20 9l4-4 4 4"/><circle cx="20" cy="26" r=".8"/><circle cx="27" cy="24" r=".8"/><circle cx="24" cy="31" r=".8"/></svg></div>
+        <b>Alla fragola</b>
+      </article>
+      <article class="gusto" data-reveal>
+        <img src="img/tiramisu-caffe.jpg" alt="Tiramisù al caffè spolverato di cacao in un piatto di ceramica dipinta" loading="lazy">
+        <b>Al caffè</b>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="civita" id="civita">
+  <div class="civita-media"><img src="img/ponte-civita.jpg" alt="" loading="lazy"></div>
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Il borgo</p>
+    <h2 data-reveal>Si arriva a piedi, dal ponte.</h2>
+    <blockquote data-reveal>«La Città che Muore. Così viene denominata Civita di Bagnoregio da quando il nostro concittadino Bonaventura Tecchi, scrittore e germanista, la descrisse in un suo celebre racconto.»
+      <cite>Bonaventura Tecchi, citato dall'osteria</cite>
+    </blockquote>
+    <p class="arrivo" data-reveal>Civita sta su uno sperone di tufo, tra la Valle dei Calanchi: l'unico accesso è il ponte pedonale. L'osteria è dentro il borgo, in Via S. Maria del Cassero: dopo il ponte, ancora due passi.</p>
+  </div>
+</section>
+
+<section class="section gallery" id="gallery">
+  <div class="wrap">
+    <div class="gallery-head">
+      <div>
+        <p class="eyebrow" data-reveal>Gallery</p>
+        <h2 data-reveal>L'osteria, com'è davvero.</h2>
+      </div>
+      <p data-reveal>Fotografie dell'osteria e dei suoi piatti. Clicca per ingrandire.</p>
+    </div>
+    <div class="gallery-grid">
+      <button class="wide tall" data-tag="La lavagna" data-caption="La lavagna a cuore con le specialità del giorno, all'ingresso"><img src="img/lavagna.jpg" alt="Lavagna a forma di cuore appesa al cancello verde con le specialità scritte a mano" loading="lazy"></button>
+      <button data-tag="L'insalata" data-caption="L'Insalata di Agnese"><img src="img/insalata-agnese.jpg" alt="L'Insalata di Agnese con mozzarella, pomodoro, olive nere e rucola" loading="lazy"></button>
+      <button data-tag="La stanza" data-caption="La sala interna con il muro in pietra"><img src="img/sala-pietra.jpg" alt="Sala interna con muro in pietra e travi in legno" loading="lazy"></button>
+      <button data-tag="Il coperto" data-caption="Un coperto apparecchiato"><img src="img/tavola.jpg" alt="Coperto apparecchiato con tovagliolo arancio" loading="lazy"></button>
+      <button data-tag="Le tazzine" data-caption="Tazzine di ceramica dipinta a mano"><img src="img/tazzine.jpg" alt="Due tazzine e una teiera di ceramica dipinta a mano su un vassoio" loading="lazy"></button>
+      <button data-tag="L'antipasto" data-caption="L'antipasto casereccio"><img src="img/antipasto.jpg" alt="Antipasto casereccio con bruschette e fagioli in un piatto dipinto" loading="lazy"></button>
+      <button data-tag="Le mezzelune" data-caption="Mezzelune di carne al ragù"><img src="img/mezzelune.jpg" alt="Mezzelune di carne al ragù con foglie di basilico" loading="lazy"></button>
+      <button data-tag="Il tiramisù" data-caption="Il tiramisù al caffè"><img src="img/tiramisu-caffe.jpg" alt="Tiramisù al caffè spolverato di cacao" loading="lazy"></button>
+      <button data-tag="Il pollo" data-caption="Il Pollo alla Civitonica"><img src="img/pollo-civitonica.jpg" alt="Pollo alla Civitonica con olive e pomodoro" loading="lazy"></button>
+    </div>
+  </div>
+</section>
+
+<section class="finale" id="prenota">
+  <div class="finale-media"><img src="img/sala-pietra.jpg" alt="" loading="lazy"></div>
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Prenota</p>
+    <h2 data-reveal>Il tavolo si prenota per telefono.</h2>
+    <span class="voce" data-reveal>Una telefonata basta: la prenotazione via email non viene presa.</span>
+    <div class="contatti">
+      <div class="contatto" data-reveal>
+        <span class="k">Telefono</span>
+        <p><a href="tel:+390761792571">0761 79 25 71</a></p>
+        <p><a href="tel:+393401259721">340 12 59 721</a></p>
+      </div>
+      <div class="contatto" data-reveal>
+        <span class="k">Prenotazioni</span>
+        <p class="reg">Solo per telefono, non via email.</p>
+        <p class="reg">A pranzo di sabato, domenica e nei giorni festivi non si prendono prenotazioni.</p>
+      </div>
+      <div class="contatto" data-reveal>
+        <span class="k">Dove siamo</span>
+        <p>Via S. Maria del Cassero<br>Civita di Bagnoregio<br>01022 Bagnoregio (VT)</p>
+        <p><a href="https://maps.google.com/?q=Osteria+al+Forno+di+Agnese,+Via+S.+Maria+del+Cassero,+Civita+di+Bagnoregio" target="_blank" rel="noopener">Apri in Google Maps</a></p>
+      </div>
+      <div class="contatto" data-reveal>
+        <span class="k">Informazioni</span>
+        <p><a href="mailto:info@daagnesecivitadibagnoregio.it?subject=Richiesta%20informazioni">info@daagnesecivitadibagnoregio.it</a></p>
+        <p class="reg">Per informazioni e richieste, non per prenotare.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <p class="footer-brand">
+      <svg class="ponte-line" viewBox="0 0 72 40" aria-hidden="true"><path d="M2 31 L20 29 L20 38 L20 29 L38 25.5 L38 38 L38 25.5 L48 22 L52 11 L57 8 L59 3 L64 3 L64 7 L68 7 L69 13 L70.5 24 L71 31"/></svg>
+      Al Forno di Agnese
+    </p>
+    <p class="footer-social">
+      <a href="https://www.facebook.com/alfornodi.agnese" target="_blank" rel="noopener">Facebook</a>
+      <a href="tel:+390761792571">0761 79 25 71</a>
+    </p>
+    <p class="ai-label">Sito dimostrativo realizzato con AI da FAR AI · contenuti da rivedere con l'attività prima della pubblicazione</p>
+    <p class="fine">Testi e fotografie provengono dal sito attuale dell'Osteria al Forno di Agnese e restano di proprietà dell'attività.</p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galleria fotografica">
+  <button class="lb-close" aria-label="Chiudi">✕</button>
+  <button class="lb-prev" aria-label="Foto precedente">←</button>
+  <figure>
+    <img src="img/lavagna.jpg" alt="La lavagna a cuore con le specialità del giorno">
+    <figcaption></figcaption>
+  </figure>
+  <button class="lb-next" aria-label="Foto successiva">→</button>
+</div>
+
+<script>
+(function(){
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* nav solida allo scroll */
+  var nav = document.getElementById('nav');
+  var onScroll = function(){ nav.classList.toggle('solid', window.scrollY > 40); };
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  /* burger */
+  var burger = document.querySelector('.burger');
+  var mm = document.getElementById('mobileMenu');
+  /* 🪤 Col pannello aperto il Tab usciva e andava ad attivare i link INVISIBILI
+     dietro il velo: premendo Invio la pagina saltava altrove mentre il menu
+     restava aperto a schermo pieno, senza alcun indizio. E' il percorso di un
+     lettore di schermo su telefono (VoiceOver e TalkBack seguono l'ordine del
+     Tab). `inert` toglie il resto della pagina anche alla lettura per gesti,
+     che NON segue il Tab; il trap sul Tab chiude il ciclo. */
+  var fuori = [document.getElementById('main'), document.querySelector('footer'),
+               document.querySelector('.skip-link'), document.querySelector('.nav-brand'),
+               document.querySelector('nav'), document.querySelector('.nav-cta')];
+  function setMenu(open){
+    mm.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'Chiudi il menu' : 'Apri il menu');
+    document.body.style.overflow = open ? 'hidden' : '';
+    fuori.forEach(function(el){ if(el){ if(open){ el.setAttribute('inert',''); }
+                                       else { el.removeAttribute('inert'); } } });
+  }
+  function trappola(e, pannello, extra){
+    if(e.key !== 'Tab') return;
+    var f = Array.prototype.slice.call(
+      pannello.querySelectorAll('a[href], button:not([disabled]), [tabindex="0"]'));
+    if(extra) f = [extra].concat(f);
+    /* 🪤 niente offsetParent: dentro un pannello position:fixed e' null anche
+       per gli elementi perfettamente visibili */
+    f = f.filter(function(el){ return el.getClientRects().length > 0; });
+    if(!f.length) return;
+    var primo = f[0], ultimo = f[f.length - 1];
+    if(e.shiftKey && document.activeElement === primo){ e.preventDefault(); ultimo.focus(); }
+    else if(!e.shiftKey && document.activeElement === ultimo){ e.preventDefault(); primo.focus(); }
+  }
+  burger.addEventListener('click', function(){ setMenu(!mm.classList.contains('open')); });
+  mm.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ setMenu(false); });
+  });
+
+  /* anni di osteria: calcolati, mai scritti a mano */
+  var anniEl = document.getElementById('anni');
+  var anni = new Date().getFullYear() - 1968;
+  anniEl.textContent = anni;
+
+  /* reveal + count-up + ridisegno del ponte */
+  function countUp(el, to){
+    if(reduced){ el.textContent = to; return; }
+    var t0 = null, dur = 1300;
+    function step(t){
+      if(!t0) t0 = t;
+      var p = Math.min((t - t0) / dur, 1);
+      el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3)));
+      if(p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  function drawPath(p){
+    var len = p.getTotalLength();
+    p.style.strokeDasharray = len;
+    if(reduced){ p.style.strokeDashoffset = 0; return; }
+    p.style.strokeDashoffset = len;
+    p.getBoundingClientRect();
+    p.style.transition = 'stroke-dashoffset 2.2s cubic-bezier(.16,.84,.28,1)';
+    p.style.strokeDashoffset = '0';
+  }
+
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(!e.isIntersecting) return;
+        e.target.classList.add('in');
+        if(e.target.querySelector && e.target.querySelector('#anni')) countUp(anniEl, anni);
+        io.unobserve(e.target);
+      });
+    }, {threshold:.14});
+    document.querySelectorAll('[data-reveal]').forEach(function(el){ io.observe(el); });
+
+    var ioPonte = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ drawPath(e.target); ioPonte.unobserve(e.target); } });
+    }, {threshold:.5});
+    document.querySelectorAll('.ponte-div').forEach(function(p){ ioPonte.observe(p); });
+  } else {
+    document.querySelectorAll('[data-reveal]').forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* il ponte dell'hero si disegna subito */
+  var hp = document.getElementById('pontePath');
+  if(hp) drawPath(hp);
+
+  /* lightbox */
+  var lb = document.getElementById('lightbox');
+  var lbImg = lb.querySelector('img');
+  var lbCap = lb.querySelector('figcaption');
+  var shots = Array.prototype.slice.call(document.querySelectorAll('.gallery-grid button'));
+  var idx = 0, lastFocus = null;
+  function show(i){
+    idx = (i + shots.length) % shots.length;
+    var b = shots[idx], im = b.querySelector('img');
+    lbImg.src = im.src; lbImg.alt = im.alt;
+    lbCap.textContent = b.getAttribute('data-caption') || '';
+  }
+  function openLb(i){
+    lastFocus = document.activeElement; show(i);
+    lb.classList.add('open'); document.body.style.overflow='hidden';
+    fuori.forEach(function(el){ if(el) el.setAttribute('inert',''); });
+    if(!mm.classList.contains('open')) burger.setAttribute('inert','');
+    /* 🪤 La transizione anima anche `visibility`: finche' e' `hidden`, `.focus()`
+       non attecchisce E NON DA' ERRORE. Contare due requestAnimationFrame non
+       basta — su Anfora, a 1440px, al secondo frame `visibility` era ancora
+       `hidden` e il focus restava sulla tessera dietro il pannello, mentre a
+       390px per un soffio funzionava. Si aspetta la CONDIZIONE vera, non un
+       numero di fotogrammi, con un tetto per non restare appesi. */
+    var tentativi = 0;
+    (function mettiIlFuoco(){
+      var c = lb.querySelector('.lb-close');
+      if (getComputedStyle(lb).visibility === 'visible' || tentativi++ > 60) { c.focus(); }
+      else { requestAnimationFrame(mettiIlFuoco); }
+    })();
+  }
+  function closeLb(){
+    lb.classList.remove('open'); document.body.style.overflow='';
+    burger.removeAttribute('inert');
+    if(!mm.classList.contains('open'))
+      fuori.forEach(function(el){ if(el) el.removeAttribute('inert'); });
+    if(lastFocus) lastFocus.focus();
+  }
+  shots.forEach(function(b,i){ b.addEventListener('click', function(){ openLb(i); }); });
+  lb.querySelector('.lb-close').addEventListener('click', closeLb);
+  lb.querySelector('.lb-prev').addEventListener('click', function(){ show(idx-1); });
+  lb.querySelector('.lb-next').addEventListener('click', function(){ show(idx+1); });
+  lb.addEventListener('click', function(e){ if(e.target === lb) closeLb(); });
+  document.addEventListener('keydown', function(e){
+    if(mm.classList.contains('open')){
+      if(e.key === 'Escape'){ setMenu(false); burger.focus(); return; }
+      trappola(e, mm, burger); return;
+    }
+    if(!lb.classList.contains('open')) return;
+    if(e.key === 'Escape') closeLb();
+    else if(e.key === 'ArrowLeft') show(idx-1);
+    else if(e.key === 'ArrowRight') show(idx+1);
+    else trappola(e, lb);
+  });
+})();
+</script>
+  <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

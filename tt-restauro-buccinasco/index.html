@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>document.documentElement.classList.add('js')</script>
+<title>T&amp;T Bottega di Restauro Mobili Antichi · Buccinasco (MI)</title>
+<meta name="description" content="Dai primi anni '90 a Gudo Gambaredo, Buccinasco: restauro di mobili antichi, icone e impagliature. Lucidatura a tampone con gommalacca, prodotti naturali, preventivi gratuiti. Visite su appuntamento.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:title" content="T&amp;T Bottega di Restauro Mobili Antichi · Buccinasco">
+<meta property="og:description" content="Restauro di mobili antichi, icone e impagliature. Lucidatura a tampone con gommalacca. Visite su appuntamento, dai primi anni '90 a Gudo Gambaredo.">
+<meta property="og:image" content="https://demo.francescoar.com/tt-restauro-buccinasco/img/hero.jpg">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1440">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:url" content="https://demo.francescoar.com/tt-restauro-buccinasco/">
+<meta property="og:site_name" content="T&amp;T Bottega di Restauro">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2337241B'/%3E%3Cpath d='M8 46h22c12 0 18-6 18-14s-6-12-12-12--10 4-10 10c0 5 4 8 8 8' fill='none' stroke='%23C08A45' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://www.tt-restauro.com/#bottega",
+  "name": "T&T Bottega di Restauro Mobili Antichi",
+  "legalName": "T&T di Santoro A e C sas",
+  "url": "http://www.tt-restauro.com/",
+  "image": "img/hero.jpg",
+  "description": "Bottega di restauro di mobili antichi a Buccinasco (MI): falegnameria, lucidatura a tampone con gommalacca, restauro di icone e arte sacra, impagliature. Vendita di mobili antichi, quadri, libri e oggettistica. Visite su appuntamento.",
+  "telephone": "+39 339 4298828",
+  "email": "tt.restauro@virgilio.it",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Località Molinetto, Gudo Gambaredo",
+    "addressLocality": "Buccinasco",
+    "addressRegion": "MI",
+    "postalCode": "20090",
+    "addressCountry": "IT"
+  },
+  "founder": { "@type": "Person", "name": "Antonio Santoro" }
+}
+</script>
+<style>
+:root{
+  --carta:#F6EFE1;
+  --carta-2:#EFE6D2;
+  --noce:#37241B;
+  --noce-2:#46302C;
+  --noce-fondo:#2B1B14;
+  --mogano:#7E3B2E;
+  --ambra:#C08A45;
+  --ambra-chiara:#D6A45E;
+  --ambra-scura:#6E5122;
+  --velluto:#243830;
+  --velluto-2:#2E463C;
+  --paglia:#C9B698;
+  --inchiostro:#26190F;
+  --d: cubic-bezier(.22,.9,.34,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Source Sans 3',system-ui,sans-serif;
+  background:var(--carta);
+  color:var(--inchiostro);
+  line-height:1.6;
+  font-size:1.0625rem;
+  overflow-x:hidden;
+}
+h1,h2,h3,.display{font-family:Cardo,Georgia,serif;font-weight:700;line-height:1.08}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+
+/* ---------- accessibilità ---------- */
+.skip{position:absolute;left:-9999px;top:0;z-index:300;background:var(--ambra);color:var(--inchiostro);padding:.7rem 1.2rem;font-weight:700;border-radius:0 0 8px 0}
+.skip:focus{left:0}
+:focus-visible{outline:3px solid var(--ambra);outline-offset:2px}
+.nav a:focus-visible,.btn:focus-visible{outline-color:var(--ambra-chiara)}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:200;transition:background-color .35s var(--d), box-shadow .35s var(--d)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:.9rem;padding-bottom:.9rem}
+.nav-brand{font-family:Cardo,serif;font-weight:700;font-size:1.35rem;letter-spacing:.02em;color:var(--carta);text-decoration:none;text-shadow:0 1px 10px rgba(20,10,5,.55);white-space:nowrap}
+.nav-brand .amp{color:var(--ambra-chiara)}
+.nav-brand-sub{font-weight:400}
+.nav-links{display:flex;gap:clamp(.7rem,1.6vw,1.5rem);list-style:none;align-items:center}
+.nav-links a{color:var(--carta);text-decoration:none;font-weight:600;font-size:.95rem;letter-spacing:.01em;text-shadow:0 1px 8px rgba(20,10,5,.55)}
+.nav-links a:hover{color:var(--ambra-chiara)}
+.nav-cta{border:1.5px solid var(--ambra-chiara);border-radius:999px;padding:.42rem 1.05rem}
+/* col menu aperto la barra va inert: il numero non sarebbe premibile, quindi si
+   nasconde (dentro al menu c'e' il suo bottone "Chiama", piu' grande). */
+.nav-links[inert]{visibility:hidden}
+.nav.solid{background:var(--noce);box-shadow:0 2px 24px rgba(20,10,5,.35)}
+.nav.solid .nav-brand,.nav.solid .nav-links a{text-shadow:none}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:.55rem;border-radius:8px}
+.burger span{display:block;width:26px;height:2.5px;background:var(--carta);margin:5.5px 0;border-radius:2px;transition:transform .3s var(--d),opacity .3s var(--d);box-shadow:0 1px 6px rgba(20,10,5,.5)}
+.nav.solid .burger span{box-shadow:none}
+.burger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+/* ---------- menu mobile ---------- */
+.mobile-menu{position:fixed;inset:0;z-index:150;padding-top:64px;background:var(--noce);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:.4rem;opacity:0;visibility:hidden;transition:opacity .35s var(--d),visibility .35s var(--d)}
+.mobile-menu.open{opacity:1;visibility:visible}
+.mobile-menu a{color:var(--carta);text-decoration:none;font-family:Cardo,serif;font-size:clamp(1.6rem,6vw,2.2rem);padding:.45rem 1rem}
+.mobile-menu a:hover{color:var(--ambra-chiara)}
+.mobile-menu .mm-tel{margin-top:1.2rem;font-family:'Source Sans 3',sans-serif;font-size:1.1rem;font-weight:700;background:var(--ambra);color:var(--inchiostro);border-radius:999px;padding:.8rem 1.6rem}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:var(--carta);overflow:hidden}
+.hero-media{position:absolute;inset:0}
+.hero-media img{width:100%;height:100%;object-fit:cover;animation:kb 16s var(--d) forwards}
+@keyframes kb{from{transform:scale(1.07)}to{transform:scale(1)}}
+.hero-scrim{position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(20,11,6,.58) 0px,rgba(20,11,6,.34) 92px,rgba(20,11,6,0) 175px),
+  linear-gradient(180deg,rgba(24,14,9,.62) 0%,rgba(24,14,9,.28) 24%,rgba(24,14,9,.54) 40%,rgba(24,14,9,.86) 52%,rgba(24,14,9,.96) 100%)}
+.hero-inner{position:relative;z-index:2;width:100%;padding-bottom:clamp(2.2rem,5vh,4rem)}
+.hero-eyebrow{display:flex;align-items:center;gap:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.82rem;color:var(--ambra-chiara);opacity:0;animation:rise .8s var(--d) .15s forwards}
+.hero-eyebrow .truciolo-svg{width:44px;height:auto;flex:none}
+.hero h1{font-size:clamp(3.4rem,11vw,7.5rem);letter-spacing:.01em;margin:.35rem 0 .2rem;opacity:0;animation:rise .8s var(--d) .3s forwards}
+.hero-sub{font-family:Cardo,serif;font-size:clamp(1.25rem,2.6vw,1.8rem);font-style:italic;color:var(--paglia);opacity:0;animation:rise .8s var(--d) .45s forwards}
+.hero-tag{max-width:34em;margin:.9rem 0 1.4rem;font-size:clamp(1rem,1.5vw,1.15rem);opacity:0;animation:rise .8s var(--d) .6s forwards}
+.hero-ctas{display:flex;gap:.8rem;flex-wrap:wrap;opacity:0;animation:rise .8s var(--d) .75s forwards}
+.btn{display:inline-block;text-decoration:none;font-weight:700;border-radius:999px;padding:.85rem 1.7rem;font-size:1rem;transition:transform .25s var(--d),background-color .25s var(--d),color .25s var(--d)}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--ambra);color:var(--inchiostro)}
+.btn-primary:hover{background:var(--ambra-chiara)}
+.btn-ghost{border:1.5px solid var(--carta);color:var(--carta)}
+.btn-ghost:hover{background:rgba(246,239,225,.14)}
+.hero-ribbon{display:flex;gap:clamp(1rem,3vw,2.6rem);flex-wrap:wrap;margin-top:clamp(1.6rem,4vh,2.6rem);padding-top:1.1rem;border-top:1px solid rgba(246,239,225,.28);opacity:0;animation:rise .8s var(--d) .9s forwards}
+.hero-ribbon span{font-size:.92rem;font-weight:600;color:var(--carta);display:flex;align-items:center;gap:.5rem}
+.hero-ribbon b{color:var(--ambra-chiara);font-weight:700}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+
+/* firma: il truciolo */
+.truciolo-svg path{stroke-dasharray:260;stroke-dashoffset:260;animation:truciolo 1.6s var(--d) .5s forwards}
+@keyframes truciolo{to{stroke-dashoffset:0}}
+.divider{display:flex;justify-content:center;padding:0 0 clamp(2rem,4vw,3rem)}
+.divider svg{width:72px;height:auto;color:var(--mogano)}
+
+/* ---------- sezioni comuni ---------- */
+section{scroll-margin-top:76px}
+.sec{padding:clamp(3.5rem,8vw,6.5rem) 0}
+.eyebrow{font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.8rem;color:var(--ambra-scura);display:flex;align-items:center;gap:.6rem;margin-bottom:.9rem}
+.eyebrow::before{content:"";width:34px;height:1.5px;background:var(--mogano);flex:none}
+.dark .eyebrow,.velvet .eyebrow,.pd .eyebrow,.contatti .eyebrow{color:var(--ambra-chiara)}
+.dark .eyebrow::before,.velvet .eyebrow::before,.pd .eyebrow::before,.contatti .eyebrow::before{background:var(--ambra)}
+h2{font-size:clamp(2rem,4.6vw,3.2rem);margin-bottom:1rem}
+.lead{font-size:clamp(1.1rem,1.7vw,1.3rem);max-width:38em}
+/* la comparsa allo scroll si accende SOLO se il JS e' partito (html.js): senza JS
+   il contenuto resta visibile, non invisibile per sempre. */
+.js [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .7s var(--d),transform .7s var(--d)}
+.js [data-reveal].revealed{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js [data-reveal]{opacity:1;transform:none}
+  /* l'hero e la firma compaiono con un'animazione, partendo da invisibili: spenta
+     l'animazione vanno rimessi visibili a mano, altrimenti restano invisibili per
+     sempre (bottone "Chiama" compreso). Vale per il testo dell'hero e per il truciolo. */
+  .hero-eyebrow,.hero h1,.hero-sub,.hero-tag,.hero-ctas,.hero-ribbon{opacity:1;transform:none}
+  .truciolo-svg path{stroke-dashoffset:0}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- intro ---------- */
+.intro .display{font-size:clamp(1.7rem,3.6vw,2.7rem);max-width:22em;line-height:1.25}
+.intro-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:2.4rem}
+.fact{background:#fff9;border:1px solid #d9cbb0;border-radius:14px;padding:1.2rem 1.4rem}
+.fact b{display:block;font-family:Cardo,serif;font-size:1.2rem;margin-bottom:.25rem}
+.fact span{color:#5c4a33;font-size:.98rem}
+
+/* ---------- storia (split scuro) ---------- */
+.dark{background:linear-gradient(180deg,var(--noce) 0%,var(--noce-fondo) 100%);color:var(--carta)}
+.dark .lead{color:var(--paglia)}
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.split-media{position:relative}
+.split-media img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px}
+.split-media::after{content:"";position:absolute;inset:14px -14px -14px 14px;border:1.5px solid var(--mogano);border-radius:16px;z-index:-1}
+.split p{margin-bottom:1rem;color:#EADFCB}
+.split .firma{font-family:Cardo,serif;font-style:italic;font-size:1.3rem;color:var(--ambra-chiara);margin-top:1.4rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.3rem}
+.chip{border:1px solid var(--ambra);color:var(--ambra-chiara);border-radius:999px;padding:.32rem .85rem;font-size:.86rem;font-weight:600}
+
+/* ---------- prima/dopo ---------- */
+.pd{background:var(--noce-fondo);color:var(--carta)}
+.pd-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(.8rem,2vw,1.6rem);margin-top:2.4rem}
+.pd-panel{position:relative;border-radius:16px;overflow:hidden}
+.pd-panel img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5}
+.pd-label{position:absolute;top:1rem;left:1rem;background:var(--noce);color:var(--carta);border:1px solid var(--ambra);font-weight:700;letter-spacing:.14em;font-size:.8rem;padding:.4rem .9rem;border-radius:999px}
+.pd-panel.dopo .pd-label{background:var(--ambra);color:var(--inchiostro);border-color:var(--ambra)}
+.pd-cap{margin-top:1.6rem;max-width:44em;color:var(--paglia)}
+.pd-cap b{color:var(--carta)}
+
+/* ---------- metodo ---------- */
+.metodo-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:start;margin-top:1rem}
+.steps{list-style:none;counter-reset:step}
+.steps li{position:relative;padding:0 0 1.5rem 3.4rem;counter-increment:step}
+.steps li::before{content:counter(step,decimal-leading-zero);position:absolute;left:0;top:.1rem;font-family:Cardo,serif;font-weight:700;font-size:1.15rem;color:var(--mogano)}
+.steps li:not(:last-child)::after{content:"";position:absolute;left:1.05rem;top:2rem;bottom:.4rem;width:1.5px;background:#d9cbb0}
+.steps b{display:block;font-family:Cardo,serif;font-size:1.25rem;margin-bottom:.15rem}
+.steps span{color:#5c4a33;font-size:.98rem}
+.metodo-media img{border-radius:16px;width:100%;object-fit:cover;aspect-ratio:4/3}
+.metodo-media figcaption{font-size:.9rem;color:#5c4a33;margin-top:.6rem;font-style:italic}
+.metodo-note{margin-top:1.4rem;background:#fff9;border:1px solid #d9cbb0;border-radius:12px;padding:1rem 1.2rem;font-size:.98rem}
+
+/* ---------- restauro cards ---------- */
+.paper2{background:var(--carta-2)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.4rem;margin-top:2.4rem}
+.card{background:var(--carta);border:1px solid #d9cbb0;border-radius:16px;overflow:hidden;transition:transform .3s var(--d),box-shadow .3s var(--d)}
+.card:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(60,36,20,.16)}
+.card img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.card-body{padding:1.2rem 1.3rem 1.4rem}
+.card-body h3{font-size:1.35rem;margin-bottom:.35rem}
+.card-body p{font-size:.97rem;color:#5c4a33}
+
+/* ---------- bottega (velluto) ---------- */
+.velvet{background:linear-gradient(180deg,var(--velluto) 0%,#1B2B24 100%);color:var(--carta)}
+.velvet .lead{color:var(--paglia)}
+.shelf{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.3rem;margin-top:2.4rem}
+.shelf-item{background:var(--velluto-2);border:1px solid #3E5A4D;border-radius:16px;overflow:hidden;transition:transform .3s var(--d)}
+.shelf-item:hover{transform:translateY(-5px)}
+.shelf-item img{aspect-ratio:1/1;object-fit:cover;width:100%}
+.shelf-body{padding:1rem 1.15rem 1.2rem}
+.shelf-body h3{font-size:1.2rem;color:var(--carta);margin-bottom:.2rem}
+.shelf-body p{font-size:.92rem;color:var(--paglia)}
+.velvet .nota{margin-top:1.8rem;color:var(--paglia);font-size:.98rem}
+.velvet .nota b{color:var(--ambra-chiara)}
+
+/* ---------- servizi ---------- */
+.servizi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.3rem;margin-top:2.4rem}
+.servizio{display:flex;gap:1rem;align-items:flex-start;background:#fff9;border:1px solid #d9cbb0;border-radius:14px;padding:1.2rem 1.3rem}
+.servizio svg{flex:none;width:30px;height:30px;color:var(--mogano);margin-top:.15rem}
+.servizio b{display:block;font-family:Cardo,serif;font-size:1.18rem;margin-bottom:.2rem}
+.servizio span{font-size:.95rem;color:#5c4a33}
+
+/* ---------- pavia ---------- */
+.pavia{background:var(--mogano);color:var(--carta)}
+.pavia .wrap{display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.pavia h2{font-size:clamp(1.5rem,3vw,2.1rem);margin:0}
+.pavia p{color:#F3DFC8;max-width:36em}
+.pavia .btn-primary{background:var(--carta);color:var(--inchiostro)}
+.pavia .btn-primary:hover{background:#fff}
+
+/* ---------- galleria ---------- */
+.masonry{columns:3;column-gap:1rem;margin-top:2.4rem}
+.tile{display:block;width:100%;border:0;background:none;padding:0;margin:0 0 1rem;cursor:zoom-in;border-radius:14px;overflow:hidden;position:relative}
+.tile img{width:100%;border-radius:14px;transition:transform .45s var(--d)}
+.tile:hover img{transform:scale(1.045)}
+.tile-tag{position:absolute;left:.8rem;bottom:.8rem;background:var(--noce);color:var(--carta);font-size:.78rem;font-weight:700;letter-spacing:.08em;padding:.3rem .75rem;border-radius:999px}
+
+/* ---------- lightbox ---------- */
+.lightbox{position:fixed;inset:0;z-index:250;background:rgba(24,14,9,.94);display:flex;flex-direction:column;justify-content:center;align-items:center;opacity:0;visibility:hidden;transition:opacity .3s var(--d),visibility .3s var(--d)}
+.lightbox.open{opacity:1;visibility:visible}
+.lb-fig{display:flex;flex-direction:column;align-items:center}
+.lightbox img{max-width:min(92vw,1100px);max-height:76vh;object-fit:contain;border-radius:10px}
+.lb-cap{color:var(--carta);margin-top:1rem;font-size:1rem;text-align:center;padding:0 1rem}
+.lb-count{color:var(--paglia);font-size:.85rem;margin-top:.3rem}
+.lb-btn{position:absolute;background:rgba(24,14,9,.72);border:1px solid rgba(246,239,225,.55);color:var(--carta);width:52px;height:52px;border-radius:50%;font-size:1.5rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background-color .25s var(--d),border-color .25s var(--d)}
+.lb-btn:hover{background:rgba(24,14,9,.9);border-color:var(--ambra-chiara)}
+.lb-close{top:1.2rem;right:1.2rem}
+.lb-prev{left:1.2rem;top:50%;transform:translateY(-50%)}
+.lb-next{right:1.2rem;top:50%;transform:translateY(-50%)}
+
+/* ---------- contatti ---------- */
+.contatti{position:relative;color:var(--carta)}
+.contatti-bg{position:absolute;inset:0}
+.contatti-bg img{width:100%;height:100%;object-fit:cover}
+.contatti-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(43,27,20,.93),rgba(43,27,20,.88))}
+.contatti .wrap{position:relative;z-index:2}
+.contatti-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,4rem);align-items:start}
+.tel-big{font-family:Cardo,serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:700;color:var(--ambra-chiara);text-decoration:none;display:inline-block;margin:.6rem 0}
+.tel-big:hover{color:var(--carta)}
+.contatti p{color:#EADFCB}
+.c-item{margin-bottom:1.3rem}
+.c-item b{display:block;font-family:Cardo,serif;font-size:1.15rem;color:var(--carta);margin-bottom:.2rem}
+.c-item a{color:var(--paglia)}
+.c-item a:hover{color:var(--ambra-chiara)}
+.badge-app{display:inline-block;background:var(--ambra);color:var(--inchiostro);font-weight:700;border-radius:999px;padding:.45rem 1.1rem;font-size:.92rem;margin-bottom:1rem}
+
+/* ---------- footer ---------- */
+footer{background:#241511;color:var(--paglia);padding:2.6rem 0 2.2rem;font-size:.92rem}
+footer .wrap{display:flex;flex-direction:column;gap:1.1rem}
+.f-brand{font-family:Cardo,serif;font-size:1.3rem;font-weight:700;color:var(--carta)}
+.f-brand .amp{color:var(--ambra-chiara)}
+.f-note{border-top:1px solid #3E2A20;padding-top:1.1rem;line-height:1.7}
+
+/* ---------- responsive ---------- */
+@media (max-width:960px){
+  /* questa bottega converte solo per telefono: sotto i 960px il menu va nel burger,
+     ma il numero resta SEMPRE a vista nella barra. */
+  .nav-links li:not(.nav-tel){display:none}
+  .nav-links{gap:0}
+  /* bersaglio del tocco >=44px: qui si chiama, non si naviga */
+  .nav-cta{padding:.63rem 1.05rem}
+  .burger{display:block}
+  .split,.metodo-grid,.contatti-grid{grid-template-columns:1fr}
+  .masonry{columns:2}
+  .hero-scrim{background:
+    linear-gradient(180deg,rgba(20,11,6,.58) 0px,rgba(20,11,6,.34) 92px,rgba(20,11,6,0) 175px),
+    linear-gradient(180deg,rgba(24,14,9,.64) 0%,rgba(24,14,9,.32) 13%,rgba(24,14,9,.62) 24%,rgba(24,14,9,.86) 38%,rgba(24,14,9,.96) 100%)}
+}
+@media (max-width:600px){
+  /* sui telefoni stretti il marchio si accorcia per lasciare posto al numero */
+  .nav-brand-sub{display:none}
+  .nav-cta{padding:.63rem .9rem;font-size:.9rem}
+}
+@media (max-width:560px){
+  .masonry{columns:1}
+  .pd-grid{grid-template-columns:1fr}
+  .pavia .wrap{flex-direction:column;align-items:flex-start}
+}
+</style>
+<noscript><style>
+  /* Senza JS il burger non puo' aprire nulla e la barra non puo' diventare solida
+     allo scroll (testo chiaro sopra la foto): la barra diventa non fissa e scura,
+     coi link sempre visibili, che vanno a capo invece di sfondare la riga. */
+  html{scroll-behavior:auto}
+  .nav{position:static;background:var(--noce);box-shadow:none}
+  .nav .wrap{flex-wrap:wrap;row-gap:.55rem;justify-content:center}
+  .nav-brand,.nav-links a{text-shadow:none}
+  .burger{display:none !important}
+  .nav-links{display:flex !important;flex-wrap:wrap;justify-content:center;gap:.5rem 1.1rem}
+  .nav-links li{display:list-item !important}
+  .nav-brand-sub{display:inline !important}
+  section{scroll-margin-top:8px}
+</style></noscript>
+</head>
+<body id="top">
+<a class="skip" href="#main">Salta al contenuto</a>
+
+<nav class="nav" id="nav" aria-label="Principale">
+  <div class="wrap">
+    <a class="nav-brand" href="#top">T<span class="amp">&amp;</span>T <span class="nav-brand-sub">· Bottega di Restauro</span></a>
+    <ul class="nav-links">
+      <li><a href="#storia">La bottega</a></li>
+      <li><a href="#prima-dopo">Prima e dopo</a></li>
+      <li><a href="#metodo">Il metodo</a></li>
+      <li><a href="#bottega">In vendita</a></li>
+      <li><a href="#gallery">Galleria</a></li>
+      <li class="nav-tel"><a class="nav-cta" href="tel:+393394298828">339 4298828</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu di navigazione">
+  <a href="#storia">La bottega</a>
+  <a href="#prima-dopo">Prima e dopo</a>
+  <a href="#metodo">Il metodo</a>
+  <a href="#restauro">Cosa restauriamo</a>
+  <a href="#bottega">In vendita</a>
+  <a href="#servizi">Servizi</a>
+  <a href="#gallery">Galleria</a>
+  <a href="#contatti">Contatti</a>
+  <a class="mm-tel" href="tel:+393394298828">Chiama: 339 4298828</a>
+</div>
+
+<main id="main">
+
+<!-- HERO -->
+<header class="hero" id="hero">
+  <div class="hero-media">
+    <picture>
+      <source media="(max-width:640px)" srcset="img/hero-mobile.jpg">
+      <img src="img/hero.jpg" alt="Comò antico in noce restaurato e lucidato a tampone nella bottega T&T" fetchpriority="high">
+    </picture>
+  </div>
+  <div class="hero-scrim"></div>
+  <div class="hero-inner">
+    <div class="wrap">
+      <p class="hero-eyebrow">
+        <svg class="truciolo-svg" viewBox="0 0 100 52" aria-hidden="true"><path d="M4 46h44c22 0 34-10 34-22C82 13 73 6 63 6 53 6 46 13 46 22c0 7 5 12 12 12" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg>
+        Bottega di restauro · Buccinasco
+      </p>
+      <h1>T&amp;T</h1>
+      <p class="hero-sub">Bottega di Restauro Mobili Antichi</p>
+      <p class="hero-tag">Dai primi anni '90, tra le cascine di Gudo Gambaredo, Antonio Santoro riporta alla vita mobili, icone e oggetti d'epoca: falegnameria, lucidatura a tampone con gommalacca e rispetto della patina antica.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="tel:+393394298828">Chiama per un appuntamento</a>
+        <a class="btn btn-ghost" href="#prima-dopo">Guarda un restauro</a>
+      </div>
+      <div class="hero-ribbon">
+        <span><b>Dai primi anni '90</b> in laboratorio</span>
+        <span>Lucidatura a tampone con <b>gommalacca</b></span>
+        <span>Visite <b>solo su appuntamento</b></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- INTRO -->
+<section class="sec intro" aria-label="La filosofia della bottega">
+  <div class="wrap">
+    <p class="display" data-reveal>Un mobile antico non si rimette a nuovo. <em>Si riporta a com'era.</em></p>
+    <p class="lead" data-reveal style="margin-top:1.2rem">Prodotti naturali, recupero strutturale di falegnameria e una lucidatura che non cancella la storia del legno: il lavoro si giudica da vicino, in laboratorio.</p>
+    <div class="intro-facts">
+      <div class="fact" data-reveal><b>Preventivi gratuiti</b><span>La valutazione del restauro non si paga: si guarda il pezzo e si decide insieme.</span></div>
+      <div class="fact" data-reveal><b>Ritiro e riconsegna</b><span>Trasporto e imballaggio dei mobili, dal ritiro alla riconsegna a casa.</span></div>
+      <div class="fact" data-reveal><b>Anche sul posto</b><span>Portoni e balaustre si restaurano dove stanno, senza smontare nulla.</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true">
+  <svg viewBox="0 0 100 52"><path d="M4 46h44c22 0 34-10 34-22C82 13 73 6 63 6 53 6 46 13 46 22c0 7 5 12 12 12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+</div>
+
+<!-- STORIA -->
+<section class="sec dark" id="storia">
+  <div class="wrap split">
+    <div data-reveal>
+      <p class="eyebrow">La bottega</p>
+      <h2>Il mestiere è di famiglia,<br>la mano è di Antonio</h2>
+      <p>Antonio Santoro nasce perito tecnico industriale e comincia in un'azienda meccanica. Poi torna al mestiere di casa, quello che in famiglia si fa dai tempi del nonno: il restauro.</p>
+      <p>Dai primi anni '90 la sua bottega lavora a Gudo Gambaredo, frazione di campagna alle porte di Buccinasco: un laboratorio vero, con i banchi, la gommalacca e il legno da ascoltare, che si visita su appuntamento.</p>
+      <p>Per impagliature e tappezzerie la bottega si affianca a impagliatori e artigiani di fiducia: paglia di Vienna, paglie naturali, corda di canapa, cordoncino.</p>
+      <p class="firma">«Prima si capisce il mobile, poi si toccano gli attrezzi.»</p>
+      <div class="chips">
+        <span class="chip">Falegnameria</span>
+        <span class="chip">Lucidatura a tampone</span>
+        <span class="chip">Icone e arte sacra</span>
+        <span class="chip">Impagliature</span>
+      </div>
+    </div>
+    <div class="split-media" data-reveal>
+      <img src="img/restauro-in-corso.jpg" alt="Elemento in legno in lavorazione sul banco della bottega, con segnature a nastro sui punti da riprendere" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- PRIMA / DOPO -->
+<section class="sec pd" id="prima-dopo">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>L'argomento migliore</p>
+    <h2 data-reveal>Prima e dopo, lo stesso mobile</h2>
+    <p class="lead" data-reveal>Una panca a specchiera intagliata, arrivata in laboratorio segnata dagli anni. Nessun trucco: due fotografie della bottega, prima e dopo il restauro.</p>
+    <div class="pd-grid">
+      <figure class="pd-panel" data-reveal>
+        <img src="img/prima.jpg" alt="La panca a specchiera prima del restauro, opaca e segnata, nel laboratorio" loading="lazy">
+        <figcaption class="pd-label">Prima</figcaption>
+      </figure>
+      <figure class="pd-panel dopo" data-reveal>
+        <img src="img/dopo.jpg" alt="La stessa panca a specchiera dopo il restauro, con il legno lucidato e le tappezzerie rifatte" loading="lazy">
+        <figcaption class="pd-label">Dopo</figcaption>
+      </figure>
+    </div>
+    <p class="pd-cap" data-reveal><b>Cosa è successo nel mezzo:</b> recupero strutturale di falegnameria, stuccatura, trattamento antitarlo, tappezzerie rifatte e lucidatura a tampone con gommalacca. La patina non si cancella: si rispetta.</p>
+  </div>
+</section>
+
+<!-- METODO -->
+<section class="sec" id="metodo">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Il metodo</p>
+    <h2 data-reveal>Sei passaggi, nessuna scorciatoia</h2>
+    <div class="metodo-grid">
+      <ol class="steps" data-reveal>
+        <li><b>Valutazione e preventivo</b><span>Si guarda il pezzo dal vivo e si stima l'intervento. Il preventivo è gratuito.</span></li>
+        <li><b>Ritiro e trasporto</b><span>Imballaggio e trasporto curati dalla bottega.</span></li>
+        <li><b>Recupero strutturale</b><span>La falegnameria prima di tutto: incastri, parti mancanti, stabilità.</span></li>
+        <li><b>Stuccatura</b><span>Fessure e mancanze si chiudono a mano, punto per punto.</span></li>
+        <li><b>Trattamento antitarlo</b><span>Disinfestazione dagli insetti xilofagi, per fermare il danno alla radice.</span></li>
+        <li><b>Lucidatura a tampone</b><span>Gommalacca stesa a mano, strato su strato, con prodotti naturali.</span></li>
+      </ol>
+      <figure class="metodo-media" data-reveal>
+        <img src="img/stuccatura.jpg" alt="Piano in legno durante la stuccatura, con lo stucco chiaro steso sulle mancanze" loading="lazy">
+        <figcaption>La stuccatura sul banco: lo stucco chiaro segna i punti da riprendere.</figcaption>
+        <p class="metodo-note">Di norma si lavora in laboratorio. Per i pezzi che non si possono muovere, come portoni e balaustre, il restauro si fa sul posto.</p>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- COSA RESTAURIAMO -->
+<section class="sec paper2" id="restauro">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Il laboratorio</p>
+    <h2 data-reveal>Cosa passa dal banco di lavoro</h2>
+    <p class="lead" data-reveal>Mobili e oggetti lignei di epoche e tipologie diverse, dai pezzi di famiglia alle opere intagliate.</p>
+    <div class="cards">
+      <article class="card" data-reveal>
+        <img src="img/credenza.jpg" alt="Credenza antica a tre ante restaurata" loading="lazy">
+        <div class="card-body"><h3>Mobili d'epoca</h3><p>Restauro conservativo di mobili di varie epoche: struttura, superfici, finitura a gommalacca.</p></div>
+      </article>
+      <article class="card" data-reveal>
+        <img src="img/quadro-sacro.jpg" alt="Dipinto antico con cornice dorata intagliata" loading="lazy">
+        <div class="card-body"><h3>Opere intagliate e cornici</h3><p>Intagli, dorature e cornici: il legno lavorato che chiede mani pazienti.</p></div>
+      </article>
+      <article class="card" data-reveal>
+        <img src="img/icona-quadripartita.jpg" alt="Icona sacra quadripartita con quattro scene dipinte" loading="lazy">
+        <div class="card-body"><h3>Icone e arte sacra</h3><p>Restauro di icone e oggetti di arte sacra, nel rispetto dei materiali originali.</p></div>
+      </article>
+      <article class="card" data-reveal>
+        <img src="img/impagliatura.jpg" alt="Seduta di sedia impagliata a paglia di Vienna appena rifatta" loading="lazy">
+        <div class="card-body"><h3>Impagliature e tappezzerie</h3><p>Paglia di Vienna, paglie naturali, corda di canapa, PVC sintetico e cordoncino.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTEGA / VENDITA -->
+<section class="sec velvet" id="bottega">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>La vetrina</p>
+    <h2 data-reveal>In bottega non c'è solo il banco:<br>c'è anche la vetrina</h2>
+    <p class="lead" data-reveal>Mobili antichi e riproduzioni, quadri, stampe, libri antichi, icone originali d'epoca e oggettistica: pezzi scelti, in vendita direttamente in bottega.</p>
+    <div class="shelf">
+      <article class="shelf-item" data-reveal>
+        <img src="img/cantinetta.jpg" alt="Cantinetta portabottiglie in legno con scomparti a griglia" loading="lazy">
+        <div class="shelf-body"><h3>Mobili e complementi</h3><p>Mobili antichi, riproduzioni e complementi d'arredo.</p></div>
+      </article>
+      <article class="shelf-item" data-reveal>
+        <img src="img/stampa-veliero.jpg" alt="Stampa incorniciata di un veliero norvegese del 1893" loading="lazy">
+        <div class="shelf-body"><h3>Quadri e stampe</h3><p>Dipinti, stampe, acqueforti e serigrafie.</p></div>
+      </article>
+      <article class="shelf-item" data-reveal>
+        <img src="img/libro-fattori.jpg" alt="Catalogo d'epoca dei disegni di Giovanni Fattori del Museo Civico di Livorno" loading="lazy">
+        <div class="shelf-body"><h3>Libri antichi</h3><p>Volumi e cataloghi d'arte da collezione.</p></div>
+      </article>
+      <article class="shelf-item" data-reveal>
+        <img src="img/icona-cristo.jpg" alt="Icona originale d'epoca del Cristo Pantocratore su fondo dorato" loading="lazy">
+        <div class="shelf-body"><h3>Icone originali</h3><p>Icone d'epoca, con il loro vissuto.</p></div>
+      </article>
+    </div>
+    <p class="nota" data-reveal><b>Cerchi un pezzo in uno stile preciso?</b> Su richiesta la bottega riproduce mobili in stile, su misura.</p>
+  </div>
+</section>
+
+<!-- SERVIZI -->
+<section class="sec" id="servizi">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>I servizi</p>
+    <h2 data-reveal>Tutto quello che serve, in un posto solo</h2>
+    <div class="servizi-grid">
+      <div class="servizio" data-reveal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7z"/><path d="M9.5 12l2 2 3.5-4"/></svg>
+        <div><b>Trattamento antitarlo</b><span>Disinfestazione dagli insetti xilofagi, in laboratorio.</span></div>
+      </div>
+      <div class="servizio" data-reveal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1.5"/><circle cx="15.5" cy="12" r="1"/></svg>
+        <div><b>Restauro sul posto</b><span>Portoni, balaustre e pezzi che non si possono muovere.</span></div>
+      </div>
+      <div class="servizio" data-reveal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="13" height="12" rx="1.5"/><path d="M8 7V5a1.5 1.5 0 0 1 1.5-1.5H19A1.5 1.5 0 0 1 20.5 5v9.5A1.5 1.5 0 0 1 19 16h-3"/></svg>
+        <div><b>Riproduzioni in stile</b><span>Mobili in stile realizzati su richiesta, su misura.</span></div>
+      </div>
+      <div class="servizio" data-reveal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 16V7h11v9"/><path d="M14 10h4l3 3v3h-3"/><circle cx="7" cy="18" r="2"/><circle cx="16.5" cy="18" r="2"/><path d="M3 16h1.5M9.5 18H14"/></svg>
+        <div><b>Trasporto e imballaggio</b><span>Ritiro e riconsegna curati dalla bottega.</span></div>
+      </div>
+      <div class="servizio" data-reveal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/><path d="M9 12h6M9 16h6"/></svg>
+        <div><b>Preventivi gratuiti</b><span>La valutazione del restauro non costa nulla.</span></div>
+      </div>
+      <div class="servizio" data-reveal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4v16M9 4v16M14 4v16M19 4v16"/><path d="M2 9h20M2 15h20"/></svg>
+        <div><b>Impagliature</b><span>Paglia di Vienna, paglie naturali, canapa, PVC, cordoncino.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAVIA -->
+<section class="sec pavia" aria-label="Mercatino artigiano di Pavia">
+  <div class="wrap">
+    <div data-reveal>
+      <p class="eyebrow" style="color:#F3DFC8">Fuori dalla bottega</p>
+      <h2>Ogni prima domenica del mese, a Pavia</h2>
+      <p>La bottega espone al mercatino artigiano di Pavia, in zona castello: l'occasione giusta per conoscersi dal vivo.</p>
+    </div>
+    <a class="btn btn-primary" href="tel:+393394298828" data-reveal>Chiama la bottega</a>
+  </div>
+</section>
+
+<!-- GALLERIA -->
+<section class="sec" id="gallery">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>La galleria</p>
+    <h2 data-reveal>Dal banco e dalla vetrina</h2>
+    <div class="masonry gallery-grid">
+      <button class="tile" data-src="img/dopo.jpg" data-cap="La panca a specchiera dopo il restauro" data-reveal><img src="img/dopo.jpg" alt="Panca a specchiera restaurata con tappezzerie rifate" loading="lazy"><span class="tile-tag">Restauro</span></button>
+      <button class="tile" data-src="img/credenza.jpg" data-cap="Credenza a tre ante" data-reveal><img src="img/credenza.jpg" alt="Credenza antica a tre ante" loading="lazy"><span class="tile-tag">Mobili</span></button>
+      <button class="tile" data-src="img/icona-cristo.jpg" data-cap="Icona del Cristo Pantocratore, originale d'epoca" data-reveal><img src="img/icona-cristo.jpg" alt="Icona del Cristo Pantocratore su fondo dorato" loading="lazy"><span class="tile-tag">Icone</span></button>
+      <button class="tile" data-src="img/impagliatura.jpg" data-cap="Impagliatura a paglia di Vienna" data-reveal><img src="img/impagliatura.jpg" alt="Seduta impagliata a paglia di Vienna" loading="lazy"><span class="tile-tag">Impagliature</span></button>
+      <button class="tile" data-src="img/quadro-sacro.jpg" data-cap="Dipinto antico con cornice dorata" data-reveal><img src="img/quadro-sacro.jpg" alt="Dipinto antico con cornice dorata intagliata" loading="lazy"><span class="tile-tag">Quadri</span></button>
+      <button class="tile" data-src="img/stuccatura.jpg" data-cap="Stuccatura in corso sul banco" data-reveal><img src="img/stuccatura.jpg" alt="Piano in legno durante la stuccatura" loading="lazy"><span class="tile-tag">Lavorazione</span></button>
+      <button class="tile" data-src="img/cantinetta.jpg" data-cap="Cantinetta portabottiglie" data-reveal><img src="img/cantinetta.jpg" alt="Cantinetta portabottiglie in legno" loading="lazy"><span class="tile-tag">Mobili</span></button>
+      <button class="tile" data-src="img/icona-quadripartita.jpg" data-cap="Icona quadripartita, originale d'epoca" data-reveal><img src="img/icona-quadripartita.jpg" alt="Icona sacra quadripartita" loading="lazy"><span class="tile-tag">Icone</span></button>
+      <button class="tile" data-src="img/libro-monet.jpg" data-cap="Volume d'arte su Monet" data-reveal><img src="img/libro-monet.jpg" alt="Volume d'arte aperto sulle tavole di Monet" loading="lazy"><span class="tile-tag">Libri</span></button>
+      <button class="tile" data-src="img/restauro-in-corso.jpg" data-cap="Lavorazione sul banco della bottega" data-reveal><img src="img/restauro-in-corso.jpg" alt="Elemento ligneo in lavorazione con segnature a nastro" loading="lazy"><span class="tile-tag">Lavorazione</span></button>
+      <button class="tile" data-src="img/stampa-veliero.jpg" data-cap="Stampa di veliero norvegese, 1893" data-reveal><img src="img/stampa-veliero.jpg" alt="Stampa incorniciata di un veliero" loading="lazy"><span class="tile-tag">Quadri</span></button>
+      <button class="tile" data-src="img/libro-fattori.jpg" data-cap="Catalogo dei disegni di Giovanni Fattori" data-reveal><img src="img/libro-fattori.jpg" alt="Catalogo d'epoca dei disegni di Giovanni Fattori" loading="lazy"><span class="tile-tag">Libri</span></button>
+      <button class="tile" data-src="img/ferro-battuto.jpg" data-cap="Base di tavolo in ferro battuto" data-reveal><img src="img/ferro-battuto.jpg" alt="Base di tavolo in ferro battuto con volute" loading="lazy"><span class="tile-tag">Oggettistica</span></button>
+      <button class="tile" data-src="img/prima.jpg" data-cap="La panca a specchiera prima del restauro" data-reveal><img src="img/prima.jpg" alt="Panca a specchiera prima del restauro" loading="lazy"><span class="tile-tag">Restauro</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATTI -->
+<section class="sec contatti" id="contatti">
+  <div class="contatti-bg" aria-hidden="true"><img src="img/hero.jpg" alt="" loading="lazy"></div>
+  <div class="wrap">
+    <div class="contatti-grid">
+      <div data-reveal>
+        <p class="eyebrow">Contatti</p>
+        <h2>La bottega riceve<br>su appuntamento</h2>
+        <p style="max-width:34em">Niente orari di negozio: si fissa una visita con una telefonata, e il tempo in laboratorio è tutto per il tuo pezzo.</p>
+        <a class="tel-big" href="tel:+393394298828">339 4298828</a>
+        <p><span class="badge-app">Visite solo su appuntamento</span></p>
+      </div>
+      <div data-reveal>
+        <div class="c-item"><b>Dove siamo</b>
+          <p>Località Molinetto, Gudo Gambaredo<br>20090 Buccinasco (MI)</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Localit%C3%A0+Molinetto%2C+Gudo+Gambaredo%2C+20090+Buccinasco+MI" target="_blank" rel="noopener">Apri in Google Maps</a>
+        </div>
+        <div class="c-item"><b>Come arrivare</b>
+          <p>Da Assago o Buccinasco verso Gudo Gambaredo, poi in direzione della cascina Bazzanella: il laboratorio è dopo 800 metri.</p>
+        </div>
+        <div class="c-item"><b>Email</b>
+          <p><a href="mailto:tt.restauro@virgilio.it">tt.restauro@virgilio.it</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="f-brand">T<span class="amp">&amp;</span>T · Bottega di Restauro Mobili Antichi</p>
+    <p>Località Molinetto, Gudo Gambaredo · 20090 Buccinasco (MI) · <a href="tel:+393394298828">339 4298828</a> · <a href="mailto:tt.restauro@virgilio.it">tt.restauro@virgilio.it</a></p>
+    <p class="f-note">Sito dimostrativo realizzato con AI da FAR AI · contenuti da rivedere con l'attività prima della pubblicazione.<br>Testi e fotografie provengono dal sito attuale di T&amp;T Bottega di Restauro e restano di proprietà dell'attività.</p>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Immagine ingrandita">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Chiudi">&times;</button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Immagine precedente">&#8249;</button>
+  <figure class="lb-fig">
+    <img id="lbImg" src="img/dopo.jpg" alt="">
+    <figcaption class="lb-cap" id="lbCap"></figcaption>
+    <p class="lb-count" id="lbCount"></p>
+  </figure>
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Immagine successiva">&#8250;</button>
+</div>
+
+<script>
+(function(){
+  'use strict';
+
+  /* nav solid on scroll */
+  var nav = document.getElementById('nav');
+  function onScroll(){ nav.classList.toggle('solid', window.scrollY > 40); }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* reveal on scroll */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('revealed'); io.unobserve(e.target); }
+    });
+  },{threshold:.12, rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('[data-reveal]').forEach(function(el){ io.observe(el); });
+
+  /* ---- gestione modali: inert + focus trap condivisi ---- */
+  function setInert(els, on){
+    els.forEach(function(r){ if(r){ if(on){ r.setAttribute('inert',''); } else { r.removeAttribute('inert'); } } });
+    document.body.style.overflow = on ? 'hidden' : '';
+  }
+  function trapTab(list, ev){
+    if(ev.key !== 'Tab' || !list.length) return;
+    var first = list[0], last = list[list.length-1];
+    var i = list.indexOf(document.activeElement);
+    if(ev.shiftKey && (i === 0 || i === -1)){ ev.preventDefault(); last.focus(); }
+    else if(!ev.shiftKey && (i === list.length-1 || i === -1)){ ev.preventDefault(); first.focus(); }
+  }
+  function whenVisible(panel, cb){
+    var tries = 0;
+    (function poll(){
+      if(getComputedStyle(panel).visibility === 'visible' || tries > 60){ cb(); return; }
+      tries++; requestAnimationFrame(poll);
+    })();
+  }
+
+  /* ---- menu mobile: il burger e' anche la X ---- */
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('mobileMenu');
+  var navBrand = document.querySelector('.nav-brand');
+  var navLinks = document.querySelector('.nav-links');
+  var mainEl = document.querySelector('main');
+  var footEl = document.querySelector('footer');
+  var skipEl = document.querySelector('.skip');
+  var menuReturnFocus = null;
+
+  function menuFocusList(){
+    return [burger].concat(Array.prototype.slice.call(menu.querySelectorAll('a[href]')));
+  }
+  function openMenu(){
+    menuReturnFocus = document.activeElement;
+    menu.classList.add('open');
+    burger.classList.add('open');
+    burger.setAttribute('aria-expanded','true');
+    burger.setAttribute('aria-label','Chiudi il menu');
+    setInert([mainEl, footEl, skipEl, navBrand, navLinks], true);
+    whenVisible(menu, function(){ burger.focus(); });
+  }
+  function closeMenu(){
+    menu.classList.remove('open');
+    burger.classList.remove('open');
+    burger.setAttribute('aria-expanded','false');
+    burger.setAttribute('aria-label','Apri il menu');
+    setInert([mainEl, footEl, skipEl, navBrand, navLinks], false);
+    if(menuReturnFocus && menuReturnFocus !== burger){ burger.focus(); }
+    menuReturnFocus = null;
+  }
+  burger.addEventListener('click', function(){
+    if(menu.classList.contains('open')){ closeMenu(); } else { openMenu(); }
+  });
+  menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+
+  /* ---- lightbox ---- */
+  var lightbox = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lbImg');
+  var lbCap = document.getElementById('lbCap');
+  var lbCount = document.getElementById('lbCount');
+  var lbClose = document.getElementById('lbClose');
+  var lbPrev = document.getElementById('lbPrev');
+  var lbNext = document.getElementById('lbNext');
+  var tiles = Array.prototype.slice.call(document.querySelectorAll('button.tile[data-src]'));
+  var current = 0;
+  var lbReturnFocus = null;
+
+  function show(i){
+    current = (i + tiles.length) % tiles.length;
+    var t = tiles[current];
+    lbImg.src = t.getAttribute('data-src');
+    lbImg.alt = t.querySelector('img').alt;
+    lbCap.textContent = t.getAttribute('data-cap') || '';
+    lbCount.textContent = (current+1) + ' di ' + tiles.length;
+  }
+  var navEl = document.querySelector('.nav');
+  function openLb(i){
+    lbReturnFocus = document.activeElement;
+    show(i);
+    lightbox.classList.add('open');
+    setInert([mainEl, footEl, skipEl, navEl], true);
+    whenVisible(lightbox, function(){ lbClose.focus(); });
+  }
+  function closeLb(){
+    lightbox.classList.remove('open');
+    setInert([mainEl, footEl, skipEl, navEl], false);
+    if(lbReturnFocus){ lbReturnFocus.focus(); lbReturnFocus = null; }
+  }
+  tiles.forEach(function(t,i){ t.addEventListener('click', function(){ openLb(i); }); });
+  lbClose.addEventListener('click', closeLb);
+  lbPrev.addEventListener('click', function(){ show(current-1); });
+  lbNext.addEventListener('click', function(){ show(current+1); });
+
+  /* tastiera a livello documento: vale anche quando il focus sta sul burger */
+  document.addEventListener('keydown', function(ev){
+    if(lightbox.classList.contains('open')){
+      if(ev.key === 'Escape'){ closeLb(); }
+      else if(ev.key === 'ArrowLeft'){ show(current-1); }
+      else if(ev.key === 'ArrowRight'){ show(current+1); }
+      else { trapTab([lbClose, lbPrev, lbNext], ev); }
+    } else if(menu.classList.contains('open')){
+      if(ev.key === 'Escape'){ closeMenu(); }
+      else { trapTab(menuFocusList(), ev); }
+    }
+  });
+})();
+</script>
+  <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

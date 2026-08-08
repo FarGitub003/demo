@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le Case del Merlo — Agriturismo a Milo, sull'Etna, dal 1999</title>
+<meta name="description" content="Agriturismo di famiglia a Milo (CT), sulle terrazze dell'Etna con vista sul mare: camere nelle antiche case contadine, vigneto biologico di Carricante, cucina siciliana, piscina panoramica. Sito dimostrativo.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Le Case del Merlo — Agriturismo a Milo, sull'Etna">
+<meta property="og:description" content="Terrazze di vigna tra il vulcano e il mare. Dal 1999 una tenuta rimessa in piedi: camere nelle vecchie case contadine, Carricante biologico, cucina siciliana.">
+<meta property="og:image" content="https://demo.francescoar.com/case-del-merlo-milo/img/vigneto-mare.jpg">
+<!-- 🪤 Senza width/height WhatsApp non disegna la miniatura e ripiega
+     sull'anteprima di solo testo: provato il 06/08 incollando il link. -->
+<meta property="og:image:width" content="1800">
+<meta property="og:image:height" content="900">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:url" content="https://demo.francescoar.com/case-del-merlo-milo/">
+<meta property="og:site_name" content="Le Case del Merlo">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 140'%3E%3Crect width='140' height='140' rx='26' fill='%2316130F'/%3E%3Cg transform='translate(3,42)'%3E%3Cpath d='M2 60 C16 58, 34 54, 48 47 C 42.5 43.1 40.2 35.3 43.3 32.2 L 36.3 29.8 L 44.9 31.4 C 48.0 26.7 55.0 27.5 55.8 33.7 C 63.6 32.2 73.0 35.3 80.0 42.3 L 66.7 40.0 L 55.0 43.9 L 48.0 47.0 C60 42, 76 32, 92 16 L96 12 C106 24, 118 38, 128 48 L134 54' fill='none' stroke='%238A9642' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Agriturismo Le Case del Merlo",
+  "description": "Agriturismo di famiglia a Milo (CT), sulle pendici dell'Etna: camere ricavate nelle antiche case contadine, vigneto biologico di Carricante, ristorante e piscina panoramica.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Sciara Praino 11/13",
+    "addressLocality": "Milo",
+    "postalCode": "95010",
+    "addressRegion": "CT",
+    "addressCountry": "IT"
+  },
+  "telephone": "+393407803635",
+  "email": "info@lecasedelmerlo.it",
+  "url": "https://www.lecasedelmerlo.it/",
+  "sameAs": ["https://www.facebook.com/lecasedelmerloetna"],
+  "priceRange": "€€",
+  "amenityFeature": [
+    {"@type":"LocationFeatureSpecification","name":"Piscina panoramica","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Ristorante","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Wi-Fi","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Parcheggio","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Aria condizionata","value":true}
+  ]
+}
+</script>
+<style>
+:root{
+  --lava:#16130F;
+  --lava-2:#221E19;
+  --lava-3:#2E2921;
+  --vigna:#8A9642;
+  --vigna-chiara:#A9B65C;
+  --magma:#C03F1E;
+  --cenere:#B3A992;
+  --carta:#F0EBDF;
+  --inchiostro:#1A1712;
+  --ease-lava:cubic-bezier(.2,.78,.28,1);
+  --ease-soft:cubic-bezier(.32,.6,.28,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Sora',system-ui,sans-serif;
+  font-weight:300;
+  color:var(--carta);
+  background:var(--lava);
+  line-height:1.72;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:'Petrona',Georgia,serif;font-weight:400;line-height:1.08;letter-spacing:-.005em}
+.voce{font-family:'Petrona',Georgia,serif;font-style:italic;font-weight:300}
+
+#storia,#etna,#camere,#tariffe,#cucina,#vigna,#esperienze,#gallery,#prenota{scroll-margin-top:96px}
+
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--magma);color:#fff;padding:.85rem 1.4rem;z-index:200;font-weight:600;text-decoration:none}
+.skip-link:focus{left:0}
+:focus-visible{outline:3px solid var(--magma);outline-offset:3px;border-radius:2px}
+
+.eyebrow{
+  font-family:'Sora',sans-serif;
+  font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;font-weight:600;
+  display:flex;align-items:flex-start;gap:.8rem;color:var(--vigna-chiara);
+}
+.eyebrow::before{content:"";width:1.9rem;height:1px;background:currentColor;opacity:.8;flex:none;margin-top:.72em}
+.eyebrow.centro{justify-content:center}
+.eyebrow.centro::after{content:"";width:1.9rem;height:1px;background:currentColor;opacity:.8;flex:none;margin-top:.72em}
+
+.merlo path{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round}
+.merlo{overflow:visible}
+
+/* ---------- nav ---------- */
+.nav{
+  position:fixed;inset:0 0 auto 0;z-index:130;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1rem clamp(1.1rem,4vw,3rem);
+  transition:background .45s var(--ease-soft),box-shadow .45s;
+  color:var(--carta);
+}
+.nav.solid{background:rgba(22,19,15,.95);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(240,235,223,.12)}
+.nav-brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;font-family:'Petrona',serif;font-size:1.05rem;letter-spacing:.16em;text-transform:uppercase}
+/* 🪤 Alzare la soglia del burger non basta: appena SOPRA la soglia ricompaiono
+   link e CTA e per una manciata di pixel il marchio non ci sta piu' e va a capo
+   (su Case del Merlo succedeva in una finestra di 7 pixel, 1001-1007, che uno
+   sweep ogni 10px scavalca in pieno). La causa vera e' che il marchio si lascia
+   comprimere: qui non si comprime e non va a capo, cosi' quella classe di
+   difetto non puo' piu' tornare a nessuna larghezza. */
+.nav-brand{flex-shrink:0;white-space:nowrap}
+.nav-brand .merlo{width:56px;height:26px;flex:none;color:var(--vigna-chiara)}
+.nav-brand .merlo path{stroke-width:4}
+
+/* 🪤 A 320px (iPhone SE, Galaxy Fold chiuso) il marchio andava a capo e la
+   barra cresceva di 17px sopra la piega. 320px e' la larghezza minima che le
+   WCAG chiedono di reggere senza perdite, quindi il marchio si stringe. */
+@media (max-width:360px){
+  .nav-brand{font-size:.86rem;letter-spacing:.1em;gap:.45rem}
+  .nav-brand svg,.nav-brand .merlo{width:42px}
+}.nav-links{display:flex;gap:1.6rem;list-style:none}
+.nav-links a{
+  text-decoration:none;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;
+  padding-bottom:.25rem;background:linear-gradient(var(--vigna-chiara),var(--vigna-chiara)) bottom left/0 1.5px no-repeat;
+  transition:background-size .4s var(--ease-soft);
+}
+.nav-links a:hover{background-size:100% 1.5px}
+.nav-cta{
+  background:var(--magma);color:#fff;border:1px solid var(--magma);
+  padding:.55rem 1.2rem;text-decoration:none;
+  font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;
+  transition:background .3s,transform .3s var(--ease-soft);
+}
+.nav-cta:hover{background:transparent;transform:translateY(-1px)}
+.burger{display:none;background:none;border:0;cursor:pointer;z-index:120;width:44px;height:44px;position:relative;color:inherit}
+.burger span{position:absolute;left:9px;right:9px;height:1.5px;background:currentColor;transition:transform .4s var(--ease-soft),opacity .3s,top .4s}
+.burger span:nth-child(1){top:15px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:27px}
+.burger[aria-expanded="true"] span:nth-child(1){top:21px;transform:rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){top:21px;transform:rotate(-45deg)}
+
+/* 🪤 Il burger compariva solo sotto i 700px, ma i link della barra smettono di
+   entrarci molto prima: fra 701-980px, fino a 148px di altezza contro 71 il marchio e i link
+   andavano A CAPO e la barra raddoppiava di altezza, sopra la piega, sui tablet
+   in verticale (iPad = 768px, iPad Air = 820px). Misurato larghezza per
+   larghezza. Il menu a scomparsa parte percio' da 1010px. */
+@media (max-width:1010px){
+  .nav-links,.nav .nav-cta{display:none}
+  .burger{display:block}
+}.mobile-menu{
+  position:fixed;inset:0;background:var(--lava);z-index:110;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1.1rem;
+  opacity:0;visibility:hidden;transition:opacity .45s var(--ease-soft),visibility .45s;
+}
+.mobile-menu.open{opacity:1;visibility:visible}
+.mobile-menu a{color:var(--carta);font-family:'Petrona',serif;font-size:1.9rem;text-decoration:none}
+.mobile-menu a:hover{color:var(--vigna-chiara)}
+.mobile-menu .mm-note{color:var(--cenere);font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;margin-top:1.6rem}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+.hero-media{position:absolute;inset:0;z-index:-2}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 42%;animation:kenburns 30s var(--ease-soft) both}
+@keyframes kenburns{from{transform:scale(1.12)}to{transform:scale(1)}}
+/* 🪤 il velo passava da .72 a .18 fra 0% e 28% ed era gia' quasi trasparente
+   proprio dove sta il blocco di testo: l'occhiello finiva sul verde del vigneto
+   illuminato a 2,52:1 (desktop) e 2,17:1 (mobile), su un minimo di 4,5. Il velo
+   ora si richiude prima e piu' deciso da meta' altezza in giu', dove sta il
+   testo, lasciando limpidi cielo e colline in alto. */
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(22,19,15,.72) 0%,rgba(22,19,15,.18) 26%,rgba(22,19,15,.40) 44%,rgba(22,19,15,.80) 62%,rgba(22,19,15,.97) 100%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(125% 80% at 14% 92%,rgba(22,19,15,.88) 0%,transparent 64%)}
+.hero-inner{width:min(1240px,92vw);margin-inline:auto;padding:0 0 clamp(5.4rem,10vh,8rem)}
+.hero .merlo{width:min(430px,74vw);height:auto;margin-bottom:1.2rem;color:var(--vigna-chiara);filter:drop-shadow(0 2px 5px rgba(22,19,15,.95))}
+.hero .merlo path{stroke-width:2.9}
+.hero h1{
+  font-size:clamp(2.9rem,9.6vw,7.4rem);font-weight:300;letter-spacing:-.022em;
+  margin:.16em 0 .24em;text-wrap:balance;text-shadow:0 2px 26px rgba(22,19,15,.6);
+}
+/* l'occhiello dell'hero e' l'unico verde oliva appoggiato su una foto chiara:
+   qui usa la tinta schiarita della stessa famiglia. ⛔ la variabile globale
+   --vigna-chiara NON si tocca: sui fondi scuri fa 8,31:1 e va bene com'e'. */
+.hero .eyebrow{color:#DCE6A8}
+.hero-tag{font-size:clamp(1rem,1.9vw,1.2rem);max-width:46ch;color:#E7E1D4;font-weight:300}
+.hero-ctas{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:2.1rem}
+.btn{
+  display:inline-flex;align-items:center;gap:.6rem;padding:1rem 1.9rem;text-decoration:none;
+  font-size:.73rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;
+  transition:transform .3s var(--ease-soft),background .3s,color .3s,border-color .3s;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--magma);color:#fff;border:1px solid var(--magma)}
+.btn-primary:hover{background:#A93518;border-color:#A93518}
+.btn-ghost{border:1px solid rgba(240,235,223,.55);color:var(--carta)}
+.btn-ghost:hover{border-color:var(--carta);background:rgba(240,235,223,.1)}
+.hero-ribbon{
+  position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:center;
+  background:rgba(22,19,15,.66);backdrop-filter:blur(10px);border-top:1px solid rgba(240,235,223,.16);
+}
+.hero-ribbon div{
+  padding:.9rem 2rem;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:#E7E1D4;
+  display:flex;align-items:center;gap:.65rem;
+}
+.hero-ribbon div+div{border-left:1px solid rgba(240,235,223,.16)}
+.hero-ribbon svg{width:15px;height:15px;flex:none;color:var(--vigna-chiara)}
+.hero .cascade{opacity:0;transform:translateY(26px);animation:rise 1s var(--ease-lava) forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+.hero .cascade:nth-child(1){animation-delay:.12s}
+.hero .cascade:nth-child(2){animation-delay:.3s}
+.hero .cascade:nth-child(3){animation-delay:.46s}
+.hero .cascade:nth-child(4){animation-delay:.64s}
+.hero .cascade:nth-child(5){animation-delay:.84s}
+
+/* ---------- base ---------- */
+.section{padding:clamp(4.6rem,9vw,7.6rem) 0}
+.wrap{width:min(1240px,92vw);margin-inline:auto}
+.wrap-stretto{width:min(940px,92vw);margin-inline:auto}
+[data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease-soft),transform .9s var(--ease-soft)}
+[data-reveal].in{opacity:1;transform:none}
+.divider{display:flex;justify-content:center;padding:.5rem 0;color:var(--cenere)}
+.divider .merlo{width:250px;height:auto;opacity:.85}
+.divider path{stroke-width:1.7}
+.grana{position:relative;overflow:hidden}
+.grana::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='150' height='150' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------- storia ---------- */
+.storia-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4.6rem);align-items:center}
+.storia h2{font-size:clamp(1.95rem,4.4vw,3.1rem);margin:1.2rem 0 1.1rem;max-width:17ch}
+.storia p{color:#D6CFC1;max-width:52ch}
+.storia .voce{color:var(--carta);font-size:1.18rem;display:block;margin-bottom:1rem;max-width:44ch}
+.anno-grande{font-family:'Petrona',serif;font-weight:300;font-size:clamp(4.6rem,12vw,9rem);line-height:.86;color:var(--vigna);letter-spacing:-.03em;display:block}
+.storia-media{position:relative;overflow:hidden}
+.storia-media img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform 1.3s var(--ease-soft)}
+.storia-media:hover img{transform:scale(1.04)}
+.storia-media::after{content:"";position:absolute;inset:13px;border:1px solid rgba(240,235,223,.3);pointer-events:none}
+.carricante{margin-top:2rem;border-top:1px solid rgba(179,169,146,.45);padding-top:1.3rem;max-width:48ch}
+.carricante b{display:block;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--vigna-chiara);font-weight:600;margin-bottom:.4rem}
+.carricante q{font-family:'Petrona',serif;font-style:italic;font-weight:300;color:#D6CFC1;font-size:1.04rem}
+
+/* ---------- banda Etna ---------- */
+.banda{position:relative;overflow:hidden;isolation:isolate;display:flex;align-items:center;min-height:clamp(400px,56vw,660px)}
+.banda-media{position:absolute;inset:0;z-index:-2}
+.banda-media img{width:100%;height:100%;object-fit:cover}
+.banda::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(96deg,rgba(22,19,15,.94) 4%,rgba(22,19,15,.66) 48%,rgba(22,19,15,.24) 100%)}
+.banda .contenuto{width:min(1240px,92vw);margin-inline:auto;padding:clamp(3rem,6vw,5rem) 0}
+.banda .box{max-width:46ch}
+.banda h2{font-size:clamp(1.9rem,4.2vw,3rem);margin:1.2rem 0 1rem;max-width:15ch}
+.banda p{color:#DED7C8}
+.banda .voce{font-size:1.16rem;display:block;margin-bottom:.9rem;color:var(--carta)}
+.distanze{list-style:none;margin-top:2rem;display:grid;grid-template-columns:1fr 1fr;gap:.1rem 2rem;max-width:34rem}
+.distanze li{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;
+  border-bottom:1px solid rgba(179,169,146,.32);padding:.62rem 0;font-size:.94rem;color:#E7E1D4}
+.distanze b{font-family:'Sora',sans-serif;font-weight:600;color:var(--vigna-chiara);white-space:nowrap;font-size:.9rem}
+
+/* ---------- camere (riquadro chiaro) ---------- */
+.chiaro{background:var(--carta);color:var(--inchiostro)}
+.chiaro .eyebrow{color:#5C6B1F}
+.chiaro h2{font-size:clamp(2rem,4.6vw,3.2rem);margin:1.2rem 0 .9rem}
+.chiaro p{color:#4A463D}
+.camere-head{max-width:60ch;margin-bottom:3rem}
+.due-camere{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.2rem,3vw,2.2rem)}
+.camera{border:1px solid rgba(26,23,18,.18);display:flex;flex-direction:column;overflow:hidden;background:#F7F4EC}
+.camera figure{overflow:hidden}
+.camera img{aspect-ratio:3/2;object-fit:cover;width:100%;transition:transform 1.2s var(--ease-soft)}
+.camera:hover img{transform:scale(1.05)}
+.camera .corpo{padding:1.7rem 1.6rem 1.9rem}
+.camera h3{font-size:1.7rem;margin-bottom:.5rem}
+.camera .occhio{font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:#8A3E20;font-weight:600}
+.camera p{font-size:.97rem;margin-top:.6rem}
+.dotazioni{list-style:none;margin-top:1.2rem;display:flex;flex-wrap:wrap;gap:.4rem}
+.dotazioni li{font-size:.76rem;letter-spacing:.02em;border:1px solid rgba(26,23,18,.22);padding:.28rem .7rem;color:#3D3930}
+.casale{margin-top:2.6rem;border-top:2px solid rgba(26,23,18,.75);padding-top:1.3rem;max-width:62ch}
+.casale b{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:#5C6B1F;font-weight:600;display:block;margin-bottom:.4rem}
+.casale q{font-family:'Petrona',serif;font-style:italic;font-weight:300;font-size:1.06rem;color:#4A463D}
+
+/* ---------- tariffe ---------- */
+.tariffe-head{text-align:center;max-width:56ch;margin:0 auto 2.8rem}
+.tariffe-head .eyebrow{color:#5C6B1F}
+.tab-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tab{width:100%;min-width:32rem;border-collapse:collapse;font-family:'Sora',sans-serif}
+.tab caption{text-align:left;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:#8A3E20;font-weight:600;padding-bottom:.8rem}
+.tab th,.tab td{padding:.85rem .7rem;text-align:right;border-bottom:1px solid rgba(26,23,18,.16);font-size:.95rem}
+.tab th:first-child,.tab td:first-child{text-align:left}
+.tab thead th{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:#5C6B1F;border-bottom:2px solid rgba(26,23,18,.7)}
+.tab tbody td:first-child{font-weight:500}
+.tab tbody tr:hover{background:rgba(138,150,66,.09)}
+.tab .agosto td{color:#8A3E20;font-weight:500}
+.tariffe-note{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.4rem;margin-top:2rem}
+.tariffe-note div{border-top:2px solid #8A3E20;padding-top:.9rem}
+.tariffe-note b{display:block;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:#8A3E20;font-weight:600;margin-bottom:.3rem}
+.tariffe-note p{font-size:.92rem}
+
+/* ---------- cucina ---------- */
+.cucina-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,5vw,4.4rem);align-items:center}
+.cucina h2{font-size:clamp(1.95rem,4.4vw,3.1rem);margin:1.2rem 0 1.1rem;max-width:16ch}
+.cucina .voce{color:var(--carta);font-size:1.18rem;display:block;margin-bottom:1rem}
+.pasti{display:grid;gap:0;margin-top:1.8rem;border-top:1px solid rgba(179,169,146,.4)}
+.pasto{display:grid;grid-template-columns:9rem 1fr;gap:1.3rem;padding:1.15rem 0;border-bottom:1px solid rgba(179,169,146,.4);align-items:baseline}
+.pasto dt{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--vigna-chiara)}
+.pasto dd{font-size:.98rem;color:#DED7C8}
+.pasto dd b{color:var(--carta);font-weight:500}
+.cucina-media{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.cucina-media figure{overflow:hidden}
+.cucina-media img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform 1.2s var(--ease-soft)}
+.cucina-media figure:hover img{transform:scale(1.05)}
+
+/* ---------- vigna e fauna ---------- */
+.vigna-sez{background:var(--lava-2)}
+.vigna-head{max-width:60ch;margin-bottom:2.8rem}
+.vigna-head h2{font-size:clamp(1.95rem,4.4vw,3.1rem);margin:1.2rem 0 1rem;max-width:18ch}
+.vigna-head p{color:#D6CFC1}
+.bestie{display:grid;grid-template-columns:repeat(5,1fr);gap:.9rem;margin-bottom:2rem}
+.bestia{border:1px solid rgba(179,169,146,.34);padding:1.1rem .9rem;text-align:center;
+  transition:transform .4s var(--ease-soft),border-color .4s,background .4s}
+.bestia:hover{transform:translateY(-4px);border-color:var(--vigna);background:rgba(138,150,66,.1)}
+.bestia b{display:block;font-family:'Petrona',serif;font-weight:400;font-size:1.12rem;color:var(--carta)}
+.bestia span{font-size:.72rem;color:var(--cenere)}
+.vigna-foto{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.vigna-foto figure{overflow:hidden;position:relative}
+.vigna-foto img{width:100%;aspect-ratio:3/2;object-fit:cover;transition:transform 1.2s var(--ease-soft)}
+.vigna-foto figure:hover img{transform:scale(1.05)}
+.vigna-foto figcaption{position:absolute;inset:auto 0 0 0;padding:1.5rem .9rem .7rem;
+  background:linear-gradient(180deg,transparent 0%,rgba(22,19,15,.74) 24%,rgba(22,19,15,.92) 48%,rgba(22,19,15,.97) 100%);font-size:.78rem;color:#E7E1D4}
+
+/* ---------- esperienze ---------- */
+.esperienze-head{text-align:center;max-width:54ch;margin:0 auto 3rem}
+.esperienze-head h2{font-size:clamp(2rem,4.6vw,3.2rem);margin:1.2rem 0 .9rem}
+.esperienze-head p{color:#D6CFC1}
+.tre-esperienze{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+.esperienza{border:1px solid rgba(179,169,146,.34);padding:1.9rem 1.6rem 2rem;display:flex;flex-direction:column;
+  transition:transform .45s var(--ease-soft),border-color .45s,box-shadow .45s}
+.esperienza:hover{transform:translateY(-6px);border-color:var(--vigna);box-shadow:0 24px 44px -28px rgba(0,0,0,.9)}
+.esperienza h3{font-size:1.55rem;margin-bottom:.5rem}
+.esperienza .quando{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--vigna-chiara);font-weight:600}
+.esperienza p{font-size:.95rem;color:#D6CFC1;margin-top:.7rem}
+.esperienza .prezzo{margin-top:auto;padding-top:1.3rem;font-family:'Petrona',serif;font-size:2.1rem;color:var(--carta);line-height:1}
+.esperienza .prezzo small{display:block;font-family:'Sora',sans-serif;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cenere);margin-top:.45rem;font-weight:500}
+.esperienze-nota{margin-top:1.6rem;font-size:.9rem;color:var(--cenere);max-width:64ch}
+
+/* ---------- gallery ---------- */
+.gallery-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:2.6rem}
+.gallery-head h2{font-size:clamp(1.95rem,4.4vw,3rem);margin-top:1.1rem}
+.gallery-head p{font-size:.88rem;color:var(--cenere);max-width:26ch}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.85rem}
+.gallery-grid button{display:block;width:100%;border:0;padding:0;background:none;cursor:zoom-in;
+  overflow:hidden;position:relative;aspect-ratio:3/2}
+.gallery-grid button.largo{grid-column:span 2}
+/* 🪤 la tessera larga il doppio, con lo stesso aspect-ratio, e' anche ALTA il
+   doppio delle due vicine che stanno nella STESSA riga: sotto di loro restava
+   un buco nero di ~209px (misurato a 1100, 1440 e 1920px) proprio nella sezione
+   che si chiama «La tenuta, com'è davvero». Ora la foto grande occupa due righe
+   e si allunga per riempirle, e le ultime due tessere si allargano a chiudere
+   l'ultima riga: 7 tessere, nessuna cella vuota. */
+@media (min-width:1041px){
+  .gallery-grid button.largo{grid-row:span 2;aspect-ratio:auto}
+  .gallery-grid button:nth-last-child(-n+2){grid-column:span 2;aspect-ratio:3/1}
+}
+.gallery-grid img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease-soft)}
+.gallery-grid button:hover img{transform:scale(1.05)}
+.gallery-grid button::after{
+  content:attr(data-tag);position:absolute;left:.8rem;bottom:.75rem;
+  font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--carta);font-weight:600;
+  background:rgba(22,19,15,.72);padding:.3rem .65rem;backdrop-filter:blur(6px);
+  opacity:0;transform:translateY(6px);transition:opacity .4s,transform .4s;
+}
+.gallery-grid button:hover::after,.gallery-grid button:focus-visible::after{opacity:1;transform:none}
+.lightbox{position:fixed;inset:0;z-index:150;background:rgba(14,12,10,.97);
+  display:none;align-items:center;justify-content:center;flex-direction:column;padding:3.6rem 1.2rem 2rem}
+.lightbox.open{display:flex}
+.lightbox img{max-width:min(1150px,94vw);max-height:78vh;object-fit:contain}
+.lightbox figcaption{color:var(--carta);font-family:'Petrona',serif;font-style:italic;margin-top:1.1rem;font-size:1rem}
+/* 🪤 I controlli della lightbox avevano un fondo CHIARO traslucido (.08) con il
+   glifo chiaro: sul desktop la foto e' limitata e i bottoni cadono sul velo
+   scuro fisso, ma su telefono la foto occupa quasi tutta la larghezza e i
+   bottoni ci finiscono SOPRA — sopra una foto chiara il glifo spariva del tutto
+   (misurato fino a 1,00:1 su un minimo di 4,5, e succedeva su 4 demo su 5).
+   Fondo scuro coprente: il glifo chiaro ha sempre il suo contrasto, qualunque
+   foto ci sia sotto. */
+.lb-close,.lb-prev,.lb-next{position:absolute;background:rgba(22,19,15,.78);backdrop-filter:blur(8px);border:1px solid rgba(240,235,223,.42);
+  color:var(--carta);width:46px;height:46px;border-radius:50%;cursor:pointer;font-size:1.05rem;display:grid;place-items:center;transition:background .3s}
+.lb-close:hover,.lb-prev:hover,.lb-next:hover{background:rgba(22,19,15,.94)}
+.lb-close{top:1.2rem;right:1.2rem}
+.lb-prev{left:1.2rem;top:50%;transform:translateY(-50%)}
+.lb-next{right:1.2rem;top:50%;transform:translateY(-50%)}
+
+/* ---------- prenota ---------- */
+.prenota{background:var(--lava-2)}
+.prenota h2{font-size:clamp(2rem,4.6vw,3.2rem);max-width:17ch;margin:1.2rem 0 1rem}
+.prenota>.wrap>.voce{max-width:46ch;color:#E7E1D4;font-size:1.16rem;display:block}
+.contatti{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:2.6rem;max-width:760px}
+.contatto{border:1px solid rgba(179,169,146,.36);padding:1.3rem 1.35rem;background:rgba(22,19,15,.5)}
+.contatto .k{font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--vigna-chiara);font-weight:600;display:block;margin-bottom:.55rem}
+.contatto a{color:var(--carta);text-decoration:none;border-bottom:1px solid rgba(240,235,223,.36);transition:border-color .3s}
+.contatto a:hover{border-color:var(--magma)}
+.contatto p{font-size:.95rem;color:#E7E1D4}
+.contatto p+p{margin-top:.35rem}
+.contatto .sec{font-size:.86rem;color:var(--cenere)}
+
+/* ---------- footer ---------- */
+footer{background:#0F0D0A;color:var(--cenere);padding:2.9rem 0 2.5rem;font-size:.82rem}
+.footer-inner{display:flex;flex-direction:column;gap:1.05rem;align-items:center;text-align:center}
+.footer-brand{display:flex;align-items:center;gap:.6rem;font-family:'Petrona',serif;color:var(--carta);font-size:1rem;letter-spacing:.16em;text-transform:uppercase}
+.footer-brand .merlo{width:50px;height:24px;color:var(--vigna)}
+.footer-brand .merlo path{stroke-width:4.4}
+.footer-social{display:flex;gap:1.4rem;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500}
+.footer-social a{text-decoration:none;color:var(--carta);opacity:.88;transition:opacity .3s,color .3s}
+.footer-social a:hover{opacity:1;color:var(--vigna-chiara)}
+.ai-label{border:1px solid rgba(138,150,66,.6);color:var(--vigna-chiara);padding:.6rem 1.15rem;font-size:.72rem;line-height:1.5;max-width:92vw}
+footer .fine{font-size:.74rem;color:#9C9284;max-width:64ch;line-height:1.6}
+
+/* ---------- responsive ---------- */
+@media (max-width:1040px){
+  .storia-grid,.cucina-grid{grid-template-columns:1fr}
+  .due-camere{grid-template-columns:1fr}
+  .tre-esperienze{grid-template-columns:1fr}
+  .bestie{grid-template-columns:repeat(3,1fr)}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:760px){
+  .distanze{grid-template-columns:1fr}
+  .vigna-foto{grid-template-columns:1fr}
+  .bestie{grid-template-columns:repeat(2,1fr)}
+  .tab th,.tab td{padding:.7rem .35rem;font-size:.86rem}
+}
+@media (max-width:700px){
+  .nav-links,.nav .nav-cta{display:none}
+  .burger{display:block}
+  .hero-ribbon{display:none}
+  .hero-inner{padding-bottom:4rem}
+  .contatti{grid-template-columns:1fr}
+  .pasto{grid-template-columns:1fr;gap:.15rem}
+  /* 🪤 `.banda::before` e' un gradiente ORIZZONTALE a 96deg: e' pensato per il
+     desktop, dove il testo sta in una colonna stretta a sinistra sul lato scuro.
+     A 390px il testo occupa TUTTA la larghezza e finisce sul cielo e sul vigneto
+     illuminati: le distanze — l'argomento numero uno per chi prenota in Sicilia —
+     stavano a 1,53:1. Invece di annegare la foto sotto un velo quasi opaco (che
+     e' proprio quello che la sezione dice di non fare: «questa e' la vista, non
+     una cartolina»), su telefono la foto si IMPILA sopra il testo: si vede
+     davvero, e il testo torna sul nero pieno. */
+  .banda{min-height:auto;display:block;background:var(--lava)}
+  .banda-media{position:static;aspect-ratio:4/3}
+  .banda::before,.banda::after{display:none}
+  .banda .contenuto{padding:3rem 0 4.2rem}
+  .gallery-grid button.largo{grid-column:span 2}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  html{scroll-behavior:auto}
+  [data-reveal]{opacity:1;transform:none}
+  .hero .cascade{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Salta al contenuto</a>
+
+<header class="nav" id="nav">
+  <a class="nav-brand" href="#top" aria-label="Le Case del Merlo, torna su">
+    <svg class="merlo" viewBox="0 0 140 66" aria-hidden="true"><path d="M2 60 C16 58, 34 54, 48 47 C 42.5 43.1 40.2 35.3 43.3 32.2 L 36.3 29.8 L 44.9 31.4 C 48.0 26.7 55.0 27.5 55.8 33.7 C 63.6 32.2 73.0 35.3 80.0 42.3 L 66.7 40.0 L 55.0 43.9 L 48.0 47.0 C60 42, 76 32, 92 16 L96 12 C106 24, 118 38, 128 48 L134 54"/></svg>
+    Le Case del Merlo
+  </a>
+  <nav aria-label="Principale">
+    <ul class="nav-links">
+      <li><a href="#storia">La storia</a></li>
+      <li><a href="#camere">Camere</a></li>
+      <li><a href="#tariffe">Tariffe</a></li>
+      <li><a href="#cucina">Cucina</a></li>
+      <li><a href="#esperienze">Esperienze</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+    </ul>
+  </nav>
+  <a class="nav-cta" href="#prenota">Prenota</a>
+  <button class="burger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Apri il menu"><span></span><span></span><span></span></button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#storia">La storia</a>
+  <a href="#etna">L'Etna</a>
+  <a href="#camere">Camere</a>
+  <a href="#tariffe">Tariffe</a>
+  <a href="#cucina">Cucina</a>
+  <a href="#esperienze">Esperienze</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#prenota">Prenota</a>
+  <p class="mm-note">Milo · Etna · Sicilia</p>
+</div>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="hero-media">
+    <picture>
+      <source media="(max-width:700px)" srcset="img/vigneto-mare-mobile.jpg">
+      <img src="img/vigneto-mare.jpg" alt="Le terrazze del vigneto de Le Case del Merlo che scendono verso il mare Ionio, sulle pendici dell'Etna" fetchpriority="high">
+    </picture>
+  </div>
+  <div class="hero-inner">
+    <svg class="merlo cascade" viewBox="0 0 360 124" aria-hidden="true">
+      <path id="merloHero" d="M4 110 C42 108, 88 102, 126 90 C 116.5 83.2 112.5 69.8 117.9 64.3 L 105.8 60.3 L 120.6 63.0 C 126.0 54.9 138.2 56.2 139.5 67.0 C 153.0 64.3 169.2 69.8 181.3 81.9 L 158.4 77.8 L 138.2 84.6 L 126.0 90.0 C150 82, 178 66, 206 42 L214 36 C244 56, 274 80, 306 96 C324 104, 340 108, 356 110"/>
+    </svg>
+    <p class="eyebrow cascade">Agriturismo · Milo (CT) · dal 1999</p>
+    <h1 class="cascade">Le Case del Merlo</h1>
+    <p class="hero-tag cascade">Terrazze di vigna tra il vulcano e il mare. Si dorme nelle vecchie case contadine, si mangia quello che cresce qui intorno.</p>
+    <div class="hero-ctas cascade">
+      <a class="btn btn-primary" href="#prenota">Prenota una camera</a>
+      <a class="btn btn-ghost" href="#tariffe">Vedi le tariffe</a>
+    </div>
+  </div>
+  <div class="hero-ribbon">
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 20h18L14 6l-2 4-2-2z"/></svg>Cima dell'Etna a 20 minuti</div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 3c3 4 5 6.5 5 10a5 5 0 01-10 0c0-3.5 2-6 5-10z"/></svg>Vigneto biologico</div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 15c2-1.6 4-1.6 6 0s4 1.6 6 0 4-1.6 6 0M2 10c2-1.6 4-1.6 6 0s4 1.6 6 0 4-1.6 6 0"/></svg>Piscina panoramica</div>
+  </div>
+</section>
+
+<section class="section storia grana" id="storia">
+  <div class="wrap storia-grid">
+    <div>
+      <p class="eyebrow" data-reveal>Il bosco della Baronessa</p>
+      <span class="anno-grande" data-reveal>1999</span>
+      <h2 data-reveal>Terrazze incolte, case abbandonate. E dieci anni di lavoro.</h2>
+      <span class="voce" data-reveal>Questi terreni erano di una nobildonna siciliana, che li faceva coltivare dai contadini del posto. Poi il bosco si era ripreso tutto.</span>
+      <p data-reveal>Nel 1999 Alfio Russo e Angela Pantò comprano l'intera tenuta: terrazze incolte e caseggiati abbandonati. Ci vollero circa dieci anni per rimettere il vigneto in produzione. L'agriturismo nasce da lì, per dare nuova vita alle antiche case dei contadini.</p>
+      <div class="carricante" data-reveal>
+        <b>Perché si chiama Carricante</b>
+        <q>La terra vulcanica rendeva le viti talmente «cariche» di uva da piegarsi sotto il peso dei grappoli; da qui il nome Carricante il vitigno autoctono con cui gli attuali proprietari proseguirono la coltivazione.</q>
+      </div>
+    </div>
+    <figure class="storia-media" data-reveal>
+      <img src="img/uva.jpg" alt="Grappolo di uva bianca Carricante nel vigneto della tenuta" loading="lazy">
+    </figure>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true"><svg class="merlo" viewBox="0 0 360 124"><path class="merlo-div" d="M4 110 C42 108, 88 102, 126 90 C 116.5 83.2 112.5 69.8 117.9 64.3 L 105.8 60.3 L 120.6 63.0 C 126.0 54.9 138.2 56.2 139.5 67.0 C 153.0 64.3 169.2 69.8 181.3 81.9 L 158.4 77.8 L 138.2 84.6 L 126.0 90.0 C150 82, 178 66, 206 42 L214 36 C244 56, 274 80, 306 96 C324 104, 340 108, 356 110"/></svg></div>
+
+<section class="banda" id="etna">
+  <div class="banda-media"><img src="img/etna.jpg" alt="L'Etna in eruzione visto dai terrazzamenti della tenuta, con i muretti a secco in primo piano" loading="lazy"></div>
+  <div class="contenuto">
+    <div class="box">
+      <p class="eyebrow" data-reveal>Il vulcano</p>
+      <h2 data-reveal>Questa è la vista, non una cartolina.</h2>
+      <span class="voce" data-reveal>La fotografia è scattata dalla tenuta, oltre i muretti a secco che reggono le terrazze.</span>
+      <p data-reveal>Milo è un paese sulle pendici dell'Etna, quello dove ogni anno si tiene la manifestazione «Vini Milo». Dalla posizione della tenuta si sale in cima al vulcano da tutti e due i versanti.</p>
+      <ul class="distanze" data-reveal>
+        <li>Cima dell'Etna <b>20 min</b></li>
+        <li>Taormina e le spiagge <b>20 min</b></li>
+        <li>Centro di Catania <b>30 min</b></li>
+        <li>Aeroporto di Fontanarossa <b>30 min</b></li>
+        <li>Zafferana Etnea <b>meno di 10 min</b></li>
+        <li>Casello di Giarre <b>9 km</b></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section chiaro" id="camere">
+  <div class="wrap">
+    <div class="camere-head">
+      <p class="eyebrow" data-reveal>Dove si dorme</p>
+      <h2 data-reveal>Il Casale dei Fiori</h2>
+      <p data-reveal>L'antica casa del contadino, affacciata sulla piscina panoramica: cinque camere doppie e quattro camere multiple con il soppalco.</p>
+    </div>
+    <div class="due-camere">
+      <article class="camera" data-reveal>
+        <figure><img src="img/camera-doppia.jpg" alt="Interno di una camera doppia, con letto matrimoniale, travi a vista e scala in ferro battuto" loading="lazy"></figure>
+        <div class="corpo">
+          <span class="occhio">Da 1 a 2 ospiti</span>
+          <h3>Camera Doppia</h3>
+          <p>Letto matrimoniale oppure due letti separati, con vista sul mare e sull'Etna e area esterna attrezzata.</p>
+          <ul class="dotazioni">
+            <li>Wi-Fi</li><li>Aria condizionata</li><li>TV</li><li>Mini bar</li><li>Tea set</li><li>Cassaforte</li><li>Set di cortesia</li><li>Piscina</li><li>Parcheggio</li>
+          </ul>
+        </div>
+      </article>
+      <article class="camera" data-reveal>
+        <figure><img src="img/camera-familiare.jpg" alt="Camera familiare con soppalco in legno e scala in ferro battuto verde" loading="lazy"></figure>
+        <div class="corpo">
+          <span class="occhio">Fino a 5 ospiti</span>
+          <h3>Camera Familiare</h3>
+          <p>Più ampia della doppia, con letto a castello o soppalco per il terzo, quarto e quinto letto. Le scale in ferro battuto portano al soppalco in legno.</p>
+          <ul class="dotazioni">
+            <li>Tutto della doppia</li><li>Soppalco</li><li>Set bagno personalizzato</li><li>Cucina comune 7:00-17:00</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+    <div class="casale" data-reveal>
+      <b>La ristrutturazione</b>
+      <q>Ha prediletto l'utilizzo dei materiali tipici del luogo: gli arredi in legno di castagno, i soffitti con le travi a vista, il pavimento in cotto siciliano, rendono l'ambiente caldo e accogliente.</q>
+    </div>
+  </div>
+</section>
+
+<section class="section chiaro" id="tariffe" style="padding-top:0">
+  <div class="wrap-stretto">
+    <div class="tariffe-head">
+      <p class="eyebrow centro" data-reveal>Quanto costa</p>
+      <h2 data-reveal>Tariffe</h2>
+      <p data-reveal>Prezzi per notte, in camera e colazione a buffet. Sono le tariffe pubblicate per il 2024: al momento di prenotare vanno riconfermate.</p>
+    </div>
+    <div class="tab-scroll" data-reveal role="region" aria-label="Tabella delle tariffe, scorrevole in orizzontale" tabindex="0">
+    <table class="tab">
+      <caption>Tariffe 2024 · a notte, colazione inclusa</caption>
+      <thead>
+        <tr><th scope="col">Periodo</th><th scope="col">Singola</th><th scope="col">Doppia</th><th scope="col">Tripla</th><th scope="col">Quadrupla</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Gennaio e febbraio</td><td>€ 60</td><td>€ 90</td><td>€ 105</td><td>€ 120</td></tr>
+        <tr><td>Marzo, aprile, maggio, settembre, ottobre</td><td>€ 65</td><td>€ 100</td><td>€ 115</td><td>€ 130</td></tr>
+        <tr><td>Giugno e luglio</td><td>€ 65</td><td>€ 110</td><td>€ 125</td><td>€ 140</td></tr>
+        <tr class="agosto"><td>Agosto</td><td colspan="4">più € 10 a notte su tutte le sistemazioni</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="tariffe-note">
+      <div data-reveal><b>Mezza pensione</b><p>€ 28 a persona, cena inclusa per tutta la durata del soggiorno. Menù bambino € 16.</p></div>
+      <div data-reveal><b>Cena singola</b><p>Menù alla carta ogni sera, senza pacchetto.</p></div>
+      <div data-reveal><b>Come si prenota</b><p>Per telefono o per email, direttamente con Antonio o Giuliana.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section cucina grana" id="cucina">
+  <div class="wrap cucina-grid">
+    <div class="cucina-media" data-reveal>
+      <figure><img src="img/piatto.jpg" alt="Piatto tipico siciliano servito in agriturismo" loading="lazy"></figure>
+      <figure><img src="img/tavola.jpg" alt="Tavolo apparecchiato con bottiglia di vino, affacciato sulla terrazza" loading="lazy"></figure>
+    </div>
+    <div>
+      <p class="eyebrow" data-reveal>A tavola</p>
+      <h2 data-reveal>Colazione, domenica e forno a legna.</h2>
+      <span class="voce" data-reveal>D'inverno si mangia nella sala col camino acceso. D'estate nel patio, all'ombra dei pergolati di castagno, in mezzo alle viti e alle querce.</span>
+      <dl class="pasti" data-reveal>
+        <div class="pasto"><dt>Colazione</dt><dd><b>08:00 · 10:00</b>, a buffet: pane fatto in casa, marmellate, dolci, formaggi e salumi locali, focacce, yogurt, cereali, frutta.</dd></div>
+        <div class="pasto"><dt>Domenica</dt><dd>Pranzo tipico siciliano a <b>menù fisso</b>: antipasti, primi con ingredienti etnei, secondi di carne, dolce e amaro.</dd></div>
+        <div class="pasto"><dt>Cena</dt><dd>Menù <b>alla carta</b> ogni sera, più le pizze del <b>forno a legna</b>: pistacchio, pecorino, salumi tipici.</dd></div>
+        <div class="pasto"><dt>Il vino</dt><dd>Il <b>Carricante</b> del vigneto di casa, certificato biologico, si assaggia qui.</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="section vigna-sez" id="vigna">
+  <div class="wrap">
+    <div class="vigna-head">
+      <p class="eyebrow" data-reveal>La vigna</p>
+      <h2 data-reveal>Biologico vuol dire che ci abitano gli animali.</h2>
+      <p data-reveal>Il vigneto è certificato biologico e non si usano pesticidi, con molta attenzione alla sopravvivenza degli animali e degli uccelli selvatici. Sono loro il motivo, non un'etichetta.</p>
+    </div>
+    <div class="bestie">
+      <div class="bestia" data-reveal><b>Conigli</b><span>nelle terrazze</span></div>
+      <div class="bestia" data-reveal><b>Volpi</b><span>al crepuscolo</span></div>
+      <div class="bestia" data-reveal><b>Istrici</b><span>tra i muretti</span></div>
+      <div class="bestia" data-reveal><b>Upupa</b><span>uccello ormai raro</span></div>
+      <div class="bestia" data-reveal><b>Picchio maggiore</b><span>uccello ormai raro</span></div>
+    </div>
+    <div class="vigna-foto">
+      <figure data-reveal><img src="img/capre.jpg" alt="Le capre dell'azienda agricola nel recinto" loading="lazy"><figcaption>Le capre dell'azienda</figcaption></figure>
+      <figure data-reveal><img src="img/galline.jpg" alt="Galline e gallo nel recinto dell'azienda agricola" loading="lazy"><figcaption>Il pollaio</figcaption></figure>
+      <figure data-reveal><img src="img/vigneto-mare-2.jpg" alt="Il vigneto in terrazze con vista sulla costa" loading="lazy"><figcaption>Le terrazze di Carricante</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section esperienze grana" id="esperienze">
+  <div class="wrap">
+    <div class="esperienze-head">
+      <p class="eyebrow centro" data-reveal>Cosa si fa</p>
+      <h2 data-reveal>Escursioni, con partenza da qui</h2>
+      <p data-reveal>Il trasferimento parte e torna direttamente all'agriturismo.</p>
+    </div>
+    <div class="tre-esperienze">
+      <article class="esperienza" data-reveal>
+        <span class="quando">Tutti i giorni · minimo 2 persone · 4/5 ore</span>
+        <h3>Escursione Etna</h3>
+        <p>Si attraversano boschi alpini e paesaggi lunari fino ai crateri più rappresentativi, con la visita a una grotta vulcanica. Col tempo giusto si vedono Taormina, la Calabria e le Eolie.</p>
+        <span class="prezzo">€ 59<small>a persona</small></span>
+      </article>
+      <article class="esperienza" data-reveal>
+        <span class="quando">Tutti i pomeriggi · minimo 4 persone · 4/5 ore</span>
+        <h3>Gole dell'Alcantara</h3>
+        <p>Il tour si fa a bordo dei pulmini anni Settanta «Fiat Panorama», attraversando vigneti, uliveti e le lave di antiche eruzioni, fino ai vari punti del fiume Alcantara e ai paesini antichi.</p>
+        <span class="prezzo">€ 45<small>a persona</small></span>
+      </article>
+      <article class="esperienza" data-reveal>
+        <span class="quando">Nella tenuta</span>
+        <h3>Percorso Vita</h3>
+        <p>Una palestra all'aria aperta: un circuito che passa per i sentieri della tenuta, tra i castagni e il profumo delle viti. Su richiesta con un personal trainer.</p>
+        <span class="prezzo">Incluso<small>per chi soggiorna</small></span>
+      </article>
+    </div>
+    <p class="esperienze-nota" data-reveal>Sulle escursioni: sconto di € 14 per i bambini fino a 12 anni (solo escursione Etna), gratuito da 0 a 3 anni.</p>
+  </div>
+</section>
+
+<section class="section" id="gallery">
+  <div class="wrap">
+    <div class="gallery-head">
+      <div>
+        <p class="eyebrow" data-reveal>Gallery</p>
+        <h2 data-reveal>La tenuta, com'è davvero.</h2>
+      </div>
+      <p data-reveal>Fotografie dell'attuale sito dell'agriturismo. Clicca per ingrandire.</p>
+    </div>
+    <div class="gallery-grid">
+      <button class="largo" data-tag="La piscina" data-caption="La piscina panoramica, davanti al Casale dei Fiori"><img src="img/piscina.jpg" alt="La piscina panoramica con lettini e gazebo" loading="lazy"></button>
+      <button data-tag="Il pergolato" data-caption="I tavoli del ristorante tra le ortensie"><img src="img/pergolato.jpg" alt="Tavoli apparecchiati sotto il pergolato, circondati da ortensie" loading="lazy"></button>
+      <button data-tag="La terrazza" data-caption="L'ingresso con i vasi di gerani"><img src="img/terrazza.jpg" alt="Terrazza d'ingresso con vasi di gerani e tavoli apparecchiati" loading="lazy"></button>
+      <button data-tag="La vigna" data-caption="Le terrazze di vigna verso il mare"><img src="img/vigneto-mare.jpg" alt="Le terrazze del vigneto con vista sul mare" loading="lazy"></button>
+      <button data-tag="L'Etna" data-caption="L'Etna in eruzione visto dalla tenuta"><img src="img/etna.jpg" alt="L'Etna in eruzione visto dalla tenuta" loading="lazy"></button>
+      <button data-tag="La passeggiata" data-caption="Una passeggiata tra i filari, con la costa sullo sfondo"><img src="img/passeggiata.jpg" alt="Persone che camminano tra i filari del vigneto con vista sul mare" loading="lazy"></button>
+      <button data-tag="I fiori" data-caption="Fiori in primo piano, il paese e la costa sullo sfondo"><img src="img/fiori.jpg" alt="Fiori in primo piano con il paese e la costa sfocati sullo sfondo" loading="lazy"></button>
+    </div>
+  </div>
+</section>
+
+<section class="section prenota grana" id="prenota">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Prenota</p>
+    <h2 data-reveal>Si prenota parlando con qualcuno.</h2>
+    <span class="voce" data-reveal>I proprietari e i collaboratori ricevono dalle 11:00 alle 13:00 e dalle 17:00 in poi.</span>
+    <div class="contatti">
+      <div class="contatto" data-reveal>
+        <span class="k">Antonio</span>
+        <p><a href="tel:+393407803635">340 7803635</a></p>
+      </div>
+      <div class="contatto" data-reveal>
+        <span class="k">Giuliana</span>
+        <p><a href="tel:+393450071962">345 0071962</a></p>
+      </div>
+      <div class="contatto" data-reveal>
+        <span class="k">Dove siamo</span>
+        <p>Via Sciara Praino 11/13<br>95010 Milo (CT)</p>
+        <p><a href="https://maps.google.com/?q=Le+Case+del+Merlo,+Via+Sciara+Praino,+Milo+CT" target="_blank" rel="noopener">Apri in Google Maps</a></p>
+      </div>
+      <div class="contatto" data-reveal>
+        <span class="k">Scrivici</span>
+        <p><a href="mailto:info@lecasedelmerlo.it?subject=Richiesta%20disponibilit%C3%A0">info@lecasedelmerlo.it</a></p>
+        <p class="sec">Prenotazione diretta, senza intermediari.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <p class="footer-brand">
+      <svg class="merlo" viewBox="0 0 140 66" aria-hidden="true"><path d="M2 60 C16 58, 34 54, 48 47 C 42.5 43.1 40.2 35.3 43.3 32.2 L 36.3 29.8 L 44.9 31.4 C 48.0 26.7 55.0 27.5 55.8 33.7 C 63.6 32.2 73.0 35.3 80.0 42.3 L 66.7 40.0 L 55.0 43.9 L 48.0 47.0 C60 42, 76 32, 92 16 L96 12 C106 24, 118 38, 128 48 L134 54"/></svg>
+      Le Case del Merlo
+    </p>
+    <p class="footer-social">
+      <a href="https://www.facebook.com/lecasedelmerloetna" target="_blank" rel="noopener">Facebook</a>
+      <a href="tel:+393407803635">340 7803635</a>
+    </p>
+    <p class="ai-label">Sito dimostrativo realizzato con AI da FAR AI · contenuti da rivedere con l'attività prima della pubblicazione</p>
+    <p class="fine">Testi e fotografie provengono dal sito attuale dell'Agriturismo Le Case del Merlo e restano di proprietà dell'attività.</p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galleria fotografica">
+  <button class="lb-close" aria-label="Chiudi">✕</button>
+  <button class="lb-prev" aria-label="Foto precedente">←</button>
+  <figure>
+    <img src="img/piscina.jpg" alt="La piscina panoramica">
+    <figcaption></figcaption>
+  </figure>
+  <button class="lb-next" aria-label="Foto successiva">→</button>
+</div>
+
+<script>
+(function(){
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var nav = document.getElementById('nav');
+  var onScroll = function(){ nav.classList.toggle('solid', window.scrollY > 40); };
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  var burger = document.querySelector('.burger');
+  var mm = document.getElementById('mobileMenu');
+  /* 🪤 Col menu aperto a schermo intero il Tab usciva dal pannello e andava ad
+     attivare i link INVISIBILI dietro il velo: premendo Invio la pagina saltava
+     a un'altra sezione mentre il menu restava nero a schermo pieno con lo scroll
+     bloccato, senza alcun indizio. E' il percorso di un lettore di schermo su
+     telefono (VoiceOver e TalkBack seguono l'ordine del Tab).
+     Due cose insieme: `inert` toglie il resto della pagina anche alla lettura
+     per gesti (che NON segue il Tab), e il trap sul Tab chiude il ciclo. */
+  var fuori = [document.getElementById('main'), document.querySelector('footer'),
+               document.querySelector('.skip-link'), document.querySelector('.nav-brand'),
+               document.querySelector('nav'), document.querySelector('.nav-cta')];
+  function setMenu(open){
+    mm.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'Chiudi il menu' : 'Apri il menu');
+    document.body.style.overflow = open ? 'hidden' : '';
+    fuori.forEach(function(el){ if(el){ if(open){ el.setAttribute('inert',''); }
+                                       else { el.removeAttribute('inert'); } } });
+  }
+  function trappola(e, pannello, extra){
+    if(e.key !== 'Tab') return;
+    var f = Array.prototype.slice.call(
+      pannello.querySelectorAll('a[href], button:not([disabled]), [tabindex="0"]'));
+    if(extra) f = [extra].concat(f);
+    /* 🪤 NON si filtra con offsetParent: dentro un pannello `position:fixed`
+       offsetParent e' null anche per gli elementi perfettamente visibili, e il
+       trap resterebbe con un solo elemento. */
+    f = f.filter(function(el){ return el.getClientRects().length > 0; });
+    if(!f.length) return;
+    var primo = f[0], ultimo = f[f.length - 1];
+    if(e.shiftKey && document.activeElement === primo){ e.preventDefault(); ultimo.focus(); }
+    else if(!e.shiftKey && document.activeElement === ultimo){ e.preventDefault(); primo.focus(); }
+  }
+  burger.addEventListener('click', function(){ setMenu(!mm.classList.contains('open')); });
+  mm.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
+
+  function drawPath(p){
+    var len = p.getTotalLength();
+    p.style.strokeDasharray = len;
+    if(reduced){ p.style.strokeDashoffset = 0; return; }
+    p.style.strokeDashoffset = len;
+    p.getBoundingClientRect();
+    p.style.transition = 'stroke-dashoffset 2.5s cubic-bezier(.2,.78,.28,1)';
+    p.style.strokeDashoffset = '0';
+  }
+
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:.14});
+    document.querySelectorAll('[data-reveal]').forEach(function(el){ io.observe(el); });
+    var ioM = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ drawPath(e.target); ioM.unobserve(e.target); } });
+    }, {threshold:.4});
+    document.querySelectorAll('.merlo-div').forEach(function(p){ ioM.observe(p); });
+  } else {
+    document.querySelectorAll('[data-reveal]').forEach(function(el){ el.classList.add('in'); });
+  }
+
+  var hp = document.getElementById('merloHero');
+  if(hp) drawPath(hp);
+
+  var lb = document.getElementById('lightbox');
+  var lbImg = lb.querySelector('img');
+  var lbCap = lb.querySelector('figcaption');
+  var shots = Array.prototype.slice.call(document.querySelectorAll('.gallery-grid button'));
+  var idx = 0, lastFocus = null;
+  function show(i){
+    idx = (i + shots.length) % shots.length;
+    var b = shots[idx], im = b.querySelector('img');
+    lbImg.src = im.src; lbImg.alt = im.alt;
+    lbCap.textContent = b.getAttribute('data-caption') || '';
+  }
+  function openLb(i){
+    lastFocus = document.activeElement; show(i);
+    lb.classList.add('open'); document.body.style.overflow='hidden';
+    fuori.forEach(function(el){ if(el) el.setAttribute('inert',''); });
+    if(!mm.classList.contains('open')) burger.setAttribute('inert','');
+    /* 🪤 La transizione anima anche `visibility`: finche' e' `hidden`, `.focus()`
+       non attecchisce E NON DA' ERRORE. Contare due requestAnimationFrame non
+       basta — su Anfora, a 1440px, al secondo frame `visibility` era ancora
+       `hidden` e il focus restava sulla tessera dietro il pannello, mentre a
+       390px per un soffio funzionava. Si aspetta la CONDIZIONE vera, non un
+       numero di fotogrammi, con un tetto per non restare appesi. */
+    var tentativi = 0;
+    (function mettiIlFuoco(){
+      var c = lb.querySelector('.lb-close');
+      if (getComputedStyle(lb).visibility === 'visible' || tentativi++ > 60) { c.focus(); }
+      else { requestAnimationFrame(mettiIlFuoco); }
+    })();
+  }
+  function closeLb(){
+    lb.classList.remove('open'); document.body.style.overflow='';
+    burger.removeAttribute('inert');
+    if(!mm.classList.contains('open'))
+      fuori.forEach(function(el){ if(el) el.removeAttribute('inert'); });
+    if(lastFocus) lastFocus.focus();
+  }
+  shots.forEach(function(b,i){ b.addEventListener('click', function(){ openLb(i); }); });
+  lb.querySelector('.lb-close').addEventListener('click', closeLb);
+  lb.querySelector('.lb-prev').addEventListener('click', function(){ show(idx-1); });
+  lb.querySelector('.lb-next').addEventListener('click', function(){ show(idx+1); });
+  lb.addEventListener('click', function(e){ if(e.target === lb) closeLb(); });
+  document.addEventListener('keydown', function(e){
+    if(mm.classList.contains('open')){
+      if(e.key === 'Escape'){ setMenu(false); burger.focus(); return; }
+      trappola(e, mm, burger); return;
+    }
+    if(!lb.classList.contains('open')) return;
+    if(e.key === 'Escape') closeLb();
+    else if(e.key === 'ArrowLeft') show(idx-1);
+    else if(e.key === 'ArrowRight') show(idx+1);
+    else trappola(e, lb);
+  });
+})();
+</script>
+  <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

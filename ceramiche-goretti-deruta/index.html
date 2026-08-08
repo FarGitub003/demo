@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ceramiche Goretti · Maioliche artistiche dipinte a mano a Deruta dal 1977</title>
+<meta name="description" content="La bottega di Umberto Goretti e Vania Cesaretti a Deruta: vasi, piatti, boccali, orologi e lampadari in maiolica, tornita e dipinta a mano nei decori Raffaellesco e Ricco Deruta. Sito dimostrativo.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Ceramiche Goretti · Deruta, dal 1977">
+<meta property="og:description" content="Umberto Goretti tornisce, Vania Cesaretti dipinge. Maioliche di Deruta fatte a mano in via Vincioli, dal 1977.">
+<meta property="og:image" content="https://demo.francescoar.com/ceramiche-goretti-deruta/img/piatto-draghi-40.jpg">
+<meta property="og:image:width" content="707">
+<meta property="og:image:height" content="707">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:site_name" content="Ceramiche Goretti">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='44 8 102 84'%3E%3Crect x='44' y='8' width='102' height='84' rx='16' fill='%233B3A80'/%3E%3Cpath d='M52 46 C46 34 52 22 64 19 C72 17 79 21 81 28 C84 19 93 16 98 23 C103 14 114 15 116 24 C123 27 130 33 134 41 C136 46 132 50 128 48 C123 46 118 43 115 40 C121 45 126 53 123 60 C120 66 111 66 109 59 C108 54 113 51 116 54' fill='none' stroke='%23F2D24E' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='112' cy='30' r='3.4' fill='%23F2D24E'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;0,800;1,400;1,500&family=Alegreya+Sans:ital,wght@0,300;0,400;0,500;0,700;0,800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeGoodsStore",
+  "@id": "https://www.ceramichegoretti.it/#ceramichegoretti",
+  "name": "Ceramiche Goretti di Cesaretti Vania",
+  "alternateName": "Maioliche Artistiche Goretti",
+  "description": "Bottega di ceramica artistica a Deruta dal 1977: maioliche tornite e dipinte a mano nei decori Raffaellesco e Ricco Deruta.",
+  "image": "img/piatto-draghi-40.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Vincioli 7",
+    "addressLocality": "Deruta",
+    "postalCode": "06053",
+    "addressRegion": "PG",
+    "addressCountry": "IT"
+  },
+  "telephone": "+390759710048",
+  "email": "info@ceramichegoretti.it",
+  "url": "https://www.ceramichegoretti.it/",
+  "foundingDate": "1977",
+  "vatID": "02055630541",
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "08:00",
+    "closes": "18:00"
+  }]
+}
+</script>
+<style>
+:root{
+  /* --- hex campionati dalle foto vere e dall'insegna (vedi ART_DIRECTION.md) --- */
+  --smalto:#F7F7FA;
+  --smalto-2:#ECEDF3;
+  --bianco:#FFFFFF;
+  --deruta:#484A8D;
+  --deruta-cupo:#24245A;
+  --notte:#191A3C;
+  --giallo:#C4B92A;
+  --giallo-testo:#666016;      /* 5,53:1 sui fondi chiari */
+  --ocra-testo:#815519;        /* 5,54:1 sui fondi chiari */
+  --ocra-chiara:#D7953D;       /* 5,60:1 sui fondi scuri  */
+  --deruta-chiaro:#9A9AE9;     /* 5,54:1 sui fondi scuri  */
+  --rosso:#A53E30;             /* 5,40:1 sui fondi chiari */
+  --rosso-chiaro:#FF795E;      /* 5,52:1 sui fondi scuri  */
+  --ramina:#506B1B;            /* 5,19:1 sui fondi chiari */
+  --ramina-chiara:#83AF2C;     /* 5,51:1 sui fondi scuri  */
+  --inchiostro:#211F2E;
+  --fumo:#5A5870;
+  --ease-pennello:cubic-bezier(.24,.86,.28,1);
+  --ease-tornio:cubic-bezier(.4,0,.2,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+#decori,#bottega,#forme,#gallery,#corsi,#contatti{scroll-margin-top:92px}
+body{
+  font-family:'Alegreya Sans',system-ui,sans-serif;
+  color:var(--inchiostro);
+  background:var(--smalto);
+  line-height:1.62;
+  font-size:1.06rem;
+  overflow-x:hidden;
+}
+/* height:auto è obbligatorio: senza, l'attributo HTML height="…" vince su aspect-ratio
+   e il tondo del piatto esce ELLITTICO (misurato: 474×700 invece di 474×474). */
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:'Alegreya',Georgia,serif;font-weight:700;line-height:1.06;letter-spacing:-.005em}
+.wrap{width:min(1180px,92vw);margin-inline:auto}
+.section{padding:clamp(4.2rem,8.5vw,7.2rem) 0}
+
+/* ---------- skip link + focus ---------- */
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--deruta);color:#fff;padding:.85rem 1.4rem;z-index:200;font-weight:700;text-decoration:none}
+.skip-link:focus{left:0}
+:focus-visible{outline:3px solid var(--deruta);outline-offset:3px;border-radius:2px}
+.dark :focus-visible,.mobile-menu :focus-visible,.lightbox :focus-visible{outline-color:var(--ocra-chiara)}
+
+/* ---------- occhiello ---------- */
+.eyebrow{
+  font-size:.74rem;letter-spacing:.3em;text-transform:uppercase;font-weight:700;
+  display:flex;align-items:center;gap:.85rem;color:var(--ocra-testo);
+}
+.eyebrow::before{content:"";width:2rem;height:1px;background:currentColor;opacity:.75;flex:none;align-self:flex-start;margin-top:.68em}
+.dark .eyebrow{color:var(--ocra-chiara)}
+.center .eyebrow{justify-content:center}
+.center .eyebrow::after{content:"";width:2rem;height:1px;background:currentColor;opacity:.75;flex:none;align-self:flex-start;margin-top:.68em}
+
+/* ---------- barra ---------- */
+.nav{
+  position:fixed;inset:0 0 auto 0;z-index:130;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.95rem clamp(1.1rem,4vw,2.8rem);
+  transition:background .4s var(--ease-pennello),box-shadow .4s;
+}
+.nav.solid{background:rgba(247,247,250,.95);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(33,31,46,.13)}
+.nav-brand{
+  display:flex;align-items:center;gap:.6rem;text-decoration:none;flex-shrink:0;white-space:nowrap;
+  font-family:'Alegreya',serif;font-weight:700;font-size:1.02rem;letter-spacing:.15em;color:var(--inchiostro);
+}
+.nav-brand .drago{width:40px;height:26px;flex:none;color:var(--deruta)}
+.nav-links{display:flex;gap:1.7rem;list-style:none}
+.nav-links a{
+  text-decoration:none;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;
+  color:var(--inchiostro);padding-bottom:.22rem;
+  background:linear-gradient(var(--deruta),var(--deruta)) bottom left/0 2px no-repeat;
+  transition:background-size .38s var(--ease-pennello);
+}
+.nav-links a:hover{background-size:100% 2px}
+.nav-cta{
+  background:var(--deruta);color:#fff;padding:.55rem 1.15rem;border-radius:99px;text-decoration:none;
+  font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;white-space:nowrap;
+  transition:background .3s;
+}
+.nav-cta:hover{background:var(--deruta-cupo)}
+.burger{display:none;background:none;border:0;cursor:pointer;width:44px;height:44px;position:relative;color:var(--inchiostro)}
+.burger span{position:absolute;left:9px;right:9px;height:2px;background:currentColor;transition:transform .38s var(--ease-pennello),opacity .28s,top .38s}
+.burger span:nth-child(1){top:15px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:27px}
+.burger[aria-expanded="true"] span:nth-child(1){top:21px;transform:rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){top:21px;transform:rotate(-45deg)}
+/* il marchio con la firma è largo: sotto i 1120px i 4 link + la CTA non ci stanno
+   senza mandare la barra a capo (misurato con lo sweep 320→1440). */
+@media (max-width:1120px){
+  .nav-links,.nav .nav-cta{display:none}
+  .burger{display:block}
+}
+.mobile-menu{
+  position:fixed;inset:0;background:var(--notte);z-index:110;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1.25rem;
+  opacity:0;visibility:hidden;transition:opacity .42s var(--ease-pennello),visibility .42s;
+}
+.mobile-menu.open{opacity:1;visibility:visible}
+.mobile-menu a{color:var(--smalto);font-family:'Alegreya',serif;font-size:1.85rem;text-decoration:none;font-weight:500}
+.mobile-menu a:hover{color:var(--ocra-chiara)}
+.mobile-menu .mm-nota{color:var(--deruta-chiaro);font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;margin-top:1.6rem;font-weight:700}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;background:var(--smalto);overflow:hidden}
+.hero-inner{
+  width:min(1180px,92vw);margin-inline:auto;
+  display:grid;grid-template-columns:1.04fr .96fr;gap:clamp(1.6rem,4vw,4rem);align-items:center;
+  padding:7rem 0 6.5rem;
+}
+.hero .firma{width:min(190px,42vw);height:auto;color:var(--deruta);overflow:visible;margin-bottom:.9rem}
+.hero .firma path{fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.hero .firma circle{fill:currentColor}
+.hero h1{
+  font-size:clamp(2.85rem,8.4vw,6.2rem);
+  margin:.24em 0 .3em;text-wrap:balance;
+}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--deruta)}
+.hero-tag{font-size:clamp(1.02rem,1.9vw,1.24rem);max-width:40ch;color:var(--fumo)}
+.hero-ctas{display:flex;gap:.9rem;flex-wrap:wrap;margin-top:2rem}
+.btn{
+  display:inline-flex;align-items:center;gap:.55rem;
+  padding:.92rem 1.75rem;border-radius:99px;text-decoration:none;
+  font-size:.79rem;letter-spacing:.17em;text-transform:uppercase;font-weight:700;
+  transition:transform .3s var(--ease-pennello),background .3s,color .3s,border-color .3s;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--deruta);color:#fff}
+.btn-primary:hover{background:var(--deruta-cupo)}
+.btn-ghost{border:1.5px solid var(--ocra-testo);color:var(--inchiostro)}
+.btn-ghost:hover{border-color:var(--inchiostro)}
+.btn-chiaro{background:var(--ocra-chiara);color:#20160A}
+.btn-chiaro:hover{background:#EFAA55}
+.btn-bordo-chiaro{border:1.5px solid var(--deruta-chiaro);color:var(--smalto)}
+.btn-bordo-chiaro:hover{border-color:var(--smalto)}
+
+/* il tondo: il piatto è il campo del decoro derutese */
+.tondo{position:relative;display:grid;place-items:center}
+.tondo::before{
+  content:"";position:absolute;width:min(96%,560px);aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle at 50% 46%,rgba(72,74,141,.09),rgba(72,74,141,0) 68%);
+}
+.tondo figure{position:relative;width:min(88%,500px)}
+.tondo img{
+  width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;
+  box-shadow:0 26px 60px -24px rgba(33,31,46,.42);
+  animation:tornio 90s linear infinite;
+}
+@keyframes tornio{to{transform:rotate(360deg)}}
+.tondo figcaption{
+  margin-top:1.15rem;text-align:center;
+  font-size:.73rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--ocra-testo);
+}
+.hero-ribbon{
+  position:absolute;left:0;right:0;bottom:0;
+  display:flex;justify-content:center;flex-wrap:wrap;
+  background:var(--smalto-2);border-top:1px solid rgba(72,74,141,.24);
+}
+.hero-ribbon div{
+  padding:.9rem 1.7rem;font-size:.73rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;
+  display:flex;align-items:center;gap:.65rem;color:var(--inchiostro);
+}
+.hero-ribbon div+div{border-left:1px solid rgba(72,74,141,.24)}
+.hero-ribbon svg{width:15px;height:15px;flex:none;color:var(--deruta)}
+.hero .cascata{opacity:0;transform:translateY(24px);animation:sale .95s var(--ease-pennello) forwards}
+@keyframes sale{to{opacity:1;transform:none}}
+.hero .cascata:nth-child(1){animation-delay:.1s}
+.hero .cascata:nth-child(2){animation-delay:.22s}
+.hero .cascata:nth-child(3){animation-delay:.36s}
+.hero .cascata:nth-child(4){animation-delay:.52s}
+.hero .cascata:nth-child(5){animation-delay:.7s}
+.hero-inner>.tondo{animation:sale 1.1s var(--ease-pennello) .3s both}
+
+/* ---------- divisore firma ---------- */
+ /* colore pieno equivalente a --deruta al 72% sul fondo smalto (#797AAC):
+   stesso pixel, ma niente opacity < 1 che gli strumenti leggono come «invisibile». */
+.divisore{display:flex;justify-content:center;padding:.2rem 0;color:#797AAC}
+.divisore svg{width:104px;height:auto;overflow:visible}
+.divisore path{fill:none;stroke:currentColor;stroke-width:3.6;stroke-linecap:round;stroke-linejoin:round}
+.divisore circle{fill:currentColor}
+
+/* ---------- reveal ---------- */
+[data-reveal]{opacity:0;transform:translateY(30px);transition:opacity .85s var(--ease-pennello),transform .85s var(--ease-pennello)}
+[data-reveal].in{opacity:1;transform:none}
+
+/* ---------- intro / numeri ---------- */
+.intro{text-align:center;background:var(--smalto)}
+.intro h2{font-size:clamp(1.8rem,4.3vw,3rem);max-width:22ch;margin:1.25rem auto .85rem;text-wrap:balance}
+.intro>.wrap>p.occhio{max-width:58ch;margin-inline:auto;color:var(--fumo)}
+.numeri{display:flex;justify-content:center;gap:clamp(1.4rem,5vw,4.2rem);flex-wrap:wrap;margin-top:3rem}
+.numeri article{max-width:17rem}
+.numeri .cifra{font-family:'Alegreya',serif;font-size:3.1rem;line-height:1;color:var(--deruta);font-weight:800;display:block}
+.numeri h3{font-size:1.02rem;letter-spacing:.03em;margin:.45rem 0 .28rem}
+.numeri p{font-size:.94rem;color:var(--fumo)}
+
+/* ---------- decori ---------- */
+.decori{background:var(--bianco)}
+.decori-head{text-align:center;margin-bottom:3.2rem}
+.decori-head h2{font-size:clamp(1.8rem,4.3vw,3rem);margin-top:1.2rem;text-wrap:balance}
+.decori-head p{color:var(--fumo);max-width:58ch;margin:.85rem auto 0}
+.decoro{display:grid;grid-template-columns:.76fr 1.24fr;gap:clamp(1.6rem,4vw,3.2rem);align-items:center;padding:clamp(2rem,4.5vw,3.2rem) 0}
+.decoro+.decoro{border-top:1px solid rgba(72,74,141,.2)}
+/* con `order` si scambia il CONTENUTO ma non le colonne: senza questa riga i tondi
+   finivano nella colonna stretta (.76fr) e uscivano larghi la metà dell'altro blocco. */
+.decoro:nth-child(even){grid-template-columns:1.24fr .76fr}
+.decoro:nth-child(even) .dec-testo{order:2}
+.decoro:nth-child(even) .dec-tondi{order:1}
+.dec-testo h3{font-size:clamp(1.5rem,3.2vw,2.15rem);margin-bottom:.55rem}
+.dec-testo .sotto{font-family:'Alegreya',serif;font-style:italic;color:var(--rosso);font-size:1.05rem;display:block;margin-bottom:.85rem}
+.dec-testo p{color:var(--fumo);max-width:46ch}
+/* griglia esplicita, non flex-wrap: con tre tondi il wrap lasciava 2+1 e un vuoto a destra */
+.dec-tondi{display:grid;gap:clamp(.8rem,2vw,1.6rem);align-items:start}
+.dec-tondi.tre{grid-template-columns:repeat(3,1fr)}
+.dec-tondi.due{grid-template-columns:repeat(2,1fr);max-width:74%;margin-inline:auto}
+.dec-tondi figure{min-width:0}
+.dec-tondi img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;transition:transform .7s var(--ease-pennello);box-shadow:0 14px 34px -18px rgba(33,31,46,.5)}
+.dec-tondi figure:hover img{transform:translateY(-7px)}
+.dec-tondi figcaption{margin-top:.6rem;text-align:center;font-size:.79rem;color:var(--fumo);font-family:'Alegreya',serif;font-style:italic}
+
+/* ---------- fondi scuri ---------- */
+.dark{background:var(--notte);color:var(--smalto);position:relative}
+.dark h2{font-size:clamp(1.8rem,4.1vw,2.85rem);margin:1.15rem 0 .95rem;max-width:19ch}
+.dark p{color:#D5D5E6;max-width:53ch}
+.dark .voce{font-family:'Alegreya',serif;font-style:italic;color:var(--smalto);font-size:1.13rem}
+.grana::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.55;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.split{display:grid;grid-template-columns:1fr 1.06fr;gap:clamp(2rem,5vw,4.2rem);align-items:center}
+/* l'unica fotografia vera della bottega è panoramica (2200×915): in colonna restava
+   alta un terzo del blocco di testo. Va a banda piena, che è la sua forma. */
+.banda{position:relative;width:100%;margin:clamp(2.6rem,5vw,4rem) 0 .8rem;overflow:hidden}
+.banda img{width:100%;max-height:66vh;object-fit:cover;object-position:50% 42%}
+.banda::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 0 1px rgba(215,149,61,.28),inset 0 0 90px 10px rgba(25,26,60,.5)}
+.bottega-testo{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(1.6rem,4vw,3.6rem);align-items:start}
+.bottega-testo .intestazione{grid-column:1/-1}
+.didascalia{font-size:.84rem;color:var(--deruta-chiaro);letter-spacing:.03em}
+.mani{list-style:none;margin-top:1.7rem;display:grid;gap:.85rem}
+.mani li{display:flex;gap:.9rem;align-items:baseline}
+.mani li::before{content:"";width:.5rem;height:.5rem;border-radius:50%;background:var(--ocra-chiara);flex:none;transform:translateY(-2px)}
+.mani strong{color:var(--smalto);font-weight:700}
+.mani small{display:block;color:#C3C3DA;font-size:.9rem;letter-spacing:.02em}
+
+/* ---------- marquee ---------- */
+.marquee{background:var(--deruta-cupo);color:#E7E7F6;overflow:hidden;padding:.95rem 0;border-block:1px solid rgba(247,247,250,.16)}
+.marquee-track{display:flex;width:max-content;animation:scorre 46s linear infinite;font-family:'Alegreya',serif;font-size:1.04rem;letter-spacing:.1em;white-space:nowrap}
+.marquee-track span{display:flex;align-items:center;gap:2.6rem;padding-right:2.6rem}
+.marquee-track i{font-style:normal;color:var(--ocra-chiara);font-size:.62rem;transform:translateY(-3px)}
+@keyframes scorre{to{transform:translateX(-50%)}}
+
+/* ---------- forme ---------- */
+.forme{background:var(--bianco)}
+.griglia{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:clamp(1.1rem,2.4vw,2rem);margin-top:3rem}
+.pezzo{text-align:center}
+.pezzo img{width:100%;aspect-ratio:3/4;object-fit:contain;transition:transform .65s var(--ease-pennello)}
+.pezzo:hover img{transform:translateY(-8px)}
+.pezzo h3{font-size:1.04rem;margin-top:.5rem;font-weight:700}
+.pezzo p{font-size:.86rem;color:var(--fumo);letter-spacing:.02em}
+.nota-forme{margin-top:2.6rem;text-align:center;color:var(--fumo);font-size:.96rem}
+.nota-forme a{color:var(--deruta);text-decoration:none;border-bottom:1.5px solid rgba(72,74,141,.45);font-weight:600}
+.nota-forme a:hover{border-color:var(--deruta)}
+
+/* ---------- colorate ---------- */
+.colorate{background:var(--smalto-2)}
+.colorate .split{grid-template-columns:.92fr 1.08fr}
+.colorate h2{font-size:clamp(1.7rem,3.8vw,2.6rem);margin:1.15rem 0 .9rem;max-width:17ch}
+.colorate p{color:var(--fumo);max-width:46ch}
+.tris{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(.6rem,1.6vw,1.2rem)}
+.tris figure{min-width:0}
+.tris img{width:100%;aspect-ratio:3/4;object-fit:contain;transition:transform .65s var(--ease-pennello)}
+.tris figure:hover img{transform:translateY(-7px)}
+.tris figcaption{margin-top:.35rem;text-align:center;font-size:.78rem;color:var(--fumo)}
+
+/* ---------- servizi ---------- */
+.servizi{background:var(--smalto)}
+.serv-griglia{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:clamp(1.2rem,2.6vw,2.2rem);margin-top:2.8rem}
+.serv{border-top:2px solid rgba(72,74,141,.3);padding-top:1.1rem}
+.serv svg{width:28px;height:28px;color:var(--deruta);margin-bottom:.6rem}
+.serv h3{font-size:1.1rem;margin-bottom:.35rem}
+.serv p{color:var(--fumo);font-size:.96rem}
+
+/* ---------- corsi ---------- */
+.corsi .split{grid-template-columns:1.05fr .95fr;align-items:start}
+.scheda{background:rgba(72,74,141,.24);border:1px solid rgba(215,149,61,.3);border-radius:6px;padding:1.6rem 1.7rem}
+.scheda dl{display:grid;grid-template-columns:auto 1fr;gap:.55rem 1.1rem;margin-top:.3rem}
+.scheda dt{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--ocra-chiara);padding-top:.28rem}
+.scheda dd{color:var(--smalto)}
+.scheda h3{font-size:1.28rem;margin-bottom:.5rem}
+
+/* ---------- gallery ---------- */
+.gallery{background:var(--bianco)}
+.gallery-grid{columns:4;column-gap:1.1rem;margin-top:2.6rem}
+.gallery-grid button{
+  display:block;width:100%;border:0;padding:0;background:none;cursor:zoom-in;
+  margin-bottom:1.1rem;position:relative;overflow:hidden;border-radius:3px;
+}
+.gallery-grid img{width:100%;transition:transform .8s var(--ease-pennello)}
+.gallery-grid button:hover img{transform:scale(1.04)}
+.gallery-grid button::after{
+  content:attr(data-tag);position:absolute;left:.7rem;bottom:.7rem;
+  font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#FFF;
+  background:var(--deruta-cupo);padding:.32rem .7rem;border-radius:99px;
+  opacity:0;transform:translateY(6px);transition:opacity .35s,transform .35s;
+  font-family:'Alegreya Sans',sans-serif;
+}
+.gallery-grid button:hover::after,.gallery-grid button:focus-visible::after{opacity:1;transform:none}
+.lightbox{
+  position:fixed;inset:0;z-index:150;background:#0B0C1E;  /* pieno: al 96% la barra si leggeva ancora dietro */
+  display:none;align-items:center;justify-content:center;flex-direction:column;padding:4rem 1.2rem 2.2rem;
+}
+.lightbox.open{display:flex}
+.lightbox img{max-width:min(920px,92vw);max-height:72vh;object-fit:contain;border-radius:3px;background:#fff}
+/* i piatti sono ritagli QUADRATI sul diametro: senza questo, nella lightbox
+   si vedrebbero gli angoli bianchi e il moncone del cavalletto. */
+.lightbox img.tondo{border-radius:50%;aspect-ratio:1;height:auto;width:min(72vh,88vw);max-width:min(72vh,88vw)}
+.lightbox figcaption{color:var(--smalto);font-family:'Alegreya',serif;font-style:italic;margin-top:1rem;font-size:1rem;text-align:center}
+.lb-close,.lb-prev,.lb-next{
+  position:absolute;background:var(--deruta-cupo);border:1.5px solid var(--ocra-chiara);color:#FFF;
+  width:48px;height:48px;border-radius:50%;cursor:pointer;font-size:1.15rem;display:grid;place-items:center;
+  transition:background .28s;
+}
+.lb-close:hover,.lb-prev:hover,.lb-next:hover{background:var(--deruta)}
+.lb-close{top:1.1rem;right:1.1rem}
+.lb-prev{left:1.1rem;top:50%;transform:translateY(-50%)}
+.lb-next{right:1.1rem;top:50%;transform:translateY(-50%)}
+
+/* ---------- contatti ---------- */
+.finale{position:relative;overflow:hidden;padding:clamp(5rem,10vw,8rem) 0}
+ /* idem: --ocra-chiara all'11% sul fondo notte = #2E283C */
+.finale .firma-fondo{position:absolute;right:-8%;bottom:-14%;width:min(620px,72vw);color:#2E283C;pointer-events:none}
+.finale .firma-fondo path{fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.finale .firma-fondo circle{fill:currentColor}
+.stato{
+  display:inline-flex;align-items:center;gap:.5rem;margin-top:1.2rem;
+  font-size:.75rem;letter-spacing:.11em;text-transform:uppercase;font-weight:700;
+  border:1.5px solid currentColor;border-radius:99px;padding:.42rem 1.05rem;
+  white-space:nowrap;   /* senza questo la pillola si spezzava in due righe */
+}
+.stato.neutro{color:var(--deruta-chiaro)}
+.stato.aperto{color:var(--ramina-chiara)}
+.stato.chiuso{color:var(--rosso-chiaro)}
+.stato .pallino{width:.5rem;height:.5rem;border-radius:50%;background:currentColor;flex:none}
+.contatti{display:grid;grid-template-columns:repeat(auto-fit,minmax(228px,1fr));gap:1.05rem;margin-top:2.4rem;max-width:940px}
+.contatto{border:1px solid rgba(215,149,61,.3);border-radius:6px;padding:1.2rem 1.3rem;background:rgba(72,74,141,.2)}
+.contatto .k{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ocra-chiara);font-weight:700;display:block;margin-bottom:.4rem}
+.contatto a{color:var(--smalto);text-decoration:none;border-bottom:1px solid rgba(215,149,61,.45);transition:border-color .3s}
+.contatto a:hover{border-color:var(--ocra-chiara)}
+.contatto p{font-size:.98rem;color:var(--smalto);max-width:none}
+
+/* ---------- footer ---------- */
+footer{background:#111230;color:#C3C3DA;padding:2.6rem 0 2.3rem;font-size:.85rem}
+.footer-inner{display:flex;flex-direction:column;gap:1rem;align-items:center;text-align:center}
+.footer-brand{display:flex;align-items:center;gap:.6rem;font-family:'Alegreya',serif;color:var(--smalto);font-size:1.02rem;letter-spacing:.13em;font-weight:700}
+.footer-brand svg{width:38px;height:25px;color:var(--ocra-chiara)}
+.footer-brand svg path{fill:none;stroke:currentColor;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.footer-brand svg circle{fill:currentColor}
+.ai-label{border:1px solid rgba(215,149,61,.45);color:var(--ocra-chiara);padding:.55rem 1.1rem;border-radius:99px;font-size:.74rem;letter-spacing:.05em;max-width:92vw}
+footer .fine{font-size:.74rem}
+footer .piva{font-size:.72rem;color:#9E9EBC}
+
+/* ---------- responsive ---------- */
+@media (max-width:1000px){
+  .hero-inner{grid-template-columns:1fr;gap:2.2rem;padding:6.6rem 0 7rem}
+  .tondo figure{width:min(74%,380px)}
+  .split,.colorate .split,.corsi .split{grid-template-columns:1fr}
+  .bottega-testo{grid-template-columns:1fr;gap:1.6rem}
+  .decoro,.decoro:nth-child(even){grid-template-columns:1fr}
+  .decoro:nth-child(even) .dec-testo{order:1}
+  .decoro:nth-child(even) .dec-tondi{order:2}
+  .gallery-grid{columns:3}
+}
+@media (max-width:760px){
+  .gallery-grid{columns:2}
+  .dec-tondi.tre{grid-template-columns:repeat(2,1fr)}
+  .dec-tondi.tre>figure:last-child{grid-column:1/-1;justify-self:center;width:52%}
+  .dec-tondi.due{max-width:100%}
+  .hero-ribbon{position:static;margin-top:2rem}
+  /* .hero è flex: senza column il ribbon in flusso normale si metteva ACCANTO
+     all'hero-inner invece che sotto, schiacciando il testo fino a bordo schermo. */
+  .hero{min-height:0;flex-direction:column;align-items:stretch}
+  .hero-inner{padding:6.4rem 0 2.4rem}
+  .numeri{gap:2.2rem}
+}
+@media (max-width:620px){
+  /* a colonna singola la pagina mobile arrivava a 23.400px: i pezzi sono piccoli,
+     due per riga si leggono benissimo e dimezzano lo scroll. */
+  .griglia{grid-template-columns:repeat(2,1fr)}
+  .gallery-grid{columns:2}
+}
+@media (max-width:520px){
+  .hero-ribbon div{padding:.75rem 1.1rem;font-size:.68rem}
+  .hero-ribbon div+div{border-left:0;border-top:1px solid rgba(72,74,141,.24)}
+  .hero-ribbon{flex-direction:column}
+  .tris{grid-template-columns:1fr 1fr}
+  .tris>figure:last-child{grid-column:1/-1;justify-self:center;width:50%}
+  .lb-prev{left:.5rem}.lb-next{right:.5rem}
+  .stato{white-space:normal;border-radius:16px;text-align:left;align-items:flex-start}
+  .stato .pallino{margin-top:.42rem}
+}
+/* ---------- movimento ridotto ---------- */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  html{scroll-behavior:auto}
+  [data-reveal]{opacity:1;transform:none}
+  .hero .cascata,.hero-inner>.tondo{opacity:1;transform:none}
+  .tondo img{animation:none}
+  .marquee-track{animation:none}
+}
+</style>
+<noscript><style>
+/* senza JS l'IntersectionObserver non parte mai e i 65 blocchi [data-reveal]
+   resterebbero a opacity:0: la pagina si aprirebbe praticamente vuota. */
+[data-reveal]{opacity:1 !important;transform:none !important}
+.hero .cascata,.hero-inner>.tondo{opacity:1 !important;transform:none !important}
+.tondo img{animation:none !important}
+.marquee-track{animation:none !important}
+</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Salta al contenuto</a>
+
+<header class="nav" id="nav">
+  <a class="nav-brand" href="#top" aria-label="Ceramiche Goretti, torna su">
+    <svg class="drago" viewBox="44 8 102 84" aria-hidden="true">
+      <path d="M52 46 C46 34 52 22 64 19 C72 17 79 21 81 28 C84 19 93 16 98 23 C103 14 114 15 116 24 C123 27 130 33 134 41 C136 46 132 50 128 48 C123 46 118 43 115 40 C121 45 126 53 123 60 C120 66 111 66 109 59 C108 54 113 51 116 54" fill="none" stroke="currentColor" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="112" cy="30" r="3.2" fill="currentColor"/>
+    </svg>
+    CERAMICHE GORETTI
+  </a>
+  <nav aria-label="Principale">
+    <ul class="nav-links">
+      <li><a href="#decori">I decori</a></li>
+      <li><a href="#bottega">La bottega</a></li>
+      <li><a href="#forme">Le forme</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+    </ul>
+  </nav>
+  <a class="nav-cta" href="tel:+390759710048">Chiama la bottega</a>
+  <button class="burger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Apri il menu"><span></span><span></span><span></span></button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#decori">I decori</a>
+  <a href="#bottega">La bottega</a>
+  <a href="#forme">Le forme</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#corsi">I corsi</a>
+  <a href="#contatti">Dove siamo</a>
+  <p class="mm-nota">Deruta (PG) · Via Vincioli 7</p>
+</div>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-testo">
+      <svg class="firma cascata" viewBox="0 0 146 92" aria-hidden="true">
+        <path id="firmaPath" d="M20 60 C14 58 13 68 21 70 C32 72 37 60 30 52 C23 44 10 46 8 57 C5 73 22 84 38 79 C53 74 58 58 52 46 C46 34 52 22 64 19 C72 17 79 21 81 28 C84 19 93 16 98 23 C103 14 114 15 116 24 C123 27 130 33 134 41 C136 46 132 50 128 48 C123 46 118 43 115 40 C121 45 126 53 123 60 C120 66 111 66 109 59 C108 54 113 51 116 54"/>
+        <circle id="firmaOcchio" cx="112" cy="30" r="3.4"/>
+      </svg>
+      <p class="eyebrow cascata">Deruta (PG) · dal 1977</p>
+      <h1 class="cascata">Il drago di Deruta, <em>dipinto a mano.</em></h1>
+      <p class="hero-tag cascata">Umberto Goretti tornisce il pezzo, sua moglie Vania Cesaretti lo dipinge. Succede in via Vincioli, nel centro storico di Deruta, dal 1977.</p>
+      <div class="hero-ctas cascata">
+        <a class="btn btn-primary" href="tel:+390759710048">Chiama la bottega</a>
+        <a class="btn btn-ghost" href="#forme">Guarda le opere</a>
+      </div>
+    </div>
+    <div class="tondo">
+      <figure>
+        <img src="img/piatto-draghi-40.jpg" alt="Piatto da parete di 40 cm in maiolica di Deruta, con due draghi raffaelleschi affrontati dipinti a mano" fetchpriority="high" width="707" height="707">
+        <figcaption>Piatto da parete Ø 40 cm · decoro Raffaellesco</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="hero-ribbon">
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 21h18M5 21V9l7-5 7 5v12M10 21v-6h4v6"/></svg>Bottega aperta nel 1977</div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.6"/></svg>Al tornio dal 1969</div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20c2-8 7-13 15-15M9 20c1-5 4-8 9-9"/><path d="M17 3l3 1-1 3"/></svg>Raffaellesco e Ricco Deruta</div>
+  </div>
+</section>
+
+<section class="section intro center">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Una bottega, due mani</p>
+    <h2 data-reveal>Il pezzo nasce due volte: al tornio e sotto il pennello.</h2>
+    <p class="occhio" data-reveal>Prima la terra prende la forma sul tornio, poi il decoro le viene addosso a mano libera, un tratto alla volta. Sono due mestieri diversi, e in questa bottega stanno nella stessa stanza dal 1977.</p>
+    <div class="numeri">
+      <article data-reveal>
+        <span class="cifra"><span id="anni">49</span></span>
+        <h3>Anni di bottega</h3>
+        <p>Il laboratorio di via Vincioli apre nel 1977 e non si è mai spostato.</p>
+      </article>
+      <article data-reveal>
+        <span class="cifra">2</span>
+        <h3>Le mani</h3>
+        <p>Umberto al tornio, Vania al pennello: ogni pezzo passa da tutte e due.</p>
+      </article>
+      <article data-reveal>
+        <span class="cifra">1290</span>
+        <h3>La ceramica a Deruta</h3>
+        <p>L'anno da cui i documenti scritti attestano la ceramica in paese. Non è un merito della bottega: è il mestiere che ha ereditato.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="divisore" aria-hidden="true">
+  <svg viewBox="0 0 146 92"><path d="M20 60 C14 58 13 68 21 70 C32 72 37 60 30 52 C23 44 10 46 8 57 C5 73 22 84 38 79 C53 74 58 58 52 46 C46 34 52 22 64 19 C72 17 79 21 81 28 C84 19 93 16 98 23 C103 14 114 15 116 24 C123 27 130 33 134 41 C136 46 132 50 128 48 C123 46 118 43 115 40 C121 45 126 53 123 60 C120 66 111 66 109 59 C108 54 113 51 116 54"/><circle cx="112" cy="30" r="4"/></svg>
+</div>
+
+<section class="section decori" id="decori">
+  <div class="wrap">
+    <div class="decori-head center">
+      <p class="eyebrow" data-reveal>I decori</p>
+      <h2 data-reveal>Due decori, e sono più vecchi della bottega.</h2>
+      <p data-reveal>A Deruta non si inventa un decoro: lo si eredita. Qui se ne dipingono due, quelli che il paese ripete dal Rinascimento, e si dipingono dentro il cerchio del piatto, dove la composizione deve chiudere da sola.</p>
+    </div>
+
+    <div class="decoro">
+      <div class="dec-testo" data-reveal>
+        <h3>Raffaellesco</h3>
+        <span class="sotto">Il drago alato fra i girali</span>
+        <p>È il decoro che ha fatto conoscere Deruta: un drago-grifo dal corpo giallo e le ali blu, sospeso in una trama di girali sottili. Su un piatto va dipinto in coppia, affrontato e speculare, con un fiore rosso a chiudere il centro.</p>
+      </div>
+      <div class="dec-tondi tre" data-reveal>
+        <figure>
+          <img src="img/piatto-draghi-35.jpg" alt="Piatto in maiolica di Deruta di 35 cm con due draghi raffaelleschi e cornice verde" loading="lazy" width="660" height="660">
+          <figcaption>Ø 35 cm, cornice a fasce verdi</figcaption>
+        </figure>
+        <figure>
+          <img src="img/piatto-draghi-30.jpg" alt="Piatto in maiolica di Deruta di 30 cm con due draghi raffaelleschi e girali blu" loading="lazy" width="660" height="660">
+          <figcaption>Ø 30 cm, girali fitti</figcaption>
+        </figure>
+        <figure>
+          <img src="img/piatto-draghi-40.jpg" alt="Piatto in maiolica di Deruta di 40 cm con due draghi raffaelleschi e cornice a petali" loading="lazy" width="707" height="707">
+          <figcaption>Ø 40 cm, cornice a petali</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="decoro">
+      <div class="dec-testo" data-reveal>
+        <h3>Ricco Deruta</h3>
+        <span class="sotto">Il trofeo che si apre a ventaglio</span>
+        <p>Niente animali: al centro sale un trofeo di foglie d'acanto, frutti e nastri, simmetrico rispetto all'asse verticale. È il decoro più fitto dei due, quello dove si vede quanto ferma deve stare la mano.</p>
+      </div>
+      <div class="dec-tondi due" data-reveal>
+        <figure>
+          <img src="img/piatto-ricco-giallo.jpg" alt="Piatto in maiolica di Deruta con decoro Ricco Deruta e cornice gialla" loading="lazy" width="660" height="660">
+          <figcaption>Cornice gialla piena</figcaption>
+        </figure>
+        <figure>
+          <img src="img/piatto-ricco-blu.jpg" alt="Piatto in maiolica di Deruta con decoro Ricco Deruta e cornice a corda blu" loading="lazy" width="660" height="660">
+          <figcaption>Cornice a corda blu</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark grana" id="bottega">
+  <div class="wrap bottega-testo">
+    <div class="intestazione">
+      <p class="eyebrow" data-reveal>La bottega</p>
+      <h2 data-reveal>Nel 1977 apre il laboratorio, e nello stesso anno si sposa.</h2>
+    </div>
+    <div data-reveal>
+      <p class="voce">Umberto Goretti finisce le scuole dell'obbligo nel 1969 e va in fabbrica a fare il torniante. Ci resta otto anni. Nel 1977 apre un laboratorio suo, a Deruta.</p>
+      <p style="margin-top:1rem">Nello stesso anno si sposa e porta la moglie nel lavoro, affidandole il pennello. Da lì in poi la divisione è quella: uno tira la forma, l'altra la decora. È il motivo per cui, quando chiami questo numero, ti risponde chi il pezzo l'ha fatto davvero.</p>
+    </div>
+    <ul class="mani" data-reveal>
+      <li><span><strong>Umberto Goretti</strong> · il tornio<small>Torniante dal 1969, apre la bottega nel 1977. È anche il referente dei corsi.</small></span></li>
+      <li><span><strong>Vania Cesaretti</strong> · il pennello<small>Pittrice dal 1977. L'attività è intestata a lei: «Ceramiche Goretti di Cesaretti Vania».</small></span></li>
+    </ul>
+  </div>
+  <figure class="banda" data-reveal>
+    <picture>
+      <source media="(max-width:760px)" srcset="img/laboratorio-mobile.jpg">
+      <img src="img/laboratorio.jpg" alt="In laboratorio: la decorazione a mano libera di una grande anfora, fra gli scaffali dei pezzi in attesa di cottura" loading="lazy" width="2200" height="915">
+    </picture>
+  </figure>
+  <div class="wrap">
+    <p class="didascalia" data-reveal>In bottega, la decorazione a mano di un'anfora. Fotografia dal sito dell'attività.</p>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Vasi <i>◆</i> Piatti da appendere <i>◆</i> Boccali <i>◆</i> Caspò <i>◆</i> Portaombrelli <i>◆</i> Oliere <i>◆</i> Orologi <i>◆</i> Lampadari <i>◆</i> Portafrutta <i>◆</i> Set da bagno <i>◆</i> Sottobicchieri <i>◆</i> Portabottiglie <i>◆</i></span>
+    <span>Vasi <i>◆</i> Piatti da appendere <i>◆</i> Boccali <i>◆</i> Caspò <i>◆</i> Portaombrelli <i>◆</i> Oliere <i>◆</i> Orologi <i>◆</i> Lampadari <i>◆</i> Portafrutta <i>◆</i> Set da bagno <i>◆</i> Sottobicchieri <i>◆</i> Portabottiglie <i>◆</i></span>
+  </div>
+</div>
+
+<section class="section forme" id="forme">
+  <div class="wrap">
+    <div class="decori-head center">
+      <p class="eyebrow" data-reveal>Le forme</p>
+      <h2 data-reveal>Quello che esce dal tornio, un pezzo alla volta.</h2>
+      <p data-reveal>Arredo per la casa, tavola e bagno: le stesse mani, forme diverse. Tutto si può fare su misura, anche con il logo di un'azienda, di un ristorante o di una birreria.</p>
+    </div>
+    <div class="griglia">
+      <figure class="pezzo" data-reveal>
+        <img src="img/vaso-bottiglia-drago.jpg" alt="Vaso a bottiglia in maiolica di Deruta con drago raffaellesco" loading="lazy" width="760" height="1140">
+        <h3>Vaso a bottiglia</h3><p>Raffaellesco</p>
+      </figure>
+      <figure class="pezzo" data-reveal>
+        <img src="img/vaso-drago-20.jpg" alt="Vaso da fiori in maiolica di Deruta con drago raffaellesco e fasce gialle" loading="lazy" width="760" height="1140">
+        <h3>Vaso da fiori</h3><p>Raffaellesco</p>
+      </figure>
+      <figure class="pezzo" data-reveal>
+        <img src="img/vaso-ricco.jpg" alt="Vaso da fiori in maiolica di Deruta con decoro Ricco Deruta" loading="lazy" width="760" height="1140">
+        <h3>Vaso panciuto</h3><p>Ricco Deruta</p>
+      </figure>
+      <figure class="pezzo" data-reveal>
+        <img src="img/boccale-acqua.jpg" alt="Boccale da acqua in maiolica di Deruta con drago raffaellesco e manico giallo" loading="lazy" width="760" height="1140">
+        <h3>Boccale da acqua</h3><p>Raffaellesco</p>
+      </figure>
+      <figure class="pezzo" data-reveal>
+        <img src="img/brocca-alta.jpg" alt="Brocca alta in maiolica di Deruta con decoro a girali" loading="lazy" width="760" height="1140">
+        <h3>Brocca alta</h3><p>Da tavola</p>
+      </figure>
+      <figure class="pezzo" data-reveal>
+        <img src="img/barattolo-zucchero.jpg" alt="Barattolo per lo zucchero in maiolica di Deruta con drago raffaellesco" loading="lazy" width="760" height="1140">
+        <h3>Zucchero</h3><p>Barattolo con coperchio</p>
+      </figure>
+      <figure class="pezzo" data-reveal>
+        <img src="img/barattolo-caffe.jpg" alt="Barattolo per il caffè in maiolica di Deruta con drago raffaellesco" loading="lazy" width="760" height="1140">
+        <h3>Caffè</h3><p>Barattolo con coperchio</p>
+      </figure>
+      <figure class="pezzo" data-reveal>
+        <img src="img/barattolo-sale.jpg" alt="Barattolo per il sale in maiolica di Deruta con drago raffaellesco" loading="lazy" width="760" height="1140">
+        <h3>Sale</h3><p>Barattolo con coperchio</p>
+      </figure>
+      <figure class="pezzo" data-reveal>
+        <img src="img/caspo-drago.jpg" alt="Caspò portavaso in maiolica di Deruta con drago raffaellesco" loading="lazy" width="760" height="1140">
+        <h3>Caspò</h3><p>Raffaellesco</p>
+      </figure>
+      <figure class="pezzo" data-reveal>
+        <img src="img/caspo-ricco.jpg" alt="Caspò portavaso in maiolica di Deruta con decoro Ricco Deruta" loading="lazy" width="760" height="1140">
+        <h3>Caspò grande</h3><p>Ricco Deruta</p>
+      </figure>
+      <figure class="pezzo" data-reveal>
+        <img src="img/portalettere.jpg" alt="Portalettere in maiolica di Deruta a forma di busta, con decoro Ricco Deruta" loading="lazy" width="760" height="1140">
+        <h3>Portalettere</h3><p>A forma di busta</p>
+      </figure>
+      <figure class="pezzo" data-reveal>
+        <img src="img/set-bagno.jpg" alt="Set da bagno di tre pezzi in maiolica di Deruta: dispenser, portaspazzolini e portasapone" loading="lazy" width="760" height="1140">
+        <h3>Set da bagno</h3><p>Tre pezzi</p>
+      </figure>
+      <figure class="pezzo" data-reveal>
+        <img src="img/lampadario.jpg" alt="Lampadario da soffitto in maiolica di Deruta con catena in ottone" loading="lazy" width="760" height="1140">
+        <h3>Lampadario</h3><p>Con catena e parte elettrica</p>
+      </figure>
+      <figure class="pezzo" data-reveal>
+        <img src="img/orologio-cornice.jpg" alt="Orologio da parete su piastrella dipinta a mano, montato su cornice di legno" loading="lazy" width="760" height="1140">
+        <h3>Orologio</h3><p>Piastrella su cornice di legno</p>
+      </figure>
+    </div>
+    <p class="nota-forme" data-reveal>Il catalogo completo, con le misure, sta nel negozio online della bottega: <a href="https://shop.ceramichegoretti.it/" target="_blank" rel="noopener">shop.ceramichegoretti.it</a></p>
+  </div>
+</section>
+
+<section class="section colorate">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow" data-reveal>L'altra linea</p>
+      <h2 data-reveal>Quando lo smalto viene lasciato libero di correre.</h2>
+      <p data-reveal>Accanto ai decori storici la bottega fa una linea tutta diversa: smalti rossi e gialli colati, e sopra le striature che gli ossidi di rame lasciano in cottura. Nessun pezzo esce identico a un altro, perché il disegno lo fa il fuoco.</p>
+    </div>
+    <div class="tris" data-reveal>
+      <figure>
+        <img src="img/colorate-orologio.jpg" alt="Orologio tondo da parete in ceramica colorata rossa e gialla con striature scure" loading="lazy" width="760" height="1140">
+        <figcaption>Orologio tondo</figcaption>
+      </figure>
+      <figure>
+        <img src="img/colorate-vassoio.jpg" alt="Vassoio quadrato in ceramica colorata con smalti rosso e giallo" loading="lazy" width="760" height="1140">
+        <figcaption>Vassoio quadrato</figcaption>
+      </figure>
+      <figure>
+        <img src="img/colorate-ottagonale.jpg" alt="Vassoio ottagonale in ceramica colorata con smalti arancio e verde" loading="lazy" width="760" height="1140">
+        <figcaption>Vassoio ottagonale</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section servizi">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Cosa fa la bottega</p>
+    <h2 data-reveal style="font-size:clamp(1.8rem,4.1vw,2.85rem);margin-top:1.1rem;max-width:20ch">Non solo pezzi da vendere.</h2>
+    <div class="serv-griglia">
+      <div class="serv" data-reveal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V8l8-4 8 4v12"/><path d="M9 20v-5h6v5"/><path d="M9 11h6"/></svg>
+        <h3>Ceramiche personalizzate</h3>
+        <p>Boccali e bicchieri con il logo, per aziende, ristoranti, pizzerie e birrerie. Su misura, dal pezzo singolo alla serie.</p>
+      </div>
+      <div class="serv" data-reveal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21h14V10H5z"/><path d="M8 10V6a4 4 0 018 0v4"/><path d="M9 15h6"/></svg>
+        <h3>Cottura per conto terzi</h3>
+        <p>Chi dipinge per conto suo può portare qui i manufatti e farli cuocere nel forno della bottega.</p>
+      </div>
+      <div class="serv" data-reveal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 4v6c0 4-3 6.7-7 8-4-1.3-7-4-7-8V7z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg>
+        <h3>Restauro di ceramiche</h3>
+        <p>Pezzi rotti o mancanti rimessi insieme. Il preventivo è gratuito: si porta il pezzo e se ne parla.</p>
+      </div>
+      <div class="serv" data-reveal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        <h3>Visite guidate</h3>
+        <p>Al laboratorio e nel centro di Deruta, per vedere da vicino come nasce un pezzo prima di comprarlo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark grana corsi" id="corsi">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow" data-reveal>I corsi</p>
+      <h2 data-reveal>Due giorni per provare a tenere ferma la mano.</h2>
+      <p class="voce" data-reveal>Il corso di decorazione tipica si fa in bottega, al massimo in quattro, sugli stessi due decori che escono di qui: Raffaellesco e Ricco Deruta.</p>
+      <p data-reveal style="margin-top:1rem">C'è anche il corso di manipolazione dell'argilla e creazione al tornio, per chi vuole partire dalla forma invece che dal colore. Per chi viene da fuori, la bottega ha una convenzione per il pernotto.</p>
+      <a class="btn btn-chiaro" href="tel:+393316818160" style="margin-top:1.7rem" data-reveal>Chiedi a Umberto: 331 6818160</a>
+    </div>
+    <div class="scheda" data-reveal>
+      <h3>Corso di decorazione tipica</h3>
+      <dl>
+        <dt>Durata</dt><dd>2 giorni</dd>
+        <dt>Quota</dt><dd>€ 100, IVA e materiali inclusi</dd>
+        <dt>Posti</dt><dd>Massimo 4 persone</dd>
+        <dt>Decori</dt><dd>Raffaellesco e Ricco Deruta</dd>
+        <dt>Referente</dt><dd>Umberto Goretti</dd>
+        <dt>Pernotto</dt><dd>Convenzionato, € 35 a notte</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="section gallery" id="gallery">
+  <div class="wrap">
+    <div class="decori-head center">
+      <p class="eyebrow" data-reveal>Gallery</p>
+      <h2 data-reveal>I pezzi, da vicino.</h2>
+    </div>
+    <div class="gallery-grid">
+      <button data-tondo="1" data-src="img/piatto-draghi-35.jpg" data-tag="Raffaellesco" data-caption="Piatto Ø 35 cm, due draghi affrontati e cornice a fasce verdi"><img src="img/piatto-draghi-35.jpg" alt="Piatto di Deruta con due draghi raffaelleschi e cornice verde" loading="lazy"></button>
+      <button data-src="img/boccale-acqua.jpg" data-tag="Tavola" data-caption="Boccale da acqua, drago raffaellesco e manico giallo"><img src="img/boccale-acqua.jpg" alt="Boccale da acqua in maiolica di Deruta" loading="lazy"></button>
+      <button data-src="img/vaso-bottiglia-drago.jpg" data-tag="Arredo" data-caption="Vaso a bottiglia con drago raffaellesco e fasce verdi"><img src="img/vaso-bottiglia-drago.jpg" alt="Vaso a bottiglia in maiolica di Deruta" loading="lazy"></button>
+      <button data-tondo="1" data-src="img/piatto-ricco-blu.jpg" data-tag="Ricco Deruta" data-caption="Piatto con trofeo Ricco Deruta e cornice a corda blu"><img src="img/piatto-ricco-blu.jpg" alt="Piatto di Deruta con decoro Ricco Deruta e cornice blu" loading="lazy"></button>
+      <button data-src="img/piatto-frittata.jpg" data-tag="Raffaellesco" data-caption="Piatto «Gira frittata», con il drago e la scritta dipinta a mano"><img src="img/piatto-frittata.jpg" alt="Piatto di Deruta con drago e la scritta Gira frittata" loading="lazy"></button>
+      <button data-src="img/colorate-vassoio.jpg" data-tag="Colorate" data-caption="Vassoio quadrato, smalti rossi e gialli colati"><img src="img/colorate-vassoio.jpg" alt="Vassoio quadrato in ceramica colorata" loading="lazy"></button>
+      <button data-src="img/barattolo-caffe.jpg" data-tag="Tavola" data-caption="Barattolo del caffè, con il drago e la scritta dipinta a mano"><img src="img/barattolo-caffe.jpg" alt="Barattolo del caffè in maiolica di Deruta" loading="lazy"></button>
+      <button data-tondo="1" data-src="img/piatto-draghi-30.jpg" data-tag="Raffaellesco" data-caption="Piatto Ø 30 cm, girali fitti attorno ai due draghi"><img src="img/piatto-draghi-30.jpg" alt="Piatto di Deruta con due draghi raffaelleschi e girali fitti" loading="lazy"></button>
+      <button data-src="img/caspo-ricco.jpg" data-tag="Arredo" data-caption="Caspò grande con trofeo Ricco Deruta e cordone in rilievo"><img src="img/caspo-ricco.jpg" alt="Caspò in maiolica di Deruta con decoro Ricco Deruta" loading="lazy"></button>
+      <button data-src="img/lampadario.jpg" data-tag="Illuminazione" data-caption="Lampadario da soffitto in maiolica, completo di catena e parte elettrica"><img src="img/lampadario.jpg" alt="Lampadario in maiolica di Deruta con catena in ottone" loading="lazy"></button>
+      <button data-src="img/insegna.jpg" data-tag="La bottega" data-caption="L'insegna in maiolica della bottega: «Maioliche Artistiche Goretti, Deruta»"><img src="img/insegna.jpg" alt="Insegna in piastrelle di maiolica con la scritta Maioliche Artistiche Goretti, Deruta, e un drago dipinto" loading="lazy"></button>
+      <button data-src="img/portalettere.jpg" data-tag="Arredo" data-caption="Portalettere a forma di busta, decoro Ricco Deruta"><img src="img/portalettere.jpg" alt="Portalettere in maiolica a forma di busta" loading="lazy"></button>
+    </div>
+  </div>
+</section>
+
+<section class="section dark grana finale" id="contatti">
+  <svg class="firma-fondo" viewBox="0 0 146 92" aria-hidden="true"><path d="M20 60 C14 58 13 68 21 70 C32 72 37 60 30 52 C23 44 10 46 8 57 C5 73 22 84 38 79 C53 74 58 58 52 46 C46 34 52 22 64 19 C72 17 79 21 81 28 C84 19 93 16 98 23 C103 14 114 15 116 24 C123 27 130 33 134 41 C136 46 132 50 128 48 C123 46 118 43 115 40 C121 45 126 53 123 60 C120 66 111 66 109 59 C108 54 113 51 116 54"/><circle cx="112" cy="30" r="3.4"/></svg>
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Dove siamo</p>
+    <h2 data-reveal>In via Vincioli, nel centro storico di Deruta.</h2>
+    <p class="voce" data-reveal>La bottega è anche il negozio: si entra, si guarda, e se serve un pezzo diverso lo si chiede.</p>
+    <p id="stato" class="stato neutro" data-reveal><span class="pallino"></span><span id="statoTesto">Lun-ven, 8:00–18:00</span></p>
+    <div class="contatti">
+      <div class="contatto" data-reveal>
+        <span class="k">Telefono</span>
+        <p><a href="tel:+390759710048">075 9710048</a></p>
+      </div>
+      <div class="contatto" data-reveal>
+        <span class="k">Cellulare</span>
+        <p><a href="tel:+393316818160">331 6818160</a></p>
+      </div>
+      <div class="contatto" data-reveal>
+        <span class="k">Dove</span>
+        <p>Via Vincioli 7, 06053 Deruta (PG)<br><a href="https://maps.google.com/?q=Via+Vincioli+7,+06053+Deruta+PG" target="_blank" rel="noopener">Apri in Google Maps</a></p>
+      </div>
+      <div class="contatto" data-reveal>
+        <span class="k">Scrivici</span>
+        <p><a href="mailto:info@ceramichegoretti.it?subject=Richiesta%20informazioni">info@ceramichegoretti.it</a></p>
+      </div>
+      <div class="contatto" data-reveal>
+        <span class="k">Orari</span>
+        <p>Dal lunedì al venerdì, 8:00–18:00</p>
+      </div>
+      <div class="contatto" data-reveal>
+        <span class="k">Negozio online</span>
+        <p><a href="https://shop.ceramichegoretti.it/" target="_blank" rel="noopener">shop.ceramichegoretti.it</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <p class="footer-brand">
+      <svg viewBox="44 8 102 84" aria-hidden="true"><path d="M52 46 C46 34 52 22 64 19 C72 17 79 21 81 28 C84 19 93 16 98 23 C103 14 114 15 116 24 C123 27 130 33 134 41 C136 46 132 50 128 48 C123 46 118 43 115 40 C121 45 126 53 123 60 C120 66 111 66 109 59 C108 54 113 51 116 54"/><circle cx="112" cy="30" r="3.2"/></svg>
+      CERAMICHE GORETTI · DERUTA
+    </p>
+    <p class="ai-label">Sito dimostrativo realizzato con AI da FAR AI · contenuti da rivedere con l'attività prima della pubblicazione</p>
+    <p class="fine">Testi e fotografie provengono dal sito attuale e dal negozio online di Ceramiche Goretti e restano di proprietà dell'attività.</p>
+    <p class="piva">Ceramiche Goretti di Cesaretti Vania · P.IVA 02055630541</p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galleria fotografica">
+  <button class="lb-close" aria-label="Chiudi">✕</button>
+  <button class="lb-prev" aria-label="Foto precedente">←</button>
+  <figure>
+    <img src="img/piatto-draghi-35.jpg" alt="Piatto di Deruta con due draghi raffaelleschi e cornice verde">
+    <figcaption></figcaption>
+  </figure>
+  <button class="lb-next" aria-label="Foto successiva">→</button>
+</div>
+
+<script>
+(function(){
+  var ridotto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* --- barra solida allo scroll --- */
+  var nav = document.getElementById('nav');
+  var suScroll = function(){ nav.classList.toggle('solid', window.scrollY > 36); };
+  window.addEventListener('scroll', suScroll, {passive:true}); suScroll();
+
+  /* --- burger + inert + trappola Tab --- */
+  var burger = document.querySelector('.burger');
+  var mm = document.getElementById('mobileMenu');
+  var fuori = [document.getElementById('main'), document.querySelector('footer'),
+               document.querySelector('.skip-link'), document.querySelector('.nav-brand'),
+               document.querySelector('nav'), document.querySelector('.nav-cta')];
+  function segna(aperto){
+    fuori.forEach(function(el){ if(el){ aperto ? el.setAttribute('inert','') : el.removeAttribute('inert'); } });
+  }
+  function trappola(e, pannello, extra){
+    if(e.key !== 'Tab') return;
+    var f = Array.prototype.slice.call(
+      pannello.querySelectorAll('a[href], button:not([disabled]), [tabindex="0"]'));
+    if(extra) f = [extra].concat(f);
+    /* niente offsetParent: in un pannello position:fixed è null anche per i visibili */
+    f = f.filter(function(el){ return el.getClientRects().length > 0; });
+    if(!f.length) return;
+    var primo = f[0], ultimo = f[f.length - 1];
+    if(e.shiftKey && document.activeElement === primo){ e.preventDefault(); ultimo.focus(); }
+    else if(!e.shiftKey && document.activeElement === ultimo){ e.preventDefault(); primo.focus(); }
+  }
+  burger.addEventListener('click', function(){
+    var aperto = mm.classList.toggle('open');
+    burger.setAttribute('aria-expanded', aperto);
+    burger.setAttribute('aria-label', aperto ? 'Chiudi il menu' : 'Apri il menu');
+    document.body.style.overflow = aperto ? 'hidden' : '';
+    segna(aperto);
+  });
+  function chiudiMenu(){
+    mm.classList.remove('open');
+    burger.setAttribute('aria-expanded','false');
+    burger.setAttribute('aria-label','Apri il menu');
+    document.body.style.overflow='';
+    segna(false);
+  }
+  mm.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', chiudiMenu); });
+  document.addEventListener('keydown', function(e){
+    if(!mm.classList.contains('open')) return;
+    if(e.key === 'Escape'){ chiudiMenu(); burger.focus(); return; }
+    trappola(e, mm, burger);
+  });
+
+  /* --- reveal allo scroll --- */
+  if('IntersectionObserver' in window && !ridotto){
+    var io = new IntersectionObserver(function(voci){
+      voci.forEach(function(v){ if(v.isIntersecting){ v.target.classList.add('in'); io.unobserve(v.target); } });
+    }, {threshold:.12});
+    document.querySelectorAll('[data-reveal]').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('[data-reveal]').forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* --- la firma si disegna --- */
+  var fp = document.getElementById('firmaPath'), fo = document.getElementById('firmaOcchio');
+  if(fp){
+    var len = fp.getTotalLength();
+    fp.style.strokeDasharray = len;
+    if(!ridotto){
+      fp.style.strokeDashoffset = len;
+      if(fo){ fo.style.opacity = '0'; }
+      fp.getBoundingClientRect();
+      fp.style.transition = 'stroke-dashoffset 2.4s cubic-bezier(.24,.86,.28,1) .25s';
+      fp.style.strokeDashoffset = '0';
+      if(fo){ fo.style.transition = 'opacity .5s ease 2.5s'; fo.style.opacity = '1'; }
+    }
+  }
+
+  /* --- anni di bottega: calcolati, non scritti a mano --- */
+  var anni = document.getElementById('anni');
+  if(anni){
+    var meta = new Date().getFullYear() - 1977;
+    if(ridotto || !('IntersectionObserver' in window)){ anni.textContent = meta; }
+    else {
+      var io2 = new IntersectionObserver(function(v){
+        if(!v[0].isIntersecting) return;
+        io2.disconnect();
+        var t0 = null;
+        requestAnimationFrame(function passo(t){
+          if(t0 === null) t0 = t;
+          var p = Math.min(1, (t - t0) / 1300);
+          anni.textContent = Math.round(meta * (1 - Math.pow(1 - p, 3)));
+          if(p < 1) requestAnimationFrame(passo);
+        });
+      }, {threshold:.6});
+      io2.observe(anni);
+    }
+  }
+
+  /* --- aperto adesso? orario vero della bottega, ora di Roma --- */
+  (function(){
+    var el = document.getElementById('stato'), testo = document.getElementById('statoTesto');
+    if(!el || !testo) return;
+    try{
+      var f = new Intl.DateTimeFormat('en-GB', {timeZone:'Europe/Rome', weekday:'short', hour:'2-digit', minute:'2-digit', hour12:false});
+      var p = {}; f.formatToParts(new Date()).forEach(function(x){ p[x.type] = x.value; });
+      var g = ['Mon','Tue','Wed','Thu','Fri'].indexOf(p.weekday);   // -1 = sabato o domenica
+      var min = parseInt(p.hour,10) * 60 + parseInt(p.minute,10);
+      var aperto = g >= 0 && min >= 480 && min < 1080;
+      el.classList.remove('neutro');
+      el.classList.toggle('aperto', aperto);
+      el.classList.toggle('chiuso', !aperto);
+      var quando;
+      if(aperto)                    quando = 'chiude alle 18:00';
+      else if(g >= 0 && min < 480)  quando = 'apre alle 8:00';
+      else if(g >= 0 && g < 4)      quando = 'riapre domani alle 8:00';
+      else                          quando = 'riapre lunedì alle 8:00';
+      testo.textContent = (aperto ? 'Aperto adesso · ' : 'Chiuso adesso · ') + quando;
+    }catch(e){ /* niente Intl: resta l'orario scritto */ }
+  })();
+
+  /* --- lightbox --- */
+  var lb = document.getElementById('lightbox');
+  var lbImg = lb.querySelector('img');
+  var lbCap = lb.querySelector('figcaption');
+  var scatti = Array.prototype.slice.call(document.querySelectorAll('.gallery-grid button'));
+  var idx = 0, ultimoFuoco = null;
+  function mostra(i){
+    idx = (i + scatti.length) % scatti.length;
+    var b = scatti[idx], im = b.querySelector('img');
+    lbImg.src = b.getAttribute('data-src') || im.src;
+    lbImg.alt = im.alt;
+    lbImg.classList.toggle('tondo', b.hasAttribute('data-tondo'));
+    lbCap.textContent = b.getAttribute('data-caption') || '';
+  }
+  function apri(i){
+    ultimoFuoco = document.activeElement; mostra(i);
+    lb.classList.add('open'); document.body.style.overflow = 'hidden';
+    segna(true); burger.setAttribute('inert','');
+    /* si aspetta la CONDIZIONE vera, non i fotogrammi */
+    var tentativi = 0;
+    (function metti(){
+      var c = lb.querySelector('.lb-close');
+      if(getComputedStyle(lb).visibility === 'visible' || tentativi++ > 60){ c.focus(); }
+      else requestAnimationFrame(metti);
+    })();
+  }
+  function chiudi(){
+    lb.classList.remove('open'); document.body.style.overflow = '';
+    burger.removeAttribute('inert');
+    if(!mm.classList.contains('open')) segna(false);
+    if(ultimoFuoco) ultimoFuoco.focus();
+  }
+  scatti.forEach(function(b,i){ b.addEventListener('click', function(){ apri(i); }); });
+  lb.querySelector('.lb-close').addEventListener('click', chiudi);
+  lb.querySelector('.lb-prev').addEventListener('click', function(){ mostra(idx-1); });
+  lb.querySelector('.lb-next').addEventListener('click', function(){ mostra(idx+1); });
+  lb.addEventListener('click', function(e){ if(e.target === lb) chiudi(); });
+  document.addEventListener('keydown', function(e){
+    if(!lb.classList.contains('open')) return;
+    if(e.key === 'Escape') chiudi();
+    else if(e.key === 'ArrowLeft') mostra(idx-1);
+    else if(e.key === 'ArrowRight') mostra(idx+1);
+    else trappola(e, lb);
+  });
+})();
+</script>
+  <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

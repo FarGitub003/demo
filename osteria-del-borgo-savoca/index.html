@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Osteria del Borgo · Savoca (ME) · Il gusto delle tradizioni</title>
+<meta name="description" content="Osteria del Borgo a Savoca (ME): venti coperti, una terrazza con il panorama davanti, cucina siciliana. Aperti a pranzo dal venerdì alla domenica, 12:00–15:30.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#12314A">
+<meta property="og:type" content="restaurant.restaurant">
+<meta property="og:title" content="Osteria del Borgo · Savoca (ME)">
+<meta property="og:description" content="Venti coperti nel borgo di Savoca, una terrazza con il panorama davanti. Aperti a pranzo dal venerdì alla domenica.">
+<meta property="og:image" content="https://demo.francescoar.com/osteria-del-borgo-savoca/img/insegna.jpg">
+<meta property="og:image:width" content="1800">
+<meta property="og:image:height" content="1200">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23F7F0E1'/%3E%3Cpath d='M14 56 L14 30 A18 18 0 0 1 50 30 L50 56' fill='none' stroke='%23842223' stroke-width='4.5' stroke-linecap='round'/%3E%3C/svg%3E">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "@id": "https://osteriadelborgosavoca.eatbu.com/#osteria-del-borgo",
+  "name": "Osteria del Borgo",
+  "description": "Osteria a Savoca (ME) con terrazza panoramica e venti coperti. Cucina siciliana di tradizione, aperta a pranzo dal venerdì alla domenica.",
+  "image": "img/insegna.jpg",
+  "url": "https://osteriadelborgosavoca.eatbu.com/?lang=it",
+  "telephone": "+39 333 1843877",
+  "email": "lorypulce70@hotmail.it",
+  "servesCuisine": ["Siciliana", "Italiana"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via S. Antonio",
+    "addressLocality": "Savoca",
+    "addressRegion": "ME",
+    "postalCode": "98038",
+    "addressCountry": "IT"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 37.9559691, "longitude": 15.3407513 },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Friday", "Saturday", "Sunday"],
+    "opens": "12:00",
+    "closes": "15:30"
+  }],
+  "acceptsReservations": "https://osteriadelborgosavoca.eatbu.com/?lang=it",
+  "paymentAccepted": "Contanti, Contactless, Mastercard, VISA, Carta di debito, Diners Club, Apple Pay, Maestro",
+  "maximumAttendeeCapacity": 20
+}
+</script>
+
+<style>
+:root{
+  /* palette campionata sui pixel dell'insegna (vedi ART_DIRECTION.md) */
+  --calce:#F7F0E1;
+  --calce-2:#EDE3CE;
+  --calce-3:#D9CDB4;
+  --vino:#842223;
+  --ionio:#12314A;
+  --ionio-2:#1B3E5A;
+  --bougainvillea:#C2456B;        /* SOLO decorativo: 4,25:1 su calce */
+  --boug-chiara:#F09CBD;          /* testo su fondi scuri */
+  --boug-scura:#9B2A4E;           /* testo su fondi chiari */
+  --inchiostro:#241E19;
+  --fumo:#5E5142;
+  --display:'Cinzel',Georgia,serif;
+  --testo:'Raleway',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --curva:cubic-bezier(.22,.78,.24,1);
+  --nav-h:72px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{
+  margin:0;background:var(--calce);color:var(--inchiostro);
+  font-family:var(--testo);font-weight:400;font-size:17px;line-height:1.7;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.06;letter-spacing:.01em;margin:0}
+p{margin:0 0 1.1em}
+a{color:inherit}
+.wrap{width:min(1180px,92vw);margin-inline:auto}
+.stretto{width:min(760px,92vw);margin-inline:auto}
+
+/* ---------- skip link + focus ---------- */
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--vino);color:var(--calce);padding:.85rem 1.4rem;z-index:300;font-weight:600;text-decoration:none}
+.skip-link:focus{left:0}
+:focus-visible{outline:3px solid var(--vino);outline-offset:3px;border-radius:2px}
+.su-scuro :focus-visible{outline-color:var(--boug-chiara)}
+
+/* ---------- barra ---------- */
+#nav{
+  position:fixed;inset:0 0 auto 0;z-index:160;height:var(--nav-h);
+  display:flex;align-items:center;
+  background:rgba(247,240,225,.92);
+  border-bottom:1px solid transparent;
+  transition:background-color .35s var(--curva),border-color .35s var(--curva),box-shadow .35s var(--curva);
+}
+@supports (backdrop-filter:blur(6px)){#nav{background:rgba(247,240,225,.82);backdrop-filter:blur(10px) saturate(1.1)}}
+#nav.solid{background:var(--calce);border-bottom-color:var(--calce-3);box-shadow:0 6px 26px rgba(36,30,25,.07)}
+#nav .wrap{display:flex;align-items:center;gap:1.4rem;width:min(1180px,94vw)}
+.nav-brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:var(--display);font-weight:700;
+  font-size:1.04rem;letter-spacing:.09em;text-transform:uppercase;color:var(--inchiostro);white-space:nowrap;margin-right:auto}
+.nav-brand svg{flex:0 0 auto}
+.nav-links{display:flex;gap:1.55rem;align-items:center}
+.nav-links a{text-decoration:none;font-size:.83rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--fumo);
+  padding:.3rem 0;position:relative;transition:color .25s var(--curva)}
+.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1.5px;background:var(--vino);
+  transform:scaleX(0);transform-origin:left;transition:transform .3s var(--curva)}
+.nav-links a:hover{color:var(--vino)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-cta{display:inline-block;background:var(--vino);color:var(--calce);text-decoration:none;
+  padding:.62rem 1.15rem;font-size:.79rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  transition:background-color .25s var(--curva),transform .25s var(--curva)}
+.nav-cta:hover{background:#6E1C1D;transform:translateY(-1px)}
+.burger{display:none;background:none;border:0;padding:.5rem;cursor:pointer;flex-direction:column;gap:5px}
+.burger span{display:block;width:24px;height:2px;background:var(--inchiostro);transition:transform .3s var(--curva),opacity .25s,background-color .3s var(--curva)}
+/* col pannello aperto la barra resta SOPRA (z-index 160 > 150): la X deve restare cliccabile */
+body.menu-aperto #nav{background:transparent;border-bottom-color:transparent;box-shadow:none}
+@supports (backdrop-filter:blur(6px)){body.menu-aperto #nav{background:transparent;backdrop-filter:none}}
+body.menu-aperto .nav-brand{color:var(--calce)}
+body.menu-aperto .burger span{background:var(--calce)}
+body.menu-aperto .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+body.menu-aperto .burger span:nth-child(2){opacity:0}
+body.menu-aperto .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{position:fixed;inset:0;z-index:150;background:var(--ionio);color:var(--calce);
+  display:flex;flex-direction:column;justify-content:center;align-items:center;gap:.2rem;
+  padding:calc(var(--nav-h) + 1rem) 1rem 2rem;
+  opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .35s var(--curva),transform .35s var(--curva),visibility .35s}
+.mobile-menu.open{opacity:1;visibility:visible;transform:none}
+.mobile-menu a{font-family:var(--display);font-size:1.6rem;font-weight:600;text-decoration:none;color:var(--calce);
+  padding:.5rem 1rem;letter-spacing:.04em}
+.mobile-menu a.mm-tel{font-family:var(--testo);font-size:1rem;letter-spacing:.1em;color:var(--boug-chiara);margin-top:1.2rem;font-weight:600}
+.mobile-menu .mm-arco{margin-bottom:1.6rem}
+/* il CSS batte l'attributo di presentazione: gli archi sul blu vanno ritinti qui */
+.mobile-menu .mm-arco path{stroke:var(--boug-chiara)}   /* .arco path viene DOPO: serve un selettore piu' forte */
+body.menu-aperto .nav-brand .arco path{stroke:var(--boug-chiara)}
+
+/* ---------- firma: l'arco ---------- */
+.arco path{fill:none;stroke:var(--vino);stroke-linecap:round}
+
+/* ---------- hero ---------- */
+.hero{min-height:100svh;padding:calc(var(--nav-h) + 3vh) 0 5vh;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(72% 55% at 50% 30%,rgba(255,253,246,.95) 0%,rgba(247,240,225,0) 68%)}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.35;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.14'/%3E%3C/svg%3E")}
+.hero>*{position:relative;z-index:1}
+.arco-wrap{position:relative;width:clamp(300px,44vw,560px);aspect-ratio:440/520;container-type:inline-size}
+.arco-wrap .arco{position:absolute;inset:0;width:100%;height:100%}
+.arco-testo{position:absolute;inset:20% 8% 6%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem}
+.hero-eyebrow{font-size:min(3.4cqw,.78rem);font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--boug-scura)}
+.hero h1{font-size:11.2cqw;font-weight:700;letter-spacing:.02em;text-transform:uppercase;color:var(--inchiostro);margin:.18em 0 .1em}
+.hero h1 span{display:block}
+.hero-filo{width:min(46cqw,190px);height:1px;background:var(--calce-3);margin:.5em 0}
+.hero-payoff{font-family:var(--display);font-size:min(4.6cqw,1.28rem);font-weight:400;letter-spacing:.09em;color:var(--vino)}
+.hero-sotto{margin:clamp(1.4rem,3.4vh,2.6rem) auto 0;max-width:34rem;font-size:1.06rem;color:var(--fumo)}
+.hero-ribbon{display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem 1.9rem;margin-bottom:1.9rem;
+  font-size:.79rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--inchiostro)}
+.hero-ribbon i{font-style:normal;color:var(--vino)}
+.hero-cta{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem}
+.btn{display:inline-block;text-decoration:none;padding:.92rem 1.7rem;font-size:.82rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;transition:background-color .25s var(--curva),color .25s var(--curva),transform .25s var(--curva),border-color .25s var(--curva)}
+.btn-pieno{background:var(--vino);color:var(--calce)}
+.btn-pieno:hover{background:#6E1C1D;transform:translateY(-2px)}
+.btn-vuoto{border:1.5px solid var(--vino);color:var(--vino)}
+.btn-vuoto:hover{background:var(--vino);color:var(--calce);transform:translateY(-2px)}
+.su-scuro .btn-pieno{background:var(--calce);color:var(--ionio)}
+.su-scuro .btn-pieno:hover{background:#fff}
+.su-scuro .btn-vuoto{border-color:var(--boug-chiara);color:var(--boug-chiara)}
+.su-scuro .btn-vuoto:hover{background:var(--boug-chiara);color:var(--ionio)}
+
+/* ---------- sezioni ---------- */
+section{padding:clamp(4.4rem,9vh,7.4rem) 0}
+.su-chiaro-2{background:var(--calce-2)}
+.su-scuro{background:var(--ionio);color:var(--calce)}
+.su-scuro-2{background:var(--ionio-2);color:var(--calce)}
+.su-vino{background:var(--vino);color:var(--calce)}
+.occhiello{font-size:.76rem;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--boug-scura);margin-bottom:1rem}
+.su-scuro .occhiello,.su-scuro-2 .occhiello,.su-vino .occhiello{color:var(--boug-chiara)}
+h2{font-size:clamp(2rem,4.6vw,3.15rem);text-transform:uppercase;letter-spacing:.015em}
+.sommario{font-size:1.08rem;color:var(--fumo);max-width:38rem}
+.su-scuro .sommario,.su-scuro-2 .sommario,.su-vino .sommario{color:rgba(247,240,225,.9)}
+
+/* merlatura ricostruita dal loro marchio */
+.merlo{height:23px;background-repeat:repeat-x;background-position:center bottom;background-size:44px 23px;margin-bottom:-1px}
+.merlo-ionio{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='23'%3E%3Cpath d='M0 23 L0 15 L7 15 A15 15 0 0 1 37 15 L44 15 L44 23 Z' fill='%2312314A'/%3E%3C/svg%3E")}
+.merlo-ionio2{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='23'%3E%3Cpath d='M0 23 L0 15 L7 15 A15 15 0 0 1 37 15 L44 15 L44 23 Z' fill='%231B3E5A'/%3E%3C/svg%3E")}
+.merlo-vino{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='23'%3E%3Cpath d='M0 23 L0 15 L7 15 A15 15 0 0 1 37 15 L44 15 L44 23 Z' fill='%23842223'/%3E%3C/svg%3E")}
+
+/* divisore con l'arco */
+.divisore{display:flex;align-items:center;gap:1.2rem;justify-content:center;padding:0 0 clamp(2.6rem,5vh,4rem)}
+.divisore span{flex:0 1 140px;height:1px;background:var(--calce-3)}
+.divisore .arco{width:54px;height:auto}
+
+/* ---------- numeri ---------- */
+.numeri{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--calce-3);border-block:1px solid var(--calce-3)}
+.numeri div{background:var(--calce);padding:2.1rem 1rem;text-align:center}
+.numeri b{display:block;font-family:var(--display);font-size:clamp(2.4rem,5vw,3.3rem);font-weight:700;color:var(--vino);line-height:1}
+.numeri small{display:block;margin-top:.5rem;font-size:.75rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--fumo)}
+.claim{font-family:var(--display);font-size:clamp(1.5rem,3.5vw,2.35rem);line-height:1.32;text-align:center;
+  max-width:24ch;margin:0 auto clamp(2.6rem,5vh,3.6rem);text-transform:uppercase;letter-spacing:.01em}
+
+/* ---------- aperture ---------- */
+.stato{display:inline-flex;align-items:center;gap:.7rem;border:1px solid rgba(247,240,225,.34);
+  padding:.62rem 1.15rem;font-size:.82rem;font-weight:600;letter-spacing:.07em;margin-bottom:1.6rem}
+.stato .pallino{width:9px;height:9px;border-radius:50%;background:var(--boug-chiara);flex:0 0 auto}
+.stato.aperto .pallino{background:#7BD8A4}
+.settimana{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:rgba(247,240,225,.18);margin-top:2.4rem}
+.settimana div{background:var(--ionio);padding:1.15rem .4rem;text-align:center}
+.settimana .g{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(247,240,225,.72)}
+.settimana .o{font-family:var(--display);font-size:.94rem;font-weight:600;margin-top:.5rem;color:rgba(247,240,225,.66)}
+.settimana .on{background:var(--ionio-2)}
+.settimana .on .g{color:var(--boug-chiara)}
+.settimana .on .o{color:var(--calce)}
+.due-col{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4.4rem);align-items:center}
+
+/* ---------- insegna (unico momento fotografico) ---------- */
+.gallery-grid{margin:0}
+.gallery-grid button{display:block;padding:0;border:0;background:none;cursor:zoom-in;width:100%;position:relative;
+  box-shadow:0 18px 44px rgba(36,30,25,.16);transition:transform .5s var(--curva),box-shadow .5s var(--curva)}
+.gallery-grid button:hover{transform:translateY(-4px);box-shadow:0 26px 56px rgba(36,30,25,.22)}
+.gallery-grid button img{width:100%;height:auto}
+.lente{position:absolute;right:0;bottom:0;background:var(--vino);color:var(--calce);
+  font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:.55rem .9rem}
+figcaption.dida{margin-top:.9rem;font-size:.88rem;color:var(--fumo)}
+.virgolettato{font-family:var(--testo);font-style:italic;font-weight:400;font-size:clamp(1.3rem,2.6vw,1.85rem);line-height:1.52;margin:0 0 1.1rem}
+
+/* ---------- piatti ---------- */
+.piatti{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--calce-3);border:1px solid var(--calce-3)}
+.piatto{background:var(--calce);padding:clamp(2rem,3.4vw,2.9rem)}
+.piatto .num{font-family:var(--display);font-size:.9rem;font-weight:700;letter-spacing:.3em;color:var(--vino);display:block;margin-bottom:1.4rem}
+.piatto h3{font-size:clamp(1.22rem,2.1vw,1.5rem);text-transform:uppercase;letter-spacing:.02em;margin-bottom:.8rem}
+.piatto p{font-size:.98rem;color:var(--fumo);margin:0}
+.nota{margin-top:1.9rem;font-size:.92rem;color:var(--fumo);text-align:center}
+
+/* ---------- servizi ---------- */
+.servizi{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.6rem,3vw,2.6rem)}
+.servizio{display:flex;gap:1rem;align-items:flex-start}
+.servizio svg{flex:0 0 auto;width:30px;height:30px;stroke:var(--vino);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.servizio h3{font-family:var(--testo);font-size:.86rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.3rem}
+.servizio p{font-size:.94rem;color:var(--fumo);margin:0}
+
+/* ---------- recensioni ---------- */
+.voto{display:flex;align-items:baseline;justify-content:center;gap:.8rem;font-family:var(--display);font-weight:700;line-height:1}
+.voto b{font-size:clamp(4rem,12vw,7.4rem)}
+.voto i{font-style:normal;font-size:clamp(1.1rem,2.4vw,1.6rem);letter-spacing:.1em}
+
+/* ---------- contatti ---------- */
+.contatti{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:clamp(1.8rem,3vw,2.8rem);margin-top:2.6rem}
+.contatto h3{font-family:var(--testo);font-size:.76rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--fumo);margin-bottom:.6rem}
+/* l'email e' una stringa che non si spezza da sola: a 500px usciva dalla colonna
+   (sweep 320->1440, scrollWidth 505 > 500). Si lascia andare a capo. */
+.contatto a,.contatto p{font-family:var(--display);font-size:1.12rem;font-weight:600;text-decoration:none;color:var(--inchiostro);margin:0;line-height:1.45;overflow-wrap:anywhere}
+.f-riga a{overflow-wrap:anywhere}
+.contatto a{border-bottom:1.5px solid var(--calce-3);transition:border-color .25s var(--curva),color .25s var(--curva)}
+.contatto a:hover{color:var(--vino);border-color:var(--vino)}
+.contatto small{display:block;margin-top:.45rem;font-family:var(--testo);font-size:.85rem;font-weight:400;color:var(--fumo);letter-spacing:0;text-transform:none}
+.pagamenti{margin-top:2.8rem;padding-top:1.6rem;border-top:1px solid var(--calce-3);font-size:.9rem;color:var(--fumo)}
+
+/* ---------- footer ---------- */
+footer{background:var(--ionio);color:var(--calce);padding:clamp(3.4rem,6vh,4.6rem) 0 2.6rem;text-align:center}
+.f-brand{display:inline-flex;flex-direction:column;align-items:center;gap:.9rem;margin-bottom:1.6rem}
+.f-brand .arco path{stroke:var(--boug-chiara)}
+.f-nome{font-family:var(--display);font-size:1.3rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+.f-riga{font-size:.95rem;color:rgba(247,240,225,.86)}
+.f-riga a{color:var(--boug-chiara);text-decoration:none;border-bottom:1px solid rgba(240,156,189,.5)}
+.f-ai{margin-top:2.4rem;padding-top:1.7rem;border-top:1px solid rgba(247,240,225,.2);font-size:.82rem;color:rgba(247,240,225,.78);line-height:1.7}
+
+/* ---------- lightbox ---------- */
+.lightbox{position:fixed;inset:0;z-index:250;background:rgba(20,16,13,.95);display:flex;align-items:center;justify-content:center;
+  padding:clamp(1rem,5vw,3.5rem);opacity:0;visibility:hidden;transition:opacity .3s var(--curva),visibility .3s}
+.lightbox.open{opacity:1;visibility:visible}
+.lightbox figure{margin:0;max-width:min(1100px,100%);text-align:center}
+.lightbox img{width:100%;height:auto;max-height:78vh;object-fit:contain}
+.lightbox figcaption{margin-top:1rem;color:#F0E7D6;font-size:.94rem}
+.lb-close{position:absolute;top:clamp(.8rem,2.4vw,1.8rem);right:clamp(.8rem,2.4vw,1.8rem);
+  background:var(--vino);color:#FFF3E6;border:0;width:46px;height:46px;font-size:1.2rem;cursor:pointer;
+  transition:background-color .25s var(--curva)}
+.lb-close:hover{background:#9E2A2B}
+
+/* ---------- reveal ----------
+   Tutto sotto `.js`: senza JavaScript nessuno rimetterebbe .in e la pagina
+   resterebbe vuota (28/28 blocchi invisibili, misurato con _qa/senza_js.py). */
+.js [data-reveal]{opacity:0;transform:translateY(22px);transition:opacity .85s var(--curva),transform .85s var(--curva)}
+.js [data-reveal].in{opacity:1;transform:none}
+.js [data-reveal][data-delay="1"]{transition-delay:.1s}
+.js [data-reveal][data-delay="2"]{transition-delay:.2s}
+.js [data-reveal][data-delay="3"]{transition-delay:.3s}
+
+/* ---------- responsive ---------- */
+@media(max-width:1000px){
+  .due-col{grid-template-columns:1fr;gap:2.4rem}
+  .piatti{grid-template-columns:1fr}
+  .servizi{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:860px){
+  .nav-links,.nav-cta{display:none}
+  .burger{display:flex}
+  .arco-wrap{width:min(86vw,420px)}
+}
+@media(max-width:560px){
+  body{font-size:16px}
+  .numeri{grid-template-columns:1fr}
+  .servizi{grid-template-columns:1fr}
+  /* 7 giorni in 4 colonne lasciano una cella vuota in seconda riga: sul telefono
+     diventa un elenco giorno/orario, che e' anche il modo in cui si leggono davvero */
+  .settimana{grid-template-columns:1fr}
+  .settimana div{display:flex;justify-content:space-between;align-items:baseline;padding:.8rem 1.1rem;text-align:left}
+  .settimana .o{margin-top:0}
+  .hero-ribbon{gap:.35rem 1.2rem;font-size:.72rem}
+  .hero{padding-top:calc(var(--nav-h) + 1.5vh)}
+}
+@media(max-width:360px){
+  .hero-ribbon{flex-direction:column;gap:.3rem}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  /* stesso peso di `.js [data-reveal]` sopra: senza il `.js` questa riga perderebbe
+     la precedenza e il movimento resterebbe acceso per chi l'ha spento. */
+  .js [data-reveal]{opacity:1;transform:none}
+}
+</style>
+
+<noscript><style>
+  /* Senza JS il burger non puo' aprire nulla e la barra non puo' diventare .solid
+     allo scroll (testo scuro che scorrerebbe sopra le bande ionio): la barra esce
+     dal fisso, resta piena di calce e i link vanno a capo invece di sfondare la riga. */
+  html{scroll-behavior:auto;scroll-padding-top:8px}
+  #nav{position:static;height:auto;padding:.7rem 0;background:var(--calce);
+       border-bottom-color:var(--calce-3);backdrop-filter:none;box-shadow:none}
+  #nav .wrap{flex-wrap:wrap;justify-content:center;gap:.55rem 1.4rem}
+  .nav-brand{margin-right:0}
+  .burger{display:none!important}
+  .nav-links{display:flex!important;flex-wrap:wrap;justify-content:center;gap:.45rem 1.4rem;max-width:100%}
+  .nav-cta{display:inline-block!important}
+  /* Sotto gli 860 marchio (240px) + Prenota (107px) + gap non ci stanno in 301px di
+     riga a 320: andrebbero a capo e la barra salirebbe a 182px (misurato). Il CTA
+     qui si toglie perche' "Prenota un tavolo" e' gia' nell'hero, subito sotto. */
+  @media(max-width:860px){
+    #nav{padding:.6rem 0}
+    #nav .wrap{gap:.5rem 1.1rem}
+    .nav-cta{display:none!important}
+    .nav-links{flex-basis:100%;gap:.3rem 1.1rem}
+    .nav-links a{font-size:.76rem;letter-spacing:.1em;padding:.15rem 0}
+  }
+  /* la barra non e' piu' fissa: l'hero non deve piu' lasciarle spazio sopra */
+  .hero{padding-top:3vh}
+  .mobile-menu{display:none}
+</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Salta al contenuto</a>
+
+<nav id="nav">
+  <div class="wrap">
+    <a class="nav-brand" href="#top">
+      <svg class="arco" width="20" height="24" viewBox="0 0 440 520" aria-hidden="true"><path d="M30 520 L30 220 A190 190 0 0 1 410 220 L410 520" stroke-width="30"/></svg>
+      Osteria del Borgo
+    </a>
+    <div class="nav-links">
+      <a href="#aperture">Aperture</a>
+      <a href="#osteria">L'osteria</a>
+      <a href="#piatti">I piatti</a>
+      <a href="#borgo">Il borgo</a>
+      <a href="#dove">Dove siamo</a>
+    </div>
+    <a class="nav-cta" href="https://osteriadelborgosavoca.eatbu.com/?lang=it" target="_blank" rel="noopener">Prenota</a>
+    <button class="burger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Apri il menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <svg class="arco mm-arco" width="44" height="52" viewBox="0 0 440 520" aria-hidden="true"><path d="M30 520 L30 220 A190 190 0 0 1 410 220 L410 520" stroke="#F09CBD" stroke-width="22"/></svg>
+  <a href="#aperture">Aperture</a>
+  <a href="#osteria">L'osteria</a>
+  <a href="#piatti">I piatti</a>
+  <a href="#borgo">Il borgo</a>
+  <a href="#dove">Dove siamo</a>
+  <a class="mm-tel" href="tel:+393331843877">+39 333 1843877</a>
+</div>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ============ HERO tipografico dentro l'arco ============ -->
+<header class="hero">
+  <div class="arco-wrap">
+    <svg class="arco" viewBox="0 0 440 520" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+      <!-- ⛔ niente vector-effect="non-scaling-stroke" qui: il tratteggio verrebbe misurato in
+           pixel schermo mentre getTotalLength() e' in unita' del viewBox, e il piedritto destro
+           resterebbe mozzato (provato: 1197 unita' contro 1523 px reali). -->
+      <path id="arcoHero" d="M30 520 L30 220 A190 190 0 0 1 410 220 L410 520" stroke-width="1.8"/>
+    </svg>
+    <div class="arco-testo">
+      <div class="hero-eyebrow">Savoca · Messina</div>
+      <h1><span>Osteria</span><span>del Borgo</span></h1>
+      <div class="hero-filo"></div>
+      <div class="hero-payoff">Il gusto delle tradizioni</div>
+    </div>
+  </div>
+  <p class="hero-sotto">Venti coperti dentro il borgo di Savoca, una terrazza con il panorama davanti, la cucina siciliana di sempre.</p>
+  <div class="hero-ribbon">
+    <span>Venerdì <i>·</i> Sabato <i>·</i> Domenica</span>
+    <span>Solo a pranzo <i>·</i> 12:00 – 15:30</span>
+    <span>20 coperti</span>
+  </div>
+  <div class="hero-cta">
+    <a class="btn btn-pieno" href="https://osteriadelborgosavoca.eatbu.com/?lang=it" target="_blank" rel="noopener">Prenota un tavolo</a>
+    <a class="btn btn-vuoto" href="tel:+393331843877">Chiama +39 333 1843877</a>
+  </div>
+</header>
+
+<!-- ============ CLAIM + NUMERI ============ -->
+<section style="padding-top:clamp(3.4rem,7vh,5.4rem)">
+  <div class="wrap">
+    <div class="divisore" data-reveal>
+      <span></span>
+      <svg class="arco" viewBox="0 0 440 520" width="54" aria-hidden="true"><path id="arcoDiv" d="M30 520 L30 220 A190 190 0 0 1 410 220 L410 520" stroke-width="18"/></svg>
+      <span></span>
+    </div>
+    <p class="claim" data-reveal>Tre giorni su sette. Solo a pranzo. Venti coperti.</p>
+    <div class="numeri" data-reveal data-delay="1">
+      <div><b>20</b><small>coperti</small></div>
+      <div><b>3</b><small>giorni a settimana</small></div>
+      <div><b>12–15<span style="font-size:.6em">.30</span></b><small>l'orario del pranzo</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APERTURE (la tesi) ============ -->
+<div class="merlo merlo-ionio" aria-hidden="true"></div>
+<section id="aperture" class="su-scuro">
+  <div class="wrap">
+    <div class="due-col">
+      <div data-reveal>
+        <div class="occhiello">Quando siamo aperti</div>
+        <h2>Venerdì, sabato<br>e domenica</h2>
+        <p class="sommario" style="margin-top:1.4rem">Dalle 12:00 alle 15:30. L'osteria apre a pranzo e basta: da lunedì a giovedì resta chiusa.</p>
+      </div>
+      <div data-reveal data-delay="1">
+        <div class="stato" id="stato"><span class="pallino"></span><span id="statoTesto">Orari: venerdì, sabato e domenica, 12:00–15:30</span></div>
+        <div class="settimana">
+          <div><div class="g">Lun</div><div class="o">chiuso</div></div>
+          <div><div class="g">Mar</div><div class="o">chiuso</div></div>
+          <div><div class="g">Mer</div><div class="o">chiuso</div></div>
+          <div><div class="g">Gio</div><div class="o">chiuso</div></div>
+          <div class="on"><div class="g">Ven</div><div class="o">12–15.30</div></div>
+          <div class="on"><div class="g">Sab</div><div class="o">12–15.30</div></div>
+          <div class="on"><div class="g">Dom</div><div class="o">12–15.30</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ L'INSEGNA (unico momento fotografico) ============ -->
+<section id="osteria" class="su-chiaro-2">
+  <div class="wrap">
+    <div class="due-col">
+      <div id="gallery" data-reveal>
+        <figure class="gallery-grid">
+          <button data-src="img/insegna.jpg" data-caption="L'insegna all'ingresso dell'Osteria del Borgo, a Savoca." aria-label="Ingrandisci la foto dell'insegna">
+            <picture>
+              <source media="(max-width:640px)" srcset="img/insegna-mobile.jpg">
+              <img src="img/insegna.jpg" width="1800" height="1200" alt="L'insegna dell'Osteria del Borgo: lo stemma a torre con forchetta e cucchiaio, il nome in lettere nere e la frase «Il gusto delle tradizioni», sopra una fascia merlata rosso vino.">
+            </picture>
+            <span class="lente">Ingrandisci</span>
+          </button>
+          <figcaption class="dida">L'insegna all'ingresso, con lo stemma del borgo e la fascia merlata.</figcaption>
+        </figure>
+      </div>
+      <div data-reveal data-delay="1">
+        <div class="occhiello">L'osteria</div>
+        <h2>Il gusto delle<br>tradizioni</h2>
+        <p class="sommario" style="margin-top:1.4rem">È scritto sul muro, all'ingresso, sotto lo stemma con la forchetta e il cucchiaio. È anche il modo più breve per dire cosa si mangia qui: cucina siciliana classica, prodotti del posto, preparazioni fatte come si facevano.</p>
+        <p class="sommario">Ad accoglierti ci sono <strong>Carmelo e Loredana</strong>. Venti coperti sono pochi, e si sente: nessuno ti mette fretta.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ I PIATTI ============ -->
+<section id="piatti">
+  <div class="wrap">
+    <div style="text-align:center;max-width:44rem;margin:0 auto clamp(2.6rem,5vh,3.6rem)" data-reveal>
+      <div class="occhiello">In tavola</div>
+      <h2>Tre piatti,<br>per farsi un'idea</h2>
+    </div>
+    <div class="piatti">
+      <article class="piatto" data-reveal>
+        <span class="num">I</span>
+        <h3>Pappardelle con finocchietto selvatico e salsiccia</h3>
+        <p>Il finocchietto e la salsiccia stanno insieme in Sicilia da sempre. Qui finiscono su una pasta larga, che li tiene tutti e due.</p>
+      </article>
+      <article class="piatto" data-reveal data-delay="1">
+        <span class="num">II</span>
+        <h3>Le carni locali</h3>
+        <p>I secondi si fanno con le carni del territorio, cucinate senza complicazioni: è la parte della tradizione che non ha bisogno di essere spiegata.</p>
+      </article>
+      <article class="piatto" data-reveal data-delay="2">
+        <span class="num">III</span>
+        <h3>Semifreddo alle mandorle</h3>
+        <p>Il dolce con cui finisce il pranzo, e il motivo per cui vale la pena arrivare in fondo senza guardare l'orologio.</p>
+      </article>
+    </div>
+    <p class="nota" data-reveal>Il menù completo lo trovi in osteria. Questi tre piatti sono quelli citati nella scheda del Touring Club Italiano.</p>
+  </div>
+</section>
+
+<!-- ============ LA TERRAZZA E IL BORGO ============ -->
+<div class="merlo merlo-ionio2" aria-hidden="true"></div>
+<section id="borgo" class="su-scuro-2">
+  <div class="wrap">
+    <div class="due-col">
+      <div data-reveal>
+        <div class="occhiello">La terrazza</div>
+        <blockquote class="virgolettato">«Atmosfera semplice e con una bella terrazza sulla quale è possibile pranzare godendo di un panorama mozzafiato.»</blockquote>
+        <p class="sommario" style="font-size:.92rem;letter-spacing:.06em;text-transform:uppercase">Scheda Touring Club Italiano</p>
+      </div>
+      <div data-reveal data-delay="1">
+        <div class="occhiello">Il borgo</div>
+        <h2 style="font-size:clamp(1.7rem,3.6vw,2.5rem)">Savoca, sopra<br>la costa ionica</h2>
+        <p class="sommario" style="margin-top:1.4rem">Il paese sta in alto, tra Taormina e Messina: vicoli stretti, scale, archi di pietra. Nel 1971 è stato il set siciliano di un film che conoscono tutti. Chi sale fin qui, di solito, poi si ferma a pranzo.</p>
+        <p class="sommario">Siamo in via Sant'Antonio, dentro il paese. Si pranza dal venerdì alla domenica, dalle 12:00 alle 15:30.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVIZI ============ -->
+<section id="servizi" class="su-chiaro-2">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:clamp(2.4rem,4.6vh,3.4rem)" data-reveal>
+      <div class="occhiello">Buono a sapersi</div>
+      <h2>Prima di salire</h2>
+    </div>
+    <div class="servizi">
+      <div class="servizio" data-reveal>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10h18M12 10V4M5 10l-1 10M19 10l1 10M8 15h8"/></svg>
+        <div><h3>Terrazza e tavoli all'aperto</h3><p>Si pranza fuori, con il panorama davanti.</p></div>
+      </div>
+      <div class="servizio" data-reveal data-delay="1">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2"/><path d="M9 9h6M12 9v6M12 15h5M7 21a5 5 0 0 1 3-9"/></svg>
+        <div><h3>Ingresso accessibile</h3><p>Il locale è indicato come accessibile.</p></div>
+      </div>
+      <div class="servizio" data-reveal data-delay="2">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="8" r="2"/><circle cx="12" cy="6" r="2"/><circle cx="17" cy="8" r="2"/><path d="M12 12c-3 0-5 2.4-5 4.6C7 19 9 20 12 20s5-1 5-3.4C17 14.4 15 12 12 12Z"/></svg>
+        <div><h3>Animali ammessi</h3><p>Il cane può venire con te.</p></div>
+      </div>
+      <div class="servizio" data-reveal>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.2"/><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5M16 14.5c2.9 0 5 1.9 5 4.5"/></svg>
+        <div><h3>Gruppi ed eventi privati</h3><p>Venti coperti si prenotano anche tutti insieme.</p></div>
+      </div>
+      <div class="servizio" data-reveal data-delay="1">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="2"/><path d="M2.5 10h19M6 15h4"/></svg>
+        <div><h3>Tutte le carte</h3><p>Contanti, contactless, Apple Pay, Visa, Mastercard, Maestro, Diners.</p></div>
+      </div>
+      <div class="servizio" data-reveal data-delay="2">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 16h13v3H3zM19 16h2v3h-2M17 13c1.6-.7 1.6-2.3 0-3-1.4-.6-1.4-2 0-2.6"/></svg>
+        <div><h3>Area fumatori</h3><p>C'è un'area per chi fuma.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RECENSIONI ============ -->
+<div class="merlo merlo-vino" aria-hidden="true"></div>
+<section class="su-vino" style="text-align:center">
+  <div class="stretto">
+    <div class="occhiello" data-reveal>Chi si è seduto qui</div>
+    <div class="voto" data-reveal data-delay="1"><b>4,6</b><i>su 5</i></div>
+    <p class="sommario" style="margin:1.4rem auto 0;text-align:center" data-reveal data-delay="2">La media di <b id="conta" style="font-family:var(--display)">683</b> recensioni.</p>
+  </div>
+</section>
+
+<!-- ============ DOVE SIAMO ============ -->
+<section id="dove">
+  <div class="wrap">
+    <div style="text-align:center;max-width:40rem;margin:0 auto" data-reveal>
+      <div class="occhiello">Dove siamo</div>
+      <h2>Prenota<br>un tavolo</h2>
+      <p class="sommario" style="margin:1.3rem auto 0;text-align:center">Venti coperti, tre giorni su sette. Una telefonata basta.</p>
+    </div>
+    <div class="contatti" data-reveal data-delay="1">
+      <div class="contatto">
+        <h3>Telefono</h3>
+        <a href="tel:+393331843877">+39 333 1843877</a>
+        <small>Carmelo e Loredana</small>
+      </div>
+      <div class="contatto">
+        <h3>Email</h3>
+        <a href="mailto:lorypulce70@hotmail.it">lorypulce70@hotmail.it</a>
+        <small>Per gruppi ed eventi privati</small>
+      </div>
+      <div class="contatto">
+        <h3>Indirizzo</h3>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=37.9559691,15.3407513" target="_blank" rel="noopener">via S. Antonio<br>98038 Savoca (ME)</a>
+        <small>Apri la mappa</small>
+      </div>
+      <div class="contatto">
+        <h3>Orari</h3>
+        <p>Venerdì, sabato, domenica<br>12:00 – 15:30</p>
+        <small>Da lunedì a giovedì chiuso</small>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.8rem" data-reveal data-delay="2">
+      <a class="btn btn-pieno" href="https://osteriadelborgosavoca.eatbu.com/?lang=it" target="_blank" rel="noopener">Prenota online</a>
+    </div>
+    <p class="pagamenti" data-reveal>Si paga in contanti, con contactless, Apple Pay, carta di debito, Visa, Mastercard, Maestro e Diners Club.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-brand">
+      <svg class="arco" width="34" height="40" viewBox="0 0 440 520" aria-hidden="true"><path d="M30 520 L30 220 A190 190 0 0 1 410 220 L410 520" stroke-width="20"/></svg>
+      <span class="f-nome">Osteria del Borgo</span>
+    </div>
+    <p class="f-riga">via S. Antonio, 98038 Savoca (ME) · <a href="tel:+393331843877">+39 333 1843877</a> · <a href="mailto:lorypulce70@hotmail.it">lorypulce70@hotmail.it</a></p>
+    <p class="f-riga">Venerdì, sabato e domenica, 12:00 – 15:30 · <a href="#dove">Dove siamo</a></p>
+    <p class="f-ai">Sito dimostrativo realizzato con AI da FAR AI · contenuti da rivedere con l'attività prima della pubblicazione<br>
+    Testi e immagini provengono dalle fonti pubbliche dell'attività (scheda Touring Club Italiano e pagina di prenotazione) e restano di proprietà dell'attività.</p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Fotografia ingrandita">
+  <button class="lb-close" aria-label="Chiudi">✕</button>
+  <figure>
+    <img src="img/insegna.jpg" alt="L'insegna dell'Osteria del Borgo con lo stemma a torre e la fascia merlata rosso vino.">
+    <figcaption>L'insegna all'ingresso dell'Osteria del Borgo, a Savoca.</figcaption>
+  </figure>
+</div>
+
+<script>
+(function(){
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- barra solida allo scroll ---- */
+  var nav = document.getElementById('nav');
+  var onScroll = function(){ nav.classList.toggle('solid', window.scrollY > 40); };
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  /* ---- burger + inert + trappola Tab (pattern provato sulle demo firmate) ---- */
+  var burger = document.querySelector('.burger');
+  var mm = document.getElementById('mobileMenu');
+  var fuori = [document.getElementById('main'), document.querySelector('footer'),
+               document.querySelector('.skip-link'), document.querySelector('.nav-brand'),
+               document.querySelector('.nav-links'), document.querySelector('.nav-cta')];
+  function segna(aperto){
+    fuori.forEach(function(el){ if(el){ if(aperto){ el.setAttribute('inert',''); } else { el.removeAttribute('inert'); } } });
+  }
+  function trappola(e, pannello, extra){
+    if(e.key !== 'Tab') return;
+    var f = Array.prototype.slice.call(
+      pannello.querySelectorAll('a[href], button:not([disabled]), [tabindex="0"]'));
+    if(extra) f = [extra].concat(f);
+    /* niente offsetParent: in un pannello position:fixed e' null anche per i visibili */
+    f = f.filter(function(el){ return el.getClientRects().length > 0; });
+    if(!f.length) return;
+    var primo = f[0], ultimo = f[f.length - 1];
+    if(e.shiftKey && document.activeElement === primo){ e.preventDefault(); ultimo.focus(); }
+    else if(!e.shiftKey && document.activeElement === ultimo){ e.preventDefault(); primo.focus(); }
+  }
+  burger.addEventListener('click', function(){
+    var open = mm.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'Chiudi il menu' : 'Apri il menu');
+    document.body.style.overflow = open ? 'hidden' : '';
+    document.body.classList.toggle('menu-aperto', open);
+    segna(open);
+  });
+  function chiudiMenu(){
+    mm.classList.remove('open');
+    burger.setAttribute('aria-expanded','false');
+    burger.setAttribute('aria-label','Apri il menu');
+    document.body.style.overflow='';
+    document.body.classList.remove('menu-aperto');
+    segna(false);
+  }
+  mm.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', chiudiMenu); });
+  document.addEventListener('keydown', function(e){
+    if(!mm.classList.contains('open')) return;
+    if(e.key === 'Escape'){ chiudiMenu(); burger.focus(); return; }
+    trappola(e, mm, burger);
+  });
+
+  /* ---- reveal on scroll ---- */
+  if('IntersectionObserver' in window && !reduced){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:.14});
+    document.querySelectorAll('[data-reveal]').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('[data-reveal]').forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* ---- la firma: l'arco che si disegna ---- */
+  function disegna(path, durata, ritardo){
+    if(!path) return;
+    var len = path.getTotalLength();
+    path.style.strokeDasharray = len;
+    if(reduced){ return; }
+    path.style.strokeDashoffset = len;
+    path.getBoundingClientRect();
+    path.style.transition = 'stroke-dashoffset ' + durata + 's cubic-bezier(.22,.78,.24,1) ' + ritardo + 's';
+    path.style.strokeDashoffset = '0';
+  }
+  disegna(document.getElementById('arcoHero'), 1.8, .15);
+  var arcoDiv = document.getElementById('arcoDiv');
+  if(arcoDiv && 'IntersectionObserver' in window && !reduced){
+    var io2 = new IntersectionObserver(function(en){
+      en.forEach(function(e){ if(e.isIntersecting){ disegna(arcoDiv, 1.4, 0); io2.unobserve(e.target); } });
+    }, {threshold:.6});
+    io2.observe(arcoDiv);
+  }
+
+  /* ---- orari vivi, sul fuso di Roma (non su quello del visitatore) ---- */
+  (function orari(){
+    var box = document.getElementById('stato'), testo = document.getElementById('statoTesto');
+    if(!box || !testo) return;
+    var APRE = 12*60, CHIUDE = 15*60+30, GIORNI_APERTI = [5,6,0]; /* ven, sab, dom (0 = domenica) */
+    var nomi = {0:'domenica',1:'lunedì',2:'martedì',3:'mercoledì',4:'giovedì',5:'venerdì',6:'sabato'};
+    var mappa = {Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+    var f, parti;
+    try{
+      f = new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Rome',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false});
+      parti = f.formatToParts(new Date());
+    }catch(err){ return; } /* niente Intl: resta la frase statica */
+    var g = null, h = null, m = null;
+    parti.forEach(function(p){
+      if(p.type === 'weekday') g = mappa[p.value.slice(0,3)];
+      if(p.type === 'hour') h = parseInt(p.value,10);
+      if(p.type === 'minute') m = parseInt(p.value,10);
+    });
+    if(g === null || isNaN(h) || isNaN(m)) return;
+    var ora = h*60 + m;
+    var apertoOra = GIORNI_APERTI.indexOf(g) > -1 && ora >= APRE && ora < CHIUDE;
+    if(apertoOra){
+      box.classList.add('aperto');
+      testo.textContent = 'Adesso siamo aperti · si chiude alle 15:30';
+      return;
+    }
+    for(var d = 0; d <= 7; d++){
+      var gg = (g + d) % 7;
+      if(GIORNI_APERTI.indexOf(gg) === -1) continue;
+      if(d === 0 && ora >= APRE) continue;
+      var quando = d === 0 ? 'oggi' : (d === 1 ? 'domani' : nomi[gg]);
+      testo.textContent = 'Adesso siamo chiusi · riapriamo ' + quando + ' alle 12:00';
+      return;
+    }
+  })();
+
+  /* ---- count-up sul numero vero delle recensioni ---- */
+  var conta = document.getElementById('conta');
+  if(conta && 'IntersectionObserver' in window && !reduced){
+    var io3 = new IntersectionObserver(function(en){
+      en.forEach(function(e){
+        if(!e.isIntersecting) return;
+        io3.unobserve(e.target);
+        var fine = 683, t0 = null;
+        function passo(t){
+          if(t0 === null) t0 = t;
+          var k = Math.min((t - t0)/1100, 1);
+          conta.textContent = Math.round(fine * (1 - Math.pow(1-k,3)));
+          if(k < 1) requestAnimationFrame(passo);
+        }
+        requestAnimationFrame(passo);
+      });
+    }, {threshold:.6});
+    io3.observe(conta);
+  }
+
+  /* ---- lightbox (una sola foto: niente prev/next, vedi ART_DIRECTION) ---- */
+  var lb = document.getElementById('lightbox');
+  var lbImg = lb.querySelector('img');
+  var lbCap = lb.querySelector('figcaption');
+  var shots = Array.prototype.slice.call(document.querySelectorAll('.gallery-grid button'));
+  var lastFocus = null;
+  function openLb(i){
+    var b = shots[i], im = b.querySelector('img');
+    lastFocus = document.activeElement;
+    lbImg.src = b.getAttribute('data-src') || im.src; lbImg.alt = im.alt;
+    lbCap.textContent = b.getAttribute('data-caption') || '';
+    lb.classList.add('open'); document.body.style.overflow='hidden';
+    segna(true); burger.setAttribute('inert','');
+    /* si aspetta la CONDIZIONE vera, non i fotogrammi */
+    var tentativi = 0;
+    (function mettiIlFuoco(){
+      var c = lb.querySelector('.lb-close');
+      if (getComputedStyle(lb).visibility === 'visible' || tentativi++ > 60) { c.focus(); }
+      else { requestAnimationFrame(mettiIlFuoco); }
+    })();
+  }
+  function closeLb(){
+    lb.classList.remove('open'); document.body.style.overflow='';
+    burger.removeAttribute('inert');
+    if(!mm.classList.contains('open')) segna(false);
+    if(lastFocus) lastFocus.focus();
+  }
+  shots.forEach(function(b,i){ b.addEventListener('click', function(){ openLb(i); }); });
+  lb.querySelector('.lb-close').addEventListener('click', closeLb);
+  lb.addEventListener('click', function(e){ if(e.target === lb) closeLb(); });
+  document.addEventListener('keydown', function(e){
+    if(!lb.classList.contains('open')) return;
+    if(e.key === 'Escape') closeLb();
+    else trappola(e, lb);
+  });
+})();
+</script>
+  <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La bottega dell'arte — Mario Di Donfrancesco · Statuaria sacra e restauro della cartapesta a Lecce</title>
+<meta name="description" content="Il laboratorio di statuaria sacra e restauro della cartapesta di Mario Di Donfrancesco, nel centro storico di Lecce dal 1980. Catalogo di Cristi, Madonne, Santi, presepistica e maschere. Sito dimostrativo.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="La bottega dell'arte — Mario Di Donfrancesco · Lecce">
+<meta property="og:description" content="Statuaria sacra e restauro della cartapesta nel cuore del centro storico di Lecce, dal 1980. Con l'abilitazione della Sovrintendenza alle Belle Arti.">
+<meta property="og:image" content="https://demo.francescoar.com/didonfrancesco-lecce/img/cristi_viacrucis_cristogruppo.jpg">
+<meta property="og:image:width" content="2000">
+<meta property="og:image:height" content="1716">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:site_name" content="La bottega dell'arte">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231C2140'/%3E%3Cpath d='M10 50 C 14 38 20 32 26 28 C 36 21 50 18 52 28 C 54 37 46 43 39 41 C 33 39 32 32 36 28 C 39 25 44 26 45 30 C 46 33 44 35 41 35' fill='none' stroke='%23E9C989' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://www.didonfrancesco.it/#labottegadellarte",
+  "name": "La bottega dell'arte — Mario Di Donfrancesco",
+  "description": "Laboratorio di statuaria sacra e restauro della cartapesta, a Lecce dal 1980.",
+  "image": "img/cristi_sacrocuore_cristo1.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via F. D'Amelio 1",
+    "addressLocality": "Lecce",
+    "postalCode": "73100",
+    "addressRegion": "Puglia",
+    "addressCountry": "IT"
+  },
+  "telephone": "+393683086300",
+  "email": "mariodidonfrancescoddn@gmail.com",
+  "url": "https://www.didonfrancesco.it/"
+}
+</script>
+<style>
+:root{
+  --pergamena:#F2EAD6;
+  --pergamena-2:#E9DDBE;
+  --notte:#1C2140;
+  --notte-2:#272D52;
+  --cardinale:#A6220F;
+  --cardinale-cupo:#7E1A0C;
+  --oro:#C89B61;
+  --oro-scuro:#75561F;
+  --oro-chiaro:#E9C989;
+  --inchiostro:#2B2620;
+  --fumo:#635A48;
+  --bianco-caldo:#F7F1E3;
+  --seta:#CDC3AD;
+  --ease-hero:cubic-bezier(.2,.8,.22,1);
+  --ease-soft:cubic-bezier(.25,.6,.3,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+#catalogo,#restauro,#maestro,#gallery,#contatti{scroll-margin-top:96px}
+body{
+  font-family:'Hanken Grotesk',system-ui,sans-serif;
+  font-weight:400;
+  color:var(--inchiostro);
+  background:var(--pergamena);
+  line-height:1.65;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:'Sorts Mill Goudy',serif;font-weight:400;line-height:1.08}
+.serif-voice{font-family:'Sorts Mill Goudy',serif;font-style:italic}
+
+/* ---------- skip link + focus ---------- */
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--cardinale);color:var(--bianco-caldo);padding:.8rem 1.4rem;z-index:200;font-weight:600;text-decoration:none}
+.skip-link:focus{left:0}
+:focus-visible{outline:3px solid var(--cardinale);outline-offset:3px;border-radius:2px}
+.dark :focus-visible,.mobile-menu :focus-visible,.lightbox :focus-visible{outline-color:var(--oro-chiaro)}
+
+/* ---------- eyebrow ---------- */
+.eyebrow{
+  font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;font-weight:600;
+  display:flex;align-items:center;gap:.9rem;color:var(--oro-scuro);
+}
+.eyebrow::before{content:"";width:2.2rem;height:1px;background:currentColor;opacity:.6}
+
+/* ---------- nav ---------- */
+.nav{
+  position:fixed;inset:0 0 auto 0;z-index:130;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.05rem clamp(1.2rem,4vw,3rem);
+  color:var(--inchiostro);
+  transition:background .45s var(--ease-soft),box-shadow .45s;
+}
+.nav.solid{background:rgba(242,234,214,.94);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(43,38,32,.12)}
+.nav-brand{display:flex;align-items:center;gap:.65rem;text-decoration:none;font-family:'Sorts Mill Goudy',serif;font-size:1.06rem;letter-spacing:.13em;flex-shrink:0;white-space:nowrap}
+.nav-brand svg{width:32px;height:32px;flex:none;color:var(--cardinale)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{
+  text-decoration:none;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;
+  padding-bottom:.25rem;background:linear-gradient(currentColor,currentColor) bottom left/0 1px no-repeat;
+  transition:background-size .4s var(--ease-soft);
+}
+.nav-links a:hover{background-size:100% 1px}
+.nav-cta{border:1px solid var(--cardinale);background:var(--cardinale);color:var(--bianco-caldo);padding:.55rem 1.2rem;border-radius:99px;text-decoration:none;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;transition:background .3s,color .3s}
+.nav-cta:hover{background:var(--cardinale-cupo)}
+.burger{display:none;background:none;border:0;cursor:pointer;z-index:120;width:44px;height:44px;position:relative;color:inherit}
+.burger span{position:absolute;left:8px;right:8px;height:2px;background:currentColor;transition:transform .4s var(--ease-soft),opacity .3s,top .4s}
+.burger span:nth-child(1){top:14px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:28px}
+.burger[aria-expanded="true"] span:nth-child(1){top:21px;transform:rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){top:21px;transform:rotate(-45deg)}
+/* il marchio è lungo: sotto i 1101px link+CTA non ci stanno e la barra andava a capo
+   (misurato: 115px di altezza fra 870 e 1070). Menu a scomparsa già da 1100px. */
+@media (max-width:1100px){
+  .nav-links,.nav .nav-cta{display:none}
+  .burger{display:block}
+}
+.mobile-menu{
+  position:fixed;inset:0;background:var(--notte);z-index:110;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1.4rem;
+  opacity:0;visibility:hidden;transition:opacity .45s var(--ease-soft),visibility .45s;
+}
+.mobile-menu.open{opacity:1;visibility:visible}
+.mobile-menu a{color:var(--bianco-caldo);font-family:'Sorts Mill Goudy',serif;font-size:1.9rem;text-decoration:none;letter-spacing:.06em}
+.mobile-menu a:hover{color:var(--oro-chiaro)}
+.mobile-menu .mm-note{color:var(--seta);font-size:.8rem;letter-spacing:.25em;text-transform:uppercase;margin-top:2rem}
+
+/* ---------- hero: tavola di catalogo ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;background:var(--pergamena);overflow:hidden;isolation:isolate}
+.hero-inner{
+  width:min(1200px,92vw);margin-inline:auto;
+  display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.5rem,4vw,4rem);align-items:center;
+  padding:7rem 0 5.5rem;
+}
+.hero-testo .eyebrow{color:var(--oro-scuro)}
+.hero h1{
+  font-size:clamp(3rem,9.2vw,6.8rem);
+  letter-spacing:.01em;margin:.28em 0 .14em;text-wrap:balance;color:var(--inchiostro);
+}
+.hero h1 em{font-style:italic;color:var(--cardinale)}
+.hero-tag{font-family:'Sorts Mill Goudy',serif;font-style:italic;font-size:clamp(1.05rem,2.1vw,1.4rem);max-width:38ch;color:var(--fumo)}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2.1rem}
+.btn{
+  display:inline-flex;align-items:center;gap:.6rem;
+  padding:.95rem 1.9rem;border-radius:99px;text-decoration:none;
+  font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;
+  transition:transform .3s var(--ease-soft),background .3s,color .3s,border-color .3s;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--cardinale);color:var(--bianco-caldo)}
+.btn-primary:hover{background:var(--cardinale-cupo)}
+.btn-ghost{border:1px solid var(--oro-scuro);color:var(--inchiostro)}
+.btn-ghost:hover{border-color:var(--inchiostro)}
+.hero-voluta{width:min(150px,32vw);overflow:visible;color:var(--oro-scuro);margin-bottom:1.1rem}
+.hero-voluta path{stroke:currentColor;stroke-width:2.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.hero-statua{position:relative;display:flex;justify-content:center}
+.hero-statua img{
+  max-height:min(74vh,760px);width:auto;max-width:100%;object-fit:contain;
+  animation:posa 20s var(--ease-soft) both;transform-origin:50% 88%;
+}
+@keyframes posa{from{transform:scale(1.05)}to{transform:scale(1)}}
+.hero-statua figcaption{
+  position:absolute;right:0;bottom:-.4rem;
+  font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;font-weight:600;color:var(--oro-scuro);
+  writing-mode:vertical-rl;
+}
+.hero-ribbon{
+  position:absolute;left:0;right:0;bottom:0;
+  display:flex;justify-content:center;gap:0;flex-wrap:wrap;
+  background:var(--pergamena-2);
+  border-top:1px solid rgba(117,86,31,.28);
+}
+.hero-ribbon div{
+  padding:.95rem 2rem;font-size:.73rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--inchiostro);
+  display:flex;align-items:center;gap:.7rem;
+}
+.hero-ribbon div+div{border-left:1px solid rgba(117,86,31,.28)}
+.hero-ribbon svg{width:15px;height:15px;flex:none;color:var(--cardinale)}
+.hero .cascade{opacity:0;transform:translateY(26px);animation:rise 1s var(--ease-hero) forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+.hero .cascade:nth-child(1){animation-delay:.12s}
+.hero .cascade:nth-child(2){animation-delay:.26s}
+.hero .cascade:nth-child(3){animation-delay:.42s}
+.hero .cascade:nth-child(4){animation-delay:.6s}
+.hero .cascade:nth-child(5){animation-delay:.8s}
+
+/* ---------- divisore voluta ---------- */
+.divider{display:flex;justify-content:center;padding:.4rem 0;color:var(--oro-scuro)}
+.divider svg{width:96px;height:34px;overflow:visible}
+.divider path{stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round;opacity:.6}
+
+/* ---------- sezioni base ---------- */
+.section{padding:clamp(4.5rem,9vw,7.5rem) 0}
+.wrap{width:min(1200px,92vw);margin-inline:auto}
+[data-reveal]{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease-soft),transform .9s var(--ease-soft)}
+[data-reveal].in{opacity:1;transform:none}
+
+/* ---------- intro ---------- */
+.intro{background:var(--pergamena);text-align:center}
+.intro .eyebrow{justify-content:center}
+.intro .eyebrow::after{content:"";width:2.2rem;height:1px;background:currentColor;opacity:.6}
+.intro h2{font-size:clamp(1.9rem,4.6vw,3.3rem);max-width:24ch;margin:1.4rem auto .9rem;text-wrap:balance}
+.intro>.wrap>p{max-width:60ch;margin-inline:auto;color:var(--fumo);font-size:1.02rem}
+.intro-riga{display:flex;justify-content:center;gap:clamp(1.5rem,5vw,4rem);flex-wrap:wrap;margin-top:3rem}
+.intro-riga article{max-width:16rem}
+.intro-riga .cifra{font-family:'Sorts Mill Goudy',serif;font-size:2.6rem;line-height:1;color:var(--cardinale)}
+.intro-riga h3{font-size:1.05rem;letter-spacing:.05em;margin:.5rem 0 .3rem}
+.intro-riga p{font-size:.92rem;color:var(--fumo)}
+
+/* ---------- split maestro (scuro) ---------- */
+.dark{background:var(--notte);color:var(--bianco-caldo);position:relative}
+.grain::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.split{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.split-media{position:relative;overflow:hidden;border-radius:4px;isolation:isolate}
+/* L'unica foto d'ambiente della bottega è un originale da 250px: qui NON è un documento
+   da ispezionare ma l'atmosfera dietro il testo — il «velo pesante» dell'art direction.
+   Lo scale tiene i bordi sfocati fuori dal riquadro (blur+overflow lascerebbe orli molli). */
+.split-media img{
+  aspect-ratio:16/10;object-fit:cover;width:100%;
+  transform:scale(1.07);
+  filter:blur(2.4px) saturate(.78) contrast(.9) brightness(.72);
+  transition:transform 1.2s var(--ease-soft)
+}
+.split-media:hover img{transform:scale(1.11)}
+.split-media::before{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:
+    linear-gradient(180deg,rgba(28,33,64,.46) 0%,rgba(28,33,64,.3) 42%,rgba(15,18,36,.74) 100%),
+    radial-gradient(100% 78% at 50% 40%,rgba(28,33,64,0) 32%,rgba(15,18,36,.5) 100%);
+}
+.split-media::after{content:"";position:absolute;inset:0;border:1px solid rgba(233,201,137,.3);border-radius:4px;pointer-events:none;margin:14px;z-index:3}
+.split-media figcaption{
+  position:absolute;left:0;right:0;bottom:0;padding:1.5rem 1.2rem .9rem;z-index:2;
+  background:linear-gradient(180deg,transparent 0%,rgba(15,18,36,.85) 55%,rgba(15,18,36,.95) 100%);
+  font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--oro-chiaro);
+}
+.dark .eyebrow{color:var(--oro-chiaro)}
+.dark h2{font-size:clamp(1.9rem,4.2vw,3rem);margin:1.3rem 0 1rem;max-width:18ch}
+.dark p{color:var(--seta);max-width:54ch}
+.dark .serif-voice{color:var(--bianco-caldo);font-size:1.08rem}
+.titoli{list-style:none;margin-top:1.8rem;display:grid;gap:.7rem}
+.titoli li{display:flex;align-items:baseline;gap:.9rem;font-size:.95rem;color:var(--bianco-caldo)}
+.titoli li::before{content:"";width:.55rem;height:.55rem;border-radius:50%;background:var(--oro);flex:none;transform:translateY(-1px)}
+.titoli small{color:var(--seta);letter-spacing:.04em}
+
+/* ---------- marquee ---------- */
+.marquee{background:var(--cardinale-cupo);color:#F7E4DC;overflow:hidden;padding:1.05rem 0;border-block:1px solid rgba(247,241,227,.18)}
+.marquee-track{display:flex;gap:3.2rem;width:max-content;animation:scorri 40s linear infinite;font-family:'Sorts Mill Goudy',serif;font-size:1.02rem;letter-spacing:.14em;white-space:nowrap}
+.marquee-track span{display:flex;align-items:center;gap:3.2rem}
+.marquee-track i{font-style:normal;color:var(--oro-chiaro);font-size:.7rem;transform:translateY(-2px)}
+@keyframes scorri{to{transform:translateX(-50%)}}
+
+/* ---------- catalogo ---------- */
+.catalogo{background:var(--pergamena)}
+.cat-head{text-align:center;margin-bottom:3.4rem}
+.cat-head .eyebrow{justify-content:center}
+.cat-head .eyebrow::after{content:"";width:2.2rem;height:1px;background:currentColor;opacity:.6}
+.cat-head h2{font-size:clamp(1.9rem,4.6vw,3.2rem);margin-top:1.3rem}
+.cat-head p{color:var(--fumo);max-width:56ch;margin:.8rem auto 0}
+.categoria{
+  display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(1.6rem,4vw,3.5rem);align-items:center;
+  padding:clamp(2.2rem,5vw,3.6rem) 0;
+}
+.categoria+.categoria{border-top:1px solid rgba(117,86,31,.25)}
+.categoria:nth-child(even){grid-template-columns:1.1fr .9fr}
+.categoria:nth-child(even) .cat-testo{order:2}
+.categoria:nth-child(even) .cat-figure{order:1}
+.cat-testo h3{font-size:clamp(1.6rem,3.4vw,2.3rem);margin-bottom:.7rem}
+.cat-testo .num{font-family:'Sorts Mill Goudy',serif;font-style:italic;color:var(--cardinale);font-size:1.02rem;display:block;margin-bottom:.9rem}
+.cat-testo p{color:var(--fumo);max-width:48ch}
+.soggetti{margin-top:1.2rem;display:flex;flex-wrap:wrap;gap:.45rem;list-style:none}
+.soggetti li{
+  font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--oro-scuro);
+  border:1px solid rgba(117,86,31,.4);border-radius:99px;padding:.3rem .75rem;
+}
+.cat-figure{display:flex;gap:clamp(.8rem,2vw,1.6rem);justify-content:center;align-items:flex-end}
+.cat-figure figure{flex:1;min-width:0;max-width:340px}
+/* La Via Crucis è l'unica tavola orizzontale del catalogo: a parità di larghezza
+   restava alta la metà del Crocifisso e le sue cinque figure sparivano. Più larga,
+   le due tavole della categoria arrivano ad altezza confrontabile. */
+.cat-figure figure.wide{flex:1.45;max-width:430px}
+.cat-figure img{width:100%;height:auto;transition:transform .8s var(--ease-soft)}
+.cat-figure figure:hover img{transform:translateY(-6px)}
+.cat-figure figcaption{
+  margin-top:.6rem;text-align:center;
+  font-family:'Sorts Mill Goudy',serif;font-style:italic;font-size:.92rem;color:var(--fumo);
+}
+
+/* ---------- restauro (scuro) ---------- */
+.restauro h2{max-width:22ch}
+.prove{display:grid;grid-template-columns:repeat(2,minmax(0,410px));justify-content:start;gap:clamp(1.6rem,4vw,3rem);margin-top:3rem}
+/* Sono le foto più deboli del lotto (originali 137-300px): si presentano per quello che
+   SONO — lastre dell'archivio della bottega — invece che come fotografia di catalogo.
+   Taglia contenuta + grana + vignettatura + tono caldo: la morbidezza diventa una scelta. */
+.coppia{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+.coppia figure{
+  position:relative;overflow:hidden;border-radius:2px;isolation:isolate;background:#0E1124;
+  box-shadow:0 0 0 1px rgba(233,201,137,.22),0 14px 30px rgba(8,10,22,.45);
+}
+.coppia img{
+  width:100%;aspect-ratio:3/5;object-fit:cover;object-position:top;
+  filter:sepia(.2) saturate(.86) contrast(.94) brightness(.94);
+}
+.coppia figure::before{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  opacity:.6;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .3 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23g)'/%3E%3C/svg%3E");
+}
+.coppia figure::after{
+  content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:radial-gradient(112% 76% at 50% 40%,rgba(10,12,26,0) 32%,rgba(10,12,26,.62) 100%);
+}
+.coppia .chip{
+  position:absolute;left:.55rem;top:.55rem;z-index:4;
+  background:rgba(15,18,36,.92);color:var(--oro-chiaro);
+  font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;font-weight:700;
+  padding:.28rem .62rem;border-radius:99px;border:1px solid rgba(233,201,137,.4);
+}
+.coppia-cap{grid-column:1/-1;font-family:'Sorts Mill Goudy',serif;font-style:italic;font-size:.95rem;color:var(--seta);margin-top:.2rem}
+.passi{list-style:none;margin-top:1.6rem;display:grid;gap:.55rem;max-width:54ch}
+.passi li{display:flex;gap:.8rem;align-items:baseline;font-size:.93rem;color:var(--seta)}
+.passi li::before{content:"";width:.45rem;height:.45rem;border-radius:50%;background:var(--cardinale);flex:none;transform:translateY(-1px);box-shadow:0 0 0 1px rgba(233,201,137,.5)}
+
+/* ---------- quote ---------- */
+.quote{background:var(--pergamena-2);text-align:center}
+.quote blockquote{font-family:'Sorts Mill Goudy',serif;font-style:italic;font-size:clamp(1.25rem,3vw,2rem);max-width:30ch;margin:0 auto;line-height:1.45;text-wrap:balance;color:var(--inchiostro)}
+.quote cite{display:block;margin-top:1.6rem;font-style:normal;font-size:.76rem;letter-spacing:.28em;text-transform:uppercase;color:var(--oro-scuro);font-weight:600}
+
+/* ---------- gallery ---------- */
+.gallery{background:var(--pergamena)}
+.gallery .cat-head{margin-bottom:2.4rem}
+.gallery-grid{columns:3;column-gap:1.2rem;margin-top:2.4rem}
+.gallery-grid button{
+  display:block;width:100%;border:0;padding:0;background:none;cursor:zoom-in;
+  margin-bottom:1.2rem;border-radius:4px;overflow:hidden;position:relative;
+}
+.gallery-grid img{width:100%;transition:transform .9s var(--ease-soft)}
+.gallery-grid button:hover img{transform:scale(1.035)}
+.gallery-grid button::after{
+  content:attr(data-tag);position:absolute;left:.8rem;bottom:.75rem;
+  font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;color:var(--oro-chiaro);
+  background:rgba(15,18,36,.9);padding:.32rem .7rem;border-radius:99px;
+  opacity:0;transform:translateY(6px);transition:opacity .4s,transform .4s;font-weight:700;font-family:'Hanken Grotesk',sans-serif;
+}
+.gallery-grid button:hover::after,.gallery-grid button:focus-visible::after{opacity:1;transform:none}
+.lightbox{
+  position:fixed;inset:0;z-index:150;background:rgba(13,16,32,.95);
+  display:none;align-items:center;justify-content:center;flex-direction:column;padding:3.5rem 1.2rem 2rem;
+}
+.lightbox.open{display:flex}
+.lightbox img{max-width:min(1100px,94vw);max-height:76vh;object-fit:contain;border-radius:4px}
+.lightbox figcaption{color:var(--bianco-caldo);font-family:'Sorts Mill Goudy',serif;font-style:italic;margin-top:1.1rem;font-size:.95rem}
+.lb-close,.lb-prev,.lb-next{
+  position:absolute;background:rgba(15,18,36,.85);backdrop-filter:blur(8px);border:1px solid rgba(233,201,137,.45);color:var(--bianco-caldo);
+  width:46px;height:46px;border-radius:50%;cursor:pointer;font-size:1.1rem;display:grid;place-items:center;
+  transition:background .3s;
+}
+.lb-close:hover,.lb-prev:hover,.lb-next:hover{background:rgba(15,18,36,.98)}
+.lb-close{top:1.2rem;right:1.2rem}
+.lb-prev{left:1.2rem;top:50%;transform:translateY(-50%)}
+.lb-next{right:1.2rem;top:50%;transform:translateY(-50%)}
+
+/* ---------- CTA finale (scuro) ---------- */
+.finale{position:relative;overflow:hidden;padding:clamp(6rem,12vw,9rem) 0}
+.finale-voluta{position:absolute;right:-6%;bottom:-10%;width:min(560px,60vw);opacity:.14;color:var(--oro-chiaro);pointer-events:none}
+.finale-voluta path{stroke:currentColor;stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.finale h2{font-size:clamp(2rem,5vw,3.4rem);max-width:18ch;margin:1.3rem 0 1rem}
+.contatti{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:1.1rem;margin-top:2.6rem;max-width:820px}
+.contatto{
+  border:1px solid rgba(233,201,137,.3);border-radius:6px;padding:1.25rem 1.3rem;
+  background:rgba(39,45,82,.5);
+}
+.contatto .k{font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:var(--oro-chiaro);font-weight:700;display:block;margin-bottom:.45rem}
+.contatto a{color:var(--bianco-caldo);text-decoration:none;border-bottom:1px solid rgba(233,201,137,.4);transition:border-color .3s}
+.contatto a:hover{border-color:var(--oro-chiaro)}
+.contatto p{font-size:.95rem;color:var(--bianco-caldo);max-width:none}
+
+/* ---------- footer ---------- */
+footer{background:#131730;color:var(--seta);padding:2.8rem 0 2.4rem;font-size:.82rem}
+.footer-inner{display:flex;flex-direction:column;gap:1.1rem;align-items:center;text-align:center}
+.footer-brand{display:flex;align-items:center;gap:.6rem;font-family:'Sorts Mill Goudy',serif;color:var(--bianco-caldo);font-size:1rem;letter-spacing:.12em}
+.footer-brand svg{width:26px;height:26px;color:var(--oro-chiaro)}
+.ai-label{
+  border:1px solid rgba(233,201,137,.45);color:var(--oro-chiaro);
+  padding:.55rem 1.1rem;border-radius:99px;font-size:.72rem;letter-spacing:.06em;max-width:92vw;
+}
+footer .fine{font-size:.72rem}
+
+/* ---------- responsive ---------- */
+@media (max-width:980px){
+  .hero-inner{grid-template-columns:1fr;gap:1.2rem;padding:6.4rem 0 6.4rem}
+  .hero-statua{flex-direction:column;align-items:center}
+  .hero-statua img{max-height:44vh}
+  .hero-statua figcaption{writing-mode:horizontal-tb;position:static;text-align:center;margin-top:.5rem}
+  .split{grid-template-columns:1fr}
+  .categoria,.categoria:nth-child(even){grid-template-columns:1fr}
+  .categoria:nth-child(even) .cat-testo{order:1}
+  .categoria:nth-child(even) .cat-figure{order:2}
+  .prove{grid-template-columns:minmax(0,410px)}
+  .gallery-grid{columns:2}
+}
+@media (max-width:700px){
+  .gallery-grid{columns:1}
+  .hero-ribbon{display:none}
+  .cat-figure{align-items:flex-start}
+}
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  html{scroll-behavior:auto}
+  [data-reveal]{opacity:1;transform:none}
+  .hero .cascade{opacity:1;transform:none}
+  .marquee-track{animation:none}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Salta al contenuto</a>
+
+<header class="nav" id="nav">
+  <a class="nav-brand" href="#top" aria-label="La bottega dell'arte, torna su">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 50 C 14 38 20 32 26 28 C 36 21 50 18 52 28 C 54 37 46 43 39 41 C 33 39 32 32 36 28 C 39 25 44 26 45 30 C 46 33 44 35 41 35" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    LA BOTTEGA DELL'ARTE
+  </a>
+  <nav aria-label="Principale">
+    <ul class="nav-links">
+      <li><a href="#catalogo">Il catalogo</a></li>
+      <li><a href="#restauro">Il restauro</a></li>
+      <li><a href="#maestro">Il maestro</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+    </ul>
+  </nav>
+  <a class="nav-cta" href="#contatti">Contatta la bottega</a>
+  <button class="burger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Apri il menu"><span></span><span></span><span></span></button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#catalogo">Il catalogo</a>
+  <a href="#restauro">Il restauro</a>
+  <a href="#maestro">Il maestro</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contatti">Contatta la bottega</a>
+  <p class="mm-note">Lecce · Via F. D'Amelio 1</p>
+</div>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-testo">
+      <svg class="hero-voluta cascade" viewBox="0 0 150 60" aria-hidden="true">
+        <path id="volutaPath" d="M4 54 C 14 44 26 38 38 33 C 62 23 104 12 122 20 C 138 27 136 44 122 49 C 110 53 100 45 102 35 C 104 27 113 24 119 29 C 124 33 122 40 116 41"/>
+      </svg>
+      <p class="eyebrow cascade">Statuaria sacra e restauro · Lecce · dal 1980</p>
+      <h1 class="cascade">La bottega <em>dell'arte</em></h1>
+      <p class="hero-tag cascade">Il laboratorio di cartapesta del professor Mario Di Donfrancesco: statue nuove di bottega e restauri d'autore, nel cuore del centro storico di Lecce.</p>
+      <div class="hero-ctas cascade">
+        <a class="btn btn-primary" href="tel:+393683086300">Telefona in bottega</a>
+        <a class="btn btn-ghost" href="#catalogo">Guarda il catalogo</a>
+      </div>
+    </div>
+    <figure class="hero-statua cascade">
+      <img src="img/cristi_sacrocuore_cristo1.jpg" alt="Statua del Sacro Cuore di Gesù in cartapesta, opera della bottega" fetchpriority="high">
+      <figcaption>Sacro Cuore · dal catalogo</figcaption>
+    </figure>
+  </div>
+  <div class="hero-ribbon">
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg>In via F. D'Amelio dal 1980</div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.8-8 9-4.8-1.2-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Abilitazione della Sovrintendenza</div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 4 5.7 4 9s-1.5 6.4-4 9c-2.5-2.6-4-5.7-4-9s1.5-6.4 4-9z"/></svg>Opere in sei paesi, fino al Vaticano</div>
+  </div>
+</section>
+
+<section class="section intro" id="chi-siamo">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>La bottega</p>
+    <h2 data-reveal>Le mani che fanno le statue, e le mani che le salvano.</h2>
+    <p data-reveal>Dal 1980 il laboratorio di via F. D'Amelio fa le due cose che una statua può chiedere: nascere e tornare com'era. Statuaria sacra di nuova fabbricazione e restauro della cartapesta e del legno, con l'abilitazione della Sovrintendenza alle Belle Arti.</p>
+    <div class="intro-riga">
+      <article data-reveal>
+        <span class="cifra">1980</span>
+        <h3>La bottega apre</h3>
+        <p>Nel centro storico di Lecce, dove sta ancora oggi: via F. D'Amelio 1, a pochi passi da Piazza S. Oronzo.</p>
+      </article>
+      <article data-reveal>
+        <span class="cifra">6</span>
+        <h3>Paesi con le sue opere</h3>
+        <p>Italia, Malta, Germania, Francia, Stati Uniti e Stato del Vaticano: dove sono collocate opere restaurate e di nuova fabbricazione.</p>
+      </article>
+      <article data-reveal>
+        <span class="cifra">5</span>
+        <h3>Famiglie di opere</h3>
+        <p>Statue del Cristo, della Madonna e dei Santi, presepistica e maschere carnevalesche: il catalogo della bottega.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true"><svg viewBox="0 0 96 34"><path d="M4 28 C 12 22 24 18 34 15 C 52 10 76 6 86 12 C 93 17 90 26 81 27 C 74 28 70 22 73 17"/></svg></div>
+
+<section class="section catalogo" id="catalogo">
+  <div class="wrap">
+    <div class="cat-head">
+      <p class="eyebrow" data-reveal>Il catalogo</p>
+      <h2 data-reveal>Cinque famiglie di opere, coi loro nomi.</h2>
+      <p data-reveal>Le fotografie sono quelle del catalogo storico della bottega: ogni statua posa sulla carta di questa pagina come su un fondale da studio.</p>
+    </div>
+    <div class="categoria">
+      <div class="cat-testo" data-reveal>
+        <h3>Statue del Cristo</h3>
+        <span class="num">Dal Sacro Cuore alla Via Crucis</span>
+        <p>I soggetti della devozione: il Sacro Cuore, il Crocifisso, l'Ecce Homo, il Gesù bambino, fino alla scena di gruppo della Via Crucis.</p>
+        <ul class="soggetti">
+          <li>Sacro Cuore</li><li>Crocifisso</li><li>Ecce Homo</li><li>Gesù bambino</li><li>Via Crucis</li>
+        </ul>
+      </div>
+      <div class="cat-figure" data-reveal>
+        <figure>
+          <img src="img/cristi_crocifisso_cristo2.jpg" alt="Crocifisso in cartapesta del catalogo della bottega" loading="lazy">
+          <figcaption>Crocifisso</figcaption>
+        </figure>
+        <figure class="wide">
+          <img src="img/cristi_viacrucis_cristogruppo.jpg" alt="Gruppo statuario della Via Crucis in cartapesta" loading="lazy">
+          <figcaption>Scena della Via Crucis</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="categoria">
+      <div class="cat-testo" data-reveal>
+        <h3>Statue della Madonna</h3>
+        <span class="num">Dodici Madonne in catalogo</span>
+        <p>L'Addolorata, l'Assunta, la Pietà, la Madonna con Bambino, la Madonna del Buon Rimedio, Maria Ausiliatrice, l'Immacolata, il Cuore di Maria.</p>
+        <ul class="soggetti">
+          <li>Addolorata</li><li>Assunta</li><li>Pietà</li><li>Immacolata</li><li>Ausiliatrice</li><li>Buon Rimedio</li>
+        </ul>
+      </div>
+      <div class="cat-figure" data-reveal>
+        <figure>
+          <img src="img/madonne_addolorata_madonna1.jpg" alt="Statua della Madonna Addolorata in cartapesta" loading="lazy">
+          <figcaption>Madonna Addolorata</figcaption>
+        </figure>
+        <figure>
+          <img src="img/madonne_assunta_madonna9.jpg" alt="Statua della Madonna Assunta in cartapesta con angeli" loading="lazy">
+          <figcaption>Madonna Assunta</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="categoria">
+      <div class="cat-testo" data-reveal>
+        <h3>Statue di Santi</h3>
+        <span class="num">Da S. Oronzo, patrono di Lecce, in poi</span>
+        <p>Sedici immagini in catalogo: S. Oronzo, S. Giorgio, S. Michele, S. Biagio, S. Filippo Smaldone, S. Rocco, S. Cataldo, S. Antonio da Padova e gli altri.</p>
+        <ul class="soggetti">
+          <li>S. Oronzo</li><li>S. Giorgio</li><li>S. Michele</li><li>S. Biagio</li><li>S. Rocco</li><li>S. Antonio</li>
+        </ul>
+      </div>
+      <div class="cat-figure" data-reveal>
+        <figure>
+          <img src="img/santi_soronzo_santo29.jpg" alt="Statua di Sant'Oronzo, patrono di Lecce, in cartapesta" loading="lazy">
+          <figcaption>S. Oronzo</figcaption>
+        </figure>
+        <figure>
+          <img src="img/santi_sgiorgio_santo15.jpg" alt="Statua di San Giorgio a cavallo che uccide il drago, in cartapesta" loading="lazy">
+          <figcaption>S. Giorgio</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="categoria">
+      <div class="cat-testo" data-reveal>
+        <h3>Presepistica</h3>
+        <span class="num">Angeli, pastori, Natività</span>
+        <p>Il presepe leccese di bottega: gli angeli, i tanti pastori, le Natività. La tradizione che ha fatto conoscere la cartapesta di Lecce nel mondo.</p>
+        <ul class="soggetti">
+          <li>Angeli</li><li>Pastori</li><li>Natività</li>
+        </ul>
+      </div>
+      <div class="cat-figure" data-reveal>
+        <figure>
+          <img src="img/presepistica_angelo_presep1.jpg" alt="Angelo da presepe in cartapesta, veste rosa e ali brune" loading="lazy">
+          <figcaption>Angelo</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="categoria">
+      <div class="cat-testo" data-reveal>
+        <h3>Maschere carnevalesche</h3>
+        <span class="num">La commedia dell'arte in cartapesta</span>
+        <p>Arlecchino, Pulcinella, Pantalone, Colombina, Brighella, Balanzone, Beppe Nappa, Capitan Spaventa, Rosaura: dieci maschere in catalogo.</p>
+        <ul class="soggetti">
+          <li>Arlecchino</li><li>Pulcinella</li><li>Pantalone</li><li>Colombina</li><li>Brighella</li>
+        </ul>
+      </div>
+      <div class="cat-figure" data-reveal>
+        <figure>
+          <img src="img/maschere_arlecchino_maschera3.jpg" alt="Statua di Arlecchino in cartapesta col costume a losanghe colorate" loading="lazy">
+          <figcaption>Arlecchino</figcaption>
+        </figure>
+        <figure>
+          <img src="img/maschere_pulcinella_maschera7.jpg" alt="Statua di Pulcinella in cartapesta con veste bianca" loading="lazy">
+          <figcaption>Pulcinella</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Sacro Cuore <i>❖</i> Madonna Addolorata <i>❖</i> S. Oronzo <i>❖</i> Ecce Homo <i>❖</i> Madonna Assunta <i>❖</i> S. Giorgio <i>❖</i> Arlecchino <i>❖</i> Natività <i>❖</i> Capitan Spaventa <i>❖</i> S. Michele <i>❖</i> Pulcinella <i>❖</i> Pietà <i>❖</i></span>
+    <span>Sacro Cuore <i>❖</i> Madonna Addolorata <i>❖</i> S. Oronzo <i>❖</i> Ecce Homo <i>❖</i> Madonna Assunta <i>❖</i> S. Giorgio <i>❖</i> Arlecchino <i>❖</i> Natività <i>❖</i> Capitan Spaventa <i>❖</i> S. Michele <i>❖</i> Pulcinella <i>❖</i> Pietà <i>❖</i></span>
+  </div>
+</div>
+
+<section class="section dark grain restauro" id="restauro">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Il restauro</p>
+    <h2 data-reveal>Abilitati dalla Sovrintendenza a salvare ciò che ha tre secoli.</h2>
+    <p class="serif-voice" data-reveal>Il laboratorio è abilitato dalla Sovrintendenza alle Belle Arti al restauro di opere in cartapesta e in legno.</p>
+    <p data-reveal style="margin-top:1rem">Il caso documentato dalla bottega: un Cristo morto in legno, databile intorno alla seconda metà del Settecento, di fattura chiaramente napoletana. Sotto un vecchio intervento maldestro c'era perfino carta di giornale incollata e ridipinta. Il lavoro, passo per passo:</p>
+    <ul class="passi" data-reveal>
+      <li>disinfestazione del legno dagli insetti xilofagi</li>
+      <li>analisi con luce infrarossa e ultravioletta</li>
+      <li>rimozione del vecchio restauro maldestro</li>
+      <li>consolidamento, stuccature e reintegrazione pittorica</li>
+    </ul>
+    <div class="prove">
+      <div class="coppia" data-reveal>
+        <figure>
+          <img src="img/restauro_cristomorto_PRIMA.jpg" alt="Il Cristo morto del Settecento prima del restauro" loading="lazy">
+          <span class="chip">Prima</span>
+        </figure>
+        <figure>
+          <img src="img/restauro_cristomorto_DOPO.jpg" alt="Il Cristo morto del Settecento dopo il restauro" loading="lazy">
+          <span class="chip">Dopo</span>
+        </figure>
+        <p class="coppia-cap">Il Cristo morto del XVIII secolo, dall'archivio fotografico della bottega.</p>
+      </div>
+      <div class="coppia" data-reveal>
+        <figure>
+          <img src="img/restauro_madonna_PRIMA.jpg" alt="Statua della Madonna prima del restauro, con l'alterazione cromatica" loading="lazy">
+          <span class="chip">Prima</span>
+        </figure>
+        <figure>
+          <img src="img/restauro_madonna_DOPO.jpg" alt="Statua della Madonna dopo il restauro" loading="lazy">
+          <span class="chip">Dopo</span>
+        </figure>
+        <p class="coppia-cap">Una statua della Madonna: corretta l'alterazione cromatica lasciata da un intervento precedente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section quote">
+  <div class="wrap">
+    <blockquote data-reveal>«Il professor Mario Di Donfrancesco dirige il laboratorio di statuaria sacra e restauro della cartapesta La bottega dell'arte, sito in Lecce, fin dal 1980.»</blockquote>
+    <cite data-reveal>dal racconto della bottega</cite>
+  </div>
+</section>
+
+<section class="section dark grain" id="maestro">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow" data-reveal>Il maestro</p>
+      <h2 data-reveal>Un professore con le mani nella carta.</h2>
+      <p class="serif-voice" data-reveal>Mario Di Donfrancesco, diplomato all'Accademia di Belle Arti di Lecce, il mestiere lo fa e lo insegna.</p>
+      <ul class="titoli" data-reveal>
+        <li>Accademia di Belle Arti di Lecce <small>la formazione</small></li>
+        <li>Scuola d'arte «E. Maccagnani» <small>dirige il corso di Cartapesta</small></li>
+        <li>Regione Basilicata <small>corsi professionali sull'arte della cartapesta</small></li>
+      </ul>
+      <p data-reveal style="margin-top:1.4rem">In bottega le statue nascono, si restaurano e si affollano una accanto all'altra, in attesa di partire per le chiese e le case a cui sono destinate.</p>
+    </div>
+    <figure class="split-media" data-reveal>
+      <img src="img/bottega_interno1.jpg" alt="L'interno della bottega, affollato di statue in lavorazione" loading="lazy">
+      <figcaption>La bottega di via F. D'Amelio</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section gallery" id="gallery">
+  <div class="wrap">
+    <div class="cat-head">
+      <p class="eyebrow" data-reveal>Gallery</p>
+      <h2 data-reveal>Il catalogo, da vicino.</h2>
+    </div>
+    <div class="gallery-grid">
+      <button data-src="img/cristi_sacrocuore_cristo1.jpg" data-tag="Cristi" data-caption="Il Sacro Cuore di Gesù"><img src="img/cristi_sacrocuore_cristo1.jpg" alt="Statua del Sacro Cuore in cartapesta" loading="lazy"></button>
+      <button data-src="img/madonne_assunta_madonna9.jpg" data-tag="Madonne" data-caption="La Madonna Assunta con gli angeli"><img src="img/madonne_assunta_madonna9.jpg" alt="Statua della Madonna Assunta" loading="lazy"></button>
+      <button data-src="img/santi_sgiorgio_santo15.jpg" data-tag="Santi" data-caption="San Giorgio e il drago"><img src="img/santi_sgiorgio_santo15.jpg" alt="Statua di San Giorgio a cavallo" loading="lazy"></button>
+      <button data-src="img/cristi_viacrucis_cristogruppo.jpg" data-tag="Cristi" data-caption="La scena della Via Crucis"><img src="img/cristi_viacrucis_cristogruppo.jpg" alt="Gruppo statuario della Via Crucis" loading="lazy"></button>
+      <button data-src="img/madonne_addolorata_madonna1.jpg" data-tag="Madonne" data-caption="La Madonna Addolorata"><img src="img/madonne_addolorata_madonna1.jpg" alt="Statua della Madonna Addolorata" loading="lazy"></button>
+      <button data-src="img/santi_smichele_santo31.jpg" data-tag="Santi" data-caption="San Michele arcangelo"><img src="img/santi_smichele_santo31.jpg" alt="Statua di San Michele arcangelo" loading="lazy"></button>
+      <button data-src="img/presepistica_angelo_presep1.jpg" data-tag="Presepistica" data-caption="Angelo da presepe"><img src="img/presepistica_angelo_presep1.jpg" alt="Angelo da presepe in cartapesta" loading="lazy"></button>
+      <button data-src="img/santi_soronzo_santo29.jpg" data-tag="Santi" data-caption="Sant'Oronzo, patrono di Lecce"><img src="img/santi_soronzo_santo29.jpg" alt="Statua di Sant'Oronzo" loading="lazy"></button>
+      <button data-src="img/maschere_pulcinella_maschera7.jpg" data-tag="Maschere" data-caption="Pulcinella"><img src="img/maschere_pulcinella_maschera7.jpg" alt="Statua di Pulcinella" loading="lazy"></button>
+      <button data-src="img/cristi_crocifisso_cristo2.jpg" data-tag="Cristi" data-caption="Il Crocifisso"><img src="img/cristi_crocifisso_cristo2.jpg" alt="Crocifisso in cartapesta" loading="lazy"></button>
+    </div>
+  </div>
+</section>
+
+<section class="section dark grain finale" id="contatti">
+  <svg class="finale-voluta" viewBox="0 0 150 60" aria-hidden="true"><path d="M4 54 C 14 44 26 38 38 33 C 62 23 104 12 122 20 C 138 27 136 44 122 49 C 110 53 100 45 102 35 C 104 27 113 24 119 29 C 124 33 122 40 116 41"/></svg>
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Dove siamo</p>
+    <h2 data-reveal>La prima traversa a destra di via Rubichi.</h2>
+    <p class="serif-voice" data-reveal>Nel cuore del centro storico di Lecce: da piazzetta Castromediano verso Porta Napoli, a pochi passi da Piazza S. Oronzo.</p>
+    <div class="contatti">
+      <div class="contatto" data-reveal>
+        <span class="k">Telefono</span>
+        <p><a href="tel:+393683086300">368 3086300</a></p>
+      </div>
+      <div class="contatto" data-reveal>
+        <span class="k">Dove</span>
+        <p>Via F. D'Amelio 1, 73100 Lecce<br><a href="https://maps.google.com/?q=Via+F.+D'Amelio+1,+Lecce" target="_blank" rel="noopener">Apri in Google Maps</a></p>
+      </div>
+      <div class="contatto" data-reveal>
+        <span class="k">Scrivici</span>
+        <p><a href="mailto:mariodidonfrancescoddn@gmail.com?subject=Richiesta%20informazioni">mariodidonfrancescoddn@gmail.com</a></p>
+      </div>
+      <div class="contatto" data-reveal>
+        <span class="k">In bottega</span>
+        <p>Telefonaci per un appuntamento, per un'opera nuova o per il restauro di una statua.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <p class="footer-brand">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 50 C 14 38 20 32 26 28 C 36 21 50 18 52 28 C 54 37 46 43 39 41 C 33 39 32 32 36 28 C 39 25 44 26 45 30 C 46 33 44 35 41 35" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      LA BOTTEGA DELL'ARTE · LECCE
+    </p>
+    <p class="ai-label">Sito dimostrativo realizzato con AI da FAR AI · contenuti da rivedere con l'attività prima della pubblicazione</p>
+    <p class="fine">Testi e fotografie provengono dal sito attuale de La bottega dell'arte e restano di proprietà dell'attività.</p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galleria fotografica">
+  <button class="lb-close" aria-label="Chiudi">✕</button>
+  <button class="lb-prev" aria-label="Foto precedente">←</button>
+  <figure>
+    <img src="img/cristi_sacrocuore_cristo1.jpg" alt="Statua del Sacro Cuore in cartapesta">
+    <figcaption></figcaption>
+  </figure>
+  <button class="lb-next" aria-label="Foto successiva">→</button>
+</div>
+
+<script>
+(function(){
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* nav solid on scroll */
+  var nav = document.getElementById('nav');
+  var onScroll = function(){ nav.classList.toggle('solid', window.scrollY > 40); };
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  /* burger + inert + trappola Tab (pattern provato sulle demo firmate) */
+  var burger = document.querySelector('.burger');
+  var mm = document.getElementById('mobileMenu');
+  var fuori = [document.getElementById('main'), document.querySelector('footer'),
+               document.querySelector('.skip-link'), document.querySelector('.nav-brand'),
+               document.querySelector('nav'), document.querySelector('.nav-cta')];
+  function segna(aperto){
+    fuori.forEach(function(el){ if(el){ if(aperto){ el.setAttribute('inert',''); }
+                                       else { el.removeAttribute('inert'); } } });
+  }
+  function trappola(e, pannello, extra){
+    if(e.key !== 'Tab') return;
+    var f = Array.prototype.slice.call(
+      pannello.querySelectorAll('a[href], button:not([disabled]), [tabindex="0"]'));
+    if(extra) f = [extra].concat(f);
+    /* niente offsetParent: in un pannello position:fixed è null anche per i visibili */
+    f = f.filter(function(el){ return el.getClientRects().length > 0; });
+    if(!f.length) return;
+    var primo = f[0], ultimo = f[f.length - 1];
+    if(e.shiftKey && document.activeElement === primo){ e.preventDefault(); ultimo.focus(); }
+    else if(!e.shiftKey && document.activeElement === ultimo){ e.preventDefault(); primo.focus(); }
+  }
+  burger.addEventListener('click', function(){
+    var open = mm.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'Chiudi il menu' : 'Apri il menu');
+    document.body.style.overflow = open ? 'hidden' : '';
+    segna(open);
+  });
+  function chiudiMenu(){
+    mm.classList.remove('open');
+    burger.setAttribute('aria-expanded','false');
+    burger.setAttribute('aria-label','Apri il menu');
+    document.body.style.overflow='';
+    segna(false);
+  }
+  mm.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', chiudiMenu);
+  });
+  document.addEventListener('keydown', function(e){
+    if(!mm.classList.contains('open')) return;
+    if(e.key === 'Escape'){ chiudiMenu(); burger.focus(); return; }
+    trappola(e, mm, burger);
+  });
+
+  /* reveal on scroll */
+  if('IntersectionObserver' in window && !reduced){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:.14});
+    document.querySelectorAll('[data-reveal]').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('[data-reveal]').forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* voluta che si disegna */
+  var vp = document.getElementById('volutaPath');
+  if(vp){
+    var len = vp.getTotalLength();
+    vp.style.strokeDasharray = len;
+    if(!reduced){
+      vp.style.strokeDashoffset = len;
+      vp.getBoundingClientRect();
+      vp.style.transition = 'stroke-dashoffset 2.2s cubic-bezier(.2,.8,.22,1) .25s';
+      vp.style.strokeDashoffset = '0';
+    }
+  }
+
+  /* lightbox */
+  var lb = document.getElementById('lightbox');
+  var lbImg = lb.querySelector('img');
+  var lbCap = lb.querySelector('figcaption');
+  var shots = Array.prototype.slice.call(document.querySelectorAll('.gallery-grid button'));
+  var idx = 0, lastFocus = null;
+  function show(i){
+    idx = (i + shots.length) % shots.length;
+    var b = shots[idx], im = b.querySelector('img');
+    lbImg.src = b.getAttribute('data-src') || im.src; lbImg.alt = im.alt;
+    lbCap.textContent = b.getAttribute('data-caption') || '';
+  }
+  function openLb(i){
+    lastFocus = document.activeElement; show(i);
+    lb.classList.add('open'); document.body.style.overflow='hidden';
+    segna(true); burger.setAttribute('inert','');
+    /* si aspetta la CONDIZIONE vera, non i fotogrammi */
+    var tentativi = 0;
+    (function mettiIlFuoco(){
+      var c = lb.querySelector('.lb-close');
+      if (getComputedStyle(lb).visibility === 'visible' || tentativi++ > 60) { c.focus(); }
+      else { requestAnimationFrame(mettiIlFuoco); }
+    })();
+  }
+  function closeLb(){
+    lb.classList.remove('open'); document.body.style.overflow='';
+    burger.removeAttribute('inert');
+    if(!mm.classList.contains('open')) segna(false);
+    if(lastFocus) lastFocus.focus();
+  }
+  shots.forEach(function(b,i){ b.addEventListener('click', function(){ openLb(i); }); });
+  lb.querySelector('.lb-close').addEventListener('click', closeLb);
+  lb.querySelector('.lb-prev').addEventListener('click', function(){ show(idx-1); });
+  lb.querySelector('.lb-next').addEventListener('click', function(){ show(idx+1); });
+  lb.addEventListener('click', function(e){ if(e.target === lb) closeLb(); });
+  document.addEventListener('keydown', function(e){
+    if(!lb.classList.contains('open')) return;
+    if(e.key === 'Escape') closeLb();
+    else if(e.key === 'ArrowLeft') show(idx-1);
+    else if(e.key === 'ArrowRight') show(idx+1);
+    else trappola(e, lb);
+  });
+})();
+</script>
+  <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

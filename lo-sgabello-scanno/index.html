@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trattoria Lo Sgabello — Scanno (AQ), nella Guida Michelin dal 1989</title>
+<meta name="description" content="Trattoria di famiglia nel centro storico di Scanno, nella Guida Michelin dal 1989: cucina abruzzese di montagna, pasta fatta in casa, terrazza e due sale, menù di gruppo e parcheggio per pullman. Sito dimostrativo.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Trattoria Lo Sgabello — Scanno (AQ)">
+<meta property="og:description" content="Scanno sta su un colle circondato da monti più alti: una tradizione lo paragona a uno sgabello. Da lì il nome della trattoria.">
+<meta property="og:image" content="https://demo.francescoar.com/lo-sgabello-scanno/img/terrazza.jpg">
+<!-- 🪤 Senza width/height WhatsApp non disegna la miniatura e ripiega
+     sull'anteprima di solo testo: provato il 06/08 incollando il link. -->
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="960">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:url" content="https://demo.francescoar.com/lo-sgabello-scanno/">
+<meta property="og:site_name" content="Trattoria Lo Sgabello">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%231E2620'/%3E%3Cg transform='translate(0,22)'%3E%3Cpath d='M3 47 L15 11 L25 27 L33 35 L42 20 L46 19 L54 19 L54 45 L54 19 L67 19 L67 46 L67 19 L80 19 L80 45 L80 19 L86 19 L91 27 L97 47' fill='none' stroke='%23C79A3C' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Trattoria Lo Sgabello",
+  "description": "Trattoria di famiglia nel centro storico di Scanno (AQ), gestita dalla famiglia Berardi. Cucina tipica scannese e abruzzese di montagna, pasta fatta in casa, due sale e terrazza.",
+  "servesCuisine": ["Cucina abruzzese", "Cucina scannese"],
+  "priceRange": "€€",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via dei Pescatori, 45",
+    "addressLocality": "Scanno",
+    "postalCode": "67038",
+    "addressRegion": "AQ",
+    "addressCountry": "IT"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 41.904377, "longitude": 13.880627 },
+  "telephone": "+390864747476",
+  "email": "info@losgabelloscanno.it",
+  "url": "https://losgabelloscanno.it/",
+  "sameAs": ["https://www.facebook.com/pages/Trattoria-Lo-Sgabello/215552601950318"],
+  "hasMenu": "https://losgabelloscanno.it/#menu"
+}
+</script>
+<style>
+:root{
+  --tela:#F5F1E6;
+  --tela-2:#EBE5D5;
+  --monte:#1E2620;
+  --monte-2:#2C3630;
+  --geranio:#9C2E33;
+  --geranio-chiaro:#D8686D;
+  --ocra:#C79A3C;
+  --ocra-chiaro:#E0B75E;
+  --pietra:#8A8074;
+  --pietra-chiara:#B6ABA0;
+  --pietra-scura:#696158;  /* micro-testi sui fondi chiari: AA (5,39 e 4,84:1) */
+  --inchiostro:#22261F;
+  --ease-monte:cubic-bezier(.2,.8,.25,1);
+  --ease-soft:cubic-bezier(.32,.6,.28,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Source Serif 4',Georgia,serif;
+  font-weight:400;
+  color:var(--inchiostro);
+  background:var(--tela);
+  line-height:1.7;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,.grot{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:500;line-height:1.03;letter-spacing:-.015em}
+.voce{font-style:italic;font-weight:300}
+
+/* la barra è fissa (~72px): senza questo margine ogni ancora infila
+   occhiello e titolo della sezione dietro la barra */
+#nome,#locale,#cucina,#menu,#gruppi,#scanno,#gallery,#prenota{scroll-margin-top:96px}
+
+/* ---------- accessibilità ---------- */
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--geranio);color:#fff;padding:.85rem 1.4rem;z-index:200;font-weight:600;text-decoration:none}
+.skip-link:focus{left:0}
+:focus-visible{outline:3px solid var(--geranio);outline-offset:3px;border-radius:2px}
+
+/* ---------- eyebrow ---------- */
+.eyebrow{
+  font-family:'Bricolage Grotesque',sans-serif;
+  font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;font-weight:700;
+  display:flex;align-items:flex-start;gap:.8rem;
+}
+.eyebrow::before{content:"";width:1.9rem;height:2px;background:currentColor;opacity:.75;flex:none;margin-top:.66em}
+.eyebrow.centro{justify-content:center}
+.eyebrow.centro::after{content:"";width:1.9rem;height:2px;background:currentColor;opacity:.75;flex:none;margin-top:.66em}
+
+/* ---------- firma ---------- */
+.sgab path{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round}
+.sgab{overflow:visible}
+
+/* ---------- nav ---------- */
+.nav{
+  position:fixed;inset:0 0 auto 0;z-index:130;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1rem clamp(1.1rem,4vw,3rem);
+  transition:background .45s var(--ease-soft),box-shadow .45s;
+  color:#F7F4EA;
+}
+.nav.solid{background:rgba(30,38,32,.95);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(247,244,234,.12)}
+.nav-brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:.16em;text-transform:uppercase;text-shadow:0 1px 3px rgba(22,28,24,.95),0 0 16px rgba(22,28,24,.8)}
+/* 🪤 Il logotipo sta sopra la foto dell'hero finche' la barra e' trasparente,
+   e la foto ha uno zoom lento: intorno al secondo 2-3 un tetto chiaro passa
+   dietro le lettere e il contrasto scende a 4,52:1 su un minimo di 4,5.
+   Un numero appoggiato alla soglia non e' «passato»: l'ombra lo stacca dal
+   fondo qualunque fotogramma ci sia sotto. Stessa cura gia' usata sull'H1. */
+/* 🪤 Alzare la soglia del burger non basta: appena SOPRA la soglia ricompaiono
+   link e CTA e per una manciata di pixel il marchio non ci sta piu' e va a capo
+   (su Case del Merlo succedeva in una finestra di 7 pixel, 1001-1007, che uno
+   sweep ogni 10px scavalca in pieno). La causa vera e' che il marchio si lascia
+   comprimere: qui non si comprime e non va a capo, cosi' quella classe di
+   difetto non puo' piu' tornare a nessuna larghezza. */
+.nav-brand{flex-shrink:0;white-space:nowrap}
+.nav-brand .sgab{width:56px;height:32px;flex:none}
+.nav-brand .sgab path{stroke-width:3.4}
+.nav-links{display:flex;gap:1.7rem;list-style:none}
+.nav-links a{
+  font-family:'Bricolage Grotesque',sans-serif;
+  text-decoration:none;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;
+  padding-bottom:.25rem;background:linear-gradient(var(--ocra-chiaro),var(--ocra-chiaro)) bottom left/0 2px no-repeat;
+  transition:background-size .4s var(--ease-soft);
+}
+.nav-links a:hover{background-size:100% 2px}
+.nav-cta{
+  font-family:'Bricolage Grotesque',sans-serif;
+  border:2px solid var(--geranio);background:var(--geranio);color:#fff;
+  padding:.5rem 1.2rem;text-decoration:none;
+  font-size:.73rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;
+  transition:background .3s,transform .3s var(--ease-soft);
+}
+.nav-cta:hover{background:transparent;transform:translateY(-1px)}
+.burger{display:none;background:none;border:0;cursor:pointer;z-index:120;width:44px;height:44px;position:relative;color:inherit}
+.burger span{position:absolute;left:9px;right:9px;height:2px;background:currentColor;transition:transform .4s var(--ease-soft),opacity .3s,top .4s}
+.burger span:nth-child(1){top:15px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:27px}
+.burger[aria-expanded="true"] span:nth-child(1){top:21px;transform:rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){top:21px;transform:rotate(-45deg)}
+
+/* 🪤 Il burger compariva solo sotto i 700px, ma i link della barra smettono di
+   entrarci molto prima: fra 701-900px il marchio e i link
+   andavano A CAPO e la barra raddoppiava di altezza, sopra la piega, sui tablet
+   in verticale (iPad = 768px, iPad Air = 820px). Misurato larghezza per
+   larghezza. Il menu a scomparsa parte percio' da 920px. */
+@media (max-width:920px){
+  .nav-links,.nav .nav-cta{display:none}
+  .burger{display:block}
+}.mobile-menu{
+  position:fixed;inset:0;background:var(--monte);z-index:110;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1.15rem;
+  opacity:0;visibility:hidden;transition:opacity .45s var(--ease-soft),visibility .45s;
+}
+.mobile-menu.open{opacity:1;visibility:visible}
+.mobile-menu a{color:var(--tela);font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:1.95rem;text-decoration:none}
+.mobile-menu a:hover{color:var(--ocra-chiaro)}
+.mobile-menu .mm-note{color:var(--pietra-chiara);font-family:'Bricolage Grotesque',sans-serif;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;margin-top:1.6rem}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#FBF8F0;overflow:hidden;isolation:isolate}
+.hero-media{position:absolute;inset:0;z-index:-2}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:22% center;animation:kenburns 30s var(--ease-soft) both}
+@keyframes kenburns{from{transform:scale(1.12) translate(-1%,1%)}to{transform:scale(1) translate(0,0)}}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(30,38,32,.7) 0%,rgba(30,38,32,.2) 26%,rgba(30,38,32,.42) 44%,rgba(30,38,32,.8) 62%,rgba(22,28,24,.97) 100%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(125% 80% at 14% 90%,rgba(22,28,24,.85) 0%,transparent 64%)}
+.hero-inner{width:min(1240px,92vw);margin-inline:auto;padding:0 0 clamp(5.4rem,10vh,8rem)}
+.hero-eyebrow{color:var(--ocra-chiaro);text-shadow:0 1px 3px rgba(22,28,24,.98)}
+.hero .sgab{width:min(440px,74vw);height:auto;margin-bottom:1.2rem;color:var(--ocra-chiaro);filter:drop-shadow(0 2px 4px rgba(22,28,24,.95))}
+.hero .sgab path{stroke-width:3.2}
+.hero h1{
+  font-size:clamp(3.2rem,12vw,9rem);
+  font-weight:700;letter-spacing:-.035em;margin:.16em 0 .22em;text-transform:uppercase;text-wrap:balance;
+  text-shadow:0 2px 24px rgba(22,28,24,.5);
+}
+.hero-tag{font-size:clamp(1.02rem,1.9vw,1.24rem);max-width:46ch;color:#EFEADD;font-weight:300}
+.hero-ctas{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:2.1rem}
+.btn{
+  font-family:'Bricolage Grotesque',sans-serif;
+  display:inline-flex;align-items:center;gap:.6rem;
+  padding:1rem 1.9rem;text-decoration:none;
+  font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;
+  transition:transform .3s var(--ease-soft),background .3s,color .3s,border-color .3s;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--geranio);color:#fff;border:2px solid var(--geranio)}
+.btn-primary:hover{background:#B33840;border-color:#B33840}
+.btn-ghost{border:2px solid rgba(251,248,240,.6);color:#FBF8F0}
+.btn-ghost:hover{border-color:#FBF8F0;background:rgba(251,248,240,.12)}
+.hero-ribbon{
+  position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:center;
+  background:rgba(22,28,24,.62);backdrop-filter:blur(10px);border-top:1px solid rgba(247,244,234,.18);
+}
+.hero-ribbon div{
+  font-family:'Bricolage Grotesque',sans-serif;
+  padding:.9rem 2rem;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:#EFEADD;
+  display:flex;align-items:center;gap:.65rem;
+}
+.hero-ribbon div+div{border-left:1px solid rgba(247,244,234,.18)}
+.hero-ribbon svg{width:15px;height:15px;flex:none;color:var(--ocra-chiaro)}
+.hero .cascade{opacity:0;transform:translateY(26px);animation:rise 1s var(--ease-monte) forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+.hero .cascade:nth-child(1){animation-delay:.12s}
+.hero .cascade:nth-child(2){animation-delay:.3s}
+.hero .cascade:nth-child(3){animation-delay:.46s}
+.hero .cascade:nth-child(4){animation-delay:.64s}
+.hero .cascade:nth-child(5){animation-delay:.84s}
+
+/* ---------- base ---------- */
+.section{padding:clamp(4.6rem,9vw,7.6rem) 0}
+.wrap{width:min(1240px,92vw);margin-inline:auto}
+.wrap-stretto{width:min(920px,92vw);margin-inline:auto}
+[data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease-soft),transform .9s var(--ease-soft)}
+[data-reveal].in{opacity:1;transform:none}
+.divider{display:flex;justify-content:center;padding:.6rem 0;color:var(--pietra)}
+.divider .sgab{width:230px;height:auto}
+.divider path{stroke-width:1.8;opacity:.9}
+
+/* ---------- il nome (banda scura) ---------- */
+.nome{background:var(--monte);color:var(--tela);text-align:center;position:relative;overflow:hidden}
+.grana::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='150' height='150' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.nome .sgab{width:min(560px,84vw);height:auto;margin:0 auto 2.4rem;color:var(--ocra)}
+.nome .sgab path{stroke-width:2.6}
+.nome blockquote{
+  font-size:clamp(1.3rem,3.4vw,2.35rem);font-weight:300;font-style:italic;line-height:1.4;
+  max-width:26ch;margin:0 auto;color:#F4F0E4;text-wrap:balance;
+}
+.nome cite{display:block;margin-top:1.4rem;font-style:normal;font-family:'Bricolage Grotesque',sans-serif;font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:var(--ocra);font-weight:700}
+.nome .chiosa{max-width:52ch;margin:2.6rem auto 0;color:var(--pietra-chiara);font-size:1.02rem}
+.nome .chiosa strong{color:var(--tela);font-weight:600}
+
+/* ---------- il locale ---------- */
+.locale-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.4rem);align-items:start}
+.locale h2{font-size:clamp(1.9rem,4.3vw,3.1rem);margin:1.2rem 0 1.1rem;max-width:16ch}
+.locale .eyebrow{color:var(--geranio)}
+.locale p{max-width:52ch}
+.locale .voce{font-size:1.16rem;display:block;margin-bottom:1rem;color:#3A3E36}
+.fatti{display:grid;gap:0;border-top:2px solid var(--inchiostro)}
+.fatto{display:grid;grid-template-columns:auto 1fr;gap:1.2rem;padding:1.15rem 0;border-bottom:1px solid rgba(138,128,116,.4);align-items:baseline}
+.fatto dt{font-family:'Bricolage Grotesque',sans-serif;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--geranio);min-width:8.5rem}
+.fatto dd{font-size:1rem}
+.fatto dd small{display:block;font-size:.86rem;color:#575C50}
+.michelin{
+  margin-top:2rem;border:2px solid var(--ocra);background:rgba(199,154,60,.09);
+  padding:1.4rem 1.5rem;
+}
+.michelin .stell{font-family:'Bricolage Grotesque',sans-serif;font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:#7A5C1C;display:flex;align-items:center;gap:.6rem}
+.michelin .stell svg{width:16px;height:16px}
+.michelin q{display:block;margin-top:.7rem;font-style:italic;font-weight:300;font-size:1.08rem;color:#3A3E36}
+
+/* ---------- banda cinematografica ---------- */
+.banda{position:relative;overflow:hidden;isolation:isolate;display:flex;align-items:center;
+  min-height:clamp(360px,52vw,620px);color:#FBF8F0}
+.banda-media{position:absolute;inset:0;z-index:-2}
+.banda-media img{width:100%;height:100%;object-fit:cover;object-position:center center}
+#scanno .banda-media img{object-position:center 26%}
+.banda::before{content:"";position:absolute;inset:0;z-index:-1}
+.banda.da-sx::before{background:linear-gradient(96deg,rgba(22,28,24,.95) 4%,rgba(30,38,32,.72) 46%,rgba(30,38,32,.32) 100%)}
+.banda.da-dx::before{background:linear-gradient(264deg,rgba(22,28,24,.95) 4%,rgba(30,38,32,.72) 46%,rgba(30,38,32,.32) 100%)}
+.banda .contenuto{width:min(1240px,92vw);margin-inline:auto;padding:clamp(3rem,6vw,5rem) 0}
+.banda .box{max-width:44ch}
+.banda.da-dx .box{margin-left:auto}
+.banda .eyebrow{color:var(--ocra-chiaro)}
+.banda h2{font-size:clamp(1.8rem,4vw,2.9rem);margin:1.2rem 0 1rem;max-width:15ch}
+.banda p{color:#E4DFD2}
+.banda .voce{font-size:1.14rem;display:block;margin-bottom:.9rem;color:#F4F0E4}
+.lista-spunta{list-style:none;margin-top:1.7rem;display:grid;gap:.8rem}
+.lista-spunta li{display:flex;gap:.85rem;align-items:flex-start;color:#E9E4D7;font-size:.98rem}
+.lista-spunta svg{width:17px;height:17px;flex:none;color:var(--ocra-chiaro);margin-top:.4rem}
+
+/* ---------- menù ---------- */
+.menu{background:var(--tela-2)}
+.menu-head{text-align:center;max-width:58ch;margin:0 auto 3.4rem}
+.menu-head .eyebrow{color:var(--geranio)}
+.menu-head h2{font-size:clamp(2.1rem,5vw,3.5rem);margin:1.2rem 0 .9rem}
+.menu-head p{color:#4E5348}
+.menu-cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.6rem)}
+.portata{margin-bottom:2.8rem}
+.portata h3{
+  font-family:'Bricolage Grotesque',sans-serif;font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;font-weight:700;
+  color:var(--geranio);padding-bottom:.7rem;border-bottom:2px solid var(--geranio);margin-bottom:1rem;
+  display:flex;justify-content:space-between;align-items:baseline;
+}
+.portata h3 span{font-size:.64rem;letter-spacing:.16em;color:var(--pietra-scura);font-weight:500}
+.portata ul{list-style:none;display:grid;gap:.55rem}
+.piatto{display:flex;align-items:baseline;gap:.5rem;line-height:1.4}
+.piatto .n{font-size:1.04rem}
+.piatto .n small{display:block;font-size:.84rem;color:#575C50;font-style:italic}
+.piatto .punti{flex:1;border-bottom:1px dotted rgba(138,128,116,.75);transform:translateY(-.28em);min-width:1.2rem}
+.piatto .p{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:.94rem;color:#7A5C1C;white-space:nowrap}
+.salse{margin-top:1rem;border-top:1px solid rgba(138,128,116,.45);padding-top:1.4rem;display:grid;gap:.7rem}
+.salse p{font-size:.92rem;color:#4E5348}
+.salse b{font-family:'Bricolage Grotesque',sans-serif;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--geranio)}
+.menu-nota{margin-top:2.6rem;text-align:center}
+.menu-nota p{display:inline-block;font-style:italic;font-weight:300;font-size:1.1rem;color:#4E5348;border-top:2px solid var(--ocra);padding-top:1.2rem;max-width:56ch;text-wrap:balance}
+
+/* ---------- gruppi ---------- */
+.gruppi{background:var(--monte-2);color:var(--tela);position:relative;overflow:hidden}
+.gruppi-head{text-align:center;max-width:56ch;margin:0 auto 3rem}
+.gruppi-head .eyebrow{color:var(--ocra-chiaro)}
+.gruppi-head h2{font-size:clamp(2rem,4.6vw,3.2rem);margin:1.2rem 0 .9rem}
+.gruppi-head p{color:var(--pietra-chiara)}
+.tre-menu{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;align-items:stretch}
+.pacchetto{
+  border:1px solid rgba(182,171,160,.4);background:rgba(30,38,32,.55);
+  padding:1.9rem 1.6rem 2rem;display:flex;flex-direction:column;
+  transition:transform .45s var(--ease-soft),border-color .45s,box-shadow .45s;
+}
+.pacchetto:hover{transform:translateY(-6px);border-color:var(--ocra);box-shadow:0 24px 40px -26px rgba(0,0,0,.8)}
+.pacchetto .prezzo{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:2.9rem;line-height:1;color:var(--ocra-chiaro);letter-spacing:-.03em}
+.pacchetto .prezzo small{font-size:.9rem;letter-spacing:.12em;text-transform:uppercase;color:var(--pietra-chiara);display:block;margin-top:.5rem;font-weight:500}
+.pacchetto ul{list-style:none;margin-top:1.5rem;display:grid;gap:.75rem;font-size:.95rem;color:#E4DFD2}
+.pacchetto li{display:flex;gap:.7rem;align-items:flex-start}
+.pacchetto li svg{width:15px;height:15px;flex:none;color:var(--ocra);margin-top:.35rem}
+.pacchetto li.piu{color:#fff}
+.pacchetto li.piu svg{color:var(--geranio-chiaro)}
+.pacchetto li.piu b{font-weight:600;color:var(--ocra-chiaro)}
+.gruppi-note{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.1rem;margin-top:1.6rem}
+.nota{border-top:2px solid var(--geranio);padding:1.05rem 0 0}
+.nota b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ocra-chiaro);margin-bottom:.35rem}
+.nota p{font-size:.94rem;color:#E4DFD2}
+
+/* ---------- gallery ---------- */
+.gallery{background:var(--tela)}
+.gallery-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:2.6rem}
+.gallery-head .eyebrow{color:var(--geranio)}
+.gallery-head h2{font-size:clamp(1.9rem,4.3vw,3rem);margin-top:1.1rem}
+.gallery-head p{font-size:.9rem;color:#575C50;max-width:26ch}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem}
+.gallery-grid button{
+  display:block;width:100%;border:0;padding:0;background:none;cursor:zoom-in;
+  overflow:hidden;position:relative;aspect-ratio:2/1;
+}
+.gallery-grid button.largo{grid-column:span 2}
+.gallery-grid img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease-soft)}
+.gallery-grid button:hover img{transform:scale(1.05)}
+.gallery-grid button::after{
+  content:attr(data-tag);position:absolute;left:.85rem;bottom:.8rem;
+  font-family:'Bricolage Grotesque',sans-serif;
+  font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:#FBF8F0;font-weight:700;
+  background:rgba(22,28,24,.68);padding:.32rem .7rem;backdrop-filter:blur(6px);
+  opacity:0;transform:translateY(6px);transition:opacity .4s,transform .4s;
+}
+.gallery-grid button:hover::after,.gallery-grid button:focus-visible::after{opacity:1;transform:none}
+.lightbox{position:fixed;inset:0;z-index:150;background:rgba(18,24,20,.96);
+  display:none;align-items:center;justify-content:center;flex-direction:column;padding:3.6rem 1.2rem 2rem}
+.lightbox.open{display:flex}
+.lightbox img{max-width:min(1150px,94vw);max-height:78vh;object-fit:contain}
+.lightbox figcaption{color:var(--tela);font-style:italic;margin-top:1.1rem;font-size:1rem}
+/* 🪤 I controlli della lightbox avevano un fondo CHIARO traslucido (.08) con il
+   glifo chiaro: sul desktop la foto e' limitata e i bottoni cadono sul velo
+   scuro fisso, ma su telefono la foto occupa quasi tutta la larghezza e i
+   bottoni ci finiscono SOPRA — sopra una foto chiara il glifo spariva del tutto
+   (misurato fino a 1,00:1 su un minimo di 4,5, e succedeva su 4 demo su 5).
+   Fondo scuro coprente: il glifo chiaro ha sempre il suo contrasto, qualunque
+   foto ci sia sotto. */
+.lb-close,.lb-prev,.lb-next{
+  position:absolute;background:rgba(30,38,32,.78);backdrop-filter:blur(8px);border:1px solid rgba(245,241,230,.42);color:var(--tela);
+  width:46px;height:46px;border-radius:50%;cursor:pointer;font-size:1.05rem;display:grid;place-items:center;transition:background .3s;
+}
+.lb-close:hover,.lb-prev:hover,.lb-next:hover{background:rgba(30,38,32,.94)}
+.lb-close{top:1.2rem;right:1.2rem}
+.lb-prev{left:1.2rem;top:50%;transform:translateY(-50%)}
+.lb-next{right:1.2rem;top:50%;transform:translateY(-50%)}
+
+/* ---------- prenota ---------- */
+.prenota{background:var(--monte);color:var(--tela);position:relative;overflow:hidden}
+.prenota .filigrana{position:absolute;right:-4%;top:50%;transform:translateY(-50%);width:min(560px,42vw);color:var(--ocra);opacity:.14;pointer-events:none}
+.prenota .filigrana path{stroke-width:2.2}
+.prenota>.wrap{position:relative}
+.prenota .eyebrow{color:var(--ocra-chiaro)}
+.prenota h2{font-size:clamp(2rem,4.7vw,3.2rem);max-width:17ch;margin:1.2rem 0 1rem}
+.prenota>.wrap>.voce{max-width:46ch;color:#EFEADD;font-size:1.16rem;display:block}
+.contatti{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:2.6rem;max-width:760px}
+.contatto{border:1px solid rgba(182,171,160,.4);padding:1.3rem 1.35rem;background:rgba(44,54,48,.5)}
+.contatto .k{font-family:'Bricolage Grotesque',sans-serif;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ocra-chiaro);font-weight:700;display:block;margin-bottom:.55rem}
+.contatto a{color:#FBF8F0;text-decoration:none;border-bottom:1px solid rgba(251,248,240,.38);transition:border-color .3s}
+.contatto a:hover{border-color:var(--ocra)}
+.contatto p{font-size:.96rem;color:#EFEADD}
+.contatto p+p{margin-top:.35rem}
+.contatto .sec{font-size:.88rem;color:var(--pietra-chiara)}
+
+/* ---------- footer ---------- */
+footer{background:#171D19;color:var(--pietra-chiara);padding:2.9rem 0 2.5rem;font-size:.84rem}
+.footer-inner{display:flex;flex-direction:column;gap:1.05rem;align-items:center;text-align:center}
+.footer-brand{display:flex;align-items:center;gap:.6rem;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;color:var(--tela);font-size:1rem;letter-spacing:.16em;text-transform:uppercase}
+.footer-brand .sgab{width:50px;height:28px}
+.footer-brand .sgab path{stroke-width:3.6}
+.footer-social{display:flex;gap:1.4rem;font-family:'Bricolage Grotesque',sans-serif;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500}
+.footer-social a{text-decoration:none;color:var(--tela);opacity:.88;transition:opacity .3s,color .3s}
+.footer-social a:hover{opacity:1;color:var(--ocra-chiaro)}
+.ai-label{border:1px solid rgba(199,154,60,.55);color:var(--ocra-chiaro);padding:.6rem 1.15rem;font-size:.73rem;line-height:1.5;max-width:92vw}
+footer .fine{font-size:.75rem;color:#9E9488;max-width:62ch;line-height:1.6}
+
+/* ---------- responsive ---------- */
+@media (max-width:1040px){
+  .locale-grid{grid-template-columns:1fr}
+  .tre-menu{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:860px){
+  .menu-cols{grid-template-columns:1fr;gap:0}
+  .gallery-grid{grid-template-columns:1fr}
+  .gallery-grid button.largo{grid-column:span 1}
+}
+@media (max-width:700px){
+  .prenota .filigrana{display:none}
+  .nav-links,.nav .nav-cta{display:none}
+  .burger{display:block}
+  .hero-ribbon{display:none}
+  .hero-inner{padding-bottom:4rem}
+  .contatti{grid-template-columns:1fr}
+  .fatto{grid-template-columns:1fr;gap:.2rem}
+  .fatto dt{min-width:0}
+  .banda{min-height:auto}
+  .banda .contenuto{padding:4.2rem 0}
+  /* 🪤 i veli delle bande sono gradienti ORIZZONTALI (96deg e 264deg): servono
+     al desktop, dove il testo sta in una colonna stretta di 44ch sul lato scuro.
+     A 390px il testo occupa tutta la larghezza e finisce sul lato chiaro della
+     foto — la citazione «I piatti del giorno…» stava a 3,02:1 e la lista dei
+     piatti fatti in casa a 2,33:1. Su telefono il velo va reso pieno. */
+  .banda.da-sx::before,.banda.da-dx::before{
+    background:linear-gradient(180deg,rgba(22,28,24,.94) 0%,rgba(30,38,32,.9) 50%,rgba(22,28,24,.94) 100%)}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  html{scroll-behavior:auto}
+  [data-reveal]{opacity:1;transform:none}
+  .hero .cascade{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Salta al contenuto</a>
+
+<header class="nav" id="nav">
+  <a class="nav-brand" href="#top" aria-label="Trattoria Lo Sgabello, torna su">
+    <svg class="sgab" viewBox="0 0 100 56" aria-hidden="true"><path d="M3 47 L15 11 L25 27 L33 35 L42 20 L46 19 L54 19 L54 45 L54 19 L67 19 L67 46 L67 19 L80 19 L80 45 L80 19 L86 19 L91 27 L97 47"/></svg>
+    Lo Sgabello
+  </a>
+  <nav aria-label="Principale">
+    <ul class="nav-links">
+      <li><a href="#nome">Il nome</a></li>
+      <li><a href="#locale">Il locale</a></li>
+      <li><a href="#menu">Il menù</a></li>
+      <li><a href="#gruppi">Gruppi</a></li>
+      <li><a href="#scanno">Scanno</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+    </ul>
+  </nav>
+  <a class="nav-cta" href="#prenota">Prenota</a>
+  <button class="burger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Apri il menu"><span></span><span></span><span></span></button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#nome">Il nome</a>
+  <a href="#locale">Il locale</a>
+  <a href="#menu">Il menù</a>
+  <a href="#gruppi">Gruppi</a>
+  <a href="#scanno">Scanno</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#prenota">Prenota un tavolo</a>
+  <p class="mm-note">Scanno · Alta Valle del Sagittario</p>
+</div>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="hero-media">
+    <picture>
+      <source media="(max-width:700px)" srcset="img/terrazza-mobile.jpg">
+      <img src="img/terrazza.jpg" alt="La terrazza della Trattoria Lo Sgabello vista dall'alto, con le tende chiare e le fioriere di gerani, tra le case in pietra di Scanno" fetchpriority="high">
+    </picture>
+  </div>
+  <div class="hero-inner">
+    <svg class="sgab cascade" viewBox="0 0 360 120" aria-hidden="true">
+      <path id="sgabHero" d="M4 98 L38 38 L62 66 L84 82 L110 54 L120 50 L140 50 L140 100 L140 50 L180 50 L180 102 L180 50 L220 50 L220 100 L220 50 L242 50 L262 78 L294 26 L320 60 L356 98"/>
+    </svg>
+    <p class="eyebrow hero-eyebrow cascade">Trattoria · Scanno (AQ) · dal 1989 nella Guida Michelin</p>
+    <h1 class="cascade">Lo Sgabello</h1>
+    <p class="hero-tag cascade">Cucina di montagna nel centro storico di Scanno: pasta fatta in casa, due sale e una terrazza sui tetti. Aperto tutto l'anno.</p>
+    <div class="hero-ctas cascade">
+      <a class="btn btn-primary" href="tel:+390864747476">Prenota un tavolo</a>
+      <a class="btn btn-ghost" href="#menu">Il menù, coi prezzi</a>
+    </div>
+  </div>
+  <div class="hero-ribbon">
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 3l2.6 5.6 6 .8-4.4 4.2 1.1 6.1L12 16.9 6.7 19.7l1.1-6.1L3.4 9.4l6-.8z"/></svg>Guida Michelin dal 1989</div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 10h18M5 10V7l7-3 7 3v3M4 20h16M6 20v-10M18 20v-10"/></svg>Due sale e la terrazza</div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 17V8h14v9M17 11h3l1 3v3h-4M6 20a1.6 1.6 0 100-3.2A1.6 1.6 0 006 20zM17.5 20a1.6 1.6 0 100-3.2 1.6 1.6 0 000 3.2z"/></svg>Parcheggio anche per pullman</div>
+  </div>
+</section>
+
+<section class="section nome grana" id="nome">
+  <div class="wrap-stretto">
+    <svg class="sgab" data-reveal viewBox="0 0 360 120" aria-hidden="true"><path class="sgab-div" d="M4 98 L38 38 L62 66 L84 82 L110 54 L120 50 L140 50 L140 100 L140 50 L180 50 L180 102 L180 50 L220 50 L220 100 L220 50 L242 50 L262 78 L294 26 L320 60 L356 98"/></svg>
+    <blockquote data-reveal>«Trovandosi Scanno adagiato su un colle circondato da monti più alti, una fantasiosa tradizione lo paragona ad uno Sgabello.»
+      <cite>Il nome della trattoria, spiegato da loro</cite>
+    </blockquote>
+    <p class="chiosa" data-reveal>Il disegno qui sopra è quel profilo: i monti attorno, il colle nel mezzo con il paese sopra, le gambe. <strong>L'insegna non è un nome, è la forma della valle.</strong></p>
+  </div>
+</section>
+
+<section class="section locale" id="locale">
+  <div class="wrap locale-grid">
+    <div>
+      <p class="eyebrow" data-reveal>Il locale</p>
+      <h2 data-reveal>Una trattoria di famiglia, aperta tutto l'anno.</h2>
+      <span class="voce" data-reveal>«Ospitiamo i nostri clienti in due sale all'interno, arredate con il gusto semplice dell'accoglienza scannese, e in un'ampia terrazza con tavoli all'esterno.»</span>
+      <p data-reveal>La conduzione è della famiglia Berardi di Scanno. Il locale sta nella parte bassa del centro storico, a pochi metri da un ampio parcheggio pubblico dove entrano anche i pullman.</p>
+      <div class="michelin" data-reveal>
+        <span class="stell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 3l2.6 5.6 6 .8-4.4 4.2 1.1 6.1L12 16.9 6.7 19.7l1.1-6.1L3.4 9.4l6-.8z"/></svg>Guide gastronomiche</span>
+        <q>Lo Sgabello si pregia di far parte della famosa Guida Michelin, fin dall'ormai lontano 1989.</q>
+      </div>
+    </div>
+    <dl class="fatti" data-reveal>
+      <div class="fatto"><dt>Pranzo</dt><dd>12:00 · 16:00</dd></div>
+      <div class="fatto"><dt>Cena</dt><dd>19:30 · 23:30</dd></div>
+      <div class="fatto"><dt>Apertura</dt><dd>Tutto l'anno</dd></div>
+      <div class="fatto"><dt>Sale</dt><dd>Due sale interne<small>più l'ampia terrazza con ombrelloni</small></dd></div>
+      <div class="fatto"><dt>Parcheggio</dt><dd>Pubblico e ampio<small>a qualche metro dall'ingresso, anche per i pullman</small></dd></div>
+      <div class="fatto"><dt>Celiaci</dt><dd>Pietanze senza glutine<small>su richiesta, come per le altre esigenze alimentari</small></dd></div>
+      <div class="fatto"><dt>Prenotazioni</dt><dd>Per telefono<small>0864 747476 oppure 328 7596883</small></dd></div>
+    </dl>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true"><svg class="sgab" viewBox="0 0 360 120"><path class="sgab-div" d="M4 98 L38 38 L62 66 L84 82 L110 54 L120 50 L140 50 L140 100 L140 50 L180 50 L180 102 L180 50 L220 50 L220 100 L220 50 L242 50 L262 78 L294 26 L320 60 L356 98"/></svg></div>
+
+<section class="banda da-sx" id="cucina">
+  <div class="banda-media"><img src="img/ravioli.jpg" alt="Ravioli fatti a mano allineati sulla spianatoia infarinata" loading="lazy"></div>
+  <div class="contenuto">
+    <div class="box">
+      <p class="eyebrow" data-reveal>In cucina</p>
+      <h2 data-reveal>La pasta si fa qui, a mano.</h2>
+      <span class="voce" data-reveal>«I piatti del giorno da scegliere sono di solito pochi perché fatti in casa.»</span>
+      <p data-reveal>La cucina è quella della tradizione agropastorale dell'Abruzzo montano: salumi e formaggi, ricotta di capra, agnello, orapi e le altre verdure di montagna del territorio.</p>
+      <ul class="lista-spunta" data-reveal>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg>Chitarra, gnocchi, ravioli e fettuccine fatti in casa</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg>Ricotta di capra, pecorino di Scanno, agnello</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg>Pietanze senza glutine per celiaci</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section menu" id="menu">
+  <div class="wrap">
+    <div class="menu-head">
+      <p class="eyebrow centro" data-reveal>Il menù</p>
+      <h2 data-reveal>Tutto quello che trovi, con i prezzi.</h2>
+      <p data-reveal>Il menù della trattoria, per intero. Le verdure e i funghi seguono la stagione.</p>
+    </div>
+    <div class="menu-cols">
+      <div>
+        <section class="portata" data-reveal>
+          <h3>Antipasti</h3>
+          <ul>
+            <li class="piatto"><span class="n">Antipasto misto di prodotti locali<small>Per due persone</small></span><span class="punti"></span><span class="p">€ 18,00</span></li>
+          </ul>
+        </section>
+        <section class="portata" data-reveal>
+          <h3>Primi <span>fatti in casa</span></h3>
+          <ul>
+            <li class="piatto"><span class="n">Gnocchi di patate al pomodoro</span><span class="punti"></span><span class="p">€ 9,00</span></li>
+            <li class="piatto"><span class="n">Gnocchi di patate al ragù</span><span class="punti"></span><span class="p">€ 10,00</span></li>
+            <li class="piatto"><span class="n">Gnocchi di acqua e farina con verdura<small>Solo a cena</small></span><span class="punti"></span><span class="p">€ 10,00</span></li>
+            <li class="piatto"><span class="n">Gnocchetti di acqua e farina con fagioli o ceci</span><span class="punti"></span><span class="p">€ 9,00</span></li>
+            <li class="piatto"><span class="n">Chitarra al pomodoro</span><span class="punti"></span><span class="p">€ 8,00</span></li>
+            <li class="piatto"><span class="n">Chitarra al ragù di vitello</span><span class="punti"></span><span class="p">€ 9,00</span></li>
+            <li class="piatto"><span class="n">Chitarra alla Scannese<small>Funghi, prosciutto, pomodoro, ricotta salata</small></span><span class="punti"></span><span class="p">€ 10,00</span></li>
+            <li class="piatto"><span class="n">Chitarra ai funghi porcini</span><span class="punti"></span><span class="p">€ 10,00</span></li>
+            <li class="piatto"><span class="n">Chitarra alla testona<small>Funghi, piselli, panna, prosciutto e pomodoro</small></span><span class="punti"></span><span class="p">€ 10,00</span></li>
+            <li class="piatto"><span class="n">Chitarra al ragù di agnello</span><span class="punti"></span><span class="p">€ 9,00</span></li>
+            <li class="piatto"><span class="n">Ravioli ricotta e spinaci</span><span class="punti"></span><span class="p">€ 9,00</span></li>
+            <li class="piatto"><span class="n">Ravioli zucchine e zafferano</span><span class="punti"></span><span class="p">€ 10,00</span></li>
+            <li class="piatto"><span class="n">Lasagne al forno</span><span class="punti"></span><span class="p">€ 10,00</span></li>
+            <li class="piatto"><span class="n">Polenta con salsiccia</span><span class="punti"></span><span class="p">€ 10,00</span></li>
+          </ul>
+          <div class="salse">
+            <p><b>Salsa testona</b> funghi, piselli, pochissima panna, pomodoro.</p>
+            <p><b>Salsa Scannese</b> scagliette di ricotta salata, pomodoro, funghi prataioli.</p>
+          </div>
+        </section>
+      </div>
+      <div>
+        <section class="portata" data-reveal>
+          <h3>Secondi</h3>
+          <ul>
+            <li class="piatto"><span class="n">Agnello ai ferri</span><span class="punti"></span><span class="p">€ 16,00</span></li>
+            <li class="piatto"><span class="n">Trota ai ferri</span><span class="punti"></span><span class="p">€ 15,00</span></li>
+            <li class="piatto"><span class="n">Bistecca di vitella o di manzo</span><span class="punti"></span><span class="p">€ 15,00</span></li>
+            <li class="piatto"><span class="n">Filetto di vitello ai ferri</span><span class="punti"></span><span class="p">€ 15,00</span></li>
+            <li class="piatto"><span class="n">Vitello al forno</span><span class="punti"></span><span class="p">€ 10,00</span></li>
+            <li class="piatto"><span class="n">Scamorza allo spiedo con prosciutto</span><span class="punti"></span><span class="p">€ 10,00</span></li>
+            <li class="piatto"><span class="n">Scamorza allo spiedo con salsiccia</span><span class="punti"></span><span class="p">€ 12,00</span></li>
+            <li class="piatto"><span class="n">Salsicce arrosto</span><span class="punti"></span><span class="p">€ 8,00</span></li>
+            <li class="piatto"><span class="n">Misto di formaggi locali</span><span class="punti"></span><span class="p">€ 9,00</span></li>
+            <li class="piatto"><span class="n">Pecorino di Scanno</span><span class="punti"></span><span class="p">€ 4,00</span></li>
+            <li class="piatto"><span class="n">Contorni</span><span class="punti"></span><span class="p">€ 3,00</span></li>
+          </ul>
+        </section>
+        <section class="portata" data-reveal>
+          <h3>Dolci</h3>
+          <ul>
+            <li class="piatto"><span class="n">Pan dell'Orso<small>Il dolce tipico di Scanno: torta di mandorle glassata al cioccolato</small></span><span class="punti"></span><span class="p">€ 4,00</span></li>
+            <li class="piatto"><span class="n">Crostata alla frutta</span><span class="punti"></span><span class="p">€ 5,00</span></li>
+            <li class="piatto"><span class="n">Mousse di crema con lamponi locali</span><span class="punti"></span><span class="p">€ 5,00</span></li>
+            <li class="piatto"><span class="n">Panna cotta<small>Nocciola, ciliegie, amarene, caramello o cioccolato</small></span><span class="punti"></span><span class="p">€ 5,00</span></li>
+            <li class="piatto"><span class="n">Pizza dolce</span><span class="punti"></span><span class="p">€ 5,00</span></li>
+            <li class="piatto"><span class="n">Tiramisù fatto in casa</span><span class="punti"></span><span class="p">€ 5,00</span></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <div class="menu-nota" data-reveal>
+      <p>Per celiaci prepariamo pietanze senza glutine, e il personale è a disposizione per le altre esigenze alimentari.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section gruppi grana" id="gruppi">
+  <div class="wrap">
+    <div class="gruppi-head">
+      <p class="eyebrow centro" data-reveal>Gruppi e pullman</p>
+      <h2 data-reveal>Tre menù completi, bevande e caffè inclusi.</h2>
+      <p data-reveal>Per gruppi da 15 persone in su. Il parcheggio pubblico davanti al locale tiene anche i pullman.</p>
+    </div>
+    <div class="tre-menu">
+      <article class="pacchetto" data-reveal>
+        <span class="prezzo">30 €<small>a persona</small></span>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg>Mezzo antipasto della casa, vasto assortimento</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg><span>Un primo a scelta: chitarra, gnocchi di patate, fettuccine, gnocchi con verdura, gnocchetti e fagioli o ceci</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg>Un secondo a scelta: arrosto misto, agnello, trota, scaloppina</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg>Contorno di patate e insalata</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg>Dolce della casa o macedonia di frutta fresca</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg>Bevande e caffè inclusi</li>
+        </ul>
+      </article>
+      <article class="pacchetto" data-reveal>
+        <span class="prezzo">32 €<small>a persona</small></span>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg>Mezzo antipasto misto della casa</li>
+          <li class="piu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg><span><b>Due assaggi di primo</b> invece di uno</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg>Un secondo a scelta, contorno di patate e insalata</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg>Dolce della casa o macedonia di frutta fresca</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg>Bevande e caffè inclusi</li>
+        </ul>
+      </article>
+      <article class="pacchetto" data-reveal>
+        <span class="prezzo">35 €<small>a persona</small></span>
+        <ul>
+          <li class="piu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg><span><b>Antipasto misto al piatto</b>, arricchito di portate</span></li>
+          <li class="piu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg><span>Due assaggi di primo, <b>ravioli compresi</b></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg>Un secondo a scelta, contorno di patate e insalata</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg>Dolce della casa o macedonia di frutta fresca</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg>Bevande e caffè inclusi</li>
+        </ul>
+      </article>
+    </div>
+    <div class="gruppi-note">
+      <div class="nota" data-reveal><b>Guida in costume</b><p>Su richiesta mettiamo a disposizione gratuitamente una guida in costume tradizionale scannese per il vostro giro in paese.</p></div>
+      <div class="nota" data-reveal><b>Autista</b><p>L'autista e una persona ogni 25 hanno diritto al pasto gratuito.</p></div>
+      <div class="nota" data-reveal><b>Minimo</b><p>Le offerte valgono per gruppi di almeno 15 persone. Si concordano al telefono.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="banda da-dx" id="scanno">
+  <div class="banda-media"><img src="img/borgo.jpg" alt="Il borgo di Scanno adagiato sul colle, circondato dai monti più alti dell'Alta Valle del Sagittario" loading="lazy"></div>
+  <div class="contenuto">
+    <div class="box">
+      <p class="eyebrow" data-reveal>Il paese</p>
+      <h2 data-reveal>Scanno, la Perla d'Abruzzo.</h2>
+      <span class="voce" data-reveal>«Il Centro Storico, ricco di storia e di arte, è tra i più ammirati e fotografati dell'Italia Centrale, reso famoso dagli scatti di Henri Cartier-Bresson, Mario Giacomelli e Gianni Berengo Gardin.»</span>
+      <p data-reveal>Siamo nell'Alta Valle del Sagittario, ai confini del Parco Nazionale d'Abruzzo, Lazio e Molise. Il Lago di Scanno, il più esteso bacino naturale della regione, è a due chilometri.</p>
+      <ul class="lista-spunta" data-reveal>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 21s-7-5.6-7-11a7 7 0 0114 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>Nella parte bassa del centro storico</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M3 18h18M6 18V9l6-4 6 4v9"/></svg>Uno dei borghi più belli d'Italia</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M3 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0M3 10c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg>Il Lago di Scanno a 2 km</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section gallery" id="gallery">
+  <div class="wrap">
+    <div class="gallery-head">
+      <div>
+        <p class="eyebrow" data-reveal>Gallery</p>
+        <h2 data-reveal>La trattoria e i suoi piatti.</h2>
+      </div>
+      <p data-reveal>Fotografie dell'attuale sito della trattoria. Clicca per ingrandire.</p>
+    </div>
+    <div class="gallery-grid">
+      <button class="largo" data-tag="La terrazza di sera" data-caption="La terrazza illuminata, con le tovaglie gialle e i gerani"><img src="img/terrazza-sera.jpg" alt="La terrazza della trattoria illuminata di sera, con tavoli apparecchiati e fioriere di gerani" loading="lazy"></button>
+      <button data-tag="La chitarra" data-caption="La pasta appena tagliata alla chitarra"><img src="img/chitarra.jpg" alt="Pasta fresca appena tagliata alla chitarra, sulla spianatoia infarinata" loading="lazy"></button>
+      <button data-tag="L'antipasto" data-caption="Ricotta nella fuscella, prosciutto, mozzarelline e funghi sott'olio"><img src="img/antipasto.jpg" alt="Antipasto misto di prodotti locali: ricotta fresca, prosciutto, mozzarelline e funghi" loading="lazy"></button>
+      <button data-tag="Gli gnocchi" data-caption="Gnocchi di acqua e farina con la verdura di montagna"><img src="img/gnocchi-verdura.jpg" alt="Piatto di gnocchi con verdura di montagna" loading="lazy"></button>
+      <button data-tag="L'agnello" data-caption="Agnello ai ferri con insalata"><img src="img/agnello.jpg" alt="Costolette di agnello ai ferri servite con insalata e pomodoro" loading="lazy"></button>
+      <button data-tag="I ravioli" data-caption="I ravioli fatti a mano sulla spianatoia"><img src="img/ravioli.jpg" alt="Ravioli fatti a mano allineati sulla spianatoia infarinata" loading="lazy"></button>
+      <button data-tag="La crostata" data-caption="La crostata alla frutta"><img src="img/crostata.jpg" alt="Crostata alla frutta con fragole, kiwi e pesche" loading="lazy"></button>
+      <button data-tag="La terrazza di giorno" data-caption="La terrazza tra le case di pietra di Scanno"><img src="img/terrazza.jpg" alt="La terrazza della trattoria vista dall'alto tra le case in pietra del borgo" loading="lazy"></button>
+    </div>
+  </div>
+</section>
+
+<section class="section prenota grana" id="prenota">
+  <svg class="sgab filigrana" viewBox="0 0 360 120" aria-hidden="true"><path d="M4 98 L38 38 L62 66 L84 82 L110 54 L120 50 L140 50 L140 100 L140 50 L180 50 L180 102 L180 50 L220 50 L220 100 L220 50 L242 50 L262 78 L294 26 L320 60 L356 98"/></svg>
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Prenota</p>
+    <h2 data-reveal>Incontriamoci alla Trattoria Lo Sgabello.</h2>
+    <span class="voce" data-reveal>«Avremo ottenuto lo scopo quando, con la nostra ospitalità, saremo riusciti a procurarvi piacere, benessere e un po' di felicità!»</span>
+    <div class="contatti">
+      <div class="contatto" data-reveal>
+        <span class="k">Telefono</span>
+        <p><a href="tel:+390864747476">0864 747476</a></p>
+        <p><a href="tel:+393287596883">328 7596883</a></p>
+      </div>
+      <div class="contatto" data-reveal>
+        <span class="k">Orari</span>
+        <p>Pranzo 12:00 · 16:00</p>
+        <p>Cena 19:30 · 23:30</p>
+        <p class="sec">Aperto tutto l'anno</p>
+      </div>
+      <div class="contatto" data-reveal>
+        <span class="k">Dove siamo</span>
+        <p>Via dei Pescatori, 45<br>67038 Scanno (AQ)</p>
+        <p><a href="https://www.google.com/maps/place/Trattoria+Lo+Sgabello/@41.904377,13.880627,17z" target="_blank" rel="noopener">Apri in Google Maps</a></p>
+      </div>
+      <div class="contatto" data-reveal>
+        <span class="k">Scrivici</span>
+        <p><a href="mailto:info@losgabelloscanno.it?subject=Richiesta%20informazioni">info@losgabelloscanno.it</a></p>
+        <p class="sec">Per i gruppi conviene telefonare.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <p class="footer-brand">
+      <svg class="sgab" viewBox="0 0 100 56" aria-hidden="true"><path d="M3 47 L15 11 L25 27 L33 35 L42 20 L46 19 L54 19 L54 45 L54 19 L67 19 L67 46 L67 19 L80 19 L80 45 L80 19 L86 19 L91 27 L97 47"/></svg>
+      Trattoria Lo Sgabello
+    </p>
+    <p class="footer-social">
+      <a href="https://www.facebook.com/pages/Trattoria-Lo-Sgabello/215552601950318" target="_blank" rel="noopener">Facebook</a>
+      <a href="tel:+390864747476">0864 747476</a>
+    </p>
+    <p class="ai-label">Sito dimostrativo realizzato con AI da FAR AI · contenuti da rivedere con l'attività prima della pubblicazione</p>
+    <p class="fine">Testi e fotografie provengono dal sito attuale della Trattoria Lo Sgabello e restano di proprietà dell'attività.</p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galleria fotografica">
+  <button class="lb-close" aria-label="Chiudi">✕</button>
+  <button class="lb-prev" aria-label="Foto precedente">←</button>
+  <figure>
+    <img src="img/terrazza-sera.jpg" alt="La terrazza illuminata di sera">
+    <figcaption></figcaption>
+  </figure>
+  <button class="lb-next" aria-label="Foto successiva">→</button>
+</div>
+
+<script>
+(function(){
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var nav = document.getElementById('nav');
+  var onScroll = function(){ nav.classList.toggle('solid', window.scrollY > 40); };
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  var burger = document.querySelector('.burger');
+  var mm = document.getElementById('mobileMenu');
+  /* 🪤 Col pannello aperto il Tab usciva e andava ad attivare i link INVISIBILI
+     dietro il velo: premendo Invio la pagina saltava altrove mentre il menu
+     restava aperto a schermo pieno, senza alcun indizio. E' il percorso di un
+     lettore di schermo su telefono (VoiceOver e TalkBack seguono l'ordine del
+     Tab). `inert` toglie il resto della pagina anche alla lettura per gesti,
+     che NON segue il Tab; il trap sul Tab chiude il ciclo. */
+  var fuori = [document.getElementById('main'), document.querySelector('footer'),
+               document.querySelector('.skip-link'), document.querySelector('.nav-brand'),
+               document.querySelector('nav'), document.querySelector('.nav-cta')];
+  function setMenu(open){
+    mm.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'Chiudi il menu' : 'Apri il menu');
+    document.body.style.overflow = open ? 'hidden' : '';
+    fuori.forEach(function(el){ if(el){ if(open){ el.setAttribute('inert',''); }
+                                       else { el.removeAttribute('inert'); } } });
+  }
+  function trappola(e, pannello, extra){
+    if(e.key !== 'Tab') return;
+    var f = Array.prototype.slice.call(
+      pannello.querySelectorAll('a[href], button:not([disabled]), [tabindex="0"]'));
+    if(extra) f = [extra].concat(f);
+    /* 🪤 niente offsetParent: dentro un pannello position:fixed e' null anche
+       per gli elementi perfettamente visibili */
+    f = f.filter(function(el){ return el.getClientRects().length > 0; });
+    if(!f.length) return;
+    var primo = f[0], ultimo = f[f.length - 1];
+    if(e.shiftKey && document.activeElement === primo){ e.preventDefault(); ultimo.focus(); }
+    else if(!e.shiftKey && document.activeElement === ultimo){ e.preventDefault(); primo.focus(); }
+  }
+  burger.addEventListener('click', function(){ setMenu(!mm.classList.contains('open')); });
+  mm.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
+
+  function drawPath(p){
+    var len = p.getTotalLength();
+    p.style.strokeDasharray = len;
+    if(reduced){ p.style.strokeDashoffset = 0; return; }
+    p.style.strokeDashoffset = len;
+    p.getBoundingClientRect();
+    p.style.transition = 'stroke-dashoffset 2.4s cubic-bezier(.2,.8,.25,1)';
+    p.style.strokeDashoffset = '0';
+  }
+
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:.14});
+    document.querySelectorAll('[data-reveal]').forEach(function(el){ io.observe(el); });
+
+    var ioSg = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ drawPath(e.target); ioSg.unobserve(e.target); } });
+    }, {threshold:.4});
+    document.querySelectorAll('.sgab-div').forEach(function(p){ ioSg.observe(p); });
+  } else {
+    document.querySelectorAll('[data-reveal]').forEach(function(el){ el.classList.add('in'); });
+  }
+
+  var hp = document.getElementById('sgabHero');
+  if(hp) drawPath(hp);
+
+  var lb = document.getElementById('lightbox');
+  var lbImg = lb.querySelector('img');
+  var lbCap = lb.querySelector('figcaption');
+  var shots = Array.prototype.slice.call(document.querySelectorAll('.gallery-grid button'));
+  var idx = 0, lastFocus = null;
+  function show(i){
+    idx = (i + shots.length) % shots.length;
+    var b = shots[idx], im = b.querySelector('img');
+    lbImg.src = im.src; lbImg.alt = im.alt;
+    lbCap.textContent = b.getAttribute('data-caption') || '';
+  }
+  function openLb(i){
+    lastFocus = document.activeElement; show(i);
+    lb.classList.add('open'); document.body.style.overflow='hidden';
+    fuori.forEach(function(el){ if(el) el.setAttribute('inert',''); });
+    if(!mm.classList.contains('open')) burger.setAttribute('inert','');
+    /* 🪤 La transizione anima anche `visibility`: finche' e' `hidden`, `.focus()`
+       non attecchisce E NON DA' ERRORE. Contare due requestAnimationFrame non
+       basta — su Anfora, a 1440px, al secondo frame `visibility` era ancora
+       `hidden` e il focus restava sulla tessera dietro il pannello, mentre a
+       390px per un soffio funzionava. Si aspetta la CONDIZIONE vera, non un
+       numero di fotogrammi, con un tetto per non restare appesi. */
+    var tentativi = 0;
+    (function mettiIlFuoco(){
+      var c = lb.querySelector('.lb-close');
+      if (getComputedStyle(lb).visibility === 'visible' || tentativi++ > 60) { c.focus(); }
+      else { requestAnimationFrame(mettiIlFuoco); }
+    })();
+  }
+  function closeLb(){
+    lb.classList.remove('open'); document.body.style.overflow='';
+    burger.removeAttribute('inert');
+    if(!mm.classList.contains('open'))
+      fuori.forEach(function(el){ if(el) el.removeAttribute('inert'); });
+    if(lastFocus) lastFocus.focus();
+  }
+  shots.forEach(function(b,i){ b.addEventListener('click', function(){ openLb(i); }); });
+  lb.querySelector('.lb-close').addEventListener('click', closeLb);
+  lb.querySelector('.lb-prev').addEventListener('click', function(){ show(idx-1); });
+  lb.querySelector('.lb-next').addEventListener('click', function(){ show(idx+1); });
+  lb.addEventListener('click', function(e){ if(e.target === lb) closeLb(); });
+  document.addEventListener('keydown', function(e){
+    if(mm.classList.contains('open')){
+      if(e.key === 'Escape'){ setMenu(false); burger.focus(); return; }
+      trappola(e, mm, burger); return;
+    }
+    if(!lb.classList.contains('open')) return;
+    if(e.key === 'Escape') closeLb();
+    else if(e.key === 'ArrowLeft') show(idx-1);
+    else if(e.key === 'ArrowRight') show(idx+1);
+    else trappola(e, lb);
+  });
+})();
+</script>
+  <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

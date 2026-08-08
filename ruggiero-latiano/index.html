@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<script>document.documentElement.classList.add('js')</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ruggiero Acconciatori Hair & Beauty · Parrucchiere a Latiano (BR)</title>
+<meta name="description" content="Taglio, tinta e messa in piega in Via Francavilla 51 a Latiano (BR). Martedì–venerdì 9–13 e 15–19, sabato 8–19. Telefono 346 149 1242.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#24242A">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Ruggiero Acconciatori Hair & Beauty · Latiano">
+<meta property="og:description" content="Taglio, tinta e messa in piega in Via Francavilla 51 a Latiano (BR). Sito dimostrativo.">
+<meta property="og:image" content="https://demo.francescoar.com/ruggiero-latiano/img/balayage.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="18" fill="%2324242A"/><g fill="none" stroke="%23D9A85C" stroke-width="6" stroke-linecap="round"><path d="M30 16 L64 62"/><path d="M70 16 L36 62"/><circle cx="30" cy="72" r="10"/><circle cx="70" cy="72" r="10"/></g><circle cx="50" cy="43" r="4" fill="%23D9A85C"/></svg>'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "@id": "https://ruggierohair.wixsite.com/ruggierohair#hairsalon",
+  "name": "Ruggiero Acconciatori Hair & Beauty",
+  "url": "https://ruggierohair.wixsite.com/ruggierohair",
+  "image": "img/balayage.jpg",
+  "telephone": "+393461491242",
+  "email": "ruggierohair@libero.it",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Francavilla 51",
+    "addressLocality": "Latiano",
+    "postalCode": "72022",
+    "addressRegion": "BR",
+    "addressCountry": "IT"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "13:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "15:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "19:00" }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/ruggierohair/",
+    "https://www.instagram.com/ruggieroacconciatori_"
+  ]
+}
+</script>
+<style>
+:root{
+  --antracite:#24242A;
+  --antracite-fondo:#1E1E24;
+  --antracite-notte:#17171B;
+  --avorio:#F4EFE7;
+  --avorio-alto:#FBF8F2;
+  --oro:#C08A3E;
+  --oro-chiaro:#D9A85C;
+  --oro-scuro:#7A5319;
+  --grigio-caldo:#514B3E;
+  --velina:#B9B2A4;
+  --bordo-chiaro:rgba(36,36,42,.14);
+  --bordo-scuro:rgba(244,239,231,.16);
+  --curva:cubic-bezier(.2,.7,.2,1);
+  --nav-h:76px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 12px)}
+body{font-family:"Albert Sans",system-ui,sans-serif;background:var(--avorio);color:var(--antracite);line-height:1.6;font-size:1.0625rem;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:"Syne",sans-serif;line-height:1.08;font-weight:800}
+.wrap{max-width:1200px;margin-inline:auto;padding-inline:clamp(20px,4vw,48px)}
+
+/* ---------- skip link ---------- */
+.skip-link{position:absolute;left:16px;top:-60px;z-index:200;background:var(--oro-chiaro);color:var(--antracite);padding:10px 18px;border-radius:6px;font-weight:600;text-decoration:none;transition:top .2s var(--curva)}
+.skip-link:focus{top:12px}
+
+/* ---------- focus ---------- */
+:focus-visible{outline:3px solid var(--oro-chiaro);outline-offset:3px}
+.chiaro :focus-visible,.su-avorio :focus-visible{outline-color:var(--antracite)}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;inset-inline:0;top:0;z-index:100;height:var(--nav-h);display:flex;align-items:center;transition:background .3s,border-color .3s;border-bottom:1px solid transparent;background:transparent}
+.nav.solid{background:var(--antracite);border-color:var(--bordo-scuro)}
+.nav-inner{width:100%;max-width:1200px;margin-inline:auto;padding-inline:clamp(16px,4vw,48px);display:flex;align-items:center;gap:16px}
+.nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--avorio);font-family:"Syne",sans-serif;font-weight:800;font-size:1.25rem;letter-spacing:.04em}
+.nav-brand svg{width:26px;height:26px;flex:none}
+.nav-brand small{display:block;font-family:"Albert Sans",sans-serif;font-weight:500;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--velina)}
+.nav-links{list-style:none;display:flex;gap:clamp(14px,2vw,28px);margin-left:auto;align-items:center}
+.nav-links a{color:var(--avorio);text-decoration:none;font-size:.95rem;font-weight:500;letter-spacing:.02em;padding:6px 2px;border-bottom:2px solid transparent;transition:border-color .25s}
+.nav-links a:hover{border-color:var(--oro-chiaro)}
+.nav-cta{margin-left:auto;background:var(--oro-chiaro);color:var(--antracite);text-decoration:none;font-weight:700;font-size:.9rem;padding:10px 18px;border-radius:999px;white-space:nowrap;transition:transform .2s var(--curva)}
+.nav-cta:hover{transform:translateY(-2px)}
+/* Quello che e' `inert` non deve VEDERSI: col menu aperto la barra sta sopra il
+   pannello (z-index 100 > 90), quindi il tasto restava a vista ma non premibile
+   (elementFromPoint -> .nav-inner, click in TimeoutError). Il numero resta
+   raggiungibile in fondo al menu, in .menu-contatti. */
+.nav-cta[inert]{visibility:hidden}
+.nav-tel{margin-left:auto;display:flex;align-items:center}
+.nav-tel .nav-cta{margin-left:0}
+/* Sopra i 920px spinge gia' .nav-links, quindi la CTA non deve spingere una
+   seconda volta o i link finiscono a meta' barra. ⛔ Questa regola va tenuta
+   DENTRO la min-width: `.nav-links + .nav-tel` ha 2 classi e batterebbe la
+   `.nav-tel{margin-left:auto}` della max-width (1 classe) anche a menu
+   compresso — e il combinatore matcha pure con .nav-links display:none,
+   lasciando Chiama e burger accalcati a sinistra sotto i 920px. */
+@media (min-width:920px){
+  .nav-links + .nav-tel{margin-left:0}
+}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;flex:none;position:relative}
+.burger span{position:absolute;left:10px;right:10px;height:2px;background:var(--avorio);transition:transform .3s var(--curva),opacity .2s;top:50%}
+.burger span:nth-child(1){transform:translateY(-7px)}
+.burger span:nth-child(3){transform:translateY(7px)}
+.burger.open span:nth-child(1){transform:rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:rotate(-45deg)}
+/* Sotto i 360px logo + CTA + burger non ci stanno in barra e il burger sporgeva
+   oltre il bordo (burger.right 334px su un viewport da 320, tagliato di ~14px).
+   Si stringe la barra, non si toglie niente: il burger resta 44x44. */
+@media (max-width:359px){
+  .nav-inner{gap:8px}
+}
+/* ⛔ Qui NON aggiungere regole per .nav-brand / .nav-cta: il blocco
+   max-width:919px qui sotto ha la stessa specificita' e viene DOPO, quindi
+   vincerebbe lui e la regola resterebbe codice morto (misurato: a 320px la CTA
+   prendeva comunque padding 9px 14px). Se un giorno servisse stringere anche
+   quelli, va spostato l'intero blocco DOPO il 919px. */
+@media (max-width:919px){
+  .nav-links{display:none}
+  .burger{display:block}
+  .nav-tel{margin-left:auto}
+  .nav-cta{padding:9px 14px;font-size:.85rem}
+  .nav-brand small{display:none}
+  .nav-brand{font-size:1.1rem}
+}
+
+/* ---------- menu mobile ---------- */
+.mobile-menu{position:fixed;inset:0;z-index:90;background:var(--antracite);color:var(--avorio);visibility:hidden;opacity:0;transition:opacity .3s var(--curva),visibility .3s;display:flex;flex-direction:column;padding:calc(var(--nav-h) + 20px) clamp(24px,7vw,48px) 40px;overflow-y:auto}
+.mobile-menu.open{visibility:visible;opacity:1}
+.mobile-menu nav{margin-top:4vh}
+.mobile-menu nav ul{list-style:none}
+.mobile-menu nav a{display:block;font-family:"Syne",sans-serif;font-weight:800;font-size:clamp(1.9rem,8vw,2.6rem);color:var(--avorio);text-decoration:none;padding:12px 0;border-bottom:1px solid var(--bordo-scuro)}
+.menu-contatti{margin-top:auto;padding-top:32px;font-size:.95rem;color:var(--velina)}
+.menu-contatti a{color:var(--oro-chiaro);font-weight:600;text-decoration:none}
+
+/* ---------- hero ---------- */
+.hero{background:var(--antracite);color:var(--avorio);min-height:100svh;display:flex;flex-direction:column;padding-top:var(--nav-h)}
+.hero-testata{max-width:1200px;width:100%;margin-inline:auto;padding:clamp(14px,2.6vh,28px) clamp(20px,4vw,48px) 0}
+.hero-testata .mono{width:clamp(42px,4.5vw,54px);height:auto;margin-bottom:clamp(10px,1.6vh,16px)}
+.hero-eyebrow{font-size:.8rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--oro-chiaro);margin-bottom:12px}
+.hero h1{font-size:clamp(1.85rem,9vw,7.1rem);text-transform:uppercase;letter-spacing:.015em;color:var(--avorio);white-space:nowrap}
+.hero-sub{font-family:"Syne",sans-serif;font-weight:700;font-size:clamp(.95rem,1.9vw,1.3rem);letter-spacing:.3em;text-transform:uppercase;color:var(--velina);margin-top:8px}
+.hero-sotto{flex:1;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,4vw,64px);align-items:center;max-width:1200px;width:100%;margin-inline:auto;padding:clamp(14px,2.2vh,24px) clamp(20px,4vw,48px) clamp(16px,2.8vh,30px)}
+.hero-tagline{font-size:clamp(1.05rem,1.6vw,1.25rem);max-width:44ch;color:var(--avorio)}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:clamp(22px,4vh,36px)}
+.btn{display:inline-block;text-decoration:none;font-weight:700;font-size:1rem;padding:14px 26px;border-radius:999px;transition:transform .22s var(--curva),box-shadow .22s var(--curva)}
+.btn:hover{transform:translateY(-3px)}
+.btn-oro{background:var(--oro-chiaro);color:var(--antracite)}
+.btn-linea{border:1.5px solid var(--oro-chiaro);color:var(--oro-chiaro)}
+.hero-foto{position:relative;min-width:0}
+.hero-quadro{position:relative;width:min(100%,36vh);margin-left:auto;aspect-ratio:3/4;border:1.5px solid var(--oro);padding:clamp(10px,1.4vw,16px);border-radius:2px}
+.hero-media{position:relative;width:100%;height:100%;overflow:hidden;border-radius:1px}
+.hero-media img{width:100%;height:100%;object-fit:cover;animation:kenburns 22s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.09)}}
+.hero-ribbon{border-top:1px solid var(--bordo-scuro);background:var(--antracite)}
+.hero-ribbon .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding-block:18px}
+.hero-ribbon strong{display:block;font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--oro-chiaro);margin-bottom:2px}
+.hero-ribbon div{font-size:.95rem;color:var(--avorio)}
+.hero-ribbon a{color:var(--avorio);text-decoration:none;font-weight:600;border-bottom:1px solid var(--oro-chiaro)}
+@media (max-width:919px){
+  .hero{min-height:auto}
+  .hero-sotto{grid-template-columns:minmax(0,1fr);padding-top:14px}
+  .hero-quadro{width:min(100%,440px);margin-inline:auto;aspect-ratio:4/5}
+  .hero-ribbon .wrap{grid-template-columns:1fr;gap:10px;padding-block:16px}
+}
+
+/* cascata hero */
+.js .cascata{opacity:0;transform:translateY(26px)}
+.js .cascata.via{opacity:1;transform:none;transition:opacity .8s var(--curva),transform .8s var(--curva)}
+.js .cascata.c2.via{transition-delay:.12s}
+.js .cascata.c3.via{transition-delay:.24s}
+.js .cascata.c4.via{transition-delay:.36s}
+.js .cascata.c5.via{transition-delay:.48s}
+
+/* monogramma animato */
+.mono g{fill:none;stroke:var(--oro-chiaro);stroke-width:5;stroke-linecap:round}
+.mono .perno{fill:var(--oro-chiaro);stroke:none}
+.js .mono-draw path,.js .mono-draw circle{transition:stroke-dashoffset 1.6s var(--curva) .3s}
+
+/* ---------- marquee ---------- */
+.marquee{overflow:hidden;border-bottom:1px solid var(--bordo-chiaro);background:var(--avorio);padding-block:16px}
+.marquee-track{display:flex;width:max-content;animation:scorri 30s linear infinite}
+.marquee-lista{display:flex;list-style:none;white-space:nowrap}
+.marquee-lista li{font-family:"Syne",sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:.14em;text-transform:uppercase;color:var(--grigio-caldo);padding-inline:1.4em;position:relative}
+.marquee-lista li::after{content:"";position:absolute;right:-3px;top:50%;width:6px;height:6px;border-radius:50%;background:var(--oro);transform:translateY(-50%)}
+@keyframes scorri{to{transform:translateX(-50%)}}
+
+/* ---------- sezioni comuni ---------- */
+section{padding-block:clamp(64px,10vh,110px)}
+.eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--oro-scuro);margin-bottom:14px}
+.scuro .eyebrow{color:var(--oro-chiaro)}
+h2{font-size:clamp(1.9rem,4.4vw,3.1rem);letter-spacing:.005em;max-width:22ch}
+.sez-testo{max-width:62ch;margin-top:18px;color:var(--grigio-caldo)}
+.scuro .sez-testo{color:var(--velina)}
+.divisore{display:flex;justify-content:center;padding-block:4px}
+.divisore svg{width:34px;height:34px;opacity:.85}
+.divisore g{fill:none;stroke:var(--oro-scuro);stroke-width:6;stroke-linecap:round}
+.divisore .perno{fill:var(--oro-scuro);stroke:none}
+.scuro .divisore g{stroke:var(--oro-chiaro)}
+.scuro .divisore .perno{fill:var(--oro-chiaro)}
+
+/* reveal */
+.js [data-reveal]{opacity:0;transform:translateY(24px)}
+.js [data-reveal].in{opacity:1;transform:none;transition:opacity .7s var(--curva),transform .7s var(--curva)}
+
+/* ---------- intro ---------- */
+.intro{background:var(--avorio)}
+.intro-claim{font-family:"Syne",sans-serif;font-weight:700;font-size:clamp(1.5rem,3.4vw,2.5rem);line-height:1.25;max-width:26ch}
+.intro-claim em{font-style:normal;color:var(--oro-scuro)}
+.intro-nota{margin-top:14px;color:var(--grigio-caldo);font-size:.95rem}
+.chip-orari{display:inline-flex;align-items:center;gap:10px;margin-top:26px;background:var(--antracite);color:var(--avorio);padding:10px 18px;border-radius:999px;font-size:.95rem;font-weight:600}
+.chip-orari:empty{display:none}
+.chip-orari .pallino{width:9px;height:9px;border-radius:50%;flex:none}
+.pallino.on{background:#7FBF6A}
+.pallino.off{background:#E08A6D}
+
+/* ---------- servizi ---------- */
+.servizi{background:var(--avorio);padding-top:0}
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.4vw,28px);margin-top:clamp(28px,5vh,48px)}
+.card{background:var(--avorio-alto);border:1px solid var(--bordo-chiaro);border-radius:4px;padding:clamp(24px,3vw,36px);transition:transform .25s var(--curva),border-color .25s,box-shadow .25s}
+.card:hover{transform:translateY(-5px);border-color:var(--oro);box-shadow:0 18px 40px -22px rgba(36,36,42,.35)}
+.card svg{width:38px;height:38px;color:var(--oro-scuro);margin-bottom:18px}
+.card h3{font-size:1.35rem;font-weight:700;margin-bottom:10px}
+.card p{color:var(--grigio-caldo);font-size:.98rem}
+.card .tag-foto{display:inline-block;margin-top:16px;font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--oro-scuro)}
+.nota-prezzi{margin-top:26px;color:var(--grigio-caldo);font-size:.95rem;max-width:58ch}
+@media (max-width:820px){.card-grid{grid-template-columns:1fr}}
+
+/* ---------- trasformazioni ---------- */
+.trasformazioni{background:var(--antracite);color:var(--avorio)}
+.dittico{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,2vw,24px);margin-top:clamp(28px,5vh,48px);max-width:860px}
+.dittico figure{border:1.5px solid var(--oro);padding:clamp(8px,1.2vw,14px);border-radius:2px;background:var(--antracite-fondo)}
+.dittico .foto-clip{overflow:hidden;border-radius:1px}
+.dittico img{transition:transform .5s var(--curva)}
+.dittico figure:hover img{transform:scale(1.03)}
+.dittico figcaption{padding-top:12px;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--velina)}
+.trasf-nota{margin-top:26px;max-width:58ch;color:var(--velina)}
+@media (max-width:640px){.dittico{grid-template-columns:1fr}}
+
+/* ---------- salone ---------- */
+.salone{background:var(--avorio);padding-bottom:0}
+.salone-testo{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,4vw,64px);align-items:end;margin-bottom:clamp(28px,5vh,48px)}
+.salone-dettagli{list-style:none;color:var(--grigio-caldo)}
+.salone-dettagli li{padding:10px 0;border-bottom:1px solid var(--bordo-chiaro);display:flex;gap:12px;align-items:baseline}
+.salone-dettagli li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--oro);flex:none;transform:translateY(-1px)}
+.salone-panorama img{width:100%}
+.salone-cap{padding:14px clamp(20px,4vw,48px) 0;font-size:.85rem;color:var(--grigio-caldo);letter-spacing:.06em;text-transform:uppercase;text-align:right;padding-bottom:20px}
+@media (max-width:820px){.salone-testo{grid-template-columns:1fr}.salone-panorama img{height:230px;object-fit:cover}}
+
+/* ---------- galleria ---------- */
+.galleria{background:var(--avorio-alto);border-top:1px solid var(--bordo-chiaro)}
+.gallery-grid{columns:3 300px;column-gap:16px;margin-top:clamp(28px,5vh,48px)}
+.gallery-grid button{display:block;width:100%;border:0;padding:0;margin-bottom:16px;cursor:pointer;background:var(--antracite);border-radius:3px;overflow:hidden;break-inside:avoid;position:relative}
+.gallery-grid button img{width:100%;transition:transform .45s var(--curva),opacity .45s}
+.gallery-grid button:hover img{transform:scale(1.045);opacity:.92}
+.tile-tag{position:absolute;left:10px;bottom:10px;background:rgba(36,36,42,.92);color:var(--avorio);font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:6px 12px;border-radius:999px;pointer-events:none}
+
+/* ---------- lightbox ---------- */
+.lightbox{position:fixed;inset:0;z-index:180;background:rgba(23,23,27,.96);visibility:hidden;opacity:0;transition:opacity .3s var(--curva),visibility .3s;display:flex;align-items:center;justify-content:center;padding:clamp(12px,3vw,40px)}
+.lightbox.open{visibility:visible;opacity:1}
+.lightbox figure{max-width:min(1100px,92vw);max-height:100%;display:flex;flex-direction:column;align-items:center}
+.lightbox img{max-height:76vh;width:auto;max-width:100%;border-radius:2px}
+.lightbox figcaption{margin-top:14px;background:var(--antracite);border:1px solid var(--bordo-scuro);color:var(--avorio);font-size:.92rem;padding:10px 18px;border-radius:999px;text-align:center}
+.lb-btn{position:absolute;background:rgba(36,36,42,.94);border:1px solid var(--bordo-scuro);color:var(--avorio);width:52px;height:52px;border-radius:50%;font-size:1.35rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .2s var(--curva)}
+.lb-btn:hover{transform:scale(1.08)}
+.lb-close{top:18px;right:18px}
+.lb-prev{left:14px;top:50%;transform:translateY(-50%)}
+.lb-next{right:14px;top:50%;transform:translateY(-50%)}
+.lb-prev:hover{transform:translateY(-50%) scale(1.08)}
+.lb-next:hover{transform:translateY(-50%) scale(1.08)}
+.lb-counter{position:absolute;top:30px;left:50%;transform:translateX(-50%);background:rgba(36,36,42,.94);color:var(--avorio);font-size:.85rem;font-weight:600;padding:7px 16px;border-radius:999px}
+@media (max-width:640px){.lightbox img{max-height:64vh}.lb-prev{left:8px}.lb-next{right:8px}}
+
+/* ---------- citazione ---------- */
+.citazione{background:var(--antracite);color:var(--avorio);text-align:center}
+.citazione blockquote p{font-family:"Syne",sans-serif;font-weight:700;font-size:clamp(1.7rem,4.5vw,3rem);line-height:1.2;max-width:20ch;margin-inline:auto}
+.citazione cite{display:block;margin-top:18px;font-style:normal;font-size:.85rem;letter-spacing:.24em;text-transform:uppercase;color:var(--oro-chiaro)}
+.citazione .fonte{margin-top:10px;font-size:.8rem;color:var(--velina)}
+
+/* ---------- contatti ---------- */
+.contatti{background:var(--antracite-fondo);color:var(--avorio);border-top:1px solid var(--bordo-scuro)}
+.contatti-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,72px);margin-top:clamp(28px,5vh,48px)}
+.tel-grande{display:inline-block;font-family:"Syne",sans-serif;font-weight:800;font-size:clamp(1.7rem,3.2vw,2.8rem);white-space:nowrap;color:var(--oro-chiaro);text-decoration:none;letter-spacing:.02em;border-bottom:3px solid var(--oro);padding-bottom:4px}
+.contatti-blocco{margin-top:30px}
+.contatti-blocco strong{display:block;font-size:.75rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--oro-chiaro);margin-bottom:6px}
+.contatti-blocco a{color:var(--avorio);text-decoration:none;border-bottom:1.5px solid var(--oro);padding-bottom:1px}
+.orari-tab{list-style:none;border-top:1px solid var(--bordo-scuro)}
+.orari-tab li{display:flex;justify-content:space-between;gap:18px;padding:13px 0;border-bottom:1px solid var(--bordo-scuro);font-size:.98rem}
+.orari-tab .giorno{color:var(--velina);font-weight:500}
+.orari-tab .ore{color:var(--avorio);text-align:right}
+.contatti .chip-orari{background:var(--avorio);color:var(--antracite)}
+.social-riga{margin-top:26px;display:flex;gap:22px}
+.social-riga a{color:var(--oro-chiaro);font-weight:600;text-decoration:none;border-bottom:1.5px solid var(--oro);padding-bottom:2px}
+@media (max-width:820px){.contatti-grid{grid-template-columns:1fr}}
+
+/* ---------- footer ---------- */
+footer{background:var(--antracite-notte);color:var(--velina);padding:40px 0 50px;font-size:.85rem}
+.footer-flex{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-start}
+.footer-brand{font-family:"Syne",sans-serif;font-weight:800;color:var(--avorio);font-size:1.1rem;letter-spacing:.05em;display:flex;align-items:center;gap:10px}
+.footer-brand svg{width:22px;height:22px}
+.footer-note{max-width:62ch;line-height:1.7}
+.footer-note a{color:var(--oro-chiaro)}
+
+/* ---------- no-scroll ---------- */
+body.no-scroll{overflow:hidden}
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero-media img{animation:none}
+  .marquee-track{animation:none}
+  .js .cascata{opacity:1;transform:none;transition:none}
+  .js [data-reveal]{opacity:1;transform:none;transition:none}
+  .js .mono-draw path,.js .mono-draw circle{transition:none}
+  .btn,.card,.nav-cta,.dittico img,.gallery-grid button img,.lb-btn{transition:none}
+}
+</style>
+<noscript><style>
+.burger{display:none}
+@media (max-width:919px){
+  .nav{background:var(--antracite);position:static;height:auto;padding-block:10px}
+  .nav-inner{flex-wrap:wrap;row-gap:6px}
+  .nav-links{display:flex;flex-wrap:wrap;gap:12px 16px;width:100%;order:3}
+  .nav-links a{font-size:.9rem}
+  .hero{padding-top:0}
+}
+.nav{background:var(--antracite)}
+</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#contenuto">Salta al contenuto</a>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#contenuto" aria-label="Ruggiero Acconciatori, torna all'inizio">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="#D9A85C" stroke-width="7" stroke-linecap="round"><path d="M30 14 L64 60"/><path d="M70 14 L36 60"/><circle cx="30" cy="71" r="10"/><circle cx="70" cy="71" r="10"/></g><circle cx="50" cy="41" r="5" fill="#D9A85C"/></svg>
+      <span>Ruggiero<small>Acconciatori · Latiano</small></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#servizi">Servizi</a></li>
+      <li><a href="#trasformazioni">I lavori</a></li>
+      <li><a href="#salone">Il salone</a></li>
+      <li><a href="#galleria">Galleria</a></li>
+      <li><a href="#contatti">Contatti</a></li>
+    </ul>
+    <span class="nav-tel"><a class="nav-cta" href="tel:+393461491242">Chiama</a></span>
+    <button class="burger" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu di navigazione">
+  <nav>
+    <ul>
+      <li><a href="#servizi">Servizi</a></li>
+      <li><a href="#trasformazioni">I lavori</a></li>
+      <li><a href="#salone">Il salone</a></li>
+      <li><a href="#galleria">Galleria</a></li>
+      <li><a href="#contatti">Contatti</a></li>
+    </ul>
+  </nav>
+  <div class="menu-contatti">
+    Via Francavilla 51, Latiano (BR)<br>
+    <a href="tel:+393461491242">346 149 1242</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero scuro" aria-label="Presentazione">
+    <div class="hero-testata" id="contenuto" tabindex="-1">
+      <svg class="mono mono-draw cascata" viewBox="0 0 100 100" aria-hidden="true">
+        <g><path d="M30 12 L66 61"/><path d="M70 12 L34 61"/><circle cx="28" cy="72" r="11"/><circle cx="72" cy="72" r="11"/></g>
+        <circle class="perno" cx="50" cy="39" r="4.5"/>
+      </svg>
+      <p class="hero-eyebrow cascata c2">Hair &amp; Beauty · Latiano</p>
+      <h1 class="cascata c2">Ruggiero</h1>
+      <p class="hero-sub cascata c3">Acconciatori</p>
+    </div>
+    <div class="hero-sotto">
+      <div class="hero-testo">
+        <p class="hero-tagline cascata c4">«Le nostre porte sono sempre aperte. Ti stiamo aspettando!» Taglio, colore e piega in Via Francavilla 51, a Latiano.</p>
+        <div class="hero-cta cascata c5">
+          <a class="btn btn-oro" href="tel:+393461491242">Chiama il salone</a>
+          <a class="btn btn-linea" href="#trasformazioni">Guarda i lavori</a>
+        </div>
+      </div>
+      <div class="hero-foto cascata c3">
+        <div class="hero-quadro">
+          <div class="hero-media">
+            <picture>
+              <source media="(max-width:720px)" srcset="img/balayage-mobile.jpg">
+              <img src="img/balayage.jpg" width="1400" height="1868" alt="Balayage biondo su capelli lunghi e lisci, lavoro del salone Ruggiero Acconciatori" fetchpriority="high">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-ribbon">
+      <div class="wrap">
+        <div><strong>Dove</strong>Via Francavilla 51, Latiano (BR)</div>
+        <div><strong>Quando</strong>Mar–Ven 9–13 · 15–19 / Sab 8–19</div>
+        <div><strong>Telefono</strong><a href="tel:+393461491242">346 149 1242</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <ul class="marquee-lista">
+        <li>Taglio</li><li>Tinta</li><li>Messa in piega</li><li>Taglio</li><li>Tinta</li><li>Messa in piega</li>
+      </ul>
+      <ul class="marquee-lista" aria-hidden="true">
+        <li>Taglio</li><li>Tinta</li><li>Messa in piega</li><li>Taglio</li><li>Tinta</li><li>Messa in piega</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ INTRO ============ -->
+  <section class="intro" aria-label="Il principio del salone">
+    <div class="wrap" data-reveal>
+      <p class="eyebrow">Il principio</p>
+      <p class="intro-claim">«Un servizio di qualità produce <em>risultati eccezionali</em>.»</p>
+      <p class="intro-nota">È la promessa scritta sulla nostra pagina, ed è quello che si vede nei lavori qui sotto.</p>
+      <p class="chip-orari" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <div class="divisore" aria-hidden="true">
+    <svg viewBox="0 0 100 100"><g><path d="M30 14 L64 60"/><path d="M70 14 L36 60"/><circle cx="30" cy="71" r="10"/><circle cx="70" cy="71" r="10"/></g><circle class="perno" cx="50" cy="41" r="5"/></svg>
+  </div>
+
+  <!-- ============ SERVIZI ============ -->
+  <section class="servizi" id="servizi" aria-label="Servizi">
+    <div class="wrap">
+      <div data-reveal>
+        <p class="eyebrow">Servizi</p>
+        <h2>Tre cose, fatte bene</h2>
+        <p class="sez-testo">Niente menù chilometrici: in salone si lavora su taglio, colore e piega. Il resto lo raccontano le foto.</p>
+      </div>
+      <div class="card-grid">
+        <article class="card" data-reveal>
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M14 6 L32 30"/><path d="M34 6 L16 30"/><circle cx="13" cy="36" r="5.5"/><circle cx="35" cy="36" r="5.5"/></svg>
+          <h3>Taglio</h3>
+          <p>Linee nette e geometrie pulite, come il bob che vedi nei lavori: il taglio si decide insieme, davanti allo specchio.</p>
+          <span class="tag-foto">Nella galleria: il bob</span>
+        </article>
+        <article class="card" data-reveal>
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 5 C24 5 12 20 12 29 a12 12 0 0 0 24 0 C36 20 24 5 24 5 Z"/><path d="M19 30 a5 5 0 0 0 5 5"/></svg>
+          <h3>Tinta</h3>
+          <p>Dal balayage biondo alle ciocche blu e verdi chiuse in una treccia: copertura piena, riflesso o colore fantasia.</p>
+          <span class="tag-foto">Nella galleria: balayage e treccia</span>
+        </article>
+        <article class="card" data-reveal>
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 16 C14 10 22 22 30 16 S42 10 42 16"/><path d="M6 26 C14 20 22 32 30 26 S42 20 42 26"/><path d="M6 36 C14 30 22 42 30 36 S42 30 42 36"/></svg>
+          <h3>Messa in piega</h3>
+          <p>Onde morbide o liscio pieno, in base al taglio e alla giornata che ti aspetta.</p>
+          <span class="tag-foto">Nella galleria: le onde</span>
+        </article>
+      </div>
+      <p class="nota-prezzi" data-reveal>I prezzi si concordano in salone, davanti allo specchio: ogni testa è un lavoro a sé.</p>
+    </div>
+  </section>
+
+  <!-- ============ TRASFORMAZIONI ============ -->
+  <section class="trasformazioni scuro" id="trasformazioni" aria-label="I lavori">
+    <div class="wrap">
+      <div data-reveal>
+        <p class="eyebrow">I lavori</p>
+        <h2>Il taglio, da ogni lato</h2>
+        <p class="sez-testo">Un bob si giudica girandoci intorno: la linea deve tenere di profilo e sulla nuca. Questo è uscito dalle nostre poltrone.</p>
+      </div>
+      <div class="dittico" data-reveal>
+        <figure>
+          <div class="foto-clip"><img src="img/bob-prima.jpg" width="1100" height="2200" loading="lazy" alt="Bob castano visto di profilo, con la linea del taglio in evidenza"></div>
+          <figcaption>Di profilo</figcaption>
+        </figure>
+        <figure>
+          <div class="foto-clip"><img src="img/bob-dopo.jpg" width="1100" height="2200" loading="lazy" alt="Lo stesso bob castano visto dalla nuca, con la linea netta sul collo"></div>
+          <figcaption>Sulla nuca</figcaption>
+        </figure>
+      </div>
+      <p class="trasf-nota" data-reveal>La stessa cura vale per il colore: nella galleria trovi il balayage, la treccia a spina di pesce su blu e verde e le onde con schiaritura sulle punte.</p>
+    </div>
+  </section>
+
+  <!-- ============ SALONE ============ -->
+  <section class="salone" id="salone" aria-label="Il salone">
+    <div class="wrap salone-testo">
+      <div data-reveal>
+        <p class="eyebrow">Il salone</p>
+        <h2>Via Francavilla 51</h2>
+        <p class="sez-testo">Uno spazio chiaro e ordinato, dove aspettare è già stare comodi.</p>
+      </div>
+      <ul class="salone-dettagli" data-reveal>
+        <li>Specchiere retroilluminate a ogni postazione</li>
+        <li>Bancone luminoso all'ingresso e divano per chi accompagna</li>
+        <li>I prodotti in vista, sugli scaffali: quello che usiamo lo puoi vedere</li>
+      </ul>
+    </div>
+    <div class="salone-panorama" data-reveal>
+      <img src="img/salone.jpg" width="2200" height="684" loading="lazy" alt="Panoramica interna del salone: bancone luminoso, poltrone nere, specchiere retroilluminate e scaffali di prodotti">
+    </div>
+    <p class="salone-cap">Il salone, fotografato dall'ingresso</p>
+  </section>
+
+  <!-- ============ GALLERIA ============ -->
+  <section class="galleria" id="galleria" aria-label="Galleria fotografica">
+    <div class="wrap">
+      <div data-reveal>
+        <p class="eyebrow">Galleria</p>
+        <h2>Foto vere, dalle nostre poltrone</h2>
+        <p class="sez-testo">Nessuna foto d'archivio: sono i lavori e gli spazi del salone.</p>
+      </div>
+      <div class="gallery-grid" id="gallery">
+        <button data-src="img/balayage.jpg" data-cap="Balayage biondo su capelli lunghi e lisci" data-reveal>
+          <img src="img/balayage.jpg" width="1400" height="1868" loading="lazy" alt="Balayage biondo su capelli lunghi e lisci">
+          <span class="tile-tag">Tinta</span>
+        </button>
+        <button data-src="img/treccia.jpg" data-cap="Treccia a spina di pesce su colore blu e verde" data-reveal>
+          <img src="img/treccia.jpg" width="1400" height="1770" loading="lazy" alt="Treccia a spina di pesce su capelli scuri con ciocche blu e verdi">
+          <span class="tile-tag">Tinta</span>
+        </button>
+        <button data-src="img/onde.jpg" data-cap="Onde morbide con schiaritura sulle punte" data-reveal>
+          <img src="img/onde.jpg" width="1400" height="1750" loading="lazy" alt="Onde morbide castane con punte schiarite, davanti al fondale del salone">
+          <span class="tile-tag">Messa in piega</span>
+        </button>
+        <button data-src="img/bob-prima.jpg" data-cap="Il bob, di profilo" data-reveal>
+          <img src="img/bob-prima.jpg" width="1100" height="2200" loading="lazy" alt="Bob castano visto di profilo">
+          <span class="tile-tag">Taglio</span>
+        </button>
+        <button data-src="img/bob-dopo.jpg" data-cap="Il bob, sulla nuca" data-reveal>
+          <img src="img/bob-dopo.jpg" width="1100" height="2200" loading="lazy" alt="Bob castano visto dalla nuca">
+          <span class="tile-tag">Taglio</span>
+        </button>
+        <button data-src="img/salone.jpg" data-cap="Il salone, dall'ingresso" data-reveal>
+          <img src="img/salone.jpg" width="2200" height="684" loading="lazy" alt="Panoramica interna del salone">
+          <span class="tile-tag">Il salone</span>
+        </button>
+        <button data-src="img/editoriale.jpg" data-cap="Acconciatura scenica con trucco editoriale" data-reveal>
+          <img src="img/editoriale.jpg" width="1400" height="1400" loading="lazy" alt="Scatto editoriale con acconciatura scultorea e trucco scenico, ripetuto a specchio">
+          <span class="tile-tag">Editoriale</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CITAZIONE ============ -->
+  <section class="citazione scuro" aria-label="La citazione del salone">
+    <div class="wrap" data-reveal>
+      <blockquote>
+        <p>«Diventiamo ciò che pensiamo»</p>
+        <cite>— Budda</cite>
+      </blockquote>
+      <p class="fonte">La frase che apre la pagina del salone</p>
+    </div>
+  </section>
+
+  <!-- ============ CONTATTI ============ -->
+  <section class="contatti scuro" id="contatti" aria-label="Contatti e orari">
+    <div class="wrap">
+      <div data-reveal>
+        <p class="eyebrow">Contatti</p>
+        <h2>Ti stiamo aspettando</h2>
+      </div>
+      <div class="contatti-grid">
+        <div data-reveal>
+          <a class="tel-grande" href="tel:+393461491242">346 149 1242</a>
+          <div class="contatti-blocco">
+            <strong>Indirizzo</strong>
+            Via Francavilla 51, 72022 Latiano (BR)<br>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Via+Francavilla+51%2C+72022+Latiano+BR" rel="noopener" target="_blank">Apri in Google Maps</a>
+          </div>
+          <div class="contatti-blocco">
+            <strong>Email</strong>
+            <a href="mailto:ruggierohair@libero.it">ruggierohair@libero.it</a>
+          </div>
+          <div class="social-riga">
+            <a href="https://www.facebook.com/ruggierohair/" rel="noopener" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/ruggieroacconciatori_" rel="noopener" target="_blank">Instagram</a>
+          </div>
+        </div>
+        <div data-reveal>
+          <ul class="orari-tab">
+            <li><span class="giorno">Lunedì</span><span class="ore">Chiuso</span></li>
+            <li><span class="giorno">Martedì–Venerdì</span><span class="ore">9:00–13:00 · 15:00–19:00</span></li>
+            <li><span class="giorno">Sabato</span><span class="ore">8:00–19:00</span></li>
+            <li><span class="giorno">Domenica</span><span class="ore">Chiuso</span></li>
+          </ul>
+          <p class="chip-orari" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-flex">
+    <div class="footer-brand">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="#D9A85C" stroke-width="7" stroke-linecap="round"><path d="M30 14 L64 60"/><path d="M70 14 L36 60"/><circle cx="30" cy="71" r="10"/><circle cx="70" cy="71" r="10"/></g><circle cx="50" cy="41" r="5" fill="#D9A85C"/></svg>
+      Ruggiero Acconciatori
+    </div>
+    <div class="footer-note">
+      Sito dimostrativo realizzato con AI da FAR AI · contenuti da rivedere con l'attività prima della pubblicazione.<br>
+      Testi e fotografie provengono dal sito attuale di Ruggiero Acconciatori Hair &amp; Beauty e restano di proprietà dell'attività.
+    </div>
+  </div>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto a schermo intero">
+  <button class="lb-btn lb-close" aria-label="Chiudi la foto">×</button>
+  <p class="lb-counter" aria-live="polite">1 / 7</p>
+  <button class="lb-btn lb-prev" aria-label="Foto precedente">‹</button>
+  <figure>
+    <img src="img/balayage.jpg" alt="">
+    <figcaption>Balayage biondo su capelli lunghi e lisci</figcaption>
+  </figure>
+  <button class="lb-btn lb-next" aria-label="Foto successiva">›</button>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  var ridotto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- nav solid ---------- */
+  var nav = document.getElementById('nav');
+  function suScroll(){ nav.classList.toggle('solid', window.scrollY > 32); }
+  window.addEventListener('scroll', suScroll, {passive:true});
+  suScroll();
+
+  /* ---------- cascata hero ---------- */
+  window.requestAnimationFrame(function(){
+    document.querySelectorAll('.cascata').forEach(function(el){ el.classList.add('via'); });
+  });
+
+  /* ---------- monogramma che si disegna ---------- */
+  document.querySelectorAll('.mono-draw path, .mono-draw circle:not(.perno)').forEach(function(p){
+    if (!p.getTotalLength) return;
+    var L = p.getTotalLength();
+    p.style.strokeDasharray = L;
+    p.style.strokeDashoffset = ridotto ? 0 : L;
+  });
+  if (!ridotto) {
+    window.requestAnimationFrame(function(){ window.requestAnimationFrame(function(){
+      document.querySelectorAll('.mono-draw path, .mono-draw circle:not(.perno)').forEach(function(p){
+        p.style.strokeDashoffset = 0;
+      });
+    });});
+  }
+
+  /* ---------- reveal on scroll ---------- */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:.12, rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('[data-reveal]').forEach(function(el){ io.observe(el); });
+
+  /* ---------- chip orari vivo (orari reali del salone) ---------- */
+  var orari = {0:null, 1:null, 2:[[9,0,13,0],[15,0,19,0]], 3:[[9,0,13,0],[15,0,19,0]], 4:[[9,0,13,0],[15,0,19,0]], 5:[[9,0,13,0],[15,0,19,0]], 6:[[8,0,19,0]]};
+  var nomi = ['domenica','lunedì','martedì','mercoledì','giovedì','venerdì','sabato'];
+  function fmt(h,m){ return h + ':' + (m<10?'0':'') + m; }
+  function statoOrari(){
+    var ora = new Date(), g = ora.getDay(), mins = ora.getHours()*60 + ora.getMinutes();
+    var fasce = orari[g];
+    if (fasce) for (var i=0;i<fasce.length;i++){
+      var a = fasce[i][0]*60+fasce[i][1], b = fasce[i][2]*60+fasce[i][3];
+      if (mins >= a && mins < b) return {aperto:true, testo:'Aperto adesso · fino alle ' + fmt(fasce[i][2],fasce[i][3])};
+      if (mins < a) return {aperto:false, testo:'Chiuso adesso · apre alle ' + fmt(fasce[i][0],fasce[i][1])};
+    }
+    for (var d=1; d<=7; d++){
+      var gg = (g+d)%7, f2 = orari[gg];
+      if (f2) return {aperto:false, testo:'Chiuso adesso · riapre ' + nomi[gg] + ' alle ' + fmt(f2[0][0],f2[0][1])};
+    }
+    return null;
+  }
+  var st = statoOrari();
+  if (st) document.querySelectorAll('.chip-orari').forEach(function(chip){
+    var dot = document.createElement('span');
+    dot.className = 'pallino ' + (st.aperto ? 'on' : 'off');
+    dot.setAttribute('aria-hidden','true');
+    chip.appendChild(dot);
+    chip.appendChild(document.createTextNode(st.testo));
+  });
+
+  /* ---------- inert + focus helpers ---------- */
+  /* Il burger resta FUORI dall'inert: la barra sta sopra il pannello (z-index)
+     e il burger, diventato X, è il bottone di chiusura. Pattern I Due Sassi. */
+  var burger = document.querySelector('.burger');
+  var zoneInert = [document.querySelector('main'), document.querySelector('footer'), document.querySelector('.skip-link'), document.querySelector('.nav-brand'), document.querySelector('.nav-links'), document.querySelector('.nav-cta')];
+  function inertAltri(on){
+    zoneInert.forEach(function(z){ if (z){ if (on) z.setAttribute('inert',''); else z.removeAttribute('inert'); } });
+  }
+  function focusQuandoVisibile(pannello, el){
+    var giri = 0;
+    (function prova(){
+      if (getComputedStyle(pannello).visibility === 'visible' || giri > 60) { el.focus(); return; }
+      giri++; window.requestAnimationFrame(prova);
+    })();
+  }
+  function trappolaTab(pannello, ev, extra){
+    var f = Array.prototype.slice.call(pannello.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'));
+    if (extra) f = [extra].concat(f);
+    /* niente offsetParent: in un pannello position:fixed è null anche sul visibile */
+    f = f.filter(function(el){ return el.getClientRects().length > 0; });
+    if (!f.length) return;
+    var primo = f[0], ultimo = f[f.length-1];
+    if (ev.shiftKey && document.activeElement === primo) { ev.preventDefault(); ultimo.focus(); }
+    else if (!ev.shiftKey && document.activeElement === ultimo) { ev.preventDefault(); primo.focus(); }
+  }
+
+  /* ---------- menu mobile ---------- */
+  var menu = document.getElementById('mobileMenu');
+  function apriMenu(){
+    menu.classList.add('open');
+    burger.classList.add('open');
+    burger.setAttribute('aria-expanded','true');
+    burger.setAttribute('aria-label','Chiudi il menu');
+    document.body.classList.add('no-scroll');
+    inertAltri(true);
+  }
+  function chiudiMenu(riporta){
+    menu.classList.remove('open');
+    burger.classList.remove('open');
+    burger.setAttribute('aria-expanded','false');
+    burger.setAttribute('aria-label','Apri il menu');
+    document.body.classList.remove('no-scroll');
+    inertAltri(false);
+    if (riporta !== false) burger.focus();
+  }
+  burger.addEventListener('click', function(){ menu.classList.contains('open') ? chiudiMenu() : apriMenu(); });
+  menu.querySelectorAll('nav a').forEach(function(a){
+    a.addEventListener('click', function(){ chiudiMenu(false); });
+  });
+
+  /* ---------- lightbox ---------- */
+  var lb = document.getElementById('lightbox');
+  var lbImg = lb.querySelector('img');
+  var lbCap = lb.querySelector('figcaption');
+  var lbCounter = lb.querySelector('.lb-counter');
+  var lbClose = lb.querySelector('.lb-close');
+  var lbPrev = lb.querySelector('.lb-prev');
+  var lbNext = lb.querySelector('.lb-next');
+  var tessere = Array.prototype.slice.call(document.querySelectorAll('button[data-src]'));
+  var idx = 0, focusPrimaLb = null;
+  function mostra(i){
+    idx = (i + tessere.length) % tessere.length;
+    var t = tessere[idx], im = t.querySelector('img');
+    lbImg.src = t.getAttribute('data-src');
+    lbImg.alt = im ? im.alt : '';
+    lbCap.textContent = t.getAttribute('data-cap') || '';
+    lbCounter.textContent = (idx+1) + ' / ' + tessere.length;
+  }
+  function apriLb(i){
+    focusPrimaLb = document.activeElement;
+    mostra(i);
+    lb.classList.add('open');
+    document.body.classList.add('no-scroll');
+    inertAltri(true);
+    burger.setAttribute('inert','');
+    focusQuandoVisibile(lb, lbClose);
+  }
+  function chiudiLb(){
+    lb.classList.remove('open');
+    document.body.classList.remove('no-scroll');
+    burger.removeAttribute('inert');
+    if (!menu.classList.contains('open')) inertAltri(false);
+    if (focusPrimaLb) focusPrimaLb.focus();
+  }
+  tessere.forEach(function(t, i){ t.addEventListener('click', function(){ apriLb(i); }); });
+  lbClose.addEventListener('click', chiudiLb);
+  lbPrev.addEventListener('click', function(){ mostra(idx-1); });
+  lbNext.addEventListener('click', function(){ mostra(idx+1); });
+  lb.addEventListener('click', function(ev){ if (ev.target === lb) chiudiLb(); });
+
+  /* ---------- tastiera globale ---------- */
+  document.addEventListener('keydown', function(ev){
+    if (lb.classList.contains('open')) {
+      if (ev.key === 'Escape') { ev.preventDefault(); chiudiLb(); }
+      else if (ev.key === 'ArrowLeft') { mostra(idx-1); }
+      else if (ev.key === 'ArrowRight') { mostra(idx+1); }
+      else if (ev.key === 'Tab') { trappolaTab(lb, ev); }
+      return;
+    }
+    if (menu.classList.contains('open')) {
+      if (ev.key === 'Escape') { ev.preventDefault(); chiudiMenu(); }
+      else if (ev.key === 'Tab') { trappolaTab(menu, ev, burger); }
+    }
+  });
+})();
+</script>
+  <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

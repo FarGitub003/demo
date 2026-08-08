@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js')</script>
+<title>Masseria Barbera · Minervino Murge, Alta Murgia</title>
+<meta name="description" content="Osteria di masseria sul balcone delle Puglie, dentro il Parco nazionale dell'Alta Murgia. Chiocciola nella guida Osterie d'Italia di Slow Food nel 2025 e nel 2026.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#3A2B12">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Masseria Barbera · Minervino Murge, Alta Murgia">
+<meta property="og:description" content="Osteria di masseria sul balcone delle Puglie. Chiocciola nella guida Osterie d'Italia di Slow Food nel 2025 e nel 2026.">
+<meta property="og:image" content="https://demo.francescoar.com/masseria-barbera-minervino/img/marchio.jpg">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 124'%3E%3Crect width='60' height='124' rx='10' fill='%233A2B12'/%3E%3Cpath fill='none' stroke='%23E3BE6B' stroke-width='5.5' stroke-linecap='round' stroke-linejoin='round' d='M30 118 C30 104 30 80 30 44 M30 100 C37 97,44 91,45 79 C36 82,31 90,30 100 M30 100 C23 97,16 91,15 79 C24 82,29 90,30 100 M30 85 C37 82,44 76,45 64 C36 67,31 75,30 85 M30 85 C23 82,16 76,15 64 C24 67,29 75,30 85 M30 70 C37 67,44 61,45 49 C36 52,31 60,30 70 M30 70 C23 67,16 61,15 49 C24 52,29 60,30 70 M30 55 C37 52,44 46,45 34 C36 37,31 45,30 55 M30 55 C23 52,16 46,15 34 C24 37,29 45,30 55 M30 47 C36.5 38 38 23 30 8 C22 23 23.5 38 30 47'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "@id": "https://www.masseriabarbera.it/#masseria",
+  "name": "Masseria Barbera",
+  "description": "Osteria di masseria a Minervino Murge (BT), sul balcone delle Puglie, in gran parte dentro il Parco nazionale dell'Alta Murgia. Chiocciola nella guida Osterie d'Italia di Slow Food nel 2025 e nel 2026.",
+  "image": "img/marchio.jpg",
+  "url": "http://www.masseriabarbera.it",
+  "email": "info@masseriabarbera.it",
+  "telephone": ["+390883692095", "+393683705725"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "SP 97, km 5.8505",
+    "addressLocality": "Minervino Murge",
+    "addressRegion": "BT",
+    "addressCountry": "IT"
+  },
+  "award": [
+    "Chiocciola, Osterie d'Italia 2025 (Slow Food)",
+    "Chiocciola, Osterie d'Italia 2026 (Slow Food)"
+  ],
+  "hasMap": "https://www.google.com/maps/search/?api=1&query=Masseria+Barbera+Minervino+Murge",
+  "sameAs": ["https://www.facebook.com/masseria.barbera"]
+}
+</script>
+<style>
+:root{
+  --calce:#F7F3EA;
+  --calce-2:#EFE7D6;
+  --inchiostro:#221A0D;
+  --terra:#5C4E38;
+  --grano-scuro:#7A5A12;
+  --oliva-scuro:#3D4E2A;
+  --arso:#3A2B12;
+  --oliva-fondo:#2E3A24;
+  --grano:#C9A24A;
+  --grano-chiaro:#E3BE6B;
+  --ease-spiga:cubic-bezier(.22,.86,.28,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Nunito Sans',system-ui,-apple-system,sans-serif;
+  background:var(--calce);
+  color:var(--inchiostro);
+  font-size:1.0625rem;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3{font-family:'Newsreader',Georgia,serif;font-weight:400;line-height:1.06}
+.wrap{max-width:1140px;margin:0 auto;padding:0 clamp(20px,4.5vw,52px)}
+.wrap-stretto{max-width:860px;margin:0 auto;padding:0 clamp(20px,4.5vw,52px)}
+
+/* ---------- accessibilità ---------- */
+.skip-link{
+  position:fixed;top:-70px;left:16px;z-index:200;
+  background:var(--inchiostro);color:var(--calce);
+  padding:11px 20px;border-radius:4px;font-weight:700;text-decoration:none;
+  transition:transform .2s var(--ease-spiga);
+}
+.skip-link:focus{top:0;transform:translateY(14px)}
+:focus-visible{outline:3px solid var(--grano-scuro);outline-offset:3px;border-radius:2px}
+/* main riceve il focus dallo skip-link (tabindex=-1) ma non deve disegnare una cornice */
+main:focus,main:focus-visible{outline:none}
+.scuro :focus-visible,.mobile-menu :focus-visible{outline-color:var(--grano)}
+
+/* ---------- firma: la spiga ---------- */
+.spiga{display:block;color:var(--grano-scuro)}
+.spiga path{fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+@keyframes traccia{to{stroke-dashoffset:0}}
+.js .spiga-hero path{stroke-dasharray:640;stroke-dashoffset:640}
+.hero.play .spiga-hero path{animation:traccia 2.1s var(--ease-spiga) .3s forwards}
+.js .divisore .spiga path{stroke-dasharray:640;stroke-dashoffset:640}
+.divisore.on .spiga path{animation:traccia 1.7s var(--ease-spiga) .1s forwards}
+
+/* ---------- nav ---------- */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:transparent;
+  transition:background-color .3s ease, box-shadow .3s ease;
+}
+.nav.scrolled{background:rgba(247,243,234,.95);box-shadow:0 1px 0 rgba(34,26,13,.14);backdrop-filter:blur(8px)}
+.nav-inner{
+  max-width:1140px;margin:0 auto;
+  padding:13px clamp(20px,4.5vw,52px);
+  display:flex;align-items:center;gap:26px;
+}
+.nav-brand{
+  font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:1.14rem;
+  color:var(--inchiostro);text-decoration:none;
+  letter-spacing:.04em;white-space:nowrap;flex-shrink:0;
+  display:flex;align-items:center;gap:9px;
+}
+.nav-brand .spiga{width:15px;color:var(--grano-scuro)}
+.nav-brand .spiga path{stroke-width:5}
+.nav-links{display:flex;gap:24px;margin-left:auto;list-style:none;flex-shrink:0}
+.nav-links a{
+  color:var(--inchiostro);text-decoration:none;font-weight:600;font-size:.95rem;
+  position:relative;padding:4px 0;white-space:nowrap;
+}
+.nav-links a::after{
+  content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;
+  background:var(--grano-scuro);
+  transform:scaleX(0);transform-origin:left;transition:transform .25s var(--ease-spiga);
+}
+.nav-links a:hover::after,.nav-links a:focus-visible::after{transform:scaleX(1)}
+.nav-cta{
+  background:var(--arso);color:var(--calce);text-decoration:none;
+  font-weight:700;font-size:.93rem;padding:9px 20px;border-radius:2px;
+  white-space:nowrap;flex-shrink:0;
+  transition:background-color .25s ease, transform .25s var(--ease-spiga);
+}
+.nav-cta:hover{background:var(--grano-scuro);transform:translateY(-1px)}
+.burger{
+  display:none;margin-left:auto;
+  background:none;border:0;cursor:pointer;padding:10px;
+  width:46px;height:42px;position:relative;z-index:130;flex-shrink:0;
+}
+.burger span{
+  display:block;width:26px;height:2px;background:var(--inchiostro);
+  margin:6px auto;
+  transition:transform .3s var(--ease-spiga),opacity .2s ease,background-color .2s ease;
+}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+.burger[aria-expanded="true"] span{background:var(--calce)}
+
+body.menu-open .nav{z-index:130}
+body.menu-open .nav-brand{color:var(--calce)}
+body.menu-open .nav-brand .spiga{color:var(--grano)}
+body.menu-open .nav.scrolled{background:transparent;box-shadow:none;backdrop-filter:none}
+.mobile-menu{
+  position:fixed;inset:0;z-index:120;
+  background:var(--arso);
+  display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;
+  opacity:0;visibility:hidden;
+  transition:opacity .3s ease, visibility 0s linear .3s;
+}
+.mobile-menu.open{opacity:1;visibility:visible;transition:opacity .3s ease}
+.mobile-menu a{
+  color:var(--calce);text-decoration:none;
+  font-family:'Newsreader',Georgia,serif;font-weight:400;
+  font-size:clamp(1.75rem,6.4vw,2.5rem);
+  padding:9px 20px;
+  transform:translateY(14px);opacity:0;
+  transition:transform .4s var(--ease-spiga), opacity .4s ease, color .2s ease;
+}
+.mobile-menu.open a{transform:translateY(0);opacity:1}
+.mobile-menu.open a:nth-child(2){transition-delay:.05s}
+.mobile-menu.open a:nth-child(3){transition-delay:.1s}
+.mobile-menu.open a:nth-child(4){transition-delay:.15s}
+.mobile-menu.open a:nth-child(5){transition-delay:.2s}
+.mobile-menu a:hover{color:var(--grano-chiaro)}
+.mobile-menu .mm-tel{
+  font-family:'Nunito Sans',sans-serif;font-weight:700;font-size:1.06rem;
+  color:var(--grano-chiaro);margin-top:20px;letter-spacing:.03em;
+}
+
+/* ---------- hero ---------- */
+.hero{
+  min-height:100svh;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:104px 0 30px;
+  position:relative;
+  background:
+    radial-gradient(120% 80% at 78% 12%, rgba(201,162,74,.13), transparent 62%),
+    var(--calce);
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.32fr .68fr;
+  gap:clamp(30px,4.6vw,62px);align-items:center;
+}
+.hero-eyebrow{
+  font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--grano-scuro);margin-bottom:16px;
+}
+.hero h1{
+  font-size:clamp(3.05rem,10.4vw,7.2rem);
+  letter-spacing:-.028em;font-weight:400;
+  margin-bottom:22px;
+}
+.hero h1 em{display:block;font-style:normal;font-weight:300;color:var(--terra)}
+.hero-tag{
+  font-size:clamp(1.05rem,1.65vw,1.28rem);
+  color:var(--terra);max-width:33em;margin-bottom:30px;line-height:1.55;
+}
+.hero-tag b{color:var(--inchiostro);font-weight:700}
+.hero-azioni{display:flex;flex-wrap:wrap;gap:13px}
+.btn{
+  display:inline-block;text-decoration:none;font-weight:700;font-size:1rem;
+  padding:14px 28px;border-radius:2px;
+  transition:background-color .25s ease,color .25s ease,transform .25s var(--ease-spiga),box-shadow .25s ease;
+}
+.btn-pieno{background:var(--arso);color:var(--calce);box-shadow:0 2px 0 rgba(34,26,13,.18)}
+.btn-pieno:hover{background:var(--grano-scuro);transform:translateY(-2px);box-shadow:0 5px 0 rgba(34,26,13,.16)}
+.btn-vuoto{background:transparent;color:var(--inchiostro);box-shadow:inset 0 0 0 1.5px rgba(34,26,13,.34)}
+.btn-vuoto:hover{background:var(--calce-2);transform:translateY(-2px);box-shadow:inset 0 0 0 1.5px var(--grano-scuro)}
+.hero-spiga{width:60px;margin-bottom:22px}
+
+.marchio-cornice{
+  background:var(--calce-2);
+  padding:16px;
+  box-shadow:0 1px 0 rgba(34,26,13,.14), 0 16px 40px -26px rgba(34,26,13,.55);
+  position:relative;
+}
+.marchio-cornice img{width:100%}
+.marchio-didascalia{
+  margin-top:13px;font-size:.8rem;color:var(--terra);
+  letter-spacing:.045em;text-transform:uppercase;font-weight:700;text-align:center;
+}
+/* micro-orchestrazione: cascata dell'hero */
+.js .hero .att{opacity:0;transform:translateY(16px)}
+.hero.play .att{animation:sali .85s var(--ease-spiga) forwards}
+.hero.play .att-1{animation-delay:.05s}
+.hero.play .att-2{animation-delay:.16s}
+.hero.play .att-3{animation-delay:.28s}
+.hero.play .att-4{animation-delay:.4s}
+.hero.play .att-5{animation-delay:.5s}
+@keyframes sali{to{opacity:1;transform:translateY(0)}}
+
+.hero-fatti{
+  margin-top:clamp(38px,5vw,64px);
+  border-top:1px solid rgba(34,26,13,.16);
+  display:grid;grid-template-columns:repeat(3,1fr);
+}
+.hero-fatti div{padding:22px 26px 4px 0}
+.hero-fatti dt{
+  font-size:.73rem;font-weight:800;letter-spacing:.17em;text-transform:uppercase;
+  color:var(--grano-scuro);margin-bottom:6px;
+}
+.hero-fatti dd{font-size:1.02rem;color:var(--inchiostro);font-weight:600;line-height:1.4}
+
+/* ---------- bande ---------- */
+section{padding:clamp(70px,9vw,124px) 0}
+/* la barra è fissa: ogni bersaglio di ancora si ferma SOTTO, non dietro */
+#main,#chiocciola,#murgia,#venire,#contatti{scroll-margin-top:88px}
+.scuro{background:var(--arso);color:var(--calce)}
+.scuro h2,.scuro h3{color:var(--calce)}
+.verde{background:var(--oliva-fondo);color:var(--calce)}
+.verde h2,.verde h3{color:var(--calce)}
+.kicker{
+  font-size:.75rem;font-weight:800;letter-spacing:.19em;text-transform:uppercase;
+  color:var(--grano-scuro);margin-bottom:18px;
+}
+.scuro .kicker,.verde .kicker{color:var(--grano)}
+h2{font-size:clamp(2.1rem,4.4vw,3.5rem);letter-spacing:-.018em;margin-bottom:24px}
+.testo{font-size:clamp(1.03rem,1.35vw,1.16rem);line-height:1.72;color:var(--terra);max-width:37em}
+.scuro .testo,.verde .testo{color:rgba(247,243,234,.9)}
+.testo+.testo{margin-top:18px}
+
+/* citazione */
+.citazione blockquote{
+  font-family:'Newsreader',Georgia,serif;font-weight:300;font-style:italic;
+  font-size:clamp(1.6rem,3.7vw,2.85rem);line-height:1.28;
+  letter-spacing:-.012em;color:var(--calce);
+  border-left:3px solid var(--grano);padding-left:clamp(18px,3vw,34px);
+}
+.citazione figcaption{
+  margin-top:24px;padding-left:clamp(21px,3vw,37px);
+  font-size:.88rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--grano-chiaro);
+}
+.citazione .coda{margin-top:34px;padding-left:clamp(21px,3vw,37px)}
+
+/* numeri */
+.numeri{
+  margin-top:clamp(40px,5vw,58px);
+  display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,34px);
+}
+.numero{border-top:1px solid rgba(34,26,13,.3);padding-top:18px}
+.numero b{
+  display:block;font-family:'Newsreader',Georgia,serif;font-weight:400;
+  font-size:clamp(3rem,6.4vw,4.6rem);line-height:1;
+  letter-spacing:-.03em;color:var(--grano-scuro);margin-bottom:10px;
+}
+.numero span{display:block;font-size:.99rem;color:var(--terra);line-height:1.45;font-weight:600}
+.fonte{margin-top:30px;font-size:.9rem;color:var(--terra)}
+.fonte a{color:var(--grano-scuro);font-weight:700}
+
+/* divisore con la firma */
+.divisore{
+  display:flex;align-items:center;gap:22px;
+  max-width:1140px;margin:0 auto;padding:0 clamp(20px,4.5vw,52px);
+}
+.divisore i{flex:1;height:1px;background:rgba(34,26,13,.18);display:block}
+.divisore .spiga{width:36px;flex-shrink:0}
+
+/* murgia */
+.murgia-griglia{display:grid;grid-template-columns:1fr 1fr;gap:clamp(34px,5vw,72px);align-items:start}
+.murgia-dati{
+  margin-top:34px;display:flex;flex-wrap:wrap;gap:10px;
+}
+.murgia-dati li{
+  list-style:none;font-size:.88rem;font-weight:700;letter-spacing:.04em;
+  color:var(--calce);background:rgba(247,243,234,.11);
+  border:1px solid rgba(247,243,234,.26);
+  padding:8px 15px;border-radius:2px;
+}
+.arso-box{
+  background:rgba(0,0,0,.26);
+  border:1px solid rgba(247,243,234,.2);
+  padding:clamp(24px,3.2vw,36px);
+}
+.arso-box h3{font-size:clamp(1.4rem,2.5vw,1.95rem);margin-bottom:15px}
+
+/* card pratiche */
+.card-griglia{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.4vw,28px);margin-top:clamp(34px,4vw,50px)}
+.card{
+  background:var(--calce-2);
+  padding:clamp(24px,3vw,34px);
+  border:1px solid rgba(34,26,13,.13);
+  transition:transform .3s var(--ease-spiga),box-shadow .3s ease,border-color .3s ease;
+}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 34px -26px rgba(34,26,13,.7);border-color:rgba(34,26,13,.24)}
+.card h3{font-size:clamp(1.28rem,2vw,1.6rem);margin-bottom:12px;display:flex;align-items:baseline;gap:11px}
+.card h3 .spiga{width:13px;flex-shrink:0;align-self:center}
+.card h3 .spiga path{stroke-width:5.5}
+.card p{font-size:1rem;color:var(--terra);line-height:1.62}
+.card a{color:var(--grano-scuro);font-weight:700;text-decoration:none;border-bottom:1.5px solid rgba(122,90,18,.45)}
+.card a:hover{border-bottom-color:var(--grano-scuro)}
+
+/* contatti */
+.contatti-mail{
+  display:inline-block;
+  font-family:'Newsreader',Georgia,serif;font-weight:400;
+  font-size:clamp(1.55rem,4.6vw,3.1rem);letter-spacing:-.02em;
+  color:var(--grano-chiaro);text-decoration:none;
+  border-bottom:2px solid rgba(227,190,107,.42);
+  padding-bottom:5px;word-break:break-word;
+  transition:color .25s ease,border-color .25s ease;
+}
+.contatti-mail:hover{color:var(--calce);border-bottom-color:var(--calce)}
+.contatti-griglia{
+  margin-top:clamp(40px,5vw,58px);
+  display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,40px);
+}
+.contatti-griglia h3{
+  font-family:'Nunito Sans',sans-serif;font-weight:800;
+  font-size:.74rem;letter-spacing:.19em;text-transform:uppercase;
+  color:var(--grano);margin-bottom:13px;line-height:1.4;
+}
+.contatti-griglia p,.contatti-griglia a{color:var(--calce);font-size:1.05rem;line-height:1.6}
+.contatti-griglia a{text-decoration:none;border-bottom:1px solid rgba(247,243,234,.4);font-weight:600}
+.contatti-griglia a:hover{border-bottom-color:var(--grano-chiaro);color:var(--grano-chiaro)}
+.tel-riga{display:block;margin-bottom:8px}
+
+/* footer */
+footer{background:var(--calce-2);padding:clamp(46px,5vw,64px) 0 34px}
+.foot-top{display:flex;flex-wrap:wrap;gap:26px;align-items:center;justify-content:space-between}
+.foot-marchio{display:flex;align-items:center;gap:12px}
+.foot-marchio .spiga{width:22px}
+.foot-marchio b{font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:1.16rem;letter-spacing:.04em}
+.foot-link{display:flex;gap:22px;flex-wrap:wrap}
+.foot-link a{color:var(--terra);font-size:.96rem;font-weight:700;text-decoration:none;border-bottom:1px solid rgba(92,78,56,.4)}
+.foot-link a:hover{color:var(--grano-scuro);border-bottom-color:var(--grano-scuro)}
+.foot-ai{
+  margin-top:30px;padding-top:22px;border-top:1px solid rgba(34,26,13,.16);
+  font-size:.86rem;color:var(--terra);line-height:1.65;max-width:60em;
+}
+.foot-ai span{display:block}
+
+/* reveal */
+.js [data-reveal]{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s var(--ease-spiga)}
+.js [data-reveal].on{opacity:1;transform:translateY(0)}
+
+/* ---------- responsive ---------- */
+@media (max-width:940px){
+  .nav-links,.nav-cta{display:none}
+  .burger{display:block}
+  .hero-grid{grid-template-columns:1fr;gap:34px}
+  .marchio-cornice{max-width:330px;margin:0 auto}
+  .murgia-griglia{grid-template-columns:1fr}
+  .card-griglia{grid-template-columns:1fr 1fr}
+  .contatti-griglia{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  .hero-fatti{grid-template-columns:1fr}
+  .hero-fatti div{padding:18px 0 4px;border-bottom:1px solid rgba(34,26,13,.12)}
+  .hero-fatti div:last-child{border-bottom:0}
+  .numeri{grid-template-columns:1fr;gap:24px}
+  .card-griglia{grid-template-columns:1fr}
+  .contatti-griglia{grid-template-columns:1fr}
+  .hero{padding-top:96px}
+}
+@media (max-width:360px){
+  body{font-size:1rem}
+  .nav-brand{font-size:1.02rem}
+  .btn{padding:13px 20px;font-size:.95rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms !important;animation-delay:0ms !important;transition-duration:.001ms !important}
+  .spiga path{stroke-dashoffset:0 !important}
+  .js .hero .att{opacity:1;transform:none}
+  .js [data-reveal]{opacity:1;transform:none}
+}
+</style>
+<noscript><style>
+  /* Senza JS il burger non puo' aprire nulla e la barra non puo' diventare solida
+     allo scroll (testo scuro che scorrerebbe sopra le bande arso e oliva): la barra
+     diventa non fissa e piena di calce, coi link sempre visibili, che vanno a capo
+     invece di sfondare la riga. */
+  html{scroll-behavior:auto}
+  .nav{position:static;background:var(--calce);box-shadow:0 1px 0 rgba(34,26,13,.14)}
+  .nav-inner{flex-wrap:wrap;justify-content:center;gap:8px 18px}
+  .burger{display:none !important}
+  /* flex-shrink:0 del CSS base terrebbe la lista a 378px: a 320 sfonderebbe */
+  .nav-links{display:flex !important;flex-wrap:wrap;justify-content:center;margin-left:0;gap:4px 18px;flex-shrink:1;max-width:100%}
+  .nav-cta{display:inline-block !important}
+  /* sotto i 940 la riga singola non ci sta: due righe, non tre.
+     Marchio + CTA sopra, le voci sotto a tutta larghezza. */
+  @media (max-width:940px){
+    .nav-inner{padding-top:10px;padding-bottom:10px}
+    .nav-links{flex-basis:100%;order:2}
+    .nav-links a{font-size:.9rem}
+    .nav-cta{padding:7px 16px;font-size:.88rem;order:1}
+  }
+  .hero{padding-top:34px}
+  #main,#chiocciola,#murgia,#venire,#contatti{scroll-margin-top:8px}
+</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto</a>
+
+<nav class="nav" id="nav" aria-label="Navigazione principale">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#top">
+      <svg class="spiga" viewBox="0 0 60 124" aria-hidden="true"><path d="M30 118 C30 104 30 80 30 44 M30 100 C37 97,44 91,45 79 C36 82,31 90,30 100 M30 100 C23 97,16 91,15 79 C24 82,29 90,30 100 M30 85 C37 82,44 76,45 64 C36 67,31 75,30 85 M30 85 C23 82,16 76,15 64 C24 67,29 75,30 85 M30 70 C37 67,44 61,45 49 C36 52,31 60,30 70 M30 70 C23 67,16 61,15 49 C24 52,29 60,30 70 M30 55 C37 52,44 46,45 34 C36 37,31 45,30 55 M30 55 C23 52,16 46,15 34 C24 37,29 45,30 55 M30 47 C36.5 38 38 23 30 8 C22 23 23.5 38 30 47"/></svg>
+      Masseria Barbera
+    </a>
+    <ul class="nav-links">
+      <li><a href="#chiocciola">La Chiocciola</a></li>
+      <li><a href="#murgia">La Murgia</a></li>
+      <li><a href="#venire">Prima di venire</a></li>
+      <li><a href="#contatti">Contatti</a></li>
+    </ul>
+    <a class="nav-cta" href="tel:+390883692095">Chiama</a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Apri il menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu di navigazione">
+  <a href="#chiocciola">La Chiocciola</a>
+  <a href="#murgia">La Murgia</a>
+  <a href="#venire">Prima di venire</a>
+  <a href="#contatti">Contatti</a>
+  <a class="mm-tel" href="tel:+390883692095">0883 692 095</a>
+</div>
+
+<main id="main" tabindex="-1">
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <svg class="spiga spiga-hero hero-spiga att att-1" viewBox="0 0 60 124" aria-hidden="true"><path d="M30 118 C30 104 30 80 30 44 M30 100 C37 97,44 91,45 79 C36 82,31 90,30 100 M30 100 C23 97,16 91,15 79 C24 82,29 90,30 100 M30 85 C37 82,44 76,45 64 C36 67,31 75,30 85 M30 85 C23 82,16 76,15 64 C24 67,29 75,30 85 M30 70 C37 67,44 61,45 49 C36 52,31 60,30 70 M30 70 C23 67,16 61,15 49 C24 52,29 60,30 70 M30 55 C37 52,44 46,45 34 C36 37,31 45,30 55 M30 55 C23 52,16 46,15 34 C24 37,29 45,30 55 M30 47 C36.5 38 38 23 30 8 C22 23 23.5 38 30 47 M30 12 C30 8 30 4 30 1 M25.5 16 C23 11 21 7 19 3 M34.5 16 C37 11 39 7 41 3"/></svg>
+        <p class="hero-eyebrow att att-1">Minervino Murge · Alta Murgia · Puglia</p>
+        <h1 class="att att-2">Masseria<em>Barbera</em></h1>
+        <p class="hero-tag att att-3">Un'osteria di masseria sul balcone delle Puglie, a 429 metri sopra la valle dell'Ofanto. <b>Slow Food le ha dato la Chiocciola due anni di fila</b>, nell'edizione 2025 e in quella 2026 di Osterie d'Italia.</p>
+        <div class="hero-azioni att att-4">
+          <a class="btn btn-pieno" href="tel:+390883692095">Chiama la masseria</a>
+          <a class="btn btn-vuoto" href="mailto:info@masseriabarbera.it">Scrivi una mail</a>
+        </div>
+      </div>
+      <figure class="att att-5">
+        <div class="marchio-cornice">
+          <img src="img/marchio.jpg" width="900" height="900" alt="Il marchio di Masseria Barbera: un cerchio bianco tagliato da una stella a quattro punte, su fondo bruno.">
+        </div>
+        <figcaption class="marchio-didascalia">Il segno della masseria</figcaption>
+      </figure>
+    </div>
+
+    <dl class="hero-fatti att att-5">
+      <div>
+        <dt>Il riconoscimento</dt>
+        <dd>Chiocciola Slow Food, Osterie d'Italia 2025 e 2026</dd>
+      </div>
+      <div>
+        <dt>Dove si è</dt>
+        <dd>Dentro il Parco nazionale dell'Alta Murgia</dd>
+      </div>
+      <div>
+        <dt>Come si arriva</dt>
+        <dd>SP 97, km 5.8505, fuori Minervino Murge (BT)</dd>
+      </div>
+    </dl>
+  </div>
+</header>
+
+<section class="scuro citazione" data-reveal>
+  <div class="wrap-stretto">
+    <p class="kicker">Come si raccontano loro</p>
+    <figure>
+      <blockquote>«Immersa nei colori dell'Alta Murgia, la Masseria offre i sapori più genuini della nostra terra a KmZero…»</blockquote>
+      <figcaption>Dalla pagina Facebook di Masseria Barbera</figcaption>
+    </figure>
+    <div class="coda">
+      <p class="testo">Km zero, qui, è una misura corta davvero: il raggio è quello dei campi che si vedono dalla strada provinciale, fra i pascoli dell'Alta Murgia e il grano che d'estate diventa stoppia.</p>
+    </div>
+  </div>
+</section>
+
+<section id="chiocciola" data-reveal>
+  <div class="wrap">
+    <p class="kicker">Il riconoscimento</p>
+    <h2>La Chiocciola, due anni di fila</h2>
+    <p class="testo">Nella guida <i>Osterie d'Italia</i> di Slow Food la Chiocciola è il riconoscimento più alto. Non premia soltanto quello che arriva a tavola: premia i locali che tengono insieme l'ambiente, la cucina e l'accoglienza in sintonia con Slow Food.</p>
+    <p class="testo">Masseria Barbera è nell'elenco delle Chiocciole pugliesi nell'edizione 2025 e di nuovo in quella 2026. Due anni consecutivi, in una regione dove la concorrenza a tavola non è esattamente scarsa.</p>
+
+    <div class="numeri">
+      <div class="numero">
+        <b data-conta="2">2</b>
+        <span>edizioni di fila con la Chiocciola: 2025 e 2026</span>
+      </div>
+      <div class="numero">
+        <b data-conta="25">25</b>
+        <span>le Chiocciole in tutta la Puglia nell'edizione 2026</span>
+      </div>
+      <div class="numero">
+        <b data-conta="36">36</b>
+        <span>le edizioni della guida Osterie d'Italia</span>
+      </div>
+    </div>
+    <p class="fonte">Gli elenchi completi, regione per regione, sono pubblicati da <a href="https://www.slowfood.it/tutte-le-chiocciole-di-osterie-ditalia-2026-regione-per-regione/" target="_blank" rel="noopener">Slow Food</a>.</p>
+  </div>
+</section>
+
+<div class="divisore" data-reveal>
+  <i></i>
+  <svg class="spiga" viewBox="0 0 60 124" aria-hidden="true"><path d="M30 118 C30 104 30 80 30 44 M30 100 C37 97,44 91,45 79 C36 82,31 90,30 100 M30 100 C23 97,16 91,15 79 C24 82,29 90,30 100 M30 85 C37 82,44 76,45 64 C36 67,31 75,30 85 M30 85 C23 82,16 76,15 64 C24 67,29 75,30 85 M30 70 C37 67,44 61,45 49 C36 52,31 60,30 70 M30 70 C23 67,16 61,15 49 C24 52,29 60,30 70 M30 55 C37 52,44 46,45 34 C36 37,31 45,30 55 M30 55 C23 52,16 46,15 34 C24 37,29 45,30 55 M30 47 C36.5 38 38 23 30 8 C22 23 23.5 38 30 47 M30 12 C30 8 30 4 30 1 M25.5 16 C23 11 21 7 19 3 M34.5 16 C37 11 39 7 41 3"/></svg>
+  <i></i>
+</div>
+
+<section id="murgia" class="verde" data-reveal>
+  <div class="wrap">
+    <div class="murgia-griglia">
+      <div>
+        <p class="kicker">Dove si è</p>
+        <h2>Il balcone delle Puglie</h2>
+        <p class="testo">Minervino Murge sta a 429 metri, affacciato sulla valle dell'Ofanto: per questo lo chiamano il balcone delle Puglie. Il paese è in gran parte compreso entro i confini del Parco nazionale dell'Alta Murgia, istituito nel 2004.</p>
+        <p class="testo">Intorno c'è quello che l'Alta Murgia è davvero: pietra affiorante, pascoli, muretti a secco, e campi di grano che d'estate cambiano colore tre volte.</p>
+        <ul class="murgia-dati">
+          <li>429 m s.l.m.</li>
+          <li>Valle dell'Ofanto</li>
+          <li>Parco nazionale dal 2004</li>
+        </ul>
+      </div>
+      <div class="arso-box">
+        <h3>Il grano arso</h3>
+        <p class="testo">Dopo la mietitura, da queste parti le stoppie si bruciavano. Chi non poteva permettersi la farina bianca tornava sui campi anneriti a raccogliere quello che restava: ne usciva una farina scura, di odore tostato, che oggi ha un nome buono, grano arso, e allora era soltanto il modo di fare il pane con poco.</p>
+        <p class="testo">È la storia contadina del pezzo di Puglia in cui questa masseria sta, fra Minervino e la valle dell'Ofanto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="venire" data-reveal>
+  <div class="wrap">
+    <p class="kicker">Come funziona</p>
+    <h2>Prima di venire, una telefonata</h2>
+    <p class="testo">La masseria non sta in centro e non ha una vetrina su cui leggere gli orari. Tre cose da sapere prima di mettersi in strada.</p>
+    <div class="card-griglia">
+      <article class="card">
+        <h3><svg class="spiga" viewBox="0 0 60 124" aria-hidden="true"><path d="M30 118 C30 104 30 80 30 44 M30 100 C37 97,44 91,45 79 C36 82,31 90,30 100 M30 100 C23 97,16 91,15 79 C24 82,29 90,30 100 M30 85 C37 82,44 76,45 64 C36 67,31 75,30 85 M30 85 C23 82,16 76,15 64 C24 67,29 75,30 85 M30 70 C37 67,44 61,45 49 C36 52,31 60,30 70 M30 70 C23 67,16 61,15 49 C24 52,29 60,30 70 M30 55 C37 52,44 46,45 34 C36 37,31 45,30 55 M30 55 C23 52,16 46,15 34 C24 37,29 45,30 55 M30 47 C36.5 38 38 23 30 8 C22 23 23.5 38 30 47"/></svg>Si sta fuori dal paese</h3>
+        <p>L'indirizzo è SP 97, km 5.8505, fuori dall'abitato di Minervino Murge, in provincia di Barletta-Andria-Trani. Ci si arriva in auto. <a href="https://www.google.com/maps/search/?api=1&amp;query=Masseria+Barbera+Minervino+Murge" target="_blank" rel="noopener">Apri la mappa</a></p>
+      </article>
+      <article class="card">
+        <h3><svg class="spiga" viewBox="0 0 60 124" aria-hidden="true"><path d="M30 118 C30 104 30 80 30 44 M30 100 C37 97,44 91,45 79 C36 82,31 90,30 100 M30 100 C23 97,16 91,15 79 C24 82,29 90,30 100 M30 85 C37 82,44 76,45 64 C36 67,31 75,30 85 M30 85 C23 82,16 76,15 64 C24 67,29 75,30 85 M30 70 C37 67,44 61,45 49 C36 52,31 60,30 70 M30 70 C23 67,16 61,15 49 C24 52,29 60,30 70 M30 55 C37 52,44 46,45 34 C36 37,31 45,30 55 M30 55 C23 52,16 46,15 34 C24 37,29 45,30 55 M30 47 C36.5 38 38 23 30 8 C22 23 23.5 38 30 47"/></svg>Gli orari si chiedono</h3>
+        <p>Le aperture di una masseria seguono la stagione e le prenotazioni del giorno. Il modo più rapido per saperle è chiedere: <a href="tel:+393683705725">368 370 57 25</a></p>
+      </article>
+      <article class="card">
+        <h3><svg class="spiga" viewBox="0 0 60 124" aria-hidden="true"><path d="M30 118 C30 104 30 80 30 44 M30 100 C37 97,44 91,45 79 C36 82,31 90,30 100 M30 100 C23 97,16 91,15 79 C24 82,29 90,30 100 M30 85 C37 82,44 76,45 64 C36 67,31 75,30 85 M30 85 C23 82,16 76,15 64 C24 67,29 75,30 85 M30 70 C37 67,44 61,45 49 C36 52,31 60,30 70 M30 70 C23 67,16 61,15 49 C24 52,29 60,30 70 M30 55 C37 52,44 46,45 34 C36 37,31 45,30 55 M30 55 C23 52,16 46,15 34 C24 37,29 45,30 55 M30 47 C36.5 38 38 23 30 8 C22 23 23.5 38 30 47"/></svg>Meglio prenotare</h3>
+        <p>Una chiamata il giorno prima evita di fare la strada per niente, e permette di dire in anticipo quante persone siete e se c'è qualcosa che non mangiate.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="contatti" class="scuro" data-reveal>
+  <div class="wrap">
+    <p class="kicker">Contatti</p>
+    <h2>Scrivere o chiamare</h2>
+    <a class="contatti-mail" href="mailto:info@masseriabarbera.it">info@masseriabarbera.it</a>
+    <div class="contatti-griglia">
+      <div>
+        <h3>Telefono</h3>
+        <p>
+          <span class="tel-riga"><a href="tel:+393683705725">368 370 57 25</a></span>
+          <span class="tel-riga"><a href="tel:+390883692095">0883 692 095</a></span>
+        </p>
+      </div>
+      <div>
+        <h3>Dove</h3>
+        <p>SP 97, km 5.8505<br>Minervino Murge (BT)<br><a href="https://www.google.com/maps/search/?api=1&amp;query=Masseria+Barbera+Minervino+Murge" target="_blank" rel="noopener">Apri su Google Maps</a></p>
+      </div>
+      <div>
+        <h3>In rete</h3>
+        <p><a href="https://www.facebook.com/masseria.barbera" target="_blank" rel="noopener">La pagina Facebook</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-marchio">
+        <svg class="spiga" viewBox="0 0 60 124" aria-hidden="true"><path d="M30 118 C30 104 30 80 30 44 M30 100 C37 97,44 91,45 79 C36 82,31 90,30 100 M30 100 C23 97,16 91,15 79 C24 82,29 90,30 100 M30 85 C37 82,44 76,45 64 C36 67,31 75,30 85 M30 85 C23 82,16 76,15 64 C24 67,29 75,30 85 M30 70 C37 67,44 61,45 49 C36 52,31 60,30 70 M30 70 C23 67,16 61,15 49 C24 52,29 60,30 70 M30 55 C37 52,44 46,45 34 C36 37,31 45,30 55 M30 55 C23 52,16 46,15 34 C24 37,29 45,30 55 M30 47 C36.5 38 38 23 30 8 C22 23 23.5 38 30 47"/></svg>
+        <b>Masseria Barbera</b>
+      </div>
+      <div class="foot-link">
+        <a href="tel:+390883692095">0883 692 095</a>
+        <a href="mailto:info@masseriabarbera.it">info@masseriabarbera.it</a>
+        <a href="https://www.facebook.com/masseria.barbera" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <p class="foot-ai">
+      <span>Sito dimostrativo realizzato con AI da FAR AI · contenuti da rivedere con l'attività prima della pubblicazione</span>
+      <span>Il marchio e i contatti provengono dal sito e dalla pagina Facebook di Masseria Barbera e restano di proprietà dell'attività.</span>
+    </p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* cascata dell'hero */
+  var hero = document.querySelector('.hero');
+  function play(){ hero.classList.add('play'); }
+  window.addEventListener('load', play);
+  if (document.readyState === 'complete') play();
+  else setTimeout(play, 1200);
+
+  /* nav solida allo scroll */
+  var nav = document.getElementById('nav');
+  function onScroll(){ nav.classList.toggle('scrolled', window.scrollY > 10); }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* count-up: solo su numeri veri e verificati */
+  function conta(el){
+    var fine = parseInt(el.getAttribute('data-conta'), 10);
+    if (isNaN(fine) || reduced) return;
+    var t0 = null, durata = 800;
+    function step(t){
+      if (t0 === null) t0 = t;
+      var p = Math.min((t - t0) / durata, 1);
+      el.textContent = String(Math.round(fine * (1 - Math.pow(1 - p, 3))));
+      if (p < 1) requestAnimationFrame(step);
+      else el.textContent = String(fine);
+    }
+    requestAnimationFrame(step);
+  }
+
+  /* reveal on scroll */
+  var revealed = document.querySelectorAll('[data-reveal]');
+  if ('IntersectionObserver' in window && !reduced){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){
+          e.target.classList.add('on');
+          e.target.querySelectorAll('[data-conta]').forEach(conta);
+          io.unobserve(e.target);
+        }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    revealed.forEach(function(el){ io.observe(el); });
+  } else {
+    revealed.forEach(function(el){ el.classList.add('on'); });
+  }
+
+  /* ------- inert di sfondo condiviso ------- */
+  function setBackgroundInert(active){
+    ['main','footer'].forEach(function(sel){
+      var el = document.querySelector(sel);
+      if (el) { if (active) el.setAttribute('inert',''); else el.removeAttribute('inert'); }
+    });
+    var skip = document.querySelector('.skip-link');
+    if (skip) { if (active) skip.setAttribute('inert',''); else skip.removeAttribute('inert'); }
+  }
+  function trapTab(e, panel){
+    if (e.key !== 'Tab') return;
+    var list = Array.prototype.slice.call(panel.querySelectorAll('a[href], button:not([disabled])'));
+    if (!list.length) return;
+    var first = list[0], last = list[list.length-1];
+    if (e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+  }
+  function whenVisible(panel, cb){
+    var t0 = performance.now();
+    (function check(){
+      if (getComputedStyle(panel).visibility === 'visible' || performance.now() - t0 > 1500) cb();
+      else requestAnimationFrame(check);
+    })();
+  }
+
+  /* ------- menu mobile ------- */
+  var burger = document.querySelector('.burger');
+  var menu = document.getElementById('mobileMenu');
+  var brandLink = document.querySelector('.nav-brand');
+  var navCta = document.querySelector('.nav-cta');
+  var menuOpen = false;
+  function openMenu(){
+    menuOpen = true;
+    menu.classList.add('open');
+    document.body.classList.add('menu-open');
+    burger.setAttribute('aria-expanded','true');
+    burger.setAttribute('aria-label','Chiudi il menu');
+    document.body.style.overflow = 'hidden';
+    setBackgroundInert(true);
+    brandLink.setAttribute('inert','');
+    if (navCta) navCta.setAttribute('inert','');
+    document.querySelector('.nav-links').setAttribute('inert','');
+    whenVisible(menu, function(){ menu.querySelector('a').focus(); });
+  }
+  function closeMenu(returnFocus){
+    menuOpen = false;
+    menu.classList.remove('open');
+    document.body.classList.remove('menu-open');
+    burger.setAttribute('aria-expanded','false');
+    burger.setAttribute('aria-label','Apri il menu');
+    document.body.style.overflow = '';
+    setBackgroundInert(false);
+    brandLink.removeAttribute('inert');
+    if (navCta) navCta.removeAttribute('inert');
+    document.querySelector('.nav-links').removeAttribute('inert');
+    if (returnFocus !== false) burger.focus();
+  }
+  burger.addEventListener('click', function(){ menuOpen ? closeMenu() : openMenu(); });
+  menu.addEventListener('click', function(e){
+    var a = e.target.closest('a');
+    if (a) closeMenu(false);
+  });
+  menu.addEventListener('keydown', function(e){ trapTab(e, menu); });
+
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && menuOpen) closeMenu();
+  });
+})();
+</script>
+  <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

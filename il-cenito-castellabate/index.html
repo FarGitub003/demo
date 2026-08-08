@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Il Cenito — Casa Vacanze e B&B a San Marco di Castellabate, nel Cilento</title>
+<meta name="description" content="Casale in pietra immerso nel Parco Nazionale del Cilento, tra Castellabate, Punta Licosa e Acciaroli: camere con formula B&B, piscina in giardino, colazione a buffet. Sito dimostrativo.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Il Cenito — Casa Vacanze e B&B nel Cilento">
+<meta property="og:description" content="Un casale in pietra nel Parco Nazionale del Cilento, poco distante dal mare di Castellabate: camere con formula B&B, piscina e colazione a buffet.">
+<meta property="og:image" content="https://demo.francescoar.com/il-cenito-castellabate/img/hero-piscina.jpg">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="937">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:url" content="https://demo.francescoar.com/il-cenito-castellabate/">
+<meta property="og:site_name" content="Casa Vacanze Il Cenito">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230E4A66'/%3E%3Cpath d='M6 41 C13 41 15 30 22 30 C29 30 31 41 38 41 L43 41 L47 37 L50 37 L50 27 L53 27 L53 37 L56 37 L59 41' fill='none' stroke='%23F2C744' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BedAndBreakfast",
+  "@id": "https://ilcenito.it/#struttura",
+  "name": "Casa Vacanze Il Cenito",
+  "url": "https://ilcenito.it/",
+  "image": "img/hero-piscina.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Contrada Cenito snc",
+    "addressLocality": "Castellabate",
+    "postalCode": "84048",
+    "addressRegion": "Campania",
+    "addressCountry": "IT"
+  },
+  "telephone": "+390974966237",
+  "email": "info@ilcenito.it",
+  "checkinTime": "14:00",
+  "checkoutTime": "11:00",
+  "petsAllowed": false,
+  "amenityFeature": [
+    {"@type": "LocationFeatureSpecification", "name": "Piscina", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Parcheggio privato gratuito", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Colazione a buffet", "value": true}
+  ]
+}
+</script>
+<style>
+:root{
+  --tirreno:#0E4A66;
+  --fondale:#093245;
+  --abisso:#07222F;
+  --piscina:#51CBF0;      /* accento SOLO su fondi scuri */
+  --bianco-med:#F8F6F0;
+  --carta:#FDFBF5;
+  --limone:#F2C744;       /* decorativo su scuro */
+  --limone-chiaro:#F9E4A2; /* testo sopra le foto scure/velate */
+  --limone-scuro:#6E5500; /* variante testo del limone sui fondi chiari */
+  --pietra:#A36D27;
+  --pietra-scura:#775020; /* testo su chiaro */
+  --inchiostro:#17272F;
+  --scoglio:#46596A;      /* testo secondario su chiaro */
+  --schiuma:#E8F0F4;      /* testo su fondi blu */
+  --ease-hero:cubic-bezier(.16,.84,.26,1);
+  --ease-soft:cubic-bezier(.25,.6,.3,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+/* senza questo le ancore parcheggiano il titolo dietro la barra fissa */
+#cenito,#mare,#camere,#momenti,#servizi,#gallery,#contatti{scroll-margin-top:96px}
+body{
+  font-family:'DM Sans',system-ui,sans-serif;
+  font-weight:300;
+  color:var(--inchiostro);
+  background:var(--bianco-med);
+  line-height:1.65;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:500;line-height:1.1}
+.voce{font-family:'Playfair Display',serif;font-style:italic;font-weight:400}
+
+/* ---------- skip link + focus ---------- */
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--limone);color:var(--abisso);padding:.8rem 1.4rem;z-index:200;font-weight:600;text-decoration:none}
+.skip-link:focus{left:0}
+:focus-visible{outline:3px solid var(--limone);outline-offset:3px;border-radius:2px}
+
+/* ---------- eyebrow ---------- */
+.eyebrow{
+  font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;font-weight:500;
+  display:flex;align-items:center;gap:.9rem;
+}
+.eyebrow::before{content:"";width:2.2rem;height:1px;background:currentColor;opacity:.55}
+
+/* ---------- nav ---------- */
+.nav{
+  position:fixed;inset:0 0 auto 0;z-index:130;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.1rem clamp(1.2rem,4vw,3rem);
+  transition:background .45s var(--ease-soft), box-shadow .45s;
+  color:var(--bianco-med);
+}
+/* la barra trasparente sta sopra il CIELO CHIARO della foto: senza velo il
+   marchio bianco non si legge. Il velo si spegne quando la barra diventa solida. */
+.nav::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(7,34,47,.82) 0%,rgba(7,34,47,.5) 62%,rgba(7,34,47,0) 100%);
+  transition:opacity .45s var(--ease-soft)}
+.nav.solid::before{opacity:0}
+.nav.solid{background:rgba(7,34,47,.94);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(232,240,244,.08)}
+.nav-brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;font-family:'Playfair Display',serif;font-size:1.18rem;letter-spacing:.1em}
+/* il marchio non si comprime e non va a capo: la barra non puo' raddoppiare */
+.nav-brand{flex-shrink:0;white-space:nowrap}
+.nav-brand svg{width:38px;height:24px;flex:none}
+.nav-links{display:flex;gap:2.2rem;list-style:none}
+.nav-links a{
+  text-decoration:none;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;
+  padding-bottom:.25rem;background:linear-gradient(currentColor,currentColor) bottom left/0 1px no-repeat;
+  transition:background-size .4s var(--ease-soft);
+}
+.nav-links a:hover{background-size:100% 1px}
+.nav-cta{border:1px solid var(--limone);background:rgba(7,34,47,.55);backdrop-filter:blur(6px);color:var(--limone-chiaro);padding:.55rem 1.2rem;border-radius:99px;text-decoration:none;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;transition:background .3s,color .3s}
+.nav-cta:hover{background:var(--limone);color:var(--abisso)}
+.burger{display:none;background:none;border:0;cursor:pointer;z-index:120;width:44px;height:44px;position:relative;color:inherit}
+.burger span{position:absolute;left:8px;right:8px;height:2px;background:currentColor;transition:transform .4s var(--ease-soft),opacity .3s,top .4s}
+.burger span:nth-child(1){top:14px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:28px}
+.burger[aria-expanded="true"] span:nth-child(1){top:21px;transform:rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){top:21px;transform:rotate(-45deg)}
+/* sotto gli 840px i link non entrano piu' insieme al marchio: menu a scomparsa
+   PRIMA che la barra possa andare a capo (iPad verticale compreso) */
+@media (max-width:840px){
+  .nav-links,.nav .nav-cta{display:none}
+  .burger{display:block}
+}
+.mobile-menu{
+  position:fixed;inset:0;background:var(--abisso);z-index:110;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1.4rem;
+  opacity:0;visibility:hidden;transition:opacity .45s var(--ease-soft),visibility .45s;
+}
+.mobile-menu.open{opacity:1;visibility:visible}
+.mobile-menu a{color:var(--bianco-med);font-family:'Playfair Display',serif;font-size:2rem;text-decoration:none;letter-spacing:.04em}
+.mobile-menu a:hover{color:var(--limone)}
+.mobile-menu .mm-note{color:#9FB6C2;font-size:.8rem;letter-spacing:.25em;text-transform:uppercase;margin-top:2rem}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:var(--bianco-med);overflow:hidden;isolation:isolate}
+.hero-media{position:absolute;inset:0;z-index:-2}
+.hero-media img{width:100%;height:100%;object-fit:cover;animation:kenburns 26s var(--ease-soft) both}
+@keyframes kenburns{from{transform:scale(1.1) translateY(-1.2%)}to{transform:scale(1.0) translateY(0)}}
+/* la foto e' LUMINOSA (cielo, piscina, cotto chiaro): il velo verticale si chiude
+   forte dal 40% in giu', dove sta tutto il blocco del testo */
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(7,34,47,.42) 0%,rgba(7,34,47,.08) 24%,rgba(7,34,47,.38) 40%,rgba(7,34,47,.68) 58%,rgba(7,34,47,.82) 76%,rgba(7,34,47,.9) 100%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(135% 118% at 18% 100%,rgba(7,34,47,.78) 0%,rgba(7,34,47,.52) 48%,transparent 78%)}
+.hero-inner{width:min(1200px,92vw);margin-inline:auto;padding:0 0 clamp(5.2rem,9vh,7.5rem)}
+.hero-eyebrow{color:var(--limone-chiaro);text-shadow:0 1px 10px rgba(7,34,47,.85)}
+.hero h1{
+  font-size:clamp(3.6rem,12vw,8.6rem);
+  letter-spacing:.02em;margin:.3em 0 .1em;text-wrap:balance;
+}
+.hero-tag{font-family:'Playfair Display',serif;font-style:italic;font-weight:400;font-size:clamp(1.05rem,2.2vw,1.45rem);max-width:38ch;color:#EDF3F0}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}
+.btn{
+  display:inline-flex;align-items:center;gap:.6rem;
+  padding:.95rem 1.9rem;border-radius:99px;text-decoration:none;
+  font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;
+  transition:transform .3s var(--ease-soft),background .3s,color .3s,border-color .3s;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--limone);color:var(--abisso)}
+.btn-primary:hover{background:#F7D465}
+.btn-ghost{border:1px solid rgba(248,246,240,.6);color:var(--bianco-med)}
+.btn-ghost:hover{border-color:var(--bianco-med)}
+.hero-onda{width:min(320px,58vw);margin-bottom:1.2rem;overflow:visible;filter:drop-shadow(0 1px 6px rgba(7,34,47,.7))}
+.hero-onda path{stroke:var(--limone);stroke-width:2.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.hero-ribbon{
+  position:absolute;left:0;right:0;bottom:0;
+  display:flex;justify-content:center;gap:0;flex-wrap:wrap;
+  background:rgba(7,34,47,.6);backdrop-filter:blur(8px);
+  border-top:1px solid rgba(232,240,244,.14);
+}
+.hero-ribbon div{
+  padding:.95rem 2.2rem;font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;font-weight:500;color:var(--schiuma);
+  display:flex;align-items:center;gap:.7rem;
+}
+.hero-ribbon div+div{border-left:1px solid rgba(232,240,244,.14)}
+.hero-ribbon svg{width:15px;height:15px;flex:none;color:var(--limone)}
+/* cascata hero */
+.hero .cascade{opacity:0;transform:translateY(26px);animation:rise 1s var(--ease-hero) forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+.hero .cascade:nth-child(1){animation-delay:.15s}
+.hero .cascade:nth-child(2){animation-delay:.3s}
+.hero .cascade:nth-child(3){animation-delay:.48s}
+.hero .cascade:nth-child(4){animation-delay:.66s}
+.hero .cascade:nth-child(5){animation-delay:.86s}
+
+/* ---------- divisore onda ---------- */
+.divider{display:flex;justify-content:center;padding:.4rem 0}
+.divider svg{width:130px;height:26px;overflow:visible}
+.divider path{stroke:currentColor;stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round;opacity:.6}
+
+/* ---------- sezioni base ---------- */
+.section{padding:clamp(4.5rem,9vw,7.5rem) 0}
+.wrap{width:min(1200px,92vw);margin-inline:auto}
+[data-reveal]{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease-soft),transform .9s var(--ease-soft)}
+[data-reveal].in{opacity:1;transform:none}
+
+/* ---------- intro ---------- */
+.intro{background:var(--bianco-med);text-align:center}
+.intro .eyebrow{justify-content:center;color:var(--tirreno)}
+.intro .eyebrow::after{content:"";width:2.2rem;height:1px;background:currentColor;opacity:.55}
+.intro h2{font-size:clamp(2rem,4.8vw,3.4rem);max-width:22ch;margin:1.4rem auto .9rem;text-wrap:balance}
+.intro p{max-width:60ch;margin-inline:auto;color:var(--scoglio);font-size:1.02rem}
+.intro-riga{display:flex;justify-content:center;gap:clamp(1.5rem,5vw,4rem);flex-wrap:wrap;margin-top:3rem}
+.intro-riga article{max-width:16rem}
+.intro-riga h3{font-size:1.2rem;letter-spacing:.03em;color:var(--tirreno);margin-bottom:.35rem}
+.intro-riga p{font-size:.92rem;color:var(--scoglio)}
+.intro-riga .voce{display:block;font-size:.95rem;color:var(--pietra-scura);margin-bottom:.5rem}
+
+/* ---------- split mare (scuro) ---------- */
+.mare{background:var(--fondale);color:var(--bianco-med);position:relative}
+.grain::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.split-media{position:relative;overflow:hidden;border-radius:4px}
+.split-media img{aspect-ratio:4/5;object-fit:cover;width:100%;transition:transform 1.2s var(--ease-soft)}
+.split-media:hover img{transform:scale(1.045)}
+.split-media::after{content:"";position:absolute;inset:0;border:1px solid rgba(232,240,244,.25);border-radius:4px;pointer-events:none;margin:14px}
+.mare .eyebrow{color:var(--piscina)}
+.mare h2{font-size:clamp(1.9rem,4.2vw,3rem);margin:1.3rem 0 1rem;max-width:18ch}
+.mare p{color:#B9CCD6;max-width:52ch}
+.mare .voce{color:var(--bianco-med);font-size:1.08rem}
+.coste{list-style:none;margin-top:1.8rem;display:grid;gap:.7rem}
+.coste li{display:flex;align-items:baseline;gap:.9rem;font-size:.95rem;color:var(--schiuma)}
+.coste li::before{content:"";width:.55rem;height:.55rem;border-radius:50%;background:var(--limone);flex:none;transform:translateY(-1px)}
+.coste small{color:#9FB6C2;letter-spacing:.06em}
+
+/* ---------- marquee: i nomi veri delle camere ---------- */
+.marquee{background:var(--tirreno);color:var(--schiuma);overflow:hidden;padding:1.05rem 0;border-block:1px solid rgba(232,240,244,.15)}
+.marquee-track{display:flex;gap:3.2rem;width:max-content;animation:scroll 38s linear infinite;font-family:'Playfair Display',serif;font-style:italic;font-size:1.05rem;letter-spacing:.1em;white-space:nowrap}
+.marquee-track span{display:flex;align-items:center;gap:3.2rem}
+.marquee-track i{font-style:normal;color:var(--limone);font-size:.7rem;transform:translateY(-2px)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ---------- camere ---------- */
+.camere{background:var(--carta)}
+.camere-head{text-align:center;margin-bottom:3.2rem}
+.camere-head .eyebrow{justify-content:center;color:var(--tirreno)}
+.camere-head .eyebrow::after{content:"";width:2.2rem;height:1px;background:currentColor;opacity:.55}
+.camere-head h2{font-size:clamp(2rem,4.8vw,3.3rem);margin-top:1.3rem}
+.camere-head p{color:var(--scoglio);max-width:56ch;margin:0.8rem auto 0}
+.tipologie{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.tipo{
+  background:#FFFEFA;border:1px solid #E4DFD2;border-radius:6px;
+  padding:2.2rem 1.9rem 2rem;position:relative;overflow:hidden;
+  transition:transform .45s var(--ease-soft),box-shadow .45s;
+}
+.tipo:hover{transform:translateY(-6px);box-shadow:0 22px 40px -22px rgba(14,74,102,.3)}
+.tipo::before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:var(--tirreno);transform:scaleY(0);transform-origin:top;transition:transform .5s var(--ease-soft)}
+.tipo:hover::before{transform:scaleY(1)}
+.tipo .dove{font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--pietra-scura);font-weight:600}
+/* il nome del fiore come design: le miniature del loro sito sono 300px,
+   inutilizzabili — il nome grande in corsivo fa il lavoro della foto */
+.tipo .nomi{font-family:'Playfair Display',serif;font-style:italic;font-weight:400;font-size:1.65rem;color:var(--tirreno);margin:.7rem 0 .2rem;line-height:1.25}
+.tipo h3{font-size:1.05rem;font-family:'DM Sans',sans-serif;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--inchiostro);margin:.2rem 0 .6rem}
+.tipo p{font-size:.95rem;color:var(--scoglio)}
+.tipo .da{margin-top:1rem;font-size:.9rem;color:var(--pietra-scura);font-weight:500}
+.caterina{
+  margin-top:1.4rem;background:var(--tirreno);color:var(--schiuma);border-radius:6px;
+  padding:2.4rem clamp(1.9rem,4vw,3rem);display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:center;
+}
+.caterina .dove{font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--limone);font-weight:600}
+.caterina .nomi{font-family:'Playfair Display',serif;font-style:italic;font-weight:400;font-size:1.9rem;color:var(--bianco-med);margin:.5rem 0 .4rem}
+.caterina p{font-size:.95rem;max-width:64ch}
+.caterina .da{font-size:.9rem;color:var(--limone-chiaro);font-weight:500;white-space:nowrap}
+.camere-note{margin-top:2.6rem;text-align:center}
+.camere-note p{display:inline-block;font-family:'Playfair Display',serif;font-style:italic;color:var(--scoglio);border-top:1px solid #DCD5C4;padding-top:1.2rem;max-width:64ch}
+.camere-note strong{font-weight:500;color:var(--tirreno)}
+
+/* ---------- momenti ---------- */
+.momenti{background:var(--bianco-med)}
+.momenti .eyebrow{color:var(--tirreno)}
+.momenti h2{font-size:clamp(2rem,4.8vw,3.3rem);margin-top:1.3rem;max-width:20ch}
+.momenti-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3rem}
+.momento{position:relative;overflow:hidden;border-radius:5px;aspect-ratio:3/4;cursor:default}
+.momento img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease-soft)}
+.momento:hover img{transform:scale(1.06)}
+.momento figcaption{
+  position:absolute;inset:auto 0 0 0;padding:1.6rem 1.4rem;
+  background:linear-gradient(180deg,transparent 0%,rgba(7,34,47,.74) 24%,rgba(7,34,47,.9) 48%,rgba(7,34,47,.96) 100%);color:var(--bianco-med);
+}
+.momento figcaption strong{font-family:'Playfair Display',serif;font-weight:500;font-size:1.15rem;letter-spacing:.02em;display:block}
+.momento figcaption span{font-family:'Playfair Display',serif;font-style:italic;font-size:.88rem;color:#CFE0E8}
+
+/* ---------- servizi ---------- */
+.servizi{background:var(--carta)}
+.servizi .eyebrow{color:var(--tirreno);justify-content:center}
+.servizi .eyebrow::after{content:"";width:2.2rem;height:1px;background:currentColor;opacity:.55}
+.servizi h2{font-size:clamp(2rem,4.8vw,3.3rem);text-align:center;margin-top:1.3rem}
+.servizi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin-top:3rem;max-width:900px;margin-inline:auto}
+.servizio{display:flex;gap:1rem;align-items:flex-start;padding:1.2rem 1.1rem;border:1px solid #E4DFD2;border-radius:6px;background:#FFFEFA}
+.servizio svg{width:26px;height:26px;flex:none;color:var(--tirreno)}
+.servizio strong{display:block;font-weight:600;font-size:.95rem;letter-spacing:.02em}
+.servizio span{font-size:.86rem;color:var(--scoglio)}
+
+/* ---------- motto ---------- */
+.motto{background:var(--fondale);color:var(--bianco-med);text-align:center;position:relative}
+.motto blockquote{font-family:'Playfair Display',serif;font-style:italic;font-weight:400;font-size:clamp(1.6rem,4.2vw,2.8rem);max-width:22ch;margin:0 auto;line-height:1.4;text-wrap:balance}
+.motto cite{display:block;margin-top:1.6rem;font-style:normal;font-size:.76rem;letter-spacing:.28em;text-transform:uppercase;color:var(--limone-chiaro);font-weight:500}
+.motto .stelle{margin-top:2.4rem;font-size:.95rem;color:var(--schiuma);letter-spacing:.04em}
+.motto .stelle b{font-family:'Playfair Display',serif;font-weight:500;font-size:1.6rem;color:var(--limone);letter-spacing:0}
+
+/* ---------- gallery ---------- */
+.gallery{background:var(--carta)}
+.gallery .eyebrow{color:var(--tirreno)}
+.gallery h2{font-size:clamp(2rem,4.8vw,3.3rem);margin-top:1.3rem}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:3rem}
+.gallery-grid button{
+  display:block;width:100%;border:0;padding:0;background:none;cursor:zoom-in;
+  border-radius:5px;overflow:hidden;position:relative;aspect-ratio:4/3;
+}
+.gallery-grid img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease-soft)}
+.gallery-grid button:hover img{transform:scale(1.045)}
+.gallery-grid button::after{
+  content:attr(data-tag);position:absolute;left:.9rem;bottom:.8rem;
+  font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--bianco-med);
+  background:rgba(7,34,47,.6);padding:.32rem .7rem;border-radius:99px;backdrop-filter:blur(6px);
+  opacity:0;transform:translateY(6px);transition:opacity .4s,transform .4s;font-weight:500;font-family:'DM Sans',sans-serif;
+}
+.gallery-grid button:hover::after{opacity:1;transform:none}
+.lightbox{
+  position:fixed;inset:0;z-index:150;background:rgba(5,22,31,.94);
+  display:none;align-items:center;justify-content:center;flex-direction:column;padding:3.5rem 1.2rem 2rem;
+}
+.lightbox.open{display:flex}
+.lightbox img{max-width:min(1100px,94vw);max-height:78vh;object-fit:contain;border-radius:4px}
+.lightbox figcaption{color:var(--schiuma);font-family:'Playfair Display',serif;font-style:italic;margin-top:1.1rem;font-size:.95rem}
+/* fondo scuro coprente: il glifo chiaro ha sempre contrasto, qualunque foto sotto */
+.lb-close,.lb-prev,.lb-next{
+  position:absolute;background:rgba(7,34,47,.8);backdrop-filter:blur(8px);border:1px solid rgba(232,240,244,.42);color:var(--bianco-med);
+  width:46px;height:46px;border-radius:50%;cursor:pointer;font-size:1.1rem;display:grid;place-items:center;
+  transition:background .3s;
+}
+.lb-close:hover,.lb-prev:hover,.lb-next:hover{background:rgba(7,34,47,.95)}
+.lb-close{top:1.2rem;right:1.2rem}
+.lb-prev{left:1.2rem;top:50%;transform:translateY(-50%)}
+.lb-next{right:1.2rem;top:50%;transform:translateY(-50%)}
+
+/* ---------- CTA finale ---------- */
+.finale{position:relative;color:var(--bianco-med);isolation:isolate;padding:clamp(6rem,13vw,10rem) 0}
+.finale-media{position:absolute;inset:0;z-index:-2}
+.finale-media img{width:100%;height:100%;object-fit:cover}
+.finale::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(7,34,47,.9) 8%,rgba(7,34,47,.6) 55%,rgba(7,34,47,.4))}
+.finale .eyebrow{color:var(--limone-chiaro)}
+.finale h2{font-size:clamp(2rem,5vw,3.4rem);max-width:18ch;margin:1.3rem 0 1rem}
+.finale p{max-width:50ch;color:#D8E4EA}
+.finale .voce{color:var(--bianco-med)}
+.contatti{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:1.1rem;margin-top:2.6rem;max-width:900px}
+.contatto{
+  border:1px solid rgba(232,240,244,.22);border-radius:6px;padding:1.25rem 1.3rem;
+  background:rgba(7,34,47,.42);backdrop-filter:blur(6px);
+}
+.contatto .k{font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:var(--limone-chiaro);font-weight:600;display:block;margin-bottom:.45rem}
+.contatto a{color:var(--bianco-med);text-decoration:none;border-bottom:1px solid rgba(232,240,244,.3);transition:border-color .3s}
+.contatto a:hover{border-color:var(--limone)}
+.contatto p{font-size:.95rem;color:var(--bianco-med);max-width:none}
+
+/* ---------- footer ---------- */
+footer{background:var(--abisso);color:#9FB6C2;padding:2.8rem 0 2.4rem;font-size:.82rem}
+.footer-inner{display:flex;flex-direction:column;gap:1.1rem;align-items:center;text-align:center}
+.footer-brand{display:flex;align-items:center;gap:.6rem;font-family:'Playfair Display',serif;color:var(--bianco-med);font-size:1rem;letter-spacing:.1em}
+.footer-brand svg{width:34px;height:22px}
+.ai-label{
+  border:1px solid rgba(242,199,68,.4);color:var(--limone);
+  padding:.55rem 1.1rem;border-radius:99px;font-size:.72rem;letter-spacing:.06em;max-width:92vw;
+}
+footer .fine{font-size:.72rem}
+footer .fine a{color:#B7CBD6}
+
+/* ---------- responsive ---------- */
+@media (max-width:980px){
+  .tipologie{grid-template-columns:1fr 1fr}
+  .momenti-grid{grid-template-columns:1fr 1fr}
+  .servizi-grid{grid-template-columns:1fr 1fr}
+  .gallery-grid{grid-template-columns:1fr 1fr}
+  .split{grid-template-columns:1fr}
+  .split-media img{aspect-ratio:16/11}
+  .caterina{grid-template-columns:1fr}
+}
+@media (max-width:700px){
+  .tipologie{grid-template-columns:1fr}
+  .momenti-grid{grid-template-columns:1fr}
+  .servizi-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr}
+  .hero-ribbon{display:none}
+  .hero-inner{padding-bottom:4rem}
+  /* il velo del finale e' un gradiente ORIZZONTALE: a 390px il testo va a piena
+     larghezza e finirebbe sul lato chiaro della foto. Su telefono si fa pieno. */
+  .finale::before{background:linear-gradient(180deg,rgba(7,34,47,.92) 0%,rgba(7,34,47,.88) 50%,rgba(7,34,47,.93) 100%)}
+  /* stesso principio sull'hero: la colonna radiale non copre la piena larghezza */
+  .hero::before{background:linear-gradient(180deg,rgba(7,34,47,.5) 0%,rgba(7,34,47,.22) 26%,rgba(7,34,47,.55) 44%,rgba(7,34,47,.78) 60%,rgba(7,34,47,.9) 78%,rgba(7,34,47,.94) 100%)}
+}
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  html{scroll-behavior:auto}
+  [data-reveal]{opacity:1;transform:none}
+  .hero .cascade{opacity:1;transform:none}
+  .marquee-track{animation:none}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Salta al contenuto</a>
+
+<header class="nav" id="nav">
+  <a class="nav-brand" href="#top" aria-label="Il Cenito — torna su">
+    <svg viewBox="0 0 64 44" aria-hidden="true"><path d="M5 30 C12 30 14 19 21 19 C28 19 30 30 37 30 L42 30 L46 26 L49 26 L49 16 L52 16 L52 26 L55 26 L58 30" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    IL CENITO
+  </a>
+  <nav aria-label="Principale">
+    <ul class="nav-links">
+      <li><a href="#cenito">Il casale</a></li>
+      <li><a href="#mare">Il mare</a></li>
+      <li><a href="#camere">Le camere</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+    </ul>
+  </nav>
+  <a class="nav-cta" href="#contatti">Prenota</a>
+  <button class="burger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Apri il menu"><span></span><span></span><span></span></button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#cenito">Il casale</a>
+  <a href="#mare">Il mare</a>
+  <a href="#camere">Le camere</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contatti">Chiedi disponibilità</a>
+  <p class="mm-note">San Marco di Castellabate · Cilento</p>
+</div>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="hero-media">
+    <picture>
+      <source media="(max-width:700px)" srcset="img/hero-piscina-mobile.jpg">
+      <img src="img/hero-piscina.jpg" alt="Il casale in pietra del Cenito con la piscina nel giardino, tra gli ulivi e le colline del Cilento" fetchpriority="high">
+    </picture>
+  </div>
+  <div class="hero-inner">
+    <svg class="hero-onda cascade" viewBox="0 0 340 60" aria-hidden="true">
+      <path id="ondaPath" d="M4 40 H56 C68 40 72 25 84 25 C96 25 100 40 112 40 C124 40 128 27 140 27 C151 27 155 40 167 40 H204 L220 33 H237 V19 H243 V33 H260 L276 40 H336"/>
+    </svg>
+    <p class="eyebrow hero-eyebrow cascade">Casa vacanze · Bed &amp; Breakfast · Castellabate</p>
+    <h1 class="cascade">Il Cenito</h1>
+    <p class="hero-tag cascade">Un casale in pietra immerso nel Parco Nazionale del Cilento, poco distante dal mare, tra Castellabate, Punta Licosa e Acciaroli.</p>
+    <div class="hero-ctas cascade">
+      <a class="btn btn-primary" href="tel:+390974966237">Chiama per prenotare</a>
+      <a class="btn btn-ghost" href="#camere">Guarda le camere</a>
+    </div>
+  </div>
+  <div class="hero-ribbon" aria-hidden="false">
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Parco Nazionale del Cilento</div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 16c2 0 2 2 4.5 2s2.5-2 4.5-2 2 2 4.5 2 2.5-2 4.5-2M3 20h18M7 12V6a2 2 0 0 1 4 0"/></svg>Piscina in giardino</div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 19h16M6 19V9a6 6 0 0 1 12 0v10M10 5V4M14 5V4"/></svg>Colazione a buffet inclusa</div>
+  </div>
+</section>
+
+<section class="section intro" id="cenito">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Il casale</p>
+    <h2 data-reveal>Una casa per poche persone, lontano dal caos.</h2>
+    <p data-reveal>Il Cenito è un casale in pietra nel verde del Parco Nazionale del Cilento: camere con formula bed &amp; breakfast, la piscina nel giardino e un'atmosfera familiare. La base giusta per il mare e per i paesi del Cilento, sulla costa e all'interno.</p>
+    <div class="intro-riga">
+      <article data-reveal>
+        <h3>Il relax</h3>
+        <span class="voce">nel verde</span>
+        <p>Immerso nella natura cilentana e poco distante dal mare: il posto giusto per fermarsi davvero.</p>
+      </article>
+      <article data-reveal>
+        <h3>L'ospitalità</h3>
+        <span class="voce">di casa</span>
+        <p>Un'atmosfera familiare e calorosa dopo una giornata al mare o in giro per i paesi del Cilento.</p>
+      </article>
+      <article data-reveal>
+        <h3>Gli eventi</h3>
+        <span class="voce">in giardino</span>
+        <p>Cerimonie, compleanni, battesimi e matrimoni con servizio catering, tra gli spazi all'aperto e la sala interna.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true" style="color:var(--tirreno)"><svg viewBox="0 0 130 26"><path d="M4 18 H24 C29 18 31 8 36 8 C41 8 43 18 48 18 C53 18 55 10 60 10 C65 10 67 18 72 18 H86 L92 15 H98 V9 H101 V15 H106 L110 18 H126"/></svg></div>
+
+<section class="section mare grain" id="mare">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow" data-reveal>Il mare</p>
+      <h2 data-reveal>La spiaggia di San Marco, e tutta la costa del Cilento.</h2>
+      <p class="voce" data-reveal>Si dorme nel verde, a metà strada tra il mare cilentano e la tranquillità della campagna.</p>
+      <p data-reveal style="margin-top:1rem">Dal casale si scende alle spiagge e si riparte ogni giorno in una direzione diversa: il borgo, la punta, i paesi dei pescatori. La sera si torna in piscina, tra gli ulivi.</p>
+      <ul class="coste" data-reveal>
+        <li>Castellabate e San Marco <small>il borgo e la sua spiaggia</small></li>
+        <li>Punta Licosa e Acciaroli <small>poco distanti dal casale</small></li>
+        <li>Paestum, Palinuro e Marina di Camerota <small>per le gite di un giorno</small></li>
+      </ul>
+    </div>
+    <figure class="split-media" data-reveal>
+      <img src="img/spiaggia-san-marco.jpg" alt="La spiaggia di San Marco con il borgo di Castellabate arroccato sulla collina, visto dal mare" loading="lazy">
+    </figure>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Geranio <i>◆</i> Gelsomino <i>◆</i> Glicine <i>◆</i> Ginestra <i>◆</i> Licosa <i>◆</i> Pozzillo <i>◆</i> Tresino <i>◆</i> Caterina <i>◆</i></span>
+    <span>Geranio <i>◆</i> Gelsomino <i>◆</i> Glicine <i>◆</i> Ginestra <i>◆</i> Licosa <i>◆</i> Pozzillo <i>◆</i> Tresino <i>◆</i> Caterina <i>◆</i></span>
+  </div>
+</div>
+
+<section class="section camere" id="camere">
+  <div class="wrap">
+    <div class="camere-head">
+      <p class="eyebrow" data-reveal>Le camere</p>
+      <h2 data-reveal>Nomi di fiori e di luoghi.</h2>
+      <p data-reveal>Le camere del Cenito si chiamano come il giardino e come la costa. Tipologie diverse, tutte con bagno, TV e aria condizionata; la colazione a buffet è inclusa.</p>
+    </div>
+    <div class="tipologie">
+      <article class="tipo" data-reveal>
+        <span class="dove">In casale · Con balcone</span>
+        <p class="nomi">Geranio · Gelsomino</p>
+        <h3>Le matrimoniali</h3>
+        <p>Camere matrimoniali con balcone: quello di Geranio affaccia sulla piscina. Bagno con doccia, wifi, fino a tre persone con letto aggiunto.</p>
+        <p class="da">Da 80€ a notte</p>
+      </article>
+      <article class="tipo" data-reveal>
+        <span class="dove">In casale · Sotto il tetto</span>
+        <p class="nomi">Licosa · Pozzillo · Tresino</p>
+        <h3>Le mansardate</h3>
+        <p>Le camere all'ultimo piano: Licosa arriva a quattro persone con il divano letto, Pozzillo ha il bagno con vasca, Tresino è la matrimoniale semplice.</p>
+        <p class="da">Da 80€ a notte</p>
+      </article>
+      <article class="tipo" data-reveal>
+        <span class="dove">Due camere collegate</span>
+        <p class="nomi">Glicine e Ginestra</p>
+        <h3>Il mini-appartamento</h3>
+        <p>Una matrimoniale e una camera con letto a castello, collegate e indipendenti, con terrazza e portico: la soluzione per quattro, in famiglia.</p>
+        <p class="da">Chiedi disponibilità</p>
+      </article>
+    </div>
+    <div class="caterina" data-reveal>
+      <div>
+        <span class="dove">La dependance · Indipendente, con giardino</span>
+        <p class="nomi">Caterina</p>
+        <p>Un mini-appartamento fuori dal casale: camera matrimoniale, soggiorno con angolo cottura e divano letto, bagno con doccia, lavatrice, doccia esterna e giardino. Per quattro persone, con i tempi e gli spazi di una casa vera.</p>
+      </div>
+      <p class="da">Da 350€ a settimana</p>
+    </div>
+    <div class="camere-note" data-reveal>
+      <p>Le tariffe seguono la stagione. I bambini sotto i 5 anni dormono <strong>gratis</strong> nel letto esistente; per date e disponibilità basta una telefonata.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section momenti" id="momenti">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Dentro e fuori</p>
+    <h2 data-reveal>La vita al Cenito.</h2>
+    <div class="momenti-grid">
+      <figure class="momento" data-reveal>
+        <img src="img/camera-gelsomino.jpg" alt="La camera Gelsomino con letto matrimoniale in ferro battuto e copriletto a fiori gialli" loading="lazy">
+        <figcaption><strong>La camera Gelsomino</strong><span>Ferro battuto, biancheria a fiori e la luce del mattino.</span></figcaption>
+      </figure>
+      <figure class="momento" data-reveal>
+        <img src="img/hall.jpg" alt="La hall del casale con il muro in pietra, i banconi in legno e le ceramiche dipinte" loading="lazy">
+        <figcaption><strong>L'accoglienza</strong><span>La hall in pietra, le ceramiche e il benvenuto di casa.</span></figcaption>
+      </figure>
+      <figure class="momento" data-reveal>
+        <img src="img/eventi-catering.jpg" alt="Tavolo imbandito per un evento al Cenito, con antipasti e bicchieri in fila" loading="lazy">
+        <figcaption><strong>Le feste</strong><span>Cerimonie e matrimoni con catering, in giardino e in sala.</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section servizi" id="servizi">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>I servizi</p>
+    <h2 data-reveal>Quello che trovi, senza pensarci.</h2>
+    <div class="servizi-grid">
+      <div class="servizio" data-reveal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 16c2 0 2 2 4.5 2s2.5-2 4.5-2 2 2 4.5 2 2.5-2 4.5-2M3 20h18M7 12V6a2 2 0 0 1 4 0"/></svg>
+        <div><strong>Piscina in giardino</strong><span>A disposizione degli ospiti, immersa nella natura.</span></div>
+      </div>
+      <div class="servizio" data-reveal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 19h16M6 19V9a6 6 0 0 1 12 0v10M10 5V4M14 5V4"/></svg>
+        <div><strong>Colazione a buffet</strong><span>Con diverse scelte, inclusa nel prezzo.</span></div>
+      </div>
+      <div class="servizio" data-reveal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 17h14M6 17l1.5-5h9L18 17M8 12V9h8v3M7 20v-3M17 20v-3"/></svg>
+        <div><strong>Parcheggio privato</strong><span>Gratuito, dentro la proprietà.</span></div>
+      </div>
+      <div class="servizio" data-reveal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 6h16v10H4zM8 20h8M12 16v4"/></svg>
+        <div><strong>Aria condizionata e TV Sat</strong><span>In camera, per le sere d'estate.</span></div>
+      </div>
+      <div class="servizio" data-reveal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 18h.01M8.5 14.5a5 5 0 0 1 7 0M5 11a10 10 0 0 1 14 0"/></svg>
+        <div><strong>Wi-Fi</strong><span>Nelle camere del casale.</span></div>
+      </div>
+      <div class="servizio" data-reveal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 3v3M8 5l1.5 2M16 5l-1.5 2M5 21v-7a7 7 0 0 1 14 0v7M5 21h14"/></svg>
+        <div><strong>Pulizia quotidiana</strong><span>Con biancheria e cambio settimanale inclusi.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section motto grain">
+  <div class="wrap">
+    <!-- Citazione VERBATIM dalla loro homepage -->
+    <blockquote data-reveal>«Dove c'è Cilento... c'è casa»</blockquote>
+    <cite data-reveal>— il motto del Cenito</cite>
+    <p class="stelle" data-reveal><b>4,8 su 5</b> · 89 recensioni su TripAdvisor</p>
+  </div>
+</section>
+
+<section class="section gallery" id="gallery">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Gallery</p>
+    <h2 data-reveal>Il Cenito, com'è davvero.</h2>
+    <div class="gallery-grid">
+      <button data-src="img/hero-piscina.jpg" data-tag="La piscina" data-caption="La piscina nel giardino, davanti al casale"><img src="img/hero-piscina.jpg" alt="La piscina del Cenito con il casale in pietra alle spalle" loading="lazy"></button>
+      <button data-src="img/spiaggia-san-marco.jpg" data-tag="Il mare" data-caption="La spiaggia di San Marco e il borgo di Castellabate"><img src="img/spiaggia-san-marco.jpg" alt="La spiaggia di San Marco vista dal mare" loading="lazy"></button>
+      <button data-src="img/camera-gelsomino.jpg" data-tag="Le camere" data-caption="La camera Gelsomino"><img src="img/camera-gelsomino.jpg" alt="La camera Gelsomino con il letto in ferro battuto" loading="lazy"></button>
+      <button data-src="img/hall.jpg" data-tag="La hall" data-caption="L'ingresso del casale, in pietra e legno"><img src="img/hall.jpg" alt="La hall del casale con muro in pietra e ceramiche" loading="lazy"></button>
+      <button data-src="img/eventi-catering.jpg" data-tag="Gli eventi" data-caption="La tavola apparecchiata per una festa"><img src="img/eventi-catering.jpg" alt="Tavolo imbandito per un evento con catering" loading="lazy"></button>
+      <button data-src="img/insegna-fiori.jpg" data-tag="L'insegna" data-caption="La targhetta in ceramica sul muro in pietra"><img src="img/insegna-fiori.jpg" alt="La targhetta in ceramica del Cenito sul muro in pietra, con i fiori" loading="lazy"></button>
+    </div>
+  </div>
+</section>
+
+<section class="finale" id="contatti">
+  <div class="finale-media"><img src="img/insegna-fiori.jpg" alt="" loading="lazy"></div>
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Prenota</p>
+    <h2 data-reveal>Si prenota come una volta: con una telefonata.</h2>
+    <p class="voce" data-reveal>Oppure con una mail: rispondiamo con date, tariffe e tutto quello che serve per organizzarsi.</p>
+    <div class="contatti">
+      <div class="contatto" data-reveal>
+        <span class="k">Telefono</span>
+        <p><a href="tel:+390974966237">0974 966237</a><br><a href="tel:+393341713515">334 1713515</a></p>
+      </div>
+      <div class="contatto" data-reveal>
+        <span class="k">Dove</span>
+        <p>Contrada Cenito snc, 84048 Castellabate (SA)<br><a href="https://maps.google.com/?q=Contrada+Cenito,+Castellabate" target="_blank" rel="noopener">Apri in Google Maps</a></p>
+      </div>
+      <div class="contatto" data-reveal>
+        <span class="k">Scrivici</span>
+        <p><a href="mailto:info@ilcenito.it?subject=Richiesta%20disponibilit%C3%A0">info@ilcenito.it</a></p>
+      </div>
+      <div class="contatto" data-reveal>
+        <span class="k">Da sapere</span>
+        <p>Check-in dalle 14:00, check-out entro le 11:00. Gli animali domestici non sono ammessi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <p class="footer-brand">
+      <svg viewBox="0 0 64 44" aria-hidden="true"><path d="M5 30 C12 30 14 19 21 19 C28 19 30 30 37 30 L42 30 L46 26 L49 26 L49 16 L52 16 L52 26 L55 26 L58 30" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      IL CENITO · CASTELLABATE
+    </p>
+    <p class="ai-label">Sito dimostrativo realizzato con AI da FAR AI · contenuti da rivedere con l'attività prima della pubblicazione</p>
+    <p class="fine">Testi e fotografie provengono dal sito attuale del Cenito e restano di proprietà dell'attività.</p>
+    <p class="fine">CUSR Regione Campania N. 15065031EXTO765 · <a href="https://www.facebook.com/Casa-Vacanze-il-Cenito-42586722741/" target="_blank" rel="noopener">Facebook</a></p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galleria fotografica">
+  <button class="lb-close" aria-label="Chiudi">✕</button>
+  <button class="lb-prev" aria-label="Foto precedente">←</button>
+  <figure>
+    <img src="img/hero-piscina.jpg" alt="La piscina del Cenito con il casale in pietra alle spalle">
+    <figcaption></figcaption>
+  </figure>
+  <button class="lb-next" aria-label="Foto successiva">→</button>
+</div>
+
+<script>
+(function(){
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* nav solid on scroll */
+  var nav = document.getElementById('nav');
+  var onScroll = function(){ nav.classList.toggle('solid', window.scrollY > 40); };
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  /* burger + inert: il resto della pagina esce dalla lettura e dal Tab */
+  var burger = document.querySelector('.burger');
+  var mm = document.getElementById('mobileMenu');
+  var fuori = [document.getElementById('main'), document.querySelector('footer'),
+               document.querySelector('.skip-link'), document.querySelector('.nav-brand'),
+               document.querySelector('nav'), document.querySelector('.nav-cta')];
+  function segna(aperto){
+    fuori.forEach(function(el){ if(el){ if(aperto){ el.setAttribute('inert',''); }
+                                       else { el.removeAttribute('inert'); } } });
+  }
+  function trappola(e, pannello, extra){
+    if(e.key !== 'Tab') return;
+    var f = Array.prototype.slice.call(
+      pannello.querySelectorAll('a[href], button:not([disabled]), [tabindex="0"]'));
+    if(extra) f = [extra].concat(f);
+    /* niente offsetParent: in un pannello position:fixed e' null anche per
+       gli elementi perfettamente visibili */
+    f = f.filter(function(el){ return el.getClientRects().length > 0; });
+    if(!f.length) return;
+    var primo = f[0], ultimo = f[f.length - 1];
+    if(e.shiftKey && document.activeElement === primo){ e.preventDefault(); ultimo.focus(); }
+    else if(!e.shiftKey && document.activeElement === ultimo){ e.preventDefault(); primo.focus(); }
+  }
+  burger.addEventListener('click', function(){
+    var open = mm.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'Chiudi il menu' : 'Apri il menu');
+    document.body.style.overflow = open ? 'hidden' : '';
+    segna(open);
+  });
+  function chiudiMenu(){
+    mm.classList.remove('open');
+    burger.setAttribute('aria-expanded','false');
+    burger.setAttribute('aria-label','Apri il menu');
+    document.body.style.overflow='';
+    segna(false);
+  }
+  mm.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', chiudiMenu);
+  });
+  document.addEventListener('keydown', function(e){
+    if(!mm.classList.contains('open')) return;
+    if(e.key === 'Escape'){ chiudiMenu(); burger.focus(); return; }
+    trappola(e, mm, burger);
+  });
+
+  /* reveal on scroll */
+  if('IntersectionObserver' in window && !reduced){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:.14});
+    document.querySelectorAll('[data-reveal]').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('[data-reveal]').forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* onda draw-on */
+  var op = document.getElementById('ondaPath');
+  if(op){
+    var len = op.getTotalLength();
+    op.style.strokeDasharray = len;
+    if(!reduced){
+      op.style.strokeDashoffset = len;
+      op.getBoundingClientRect();
+      op.style.transition = 'stroke-dashoffset 2.4s cubic-bezier(.16,.84,.26,1) .3s';
+      op.style.strokeDashoffset = '0';
+    }
+  }
+
+  /* lightbox */
+  var lb = document.getElementById('lightbox');
+  var lbImg = lb.querySelector('img');
+  var lbCap = lb.querySelector('figcaption');
+  var shots = Array.prototype.slice.call(document.querySelectorAll('.gallery-grid button'));
+  var idx = 0, lastFocus = null;
+  function show(i){
+    idx = (i + shots.length) % shots.length;
+    var b = shots[idx], im = b.querySelector('img');
+    lbImg.src = b.getAttribute('data-src') || im.src; lbImg.alt = im.alt;
+    lbCap.textContent = b.getAttribute('data-caption') || '';
+  }
+  function openLb(i){
+    lastFocus = document.activeElement; show(i);
+    lb.classList.add('open'); document.body.style.overflow='hidden';
+    segna(true); burger.setAttribute('inert','');
+    /* la transizione anima anche visibility: finche' e' hidden, .focus() non
+       attecchisce e non da' errore. Si aspetta la CONDIZIONE vera, con un tetto. */
+    var tentativi = 0;
+    (function mettiIlFuoco(){
+      var c = lb.querySelector('.lb-close');
+      if (getComputedStyle(lb).visibility === 'visible' || tentativi++ > 60) { c.focus(); }
+      else { requestAnimationFrame(mettiIlFuoco); }
+    })();
+  }
+  function closeLb(){
+    lb.classList.remove('open'); document.body.style.overflow='';
+    burger.removeAttribute('inert');
+    if(!mm.classList.contains('open')) segna(false);
+    if(lastFocus) lastFocus.focus();
+  }
+  shots.forEach(function(b,i){ b.addEventListener('click', function(){ openLb(i); }); });
+  lb.querySelector('.lb-close').addEventListener('click', closeLb);
+  lb.querySelector('.lb-prev').addEventListener('click', function(){ show(idx-1); });
+  lb.querySelector('.lb-next').addEventListener('click', function(){ show(idx+1); });
+  lb.addEventListener('click', function(e){ if(e.target === lb) closeLb(); });
+  document.addEventListener('keydown', function(e){
+    if(!lb.classList.contains('open')) return;
+    if(e.key === 'Escape') closeLb();
+    else if(e.key === 'ArrowLeft') show(idx-1);
+    else if(e.key === 'ArrowRight') show(idx+1);
+    else trappola(e, lb);
+  });
+})();
+</script>
+  <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ceramiche Giuseppe Fasano · Grottaglie, città delle ceramiche</title>
+<meta name="description" content="Bottega di ceramica artistica a Grottaglie. Pumi e pigne, lampade e portacandela, gufi, cavalli e cavalieri, bomboniere d'autore. Una famiglia di ceramisti con scritti dal 1600.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#132D5E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Ceramiche Giuseppe Fasano · Grottaglie">
+<meta property="og:description" content="Pumi e pigne, lampade e portacandela, bomboniere d'autore. Una famiglia di ceramisti di Grottaglie con scritti dal 1600.">
+<meta property="og:image" content="https://demo.francescoar.com/ceramiche-fasano-grottaglie/img/pigne-colori.jpg">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1440">
+<meta property="og:url" content="https://demo.francescoar.com/ceramiche-fasano-grottaglie/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 178'%3E%3Crect width='120' height='178' rx='18' fill='%23F6F2E9'/%3E%3Cg fill='none' stroke='%231B3E7A' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M60 16 C42 38 27 58 27 84 C27 108 41 122 60 122 C79 122 93 108 93 84 C93 58 78 38 60 16 C59 10 62 5 68 4'/%3E%3Cpath d='M28 92 Q40 96 44 108 Q52 98 60 118 Q68 98 76 108 Q80 96 92 92'/%3E%3Cpath d='M46 128 L41 148 Q60 157 79 148 L74 128 M34 156 Q60 166 86 156'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,500;0,700;0,800;1,500&family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.className += ' js';</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "@id": "https://giuseppefasano.weebly.com/#bottega",
+  "name": "Ceramiche Giuseppe Fasano",
+  "description": "Bottega di ceramica artistica a Grottaglie (Taranto): pumi e pigne, lampade e portacandela, gufi, cavalli e cavalieri, bomboniere d'autore.",
+  "image": "img/pigne-colori.jpg",
+  "email": "giuseppefasano@live.it",
+  "telephone": "+393932004766",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Caravaggio, 3",
+    "addressLocality": "Grottaglie",
+    "addressRegion": "TA",
+    "addressCountry": "IT"
+  },
+  "sameAs": [
+    "https://www.facebook.com/www.ceramicagiuseppefasanoitaly.it",
+    "https://giuseppefasano.weebly.com/"
+  ]
+}
+</script>
+<style>
+:root{
+  --calce:#F6F2E9;
+  --calce-2:#EFEADD;
+  --ink:#191F2B;
+  --cobalto:#1B3E7A;
+  --cobalto-fondo:#132D5E;
+  --smalto:#56C3E4;
+  --terra:#A8380F;
+  --ambra:#F3B71E;
+  --ambra-testo:#8A6100;
+  --grigio:#4C5464;
+  --bianco:#FFFFFF;
+  --ease-pen:cubic-bezier(.22,.9,.3,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Assistant',system-ui,sans-serif;
+  background:var(--calce);
+  color:var(--ink);
+  line-height:1.62;
+  font-size:1.0625rem;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--cobalto)}
+h1,h2,h3{font-family:'Bitter',Georgia,serif;line-height:1.1;font-weight:800}
+.wrap{max-width:1140px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+
+/* ---------- accessibilità ---------- */
+.skip-link{
+  position:fixed;top:-60px;left:16px;z-index:200;
+  background:var(--ink);color:var(--calce);
+  padding:10px 18px;border-radius:6px;font-weight:700;text-decoration:none;
+  transition:transform .2s var(--ease-pen);
+}
+.skip-link:focus{top:0;transform:translateY(12px)}
+:focus-visible{outline:3px solid var(--terra);outline-offset:3px;border-radius:2px}
+.hero :focus-visible,.dark :focus-visible,.lightbox :focus-visible,.mobile-menu :focus-visible{outline-color:var(--ambra)}
+
+/* ---------- nav ---------- */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  transition:background-color .3s ease, box-shadow .3s ease;
+}
+.nav::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(10,14,24,.62),rgba(10,14,24,0));
+  transition:opacity .3s ease;
+}
+.nav.solid::before{opacity:0}
+.nav.solid{background:rgba(246,242,233,.96);box-shadow:0 1px 0 rgba(25,31,43,.14)}
+.nav-inner{
+  position:relative;z-index:1;
+  max-width:1140px;margin:0 auto;
+  padding:14px clamp(20px,4vw,48px);
+  display:flex;align-items:center;gap:24px;
+}
+.nav-brand{
+  font-family:'Bitter',serif;font-weight:800;font-size:1.12rem;
+  color:var(--calce);text-decoration:none;letter-spacing:.01em;
+  white-space:nowrap;flex-shrink:0;
+  text-shadow:0 1px 6px rgba(0,0,0,.5);
+  transition:color .3s ease;
+}
+.nav.solid .nav-brand{color:var(--ink);text-shadow:none}
+.nav-links{display:flex;gap:24px;margin-left:auto;list-style:none}
+.nav-links a{
+  color:var(--calce);text-decoration:none;font-weight:600;font-size:.96rem;
+  position:relative;padding:4px 0;white-space:nowrap;
+  text-shadow:0 1px 6px rgba(0,0,0,.5);
+  transition:color .3s ease;
+}
+.nav.solid .nav-links a{color:var(--ink);text-shadow:none}
+.nav-links a::after{
+  content:"";position:absolute;left:0;right:0;bottom:-2px;height:3px;
+  background:var(--smalto);border-radius:2px;
+  transform:scaleX(0);transform-origin:left;transition:transform .25s var(--ease-pen);
+}
+.nav.solid .nav-links a::after{background:var(--cobalto)}
+.nav-links a:hover::after,.nav-links a:focus-visible::after{transform:scaleX(1)}
+.nav-cta{
+  background:var(--terra);color:var(--bianco);text-decoration:none;
+  font-weight:700;padding:9px 20px;border-radius:999px;font-size:.94rem;
+  white-space:nowrap;flex-shrink:0;
+  transition:background-color .25s ease, transform .25s var(--ease-pen);
+}
+.nav-cta:hover{background:#8C2E0C;transform:translateY(-1px)}
+.burger{
+  display:none;margin-left:auto;
+  background:none;border:0;cursor:pointer;padding:10px;
+  width:46px;height:44px;position:relative;z-index:130;
+}
+.burger span{
+  display:block;width:26px;height:3px;background:var(--calce);border-radius:2px;
+  margin:5px auto;
+  box-shadow:0 1px 4px rgba(0,0,0,.4);
+  transition:transform .3s var(--ease-pen),opacity .2s ease,background-color .3s ease;
+}
+.nav.solid .burger span{background:var(--ink);box-shadow:none}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+body.menu-open .nav{z-index:130;background:transparent;box-shadow:none}
+body.menu-open .nav::before{opacity:0}
+body.menu-open .nav-brand{color:var(--calce);text-shadow:none}
+body.menu-open .burger span{background:var(--calce);box-shadow:none}
+
+.mobile-menu{
+  position:fixed;inset:0;z-index:120;
+  background:var(--cobalto-fondo);
+  display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;
+  opacity:0;visibility:hidden;
+  transition:opacity .3s ease, visibility 0s linear .3s;
+}
+.mobile-menu.open{opacity:1;visibility:visible;transition:opacity .3s ease}
+.mobile-menu a{
+  color:var(--bianco);text-decoration:none;
+  font-family:'Bitter',serif;font-weight:700;font-size:clamp(1.5rem,5.4vw,2.1rem);
+  padding:9px 20px;
+  transform:translateY(14px);opacity:0;
+  transition:transform .4s var(--ease-pen), opacity .4s ease;
+}
+.mobile-menu.open a{transform:translateY(0);opacity:1}
+.mobile-menu.open a:nth-child(2){transition-delay:.05s}
+.mobile-menu.open a:nth-child(3){transition-delay:.1s}
+.mobile-menu.open a:nth-child(4){transition-delay:.15s}
+.mobile-menu.open a:nth-child(5){transition-delay:.2s}
+.mobile-menu.open a:nth-child(6){transition-delay:.25s}
+.mobile-menu.open a:nth-child(7){transition-delay:.3s}
+.mobile-menu a:hover{color:var(--smalto)}
+.mobile-menu .mm-tel{
+  font-family:'Assistant',sans-serif;font-weight:700;font-size:1.1rem;
+  color:var(--cobalto-fondo);background:var(--ambra);
+  border-radius:999px;margin-top:18px;padding:12px 26px;
+}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;
+  min-height:100svh;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  overflow:hidden;
+  background:var(--ink);
+}
+.hero-media{position:absolute;inset:0;z-index:0}
+.hero-media img{width:100%;height:100%;object-fit:cover}
+.js .hero-media img{animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.02)}to{transform:scale(1.13)}}
+.hero-scrim{
+  position:absolute;inset:0;z-index:1;
+  background:
+    radial-gradient(ellipse 82% 56% at 50% 36%,rgba(5,9,17,.80) 0%,rgba(5,9,17,.52) 52%,rgba(5,9,17,0) 100%),
+    linear-gradient(180deg,rgba(8,12,22,.62) 0%,rgba(8,12,22,.34) 28%,rgba(8,12,22,.56) 60%,rgba(8,12,22,.90) 100%);
+}
+.hero-inner{
+  position:relative;z-index:2;
+  padding:120px 0 0;
+  display:flex;flex-direction:column;align-items:center;text-align:center;
+}
+.hero-eyebrow{
+  font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:.8rem;
+  color:var(--ambra);
+  text-shadow:0 2px 10px rgba(0,0,0,.7);
+}
+.hero-pumo{width:clamp(58px,7vw,80px);height:auto;margin:20px 0 8px}
+.hero-pumo path{
+  stroke:var(--smalto);stroke-width:7;fill:none;
+  stroke-linecap:round;stroke-linejoin:round;
+  filter:drop-shadow(0 2px 6px rgba(0,0,0,.6));
+}
+.hero h1{
+  font-size:clamp(2.7rem,8.4vw,6.2rem);
+  letter-spacing:-.015em;color:var(--calce);
+  margin:.04em 0 .18em;
+  text-shadow:0 3px 22px rgba(0,0,0,.72);
+}
+.hero-tag{
+  max-width:620px;font-size:clamp(1.02rem,1.9vw,1.2rem);
+  color:#FFFFFF;
+  text-shadow:0 2px 12px rgba(0,0,0,.8);
+}
+.hero-cta{display:flex;gap:13px;flex-wrap:wrap;justify-content:center;margin-top:26px}
+.btn{
+  display:inline-block;text-decoration:none;font-weight:700;font-size:1rem;
+  padding:14px 28px;border-radius:999px;
+  transition:background-color .25s ease,color .25s ease,transform .25s var(--ease-pen),box-shadow .25s ease;
+}
+.btn-primary{background:var(--terra);color:var(--bianco)}
+.btn-primary:hover{background:#8C2E0C;transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.4)}
+.btn-ghost{border:2px solid rgba(255,255,255,.85);color:#FFFFFF;background:rgba(10,14,24,.42)}
+.btn-ghost:hover{background:var(--calce);color:var(--ink);border-color:var(--calce);transform:translateY(-2px)}
+.hero-ribbon{
+  position:relative;z-index:2;
+  margin-top:auto;
+  padding:22px 0 26px;
+  border-top:1px solid rgba(255,255,255,.28);
+  background:rgba(8,12,22,.55);
+}
+.hero-ribbon div{
+  max-width:1140px;margin:0 auto;padding:0 clamp(20px,4vw,48px);
+  display:flex;justify-content:center;gap:12px clamp(20px,4vw,54px);flex-wrap:wrap;
+  font-size:.94rem;color:#FFFFFF;text-align:center;
+}
+.hero-ribbon strong{color:var(--ambra);font-weight:700}
+
+.js .hero-eyebrow,.js .hero-pumo,.js .hero h1,.js .hero-tag,.js .hero-cta,.js .hero-ribbon{opacity:0}
+.js .hero-eyebrow,.js .hero h1,.js .hero-tag,.js .hero-cta{transform:translateY(18px)}
+.js .hero-pumo path{stroke-dasharray:1;stroke-dashoffset:1}
+.hero.play .hero-eyebrow{animation:rise .8s var(--ease-pen) .15s forwards}
+.hero.play .hero-pumo{animation:appear .4s ease .3s forwards}
+.hero.play .hero-pumo path{animation:draw 1.5s var(--ease-pen) .4s forwards}
+.hero.play .hero-pumo path:nth-child(2){animation-delay:1.1s;animation-duration:.8s}
+.hero.play .hero-pumo path:nth-child(3){animation-delay:1.5s;animation-duration:.8s}
+.hero.play h1{animation:rise .9s var(--ease-pen) .55s forwards}
+.hero.play .hero-tag{animation:rise .8s var(--ease-pen) .85s forwards}
+.hero.play .hero-cta{animation:rise .8s var(--ease-pen) 1s forwards}
+.hero.play .hero-ribbon{animation:appear .9s ease 1.3s forwards}
+@keyframes rise{to{opacity:1;transform:translateY(0)}}
+@keyframes appear{to{opacity:1}}
+@keyframes draw{to{stroke-dashoffset:0}}
+
+/* ---------- sezioni ---------- */
+section{padding:clamp(66px,9vw,116px) 0}
+section[id]{scroll-margin-top:76px}
+.kicker{
+  font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:.78rem;
+  color:var(--terra);display:block;margin-bottom:16px;
+}
+.dark{background:var(--cobalto-fondo);color:var(--bianco)}
+.dark .kicker{color:var(--ambra)}
+.dark a{color:var(--smalto)}
+.dark p{color:rgba(255,255,255,.9)}
+.claim{
+  font-family:'Bitter',serif;font-weight:700;
+  font-size:clamp(1.6rem,3.9vw,2.7rem);line-height:1.22;letter-spacing:-.01em;
+  max-width:880px;color:inherit;
+}
+.claim em{font-style:italic;color:var(--smalto)}
+.sub{max-width:660px;margin-top:20px;font-size:1.06rem}
+.chiaro .sub{color:var(--grigio)}
+
+/* divisore firma */
+.divider{display:flex;justify-content:center;padding:0}
+.divider svg{width:32px;height:auto;fill:none;stroke:var(--cobalto);stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
+footer .divider svg{stroke:var(--smalto)}
+
+/* stirpe: split testo + foto */
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,5vw,68px);align-items:center}
+.split h2{font-size:clamp(1.8rem,3.6vw,2.7rem);letter-spacing:-.01em;margin-bottom:20px}
+.split p{margin-bottom:15px;max-width:52ch}
+.chiaro .split p{color:var(--grigio)}
+.split p strong{color:var(--ink)}
+.dark .split p strong{color:var(--bianco)}
+blockquote{
+  position:relative;
+  padding-left:clamp(30px,4vw,46px);margin:0 0 18px;
+  font-family:'Bitter',serif;font-style:italic;font-weight:500;
+  font-size:clamp(1.08rem,1.9vw,1.28rem);line-height:1.5;
+  color:var(--ink);
+}
+blockquote::before{
+  content:"\00AB";
+  position:absolute;left:0;top:-.12em;
+  font-family:'Bitter',serif;font-style:normal;font-weight:800;
+  font-size:clamp(2.6rem,5vw,3.6rem);line-height:1;
+  color:var(--terra);
+}
+.dark blockquote{color:var(--bianco)}
+.dark blockquote::before{color:var(--ambra)}
+blockquote cite{
+  display:block;margin-top:10px;font-style:normal;font-family:'Assistant',sans-serif;
+  font-size:.9rem;font-weight:600;color:var(--grigio);
+}
+.dark blockquote cite{color:rgba(255,255,255,.8)}
+.foto-cornice{border-radius:8px;overflow:hidden;box-shadow:0 18px 48px rgba(25,31,43,.24)}
+figcaption{margin-top:12px;font-size:.9rem;color:var(--grigio)}
+.dark figcaption{color:rgba(255,255,255,.78)}
+
+/* repertorio */
+.rep-head{max-width:720px;margin-bottom:clamp(34px,5vw,56px)}
+.rep-head h2{font-size:clamp(1.9rem,4.2vw,3rem);letter-spacing:-.01em;margin-bottom:16px}
+.rep-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.2vw,26px)}
+.rep-card{
+  background:var(--bianco);border-radius:10px;overflow:hidden;
+  box-shadow:0 6px 22px rgba(25,31,43,.09);
+  transition:transform .35s var(--ease-pen),box-shadow .35s ease;
+  display:flex;flex-direction:column;
+}
+.rep-card:hover{transform:translateY(-6px);box-shadow:0 18px 42px rgba(25,31,43,.16)}
+.rep-card .ph{aspect-ratio:4/3;overflow:hidden;background:var(--calce-2)}
+.rep-card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease-pen)}
+.rep-card:hover .ph img{transform:scale(1.05)}
+.rep-card .txt{padding:22px 24px 26px}
+.rep-card h3{font-size:1.32rem;margin-bottom:9px}
+.rep-card p{color:var(--grigio);font-size:.99rem}
+
+/* galleria */
+.gallery-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:clamp(10px,1.4vw,16px);
+}
+.gallery-grid button{
+  border:0;padding:0;background:var(--calce-2);cursor:zoom-in;
+  border-radius:7px;overflow:hidden;position:relative;
+  aspect-ratio:1;display:block;
+}
+.gallery-grid button img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease-pen)}
+.gallery-grid button:hover img{transform:scale(1.07)}
+.gallery-grid button::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(8,12,22,0) 55%,rgba(8,12,22,.55) 100%);
+  opacity:0;transition:opacity .3s ease;
+}
+.gallery-grid button:hover::after,.gallery-grid button:focus-visible::after{opacity:1}
+.gallery-grid button.wide{grid-column:span 2;aspect-ratio:2/1}
+
+/* riconoscimenti */
+.ric-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.4vw,30px)}
+.ric{
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:10px;padding:26px 26px 28px;
+}
+.ric .anno{
+  font-family:'Bitter',serif;font-weight:800;font-size:1.5rem;
+  color:var(--ambra);display:block;margin-bottom:8px;
+}
+.ric h3{font-size:1.16rem;margin-bottom:9px;color:var(--bianco)}
+.ric p{font-size:.97rem}
+
+/* tv */
+.tv-list{list-style:none;display:grid;gap:16px;max-width:820px;margin-top:26px}
+.tv-list li{
+  display:flex;gap:16px;align-items:flex-start;
+  padding-bottom:16px;border-bottom:1px solid rgba(25,31,43,.14);
+}
+.tv-list li:last-child{border-bottom:0}
+.tv-list .tag{
+  flex-shrink:0;font-weight:700;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--bianco);background:var(--cobalto);border-radius:999px;padding:5px 13px;margin-top:3px;
+}
+.tv-list p{color:var(--grigio)}
+.tv-list strong{color:var(--ink)}
+
+/* contatti */
+.cont-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,60px);align-items:center}
+.cont h2{font-size:clamp(1.9rem,4.2vw,3rem);letter-spacing:-.01em;margin-bottom:18px}
+.cont-dati{list-style:none;display:grid;gap:16px;margin:24px 0 28px}
+.cont-dati li{display:flex;gap:13px;align-items:flex-start}
+.cont-dati svg{flex-shrink:0;width:21px;height:21px;stroke:var(--terra);fill:none;stroke-width:1.8;margin-top:3px}
+.cont-dati a{color:var(--ink);text-decoration:none;font-weight:700;border-bottom:2px solid var(--smalto)}
+.cont-dati a:hover{color:var(--cobalto);border-bottom-color:var(--cobalto)}
+.cont-dati span{color:var(--grigio);display:block;font-size:.9rem}
+
+/* footer */
+footer{background:var(--ink);color:rgba(246,242,233,.92);padding:52px 0 42px}
+footer .wrap{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
+footer .f-brand{font-family:'Bitter',serif;font-weight:800;font-size:1.22rem;color:var(--calce)}
+footer .f-loc{font-size:.96rem;color:rgba(246,242,233,.8)}
+footer .f-ai{
+  margin-top:14px;padding-top:16px;border-top:1px solid rgba(246,242,233,.22);
+  font-size:.87rem;color:rgba(246,242,233,.8);max-width:680px;
+}
+
+/* reveal (solo con JS attivo) */
+.js [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s var(--ease-pen)}
+.js [data-reveal].on{opacity:1;transform:translateY(0)}
+
+/* ---------- lightbox ---------- */
+.lightbox{
+  position:fixed;inset:0;z-index:150;
+  background:rgba(10,14,24,.95);
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  padding:clamp(56px,7vw,72px) clamp(14px,4vw,48px);
+  opacity:0;visibility:hidden;
+  transition:opacity .3s ease, visibility 0s linear .3s;
+}
+.lightbox.open{opacity:1;visibility:visible;transition:opacity .3s ease}
+.lightbox img{max-height:74vh;max-width:min(94vw,900px);border-radius:6px;width:auto}
+.lightbox figure{margin:0;display:flex;flex-direction:column;align-items:center}
+.lightbox figcaption{
+  color:#FFFFFF;font-size:.96rem;margin-top:15px;text-align:center;max-width:640px;
+}
+.lb-close,.lb-prev,.lb-next{
+  position:absolute;
+  background:rgba(8,12,22,.86);
+  border:1px solid rgba(255,255,255,.34);
+  cursor:pointer;
+  width:50px;height:50px;border-radius:50%;
+  color:var(--calce);font-size:1.4rem;line-height:1;font-family:'Assistant',sans-serif;
+  display:flex;align-items:center;justify-content:center;
+  transition:background-color .25s ease,transform .25s var(--ease-pen);
+}
+.lb-close{top:16px;right:16px}
+.lb-prev{left:14px;top:50%;margin-top:-25px}
+.lb-next{right:14px;top:50%;margin-top:-25px}
+.lb-close:hover{background:var(--terra);transform:rotate(90deg)}
+.lb-prev:hover,.lb-next:hover{background:var(--terra)}
+.lb-conta{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:rgba(255,255,255,.86);font-size:.88rem}
+
+/* ---------- responsive ---------- */
+@media (max-width:940px){
+  .nav-links,.nav-cta{display:none}
+  .burger{display:block}
+  .split,.cont-grid{grid-template-columns:1fr}
+  .rep-grid,.ric-grid{grid-template-columns:1fr 1fr}
+  .gallery-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:640px){
+  .rep-grid,.ric-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .gallery-grid button.wide{grid-column:span 2;aspect-ratio:2/1}
+  .hero-scrim{background:radial-gradient(ellipse 116% 50% at 50% 34%,rgba(5,9,17,.82) 0%,rgba(5,9,17,.54) 56%,rgba(5,9,17,0) 100%),linear-gradient(180deg,rgba(8,12,22,.66) 0%,rgba(8,12,22,.46) 30%,rgba(8,12,22,.66) 62%,rgba(8,12,22,.92) 100%)}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms !important;animation-delay:0ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  .js .hero-eyebrow,.js .hero-pumo,.js .hero h1,.js .hero-tag,.js .hero-cta,.js .hero-ribbon{opacity:1;transform:none}
+  .js .hero-pumo path{stroke-dashoffset:0}
+  .js [data-reveal]{opacity:1;transform:none}
+  .js .hero-media img{animation:none}
+}
+</style>
+<noscript><style>
+  [data-reveal]{opacity:1 !important;transform:none !important}
+  .nav{position:static;background:var(--cobalto-fondo)}
+  .nav::before{display:none}
+  .nav-brand,.nav-links a{color:var(--calce);text-shadow:none}
+  .nav-links{display:flex !important}
+  .burger{display:none !important}
+  .hero{min-height:auto;padding-bottom:0}
+  .hero-inner{padding-top:56px}
+</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Salta al contenuto</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="pumo" viewBox="0 0 120 178">
+    <path d="M60 16 C42 38 27 58 27 84 C27 108 41 122 60 122 C79 122 93 108 93 84 C93 58 78 38 60 16 C59 10 62 5 68 4"/>
+    <path d="M28 92 Q40 96 44 108 Q52 98 60 118 Q68 98 76 108 Q80 96 92 92"/>
+    <path d="M46 128 L41 148 Q60 157 79 148 L74 128 M34 156 Q60 166 86 156"/>
+  </symbol>
+</svg>
+
+<nav class="nav" id="nav" aria-label="Navigazione principale">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#top">Giuseppe Fasano</a>
+    <ul class="nav-links">
+      <li><a href="#stirpe">La bottega</a></li>
+      <li><a href="#repertorio">Il repertorio</a></li>
+      <li><a href="#gallery">Le opere</a></li>
+      <li><a href="#mondo">Nel mondo</a></li>
+      <li><a href="#riconoscimenti">Riconoscimenti</a></li>
+    </ul>
+    <a class="nav-cta" href="#contatti">Contatti</a>
+    <button class="burger" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu">
+  <a href="#stirpe">La bottega</a>
+  <a href="#repertorio">Il repertorio</a>
+  <a href="#gallery">Le opere</a>
+  <a href="#mondo">Nel mondo</a>
+  <a href="#riconoscimenti">Riconoscimenti</a>
+  <a href="#contatti">Contatti</a>
+  <a class="mm-tel" href="tel:+393932004766">393 200 47 66</a>
+</div>
+
+<main id="main">
+
+<header class="hero" id="top">
+  <div class="hero-media">
+    <picture>
+      <source media="(max-width:640px)" srcset="img/pigne-colori-mobile.jpg">
+      <img src="img/pigne-colori.jpg" alt="Pigne di ceramica smaltata di Grottaglie nei colori rosso, giallo, turchese, verde e blu" width="1920" height="1440" fetchpriority="high">
+    </picture>
+  </div>
+  <div class="hero-scrim"></div>
+  <div class="hero-inner wrap">
+    <p class="hero-eyebrow">Grottaglie · Città delle Ceramiche</p>
+    <svg class="hero-pumo" viewBox="0 0 120 178" aria-hidden="true">
+      <path pathLength="1" d="M60 16 C42 38 27 58 27 84 C27 108 41 122 60 122 C79 122 93 108 93 84 C93 58 78 38 60 16 C59 10 62 5 68 4"/>
+      <path pathLength="1" d="M28 92 Q40 96 44 108 Q52 98 60 118 Q68 98 76 108 Q80 96 92 92"/>
+      <path pathLength="1" d="M46 128 L41 148 Q60 157 79 148 L74 128 M34 156 Q60 166 86 156"/>
+    </svg>
+    <h1>Giuseppe Fasano</h1>
+    <p class="hero-tag">Ceramica artistica di Grottaglie. Una famiglia di ceramisti con libri e scritti datati fin dal 1600.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#gallery">Guarda le opere</a>
+      <a class="btn btn-ghost" href="#contatti">Vieni in bottega</a>
+    </div>
+  </div>
+  <div class="hero-ribbon">
+    <div>
+      <span><strong>Dal 1600</strong> di padre in figlio</span>
+      <span><strong>New York, Tokyo, Milano, Francoforte</strong></span>
+      <span><strong>Premio Nicola Fasano</strong> 7 edizioni</span>
+    </div>
+  </div>
+</header>
+
+<section class="chiaro" id="stirpe">
+  <div class="wrap split">
+    <div data-reveal>
+      <span class="kicker">La bottega</span>
+      <h2>Una stirpe di ceramisti</h2>
+      <blockquote>
+        Lavoro l'argilla e decoro la ceramica dalla mia fanciullezza. La mia è una storica famiglia di ceramisti con libri e scritti datati fin dal 1600. Come produttori di ceramica artistica ci tramandiamo questa nobile arte da padre in figlio fin dall'antichità.
+        <cite>Giuseppe Fasano</cite>
+      </blockquote>
+      <p>La bottega sta a <strong>Grottaglie</strong>, nel paese che alla ceramica ha dedicato un quartiere intero. Qui i pezzi nascono al tornio, passano per il forno e prendono lo smalto uno per volta.</p>
+      <p>Ogni pezzo è dipinto a mano: per questo due pumi dello stesso colore non sono mai identici.</p>
+    </div>
+    <figure data-reveal>
+      <div class="foto-cornice">
+        <img src="img/pumi-turchesi.jpg" alt="Molti pumi di ceramica smaltata di turchese, accostati l'uno all'altro" width="1600" height="1192" loading="lazy">
+      </div>
+      <figcaption>Pumi in smalto turchese, dalla bottega di Via Caravaggio</figcaption>
+    </figure>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true"><svg viewBox="0 0 120 178"><use href="#pumo"/></svg></div>
+
+<section class="chiaro" id="repertorio">
+  <div class="wrap">
+    <div class="rep-head" data-reveal>
+      <span class="kicker">Il repertorio</span>
+      <h2>Cosa esce dal forno</h2>
+      <p class="sub">Le forme della tradizione di Grottaglie, più le bomboniere d'autore per sposi, comunioni, cresime e battesimi. In bottega i pezzi cambiano con le infornate.</p>
+    </div>
+    <div class="rep-grid">
+      <article class="rep-card" data-reveal>
+        <div class="ph"><img src="img/pigne-colori.jpg" alt="Pigne di ceramica smaltata nei colori rosso, giallo e turchese" width="1920" height="1440" loading="lazy"></div>
+        <div class="txt">
+          <h3>Pumi e pigne</h3>
+          <p>Il bocciolo portafortuna di Puglia e la pigna a scaglie, negli smalti pieni della tradizione.</p>
+        </div>
+      </article>
+      <article class="rep-card" data-reveal>
+        <div class="ph"><img src="img/lampada-bianca-fiori.jpg" alt="Lampada di ceramica bianca traforata a motivi floreali" width="1200" height="1600" loading="lazy"></div>
+        <div class="txt">
+          <h3>Lampade e portacandela</h3>
+          <p>Ceramica traforata che lascia passare la luce, in diversi colori e misure.</p>
+        </div>
+      </article>
+      <article class="rep-card" data-reveal>
+        <div class="ph"><img src="img/gufi-azzurri.jpg" alt="Gufi portacandela in ceramica azzurra, allineati su un ripiano" width="1200" height="663" loading="lazy"></div>
+        <div class="txt">
+          <h3>Gufi portacandela</h3>
+          <p>Il gufo della buona sorte, in fila sullo scaffale e in tutte le tinte dello smalto.</p>
+        </div>
+      </article>
+      <article class="rep-card" data-reveal>
+        <div class="ph"><img src="img/cavalli-cavalieri.jpg" alt="Cavalli e cavalieri di ceramica dipinta allineati sullo scaffale della bottega" width="1600" height="607" loading="lazy"></div>
+        <div class="txt">
+          <h3>Cavalli e cavalieri</h3>
+          <p>Le figure dipinte del repertorio popolare pugliese, modellate e decorate a mano.</p>
+        </div>
+      </article>
+      <article class="rep-card" data-reveal>
+        <div class="ph"><img src="img/tete-a-tete-cuore.jpg" alt="Servizio tête-à-tête con vassoio a forma di cuore e due tazze" width="1200" height="1086" loading="lazy"></div>
+        <div class="txt">
+          <h3>Alzatine e tête-à-tête</h3>
+          <p>Servizi da due, alzatine e vassoi, personalizzabili con la scritta che vuoi.</p>
+        </div>
+      </article>
+      <article class="rep-card" data-reveal>
+        <div class="ph"><img src="img/bomboniere-frutta.jpg" alt="Bomboniere di ceramica a forma di frutta, appoggiate su scatole regalo" width="1200" height="900" loading="lazy"></div>
+        <div class="txt">
+          <h3>Bomboniere d'autore</h3>
+          <p>Tutto per gli sposi, comunione, cresime e battesimi, e complementi d'arredo su misura.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="chiaro" id="gallery">
+  <div class="wrap">
+    <div class="rep-head" data-reveal>
+      <span class="kicker">Le opere</span>
+      <h2>Ventitré pezzi dalla bottega</h2>
+      <p class="sub">Clicca una fotografia per vederla grande. Per sapere cosa c'è adesso in negozio, e per un pezzo su misura, scrivi o passa in Via Caravaggio.</p>
+    </div>
+    <div class="gallery-grid" data-reveal>
+      <button type="button" class="wide" data-src="img/pigne-colori.jpg" data-cap="Pigne a scaglie negli smalti rosso, giallo, turchese, verde e blu" aria-label="Ingrandisci: pigne a scaglie negli smalti della tradizione"><img src="img/pigne-colori.jpg" alt="Pigne di ceramica smaltata in cinque colori" width="1920" height="1440" loading="lazy"></button>
+      <button type="button" data-src="img/pumo-turchese-traforato.jpg" data-cap="Pumo traforato, smalto turchese" aria-label="Ingrandisci: pumo traforato turchese"><img src="img/pumo-turchese-traforato.jpg" alt="Pumo di ceramica traforata con smalto turchese" width="1200" height="1465" loading="lazy"></button>
+      <button type="button" data-src="img/pumo-arancio.jpg" data-cap="Pumo traforato, smalto arancio" aria-label="Ingrandisci: pumo traforato arancio"><img src="img/pumo-arancio.jpg" alt="Pumo di ceramica traforata con smalto arancio" width="1200" height="1758" loading="lazy"></button>
+      <button type="button" data-src="img/pumo-giallo.jpg" data-cap="Pumo traforato, smalto giallo" aria-label="Ingrandisci: pumo traforato giallo"><img src="img/pumo-giallo.jpg" alt="Pumo di ceramica traforata con smalto giallo" width="1200" height="1538" loading="lazy"></button>
+      <button type="button" data-src="img/pumo-turchese-intreccio.jpg" data-cap="Pumo traforato a intreccio, smalto turchese" aria-label="Ingrandisci: pumo traforato a intreccio"><img src="img/pumo-turchese-intreccio.jpg" alt="Pumo di ceramica traforata a intreccio, smalto turchese" width="1200" height="1696" loading="lazy"></button>
+      <button type="button" data-src="img/pumo-avorio-rombi.jpg" data-cap="Pumo traforato a rombi, smalto avorio" aria-label="Ingrandisci: pumo traforato a rombi"><img src="img/pumo-avorio-rombi.jpg" alt="Pumo di ceramica traforata a rombi, smalto avorio" width="1200" height="1607" loading="lazy"></button>
+      <button type="button" data-src="img/pumo-avorio-foglie.jpg" data-cap="Pumo con foglie d'acanto, smalto avorio" aria-label="Ingrandisci: pumo con foglie d'acanto"><img src="img/pumo-avorio-foglie.jpg" alt="Pumo di ceramica con foglie d'acanto in rilievo" width="1200" height="1292" loading="lazy"></button>
+      <button type="button" data-src="img/pumo-bianco-portacandela.jpg" data-cap="Pumo portacandela, bianco smaltato" aria-label="Ingrandisci: pumo portacandela bianco"><img src="img/pumo-bianco-portacandela.jpg" alt="Pumo portacandela di ceramica bianca traforata" width="1200" height="1238" loading="lazy"></button>
+      <button type="button" data-src="img/lampada-bianca-tondi.jpg" data-cap="Lampada traforata a tondi, bianco smaltato" aria-label="Ingrandisci: lampada traforata a tondi"><img src="img/lampada-bianca-tondi.jpg" alt="Lampada di ceramica bianca traforata a tondi" width="1200" height="1687" loading="lazy"></button>
+      <button type="button" data-src="img/lampada-bianca-fiori.jpg" data-cap="Lampada traforata a fiori, bianco smaltato" aria-label="Ingrandisci: lampada traforata a fiori"><img src="img/lampada-bianca-fiori.jpg" alt="Lampada di ceramica bianca traforata a fiori" width="1200" height="1596" loading="lazy"></button>
+      <button type="button" data-src="img/lampada-bianca-stelle.jpg" data-cap="Portacandela traforato a stelle" aria-label="Ingrandisci: portacandela traforato a stelle"><img src="img/lampada-bianca-stelle.jpg" alt="Portacandela di ceramica bianca traforato a stelle" width="1200" height="1563" loading="lazy"></button>
+      <button type="button" data-src="img/portacandela-bianco-cupola.jpg" data-cap="Portacandela a cupola, bianco smaltato" aria-label="Ingrandisci: portacandela a cupola"><img src="img/portacandela-bianco-cupola.jpg" alt="Portacandela di ceramica bianca a cupola" width="1200" height="1070" loading="lazy"></button>
+      <button type="button" data-src="img/portacandela-azzurro.jpg" data-cap="Portacandela a cupola, smalto azzurro" aria-label="Ingrandisci: portacandela azzurro"><img src="img/portacandela-azzurro.jpg" alt="Portacandela di ceramica azzurra a cupola" width="1200" height="1009" loading="lazy"></button>
+      <button type="button" data-src="img/portacandela-verde.jpg" data-cap="Portacandela a cupola, smalto verde" aria-label="Ingrandisci: portacandela verde"><img src="img/portacandela-verde.jpg" alt="Portacandela di ceramica verde a cupola" width="1200" height="926" loading="lazy"></button>
+      <button type="button" data-src="img/portacandele-tre.jpg" data-cap="Tre portacandela traforati, viola, verde e turchese" aria-label="Ingrandisci: tre portacandela traforati"><img src="img/portacandele-tre.jpg" alt="Tre portacandela di ceramica traforata nei colori viola, verde e turchese" width="1200" height="900" loading="lazy"></button>
+      <button type="button" data-src="img/portacandele-viola-rosso.jpg" data-cap="Portacandela a stelle, viola e rosso" aria-label="Ingrandisci: portacandela viola e rosso"><img src="img/portacandele-viola-rosso.jpg" alt="Due portacandela di ceramica traforata a stelle, viola e rosso" width="1200" height="900" loading="lazy"></button>
+      <button type="button" data-src="img/pumi-bianco-rosso.jpg" data-cap="Pumi portacandela, bianco e rosso" aria-label="Ingrandisci: pumi bianco e rosso"><img src="img/pumi-bianco-rosso.jpg" alt="Due pumi portacandela di ceramica, bianco e rosso" width="1200" height="900" loading="lazy"></button>
+      <button type="button" data-src="img/gufi-rosa.jpg" data-cap="Gufi portacandela, smalto rosa" aria-label="Ingrandisci: gufi portacandela rosa"><img src="img/gufi-rosa.jpg" alt="Gufi portacandela di ceramica rosa allineati" width="1200" height="767" loading="lazy"></button>
+      <button type="button" data-src="img/frutta-ceramica.jpg" data-cap="Frutta di ceramica dipinta, in alzata" aria-label="Ingrandisci: frutta di ceramica"><img src="img/frutta-ceramica.jpg" alt="Frutta di ceramica dipinta dentro un'alzata" width="1200" height="900" loading="lazy"></button>
+      <button type="button" data-src="img/servizio-tavola.jpg" data-cap="Servizio da tavola con decoro dipinto a mano" aria-label="Ingrandisci: servizio da tavola"><img src="img/servizio-tavola.jpg" alt="Servizio da tavola in ceramica con decoro azzurro dipinto a mano" width="1600" height="1600" loading="lazy"></button>
+      <button type="button" data-src="img/tete-a-tete-cuore.jpg" data-cap="Tête-à-tête, vassoio a cuore con due tazze" aria-label="Ingrandisci: tête-à-tête a cuore"><img src="img/tete-a-tete-cuore.jpg" alt="Servizio tête-à-tête con vassoio di ceramica a forma di cuore" width="1200" height="1086" loading="lazy"></button>
+      <button type="button" data-src="img/bomboniere-frutta.jpg" data-cap="Bomboniere con frutta di ceramica" aria-label="Ingrandisci: bomboniere con frutta di ceramica"><img src="img/bomboniere-frutta.jpg" alt="Bomboniere di ceramica a forma di frutta su scatole regalo" width="1200" height="900" loading="lazy"></button>
+      <button type="button" data-src="img/gufi-azzurri.jpg" data-cap="Gufi portacandela, smalto azzurro" aria-label="Ingrandisci: gufi portacandela azzurri"><img src="img/gufi-azzurri.jpg" alt="Gufi portacandela di ceramica azzurra allineati" width="1200" height="663" loading="lazy"></button>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="mondo">
+  <div class="wrap split">
+    <div data-reveal>
+      <span class="kicker">Nel mondo</span>
+      <h2>Da Via Caravaggio a New York</h2>
+      <blockquote>
+        Ho voluto portare un messaggio della mia arte in giro per il globo con fiere, mostre e filiali dove, con sacrificio, ho fatto conoscere le ceramiche di Grottaglie. Atelier a New York City, con la collaborazione dell'ICE, e nel cuore di Tokyo. E nella nostra Europa con sede a Milano centro e Francoforte.
+        <cite>Giuseppe Fasano</cite>
+      </blockquote>
+      <p>È il motivo per cui sull'insegna della bottega, sotto il nome e lo stemma di Grottaglie, ci sono scritte tre città.</p>
+    </div>
+    <figure data-reveal>
+      <div class="foto-cornice">
+        <img src="img/insegna.jpg" alt="L'insegna della bottega con lo stemma di Grottaglie e la scritta New York, Francoforte, Tokyo" width="1600" height="1630" loading="lazy">
+      </div>
+      <figcaption>L'insegna della bottega: lo stemma di Grottaglie e le tre città</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="dark" id="riconoscimenti">
+  <div class="wrap">
+    <div class="rep-head" data-reveal>
+      <span class="kicker">Riconoscimenti</span>
+      <h2 style="color:var(--bianco)">Quello che è arrivato dopo</h2>
+    </div>
+    <div class="ric-grid">
+      <article class="ric" data-reveal>
+        <span class="anno">2019</span>
+        <h3>Eccellenza di Puglia</h3>
+        <p>Targa di Eccellenza consegnata a Milano, a Palazzo Marino, il 10 novembre 2019, nella serata degli Ambasciatori Terre di Puglia.</p>
+      </article>
+      <article class="ric" data-reveal>
+        <span class="anno">2023</span>
+        <h3>Fatto d'argilla</h3>
+        <p>Il libro dedicato a Giuseppe Fasano, «l'uomo e l'artista della ceramica», presentato al Castello Dentice di Frasso.</p>
+      </article>
+      <article class="ric" data-reveal>
+        <span class="anno">7 edizioni</span>
+        <h3>Premio Nicola Fasano</h3>
+        <p>Il premio internazionale che la bottega dedica dal 2017 a Nicola Fasano, il padre di Giuseppe, e che porta il nome di Grottaglie città delle ceramiche.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="chiaro" id="cinema">
+  <div class="wrap">
+    <div class="rep-head" data-reveal>
+      <span class="kicker">Cinema e televisione</span>
+      <h2>Le ceramiche sul set</h2>
+      <p class="sub">Quando una produzione cerca la ceramica pugliese vera, arriva a Grottaglie.</p>
+    </div>
+    <ul class="tv-list" data-reveal>
+      <li>
+        <span class="tag">Cinema</span>
+        <p><strong>«La vita davanti a sé»</strong>, il film girato in Puglia da Sofia Loren con la regia di Edoardo Ponti: le ceramiche dell'atelier Giuseppe Fasano tra gli oggetti di scena.</p>
+      </li>
+      <li>
+        <span class="tag">Rai 1</span>
+        <p><strong>«Il Sistema»</strong>: le ceramiche di Giuseppe Fasano sul set della fiction, dove lui stesso ha dato un contributo personale come comparsa.</p>
+      </li>
+      <li>
+        <span class="tag">Rai 1</span>
+        <p><strong>«La mia bella famiglia italiana»</strong>, tv movie con Alessandro Preziosi: ceramiche della bottega tra le scenografie.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true"><svg viewBox="0 0 120 178"><use href="#pumo"/></svg></div>
+
+<section class="chiaro cont" id="contatti">
+  <div class="wrap cont-grid">
+    <div data-reveal>
+      <span class="kicker">Contatti</span>
+      <h2>Vieni in bottega</h2>
+      <p class="sub" style="margin-top:0">La bottega è a Grottaglie, in Via Caravaggio. Per sapere cosa c'è adesso, per una bomboniera o per un pezzo su misura, chiama o scrivi.</p>
+      <ul class="cont-dati">
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          <div><a href="https://www.google.com/maps/search/?api=1&query=Via+Caravaggio+3+Grottaglie+TA" target="_blank" rel="noopener">Via Caravaggio, 3</a><span>74023 Grottaglie (TA)</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>
+          <div><a href="tel:+393932004766">393 200 47 66</a><span>Telefono della bottega</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg>
+          <div><a href="mailto:giuseppefasano@live.it">giuseppefasano@live.it</a><span>Scrivi alla bottega</span></div>
+        </li>
+      </ul>
+      <a class="btn btn-primary" href="tel:+393932004766">Chiama la bottega</a>
+    </div>
+    <figure data-reveal>
+      <div class="foto-cornice">
+        <img src="img/pumo-turchese-traforato.jpg" alt="Pumo di ceramica traforata con smalto turchese, in primo piano" width="1200" height="1465" loading="lazy">
+      </div>
+      <figcaption>Pumo traforato, smalto turchese</figcaption>
+    </figure>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="divider" aria-hidden="true"><svg viewBox="0 0 120 178"><use href="#pumo"/></svg></div>
+    <p class="f-brand">Ceramiche Giuseppe Fasano</p>
+    <p class="f-loc">Via Caravaggio, 3 · 74023 Grottaglie (TA) · 393 200 47 66</p>
+    <p class="f-ai">Sito dimostrativo realizzato con AI da FAR AI · contenuti da rivedere con l'attività prima della pubblicazione<br>Testi e fotografie provengono dal sito attuale di Ceramiche Giuseppe Fasano e restano di proprietà dell'attività.</p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Fotografia ingrandita">
+  <button class="lb-close" type="button" aria-label="Chiudi la fotografia">&times;</button>
+  <button class="lb-prev" type="button" aria-label="Fotografia precedente">&#8249;</button>
+  <button class="lb-next" type="button" aria-label="Fotografia successiva">&#8250;</button>
+  <figure>
+    <img src="img/pigne-colori.jpg" alt="">
+    <figcaption></figcaption>
+  </figure>
+  <p class="lb-conta"></p>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* hero cascade */
+  var hero = document.querySelector('.hero');
+  function play(){ hero.classList.add('play'); }
+  if (document.readyState === 'complete') play();
+  else { window.addEventListener('load', play); setTimeout(play, 1500); }
+
+  /* nav solida allo scroll */
+  var nav = document.getElementById('nav');
+  function onScroll(){ nav.classList.toggle('solid', window.scrollY > 40); }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* reveal on scroll */
+  var revealed = document.querySelectorAll('[data-reveal]');
+  if ('IntersectionObserver' in window && !reduced){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); }
+      });
+    }, {threshold:.08, rootMargin:'0px 0px -40px 0px'});
+    revealed.forEach(function(el){ io.observe(el); });
+  } else {
+    revealed.forEach(function(el){ el.classList.add('on'); });
+  }
+
+  /* ------- inert condiviso + trap ------- */
+  function setBackgroundInert(active){
+    ['main','footer'].forEach(function(sel){
+      var el = document.querySelector(sel);
+      if (el) { if (active) el.setAttribute('inert',''); else el.removeAttribute('inert'); }
+    });
+    var skip = document.querySelector('.skip-link');
+    if (skip) { if (active) skip.setAttribute('inert',''); else skip.removeAttribute('inert'); }
+  }
+  function trapTab(e, panel){
+    if (e.key !== 'Tab') return;
+    var list = Array.prototype.slice.call(panel.querySelectorAll('a[href], button:not([disabled])'));
+    if (!list.length) return;
+    var first = list[0], last = list[list.length-1];
+    if (e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+  }
+  function whenVisible(panel, cb){
+    var t0 = Date.now();
+    (function check(){
+      if (getComputedStyle(panel).visibility === 'visible' || Date.now() - t0 > 1500) cb();
+      else requestAnimationFrame(check);
+    })();
+  }
+
+  /* ------- menu mobile ------- */
+  var burger = document.querySelector('.burger');
+  var menu = document.getElementById('mobileMenu');
+  var brandLink = document.querySelector('.nav-brand');
+  var navLinks = document.querySelector('.nav-links');
+  var navCta = document.querySelector('.nav-cta');
+  var menuOpen = false;
+  function openMenu(){
+    menuOpen = true;
+    menu.classList.add('open');
+    document.body.classList.add('menu-open');
+    burger.setAttribute('aria-expanded','true');
+    burger.setAttribute('aria-label','Chiudi il menu');
+    document.body.style.overflow = 'hidden';
+    setBackgroundInert(true);
+    [brandLink, navLinks, navCta].forEach(function(el){ if(el) el.setAttribute('inert',''); });
+    whenVisible(menu, function(){ menu.querySelector('a').focus(); });
+  }
+  function closeMenu(returnFocus){
+    menuOpen = false;
+    menu.classList.remove('open');
+    document.body.classList.remove('menu-open');
+    burger.setAttribute('aria-expanded','false');
+    burger.setAttribute('aria-label','Apri il menu');
+    document.body.style.overflow = '';
+    setBackgroundInert(false);
+    [brandLink, navLinks, navCta].forEach(function(el){ if(el) el.removeAttribute('inert'); });
+    if (returnFocus !== false) burger.focus();
+  }
+  burger.addEventListener('click', function(){ menuOpen ? closeMenu() : openMenu(); });
+  menu.addEventListener('click', function(e){ if (e.target.closest('a')) closeMenu(false); });
+  menu.addEventListener('keydown', function(e){ trapTab(e, menu); });
+
+  /* ------- lightbox ------- */
+  var tessere = Array.prototype.slice.call(document.querySelectorAll('button[data-src]'));
+  var lightbox = document.getElementById('lightbox');
+  var lbImg = lightbox.querySelector('img');
+  var lbCap = lightbox.querySelector('figcaption');
+  var lbConta = lightbox.querySelector('.lb-conta');
+  var lbClose = lightbox.querySelector('.lb-close');
+  var lbPrev = lightbox.querySelector('.lb-prev');
+  var lbNext = lightbox.querySelector('.lb-next');
+  var lbOpen = false, idx = 0, lbTrigger = null;
+
+  function mostra(i){
+    idx = (i + tessere.length) % tessere.length;
+    var b = tessere[idx];
+    lbImg.src = b.getAttribute('data-src');
+    lbImg.alt = b.querySelector('img').getAttribute('alt') || '';
+    lbCap.textContent = b.getAttribute('data-cap') || '';
+    lbConta.textContent = (idx+1) + ' di ' + tessere.length;
+  }
+  function openLightbox(b){
+    lbOpen = true; lbTrigger = b;
+    mostra(tessere.indexOf(b));
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    setBackgroundInert(true);
+    nav.setAttribute('inert','');
+    whenVisible(lightbox, function(){ lbClose.focus(); });
+  }
+  function closeLightbox(){
+    lbOpen = false;
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+    setBackgroundInert(false);
+    nav.removeAttribute('inert');
+    if (lbTrigger) lbTrigger.focus();
+  }
+  tessere.forEach(function(b){ b.addEventListener('click', function(){ openLightbox(b); }); });
+  lbClose.addEventListener('click', closeLightbox);
+  lbPrev.addEventListener('click', function(){ mostra(idx-1); });
+  lbNext.addEventListener('click', function(){ mostra(idx+1); });
+  lightbox.addEventListener('click', function(e){ if (e.target === lightbox) closeLightbox(); });
+  lightbox.addEventListener('keydown', function(e){ trapTab(e, lightbox); });
+
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape'){
+      if (lbOpen) closeLightbox();
+      else if (menuOpen) closeMenu();
+      return;
+    }
+    if (!lbOpen) return;
+    if (e.key === 'ArrowLeft') mostra(idx-1);
+    if (e.key === 'ArrowRight') mostra(idx+1);
+  });
+})();
+</script>
+  <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

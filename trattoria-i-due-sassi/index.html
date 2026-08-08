@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>I Due Sassi — Trattoria e Pizzeria a Matera, tra Barisano e Caveoso</title>
+<meta name="description" content="Trattoria e pizzeria a gestione familiare nel cuore dei Sassi di Matera: cucina lucana di Anna Maria, vini scelti da Cosimo, terrazza panoramica sulla Gravina. Sito dimostrativo.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="I Due Sassi — Trattoria e Pizzeria nei Sassi di Matera">
+<meta property="og:description" content="Cucina lucana di famiglia e terrazza panoramica sulla Gravina, nel punto dove Matera si divide nei due rioni antichi.">
+<meta property="og:image" content="https://demo.francescoar.com/trattoria-i-due-sassi/img/terrazza.jpg">
+<!-- 🪤 Senza width/height WhatsApp non disegna la miniatura e ripiega
+     sull'anteprima di solo testo: provato il 06/08 incollando il link. -->
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1080">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:url" content="https://demo.francescoar.com/trattoria-i-due-sassi/">
+<meta property="og:site_name" content="Trattoria I Due Sassi">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231D1710'/%3E%3Cpath d='M8 46 L14 46 L14 38 L20 38 L20 42 L26 42 L26 30 L30 30 L30 22 L32 14 L34 22 L34 30 L38 30 L38 40 L44 40 L44 34 L50 34 L50 44 L56 44' fill='none' stroke='%23D9902F' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Lora:ital,wght@1,400;1,500&family=Public+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Trattoria Pizzeria I Due Sassi",
+  "servesCuisine": ["Cucina lucana", "Pizza napoletana"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Ospedale Vecchio 1",
+    "addressLocality": "Matera",
+    "postalCode": "75100",
+    "addressRegion": "Basilicata",
+    "addressCountry": "IT"
+  },
+  "telephone": "+3908351971131",
+  "email": "cosimorega@libero.it",
+  "url": "http://www.trattoriaiduesassi.it"
+}
+</script>
+<style>
+:root{
+  --tufo:#EBE0C8;
+  --tufo-chiaro:#F4EDDC;
+  --grotta:#1D1710;
+  --grotta-2:#2A2118;
+  --persiana:#1F5B4B;
+  --persiana-scuro:#153F34;
+  --tovaglia:#D9902F;
+  --tovaglia-scura:#82561C;  /* testo sui fondi chiari: AA (5,95 · 5,46 · 4,86) */
+  --tovaglia-chiara:#FFAB38; /* testo sopra le foto scure: AA (4,91 · 5,62) */
+  --gravina:#A79878;
+  --gravina-scuro:#6E6249;
+  --inchiostro:#221B12;
+  --bianco-caldo:#FBF7EC;
+  --ease-hero:cubic-bezier(.18,.82,.24,1);
+  --ease-soft:cubic-bezier(.25,.6,.3,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+/* senza questo ogni ancora parcheggia il titolo della sezione dietro la barra fissa
+   (misurato: atterravano tutte a top=0 con la barra a 75px desktop / 79px mobile) */
+#cucina,#menu,#momenti,#gallery,#contatti{scroll-margin-top:96px}
+body{
+  font-family:'Public Sans',system-ui,sans-serif;
+  font-weight:300;
+  color:var(--inchiostro);
+  background:var(--tufo);
+  line-height:1.65;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:'Marcellus',serif;font-weight:400;line-height:1.08}
+.serif-voice{font-family:'Lora',serif;font-style:italic}
+
+/* ---------- skip link + focus ---------- */
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--tovaglia);color:var(--grotta);padding:.8rem 1.4rem;z-index:200;font-weight:600;text-decoration:none}
+.skip-link:focus{left:0}
+:focus-visible{outline:3px solid var(--tovaglia);outline-offset:3px;border-radius:2px}
+
+/* ---------- eyebrow ---------- */
+.eyebrow{
+  font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;font-weight:500;
+  display:flex;align-items:center;gap:.9rem;
+}
+.eyebrow::before{content:"";width:2.2rem;height:1px;background:currentColor;opacity:.55}
+
+/* ---------- nav ---------- */
+.nav{
+  position:fixed;inset:0 0 auto 0;z-index:130;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.1rem clamp(1.2rem,4vw,3rem);
+  transition:background .45s var(--ease-soft), box-shadow .45s;
+  color:var(--bianco-caldo);
+}
+/* da trasparente la barra stava sopra il cielo chiaro e il marchio bianco faceva
+   2,25:1. Velo dietro la barra, che si spegne quando diventa solida.
+   Assoluto = fuori dal flusso flex, non diventa un elemento della barra */
+.nav::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(29,23,16,.72) 0%,rgba(29,23,16,.34) 62%,rgba(29,23,16,0) 100%);
+  transition:opacity .45s var(--ease-soft)}
+.nav.solid::before{opacity:0}
+.nav.solid{background:rgba(29,23,16,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(251,247,236,.08)}
+.nav-brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;font-family:'Marcellus',serif;font-size:1.15rem;letter-spacing:.12em}
+/* 🪤 Alzare la soglia del burger non basta: appena SOPRA la soglia ricompaiono
+   link e CTA e per una manciata di pixel il marchio non ci sta piu' e va a capo
+   (su Case del Merlo succedeva in una finestra di 7 pixel, 1001-1007, che uno
+   sweep ogni 10px scavalca in pieno). La causa vera e' che il marchio si lascia
+   comprimere: qui non si comprime e non va a capo, cosi' quella classe di
+   difetto non puo' piu' tornare a nessuna larghezza. */
+.nav-brand{flex-shrink:0;white-space:nowrap}
+.nav-brand svg{width:34px;height:34px;flex:none}
+.nav-links{display:flex;gap:2.2rem;list-style:none}
+.nav-links a{
+  text-decoration:none;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;
+  padding-bottom:.25rem;background:linear-gradient(currentColor,currentColor) bottom left/0 1px no-repeat;
+  transition:background-size .4s var(--ease-soft);
+}
+.nav-links a:hover{background-size:100% 1px}
+.nav-cta{border:1px solid var(--tovaglia-chiara);background:rgba(29,23,16,.6);backdrop-filter:blur(6px);color:var(--tovaglia-chiara);padding:.55rem 1.2rem;border-radius:99px;text-decoration:none;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;transition:background .3s,color .3s}
+.nav-cta:hover{background:var(--tovaglia);color:var(--grotta)}
+.burger{display:none;background:none;border:0;cursor:pointer;z-index:120;width:44px;height:44px;position:relative;color:inherit}
+.burger span{position:absolute;left:8px;right:8px;height:2px;background:currentColor;transition:transform .4s var(--ease-soft),opacity .3s,top .4s}
+.burger span:nth-child(1){top:14px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:28px}
+.burger[aria-expanded="true"] span:nth-child(1){top:21px;transform:rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){top:21px;transform:rotate(-45deg)}
+
+/* 🪤 Il burger compariva solo sotto i 700px, ma i link della barra smettono di
+   entrarci molto prima: fra 701-760px il marchio e i link
+   andavano A CAPO e la barra raddoppiava di altezza, sopra la piega, sui tablet
+   in verticale (iPad = 768px, iPad Air = 820px). Misurato larghezza per
+   larghezza. Il menu a scomparsa parte percio' da 800px. */
+@media (max-width:800px){
+  .nav-links,.nav .nav-cta{display:none}
+  .burger{display:block}
+}.mobile-menu{
+  position:fixed;inset:0;background:var(--grotta);z-index:110;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1.4rem;
+  opacity:0;visibility:hidden;transition:opacity .45s var(--ease-soft),visibility .45s;
+}
+.mobile-menu.open{opacity:1;visibility:visible}
+.mobile-menu a{color:var(--tufo);font-family:'Marcellus',serif;font-size:2rem;text-decoration:none;letter-spacing:.06em}
+.mobile-menu a:hover{color:var(--tovaglia)}
+.mobile-menu .mm-note{color:var(--gravina);font-size:.8rem;letter-spacing:.25em;text-transform:uppercase;margin-top:2rem}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:var(--bianco-caldo);overflow:hidden;isolation:isolate}
+.hero-media{position:absolute;inset:0;z-index:-2}
+.hero-media img{width:100%;height:100%;object-fit:cover;animation:kenburns 26s var(--ease-soft) both}
+@keyframes kenburns{from{transform:scale(1.12) translateY(-1.5%)}to{transform:scale(1.0) translateY(0)}}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;
+  /* la meta' alta resta chiara (la rupe si deve vedere); dal 44% in giu', dove sta
+     tutto il blocco di testo, il velo si chiude: prima l'occhiello ocra sulla roccia
+     chiara faceva 1,00:1 e non si leggeva */
+  background:linear-gradient(180deg,rgba(29,23,16,.5) 0%,rgba(29,23,16,.1) 26%,rgba(29,23,16,.34) 44%,rgba(29,23,16,.68) 58%,rgba(29,23,16,.82) 76%,rgba(29,23,16,.88) 100%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;
+  /* allargata verso l'alto: copre la COLONNA del testo (basso a sinistra) senza
+     spegnere la foto a destra, dove non c'e' scritto niente */
+  background:radial-gradient(125% 105% at 20% 94%,rgba(29,23,16,.72) 0%,rgba(29,23,16,.4) 42%,transparent 74%)}
+.hero-inner{width:min(1200px,92vw);margin-inline:auto;padding:0 0 clamp(5.2rem,9vh,7.5rem)}
+/* ocra schiarito: --tovaglia pieno non arriva a 4,5:1 nemmeno sul velo rinforzato */
+.hero-eyebrow{color:#F7D8AC;text-shadow:0 1px 10px rgba(29,23,16,.85)}
+.hero-skyline{filter:drop-shadow(0 1px 6px rgba(29,23,16,.7))}
+.hero h1{
+  font-size:clamp(3.2rem,10.5vw,7.6rem);
+  letter-spacing:.045em;margin:.35em 0 .12em;text-wrap:balance;
+}
+.hero-tag{font-family:'Lora',serif;font-style:italic;font-size:clamp(1.05rem,2.2vw,1.45rem);max-width:34ch;color:#F2E9D5}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}
+.btn{
+  display:inline-flex;align-items:center;gap:.6rem;
+  padding:.95rem 1.9rem;border-radius:99px;text-decoration:none;
+  font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;
+  transition:transform .3s var(--ease-soft),background .3s,color .3s,border-color .3s;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--tovaglia);color:var(--grotta)}
+.btn-primary:hover{background:#E5A346}
+.btn-ghost{border:1px solid rgba(251,247,236,.55);color:var(--bianco-caldo)}
+.btn-ghost:hover{border-color:var(--bianco-caldo)}
+.hero-skyline{width:min(340px,60vw);margin-bottom:1.2rem;overflow:visible}
+.hero-skyline path{stroke:var(--tovaglia);stroke-width:2.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.hero-ribbon{
+  position:absolute;left:0;right:0;bottom:0;
+  display:flex;justify-content:center;gap:0;flex-wrap:wrap;
+  background:rgba(29,23,16,.55);backdrop-filter:blur(8px);
+  border-top:1px solid rgba(251,247,236,.14);
+}
+.hero-ribbon div{
+  padding:.95rem 2.2rem;font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;font-weight:500;color:#EFE6D0;
+  display:flex;align-items:center;gap:.7rem;
+}
+.hero-ribbon div+div{border-left:1px solid rgba(251,247,236,.14)}
+.hero-ribbon svg{width:15px;height:15px;flex:none;color:var(--tovaglia)}
+/* cascata hero */
+.hero .cascade{opacity:0;transform:translateY(26px);animation:rise 1s var(--ease-hero) forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+.hero .cascade:nth-child(1){animation-delay:.15s}
+.hero .cascade:nth-child(2){animation-delay:.3s}
+.hero .cascade:nth-child(3){animation-delay:.48s}
+.hero .cascade:nth-child(4){animation-delay:.66s}
+.hero .cascade:nth-child(5){animation-delay:.86s}
+
+/* ---------- divisore skyline ---------- */
+.divider{display:flex;justify-content:center;padding:.4rem 0}
+.divider svg{width:120px;height:26px;overflow:visible}
+.divider path{stroke:currentColor;stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round;opacity:.55}
+
+/* ---------- sezioni base ---------- */
+.section{padding:clamp(4.5rem,9vw,7.5rem) 0}
+.wrap{width:min(1200px,92vw);margin-inline:auto}
+[data-reveal]{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease-soft),transform .9s var(--ease-soft)}
+[data-reveal].in{opacity:1;transform:none}
+
+/* ---------- intro ---------- */
+.intro{background:var(--tufo);color:var(--inchiostro);text-align:center}
+.intro .eyebrow{justify-content:center;color:var(--persiana)}
+.intro .eyebrow::after{content:"";width:2.2rem;height:1px;background:currentColor;opacity:.55}
+.intro h2{font-size:clamp(1.9rem,4.6vw,3.3rem);max-width:22ch;margin:1.4rem auto .9rem;text-wrap:balance}
+.intro p{max-width:58ch;margin-inline:auto;color:var(--gravina-scuro);font-size:1.02rem}
+.intro-riga{display:flex;justify-content:center;gap:clamp(1.5rem,5vw,4rem);flex-wrap:wrap;margin-top:3rem}
+.intro-riga article{max-width:15rem}
+.intro-riga h3{font-size:1.15rem;letter-spacing:.06em;color:var(--persiana);margin-bottom:.35rem}
+.intro-riga p{font-size:.92rem;color:var(--gravina-scuro)}
+.intro-riga .serif-voice{display:block;font-size:.95rem;color:var(--inchiostro);margin-bottom:.5rem}
+
+/* ---------- split cantina (scuro) ---------- */
+.cantina{background:var(--grotta);color:var(--tufo);position:relative}
+.grain::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.split-media{position:relative;overflow:hidden;border-radius:4px}
+.split-media img{aspect-ratio:4/5;object-fit:cover;width:100%;transition:transform 1.2s var(--ease-soft)}
+.split-media:hover img{transform:scale(1.045)}
+.split-media::after{content:"";position:absolute;inset:0;border:1px solid rgba(235,224,200,.22);border-radius:4px;pointer-events:none;margin:14px}
+.cantina .eyebrow{color:var(--tovaglia)}
+.cantina h2{font-size:clamp(1.9rem,4.2vw,3rem);margin:1.3rem 0 1rem;max-width:16ch}
+.cantina p{color:#CDBFA4;max-width:52ch}
+.cantina .serif-voice{color:var(--tufo);font-size:1.08rem}
+.vini{list-style:none;margin-top:1.8rem;display:grid;gap:.7rem}
+.vini li{display:flex;align-items:baseline;gap:.9rem;font-size:.95rem;color:#E4D8BE}
+.vini li::before{content:"";width:.55rem;height:.55rem;border-radius:50%;background:var(--tovaglia);flex:none;transform:translateY(-1px)}
+.vini small{color:var(--gravina);letter-spacing:.06em}
+
+/* ---------- marquee ---------- */
+.marquee{background:var(--persiana-scuro);color:var(--tufo);overflow:hidden;padding:1.05rem 0;border-block:1px solid rgba(235,224,200,.15)}
+.marquee-track{display:flex;gap:3.2rem;width:max-content;animation:scroll 38s linear infinite;font-family:'Marcellus',serif;font-size:1.02rem;letter-spacing:.14em;white-space:nowrap}
+.marquee-track span{display:flex;align-items:center;gap:3.2rem}
+.marquee-track i{font-style:normal;color:var(--tovaglia-chiara);font-size:.7rem;transform:translateY(-2px)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ---------- menu ---------- */
+.menu{background:var(--tufo-chiaro)}
+.menu-head{text-align:center;margin-bottom:3.2rem}
+.menu-head .eyebrow{justify-content:center;color:var(--persiana)}
+.menu-head .eyebrow::after{content:"";width:2.2rem;height:1px;background:currentColor;opacity:.55}
+.menu-head h2{font-size:clamp(1.9rem,4.6vw,3.2rem);margin-top:1.3rem}
+.menu-head p{color:var(--gravina-scuro);max-width:52ch;margin:0.8rem auto 0}
+.piatti{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.piatto{
+  background:var(--bianco-caldo);border:1px solid #E2D5B6;border-radius:6px;
+  padding:2.2rem 1.9rem 2rem;position:relative;overflow:hidden;
+  transition:transform .45s var(--ease-soft),box-shadow .45s;
+}
+.piatto:hover{transform:translateY(-6px);box-shadow:0 22px 40px -22px rgba(34,27,18,.35)}
+.piatto::before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:var(--persiana);transform:scaleY(0);transform-origin:top;transition:transform .5s var(--ease-soft)}
+.piatto:hover::before{transform:scaleY(1)}
+.piatto .corso{font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--tovaglia-scura);font-weight:600}
+.piatto h3{font-size:1.5rem;margin:.7rem 0 .6rem;letter-spacing:.02em}
+.piatto p{font-family:'Lora',serif;font-style:italic;font-size:.98rem;color:var(--gravina-scuro)}
+.menu-note{
+  margin-top:2.6rem;text-align:center;
+}
+.menu-note p{display:inline-block;font-family:'Lora',serif;font-style:italic;color:var(--gravina-scuro);border-top:1px solid #D8C9A6;padding-top:1.2rem;max-width:62ch}
+.menu-note strong{font-weight:500;color:var(--persiana)}
+
+/* ---------- momenti ---------- */
+.momenti{background:var(--tufo)}
+.momenti-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3rem}
+.momento{position:relative;overflow:hidden;border-radius:5px;aspect-ratio:3/4;cursor:default}
+.momento img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease-soft)}
+.momento:hover img{transform:scale(1.06)}
+.momento figcaption{
+  position:absolute;inset:auto 0 0 0;padding:1.6rem 1.4rem;
+  background:linear-gradient(180deg,transparent 0%,rgba(29,23,16,.72) 24%,rgba(29,23,16,.9) 48%,rgba(29,23,16,.96) 100%);color:var(--bianco-caldo);
+}
+.momento figcaption strong{font-family:'Marcellus',serif;font-weight:400;font-size:1.15rem;letter-spacing:.04em;display:block}
+.momento figcaption span{font-family:'Lora',serif;font-style:italic;font-size:.88rem;color:#E3D7BC}
+
+/* ---------- quote ---------- */
+.quote{background:var(--grotta);color:var(--tufo);text-align:center;position:relative}
+.quote blockquote{font-family:'Lora',serif;font-style:italic;font-size:clamp(1.3rem,3.2vw,2.1rem);max-width:26ch;margin:0 auto;line-height:1.45;text-wrap:balance}
+.quote cite{display:block;margin-top:1.6rem;font-style:normal;font-size:.76rem;letter-spacing:.28em;text-transform:uppercase;color:var(--tovaglia);font-weight:500}
+
+/* ---------- gallery ---------- */
+.gallery{background:var(--tufo-chiaro)}
+.gallery-grid{columns:3;column-gap:1.1rem;margin-top:3rem}
+.gallery-grid button{
+  display:block;width:100%;border:0;padding:0;background:none;cursor:zoom-in;
+  margin-bottom:1.1rem;border-radius:5px;overflow:hidden;position:relative;
+}
+.gallery-grid img{width:100%;transition:transform .9s var(--ease-soft),filter .9s}
+.gallery-grid button:hover img{transform:scale(1.045)}
+.gallery-grid button::after{
+  content:attr(data-tag);position:absolute;left:.9rem;bottom:.8rem;
+  font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--bianco-caldo);
+  background:rgba(29,23,16,.55);padding:.32rem .7rem;border-radius:99px;backdrop-filter:blur(6px);
+  opacity:0;transform:translateY(6px);transition:opacity .4s,transform .4s;font-weight:500;font-family:'Public Sans',sans-serif;
+}
+.gallery-grid button:hover::after{opacity:1;transform:none}
+.lightbox{
+  position:fixed;inset:0;z-index:150;background:rgba(20,15,10,.94);
+  display:none;align-items:center;justify-content:center;flex-direction:column;padding:3.5rem 1.2rem 2rem;
+}
+.lightbox.open{display:flex}
+.lightbox img{max-width:min(1100px,94vw);max-height:78vh;object-fit:contain;border-radius:4px}
+.lightbox figcaption{color:var(--tufo);font-family:'Lora',serif;font-style:italic;margin-top:1.1rem;font-size:.95rem}
+/* 🪤 I controlli della lightbox avevano un fondo CHIARO traslucido (.08) con il
+   glifo chiaro: sul desktop la foto e' limitata e i bottoni cadono sul velo
+   scuro fisso, ma su telefono la foto occupa quasi tutta la larghezza e i
+   bottoni ci finiscono SOPRA — sopra una foto chiara il glifo spariva del tutto
+   (misurato fino a 1,00:1 su un minimo di 4,5, e succedeva su 4 demo su 5).
+   Fondo scuro coprente: il glifo chiaro ha sempre il suo contrasto, qualunque
+   foto ci sia sotto. */
+.lb-close,.lb-prev,.lb-next{
+  position:absolute;background:rgba(29,23,16,.78);backdrop-filter:blur(8px);border:1px solid rgba(251,247,236,.42);color:var(--tufo);
+  width:46px;height:46px;border-radius:50%;cursor:pointer;font-size:1.1rem;display:grid;place-items:center;
+  transition:background .3s;
+}
+.lb-close:hover,.lb-prev:hover,.lb-next:hover{background:rgba(29,23,16,.94)}
+.lb-close{top:1.2rem;right:1.2rem}
+.lb-prev{left:1.2rem;top:50%;transform:translateY(-50%)}
+.lb-next{right:1.2rem;top:50%;transform:translateY(-50%)}
+
+/* ---------- CTA finale ---------- */
+.finale{position:relative;color:var(--bianco-caldo);isolation:isolate;padding:clamp(6rem,13vw,10rem) 0}
+.finale-media{position:absolute;inset:0;z-index:-2}
+.finale-media img{width:100%;height:100%;object-fit:cover}
+.finale::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(29,23,16,.88) 8%,rgba(29,23,16,.55) 55%,rgba(29,23,16,.35))}
+.finale .eyebrow{color:var(--tovaglia-chiara)}
+.finale h2{font-size:clamp(2rem,5vw,3.4rem);max-width:17ch;margin:1.3rem 0 1rem}
+.finale p{max-width:46ch;color:#EADFC6}
+.contatti{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:1.1rem;margin-top:2.6rem;max-width:760px}
+.contatto{
+  border:1px solid rgba(251,247,236,.22);border-radius:6px;padding:1.25rem 1.3rem;
+  background:rgba(29,23,16,.35);backdrop-filter:blur(6px);
+}
+.contatto .k{font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:var(--tovaglia-chiara);font-weight:600;display:block;margin-bottom:.45rem}
+.contatto a{color:var(--bianco-caldo);text-decoration:none;border-bottom:1px solid rgba(251,247,236,.3);transition:border-color .3s}
+.contatto a:hover{border-color:var(--tovaglia)}
+.contatto p{font-size:.95rem;color:var(--bianco-caldo);max-width:none}
+
+/* ---------- footer ---------- */
+footer{background:#141009;color:var(--gravina);padding:2.8rem 0 2.4rem;font-size:.82rem}
+.footer-inner{display:flex;flex-direction:column;gap:1.1rem;align-items:center;text-align:center}
+.footer-brand{display:flex;align-items:center;gap:.6rem;font-family:'Marcellus',serif;color:var(--tufo);font-size:1rem;letter-spacing:.12em}
+.footer-brand svg{width:26px;height:26px}
+.ai-label{
+  border:1px solid rgba(217,144,47,.4);color:var(--tovaglia);
+  padding:.55rem 1.1rem;border-radius:99px;font-size:.72rem;letter-spacing:.06em;max-width:92vw;
+}
+footer .fine{font-size:.72rem;opacity:.9}  /* .75 dava 4,24:1 */
+
+/* ---------- responsive ---------- */
+@media (max-width:980px){
+  .piatti{grid-template-columns:1fr 1fr}
+  .momenti-grid{grid-template-columns:1fr 1fr}
+  .gallery-grid{columns:2}
+  .split{grid-template-columns:1fr}
+  .split-media img{aspect-ratio:16/11}
+}
+@media (max-width:700px){
+  .nav-links,.nav .nav-cta{display:none}
+  .burger{display:block}
+  .piatti{grid-template-columns:1fr}
+  .momenti-grid{grid-template-columns:1fr}
+  .gallery-grid{columns:1}
+  .hero-ribbon{display:none}
+  .hero-inner{padding-bottom:4rem}
+  /* 🪤 il velo di `.finale` e' un gradiente ORIZZONTALE a 100deg: serve al
+     desktop, dove il testo sta in una colonna stretta sul lato scuro. A 390px
+     il testo occupa tutta la larghezza e finisce sul lato chiaro della foto —
+     «Siamo nel cuore dei Sassi…» stava a 2,91:1. Su telefono va reso pieno. */
+  .finale::before{background:linear-gradient(180deg,rgba(29,23,16,.9) 0%,rgba(29,23,16,.86) 50%,rgba(29,23,16,.92) 100%)}
+}
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  html{scroll-behavior:auto}
+  [data-reveal]{opacity:1;transform:none}
+  .hero .cascade{opacity:1;transform:none}
+  .marquee-track{animation:none}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Salta al contenuto</a>
+
+<header class="nav" id="nav">
+  <a class="nav-brand" href="#top" aria-label="I Due Sassi — torna su">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="12" fill="none"/><path d="M8 46 L14 46 L14 38 L20 38 L20 42 L26 42 L26 30 L30 30 L30 22 L32 14 L34 22 L34 30 L38 30 L38 40 L44 40 L44 34 L50 34 L50 44 L56 44" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    I DUE SASSI
+  </a>
+  <nav aria-label="Principale">
+    <ul class="nav-links">
+      <li><a href="#cucina">La cucina</a></li>
+      <li><a href="#menu">Il menù</a></li>
+      <li><a href="#momenti">Il posto</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+    </ul>
+  </nav>
+  <a class="nav-cta" href="#contatti">Prenota</a>
+  <button class="burger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Apri il menu"><span></span><span></span><span></span></button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#cucina">La cucina</a>
+  <a href="#menu">Il menù</a>
+  <a href="#momenti">Il posto</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contatti">Prenota un tavolo</a>
+  <p class="mm-note">Matera · Barisano e Caveoso</p>
+</div>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="hero-media">
+    <picture>
+      <source media="(max-width:700px)" srcset="img/terrazza-mobile.jpg">
+      <img src="img/terrazza.jpg" alt="Tavolo apparecchiato sulla terrazza panoramica de I Due Sassi, davanti alla Gravina di Matera" fetchpriority="high">
+    </picture>
+  </div>
+  <div class="hero-inner">
+    <svg class="hero-skyline cascade" viewBox="0 0 340 74" aria-hidden="true">
+      <path id="skylinePath" d="M4 66 L36 66 L36 44 L64 44 L64 55 L96 55 L96 27 L118 27 L118 40 L142 40 L142 20 L156 20 L162 6 L168 20 L168 34 L192 34 L192 50 L222 50 L222 30 L248 30 L248 44 L276 44 L276 58 L306 58 L306 66 L336 66"/>
+    </svg>
+    <p class="eyebrow hero-eyebrow cascade">Trattoria · Pizzeria · Matera</p>
+    <h1 class="cascade">I Due Sassi</h1>
+    <p class="hero-tag cascade">La cucina di Anna Maria e la terrazza sulla Gravina, nel punto esatto dove Matera si divide nei suoi due rioni antichi.</p>
+    <div class="hero-ctas cascade">
+      <a class="btn btn-primary" href="tel:+393491621401">Prenota un tavolo</a>
+      <a class="btn btn-ghost" href="#menu">Guarda il menù</a>
+    </div>
+  </div>
+  <div class="hero-ribbon" aria-hidden="false">
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Tra Barisano e Caveoso</div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 20h18M5 20V9l7-5 7 5v11"/></svg>Gestione familiare</div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 19h16M6 19c0-6 2-9 6-9s6 3 6 9M12 10V5M10 5h4"/></svg>Terrazza panoramica</div>
+  </div>
+</section>
+
+<section class="section intro" id="chi-siamo">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Conduzione familiare</p>
+    <h2 data-reveal>Dove la città si divide in due, a tavola si è una famiglia sola.</h2>
+    <p data-reveal>La trattoria sta nel punto di divisione dei due rioni antichi di Matera, Barisano e Caveoso. In cucina, in sala e in cantina ci sono tre nomi, non tre reparti.</p>
+    <div class="intro-riga">
+      <article data-reveal>
+        <h3>Anna Maria</h3>
+        <span class="serif-voice">la cucina</span>
+        <p>Piatti tipici lucani preparati ogni giorno, con prodotti che arrivano dalle campagne e dalle masserie della regione.</p>
+      </article>
+      <article data-reveal>
+        <h3>Cosimo</h3>
+        <span class="serif-voice">la cantina</span>
+        <p>Sceglie formaggi, salumi e vini uno a uno: Aglianico del Vulture, Primitivo, Greco di Basilicata.</p>
+      </article>
+      <article data-reveal>
+        <h3>Pasquale</h3>
+        <span class="serif-voice">la sala</span>
+        <p>Il figlio: racconta i piatti, consiglia gli abbinamenti e ti fa sedere come si fa con gli ospiti di casa.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true" style="color:var(--gravina-scuro)"><svg viewBox="0 0 120 26"><path d="M2 22 L18 22 L18 13 L34 13 L34 18 L48 18 L48 8 L56 8 L60 2 L64 8 L64 12 L78 12 L78 18 L94 18 L94 14 L104 14 L104 22 L118 22"/></svg></div>
+
+<section class="section cantina grain" id="cucina">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow" data-reveal>La materia prima</p>
+      <h2 data-reveal>Masserie lucane, non fornitori.</h2>
+      <p class="serif-voice" data-reveal>Formaggi, salumi, legumi e carni arrivano dalle campagne e dalle masserie della Basilicata.</p>
+      <p data-reveal style="margin-top:1rem">È la spesa come si faceva una volta: si sceglie con cura quello che c'è di buono, e il menù segue. Anche la pizza rispetta i tempi giusti — impasto a lievitazione lenta, come vuole la tradizione napoletana.</p>
+      <ul class="vini" data-reveal>
+        <li>Aglianico del Vulture <small>il rosso di casa</small></li>
+        <li>Primitivo <small>per le carni di Anna Maria</small></li>
+        <li>Greco di Basilicata <small>col baccalà e i fiori di zucca</small></li>
+      </ul>
+    </div>
+    <figure class="split-media" data-reveal>
+      <img src="img/bancone.jpg" alt="Il bancone della trattoria nella sala scavata, con la rastrelliera dei vini lucani" loading="lazy">
+    </figure>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Cavatelli fatti in casa <i>◆</i> Orecchiette alle rape <i>◆</i> Purea di fave <i>◆</i> Agnello alla contadina <i>◆</i> Baccalà alla materana <i>◆</i> Fiori di zucca <i>◆</i> Burrata <i>◆</i> Pizza a lievitazione lenta <i>◆</i></span>
+    <span>Cavatelli fatti in casa <i>◆</i> Orecchiette alle rape <i>◆</i> Purea di fave <i>◆</i> Agnello alla contadina <i>◆</i> Baccalà alla materana <i>◆</i> Fiori di zucca <i>◆</i> Burrata <i>◆</i> Pizza a lievitazione lenta <i>◆</i></span>
+  </div>
+</div>
+
+<section class="section menu" id="menu">
+  <div class="wrap">
+    <div class="menu-head">
+      <p class="eyebrow" data-reveal>Piatti tipici lucani</p>
+      <h2 data-reveal>Un assaggio dal menù</h2>
+      <p data-reveal>Quello che la famiglia porta in tavola tutti i giorni. Il menù completo segue la stagione e la spesa del mattino.</p>
+    </div>
+    <div class="piatti">
+      <article class="piatto" data-reveal>
+        <span class="corso">Primo</span>
+        <h3>Cavatelli con purea di fave e funghi</h3>
+        <p>Pasta fatta in casa, fave di campagna passate al setaccio e funghi: il piatto che spiega la Basilicata in tre ingredienti.</p>
+      </article>
+      <article class="piatto" data-reveal>
+        <span class="corso">Primo</span>
+        <h3>Orecchiette alle rape alla materana</h3>
+        <p>Le orecchiette di casa con le cime di rapa, fatte come si fanno qui: "alla materana" non è un modo di dire.</p>
+      </article>
+      <article class="piatto" data-reveal>
+        <span class="corso">Secondo</span>
+        <h3>Agnello alla contadina</h3>
+        <p>Cotto piano, come nelle masserie. Da accompagnare con l'Aglianico che Cosimo tiene da parte.</p>
+      </article>
+    </div>
+    <div class="menu-note" data-reveal>
+      <p>E poi baccalà alla materana, tagliata, pecorino alla piastra, fiori di zucca, burrata. E la <strong>pizza a lievitazione lenta</strong> della tradizione napoletana. I prezzi li trovi in trattoria, esposti come si deve.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section momenti" id="momenti">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal style="color:var(--persiana)">Il posto</p>
+    <h2 data-reveal style="font-size:clamp(1.9rem,4.6vw,3.2rem);margin-top:1.3rem;max-width:20ch">Tre momenti, prima ancora di sederti.</h2>
+    <div class="momenti-grid">
+      <figure class="momento" data-reveal>
+        <img src="img/facciata.jpg" alt="La facciata della trattoria con l'insegna e le persiane verdi" loading="lazy">
+        <figcaption><strong>L'insegna</strong><span>Tufo, persiane verdi e la scritta che promette: cucina tipica.</span></figcaption>
+      </figure>
+      <figure class="momento" data-reveal>
+        <img src="img/sala.jpg" alt="La sala interna con la volta in tufo e il lampadario in ferro battuto" loading="lazy">
+        <figcaption><strong>La volta</strong><span>La sala scavata nel tufo, con le foto della vecchia Matera alle pareti.</span></figcaption>
+      </figure>
+      <figure class="momento" data-reveal>
+        <img src="img/fiori.jpg" alt="Il muro fiorito lungo la via, col menù esposto in bacheca" loading="lazy">
+        <figcaption><strong>La via</strong><span>Il muro fiorito dove il menù si legge in bacheca, come una volta.</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section quote grain">
+  <div class="wrap">
+    <!-- 🪤 Citazione VERBATIM dal loro sito (homepage.html, sezione «Dove siamo»).
+         Prima era una parafrasi dentro le virgolette — stessa sostanza, ma una
+         citazione fra «» attribuita a loro dev'essere parola per parola. -->
+    <blockquote data-reveal>«Nel periodo estivo, la cena viene servita in terrazza panoramica, dalla quale è possibile ammirare un paesaggio di rara bellezza.»</blockquote>
+    <cite data-reveal>— il racconto della famiglia</cite>
+  </div>
+</section>
+
+<section class="section gallery" id="gallery">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal style="color:var(--persiana)">Gallery</p>
+    <h2 data-reveal style="font-size:clamp(1.9rem,4.6vw,3.2rem);margin-top:1.3rem">La trattoria, com'è davvero.</h2>
+    <div class="gallery-grid">
+      <button data-tag="La terrazza" data-caption="La terrazza panoramica sulla Gravina"><img src="img/terrazza.jpg" alt="Tavolo in terrazza con vista sulla Gravina" loading="lazy"></button>
+      <button data-tag="L'insegna" data-caption="La facciata su Via Ospedale Vecchio"><img src="img/facciata.jpg" alt="Facciata della trattoria con insegna" loading="lazy"></button>
+      <button data-tag="Il bancone" data-caption="Il bancone nella sala scavata"><img src="img/bancone.jpg" alt="Bancone con rastrelliera dei vini" loading="lazy"></button>
+      <button data-tag="La sala" data-caption="La sala con la volta in tufo"><img src="img/sala.jpg" alt="Sala interna con volta in tufo" loading="lazy"></button>
+      <button data-tag="La via" data-caption="Il muro fiorito con la bacheca del menù"><img src="img/fiori.jpg" alt="Muro fiorito con menù esposto" loading="lazy"></button>
+      <button data-tag="Il vicolo" data-caption="Il cartello verso la terrazza panoramica"><img src="img/vicolo.jpg" alt="Cartello della trattoria nel vicolo" loading="lazy"></button>
+    </div>
+  </div>
+</section>
+
+<section class="finale" id="contatti">
+  <div class="finale-media"><img src="img/vicolo.jpg" alt="" loading="lazy"></div>
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Prenota</p>
+    <h2 data-reveal>Il tavolo in terrazza si prenota con una telefonata.</h2>
+    <!-- 🪤 Prima diceva «in due minuti»: un tempo che loro non scrivono da nessuna
+         parte. Qui ci sono due dati VERI presi dalle loro indicazioni stradali:
+         a Piazza S. Pietro Caveoso «è possibile parcheggiare», e da lì «proseguite
+         verso sinistra per altri 200 metri». Niente stime nostre. -->
+    <p class="serif-voice" data-reveal>Siamo nel cuore dei Sassi: da Piazza San Pietro Caveoso, dove si parcheggia, sono altri duecento metri a piedi.</p>
+    <div class="contatti">
+      <div class="contatto" data-reveal>
+        <span class="k">Telefono</span>
+        <p><a href="tel:+3908351971131">0835 1971131</a><br><a href="tel:+393491621401">349 1621401</a> · <a href="tel:+393473928917">347 3928917</a></p>
+      </div>
+      <div class="contatto" data-reveal>
+        <span class="k">Dove</span>
+        <p>Via Ospedale Vecchio 1, 75100 Matera<br><a href="https://maps.google.com/?q=Via+Ospedale+Vecchio+1,+Matera" target="_blank" rel="noopener">Apri in Google Maps</a></p>
+      </div>
+      <div class="contatto" data-reveal>
+        <span class="k">Scrivici</span>
+        <p><a href="mailto:cosimorega@libero.it?subject=Richiesta%20prenotazione%20tavolo">cosimorega@libero.it</a></p>
+      </div>
+      <div class="contatto" data-reveal>
+        <span class="k">Orari</span>
+        <p>Telefonaci per orari e disponibilità</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <p class="footer-brand">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 46 L14 46 L14 38 L20 38 L20 42 L26 42 L26 30 L30 30 L30 22 L32 14 L34 22 L34 30 L38 30 L38 40 L44 40 L44 34 L50 34 L50 44 L56 44" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      I DUE SASSI · MATERA
+    </p>
+    <p class="ai-label">Sito dimostrativo realizzato con AI da FAR AI · contenuti da rivedere con l'attività prima della pubblicazione</p>
+    <p class="fine">Testi e fotografie provengono dal sito attuale della Trattoria I Due Sassi e restano di proprietà dell'attività.</p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galleria fotografica">
+  <button class="lb-close" aria-label="Chiudi">✕</button>
+  <button class="lb-prev" aria-label="Foto precedente">←</button>
+  <figure>
+    <img src="img/terrazza.jpg" alt="La terrazza panoramica sulla Gravina">
+    <figcaption></figcaption>
+  </figure>
+  <button class="lb-next" aria-label="Foto successiva">→</button>
+</div>
+
+<script>
+(function(){
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* nav solid on scroll */
+  var nav = document.getElementById('nav');
+  var onScroll = function(){ nav.classList.toggle('solid', window.scrollY > 40); };
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  /* burger */
+  var burger = document.querySelector('.burger');
+  var mm = document.getElementById('mobileMenu');
+  /* 🪤 Col menu aperto a schermo intero il Tab USCIVA dal pannello e andava ad
+     attivare i link INVISIBILI dietro il velo: premendo Invio la pagina saltava
+     altrove mentre il menu restava nero a schermo pieno con lo scroll bloccato,
+     senza alcun indizio. E' il percorso di un lettore di schermo su telefono
+     (VoiceOver e TalkBack seguono l'ordine del Tab). `inert` toglie il resto
+     della pagina anche alla lettura per gesti, che NON segue il Tab; il trap sul
+     Tab chiude il ciclo. */
+  var fuori = [document.getElementById('main'), document.querySelector('footer'),
+               document.querySelector('.skip-link'), document.querySelector('.nav-brand'),
+               document.querySelector('nav'), document.querySelector('.nav-cta')];
+  function segna(aperto){
+    fuori.forEach(function(el){ if(el){ if(aperto){ el.setAttribute('inert',''); }
+                                       else { el.removeAttribute('inert'); } } });
+  }
+  function trappola(e, pannello, extra){
+    if(e.key !== 'Tab') return;
+    var f = Array.prototype.slice.call(
+      pannello.querySelectorAll('a[href], button:not([disabled]), [tabindex="0"]'));
+    if(extra) f = [extra].concat(f);
+    /* 🪤 niente offsetParent: in un pannello position:fixed e' null anche per
+       gli elementi perfettamente visibili */
+    f = f.filter(function(el){ return el.getClientRects().length > 0; });
+    if(!f.length) return;
+    var primo = f[0], ultimo = f[f.length - 1];
+    if(e.shiftKey && document.activeElement === primo){ e.preventDefault(); ultimo.focus(); }
+    else if(!e.shiftKey && document.activeElement === ultimo){ e.preventDefault(); primo.focus(); }
+  }
+  burger.addEventListener('click', function(){
+    var open = mm.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'Chiudi il menu' : 'Apri il menu');
+    document.body.style.overflow = open ? 'hidden' : '';
+    segna(open);
+  });
+  function chiudiMenu(){
+    mm.classList.remove('open');
+    burger.setAttribute('aria-expanded','false');
+    burger.setAttribute('aria-label','Apri il menu');
+    document.body.style.overflow='';
+    segna(false);
+  }
+  mm.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', chiudiMenu);
+  });
+  /* Esc chiudeva solo la lightbox: col menu aperto non faceva niente */
+  document.addEventListener('keydown', function(e){
+    if(!mm.classList.contains('open')) return;
+    if(e.key === 'Escape'){ chiudiMenu(); burger.focus(); return; }
+    trappola(e, mm, burger);
+  });
+
+  /* reveal on scroll */
+  if('IntersectionObserver' in window && !reduced){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:.14});
+    document.querySelectorAll('[data-reveal]').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('[data-reveal]').forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* skyline draw */
+  var sp = document.getElementById('skylinePath');
+  if(sp){
+    var len = sp.getTotalLength();
+    sp.style.strokeDasharray = len;
+    if(!reduced){
+      sp.style.strokeDashoffset = len;
+      sp.getBoundingClientRect();
+      sp.style.transition = 'stroke-dashoffset 2.4s cubic-bezier(.18,.82,.24,1) .3s';
+      sp.style.strokeDashoffset = '0';
+    }
+  }
+
+  /* lightbox */
+  var lb = document.getElementById('lightbox');
+  var lbImg = lb.querySelector('img');
+  var lbCap = lb.querySelector('figcaption');
+  var shots = Array.prototype.slice.call(document.querySelectorAll('.gallery-grid button'));
+  var idx = 0, lastFocus = null;
+  function show(i){
+    idx = (i + shots.length) % shots.length;
+    var b = shots[idx], im = b.querySelector('img');
+    lbImg.src = im.src; lbImg.alt = im.alt;
+    lbCap.textContent = b.getAttribute('data-caption') || '';
+  }
+  function openLb(i){
+    lastFocus = document.activeElement; show(i);
+    lb.classList.add('open'); document.body.style.overflow='hidden';
+    segna(true); burger.setAttribute('inert','');
+    /* 🪤 La transizione anima anche `visibility`: finche' e' `hidden`, `.focus()`
+       non attecchisce E NON DA' ERRORE. Contare i fotogrammi non basta (su Anfora
+       due rAF bastavano a 390px e non a 1440px): si aspetta la CONDIZIONE vera,
+       con un tetto per non restare appesi. */
+    var tentativi = 0;
+    (function mettiIlFuoco(){
+      var c = lb.querySelector('.lb-close');
+      if (getComputedStyle(lb).visibility === 'visible' || tentativi++ > 60) { c.focus(); }
+      else { requestAnimationFrame(mettiIlFuoco); }
+    })();
+  }
+  function closeLb(){
+    lb.classList.remove('open'); document.body.style.overflow='';
+    burger.removeAttribute('inert');
+    if(!mm.classList.contains('open')) segna(false);
+    if(lastFocus) lastFocus.focus();
+  }
+  shots.forEach(function(b,i){ b.addEventListener('click', function(){ openLb(i); }); });
+  lb.querySelector('.lb-close').addEventListener('click', closeLb);
+  lb.querySelector('.lb-prev').addEventListener('click', function(){ show(idx-1); });
+  lb.querySelector('.lb-next').addEventListener('click', function(){ show(idx+1); });
+  lb.addEventListener('click', function(e){ if(e.target === lb) closeLb(); });
+  document.addEventListener('keydown', function(e){
+    if(!lb.classList.contains('open')) return;
+    if(e.key === 'Escape') closeLb();
+    else if(e.key === 'ArrowLeft') show(idx-1);
+    else if(e.key === 'ArrowRight') show(idx+1);
+    else trappola(e, lb);
+  });
+})();
+</script>
+  <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

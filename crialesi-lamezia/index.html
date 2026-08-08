@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js')</script>
+<title>Oasi Beauty Studio di Crialesi Marinella — Centro estetico a Lamezia Terme</title>
+<meta name="description" content="Centro estetico a Lamezia Terme, in via Sen. Arturo Perugini: epilazione definitiva con laser a diodo 808 nm e luce pulsata, trattamenti viso e corpo, mani e piedi, dermopigmentazione. Sito dimostrativo.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Oasi Beauty Studio di Crialesi Marinella — Lamezia Terme">
+<meta property="og:description" content="Epilazione definitiva, viso, corpo, mani e piedi e dermopigmentazione, in via Sen. Arturo Perugini a Lamezia Terme. 4,7 su Google.">
+<meta property="og:site_name" content="Oasi Beauty Studio">
+<!-- Il sito non ha fotografie (vedi ART_DIRECTION §1): senza og:image il link
+     incollato in WhatsApp o in una mail esce SENZA anteprima, cioe' proprio dove
+     serve a vendere. Questa e' una card tipografica generata in locale dalla stessa
+     identita'. Percorso RELATIVO in fase di demo (regola 05/08); si mette assoluto
+     solo al deploy. -->
+<meta property="og:image" content="https://demo.francescoar.com/crialesi-lamezia/img/og-oasi-beauty-studio.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="Oasi Beauty Studio, centro estetico a Lamezia Terme">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#14352A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='22' fill='%2314352A'/%3E%3Cpath d='M63 12 C63 20 61 27 59 33 C69 19 90 15 99 24 C92 37 73 42 59 33 C39 35 23 50 23 70 C23 91 41 107 61 107 C82 107 100 91 100 70 C100 51 79 35 59 33' fill='none' stroke='%23D9B23A' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "@id": "https://crialesiespositoma.wixsite.com/website/#oasibeautystudio",
+  "name": "Oasi Beauty Studio di Crialesi Marinella",
+  "description": "Centro estetico a Lamezia Terme: epilazione definitiva con laser a diodo 808 nm, luce pulsata ed elettrocoagulazione, trattamenti viso e corpo, mani e piedi, dermopigmentazione.",
+  "image": "img/og-oasi-beauty-studio.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Sen. Arturo Perugini",
+    "addressLocality": "Lamezia Terme",
+    "postalCode": "88046",
+    "addressRegion": "CZ",
+    "addressCountry": "IT"
+  },
+  "telephone": "+393701508199",
+  "email": "crialesiespositomarinella@gmail.com",
+  "url": "https://crialesiespositoma.wixsite.com/website",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "66"
+  },
+  "makesOffer": [
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Epilazione permanente con laser a diodo 808 nm"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Epilazione con luce pulsata"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Dermopigmentazione"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Trattamenti viso"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Trattamenti corpo e massaggi"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Trattamenti mani e piedi"}}
+  ]
+}
+</script>
+<style>
+:root{
+  --bergamotto:#14352A;
+  --bergamotto-fondo:#0E271F;
+  --bergamotto-vivo:#2A5C46;
+  --sabbia:#F1E7D8;
+  --sabbia-cupa:#E4D6C0;
+  --crema:#FBF6EC;
+  --terracotta:#93401F;
+  --terracotta-viva:#E9A177;
+  --scorza:#D9B23A;
+  /* La scorza piena su terracotta fa 3,47:1 (misurato). Ma non basta cambiare tinta:
+     a 10px il glifo ❁ e' TUTTO anti-aliasing, e #F0DA96 (5,07 nominale) a schermo
+     ne dava 4,06-4,40. Serve tinta piu' chiara E corpo piu' grande: 6,33 nominale. */
+  --fiore:#FBF3DC;
+  --inchiostro:#241E18;
+  --fumo:#5A4F42;
+  --ease-hero:cubic-bezier(.2,.8,.22,1);
+  --ease-soft:cubic-bezier(.25,.6,.3,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+#listino,#epilazione,#metodo,#contatti{scroll-margin-top:92px}
+body{
+  font-family:'Mulish',system-ui,sans-serif;
+  color:var(--inchiostro);
+  background:var(--sabbia);
+  line-height:1.66;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:'Prata',Georgia,serif;font-weight:400;line-height:1.1}
+
+/* ---------- skip link + focus ---------- */
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--terracotta);color:var(--crema);padding:.85rem 1.4rem;z-index:200;font-weight:700;text-decoration:none}
+.skip-link:focus{left:0}
+:focus-visible{outline:3px solid var(--terracotta);outline-offset:3px;border-radius:2px}
+.verde :focus-visible,.mobile-menu :focus-visible,.nav:not(.solid) :focus-visible{outline-color:var(--scorza)}
+
+/* ---------- occhiello ---------- */
+.eyebrow{
+  font-size:.71rem;letter-spacing:.34em;text-transform:uppercase;font-weight:700;
+  display:flex;align-items:center;gap:.9rem;color:var(--bergamotto-vivo);
+}
+.eyebrow::before{content:"";width:2.1rem;height:1px;background:currentColor;opacity:.7}
+.verde .eyebrow{color:var(--scorza)}
+
+/* ---------- nav ---------- */
+.nav{
+  position:fixed;inset:0 0 auto 0;z-index:130;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:1rem clamp(1.1rem,4vw,3rem);
+  color:var(--crema);
+  transition:background .45s var(--ease-soft),color .45s var(--ease-soft),box-shadow .45s;
+}
+.nav.solid{background:rgba(241,231,216,.96);backdrop-filter:blur(10px);color:var(--inchiostro);box-shadow:0 1px 0 rgba(36,30,24,.14)}
+.nav-brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:'Prata',serif;font-size:.98rem;letter-spacing:.16em;flex-shrink:0;white-space:nowrap}
+.nav-brand svg{width:28px;height:28px;flex:none;color:var(--scorza)}
+.nav.solid .nav-brand svg{color:var(--terracotta)}
+.nav-links{display:flex;gap:1.9rem;list-style:none}
+.nav-links a{
+  text-decoration:none;font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;
+  padding-bottom:.22rem;background:linear-gradient(currentColor,currentColor) bottom left/0 1px no-repeat;
+  transition:background-size .4s var(--ease-soft);
+}
+.nav-links a:hover{background-size:100% 1px}
+.nav-cta{
+  border:1px solid var(--scorza);color:var(--scorza);background:none;
+  padding:.5rem 1.15rem;border-radius:99px;text-decoration:none;
+  font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;white-space:nowrap;
+  transition:background .3s,color .3s,border-color .3s;
+}
+.nav-cta:hover{background:var(--scorza);color:var(--bergamotto)}
+.nav.solid .nav-cta{background:var(--terracotta);border-color:var(--terracotta);color:var(--crema)}
+.nav.solid .nav-cta:hover{background:var(--inchiostro);border-color:var(--inchiostro)}
+.nav-tel{display:flex;align-items:center;flex:none}
+/* 🪤 Il numero e' scorza su fondo trasparente, e sotto la barra c'e' il
+   radial-gradient dell'hero, che il verde lo SCHIARISCE: a 390px il pulsante
+   finiva a 4,22:1, sotto la soglia 4,5 (stesso numero da `contrasti_tutto` e da
+   `contrasti_foto`, 3 giri su 3). Non e' un problema di tinta ma di fondo
+   VARIABILE: il rimedio e' dare al tasto un fondo PROPRIO, cosi' la misura non
+   dipende piu' da dove capita il pulsante nel gradiente. */
+.nav-tel .nav-cta{background:rgba(14,39,31,.72)}
+.nav-tel .nav-cta:hover{background:var(--scorza);color:var(--bergamotto)}
+.nav.solid .nav-tel .nav-cta{background:var(--terracotta)}
+.nav.solid .nav-tel .nav-cta:hover{background:var(--inchiostro)}
+/* 🪤 Col menu aperto la barra va `inert`: il numero resterebbe A VISTA ma NON
+   premibile (trappola gia' pagata su T&T e Ruggiero). Quindi si nasconde del
+   tutto — dentro al menu c'e' il suo «Chiama 370 150 8199», piu' grande. */
+.nav-tel[inert]{visibility:hidden}
+.burger{display:none;background:none;border:0;cursor:pointer;z-index:120;width:44px;height:44px;position:relative;color:inherit}
+.burger span{position:absolute;left:9px;right:9px;height:2px;background:currentColor;transition:transform .4s var(--ease-soft),opacity .3s,top .4s}
+.burger span:nth-child(1){top:14px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:28px}
+.burger[aria-expanded="true"] span:nth-child(1){top:21px;transform:rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){top:21px;transform:rotate(-45deg)}
+/* «OASI BEAUTY STUDIO» in Prata spaziata + 4 voci + CTA: sotto i 1150px la barra
+   andava a capo. Menu a scomparsa già da lì (misurato con sweep_mouse.py). */
+@media (max-width:1150px){
+  .nav-links{display:none}
+  .burger{display:block;flex:none}
+  /* Questo centro prende appuntamenti AL TELEFONO: passato l'hero, il tasto per
+     chiamare deve restare sempre a vista accanto al burger, non solo dentro al
+     menu. Bersaglio >=44px (WCAG 2.5.8 / linee guida iOS). */
+  .nav-tel .nav-cta{min-height:44px;display:inline-flex;align-items:center;padding:.5rem .95rem}
+}
+/* Sotto i 700px marchio + numero + burger non ci stanno alla taglia piena:
+   il marchio si rimpicciolisce, e sotto i 560px del marchio resta il SEGNO
+   (il nome per esteso e' nell'aria-label e nell'h1 dell'hero, subito sotto). */
+@media (max-width:700px){
+  .nav{gap:.55rem;padding-inline:.95rem}
+  .nav-brand{font-size:.78rem;letter-spacing:.09em;gap:.45rem}
+  .nav-brand svg{width:24px;height:24px}
+  .nav-tel .nav-cta{padding:.5rem .8rem;font-size:.72rem;letter-spacing:.06em}
+}
+@media (max-width:560px){
+  .brand-testo{display:none}
+}
+.mobile-menu{
+  position:fixed;inset:0;background:var(--bergamotto-fondo);z-index:110;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1.3rem;
+  opacity:0;visibility:hidden;transition:opacity .45s var(--ease-soft),visibility .45s;
+}
+.mobile-menu.open{opacity:1;visibility:visible}
+.mobile-menu a{color:var(--crema);font-family:'Prata',serif;font-size:clamp(1.5rem,7vw,2rem);text-decoration:none;letter-spacing:.03em}
+.mobile-menu a:hover{color:var(--scorza)}
+.mobile-menu .mm-tel{color:var(--scorza);border:1px solid var(--scorza);border-radius:99px;padding:.6rem 1.4rem;font-family:'Mulish',sans-serif;font-size:.85rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+.mobile-menu .mm-note{color:var(--sabbia-cupa);font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;margin-top:1.4rem;text-align:center;padding:0 1.2rem}
+
+/* ---------- fondi ---------- */
+.verde{background:var(--bergamotto);color:var(--crema)}
+.verde h2,.verde h3{color:var(--crema)}
+.grain{position:relative;isolation:isolate}
+.grain::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.55;mix-blend-mode:overlay;z-index:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.grain>*{position:relative;z-index:1}
+
+/* ---------- hero ---------- */
+.hero{
+  min-height:100svh;display:flex;flex-direction:column;justify-content:center;
+  padding:7.5rem 0 0;position:relative;overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;z-index:0;pointer-events:none;
+  width:min(760px,120vw);aspect-ratio:1;border-radius:50%;
+  right:-16%;top:-22%;
+  background:radial-gradient(circle,rgba(42,92,70,.85) 0%,rgba(20,53,42,0) 68%);
+}
+.hero-inner{width:min(1180px,90vw);margin-inline:auto;position:relative;z-index:1;padding-bottom:4.5rem}
+.hero-segno{width:min(112px,22vw);overflow:visible;color:var(--scorza);margin-bottom:1.5rem}
+.hero-segno path{stroke:currentColor;stroke-width:5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.hero h1{
+  font-size:clamp(2.9rem,10.6vw,7.4rem);
+  letter-spacing:-.022em;margin:.3em 0 .26em;text-wrap:balance;max-width:14ch;
+}
+.hero h1 .oasi{display:block;color:var(--scorza)}
+.hero-tag{font-size:clamp(1rem,1.8vw,1.22rem);max-width:52ch;color:var(--sabbia-cupa);font-weight:300}
+.hero-ctas{display:flex;gap:.9rem;flex-wrap:wrap;margin-top:2.2rem}
+.btn{
+  display:inline-flex;align-items:center;gap:.6rem;
+  padding:.95rem 1.85rem;border-radius:99px;text-decoration:none;
+  font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:800;
+  transition:transform .3s var(--ease-soft),background .3s,color .3s,border-color .3s;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--scorza);color:var(--bergamotto-fondo)}
+.btn-primary:hover{background:var(--crema)}
+.btn-ghost{border:1px solid rgba(251,246,236,.55);color:var(--crema)}
+.btn-ghost:hover{border-color:var(--crema);background:rgba(251,246,236,.1)}
+.hero-ribbon{
+  position:relative;z-index:1;
+  display:flex;flex-wrap:wrap;
+  border-top:1px solid rgba(217,178,58,.32);
+  background:rgba(14,39,31,.55);
+}
+.hero-ribbon div{
+  padding:1rem clamp(1.1rem,3.4vw,2.4rem);
+  font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--crema);
+  display:flex;align-items:center;gap:.7rem;flex:1 1 auto;justify-content:center;
+}
+.hero-ribbon div+div{border-left:1px solid rgba(217,178,58,.32)}
+.hero-ribbon svg{width:15px;height:15px;flex:none;color:var(--scorza)}
+.hero-ribbon b{color:var(--scorza);font-weight:800}
+.cascade{opacity:0;transform:translateY(26px);animation:rise 1s var(--ease-hero) forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+.cascade:nth-child(1){animation-delay:.1s}
+.cascade:nth-child(2){animation-delay:.24s}
+.cascade:nth-child(3){animation-delay:.4s}
+.cascade:nth-child(4){animation-delay:.58s}
+.cascade:nth-child(5){animation-delay:.78s}
+
+/* ---------- sezioni base ---------- */
+.section{padding:clamp(4.4rem,9vw,7.4rem) 0}
+.wrap{width:min(1180px,90vw);margin-inline:auto}
+/* Il gate `.js` e' obbligatorio: la classe la mette il <script> nel <head>, quindi
+   senza JavaScript questa regola non si applica affatto e i 43 blocchi restano
+   VISIBILI. Scritto nudo (`[data-reveal]{opacity:0}`) l'unica cosa che li
+   riaccendeva era l'IntersectionObserver: a JS spento sparivano per sempre
+   (listino delle 29 voci e i 4 riquadri dei contatti compresi). */
+.js [data-reveal]{opacity:0;transform:translateY(32px);transition:opacity .9s var(--ease-soft),transform .9s var(--ease-soft)}
+.js [data-reveal].in{opacity:1;transform:none}
+.divider{display:flex;justify-content:center;align-items:center;gap:1.1rem;padding:.2rem 0;color:var(--scorza);background:var(--sabbia)}
+.divider::before,.divider::after{content:"";height:1px;width:min(80px,14vw);background:currentColor;opacity:.45}
+.divider svg{width:34px;height:34px;overflow:visible}
+.divider path{stroke:currentColor;stroke-width:6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- intro ---------- */
+.intro{background:var(--sabbia);text-align:center}
+.intro .eyebrow{justify-content:center}
+.intro .eyebrow::after{content:"";width:2.1rem;height:1px;background:currentColor;opacity:.7}
+.intro h2{font-size:clamp(1.85rem,4.4vw,3.1rem);max-width:22ch;margin:1.4rem auto 1rem;text-wrap:balance}
+.intro>.wrap>p{max-width:62ch;margin-inline:auto;color:var(--fumo);font-size:1.03rem}
+.cifre{display:flex;justify-content:center;gap:clamp(1.6rem,6vw,5rem);flex-wrap:wrap;margin-top:3.4rem}
+.cifre article{max-width:17rem}
+.cifre .cifra{font-family:'Prata',serif;font-size:clamp(2.7rem,6vw,3.6rem);line-height:1;color:var(--terracotta);display:block}
+.cifre h3{font-size:.98rem;letter-spacing:.04em;margin:.7rem 0 .35rem;font-family:'Mulish',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:.76rem;color:var(--bergamotto-vivo)}
+.cifre p{font-size:.93rem;color:var(--fumo)}
+
+/* ---------- listino ---------- */
+.listino{background:var(--sabbia)}
+.testata{text-align:center;margin-bottom:3.4rem}
+.testata .eyebrow{justify-content:center}
+.testata .eyebrow::after{content:"";width:2.1rem;height:1px;background:currentColor;opacity:.7}
+.testata h2{font-size:clamp(1.85rem,4.6vw,3.1rem);margin-top:1.3rem;text-wrap:balance}
+.testata>p{color:var(--fumo);max-width:58ch;margin:.9rem auto 0}
+.blocco{
+  display:grid;grid-template-columns:.72fr 1.28fr;gap:clamp(1.4rem,4vw,3.4rem);
+  padding:clamp(2rem,4.4vw,3.2rem) 0;align-items:start;
+}
+.blocco+.blocco{border-top:1px solid rgba(90,79,66,.24)}
+.blocco-testa h3{font-size:clamp(1.55rem,3.2vw,2.1rem);margin-bottom:.5rem}
+.blocco-testa .conta{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;font-weight:800;color:var(--terracotta)}
+.blocco-testa p{font-size:.94rem;color:var(--fumo);margin-top:.8rem;max-width:34ch}
+.voci{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.1rem 2.2rem}
+.voci li{
+  display:flex;align-items:baseline;gap:.85rem;
+  padding:.62rem 0;border-bottom:1px solid rgba(90,79,66,.16);
+}
+.voci .n{font-family:'Prata',serif;font-size:.85rem;color:var(--terracotta);flex:none;min-width:1.6rem}
+.voci .v{font-size:.99rem}
+.voci small{display:block;font-size:.79rem;color:var(--fumo);line-height:1.4}
+.nota-prezzi{
+  margin-top:2.6rem;text-align:center;font-size:.95rem;color:var(--fumo);
+  border-top:1px solid rgba(90,79,66,.24);padding-top:2rem;
+}
+.nota-prezzi b{color:var(--inchiostro);font-weight:700}
+
+/* ---------- marquee ---------- */
+.marquee{background:var(--terracotta);color:var(--crema);overflow:hidden;padding:1rem 0;border-block:1px solid rgba(251,246,236,.2)}
+.marquee-track{display:flex;gap:2.8rem;width:max-content;animation:scorri 46s linear infinite;font-family:'Prata',serif;font-size:1.02rem;letter-spacing:.09em;white-space:nowrap}
+.marquee-track span{display:flex;align-items:center;gap:2.8rem}
+.marquee-track i{font-style:normal;color:var(--fiore);font-size:.95rem;transform:translateY(-2px)}
+@keyframes scorri{to{transform:translateX(-50%)}}
+
+/* ---------- epilazione ---------- */
+.epil h2{font-size:clamp(1.9rem,4.4vw,3rem);margin:1.3rem 0 1.1rem;max-width:19ch}
+.epil>.wrap>p{color:var(--sabbia-cupa);max-width:58ch;font-weight:300;font-size:1.04rem}
+.tecnologie{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:1.1rem;margin-top:3rem}
+.tec{
+  border:1px solid rgba(217,178,58,.34);border-radius:8px;padding:1.7rem 1.6rem 1.8rem;
+  background:rgba(42,92,70,.34);
+  transition:transform .45s var(--ease-soft),border-color .45s;
+}
+.tec:hover{transform:translateY(-4px);border-color:var(--scorza)}
+.tec .k{font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;font-weight:800;color:var(--scorza);display:block;margin-bottom:.8rem}
+.tec h3{font-size:1.34rem;margin-bottom:.6rem}
+/* «Epilazione permanente e progressiva» va su due righe, gli altri due titoli su una:
+   senza questo i tre paragrafi partivano a quote diverse. Solo quando le card sono
+   affiancate: impilate, il min-height sarebbe spazio morto. */
+@media (min-width:820px){ .tec h3{min-height:2.2em} }
+.tec p{font-size:.94rem;color:var(--sabbia-cupa);font-weight:300}
+.dermo{
+  margin-top:3rem;border-top:1px solid rgba(217,178,58,.3);padding-top:2.4rem;
+  display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(1.2rem,4vw,3rem);align-items:baseline;
+}
+.dermo h3{font-size:clamp(1.5rem,3vw,2rem)}
+.dermo p{color:var(--sabbia-cupa);font-weight:300;max-width:56ch}
+
+/* ---------- citazione ---------- */
+.quote{background:var(--sabbia-cupa);text-align:center}
+.quote blockquote{font-family:'Prata',serif;font-size:clamp(1.3rem,3.1vw,2.05rem);max-width:26ch;margin:0 auto;line-height:1.42;text-wrap:balance;color:var(--inchiostro)}
+.quote .stelle{display:flex;justify-content:center;gap:.28rem;margin-bottom:1.6rem;color:var(--terracotta)}
+.quote .stelle svg{width:19px;height:19px}
+.quote cite{display:block;margin-top:1.6rem;font-style:normal;font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;color:var(--fumo);font-weight:800}
+
+/* ---------- metodo + marchi ---------- */
+.metodo{background:var(--crema)}
+.metodo-split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:start}
+.metodo h2{font-size:clamp(1.85rem,4.2vw,2.8rem);margin:1.3rem 0 1.1rem;max-width:17ch}
+.metodo p{color:var(--fumo);max-width:52ch}
+.metodo p+p{margin-top:1rem}
+.marchi{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.6rem}
+.marchi li{
+  font-size:.76rem;letter-spacing:.13em;text-transform:uppercase;font-weight:800;color:var(--bergamotto-vivo);
+  border:1px solid rgba(42,92,70,.42);border-radius:99px;padding:.4rem .9rem;
+}
+.marchi-testa{font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;font-weight:800;color:var(--terracotta)}
+
+/* ---------- contatti ---------- */
+.finale{position:relative;overflow:hidden;padding:clamp(5rem,11vw,8rem) 0}
+.finale-segno{position:absolute;right:-8%;bottom:-14%;width:min(500px,62vw);opacity:.13;color:var(--scorza);pointer-events:none;z-index:0}
+.finale-segno path{stroke:currentColor;stroke-width:3.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.finale h2{font-size:clamp(1.95rem,4.8vw,3.2rem);max-width:16ch;margin:1.3rem 0 1rem}
+.finale>.wrap>p{color:var(--sabbia-cupa);max-width:52ch;font-weight:300}
+/* Le 4 tessere stavano in 880px: a schermo largo diventavano 3+1, con l'ultima
+   orfana. Ora che sotto c'e' la foto dell'ingresso a tutta larghezza lo stacco
+   si vedeva, quindi vanno alla stessa larghezza e stanno su una riga sola. */
+.contatti{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:1rem;margin-top:2.8rem}
+.contatto{border:1px solid rgba(217,178,58,.32);border-radius:8px;padding:1.3rem 1.35rem;background:rgba(42,92,70,.3)}
+.contatto .k{font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;color:var(--scorza);font-weight:800;display:block;margin-bottom:.5rem}
+.contatto a{color:var(--crema);text-decoration:none;border-bottom:1px solid rgba(217,178,58,.5);transition:border-color .3s}
+.contatto a:hover{border-color:var(--scorza)}
+.contatto p{font-size:.96rem;color:var(--crema);font-weight:400}
+.contatto .grande{font-family:'Prata',serif;font-size:1.42rem;letter-spacing:.01em}
+.ingresso{margin-top:2.8rem}
+.ingresso img{width:100%;height:auto;border-radius:10px;border:1px solid rgba(217,178,58,.28)}
+.ingresso figcaption{
+  margin-top:.9rem;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+  font-weight:700;color:var(--sabbia-cupa);
+}
+
+/* ---------- footer ---------- */
+footer{background:var(--bergamotto-fondo);color:var(--sabbia-cupa);padding:2.9rem 0 2.5rem;font-size:.83rem}
+.footer-inner{display:flex;flex-direction:column;gap:1.1rem;align-items:center;text-align:center}
+.footer-brand{display:flex;align-items:center;gap:.6rem;font-family:'Prata',serif;color:var(--crema);font-size:.98rem;letter-spacing:.14em}
+.footer-brand svg{width:26px;height:26px;color:var(--scorza)}
+.ai-label{border:1px solid rgba(217,178,58,.5);color:var(--scorza);padding:.6rem 1.1rem;border-radius:99px;font-size:.73rem;letter-spacing:.04em;max-width:92vw;line-height:1.55}
+footer .fine{font-size:.73rem;max-width:70ch}
+
+/* ---------- responsive ---------- */
+@media (max-width:980px){
+  .blocco{grid-template-columns:1fr;gap:1.4rem}
+  .metodo-split{grid-template-columns:1fr}
+  .dermo{grid-template-columns:1fr;gap:.8rem}
+}
+/* Su telefono i 3 fatti del ribbon vanno a capo uno per riga: senza compattare
+   l'hero il terzo restava TAGLIATO a metà dal bordo dello schermo (misurato:
+   +31px a 390×844, +134px a 360×780). Qui si recuperano ~110px. */
+@media (max-width:700px){
+  .hero{padding-top:5.3rem}
+  .hero-inner{padding-bottom:2.1rem}
+  .hero-segno{width:72px;margin-bottom:.95rem}
+  .hero h1{margin:.22em 0 .18em}
+  .hero-tag{line-height:1.55}
+  .hero-ctas{margin-top:1.45rem}
+  .btn{padding:.85rem 1.6rem}
+  .hero-ribbon div{flex:1 1 100%;justify-content:flex-start;padding:.7rem clamp(1.1rem,3.4vw,2.4rem);font-size:.68rem}
+  .hero-ribbon div+div{border-left:0;border-top:1px solid rgba(217,178,58,.3)}
+  .voci{grid-template-columns:1fr}
+}
+@media (max-width:400px){
+  .divider::before,.divider::after{width:48px}
+}
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  html{scroll-behavior:auto}
+  /* `.js` anche qui: una media query non aggiunge specificita', e `[data-reveal]`
+     nudo (0,1,0) perderebbe contro `.js [data-reveal]` (0,1,1) di sopra. */
+  .js [data-reveal]{opacity:1;transform:none}
+  .cascade{opacity:1;transform:none}
+  .marquee-track{animation:none}
+}
+</style>
+<noscript><style>
+  /* Senza JS il burger non puo' aprire nulla e la barra non puo' diventare solida
+     allo scroll (la crema resterebbe sopra il fondo sabbia). Quindi: barra NON
+     fissa e verde piena, link sempre visibili che vanno a capo invece di sfondare
+     la riga, e burger via perche' non farebbe niente. */
+  html{scroll-behavior:auto}
+  .nav{position:static;background:var(--bergamotto-fondo);color:var(--crema);
+       flex-wrap:wrap;justify-content:center;gap:.45rem 1.2rem;box-shadow:none}
+  .burger{display:none !important}
+  .nav-links{display:flex !important;flex-wrap:wrap;justify-content:center;gap:.35rem 1.3rem}
+  .nav .nav-cta{display:inline-flex !important}
+  .brand-testo{display:inline !important}
+  /* Su telefono i 4 link vanno a capo: senza compattare, la barra statica
+     arrivava a 171px (misurato con senza_js.py). Qui scende sotto i 140. */
+  @media (max-width:700px){
+    .nav{padding:.5rem .95rem;gap:.3rem .9rem}
+    .nav-brand{font-size:.72rem}
+    .nav-links{gap:.15rem .9rem}
+    .nav-links a{font-size:.66rem;letter-spacing:.1em;padding-bottom:0}
+    .nav-tel .nav-cta{min-height:0;padding:.3rem .8rem;font-size:.68rem}
+  }
+  .hero{padding-top:2.2rem}
+  #listino,#epilazione,#metodo,#contatti{scroll-margin-top:8px}
+</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Salta al contenuto</a>
+
+<header class="nav" id="nav">
+  <a class="nav-brand" href="#top" aria-label="Oasi Beauty Studio, torna su">
+    <svg viewBox="0 0 120 120" aria-hidden="true"><path d="M63 12 C63 20 61 27 59 33 C69 19 90 15 99 24 C92 37 73 42 59 33 C39 35 23 50 23 70 C23 91 41 107 61 107 C82 107 100 91 100 70 C100 51 79 35 59 33" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span class="brand-testo">OASI BEAUTY STUDIO</span>
+  </a>
+  <nav aria-label="Principale">
+    <ul class="nav-links">
+      <li><a href="#listino">Il listino</a></li>
+      <li><a href="#epilazione">Epilazione</a></li>
+      <li><a href="#metodo">Il metodo</a></li>
+      <li><a href="#contatti">Dove siamo</a></li>
+    </ul>
+  </nav>
+  <span class="nav-tel"><a class="nav-cta" href="tel:+393701508199">370 150 8199</a></span>
+  <button class="burger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Apri il menu"><span></span><span></span><span></span></button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#listino">Il listino</a>
+  <a href="#epilazione">Epilazione</a>
+  <a href="#metodo">Il metodo</a>
+  <a href="#contatti">Dove siamo</a>
+  <a class="mm-tel" href="tel:+393701508199">Chiama 370 150 8199</a>
+  <p class="mm-note">Via Sen. Arturo Perugini · Lamezia Terme (CZ)</p>
+</div>
+
+<main id="main">
+<section class="hero verde grain" id="top">
+  <div class="hero-inner">
+    <svg class="hero-segno cascade" viewBox="0 0 120 120" aria-hidden="true">
+      <path id="segnoPath" d="M63 12 C63 20 61 27 59 33 C69 19 90 15 99 24 C92 37 73 42 59 33 C39 35 23 50 23 70 C23 91 41 107 61 107 C82 107 100 91 100 70 C100 51 79 35 59 33"/>
+    </svg>
+    <p class="eyebrow cascade">Centro estetico · Lamezia Terme (CZ)</p>
+    <h1 class="cascade"><span class="oasi">Oasi</span>Beauty Studio</h1>
+    <p class="hero-tag cascade">Il centro di Marinella Crialesi, in via Sen. Arturo Perugini. Epilazione definitiva, viso, corpo, mani e piedi, dermopigmentazione: ventinove trattamenti e tre tecnologie.</p>
+    <div class="hero-ctas cascade">
+      <a class="btn btn-primary" href="tel:+393701508199">Chiama 370 150 8199</a>
+      <a class="btn btn-ghost" href="#listino">Guarda il listino</a>
+    </div>
+  </div>
+  <div class="hero-ribbon">
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.6 6 .8-4.4 4.2 1.1 6.1L12 16.8 6.7 19.7l1.1-6.1L3.4 9.4l6-.8z"/></svg><span><b>4,7</b> su Google · 66 recensioni</span></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h4l2-6 4 12 2-6h4"/></svg><span>Laser a diodo <b>808 nm</b> e luce pulsata</span></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg><span>Via Sen. Arturo Perugini</span></div>
+  </div>
+</section>
+
+<section class="section intro">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Il centro</p>
+    <h2 data-reveal>Nel cuore della Calabria, facilmente raggiungibile da ogni provincia.</h2>
+    <p data-reveal>In cabina si lavora su tre fronti (il viso, il corpo, le mani e i piedi), più l'epilazione definitiva, con tre tecnologie diverse a seconda della pelle e del pelo. I prodotti sono di nove marchi professionali diversi, non di un'unica linea.</p>
+    <div class="cifre">
+      <article data-reveal>
+        <span class="cifra" data-count="4.7" data-dec="1">4,7</span>
+        <h3>La media su Google</h3>
+        <p>Su 66 recensioni pubbliche di chi è passato da qui.</p>
+      </article>
+      <article data-reveal>
+        <span class="cifra" data-count="3">3</span>
+        <h3>Tecnologie per l'epilazione</h3>
+        <p>Laser a diodo 808 nm, luce pulsata ed elettrocoagulazione: si sceglie in base alla pelle e alla zona.</p>
+      </article>
+      <article data-reveal>
+        <span class="cifra" data-count="9">9</span>
+        <h3>Marchi professionali</h3>
+        <p>Da ISHI a Germaine de Capuccini: cosmetica di cabina, non prodotti da banco.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true"><svg viewBox="0 0 120 120"><path d="M63 12 C63 20 61 27 59 33 C69 19 90 15 99 24 C92 37 73 42 59 33 C39 35 23 50 23 70 C23 91 41 107 61 107 C82 107 100 91 100 70 C100 51 79 35 59 33"/></svg></div>
+
+<section class="section listino" id="listino">
+  <div class="wrap">
+    <div class="testata">
+      <p class="eyebrow" data-reveal>Il listino</p>
+      <h2 data-reveal>Ventinove trattamenti, scritti per intero.</h2>
+      <p data-reveal>Quello che si fa qui dentro, senza sigle e senza «e molto altro». Se cerchi qualcosa che non è in elenco, chiedilo al telefono.</p>
+    </div>
+
+    <div class="blocco">
+      <div class="blocco-testa" data-reveal>
+        <span class="conta">Dieci trattamenti</span>
+        <h3>Viso</h3>
+        <p>Dalla pulizia di base al fotoringiovanimento, fino al trucco per il giorno del matrimonio.</p>
+      </div>
+      <ul class="voci" data-reveal>
+        <li><span class="n">01</span><span class="v">Pulizia viso</span></li>
+        <li><span class="n">02</span><span class="v">Trattamento acne</span></li>
+        <li><span class="n">03</span><span class="v">Trattamento antiage</span></li>
+        <li><span class="n">04</span><span class="v">Chroma Biotech<small>il protocollo ISHI legato alla cromoterapia</small></span></li>
+        <li><span class="n">05</span><span class="v">Trattamento schiarente</span></li>
+        <li><span class="n">06</span><span class="v">Trattamento idratante</span></li>
+        <li><span class="n">07</span><span class="v">Fotoringiovanimento</span></li>
+        <li><span class="n">08</span><span class="v">Esfoliante agli acidi</span></li>
+        <li><span class="n">09</span><span class="v">Trucco sposa</span></li>
+        <li><span class="n">10</span><span class="v">Trucco giorno e sera</span></li>
+      </ul>
+    </div>
+
+    <div class="blocco">
+      <div class="blocco-testa" data-reveal>
+        <span class="conta">Nove trattamenti</span>
+        <h3>Corpo</h3>
+        <p>Bendaggi, apparecchiature e cinque massaggi diversi, perché «massaggio» da solo non vuol dire niente.</p>
+      </div>
+      <ul class="voci" data-reveal>
+        <li><span class="n">11</span><span class="v">Bendaggi e fanghi</span></li>
+        <li><span class="n">12</span><span class="v">Scrub</span></li>
+        <li><span class="n">13</span><span class="v">Pressoterapia</span></li>
+        <li><span class="n">14</span><span class="v">Biorimodellamento CBT 2.0<small>il metodo ISHI</small></span></li>
+        <li><span class="n">15</span><span class="v">Massaggio rassodante</span></li>
+        <li><span class="n">16</span><span class="v">Massaggio anticellulite</span></li>
+        <li><span class="n">17</span><span class="v">Massaggio linfodrenante</span></li>
+        <li><span class="n">18</span><span class="v">Massaggio depurativo al sale</span></li>
+        <li><span class="n">19</span><span class="v">Massaggio destrutturante</span></li>
+      </ul>
+    </div>
+
+    <div class="blocco">
+      <div class="blocco-testa" data-reveal>
+        <span class="conta">Sei trattamenti</span>
+        <h3>Mani e piedi</h3>
+        <p>Dalla cheratina alla ricostruzione, con la manicure a secco firmata Orly.</p>
+      </div>
+      <ul class="voci" data-reveal>
+        <li><span class="n">20</span><span class="v">Trattamento keratin mani e piedi</span></li>
+        <li><span class="n">21</span><span class="v">Dry manicure Orly</span></li>
+        <li><span class="n">22</span><span class="v">Ricostruzione unghie</span></li>
+        <li><span class="n">23</span><span class="v">Copertura gel</span></li>
+        <li><span class="n">24</span><span class="v">Refill</span></li>
+        <li><span class="n">25</span><span class="v">Semipermanente</span></li>
+      </ul>
+    </div>
+
+    <div class="blocco">
+      <div class="blocco-testa" data-reveal>
+        <span class="conta">Quattro trattamenti</span>
+        <h3>Epilazione e dermopigmentazione</h3>
+        <p>La parte con le apparecchiature: qui sotto c'è il capitolo per esteso.</p>
+      </div>
+      <ul class="voci" data-reveal>
+        <li><span class="n">26</span><span class="v">Smooth Dream, laser a diodo 808 nm<small>depilazione permanente</small></span></li>
+        <li><span class="n">27</span><span class="v">Luce pulsata<small>epilazione permanente e progressiva</small></span></li>
+        <li><span class="n">28</span><span class="v">Elettrocoagulazione<small>peli superflui nelle aree delicate del viso</small></span></li>
+        <li><span class="n">29</span><span class="v">Dermopigmentazione</span></li>
+      </ul>
+    </div>
+
+    <p class="nota-prezzi" data-reveal><b>I prezzi non sono pubblicati in questa pagina.</b> Per averli, una telefonata.</p>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Luce pulsata <i>❁</i> Pressoterapia <i>❁</i> Dermopigmentazione <i>❁</i> Linfodrenante <i>❁</i> Chroma Biotech <i>❁</i> Laser a diodo <i>❁</i> Antiage <i>❁</i> Bendaggi e fanghi <i>❁</i> Dry manicure <i>❁</i> Fotoringiovanimento <i>❁</i> Anticellulite <i>❁</i> Trucco sposa <i>❁</i></span>
+    <span>Luce pulsata <i>❁</i> Pressoterapia <i>❁</i> Dermopigmentazione <i>❁</i> Linfodrenante <i>❁</i> Chroma Biotech <i>❁</i> Laser a diodo <i>❁</i> Antiage <i>❁</i> Bendaggi e fanghi <i>❁</i> Dry manicure <i>❁</i> Fotoringiovanimento <i>❁</i> Anticellulite <i>❁</i> Trucco sposa <i>❁</i></span>
+  </div>
+</div>
+
+<section class="section verde grain epil" id="epilazione">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Epilazione definitiva</p>
+    <h2 data-reveal>Tre tecnologie, perché non esiste una pelle sola.</h2>
+    <p data-reveal>Il pelo chiaro non risponde come quello scuro, e il labbro superiore non si tratta come le gambe. Per questo nel centro ci sono tre apparecchiature diverse invece di una.</p>
+    <div class="tecnologie">
+      <article class="tec" data-reveal>
+        <span class="k">Laser</span>
+        <h3>Smooth Dream, diodo 808 nm</h3>
+        <p>Il laser a diodo per la depilazione permanente.</p>
+      </article>
+      <article class="tec" data-reveal>
+        <span class="k">Luce pulsata</span>
+        <h3>Epilazione permanente e progressiva</h3>
+        <p>Lavora su superfici ampie seduta dopo seduta, diradando progressivamente invece di agire su un pelo alla volta.</p>
+      </article>
+      <article class="tec" data-reveal>
+        <span class="k">Ago</span>
+        <h3>Elettrocoagulazione</h3>
+        <p>Pelo per pelo, per i superflui nelle aree delicate del viso, dove laser e luce pulsata non sono la scelta giusta.</p>
+      </article>
+    </div>
+    <div class="dermo">
+      <h3 data-reveal>Dermopigmentazione</h3>
+      <p data-reveal>Sopracciglia ridisegnate a pigmento, con la stessa cura di un trucco che però non si toglie la sera.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section quote">
+  <div class="wrap">
+    <div class="stelle" data-reveal aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.9 6.2 6.6.9-4.8 4.6 1.2 6.7L12 17.8 6.1 21l1.2-6.7L2.5 9.7l6.6-.9z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.9 6.2 6.6.9-4.8 4.6 1.2 6.7L12 17.8 6.1 21l1.2-6.7L2.5 9.7l6.6-.9z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.9 6.2 6.6.9-4.8 4.6 1.2 6.7L12 17.8 6.1 21l1.2-6.7L2.5 9.7l6.6-.9z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.9 6.2 6.6.9-4.8 4.6 1.2 6.7L12 17.8 6.1 21l1.2-6.7L2.5 9.7l6.6-.9z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.9 6.2 6.6.9-4.8 4.6 1.2 6.7L12 17.8 6.1 21l1.2-6.7L2.5 9.7l6.6-.9z"/></svg>
+    </div>
+    <blockquote data-reveal>«Sono state tutte gentili e cortesi… sono preparate… un'esperienza bellissima… provare per credere!»</blockquote>
+    <cite data-reveal>Teresa C. · recensione su Google</cite>
+  </div>
+</section>
+
+<section class="section metodo" id="metodo">
+  <div class="wrap metodo-split">
+    <div>
+      <p class="eyebrow" data-reveal>Il metodo</p>
+      <h2 data-reveal>Il colore e il profumo fanno parte del trattamento.</h2>
+      <p data-reveal>Qui aromaterapia e cromoterapia non sono un contorno da brochure: entrano nel protocollo CHROMA di ISHI, «l'aromaterapia a colori», come la chiamano loro.</p>
+      <p data-reveal>Il resto è mestiere: si guarda la pelle, si sceglie la linea giusta fra quelle in cabina, si valuta insieme quante sedute servono.</p>
+    </div>
+    <div>
+      <p class="marchi-testa" data-reveal>I marchi in cabina</p>
+      <ul class="marchi" data-reveal>
+        <li>ISHI</li>
+        <li>Ericson Laboratoire</li>
+        <li>Germaine de Capuccini</li>
+        <li>Orly</li>
+        <li>My Shapes</li>
+        <li>MKL</li>
+        <li>Nutrieste</li>
+        <li>Beautech</li>
+        <li>CocoCera</li>
+      </ul>
+      <p data-reveal style="margin-top:1.6rem;font-size:.94rem">Nove case diverse: la cosmetica professionale di ISHI ed Ericson, gli smalti Orly, la cera a freddo CocoCera.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section verde grain finale" id="contatti">
+  <svg class="finale-segno" viewBox="0 0 120 120" aria-hidden="true"><path d="M63 12 C63 20 61 27 59 33 C69 19 90 15 99 24 C92 37 73 42 59 33 C39 35 23 50 23 70 C23 91 41 107 61 107 C82 107 100 91 100 70 C100 51 79 35 59 33"/></svg>
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Dove siamo</p>
+    <h2 data-reveal>Via Sen. Arturo Perugini, la stessa via del Comune.</h2>
+    <p data-reveal>Si lavora su appuntamento: per prenotare o chiedere un preventivo, il telefono è la via più diretta.</p>
+    <div class="contatti">
+      <div class="contatto" data-reveal>
+        <span class="k">Telefono</span>
+        <p class="grande"><a href="tel:+393701508199">370 150 8199</a></p>
+      </div>
+      <div class="contatto" data-reveal>
+        <span class="k">Dove</span>
+        <p>Via Sen. Arturo Perugini<br>88046 Lamezia Terme (CZ)<br><a href="https://maps.google.com/?q=Oasi+Beauty+Studio+di+Crialesi+Marinella,+Lamezia+Terme" target="_blank" rel="noopener">Apri in Google Maps</a></p>
+      </div>
+      <div class="contatto" data-reveal>
+        <span class="k">Scrivici</span>
+        <p><a href="mailto:crialesiespositomarinella@gmail.com?subject=Richiesta%20appuntamento">crialesiespositomarinella@gmail.com</a></p>
+      </div>
+      <div class="contatto" data-reveal>
+        <span class="k">Su Facebook</span>
+        <p><a href="https://www.facebook.com/oasibeautystudiodicrialesimarinella" target="_blank" rel="noopener">Oasi Beauty Studio</a></p>
+      </div>
+    </div>
+    <!-- L'unica fotografia vera e ATTUALE del posto (scheda Google, caricata
+         dall'account dell'attivita'). Sta qui e non nell'hero perche' il suo
+         lavoro e' questo: far riconoscere la porta a chi ci arriva. La
+         didascalia dice SOLO cio' che la foto e il dossier reggono. -->
+    <figure class="ingresso" data-reveal>
+      <img src="img/ingresso-oasi-beauty-studio.jpg"
+           srcset="img/ingresso-oasi-beauty-studio-800.jpg 800w, img/ingresso-oasi-beauty-studio.jpg 1600w"
+           sizes="(max-width:900px) 92vw, 1180px"
+           width="1600" height="900" loading="lazy" decoding="async"
+           alt="L'ingresso di Oasi Beauty Studio: porte a vetri su una facciata chiara, con la targa del centro accanto alla porta.">
+      <figcaption>L'ingresso, in via Sen. Arturo Perugini</figcaption>
+    </figure>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <p class="footer-brand">
+      <svg viewBox="0 0 120 120" aria-hidden="true"><path d="M63 12 C63 20 61 27 59 33 C69 19 90 15 99 24 C92 37 73 42 59 33 C39 35 23 50 23 70 C23 91 41 107 61 107 C82 107 100 91 100 70 C100 51 79 35 59 33" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      OASI BEAUTY STUDIO · LAMEZIA TERME
+    </p>
+    <p class="ai-label">Sito dimostrativo realizzato con AI da FAR AI · contenuti da rivedere con l'attività prima della pubblicazione</p>
+    <p class="fine">Testi, informazioni e fotografie provengono dal sito attuale di Oasi Beauty Studio di Crialesi Marinella, dalla sua pagina Facebook e dalla sua scheda Google, e restano di proprietà dell'attività.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* nav solida allo scroll */
+  var nav = document.getElementById('nav');
+  var onScroll = function(){ nav.classList.toggle('solid', window.scrollY > 40); };
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  /* burger + inert + trappola Tab */
+  var burger = document.querySelector('.burger');
+  var mm = document.getElementById('mobileMenu');
+  var fuori = [document.getElementById('main'), document.querySelector('footer'),
+               document.querySelector('.skip-link'), document.querySelector('.nav-brand'),
+               document.querySelector('nav'), document.querySelector('.nav-tel')];
+  function segna(aperto){
+    fuori.forEach(function(el){ if(el){ if(aperto){ el.setAttribute('inert',''); }
+                                       else { el.removeAttribute('inert'); } } });
+  }
+  function trappola(e, pannello, extra){
+    if(e.key !== 'Tab') return;
+    var f = Array.prototype.slice.call(
+      pannello.querySelectorAll('a[href], button:not([disabled]), [tabindex="0"]'));
+    if(extra) f = [extra].concat(f);
+    /* niente offsetParent: in un pannello position:fixed è null anche per i visibili */
+    f = f.filter(function(el){ return el.getClientRects().length > 0; });
+    if(!f.length) return;
+    var primo = f[0], ultimo = f[f.length - 1];
+    if(e.shiftKey && document.activeElement === primo){ e.preventDefault(); ultimo.focus(); }
+    else if(!e.shiftKey && document.activeElement === ultimo){ e.preventDefault(); primo.focus(); }
+  }
+  burger.addEventListener('click', function(){
+    var open = mm.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'Chiudi il menu' : 'Apri il menu');
+    document.body.style.overflow = open ? 'hidden' : '';
+    segna(open);
+  });
+  function chiudiMenu(){
+    mm.classList.remove('open');
+    burger.setAttribute('aria-expanded','false');
+    burger.setAttribute('aria-label','Apri il menu');
+    document.body.style.overflow='';
+    segna(false);
+  }
+  mm.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', chiudiMenu); });
+  document.addEventListener('keydown', function(e){
+    if(!mm.classList.contains('open')) return;
+    if(e.key === 'Escape'){ chiudiMenu(); burger.focus(); return; }
+    trappola(e, mm, burger);
+  });
+
+  /* reveal allo scroll */
+  if('IntersectionObserver' in window && !reduced){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:.14});
+    document.querySelectorAll('[data-reveal]').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('[data-reveal]').forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* il bergamotto che si disegna */
+  var sp = document.getElementById('segnoPath');
+  if(sp){
+    var len = sp.getTotalLength();
+    sp.style.strokeDasharray = len;
+    if(!reduced){
+      sp.style.strokeDashoffset = len;
+      sp.getBoundingClientRect();
+      sp.style.transition = 'stroke-dashoffset 2.4s cubic-bezier(.2,.8,.22,1) .3s';
+      sp.style.strokeDashoffset = '0';
+    }
+  }
+
+  /* count-up: solo su numeri veri, e solo se le animazioni sono ammesse */
+  var cifre = Array.prototype.slice.call(document.querySelectorAll('.cifra[data-count]'));
+  if(cifre.length && 'IntersectionObserver' in window && !reduced){
+    var fmt = function(v, dec){ return dec ? v.toFixed(dec).replace('.', ',') : String(Math.round(v)); };
+    var io2 = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(!e.isIntersecting) return;
+        var el = e.target; io2.unobserve(el);
+        var fine = parseFloat(el.getAttribute('data-count'));
+        var dec = parseInt(el.getAttribute('data-dec') || '0', 10);
+        var t0 = null, dur = 1100;
+        (function passo(t){
+          if(t0 === null) t0 = t;
+          var p = Math.min((t - t0) / dur, 1);
+          var e2 = 1 - Math.pow(1 - p, 3);
+          el.textContent = fmt(fine * e2, dec);
+          if(p < 1) requestAnimationFrame(passo); else el.textContent = fmt(fine, dec);
+        })(performance.now());
+      });
+    }, {threshold:.5});
+    cifre.forEach(function(el){ io2.observe(el); });
+  }
+})();
+</script>
+<script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

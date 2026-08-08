@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js')</script>
+<title>La Pignatta · Gustoteca Mediterranea · Ristorante pizzeria a Locorotondo (BA)</title>
+<meta name="description" content="Cucina pugliese servita sul coccio e pizza dal forno a legna, anche d'asporto. Gustoteca Mediterranea La Pignatta, Via Vittorio Veneto 110, centro storico di Locorotondo (BA).">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="La Pignatta · Gustoteca Mediterranea · Locorotondo">
+<meta property="og:description" content="La cucina della Valle d'Itria servita sul coccio: pasta fatta in casa, carni alla griglia, pesce e pizza dal forno a legna, anche d'asporto. Centro storico di Locorotondo (BA).">
+<meta property="og:image" content="https://demo.francescoar.com/la-pignatta-locorotondo/img/hero.jpg">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1280">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:url" content="https://demo.francescoar.com/la-pignatta-locorotondo/">
+<meta property="og:site_name" content="Gustoteca Mediterranea La Pignatta">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:locale" content="it_IT">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23F6F1E7'/%3E%3Cpath d='M25 15 q7 -7 14 0 M20 19 h24 M20 19 c-6 1.5 -6 9 .5 10 M44 19 c6 1.5 6 9 -.5 10 M21 19 c-4 14 3 27 11 27 c8 0 15 -13 11 -27' fill='none' stroke='%238A4E24' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='34' r='1.8' fill='%23262B3B'/%3E%3Ccircle cx='27' cy='31' r='1.3' fill='%23262B3B'/%3E%3Ccircle cx='37' cy='31' r='1.3' fill='%23262B3B'/%3E%3Ccircle cx='29' cy='38' r='1.3' fill='%23262B3B'/%3E%3Ccircle cx='35' cy='38' r='1.3' fill='%23262B3B'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "@id": "#lapignatta",
+  "name": "Gustoteca Mediterranea La Pignatta",
+  "description": "Ristorante pizzeria nel centro storico di Locorotondo: cucina di tradizione pugliese e della Valle d'Itria, pasta fatta in casa, carni alla griglia, pesce e pizza dal forno a legna, anche d'asporto.",
+  "url": "http://www.ristorantepizzeria.locorotondo.ba.it/",
+  "email": "lorenzo.zizzi@libero.it",
+  "telephone": "+39 080 431 6391",
+  "vatID": "02249530748",
+  "servesCuisine": ["Cucina pugliese", "Pizza"],
+  "image": ["img/hero.jpg", "img/cozze-crude-con-limone.jpg", "img/capicollo-affettato.jpg"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Vittorio Veneto, 110",
+    "postalCode": "70010",
+    "addressLocality": "Locorotondo",
+    "addressRegion": "BA",
+    "addressCountry": "IT"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 40.753068, "longitude": 17.33054 },
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Locale privo di barriere architettoniche", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Spazio esterno nei mesi estivi", "value": true }
+  ],
+  "sameAs": ["https://www.facebook.com/la.pignatta1/"]
+}
+</script>
+<style>
+/* ============ TOKEN ============ */
+:root{
+  --calce:#F6F1E7;          /* bianco calce di Locorotondo */
+  --calce-scura:#EEE6D6;    /* calce in ombra, fondi alternati */
+  --coccio:#B4764B;         /* la terracotta dei loro piatti: SOLO decorativo */
+  --coccio-scuro:#7E441C;   /* variante AA per accenti testuali su calce */
+  --coccio-chiaro:#E2A87C;  /* coccio per testi su fondo fiorellino */
+  --oliva:#55682F;          /* la rucola e il basilico delle foto */
+  --oliva-scura:#3F4E1F;    /* variante AA per eyebrow su calce */
+  --oliva-chiara:#B4C687;   /* oliva per testi su fondo scuro */
+  --tovaglia:#B43C24;       /* l'arancio della tovaglia dell'hero: SOLO CTA */
+  --tovaglia-scura:#992F1A; /* hover CTA */
+  --fiorellino:#262B3B;     /* il blu dei fiorellini dipinti sul coccio */
+  --fiorellino-2:#313850;   /* card sul fondo scuro */
+  --inchiostro:#29241E;     /* testo su calce */
+  --bianco:#FFFFFF;
+  --nav-h:76px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 8px)}
+body{
+  margin:0;background:var(--calce);color:var(--inchiostro);
+  font-family:'Archivo',sans-serif;font-size:1.04rem;line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+h1,h2,h3{font-family:'Libre Caslon Text',serif;font-weight:700;line-height:1.12;margin:0}
+a{color:var(--coccio-scuro)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(18px,4vw,44px)}
+.skip{
+  position:fixed;top:-60px;left:16px;z-index:200;background:var(--fiorellino);color:#fff;
+  padding:.7em 1.2em;border-radius:8px;font-weight:600;transition:top .2s ease;text-decoration:none;
+}
+.skip:focus{top:12px}
+:focus-visible{outline:3px solid var(--tovaglia);outline-offset:2px}
+.sez{padding:clamp(64px,9vw,120px) 0}
+.eyebrow{
+  display:flex;align-items:center;gap:.6em;margin:0 0 14px;
+  font-size:.86rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--oliva-scura);
+}
+.eyebrow svg{flex:none}
+.claim{font-size:clamp(1.7rem,3.4vw,2.7rem);max-width:21em;margin:0 0 18px}
+.sotto{max-width:44em;margin:0 0 8px;font-size:1.08rem}
+/* la comparsa allo scroll si accende SOLO se il JS e' partito (html.js): senza JS
+   il contenuto resta visibile, non invisibile per sempre. */
+.js [data-reveal]{opacity:0;transform:translateY(16px);transition:opacity .8s cubic-bezier(.22,.9,.3,1),transform .8s cubic-bezier(.22,.9,.3,1)}
+.js [data-reveal].in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  .js [data-reveal]{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+
+/* ============ NAV ============ */
+#nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h);
+  color:#fff;transition:background .3s ease,box-shadow .3s ease;
+}
+#nav .nav-in{max-width:1180px;margin:0 auto;padding:0 clamp(18px,4vw,44px);height:100%;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.nav-brand{
+  display:flex;align-items:center;gap:10px;color:inherit;text-decoration:none;
+  font-family:'Libre Caslon Text',serif;font-weight:700;font-size:1.22rem;white-space:nowrap;
+}
+.nav-brand svg{color:inherit}
+.nav-links{display:flex;align-items:center;gap:clamp(14px,1.8vw,26px);list-style:none;margin:0;padding:0}
+.nav-links a{color:inherit;text-decoration:none;font-weight:600;font-size:.95rem;white-space:nowrap}
+.nav-links a:hover{text-decoration:underline;text-underline-offset:5px}
+.nav-cta{
+  background:var(--tovaglia);color:#fff !important;border-radius:999px;padding:.55em 1.25em;
+}
+.nav-cta:hover{background:var(--tovaglia-scura);text-decoration:none !important}
+#nav.solid{background:var(--calce);color:var(--inchiostro);box-shadow:0 1px 0 rgba(41,36,30,.12)}
+#nav.solid .nav-cta{color:#fff !important}
+.burger{
+  display:none;background:none;border:0;padding:10px;cursor:pointer;
+}
+.burger span{display:block;width:26px;height:2.5px;background:#fff;border-radius:2px;transition:transform .3s ease,opacity .3s ease}
+.burger span+span{margin-top:6px}
+#nav.solid .burger span{background:var(--inchiostro)}
+body.menu-open .burger span{background:#fff}
+body.menu-open .burger span:nth-child(1){transform:translateY(8.5px) rotate(45deg)}
+body.menu-open .burger span:nth-child(2){opacity:0}
+body.menu-open .burger span:nth-child(3){transform:translateY(-8.5px) rotate(-45deg)}
+@media (max-width:1080px){
+  .nav-links{display:none}
+  .burger{display:block}
+}
+#mobileMenu{
+  position:fixed;inset:0;z-index:90;background:var(--fiorellino);color:#fff;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;
+  opacity:0;visibility:hidden;transform:translateY(-8px);
+  transition:opacity .35s ease,transform .35s ease,visibility 0s linear .35s;
+}
+#mobileMenu.open{opacity:1;visibility:visible;transform:none;transition:opacity .35s ease,transform .35s ease}
+#mobileMenu a{
+  color:#fff;text-decoration:none;font-family:'Libre Caslon Text',serif;font-size:1.5rem;font-weight:700;
+}
+#mobileMenu a:hover{color:var(--coccio-chiaro)}
+#mobileMenu .m-cta{
+  background:var(--tovaglia);border-radius:999px;font-family:'Archivo',sans-serif;
+  font-size:1.1rem;font-weight:700;padding:.7em 1.6em;margin-top:14px;
+}
+#mobileMenu .m-cta:hover{background:var(--tovaglia-scura);color:#fff}
+
+/* ============ HERO ============ */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.hero-img{position:absolute;inset:0}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+@media (prefers-reduced-motion: no-preference){
+  .hero-img img{animation:kb 22s ease-in-out both}
+  @keyframes kb{from{transform:scale(1.08)}to{transform:scale(1)}}
+}
+.hero-scrim{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(38,43,59,.86) 0%,rgba(38,43,59,.42) 18%,rgba(38,43,59,.30) 38%,rgba(38,43,59,.80) 54%,rgba(38,43,59,.92) 74%,rgba(38,43,59,.97) 100%);
+}
+@media (max-width:700px){
+  .hero-scrim{background:linear-gradient(180deg,rgba(38,43,59,.9) 0%,rgba(38,43,59,.7) 28%,rgba(38,43,59,.78) 52%,rgba(38,43,59,.94) 76%,rgba(38,43,59,.97) 100%)}
+}
+.hero-in{position:relative;width:100%;padding-bottom:clamp(30px,5vh,64px)}
+.hero-eyebrow{
+  display:flex;align-items:center;gap:.6em;margin:0 0 10px;
+  font-size:.9rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#fff;
+}
+.hero h1{font-size:clamp(3.2rem,10.5vw,7.6rem);letter-spacing:-.01em}
+.hero-tag{max-width:34em;font-size:clamp(1.05rem,1.6vw,1.3rem);margin:14px 0 26px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:clamp(24px,4vh,42px)}
+.btn{
+  display:inline-block;border-radius:999px;padding:.85em 1.7em;font-weight:700;font-size:1.02rem;
+  text-decoration:none;transition:transform .2s ease,background .2s ease;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-pieno{background:var(--tovaglia);color:#fff}
+.btn-pieno:hover{background:var(--tovaglia-scura)}
+.btn-vuoto{border:2px solid rgba(255,255,255,.85);color:#fff}
+.btn-vuoto:hover{border-color:#fff}
+.hero-pignatta{margin-bottom:18px}
+.hero-pignatta path{stroke-dasharray:100;stroke-dashoffset:100}
+@media (prefers-reduced-motion: no-preference){
+  .hero-pignatta path{animation:draw 2.4s cubic-bezier(.4,0,.2,1) .3s forwards}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  .hero-up{opacity:0;transform:translateY(18px);animation:heroup .9s cubic-bezier(.2,.8,.25,1) forwards}
+  .hero-up:nth-child(2){animation-delay:.15s}
+  .hero-up:nth-child(3){animation-delay:.3s}
+  .hero-up:nth-child(4){animation-delay:.45s}
+  .hero-up:nth-child(5){animation-delay:.6s}
+  .hero-up:nth-child(6){animation-delay:.75s}
+  @keyframes heroup{to{opacity:1;transform:none}}
+}
+@media (prefers-reduced-motion: reduce){
+  .hero-pignatta path{stroke-dashoffset:0}
+}
+.ribbon{
+  display:flex;flex-wrap:wrap;gap:10px 28px;list-style:none;margin:0;padding:18px 0 0;
+  border-top:1px solid rgba(255,255,255,.32);
+}
+.ribbon li{display:flex;align-items:center;gap:.55em;font-weight:600;font-size:.98rem}
+.ribbon svg{flex:none}
+
+/* ============ INTRO ============ */
+.chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.chip{
+  display:inline-flex;align-items:center;gap:.5em;border:1.5px solid var(--coccio);
+  color:var(--coccio-scuro);border-radius:999px;padding:.5em 1.1em;font-weight:700;font-size:.92rem;
+}
+.divisore{display:flex;justify-content:center;padding:0 0 clamp(30px,4vw,50px)}
+.divisore svg{color:var(--coccio)}
+
+/* ============ BANDA CUCINA (scura) ============ */
+.cucina{background:var(--fiorellino);color:rgba(255,255,255,.92)}
+.cucina .eyebrow{color:var(--oliva-chiara)}
+.cucina .claim{color:#fff}
+.cucina-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center}
+.cucina p{color:rgba(255,255,255,.88)}
+.lista-fatti{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:12px}
+.lista-fatti li{display:flex;align-items:baseline;gap:.7em}
+.lista-fatti li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--coccio-chiaro);transform:translateY(-1px)}
+.lista-fatti strong{color:#fff}
+.split-foto{border-radius:14px;overflow:hidden;box-shadow:0 18px 44px rgba(0,0,0,.35)}
+.split-foto img{width:100%;height:100%;object-fit:cover}
+@media (max-width:860px){
+  .cucina-grid{grid-template-columns:1fr}
+}
+
+/* ============ ASSAGGI (tondi) ============ */
+.assaggi{background:var(--calce)}
+.tondi{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(26px,4vw,54px);
+  margin-top:clamp(30px,4vw,52px);
+}
+.tondo{text-align:center}
+.tondo-img{
+  position:relative;width:min(100%,320px);margin:0 auto 18px;aspect-ratio:1;
+  border-radius:50%;overflow:hidden;border:6px solid var(--coccio);
+  box-shadow:0 14px 34px rgba(41,36,30,.18);
+  transition:transform .45s cubic-bezier(.22,.9,.3,1);
+}
+.tondo:hover .tondo-img{transform:scale(1.03) rotate(1.5deg)}
+.tondo-img img{width:100%;height:100%;object-fit:cover}
+.tondo h3{font-size:1.28rem;margin-bottom:6px}
+.tondo p{margin:0;color:#5C5348;font-size:.98rem;max-width:26em;margin-inline:auto}
+@media (max-width:900px){
+  .tondi{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:560px){
+  .tondi{grid-template-columns:1fr}
+}
+
+/* ============ OFFERTA CARD ============ */
+.offerta{background:var(--calce-scura)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.5vw,28px);margin-top:clamp(28px,4vw,46px)}
+.card{
+  background:var(--calce);border-radius:14px;padding:clamp(24px,3vw,36px);
+  border:1px solid rgba(180,118,75,.35);box-shadow:0 10px 26px rgba(41,36,30,.08);
+  transition:transform .35s cubic-bezier(.22,.9,.3,1);
+}
+.card:hover{transform:translateY(-6px)}
+.card svg{color:var(--coccio-scuro);margin-bottom:14px}
+.card h3{font-size:1.3rem;margin-bottom:10px}
+.card p{margin:0;color:#4A4238}
+@media (max-width:860px){
+  .cards{grid-template-columns:1fr}
+}
+
+/* ============ SERVIZI ============ */
+.servizi-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3.5vw,44px);
+  margin-top:clamp(28px,4vw,46px);
+}
+.serv{display:flex;gap:16px;align-items:flex-start}
+.serv svg{flex:none;color:var(--oliva-scura);margin-top:3px}
+.serv h3{font-size:1.08rem;font-family:'Archivo',sans-serif;font-weight:700;margin-bottom:4px}
+.serv p{margin:0;font-size:.96rem;color:#4A4238}
+@media (max-width:860px){
+  .servizi-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  .servizi-grid{grid-template-columns:1fr}
+}
+
+/* ============ GALLERY ============ */
+.galleria{background:var(--calce-scura)}
+.gal{columns:3;column-gap:16px;margin-top:clamp(28px,4vw,46px)}
+.gal button{
+  display:block;width:100%;margin:0 0 16px;padding:0;border:0;background:none;cursor:pointer;
+  border-radius:12px;overflow:hidden;position:relative;
+}
+.gal button img{width:100%;height:auto;transition:transform .5s cubic-bezier(.22,.9,.3,1)}
+.gal button:hover img{transform:scale(1.04)}
+.gal .did{
+  position:absolute;left:0;right:0;bottom:0;padding:36px 14px 12px;color:#fff;font-size:.9rem;font-weight:600;text-align:left;
+  background:linear-gradient(180deg,rgba(38,43,59,0) 0%,rgba(38,43,59,.6) 40%,rgba(38,43,59,.95) 100%);
+}
+@media (max-width:900px){.gal{columns:2}}
+@media (max-width:560px){.gal{columns:1}}
+
+/* ============ LIGHTBOX ============ */
+#lightbox{
+  position:fixed;inset:0;z-index:150;background:rgba(24,27,38,.94);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;visibility:hidden;transition:opacity .3s ease,visibility 0s linear .3s;
+}
+#lightbox.open{opacity:1;visibility:visible;transition:opacity .3s ease}
+#lightbox figure{margin:0;max-width:min(92vw,1000px);max-height:86vh;display:flex;flex-direction:column;gap:10px}
+#lightbox img{max-width:100%;max-height:76vh;width:auto;height:auto;object-fit:contain;border-radius:10px;margin:0 auto}
+#lightbox figcaption{color:#fff;text-align:center;font-size:.98rem;font-weight:600}
+.lb-btn{
+  position:absolute;background:rgba(246,241,231,.14);border:1.5px solid rgba(255,255,255,.55);color:#fff;
+  width:52px;height:52px;border-radius:50%;font-size:1.5rem;cursor:pointer;line-height:1;
+  display:flex;align-items:center;justify-content:center;transition:background .2s ease;
+}
+.lb-btn:hover{background:rgba(246,241,231,.3)}
+#lb-close{top:20px;right:20px}
+#lb-prev{left:16px;top:50%;transform:translateY(-50%)}
+#lb-next{right:16px;top:50%;transform:translateY(-50%)}
+@media (max-width:640px){
+  #lb-prev{left:8px;bottom:14px;top:auto;transform:none}
+  #lb-next{right:8px;bottom:14px;top:auto;transform:none}
+}
+
+/* ============ CTA FINALE ============ */
+.finale{position:relative;color:#fff;padding:clamp(80px,12vw,150px) 0}
+.finale-img{position:absolute;inset:0;overflow:hidden}
+.finale-img img{width:100%;height:100%;object-fit:cover}
+.finale-img::after{
+  content:"";position:absolute;inset:0;background:rgba(38,43,59,.88);
+}
+.finale .wrap{position:relative}
+.finale .eyebrow{color:var(--coccio-chiaro)}
+.finale h2{font-size:clamp(2rem,4.5vw,3.2rem);color:#fff;margin-bottom:14px}
+.finale>.wrap>p{max-width:38em;color:rgba(255,255,255,.9)}
+.contatti-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,2.5vw,30px);margin-top:clamp(30px,4vw,48px)}
+.cont{background:var(--fiorellino-2);border-radius:12px;padding:22px;display:grid;gap:6px;align-content:start}
+.cont .k{font-size:.82rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--coccio-chiaro)}
+.cont a{color:#fff;text-decoration:none;font-weight:600;overflow-wrap:anywhere}
+.cont a:hover{text-decoration:underline}
+.cont .v{color:#fff;font-weight:600}
+.cont .nota{font-size:.9rem;color:rgba(255,255,255,.78);font-weight:400}
+@media (max-width:960px){.contatti-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.contatti-grid{grid-template-columns:1fr}}
+
+/* ============ FOOTER ============ */
+footer{background:#1C2030;color:rgba(255,255,255,.86);padding:44px 0 34px;font-size:.92rem}
+.foot-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:22px;align-items:center;margin-bottom:26px}
+.foot-brand{font-family:'Libre Caslon Text',serif;font-weight:700;font-size:1.15rem;color:#fff;display:flex;align-items:center;gap:10px}
+.foot-social{display:flex;gap:16px;list-style:none;margin:0;padding:0}
+.foot-social a{color:#fff;display:flex;align-items:center;gap:.45em;text-decoration:none;font-weight:600}
+.foot-social a:hover{color:var(--coccio-chiaro)}
+.foot-bot{border-top:1px solid rgba(255,255,255,.18);padding-top:20px;display:grid;gap:8px}
+.foot-bot p{margin:0;color:rgba(255,255,255,.8)}
+.etichetta-ai{font-weight:600;color:rgba(255,255,255,.92)}
+</style>
+<noscript><style>
+  /* Senza JS la barra non puo' diventare solida allo scroll (testo bianco su calce)
+     e il burger non puo' aprire nulla: la barra diventa fissa-no, scura e coi link
+     sempre visibili, che vanno a capo invece di sfondare la riga. */
+  html{scroll-padding-top:8px}
+  #nav{position:static;height:auto;background:var(--fiorellino);color:#fff}
+  #nav .nav-in{flex-wrap:wrap;row-gap:12px;padding-top:14px;padding-bottom:14px;justify-content:center}
+  .burger{display:none !important}
+  .nav-links{display:flex !important;flex-wrap:wrap;justify-content:center;gap:10px 20px}
+</style></noscript>
+</head>
+<body id="top">
+<a class="skip" href="#main">Salta al contenuto</a>
+
+<nav id="nav" aria-label="Principale">
+  <div class="nav-in">
+    <a class="nav-brand" href="#top" aria-label="La Pignatta, torna su">
+      <svg width="30" height="26" viewBox="0 0 64 52" aria-hidden="true"><path d="M25 12 q7 -7 14 0 M20 16 h24 M20 16 c-6 1.5 -6 9 .5 10 M44 16 c6 1.5 6 9 -.5 10 M21 16 c-4 14 3 27 11 27 c8 0 15 -13 11 -27" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      La Pignatta
+    </a>
+    <ul class="nav-links">
+      <li><a href="#cucina">La cucina</a></li>
+      <li><a href="#assaggi">Assaggi</a></li>
+      <li><a href="#forno">Forno a legna</a></li>
+      <li><a href="#servizi">Servizi</a></li>
+      <li><a href="#galleria">Galleria</a></li>
+      <li><a class="nav-cta" href="#contatti">Contatti</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu">
+  <a href="#cucina">La cucina</a>
+  <a href="#assaggi">Assaggi</a>
+  <a href="#forno">Forno a legna</a>
+  <a href="#servizi">Servizi</a>
+  <a href="#galleria">Galleria</a>
+  <a class="m-cta" href="#contatti">Contatti</a>
+</div>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<header class="hero" aria-label="La Pignatta, gustoteca a Locorotondo">
+  <div class="hero-img">
+    <picture>
+      <source media="(max-width:700px)" srcset="img/hero-mobile.jpg">
+      <img src="img/hero.jpg" alt="Piatto di cozze crude col limone sul coccio pugliese, con una bottiglia di Verdeca di Locorotondo" fetchpriority="high">
+    </picture>
+  </div>
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero-in wrap">
+    <svg class="hero-pignatta hero-up" width="64" height="52" viewBox="0 0 64 52" aria-hidden="true"><path pathLength="100" d="M25 12 q7 -7 14 0 M20 16 h24 M20 16 c-6 1.5 -6 9 .5 10 M44 16 c6 1.5 6 9 -.5 10 M21 16 c-4 14 3 27 11 27 c8 0 15 -13 11 -27" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <p class="hero-eyebrow hero-up">
+      <svg width="26" height="12" viewBox="0 0 26 12" aria-hidden="true"><circle cx="13" cy="6" r="1.9" fill="currentColor"/><circle cx="7" cy="3.4" r="1.4" fill="currentColor"/><circle cx="19" cy="3.4" r="1.4" fill="currentColor"/><circle cx="8.4" cy="9.2" r="1.4" fill="currentColor"/><circle cx="17.6" cy="9.2" r="1.4" fill="currentColor"/></svg>
+      Gustoteca Mediterranea · Locorotondo, Valle d'Itria
+    </p>
+    <h1 class="hero-up">La Pignatta</h1>
+    <p class="hero-tag hero-up">La cucina pugliese servita sul coccio, con la pizza dal forno a legna, nel centro storico di Locorotondo.</p>
+    <div class="hero-cta hero-up">
+      <a class="btn btn-pieno" href="tel:+390804316391">Chiama per un tavolo</a>
+      <a class="btn btn-vuoto" href="#assaggi">Guarda gli assaggi</a>
+    </div>
+    <ul class="ribbon hero-up">
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c2 3 5 5 5 9a5 5 0 0 1-10 0c0-4 3-6 5-9z"/><path d="M12 21v-4"/></svg> Pizza dal forno a legna</li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.5 12h-11z"/><path d="M8 8a4 4 0 0 1 8 0"/></svg> Anche d'asporto, pure a pranzo</li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Via Vittorio Veneto 110, centro storico</li>
+    </ul>
+  </div>
+</header>
+
+<!-- ============ INTRO: IL NOME ============ -->
+<section class="sez" id="pignatta">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>
+      <svg width="26" height="12" viewBox="0 0 26 12" aria-hidden="true"><circle cx="13" cy="6" r="1.9" fill="currentColor"/><circle cx="7" cy="3.4" r="1.4" fill="currentColor"/><circle cx="19" cy="3.4" r="1.4" fill="currentColor"/><circle cx="8.4" cy="9.2" r="1.4" fill="currentColor"/><circle cx="17.6" cy="9.2" r="1.4" fill="currentColor"/></svg>
+      Il nome sta in cucina
+    </p>
+    <h2 class="claim" data-reveal>La pignatta è la pentola di coccio che cuoce piano, per ore. Qui non è solo l'insegna: è un modo di stare ai fornelli.</h2>
+    <p class="sotto" data-reveal>Dalla pignatta di pecora in brodo agli involtini di trippa d'agnello, i «gnumereddesuffuchete», fino al purè di fave con le cicorie di campo: la cucina di Lorenzo Zizzi tiene in vita i piatti della Valle d'Itria. E li serve come si deve, sul coccio pugliese dipinto a fiorellini.</p>
+    <div class="chips" data-reveal>
+      <span class="chip">Prodotti locali</span>
+      <span class="chip">Gluten free</span>
+      <span class="chip">Senza lattosio</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LA CUCINA (banda scura) ============ -->
+<section class="sez cucina" id="cucina">
+  <div class="wrap cucina-grid">
+    <div>
+      <p class="eyebrow" data-reveal>
+        <svg width="26" height="12" viewBox="0 0 26 12" aria-hidden="true"><circle cx="13" cy="6" r="1.9" fill="currentColor"/><circle cx="7" cy="3.4" r="1.4" fill="currentColor"/><circle cx="19" cy="3.4" r="1.4" fill="currentColor"/><circle cx="8.4" cy="9.2" r="1.4" fill="currentColor"/><circle cx="17.6" cy="9.2" r="1.4" fill="currentColor"/></svg>
+        La cucina
+      </p>
+      <h2 class="claim" data-reveal>Pasta fatta in casa, carni alla griglia e il pesce.</h2>
+      <p data-reveal>Lorenzo Zizzi ha imparato il mestiere tra l'Italia e l'estero, poi è tornato a cucinare quello che questa terra sa dare, con uno staff di collaboratori qualificati al suo fianco. Si mangia sia a pranzo sia a cena, e nei mesi estivi apre lo spazio esterno.</p>
+      <ul class="lista-fatti" data-reveal>
+        <li><span><strong>Orecchiette con le cime di rapa</strong>, caserecci e strascinati fatti in casa</span></li>
+        <li><span><strong>Pignatta di pecora in brodo</strong>, il piatto che dà il nome alla casa</span></li>
+        <li><span><strong>Gnumereddesuffuchete</strong>, involtini di trippa d'agnello cotti nella pignatta, con cipolla, pomodoro e pecorino</span></li>
+        <li><span><strong>Carni alla griglia e pesce</strong>, secondo il mercato del giorno</span></li>
+      </ul>
+    </div>
+    <div class="split-foto" data-reveal>
+      <img src="img/tagliatelle-con-carne.jpg" alt="Tagliatelle al ragù di carne e funghi sul piatto di coccio pugliese" loading="lazy" width="1600" height="1200">
+    </div>
+  </div>
+</section>
+
+<!-- ============ ASSAGGI ============ -->
+<section class="sez assaggi" id="assaggi">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>
+      <svg width="26" height="12" viewBox="0 0 26 12" aria-hidden="true"><circle cx="13" cy="6" r="1.9" fill="currentColor"/><circle cx="7" cy="3.4" r="1.4" fill="currentColor"/><circle cx="19" cy="3.4" r="1.4" fill="currentColor"/><circle cx="8.4" cy="9.2" r="1.4" fill="currentColor"/><circle cx="17.6" cy="9.2" r="1.4" fill="currentColor"/></svg>
+      Assaggi dalla cucina
+    </p>
+    <h2 class="claim" data-reveal>Ogni piatto arriva in tavola sullo stesso coccio.</h2>
+    <p class="sotto" data-reveal>La carta segue il mercato e la stagione: i piatti del giorno te li racconta lo staff al tavolo. Questi sono sei assaggi fotografati proprio qui, sul coccio coi fiorellini blu.</p>
+    <div class="tondi">
+      <div class="tondo" data-reveal>
+        <div class="tondo-img"><img src="img/arancini.jpg" alt="Arancini fritti sul piatto di coccio" loading="lazy" width="1600" height="1458"></div>
+        <h3>Arancini fritti</h3>
+        <p>Dorati, serviti caldi come antipasto della casa.</p>
+      </div>
+      <div class="tondo" data-reveal>
+        <div class="tondo-img"><img src="img/capicollo-affettato.jpg" alt="Capicollo affettato con spicchi di fichi freschi sul piatto di coccio" loading="lazy" width="1600" height="1600"></div>
+        <h3>Capicollo coi fichi</h3>
+        <p>Il salume affettato sottile, con gli spicchi di fico fresco.</p>
+      </div>
+      <div class="tondo" data-reveal>
+        <div class="tondo-img"><img src="img/mozzarella.jpg" alt="Mozzarella con radicchio e basilico sul piatto di coccio" loading="lazy" width="1600" height="1588"></div>
+        <h3>Mozzarella, radicchio e basilico</h3>
+        <p>Bianco latte sul coccio, con una foglia di basilico.</p>
+      </div>
+      <div class="tondo" data-reveal>
+        <div class="tondo-img"><img src="img/carne-con-rucola-e-parmigiano.jpg" alt="Tagliata di carne con rucola e scaglie di parmigiano" loading="lazy" width="1600" height="1200"></div>
+        <h3>Tagliata con rucola e parmigiano</h3>
+        <p>Carne alla griglia, rucola fresca e scaglie di parmigiano.</p>
+      </div>
+      <div class="tondo" data-reveal>
+        <div class="tondo-img"><img src="img/cozze-crude-con-limone.jpg" alt="Cozze crude col limone e bottiglia di Verdeca di Locorotondo" loading="lazy" width="1600" height="1600"></div>
+        <h3>Cozze crude col limone</h3>
+        <p>Aperte al momento, con un bicchiere di Verdeca di Locorotondo.</p>
+      </div>
+      <div class="tondo" data-reveal>
+        <div class="tondo-img"><img src="img/spaghetto-con-aragosta.jpg" alt="Spaghetti con aragosta intera sul piatto di coccio" loading="lazy" width="1600" height="1200"></div>
+        <h3>Spaghetto all'aragosta</h3>
+        <p>Il piatto delle occasioni, con l'aragosta intera sul coccio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divisore" aria-hidden="true">
+  <svg width="54" height="44" viewBox="0 0 64 52"><path d="M25 12 q7 -7 14 0 M20 16 h24 M20 16 c-6 1.5 -6 9 .5 10 M44 16 c6 1.5 6 9 -.5 10 M21 16 c-4 14 3 27 11 27 c8 0 15 -13 11 -27" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</div>
+
+<!-- ============ OFFERTA ============ -->
+<section class="sez offerta" id="forno">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>
+      <svg width="26" height="12" viewBox="0 0 26 12" aria-hidden="true"><circle cx="13" cy="6" r="1.9" fill="currentColor"/><circle cx="7" cy="3.4" r="1.4" fill="currentColor"/><circle cx="19" cy="3.4" r="1.4" fill="currentColor"/><circle cx="8.4" cy="9.2" r="1.4" fill="currentColor"/><circle cx="17.6" cy="9.2" r="1.4" fill="currentColor"/></svg>
+      In tavola
+    </p>
+    <h2 class="claim" data-reveal>Il forno a legna, le feste, una tavola per tutti.</h2>
+    <div class="cards">
+      <article class="card" data-reveal>
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c2 3 5 5 5 9a5 5 0 0 1-10 0c0-4 3-6 5-9z"/><path d="M12 21v-4"/><path d="M4 21h16"/></svg>
+        <h3>Pizza dal forno a legna</h3>
+        <p>Cotta nel forno a legna sia a pranzo sia a cena. E se la vuoi mangiare a casa, te la prepariamo d'asporto.</p>
+      </article>
+      <article class="card" data-reveal>
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8"/><path d="M12 21v-6"/><path d="M12 15a6 6 0 0 0 6-6V4H6v5a6 6 0 0 0 6 6z"/><path d="M18 6h2a2 2 0 0 1-2 4"/><path d="M6 6H4a2 2 0 0 0 2 4"/></svg>
+        <h3>Banchetti e ricorrenze</h3>
+        <p>Compleanni, lauree, anniversari: il menu si concorda con lo staff, piatto per piatto, con la carta dei vini a completare la tavola.</p>
+      </article>
+      <article class="card" data-reveal>
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>
+        <h3>Una tavola per tutti</h3>
+        <p>Il locale è privo di barriere architettoniche e la cucina prepara piatti gluten free e senza lattosio. Nei mesi estivi si mangia anche fuori.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVIZI ============ -->
+<section class="sez" id="servizi">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>
+      <svg width="26" height="12" viewBox="0 0 26 12" aria-hidden="true"><circle cx="13" cy="6" r="1.9" fill="currentColor"/><circle cx="7" cy="3.4" r="1.4" fill="currentColor"/><circle cx="19" cy="3.4" r="1.4" fill="currentColor"/><circle cx="8.4" cy="9.2" r="1.4" fill="currentColor"/><circle cx="17.6" cy="9.2" r="1.4" fill="currentColor"/></svg>
+      I servizi
+    </p>
+    <h2 class="claim" data-reveal>Quello che trovi da noi.</h2>
+    <div class="servizi-grid">
+      <div class="serv" data-reveal>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c2 3 5 5 5 9a5 5 0 0 1-10 0c0-4 3-6 5-9z"/><path d="M12 21v-4"/></svg>
+        <div><h3>Forno a legna</h3><p>La pizza cuoce nel forno a legna, come da tradizione.</p></div>
+      </div>
+      <div class="serv" data-reveal>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.5 12h-11z"/><path d="M8 8a4 4 0 0 1 8 0"/></svg>
+        <div><h3>Pizza d'asporto</h3><p>Anche da portare via, pure a pranzo.</p></div>
+      </div>
+      <div class="serv" data-reveal>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8"/><path d="M12 21v-6"/><path d="M12 15a6 6 0 0 0 6-6V4H6v5a6 6 0 0 0 6 6z"/></svg>
+        <div><h3>Banchetti e feste</h3><p>Menu concordabile con lo staff per le ricorrenze.</p></div>
+      </div>
+      <div class="serv" data-reveal>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2"/><path d="M12 7v5l4 2"/><circle cx="10" cy="17" r="4"/><path d="M14 21l3-4h4"/></svg>
+        <div><h3>Senza barriere</h3><p>Locale completamente privo di barriere architettoniche.</p></div>
+      </div>
+      <div class="serv" data-reveal>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg>
+        <div><h3>Spazio esterno</h3><p>Tavoli fuori nei mesi estivi.</p></div>
+      </div>
+      <div class="serv" data-reveal>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-5 0-8-3-8-8 5 0 8 3 8 8z"/><path d="M12 21c5 0 8-3 8-8-5 0-8 3-8 8z"/><path d="M12 13V3"/><path d="M9 5l3-2 3 2"/></svg>
+        <div><h3>Prodotti locali</h3><p>Materie prime del territorio, con opzioni gluten free e senza lattosio.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="sez galleria" id="galleria">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>
+      <svg width="26" height="12" viewBox="0 0 26 12" aria-hidden="true"><circle cx="13" cy="6" r="1.9" fill="currentColor"/><circle cx="7" cy="3.4" r="1.4" fill="currentColor"/><circle cx="19" cy="3.4" r="1.4" fill="currentColor"/><circle cx="8.4" cy="9.2" r="1.4" fill="currentColor"/><circle cx="17.6" cy="9.2" r="1.4" fill="currentColor"/></svg>
+      La tavola in foto
+    </p>
+    <h2 class="claim" data-reveal>Il coccio, i fiorellini blu e quello che ci finisce sopra.</h2>
+    <div class="gal" data-reveal>
+      <button data-src="img/cozze-crude-con-limone.jpg" data-did="Cozze crude col limone e il Verdeca di Locorotondo"><img src="img/cozze-crude-con-limone.jpg" alt="Cozze crude col limone sul coccio, con bottiglia di Verdeca di Locorotondo" loading="lazy" width="1600" height="1600"><span class="did">Cozze crude e Verdeca</span></button>
+      <button data-src="img/capicollo-affettato.jpg" data-did="Capicollo affettato con i fichi freschi"><img src="img/capicollo-affettato.jpg" alt="Capicollo affettato con spicchi di fichi freschi" loading="lazy" width="1600" height="1600"><span class="did">Capicollo coi fichi</span></button>
+      <button data-src="img/arancini.jpg" data-did="Arancini fritti, caldi di cucina"><img src="img/arancini.jpg" alt="Arancini fritti sul piatto di coccio pugliese" loading="lazy" width="1600" height="1458"><span class="did">Arancini fritti</span></button>
+      <button data-src="img/mozzarella.jpg" data-did="Mozzarella con radicchio e basilico"><img src="img/mozzarella.jpg" alt="Mozzarella intera con radicchio e foglia di basilico" loading="lazy" width="1600" height="1588"><span class="did">Mozzarella e basilico</span></button>
+      <button data-src="img/carne-con-rucola-e-parmigiano.jpg" data-did="Tagliata con rucola e scaglie di parmigiano"><img src="img/carne-con-rucola-e-parmigiano.jpg" alt="Tagliata di carne alla griglia con rucola e parmigiano" loading="lazy" width="1600" height="1200"><span class="did">Tagliata con rucola</span></button>
+      <button data-src="img/fettina-di-carne-con-pomodorini-e-insalata.jpg" data-did="Fettina alla griglia con pomodorini e insalata"><img src="img/fettina-di-carne-con-pomodorini-e-insalata.jpg" alt="Fettina di carne alla griglia con pomodorini e insalata" loading="lazy" width="1600" height="1048"><span class="did">Fettina coi pomodorini</span></button>
+      <button data-src="img/spaghetto-con-aragosta.jpg" data-did="Spaghetto all'aragosta, con l'aragosta intera"><img src="img/spaghetto-con-aragosta.jpg" alt="Spaghetti con aragosta intera sul piatto di coccio" loading="lazy" width="1600" height="1200"><span class="did">Spaghetto all'aragosta</span></button>
+      <button data-src="img/tagliatelle-con-carne.jpg" data-did="Tagliatelle al ragù di carne e funghi"><img src="img/tagliatelle-con-carne.jpg" alt="Tagliatelle al ragù di carne e funghi" loading="lazy" width="1600" height="1200"><span class="did">Tagliatelle al ragù</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINALE ============ -->
+<section class="finale" id="contatti">
+  <div class="finale-img"><img src="img/capicollo-affettato.jpg" alt="" loading="lazy" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>
+      <svg width="26" height="12" viewBox="0 0 26 12" aria-hidden="true"><circle cx="13" cy="6" r="1.9" fill="currentColor"/><circle cx="7" cy="3.4" r="1.4" fill="currentColor"/><circle cx="19" cy="3.4" r="1.4" fill="currentColor"/><circle cx="8.4" cy="9.2" r="1.4" fill="currentColor"/><circle cx="17.6" cy="9.2" r="1.4" fill="currentColor"/></svg>
+      Ti aspettiamo in centro storico
+    </p>
+    <h2 data-reveal>Chiama e vieni a tavola.</h2>
+    <p data-reveal>Siamo aperti sia a pranzo sia a cena. Per i giorni, gli orari e i tavoli chiamaci: al telefono rispondiamo noi.</p>
+    <div class="contatti-grid">
+      <div class="cont" data-reveal>
+        <span class="k">Telefono</span>
+        <a href="tel:+390804316391">080 431 6391</a>
+        <span class="nota">Il fisso del locale</span>
+      </div>
+      <div class="cont" data-reveal>
+        <span class="k">Cellulare</span>
+        <a href="tel:+393334709206">333 470 9206</a>
+        <span class="nota">Per messaggi e richieste</span>
+      </div>
+      <div class="cont" data-reveal>
+        <span class="k">Email</span>
+        <a href="mailto:lorenzo.zizzi@libero.it">lorenzo.zizzi@libero.it</a>
+      </div>
+      <div class="cont" data-reveal>
+        <span class="k">Dove siamo</span>
+        <span class="v">Via Vittorio Veneto, 110<br>70010 Locorotondo (BA)</span>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=40.753068,17.33054" target="_blank" rel="noopener">Apri in Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <span class="foot-brand">
+        <svg width="26" height="22" viewBox="0 0 64 52" aria-hidden="true"><path d="M25 12 q7 -7 14 0 M20 16 h24 M20 16 c-6 1.5 -6 9 .5 10 M44 16 c6 1.5 6 9 -.5 10 M21 16 c-4 14 3 27 11 27 c8 0 15 -13 11 -27" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        La Pignatta
+      </span>
+      <ul class="foot-social">
+        <li><a href="https://www.facebook.com/la.pignatta1/" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </div>
+    <div class="foot-bot">
+      <p>Gustoteca Mediterranea La Pignatta di Zizzi Lorenzo · P.IVA 02249530748 · Via Vittorio Veneto, 110 · 70010 Locorotondo (BA)</p>
+      <p class="etichetta-ai">Sito dimostrativo realizzato con AI da FAR AI · contenuti da rivedere con l'attività prima della pubblicazione</p>
+      <p>Testi e fotografie provengono dal sito attuale della Gustoteca Mediterranea La Pignatta e restano di proprietà dell'attività.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ingrandita">
+  <button class="lb-btn" id="lb-close" aria-label="Chiudi">×</button>
+  <button class="lb-btn" id="lb-prev" aria-label="Foto precedente">‹</button>
+  <button class="lb-btn" id="lb-next" aria-label="Foto successiva">›</button>
+  <figure>
+    <img id="lb-img" src="img/cozze-crude-con-limone.jpg" alt="">
+    <figcaption id="lb-cap"></figcaption>
+  </figure>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  var nav=document.getElementById('nav');
+  var burger=document.getElementById('burger');
+  var mmenu=document.getElementById('mobileMenu');
+  var main=document.getElementById('main');
+  var footer=document.querySelector('footer');
+  var skip=document.querySelector('.skip');
+
+  /* nav solid on scroll */
+  function onScroll(){ nav.classList.toggle('solid', window.scrollY>40); }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* ---- menu mobile: apertura, inert, focus-trap, Esc ---- */
+  var menuOpen=false;
+  function focusablesIn(el){
+    return Array.prototype.filter.call(
+      el.querySelectorAll('a[href],button:not([disabled])'),
+      function(n){ return n.getClientRects().length>0; }
+    );
+  }
+  function openMenu(){
+    menuOpen=true;
+    document.body.classList.add('menu-open');
+    mmenu.classList.add('open');
+    burger.setAttribute('aria-expanded','true');
+    burger.setAttribute('aria-label','Chiudi il menu');
+    main.inert=true; footer.inert=true; skip.inert=true;
+    var first=focusablesIn(mmenu)[0];
+    if(first) first.focus();
+  }
+  function closeMenu(){
+    menuOpen=false;
+    document.body.classList.remove('menu-open');
+    mmenu.classList.remove('open');
+    burger.setAttribute('aria-expanded','false');
+    burger.setAttribute('aria-label','Apri il menu');
+    main.inert=false; footer.inert=false; skip.inert=false;
+    burger.focus();
+  }
+  burger.addEventListener('click', function(){ menuOpen?closeMenu():openMenu(); });
+  mmenu.addEventListener('click', function(e){
+    if(e.target.tagName==='A'){ closeMenu(); }
+  });
+  document.addEventListener('keydown', function(e){
+    if(menuOpen){
+      if(e.key==='Escape'){ e.preventDefault(); closeMenu(); return; }
+      if(e.key==='Tab'){
+        var els=focusablesIn(mmenu).concat([burger]);
+        if(!els.length) return;
+        var i=els.indexOf(document.activeElement);
+        var next;
+        if(e.shiftKey){ next=(i<=0)?els[els.length-1]:els[i-1]; }
+        else{ next=(i===els.length-1||i===-1)?els[0]:els[i+1]; }
+        e.preventDefault(); next.focus();
+      }
+    }
+  });
+
+  /* ---- reveal on scroll ---- */
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('[data-reveal]').forEach(function(el){ io.observe(el); });
+
+  /* ---- lightbox ---- */
+  var lb=document.getElementById('lightbox');
+  var lbImg=document.getElementById('lb-img');
+  var lbCap=document.getElementById('lb-cap');
+  var btnClose=document.getElementById('lb-close');
+  var btnPrev=document.getElementById('lb-prev');
+  var btnNext=document.getElementById('lb-next');
+  var tiles=Array.prototype.slice.call(document.querySelectorAll('.gal button'));
+  var cur=0, lastFocus=null, lbOpen=false;
+
+  function show(i){
+    cur=(i+tiles.length)%tiles.length;
+    var b=tiles[cur];
+    lbImg.src=b.getAttribute('data-src');
+    lbImg.alt=b.querySelector('img').alt;
+    lbCap.textContent=b.getAttribute('data-did');
+  }
+  function waitVisible(el,cb){
+    var tries=0;
+    (function check(){
+      if(getComputedStyle(el).visibility==='visible'||tries>40){ cb(); }
+      else{ tries++; requestAnimationFrame(check); }
+    })();
+  }
+  function openLb(i){
+    lastFocus=document.activeElement;
+    show(i);
+    lb.classList.add('open');
+    lbOpen=true;
+    main.inert=true; footer.inert=true; skip.inert=true;
+    nav.inert=true;
+    waitVisible(lb,function(){ btnClose.focus(); });
+  }
+  function closeLb(){
+    lb.classList.remove('open');
+    lbOpen=false;
+    main.inert=false; footer.inert=false; skip.inert=false;
+    nav.inert=false;
+    if(lastFocus) lastFocus.focus();
+  }
+  tiles.forEach(function(b,i){ b.addEventListener('click', function(){ openLb(i); }); });
+  btnClose.addEventListener('click', closeLb);
+  btnPrev.addEventListener('click', function(){ show(cur-1); });
+  btnNext.addEventListener('click', function(){ show(cur+1); });
+  lb.addEventListener('click', function(e){ if(e.target===lb) closeLb(); });
+  document.addEventListener('keydown', function(e){
+    if(!lbOpen) return;
+    if(e.key==='Escape'){ e.preventDefault(); closeLb(); }
+    else if(e.key==='ArrowLeft'){ show(cur-1); }
+    else if(e.key==='ArrowRight'){ show(cur+1); }
+    else if(e.key==='Tab'){
+      var els=[btnClose,btnPrev,btnNext];
+      var i=els.indexOf(document.activeElement);
+      var next;
+      if(e.shiftKey){ next=(i<=0)?els[els.length-1]:els[i-1]; }
+      else{ next=(i===els.length-1||i===-1)?els[0]:els[i+1]; }
+      e.preventDefault(); next.focus();
+    }
+  });
+})();
+</script>
+  <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
