@@ -1,0 +1,836 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<script>document.documentElement.classList.add("js")</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>VBora — Il padel, acceso.</title>
+<meta name="description" content="VBora: sei campi da padel sotto il cielo dell'Etna e un'app che fa tutto il resto — prenoti, trovi partita del tuo livello, sali di grado." />
+<meta name="theme-color" content="#07080A" />
+<link rel="icon" type="image/png" href="assets/favicon.png" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<!-- ⚠️ al deploy: og:image va reso ASSOLUTO col dominio definitivo (e aggiungere og:url) -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://demo.francescoar.com/vbora-padel/" />
+<meta name="robots" content="noindex,nofollow" />
+<meta property="og:title" content="VBora — Il padel, acceso." />
+<meta property="og:description" content="Sei campi panoramici sotto il cielo dell'Etna e un'app che fa tutto il resto. Prenota, trova la partita del tuo livello, sali di grado." />
+<meta property="og:image" content="https://demo.francescoar.com/vbora-padel/assets/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://demo.francescoar.com/vbora-padel/assets/og-image.jpg" />
+<style>
+/* ============ FONT (stessi file self-hostati dell'app VBora) ============ */
+@font-face{font-family:'Bebas Neue';font-style:normal;font-weight:400;font-display:swap;
+  src:url(assets/fonts/JTUSjIg69CK48gW7PXoo9Wlhyw.woff2) format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212,U+FEFF,U+FFFD;}
+@font-face{font-family:'Bebas Neue';font-style:normal;font-weight:400;font-display:swap;
+  src:url(assets/fonts/JTUSjIg69CK48gW7PXoo9Wdhyzbi.woff2) format('woff2');
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0;}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 700;font-display:swap;
+  src:url(assets/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2) format('woff2');}
+
+/* ============ TOKEN ============ */
+:root{
+  --nero:#07080A;
+  --surface:#0E1014;
+  --surface2:#121521;
+  --lime:#00FF66;
+  --lime-scuro:#00b348;
+  --testo:#EAEFF7;
+  --muted:#93A0B4;
+  --bordo:rgba(0,255,102,.18);
+  --display:'Bebas Neue',Impact,sans-serif;
+  --body:'Inter',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{background:var(--nero);color:var(--testo);font-family:var(--body);
+  overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--lime);color:var(--nero)}
+:focus-visible{outline:2px solid var(--lime);outline-offset:3px;border-radius:4px}
+
+h1,h2,.display{font-family:var(--display);font-weight:400;letter-spacing:.02em;line-height:.92}
+.eyebrow{font-family:var(--body);font-size:.72rem;font-weight:700;letter-spacing:.32em;
+  text-transform:uppercase;color:var(--lime)}
+.wrap{width:min(1160px,92vw);margin:0 auto}
+
+/* ============ HEADER ============ */
+header{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;
+  padding:14px max(4vw,20px);
+  background:linear-gradient(rgba(7,8,10,.85),rgba(7,8,10,0));
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  opacity:0;transform:translateY(-12px);transition:opacity .6s ease .1s,transform .6s ease .1s}
+body.svelato header{opacity:1;transform:none}
+.brand{display:flex;align-items:center;gap:10px}
+.brand img{width:34px;height:auto}
+.brand span{font-family:var(--display);font-size:1.5rem;letter-spacing:.06em;padding-top:3px}
+.brand b{color:var(--lime);font-weight:400}
+nav{display:flex;align-items:center;gap:26px;font-size:.86rem;color:var(--muted)}
+nav a:hover{color:var(--testo)}
+.pill{background:var(--lime);color:var(--nero);font-weight:700;font-size:.85rem;
+  padding:.6em 1.3em;border-radius:99px;transition:transform .15s ease,box-shadow .15s ease}
+.pill:hover{transform:translateY(-1px);box-shadow:0 6px 24px rgba(0,255,102,.35);color:var(--nero)}
+@media(max-width:760px){nav a:not(.pill){display:none}}
+
+/* ============ HERO ============ */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;
+  padding:0 0 clamp(40px,8vh,90px)}
+.hero-bg{position:absolute;inset:0;overflow:hidden}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 62%;
+  transform:scale(1.06);transition:transform 2.4s cubic-bezier(.2,.6,.2,1)}
+body.svelato .hero-bg img{transform:scale(1)}
+.hero-bg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  opacity:0;transition:opacity 1.2s ease}
+.hero-bg video.on{opacity:1}
+.hero-bg::after{content:"";position:absolute;inset:0;
+  background:
+   linear-gradient(90deg,rgba(7,8,10,.78) 0%,rgba(7,8,10,.45) 42%,rgba(7,8,10,.05) 72%),
+   linear-gradient(180deg,rgba(7,8,10,.55) 0%,rgba(7,8,10,.15) 40%,rgba(7,8,10,.55) 72%,var(--nero) 100%)}
+.hero-inner{position:relative;z-index:2;width:min(1160px,92vw);margin:0 auto}
+.hero .eyebrow{display:block;margin-bottom:14px;opacity:0;transform:translateY(18px);
+  transition:opacity .7s ease .25s,transform .7s ease .25s}
+.hero h1{font-size:clamp(4.6rem,17vw,15rem);color:var(--testo);
+  text-shadow:0 10px 60px rgba(0,0,0,.6);
+  opacity:0;transform:translateY(26px);transition:opacity .8s ease .35s,transform .8s ease .35s}
+.hero h1 b{color:var(--lime);font-weight:400;text-shadow:0 0 60px rgba(0,255,102,.45)}
+.hero p.sub{max-width:34em;margin-top:18px;font-size:clamp(1rem,1.6vw,1.2rem);line-height:1.6;color:#c9d3e2;
+  opacity:0;transform:translateY(18px);transition:opacity .7s ease .55s,transform .7s ease .55s}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px;
+  opacity:0;transform:translateY(18px);transition:opacity .7s ease .7s,transform .7s ease .7s}
+body.svelato .hero .eyebrow,body.svelato .hero h1,body.svelato .hero p.sub,body.svelato .hero-cta{opacity:1;transform:none}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:.95rem;
+  padding:.9em 1.8em;border-radius:99px;transition:transform .15s ease,box-shadow .15s ease,background .15s ease}
+.btn-lime{background:var(--lime);color:var(--nero)}
+.btn-lime:hover{transform:translateY(-2px);box-shadow:0 10px 34px rgba(0,255,102,.4)}
+.btn-ghost{border:1px solid rgba(234,239,247,.35);color:var(--testo);background:rgba(7,8,10,.35)}
+.btn-ghost:hover{border-color:var(--lime);color:var(--lime);transform:translateY(-2px)}
+.replay{margin-top:26px;background:none;border:none;cursor:pointer;font-family:var(--body);
+  font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+  display:inline-flex;gap:8px;align-items:center;
+  opacity:0;transition:opacity .7s ease .9s}
+body.svelato .replay{opacity:.8}
+.replay:hover{color:var(--lime)}
+
+/* ============ MARQUEE ============ */
+.marquee{border-top:1px solid var(--bordo);border-bottom:1px solid var(--bordo);
+  overflow:hidden;padding:16px 0;background:var(--nero)}
+.marquee-track{display:flex;gap:0;width:max-content;animation:scorri 26s linear infinite}
+.marquee span{font-family:var(--display);font-size:1.5rem;letter-spacing:.08em;color:var(--muted);
+  white-space:nowrap;padding:0 .8em}
+.marquee span b{color:var(--lime);font-weight:400;padding-right:1.6em}
+@keyframes scorri{to{transform:translateX(-50%)}}
+body.no-anim .marquee-track{animation:none}
+
+/* ============ SEZIONI ============ */
+section{position:relative;padding:clamp(80px,12vh,140px) 0}
+.sez-head{margin-bottom:clamp(36px,6vh,64px)}
+.sez-head h2{font-size:clamp(3rem,8vw,6.4rem);margin-top:12px}
+.sez-head h2 b{color:var(--lime);font-weight:400}
+.sez-head p{max-width:38em;margin-top:16px;color:var(--muted);line-height:1.7;font-size:1.02rem}
+
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.2,.6,.2,1),transform .8s cubic-bezier(.2,.6,.2,1)}
+.reveal.vivo{opacity:1;transform:none}
+body.no-anim .reveal{opacity:1;transform:none;transition:none}
+
+/* --- Il circolo --- */
+.circolo-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(20px,3vw,40px);align-items:stretch}
+.foto-card{position:relative;border-radius:22px;overflow:hidden;border:1px solid rgba(234,239,247,.08);min-height:320px}
+.foto-card img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;
+  transition:transform 1.2s cubic-bezier(.2,.6,.2,1)}
+.foto-card:hover img{transform:scale(1.04)}
+.foto-card figcaption{position:absolute;left:18px;bottom:14px;z-index:2;font-size:.72rem;letter-spacing:.22em;
+  text-transform:uppercase;color:rgba(234,239,247,.85);background:rgba(7,8,10,.55);padding:.5em 1em;border-radius:99px;
+  backdrop-filter:blur(4px)}
+.circolo-note{display:flex;flex-direction:column;gap:16px}
+.nota{background:var(--surface);border:1px solid rgba(234,239,247,.07);border-radius:18px;padding:26px;flex:1;
+  display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.nota::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--lime);opacity:.7}
+.nota .display{font-size:2.6rem;color:var(--lime)}
+.nota h3{font-size:1rem;margin:2px 0 8px}
+.nota p{color:var(--muted);font-size:.92rem;line-height:1.6}
+@media(max-width:860px){.circolo-grid{grid-template-columns:1fr}.foto-card{min-height:0;width:100%;aspect-ratio:3/2}}
+
+/* --- Video --- */
+.video-card{position:relative;border-radius:22px;overflow:hidden;border:1px solid rgba(234,239,247,.08);
+  margin:clamp(20px,3vw,40px) auto 0;cursor:pointer;max-width:880px}
+.video-card video{width:100%;display:block;aspect-ratio:4/3;object-fit:cover;background:#000}
+.video-card .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(rgba(7,8,10,.1),rgba(7,8,10,.4));transition:opacity .3s ease}
+.video-card .play span{width:92px;height:92px;border-radius:50%;background:var(--lime);
+  display:flex;align-items:center;justify-content:center;transition:transform .2s ease;
+  box-shadow:0 14px 50px rgba(0,255,102,.35)}
+.video-card:hover .play span{transform:scale(1.08)}
+.video-card .play svg{margin-left:6px}
+.video-card.attivo .play{opacity:0;pointer-events:none}
+.video-card figcaption{position:absolute;left:18px;bottom:14px;font-size:.72rem;letter-spacing:.22em;
+  text-transform:uppercase;color:rgba(234,239,247,.85);background:rgba(7,8,10,.55);padding:.5em 1em;
+  border-radius:99px;backdrop-filter:blur(4px);pointer-events:none;transition:opacity .3s ease}
+.video-card.attivo figcaption{opacity:0}
+
+/* --- Academy --- */
+.academy{display:flex;align-items:center;gap:clamp(24px,4vw,48px);flex-wrap:wrap;
+  background:var(--surface);border:1px solid rgba(234,239,247,.07);border-radius:22px;
+  padding:clamp(24px,4vw,44px);position:relative;overflow:hidden}
+.academy::before{content:"";position:absolute;right:-120px;top:-120px;width:340px;height:340px;
+  border-radius:50%;background:radial-gradient(circle,rgba(0,255,102,.1),transparent 65%);pointer-events:none}
+.academy .logo-chip{background:#fff;border-radius:18px;padding:14px;width:172px;flex:none}
+.academy .logo-chip img{width:100%;height:auto}
+.academy h3{font-family:var(--display);font-size:clamp(2rem,4vw,3rem);letter-spacing:.04em}
+.academy h3 b{color:var(--lime);font-weight:400}
+.academy .testo{flex:1;min-width:260px}
+.academy p{color:var(--muted);margin-top:10px;line-height:1.7;max-width:44em}
+
+/* --- Livelli --- */
+.livelli{background:var(--surface);border-top:1px solid var(--bordo);border-bottom:1px solid var(--bordo)}
+.scala{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:8px}
+.fascia{border-radius:14px;padding:18px 10px 14px;text-align:center;border:1px solid rgba(234,239,247,.08);
+  background:var(--nero);transition:transform .25s ease,box-shadow .25s ease;cursor:default}
+.fascia:hover{transform:translateY(-6px)}
+.fascia .pallino{width:34px;height:34px;border-radius:50%;margin:0 auto 12px;
+  box-shadow:inset -4px -6px 10px rgba(0,0,0,.35),0 0 0 1px rgba(255,255,255,.08)}
+.fascia .range{font-family:var(--display);font-size:1.4rem;letter-spacing:.05em}
+.fascia .nome{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.maglia-chip{display:inline-flex;align-items:center;gap:10px;margin-top:34px;
+  background:var(--nero);border:1px solid var(--bordo);border-radius:99px;padding:.7em 1.4em;font-size:.9rem;color:var(--muted)}
+.maglia-chip .dot{width:14px;height:14px;border-radius:50%;background:#27AE38}
+.maglia-chip b{color:var(--testo);font-weight:600}
+@media(max-width:860px){.scala{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:520px){.scala{grid-template-columns:repeat(2,1fr)}}
+
+/* --- App --- */
+.app-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,3vw,36px);
+  align-items:end;margin-bottom:clamp(40px,7vh,70px)}
+.phone{position:relative;border-radius:34px;border:1px solid rgba(234,239,247,.14);
+  background:#0B0D10;padding:10px;box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.phone::before{content:"";position:absolute;top:16px;left:50%;transform:translateX(-50%);
+  width:84px;height:8px;border-radius:99px;background:#000;z-index:3;box-shadow:0 0 0 1px rgba(255,255,255,.05)}
+.phone img{border-radius:26px;width:100%;aspect-ratio:860/1864;object-fit:cover}
+.phone .tag{position:absolute;left:50%;bottom:-14px;transform:translateX(-50%);
+  background:var(--lime);color:var(--nero);font-weight:700;font-size:.72rem;letter-spacing:.14em;
+  text-transform:uppercase;padding:.55em 1.2em;border-radius:99px;white-space:nowrap}
+.phone.mid{transform:translateY(-26px)}
+@media(max-width:760px){
+  .app-grid{grid-template-columns:1fr;max-width:320px;margin-left:auto;margin-right:auto}
+  .phone.mid{transform:none}
+}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.feat{background:var(--surface);border:1px solid rgba(234,239,247,.07);border-radius:18px;padding:24px;
+  transition:border-color .2s ease,transform .2s ease}
+.feat:hover{border-color:var(--bordo);transform:translateY(-3px)}
+.feat h3{font-family:var(--display);font-size:1.5rem;letter-spacing:.05em;margin-bottom:8px}
+.feat h3::before{content:"● ";color:var(--lime);font-size:.7em;vertical-align:.15em}
+.feat p{color:var(--muted);font-size:.9rem;line-height:1.6}
+@media(max-width:860px){.feature-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.feature-grid{grid-template-columns:1fr}}
+
+/* --- CTA finale --- */
+.finale{text-align:center;overflow:hidden}
+.finale::before{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:min(900px,120vw);height:min(900px,120vw);border-radius:50%;
+  background:radial-gradient(circle,rgba(0,255,102,.13),transparent 62%);pointer-events:none}
+.finale h2{font-size:clamp(3.4rem,10vw,8rem)}
+.finale h2 b{color:var(--lime);font-weight:400}
+.finale p{color:var(--muted);margin:18px auto 34px;max-width:32em;line-height:1.7}
+.finale .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.finale .dove{margin:34px auto 0;font-size:.85rem;letter-spacing:.04em;color:var(--muted);max-width:none}
+.finale .dove a{color:var(--testo);border-bottom:1px solid var(--bordo);white-space:nowrap}
+.finale .dove a:hover{color:var(--lime)}
+
+/* --- Galleria --- */
+.galleria .sez-head{width:min(1160px,92vw);margin-left:auto;margin-right:auto}
+.strip{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;
+  padding:6px max(4vw,20px) 26px;-webkit-overflow-scrolling:touch;
+  scrollbar-color:rgba(0,255,102,.4) transparent}
+.strip::-webkit-scrollbar{height:8px}
+.strip::-webkit-scrollbar-thumb{background:rgba(0,255,102,.35);border-radius:99px}
+.strip::-webkit-scrollbar-track{background:rgba(234,239,247,.05)}
+.tile{position:relative;flex:0 0 auto;height:min(430px,60vw);border-radius:18px;overflow:hidden;
+  border:1px solid rgba(234,239,247,.09);scroll-snap-align:center;background:var(--surface)}
+.tile img,.tile video{height:100%;width:auto;max-width:none;display:block}
+.tile figcaption{position:absolute;left:12px;bottom:10px;font-size:.68rem;letter-spacing:.2em;
+  text-transform:uppercase;color:rgba(234,239,247,.9);background:rgba(7,8,10,.6);
+  padding:.5em 1em;border-radius:99px;backdrop-filter:blur(4px)}
+.academy .partner{margin-top:16px;font-size:.8rem;letter-spacing:.06em;color:var(--muted)}
+.academy .partner b{color:var(--testo);font-weight:600}
+
+/* ============ FOOTER ============ */
+footer{border-top:1px solid rgba(234,239,247,.08);padding:34px 0 44px;font-size:.82rem;color:var(--muted)}
+.foot-row{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.foot-row .brand img{width:26px}
+.foot-row .brand span{font-size:1.15rem}
+.ai-label{font-size:.72rem;letter-spacing:.06em;opacity:.75}
+
+/* ============ INTRO — LA PALLINA CHE SPACCA LO SCHERMO ============ */
+#intro{position:fixed;inset:0;z-index:200;overflow:hidden;cursor:pointer;
+  background:transparent}
+#intro .pane{position:absolute;inset:0;background:linear-gradient(160deg,#0d1114 0%,#07080a 55%,#0a0d10 100%)}
+#intro .pane::after{content:"VBORA";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  font-family:var(--display);font-size:clamp(3rem,10vw,7rem);letter-spacing:.35em;color:rgba(234,239,247,.05)}
+#intro .shard{position:absolute;inset:0;background:linear-gradient(160deg,#0d1114 0%,#07080a 55%,#0a0d10 100%);
+  will-change:transform,opacity}
+#intro svg.crepe{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+#intro .flash{position:absolute;inset:0;background:#eaffef;opacity:0;pointer-events:none}
+#intro .palla{position:absolute;width:120px;height:120px;border-radius:50%;left:0;top:0;
+  margin:-60px 0 0 -60px;will-change:transform;
+  background:radial-gradient(circle at 34% 28%,#f2ffc4 0%,#d9ff4d 28%,#a5e620 55%,#5e9614 82%,#3f660d 100%);
+  box-shadow:0 0 60px rgba(180,255,60,.35),inset -14px -18px 30px rgba(0,0,0,.35)}
+#intro .palla::before{content:"";position:absolute;inset:0;border-radius:50%;
+  background:
+   radial-gradient(circle at 50% -40%,transparent 62%,rgba(255,255,255,.5) 63%,transparent 66%),
+   radial-gradient(circle at 50% 140%,transparent 62%,rgba(255,255,255,.5) 63%,transparent 66%);
+  opacity:.6}
+#intro .x3{position:absolute;left:50%;top:38%;transform:translate(-50%,-50%) scale(0);
+  font-family:var(--display);font-size:clamp(7rem,26vw,17rem);color:var(--lime);
+  text-shadow:0 0 40px rgba(0,255,102,.65),0 0 120px rgba(0,255,102,.4);
+  -webkit-text-stroke:2px rgba(7,8,10,.8);pointer-events:none;z-index:5}
+#intro .x3.slam{animation:slam .55s cubic-bezier(.15,1.2,.3,1) forwards}
+@keyframes slam{
+  0%{transform:translate(-50%,-50%) scale(3.2) rotate(6deg);opacity:0}
+  55%{transform:translate(-50%,-50%) scale(.94) rotate(-7deg);opacity:1}
+  100%{transform:translate(-50%,-50%) scale(1) rotate(-7deg);opacity:1}}
+#intro .x3.via{transition:transform .5s cubic-bezier(.5,0,.9,.4),opacity .5s ease;
+  transform:translate(-50%,-50%) scale(5) rotate(-7deg)!important;opacity:0!important}
+#intro .onda{position:absolute;border:2px solid rgba(0,255,102,.7);border-radius:50%;
+  pointer-events:none;transform:translate(-50%,-50%) scale(0);opacity:1}
+#intro .onda.via{transition:transform .6s cubic-bezier(.1,.6,.3,1),opacity .6s ease;
+  transform:translate(-50%,-50%) scale(1);opacity:0}
+#intro .salta{position:absolute;right:22px;bottom:20px;z-index:6;font-size:.72rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--muted);border:1px solid rgba(234,239,247,.2);border-radius:99px;
+  padding:.7em 1.4em;background:rgba(7,8,10,.4);font-family:var(--body);cursor:pointer}
+#intro .salta:hover{color:var(--testo);border-color:rgba(234,239,247,.5)}
+.scossa{animation:scossa .35s linear}
+@keyframes scossa{
+  0%,100%{transform:translate(0,0)}
+  15%{transform:translate(-10px,6px)}
+  30%{transform:translate(9px,-7px)}
+  45%{transform:translate(-7px,-5px)}
+  60%{transform:translate(6px,5px)}
+  75%{transform:translate(-4px,3px)}
+  90%{transform:translate(2px,-2px)}}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  html{scroll-behavior:auto}
+}
+
+/* Senza JavaScript (o con lo script bloccato) il sito resta LEGGIBILE:
+   niente vetro, niente contenuti nascosti in attesa di una classe che non arriverà. */
+html:not(.js) #intro{display:none}
+html:not(.js) .replay{display:none}      /* senza JS il replay non può fare nulla */
+html:not(.js) .marquee-track{animation:none} /* senza JS il nastro non è duplicato: fermo, niente salti */
+html:not(.js) header,
+html:not(.js) .hero .eyebrow,html:not(.js) .hero h1,html:not(.js) .hero p.sub,
+html:not(.js) .hero-cta,
+html:not(.js) .reveal{opacity:1;transform:none}
+
+/* varianti di testata (anti-stampino) */
+.sez-head.split{display:grid;grid-template-columns:auto minmax(0,420px);
+  justify-content:space-between;align-items:end;gap:20px 48px}
+.sez-head.split p{margin:0 0 14px;text-align:right}
+.sez-head.compatta{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 36px}
+.sez-head.compatta .eyebrow{width:100%}
+.sez-head.compatta h2{font-size:clamp(2.6rem,6vw,4.4rem)}
+.sez-head.compatta p{margin:0;flex:1;min-width:240px;text-align:right}
+@media(max-width:760px){
+  .sez-head.split{display:block}
+  .sez-head.split p,.sez-head.compatta p{text-align:left;margin-top:14px}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= INTRO SMASH ================= -->
+<div id="intro" role="presentation">
+  <div class="pane" aria-hidden="true"></div>
+  <div class="palla" hidden aria-hidden="true"></div>
+  <div class="x3" hidden aria-hidden="true">×3</div>
+  <div class="flash" aria-hidden="true"></div>
+  <button class="salta" type="button" id="salta">Salta →</button>
+</div>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <a class="brand" href="#top" aria-label="VBora — torna su">
+    <img src="assets/vbora-logo.png" alt="" width="34" height="27" />
+    <span>V<b>BORA</b></span>
+  </a>
+  <nav>
+    <a href="#circolo">Il circolo</a>
+    <a href="#livelli">Livelli</a>
+    <a href="#app">L'app</a>
+    <a class="pill" href="https://vborapadel.app" target="_blank" rel="noopener">Apri l'app</a>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<main id="top">
+<div class="hero">
+  <div class="hero-bg">
+    <img src="assets/club-notte.jpg" alt="I campi VBora illuminati di notte, ripresi dal drone, con l'Etna sullo sfondo" />
+    <video id="herovid" src="assets/hero-drone.mp4" muted loop playsinline preload="none" aria-hidden="true" hidden></video>
+  </div>
+  <div class="hero-inner">
+    <span class="eyebrow">VBora Padel Club</span>
+    <h1>IL PADEL,<br /><b>ACCESO.</b></h1>
+    <p class="sub">Sei campi panoramici sotto il cielo dell'Etna, accesi fino a sera.
+      E un'app che fa tutto il resto: prenoti in 30 secondi, trovi la partita del tuo livello, sali di grado.</p>
+    <div class="hero-cta">
+      <a class="btn btn-lime" href="https://vborapadel.app" target="_blank" rel="noopener">Prenota un campo</a>
+      <a class="btn btn-ghost" href="#app">Scopri l'app</a>
+    </div>
+    <br />
+    <button class="replay" type="button" id="replay">Rivedi l'impatto</button>
+  </div>
+</div>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marquee">
+    <span>PRENOTA <b>·</b> OPEN GAMES <b>·</b> TORNEI <b>·</b> LEZIONI <b>·</b> WALLET <b>·</b> CLASSIFICHE <b>·</b> </span>
+  </div>
+</div>
+
+<!-- ================= IL CIRCOLO ================= -->
+<section id="circolo">
+  <div class="wrap">
+    <div class="sez-head reveal">
+      <span class="eyebrow">Il circolo</span>
+      <h2>SEI CAMPI.<br /><b>ZERO ATTESE.</b></h2>
+      <p>Campi panoramici immersi nel verde, illuminati per giocare anche di sera.
+         Prenoti dall'app, arrivi e giochi: al resto pensa VBora.</p>
+    </div>
+    <div class="circolo-grid">
+      <figure class="foto-card reveal">
+        <img src="assets/club-giorno.jpg" alt="Vista aerea diurna del circolo VBora: sei campi da padel tra gli ulivi" loading="lazy" />
+        <figcaption>Vista dal drone · VBora Padel Club</figcaption>
+      </figure>
+      <div class="circolo-note">
+        <div class="nota reveal">
+          <span class="display">6</span>
+          <h3>Campi panoramici</h3>
+          <p>Immersi tra gli ulivi, con l'Etna all'orizzonte. Si gioca giorno e notte.</p>
+        </div>
+        <div class="nota reveal">
+          <span class="display">90'</span>
+          <h3>Il tuo slot, garantito</h3>
+          <p>Partite da 90 minuti, prenotate e pagate dall'app — online o in cassa al circolo.</p>
+        </div>
+      </div>
+    </div>
+    <figure class="video-card reveal" id="videocard" tabindex="0" role="button"
+      aria-label="Riproduci il video di presentazione del circolo">
+      <video id="presvideo" src="assets/vbora-presentazione.mp4" poster="assets/video-poster.jpg"
+        preload="metadata" playsinline disablepictureinpicture
+        controlslist="nodownload noremoteplayback noplaybackrate"
+        aria-label="Video di presentazione del circolo VBora"></video>
+      <div class="play" aria-hidden="true"><span>
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="#07080A" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+      </span></div>
+      <figcaption>Il circolo in 40 secondi</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= LIVELLI ================= -->
+<section id="livelli" class="livelli">
+  <div class="wrap">
+    <div class="sez-head split reveal">
+      <div>
+        <span class="eyebrow">Livelli &amp; colori</span>
+        <h2>DA BIANCO<br /><b>A NERO.</b></h2>
+      </div>
+      <p>Ogni giocatore VBora ha un livello da 1.1 a 7.7 e la maglia del suo colore.
+         Le partite aperte accettano solo chi è nel tuo range: partite vere, equilibrate, sempre.</p>
+    </div>
+    <div class="scala reveal" role="list" aria-label="Scala livelli VBora">
+      <div class="fascia" role="listitem"><div class="pallino" style="background:#F4F6F5"></div><div class="range">1.1–1.7</div><div class="nome">Bianco</div></div>
+      <div class="fascia" role="listitem"><div class="pallino" style="background:#FFD400"></div><div class="range">2.1–2.7</div><div class="nome">Giallo</div></div>
+      <div class="fascia" role="listitem"><div class="pallino" style="background:#FF8A00"></div><div class="range">3.1–3.7</div><div class="nome">Arancione</div></div>
+      <div class="fascia" role="listitem"><div class="pallino" style="background:#27AE38"></div><div class="range">4.1–4.7</div><div class="nome">Verde</div></div>
+      <div class="fascia" role="listitem"><div class="pallino" style="background:#2E7CFF"></div><div class="range">5.1–5.7</div><div class="nome">Blu</div></div>
+      <div class="fascia" role="listitem"><div class="pallino" style="background:#FF3B30"></div><div class="range">6.1–6.7</div><div class="nome">Rosso</div></div>
+      <div class="fascia" role="listitem"><div class="pallino" style="background:#15181B;box-shadow:inset -4px -6px 10px rgba(0,0,0,.5),0 0 0 1px rgba(0,255,102,.5)"></div><div class="range">7.1–7.7</div><div class="nome">Nero</div></div>
+    </div>
+    <div class="maglia-chip reveal"><span class="dot"></span>Esempio: <b>Verde 4.3</b> — la tua fascia è la tua maglia.</div>
+  </div>
+</section>
+
+<!-- ================= APP ================= -->
+<section id="app">
+  <div class="wrap">
+    <div class="sez-head reveal">
+      <span class="eyebrow">L'app</span>
+      <h2>IL CIRCOLO<br /><b>IN TASCA.</b></h2>
+      <p>VBora non è solo un gestionale: è il sistema operativo del circolo.
+         Si installa sul telefono in un tocco, senza passare dagli store.</p>
+    </div>
+    <div class="app-grid">
+      <div class="phone reveal"><img src="assets/app/prenota.webp" alt="Schermata Prenota dell'app VBora" loading="lazy" /><span class="tag">Prenota</span></div>
+      <div class="phone mid reveal"><img src="assets/app/open-games.webp" alt="Schermata Open Games dell'app VBora" loading="lazy" /><span class="tag">Open Games</span></div>
+      <div class="phone reveal"><img src="assets/app/livello.webp" alt="Schermata Livello dell'app VBora" loading="lazy" /><span class="tag">Il tuo livello</span></div>
+    </div>
+    <div class="feature-grid">
+      <div class="feat reveal"><h3>PRENOTA IN 30 SECONDI</h3><p>Scegli campo e orario, paghi online o in cassa. Slot da 90 minuti, senza telefonate.</p></div>
+      <div class="feat reveal"><h3>OPEN GAMES</h3><p>Ti manca gente? Apri la partita: entra solo chi è del tuo livello. Niente più 4 contro… nessuno.</p></div>
+      <div class="feat reveal"><h3>LIVELLO CHE CRESCE</h3><p>Ogni risultato aggiorna il tuo grado sulla scala 1.1–7.7. La maglia del tuo colore racconta chi sei.</p></div>
+      <div class="feat reveal"><h3>TORNEI</h3><p>Iscrizioni, tabelloni e risultati, tutto dentro l'app. Il campionato del circolo, sempre in tasca.</p></div>
+      <div class="feat reveal"><h3>WALLET &amp; PREMI</h3><p>Accumuli crediti giocando e li usi per campi, lezioni e premi del circolo.</p></div>
+      <div class="feat reveal"><h3>LEZIONI &amp; ACADEMY</h3><p>Corsi con i maestri, presenze e recuperi gestiti dall'app, senza fogli e messaggi persi.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ACADEMY ================= -->
+<section id="academy">
+  <div class="wrap">
+    <div class="academy reveal">
+      <div class="logo-chip"><img src="assets/vbora-logo-academy.png" alt="Logo VBora — Juan Seguì Padel Academy" width="500" height="500" /></div>
+      <div class="testo">
+        <span class="eyebrow">La scuola</span>
+        <h3>JUAN SEGUÌ <b>PADEL ACADEMY</b></h3>
+        <p>L'accademia del circolo. Lezioni e corsi con i maestri, presenze e recuperi
+           gestiti direttamente dall'app — dal primo scambio alla maglia nera.</p>
+        <p class="partner">Partner tecnico <b>Macron</b> · Affiliata <b>FIT</b> e <b>CONI</b></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERIA ================= -->
+<section id="galleria" class="galleria">
+  <div class="sez-head compatta reveal">
+    <span class="eyebrow">La vita del circolo</span>
+    <h2>QUI SI GIOCA <b>DAVVERO.</b></h2>
+    <p>Tornei, notturne, accademia e terzo tempo: scorri e guardati intorno.</p>
+  </div>
+  <div class="strip reveal" tabindex="0" role="region" aria-label="Galleria fotografica del circolo — scorri orizzontalmente">
+    <figure class="tile"><img src="assets/gallery/g1-torneo.jpg" alt="Gruppo di giocatori schierati sui campi blu in un giorno di torneo" loading="lazy" /><figcaption>Giorno di torneo</figcaption></figure>
+    <figure class="tile"><img src="assets/gallery/g2-notturna.jpg" alt="Partita in notturna sul campo rosso illuminato" loading="lazy" /><figcaption>In notturna</figcaption></figure>
+    <figure class="tile"><video id="clipacademy" src="assets/gallery/clip-academy.mp4" poster="assets/gallery/clip-poster.jpg" muted loop playsinline preload="none" aria-label="Allenamento dell'accademia sul campo rosso"></video><figcaption>L'accademia in campo</figcaption></figure>
+    <figure class="tile"><img src="assets/gallery/g3-campi.jpg" alt="I campi rossi e blu del circolo visti dal giardino" loading="lazy" /><figcaption>I campi</figcaption></figure>
+    <figure class="tile"><img src="assets/gallery/g6-centrale.jpg" alt="Partita in corso sul campo rosso, ripresa dall'alto dal drone" loading="lazy" /><figcaption>Vista sul centrale</figcaption></figure>
+    <figure class="tile"><img src="assets/gallery/g4-relax.jpg" alt="La zona relax con divanetti e ombrelloni" loading="lazy" /><figcaption>Zona relax</figcaption></figure>
+    <figure class="tile"><img src="assets/gallery/g8-torneo2.jpg" alt="Altro gruppo di giocatori sui campi durante un torneo" loading="lazy" /><figcaption>Sempre pieno</figcaption></figure>
+    <figure class="tile"><img src="assets/gallery/g7-academy.jpg" alt="L'insegna VBora Juan Seguì Padel Academy sul muro in pietra lavica" loading="lazy" /><figcaption>L'ingresso</figcaption></figure>
+  </div>
+</section>
+
+<!-- ================= CTA FINALE ================= -->
+<section class="finale">
+  <div class="wrap reveal">
+    <span class="eyebrow">Si gioca</span>
+    <h2>IL CAMPO<br /><b>TI ASPETTA.</b></h2>
+    <p>Apri l'app, scegli l'orario, porta la racchetta. Al resto pensiamo noi.</p>
+    <div class="btns">
+      <a class="btn btn-lime" href="https://vborapadel.app" target="_blank" rel="noopener">Apri l'app</a>
+      <a class="btn btn-ghost" href="https://wa.me/393792999911" target="_blank" rel="noopener">Scrivici su WhatsApp</a>
+    </div>
+    <p class="dove">Contrada Pezzamandra · 95045 Misterbianco (CT) · <a href="tel:+393792999911">379 299 9911</a></p>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap foot-row">
+    <a class="brand" href="#top"><img src="assets/vbora-logo.png" alt="" width="26" height="21" /><span>V<b>BORA</b></span></a>
+    <span>© 2026 VBora Padel Club · Contrada Pezzamandra, Misterbianco (CT)</span>
+    <span class="ai-label">Sito realizzato con assistenza AI</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var qs=new URLSearchParams(location.search);
+  var shot=qs.get("shot")==="1";
+  var ridotto=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var intro=document.getElementById("intro");
+  var body=document.body;
+
+  /* marquee: duplica il contenuto per il loop */
+  var mq=document.getElementById("marquee");
+  mq.innerHTML=mq.innerHTML+mq.innerHTML;
+
+  /* reveal on scroll */
+  var reveals=[].slice.call(document.querySelectorAll(".reveal"));
+  if(shot||ridotto){
+    body.classList.add("no-anim");
+    reveals.forEach(function(el){el.classList.add("vivo");});
+  }else{
+    var io=new IntersectionObserver(function(voci){
+      voci.forEach(function(v){if(v.isIntersecting){v.target.classList.add("vivo");io.unobserve(v.target);}});
+    },{threshold:.18});
+    reveals.forEach(function(el){io.observe(el);});
+  }
+
+  /* hero drone: solo desktop, connessione non risparmiata, niente shot/reduced-motion */
+  function accendiDrone(){
+    var v=document.getElementById("herovid");
+    if(!v||shot||ridotto)return;
+    if(innerWidth<900)return;
+    if(navigator.connection&&navigator.connection.saveData)return;
+    v.hidden=false;
+    var pr=v.play();
+    if(pr&&pr.then)pr.then(function(){v.classList.add("on");}).catch(function(){v.hidden=true;});
+    else v.classList.add("on");
+  }
+
+  /* l'intro non deve intrappolare la tastiera: header e main sono inert finché c'è il vetro */
+  function bloccaPagina(on){
+    ["header","main","footer"].forEach(function(sel){
+      var el=document.querySelector(sel);
+      if(el){if(on)el.setAttribute("inert","");else el.removeAttribute("inert");}
+    });
+  }
+  function segnaVisto(){try{sessionStorage.setItem("vbora_intro","1");}catch(e){}}
+
+  function fineIntro(){
+    bloccaPagina(false);
+    segnaVisto();
+    if(!intro)return;
+    intro.remove();intro=null;
+    body.classList.add("svelato");
+    accendiDrone();
+  }
+
+  /* ---------- costruzione crepe (SVG) ---------- */
+  function disegnaCrepe(svg,cx,cy){
+    var W=innerWidth,H=innerHeight,NS="http://www.w3.org/2000/svg";
+    var maxR=Math.hypot(Math.max(cx,W-cx),Math.max(cy,H-cy))*1.05;
+    var paths=[];
+    var nRaggi=14;
+    for(var i=0;i<nRaggi;i++){
+      var ang=(i/nRaggi)*Math.PI*2+(Math.random()-.5)*.3;
+      var d="M"+cx+" "+cy,r=0,a=ang;
+      var passi=5+Math.floor(Math.random()*3);
+      for(var s=1;s<=passi;s++){
+        r=(s/passi)*maxR*(0.55+Math.random()*.5);
+        a=ang+(Math.random()-.5)*.28;
+        d+=" L"+(cx+Math.cos(a)*r).toFixed(1)+" "+(cy+Math.sin(a)*r).toFixed(1);
+      }
+      paths.push({d:d,w:i%3===0?2.2:1.2});
+    }
+    /* anelli spezzati vicino all'impatto */
+    for(var k=0;k<3;k++){
+      var rr=40+k*46,d2="",primo=true;
+      for(var t=0;t<Math.PI*2;t+=.5){
+        if(Math.random()<.25){primo=true;continue;}
+        var jx=cx+Math.cos(t)*(rr+(Math.random()-.5)*16);
+        var jy=cy+Math.sin(t)*(rr+(Math.random()-.5)*16);
+        d2+=(primo?" M":" L")+jx.toFixed(1)+" "+jy.toFixed(1);primo=false;
+      }
+      paths.push({d:d2,w:1});
+    }
+    paths.forEach(function(p,idx){
+      var el=document.createElementNS(NS,"path");
+      el.setAttribute("d",p.d);
+      el.setAttribute("fill","none");
+      el.setAttribute("stroke","rgba(226,255,238,.85)");
+      el.setAttribute("stroke-width",p.w);
+      el.style.filter="drop-shadow(0 0 6px rgba(0,255,102,.5))";
+      svg.appendChild(el);
+      var len=el.getTotalLength();
+      el.style.strokeDasharray=len;
+      el.style.strokeDashoffset=len;
+      el.style.transition="stroke-dashoffset .16s ease-out "+(idx*8)+"ms";
+      requestAnimationFrame(function(){requestAnimationFrame(function(){el.style.strokeDashoffset="0";});});
+    });
+  }
+
+  /* ---------- schegge (fan di triangoli che copre il viewport) ---------- */
+  function costruisciSchegge(cx,cy){
+    var W=innerWidth,H=innerHeight,per=[],i;
+    for(i=0;i<=4;i++)per.push([W*i/4,0]);
+    for(i=1;i<=3;i++)per.push([W,H*i/3]);
+    for(i=3;i>=0;i--)per.push([W*i/4,H]);
+    for(i=2;i>=1;i--)per.push([0,H*i/3]);
+    var schegge=[];
+    for(i=0;i<per.length;i++){
+      var a=per[i],b=per[(i+1)%per.length];
+      var div=document.createElement("div");
+      div.className="shard";
+      div.style.clipPath="polygon("+cx+"px "+cy+"px,"+a[0]+"px "+a[1]+"px,"+b[0]+"px "+b[1]+"px)";
+      var gx=(cx+a[0]+b[0])/3,gy=(cy+a[1]+b[1])/3;
+      div.style.transformOrigin=gx+"px "+gy+"px";
+      div.dataset.dx=(gx-cx);div.dataset.dy=(gy-cy);
+      intro.appendChild(div);
+      schegge.push(div);
+    }
+    return schegge;
+  }
+
+  function frantuma(schegge){
+    schegge.forEach(function(s,i){
+      var dx=parseFloat(s.dataset.dx),dy=parseFloat(s.dataset.dy);
+      var n=Math.hypot(dx,dy)||1;
+      var spinta=140+Math.random()*260;
+      var tx=dx/n*spinta,ty=dy/n*spinta+220+Math.random()*240; /* gravità */
+      var rot=(Math.random()-.5)*80;
+      s.style.transition="transform .8s cubic-bezier(.3,0,.75,.3) "+(i%5*45)+"ms, opacity .8s ease "+(120+i%5*45)+"ms";
+      requestAnimationFrame(function(){requestAnimationFrame(function(){
+        s.style.transform="translate("+tx+"px,"+ty+"px) rotate("+rot+"deg) scale(.92)";
+        s.style.opacity="0";
+      });});
+    });
+  }
+
+  /* ---------- timeline intro ----------
+     Guidata da requestAnimationFrame, NON da setTimeout: se la pagina si apre
+     in un tab in secondo piano i timer vengono strozzati e il boom partirebbe
+     "al buio"; il rAF invece si ferma finché il tab non è visibile. */
+  function lanciaIntro(){
+    var pane=intro.querySelector(".pane");
+    var palla=intro.querySelector(".palla");
+    var x3=intro.querySelector(".x3");
+    var flash=intro.querySelector(".flash");
+    var cx=innerWidth*.5,cy=innerHeight*.40;
+
+    palla.hidden=false;
+    palla.style.transform="translate("+(cx+innerWidth*.06)+"px,"+(cy-innerHeight*.05)+"px) scale(.03)";
+    palla.style.opacity="0";
+
+    /* volo: la palla arriva addosso allo schermo */
+    function volo(){
+      palla.style.transition="transform .72s cubic-bezier(.45,0,.9,.55), opacity .2s linear";
+      palla.style.opacity="1";
+      palla.style.transform="translate("+cx+"px,"+cy+"px) scale(1.18)";
+    }
+
+    /* impatto */
+    function impatto(){
+      if(!intro)return;
+      /* flash + scossa */
+      flash.style.transition="none";flash.style.opacity=".9";
+      setTimeout(function(){flash.style.transition="opacity .3s ease";flash.style.opacity="0";},60);
+      intro.classList.add("scossa");
+      setTimeout(function(){if(intro)intro.classList.remove("scossa");},400);
+      /* schiacciamento palla */
+      palla.style.transition="transform .12s ease-out";
+      palla.style.transform="translate("+cx+"px,"+cy+"px) scale(1.28,.92)";
+      /* crepe */
+      var NS="http://www.w3.org/2000/svg";
+      var svg=document.createElementNS(NS,"svg");
+      svg.setAttribute("class","crepe");
+      intro.insertBefore(svg,flash);
+      disegnaCrepe(svg,cx,cy);
+      /* onda d'urto */
+      var onda=document.createElement("div");
+      onda.className="onda";
+      onda.style.left=cx+"px";onda.style.top=cy+"px";
+      onda.style.width=onda.style.height=Math.min(innerWidth,innerHeight)*.9+"px";
+      intro.appendChild(onda);
+      requestAnimationFrame(function(){onda.classList.add("via");});
+      /* ×3 */
+      x3.hidden=false;x3.classList.add("slam");
+    }
+
+    /* frantumazione */
+    function frantumazione(){
+      if(!intro)return;
+      var schegge=costruisciSchegge(cx,cy);
+      pane.remove();
+      var svg=intro.querySelector("svg.crepe");
+      if(svg){svg.style.transition="opacity .25s ease";svg.style.opacity="0";}
+      frantuma(schegge);
+      body.classList.add("svelato");
+      accendiDrone();
+      /* la palla cade via */
+      palla.style.transition="transform .9s cubic-bezier(.35,0,.85,.45), opacity .9s ease";
+      palla.style.transform="translate("+(cx-innerWidth*.18)+"px,"+(innerHeight+220)+"px) scale(1) rotate(200deg)";
+      palla.style.opacity="0";
+      x3.classList.remove("slam");
+      x3.classList.add("via");
+    }
+
+    /* smontaggio */
+    function smontaggio(){bloccaPagina(false);segnaVisto();if(intro){intro.remove();intro=null;}}
+
+    var passi=[[220,volo],[940,impatto],[1850,frantumazione],[2950,smontaggio]];
+    var t0=null,idx=0;
+    function tick(ts){
+      if(!intro)return;
+      if(t0===null)t0=ts;
+      var el=ts-t0;
+      while(idx<passi.length&&el>=passi[idx][0]){
+        try{passi[idx][1]();}catch(e){fineIntro();return;}
+        idx++;
+      }
+      if(idx<passi.length)requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  function avviaIntro(){
+    if(document.visibilityState==="hidden"){
+      document.addEventListener("visibilitychange",function h(){
+        if(document.visibilityState==="visible"){
+          document.removeEventListener("visibilitychange",h);
+          requestAnimationFrame(lanciaIntro);
+        }
+      });
+    }else{
+      lanciaIntro();
+    }
+  }
+
+  /* l'intro si vede una volta per sessione: al refresh non ritorna (si rilancia con "Rivedi l'impatto") */
+  var giaVista=false;
+  try{giaVista=sessionStorage.getItem("vbora_intro")==="1";}catch(e){}
+  if(shot||ridotto||giaVista){
+    fineIntro();
+  }else{
+    bloccaPagina(true);
+    intro.addEventListener("click",fineIntro);
+    document.getElementById("salta").addEventListener("click",fineIntro);
+    avviaIntro();
+  }
+
+  /* rigioca l'impatto */
+  document.getElementById("replay").addEventListener("click",function(){
+    try{sessionStorage.removeItem("vbora_intro");}catch(e){}
+    location.href=location.pathname; /* ricarica pulita, l'intro riparte */
+  });
+
+  /* clip galleria: si carica e gira SOLO quando è in vista (e mai con risparmio dati) */
+  var clip=document.getElementById("clipacademy");
+  if(clip){
+    if(navigator.connection&&navigator.connection.saveData){
+      /* resta il poster */
+    }else{
+      var ioClip=new IntersectionObserver(function(voci){
+        voci.forEach(function(v){
+          if(v.isIntersecting){var pr=clip.play();if(pr&&pr.catch)pr.catch(function(){});}
+          else clip.pause();
+        });
+      },{threshold:.25});
+      ioClip.observe(clip);
+    }
+  }
+
+  /* video presentazione */
+  var vcard=document.getElementById("videocard");
+  var video=document.getElementById("presvideo");
+  function avviaPresentazione(){
+    if(!video.paused)return;
+    vcard.classList.add("attivo");
+    video.controls=true;
+    video.play();
+    /* da qui in poi comandano i controlli nativi del player: la card smette di essere un bottone */
+    vcard.removeAttribute("role");vcard.removeAttribute("tabindex");
+    video.focus();
+  }
+  vcard.addEventListener("click",avviaPresentazione);
+  vcard.addEventListener("keydown",function(e){
+    if(e.key==="Enter"||e.key===" "){e.preventDefault();avviaPresentazione();}
+  });
+  video.addEventListener("ended",function(){
+    vcard.classList.remove("attivo");
+    video.controls=false;
+  });
+})();
+</script>
+</body>
+</html>
