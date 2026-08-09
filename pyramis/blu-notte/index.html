@@ -8,6 +8,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="icon" type="image/png" href="../img/logo-mark.png">
+<link rel="preload" as="image" href="../img/hero-pietra-dittico.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="../img/hero-luce-dittico.jpg" fetchpriority="high">
 <meta property="og:title" content="Pyramis Costruzioni S.r.l. — Catania · Dal 1955">
 <meta property="og:description" content="Impresa di costruzioni della famiglia Russo a Catania: restauro monumentale, residenze NZEB, efficientamento.">
 <meta property="og:type" content="website">
@@ -51,9 +53,9 @@ a{color:inherit;text-decoration:none}
 
 /* ---------- HERO DITTICO ---------- */
 .hero{position:relative;height:100svh;min-height:620px;overflow:hidden;background:var(--lava)}
-.hero-lato{position:absolute;inset:0;background-size:cover;background-position:center}
-.hero-pietra{background-image:url(../img/hero-pietra.jpg)}
-.hero-luce{background-image:url(../img/hero-luce.jpg);clip-path:inset(0 0 0 var(--split,50%))}
+.hero-lato{position:absolute;top:0;bottom:0;background-size:cover;background-position:center;background-repeat:no-repeat}
+.hero-pietra{left:0;width:var(--split,50%);background-image:url(../img/hero-pietra-dittico.jpg)}
+.hero-luce{left:var(--split,50%);right:0;background-image:url(../img/hero-luce-dittico.jpg)}
 .hero-divisore{position:absolute;top:0;bottom:0;left:var(--split,50%);width:2px;background:linear-gradient(180deg,transparent,var(--oro) 18%,var(--oro) 82%,transparent);z-index:6;transform:translateX(-1px)}
 .hero-manico{position:absolute;top:50%;left:var(--split,50%);transform:translate(-50%,-50%);z-index:7;width:52px;height:52px;border-radius:50%;border:1px solid var(--oro);background:rgba(10,21,36,.6);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;color:var(--oro-chiaro);font-size:.9rem;cursor:ew-resize;user-select:none;letter-spacing:.08em}
 .hero-scrim{position:absolute;inset:0;z-index:5;background:linear-gradient(180deg,rgba(10,21,36,.55) 0%,rgba(10,21,36,.08) 35%,rgba(10,21,36,.78) 100%);pointer-events:none}
@@ -69,6 +71,15 @@ a{color:inherit;text-decoration:none}
 .btn-ghost:hover{border-color:var(--oro);color:var(--oro-chiaro)}
 .hero-tag{position:absolute;bottom:12px;z-index:8;font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(234,227,211,.75);padding:6px 12px;background:rgba(10,21,36,.45);backdrop-filter:blur(6px);border-radius:2px;pointer-events:none}
 .tag-pietra{left:16px}.tag-luce{right:16px}
+/* mobile: il dittico si impila (le due foto sono verticali, affiancate su 190px sarebbero fessure) */
+@media(max-width:760px){
+  .hero .hero-lato{left:0;right:0;width:auto}
+  .hero .hero-pietra{top:0;height:50%;bottom:auto}
+  .hero .hero-luce{top:50%;height:50%;bottom:auto}
+  .hero .hero-divisore{top:50%;left:0;right:0;bottom:auto;width:auto;height:1px;transform:translateY(-.5px);background:linear-gradient(90deg,transparent,var(--oro) 18%,var(--oro) 82%,transparent)}
+  .hero .hero-manico{display:none}
+  .tag-pietra{top:calc(50% - 34px);bottom:auto}
+}
 
 /* ---------- SEZIONI ---------- */
 .sez{padding:110px 24px}
@@ -457,14 +468,13 @@ footer p{color:#7d8794;font-size:.8rem;margin-top:10px}
     <h2 class="titolo reveal">Parliamo del tuo progetto.</h2>
     <div class="contatti-griglia">
       <div class="reveal">
-        <div class="contatto-voce"><span>Telefono</span><a href="tel:+39095491181">095 49 11 81</a></div>
-        <div class="contatto-voce"><span>Cellulare</span><a href="tel:+393473362039">347 33 62 039</a></div>
+        <div class="contatto-voce"><span>Telefono</span><a href="tel:+393473362039">347 33 62 039</a></div>
         <div class="contatto-voce"><span>Email</span><a href="mailto:pyramiscostruzioni@gmail.com">pyramiscostruzioni@gmail.com</a></div>
         <div class="contatto-voce"><span>Sede</span><b>Via Matteo Ricci 19, Catania</b></div>
       </div>
       <div class="reveal"><div class="contatto-azioni">
         <a class="btn btn-oro" href="https://wa.me/393473362039?text=Salve%2C%20vi%20scrivo%20dal%20sito%20Pyramis%20Costruzioni">Scrivici su WhatsApp</a>
-        <a class="btn btn-ghost" href="tel:+39095491181">Chiama la sede · 095 49 11 81</a>
+        <a class="btn btn-ghost" href="tel:+393473362039">Chiamaci · 347 33 62 039</a>
         <a class="btn btn-ghost" href="mailto:pyramiscostruzioni@gmail.com">Scrivi una email</a>
         <p class="contatto-nota">Rispondiamo in giornata. Se preferisci, chiamaci: c'è sempre una persona, non un centralino.</p>
       </div></div>
@@ -486,7 +496,7 @@ footer p{color:#7d8794;font-size:.8rem;margin-top:10px}
   function setSplit(clientX){
     const r=hero.getBoundingClientRect();
     let p=(clientX-r.left)/r.width*100;
-    p=Math.max(8,Math.min(92,p));
+    p=Math.max(15,Math.min(85,p));
     hero.style.setProperty('--split',p+'%');
   }
   manico.addEventListener('pointerdown',e=>{attivo=true;manico.setPointerCapture(e.pointerId)});
