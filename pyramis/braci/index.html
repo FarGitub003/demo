@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pyramis Costruzioni · Braci dell'Etna · Catania</title>
+<meta name="description" content="Pyramis Costruzioni, Catania: la sfilata delle grandi opere, dal Duomo alle residenze NZEB. Dal 1955.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/png" href="../img/logo-mark.png">
+<meta property="og:title" content="Pyramis Costruzioni · Braci dell'Etna · Catania">
+<meta property="og:description" content="La sfilata delle grandi opere, dal Duomo alle residenze NZEB. Dal 1955.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<!-- TODO al deploy: og:image e og:url con URL assoluti del dominio definitivo -->
+<meta property="og:image" content="../img/dalmazia-1.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Manrope:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--lb-font:'Cinzel',serif;--lb-accent:#E9BC5F;
+  --lava:#0B0908; --lava-2:#141110; --oro:#E9BC5F; --oro-cupo:#B4842E; --cenere:#EDE6D6; --fumo:#948B7B;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--lava);color:var(--cenere);font-family:'Manrope',sans-serif;font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.cinzel{font-family:'Cinzel',serif}
+
+/* braci */
+#braci{position:fixed;inset:0;z-index:1;pointer-events:none}
+.sopra{position:relative;z-index:2}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:70;display:flex;align-items:center;justify-content:space-between;padding:16px 26px;background:linear-gradient(180deg,rgba(11,9,8,.85),transparent);}
+.nav-brand{display:flex;align-items:center;gap:11px}
+.nav-brand img{width:36px;height:36px;border-radius:50%}
+.nav-brand span{font-family:'Cinzel',serif;font-weight:600;letter-spacing:.3em;color:var(--oro);font-size:1rem}
+.nav-links{display:flex;gap:24px;font-size:.76rem;letter-spacing:.18em;text-transform:uppercase}
+.nav-links a{opacity:.85;transition:color .2s}
+.nav-links a:hover{color:var(--oro)}
+.panino{display:none;background:none;border:1px solid var(--oro);color:var(--oro);width:42px;height:38px;border-radius:2px;font-size:1.05rem;cursor:pointer}
+@media(max-width:860px){
+  .nav-links{display:none;position:fixed;top:64px;left:0;right:0;background:rgba(11,9,8,.97);flex-direction:column;padding:22px 26px;gap:16px;border-bottom:1px solid rgba(233,188,95,.3);z-index:70}
+  .nav-links.aperto{display:flex}
+  .panino{display:block}
+}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:90px 20px 60px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url(../img/hero-pietra.jpg) center 28%/cover;opacity:.34;filter:saturate(.7) contrast(1.05)}
+.hero-velo{position:absolute;inset:0;background:radial-gradient(90% 70% at 50% 62%,transparent 0%,var(--lava) 86%)}
+.hero-corpo{position:relative;z-index:3;max-width:1000px}
+.hero-eyebrow{font-size:.75rem;letter-spacing:.5em;text-transform:uppercase;color:var(--oro);margin-bottom:24px}
+.hero h1{font-family:'Cinzel',serif;font-weight:500;font-size:clamp(2.4rem,7vw,5.6rem);line-height:1.06;color:var(--cenere);text-wrap:balance;text-shadow:0 4px 40px rgba(0,0,0,.6)}
+.hero h1 em{font-style:normal;color:var(--oro)}
+.hero-sub{margin:22px auto 0;max-width:600px;color:#C9C1B0}
+.hero-cta{margin-top:32px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 32px;border-radius:2px;font-size:.8rem;letter-spacing:.22em;text-transform:uppercase;transition:all .25s}
+.btn-oro{background:linear-gradient(120deg,var(--oro-cupo),var(--oro));color:#171207;font-weight:600}
+.btn-oro:hover{filter:brightness(1.12)}
+.btn-b{border:1px solid rgba(233,188,95,.5);color:var(--oro)}
+.btn-b:hover{background:rgba(233,188,95,.12)}
+
+/* sezioni */
+.sez{position:relative;padding:120px 26px}
+.stretta{max-width:1180px;margin:0 auto}
+.eyebrow{font-size:.72rem;letter-spacing:.42em;text-transform:uppercase;color:var(--oro);margin-bottom:16px}
+.titolo{font-family:'Cinzel',serif;font-weight:500;font-size:clamp(1.8rem,4vw,3rem);line-height:1.12;text-wrap:balance}
+.sotto{color:var(--fumo);max-width:620px;margin-top:16px}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
+.reveal.vista{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* SFILATA ORIZZONTALE */
+.sfilata{position:relative}
+.sfilata-finestra{position:sticky;top:0;height:100svh;display:flex;align-items:center;overflow:hidden}
+.sfilata-treno{display:flex;gap:22px;padding:0 6vw;will-change:transform}
+.carro{flex:none;width:min(74vw,520px);position:relative;border-radius:6px;overflow:hidden;border:1px solid rgba(233,188,95,.28);background:var(--lava-2)}
+.carro img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;filter:saturate(.92);transition:transform .7s}
+.carro:hover img{transform:scale(1.04)}
+.carro-info{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 16px;background:linear-gradient(180deg,transparent,rgba(11,9,8,.94))}
+.carro-info span{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--oro)}
+.carro-info b{display:block;font-family:'Cinzel',serif;font-weight:500;font-size:1.2rem;margin-top:4px;color:var(--cenere)}
+@media(max-width:820px){
+  .sfilata-finestra{position:static;height:auto;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 0 24px}
+  .sfilata-treno{transform:none!important}
+  .carro{scroll-snap-align:center;width:78vw}
+}
+
+/* numeri lapidari */
+.lapide{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:rgba(233,188,95,.25);border:1px solid rgba(233,188,95,.25);margin-top:54px}
+.lapide div{background:var(--lava);padding:30px 20px;text-align:center}
+.lapide b{display:block;font-family:'Cinzel',serif;font-weight:500;font-size:2.2rem;color:var(--oro)}
+.lapide span{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--fumo)}
+
+/* gioielli doppi */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:56px}
+@media(max-width:880px){.duo{grid-template-columns:1fr}}
+.gioiello{position:relative;border-radius:6px;overflow:hidden;border:1px solid rgba(233,188,95,.28);min-height:560px;display:flex;align-items:flex-end}
+.gioiello .bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .8s}
+.gioiello:hover .bg{transform:scale(1.05)}
+.gioiello .velo{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,9,8,.06) 30%,rgba(11,9,8,.94))}
+.gioiello .in{position:relative;z-index:2;padding:26px 24px}
+.gioiello h3{font-family:'Cinzel',serif;font-weight:500;font-size:1.55rem;color:var(--cenere)}
+.gioiello p{color:#BDB4A2;font-size:.9rem;margin-top:8px;max-width:420px}
+.gioiello .dati{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.gioiello .dato{border:1px solid rgba(233,188,95,.4);border-radius:2px;padding:7px 12px;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--oro)}
+
+/* quote */
+.quote{text-align:center}
+.quote blockquote{font-family:'Cinzel',serif;font-weight:400;font-size:clamp(1.4rem,3.2vw,2.4rem);line-height:1.35;max-width:860px;margin:0 auto;color:var(--cenere)}
+.quote cite{display:block;margin-top:20px;font-style:normal;font-size:.75rem;letter-spacing:.32em;text-transform:uppercase;color:var(--oro)}
+
+/* contatti */
+.contatti-g{display:grid;grid-template-columns:1fr 1fr;gap:50px;margin-top:50px}
+@media(max-width:860px){.contatti-g{grid-template-columns:1fr}}
+.voce-c{padding:16px 0;border-bottom:1px solid rgba(233,188,95,.25)}
+.voce-c span{display:block;font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:var(--oro);margin-bottom:4px}
+.voce-c a,.voce-c b{font-family:'Cinzel',serif;font-weight:500;font-size:1.2rem}
+.voce-c a:hover{color:var(--oro)}
+.form label{display:block;margin-bottom:16px}
+.form span{display:block;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--fumo);margin-bottom:7px}
+.form input,.form textarea{width:100%;background:rgba(237,230,214,.05);border:1px solid rgba(233,188,95,.3);border-radius:2px;color:var(--cenere);padding:12px 13px;font-family:'Manrope',sans-serif;font-size:.95rem}
+.form input:focus,.form textarea:focus{outline:2px solid var(--oro)}
+.form textarea{min-height:110px;resize:vertical}
+.contatto-azioni{display:flex;flex-direction:column;gap:14px;align-items:stretch}
+.contatto-azioni a{text-align:center}
+.contatto-nota{font-size:.85rem;opacity:.65;margin-top:6px}
+footer{position:relative;z-index:2;background:#080606;text-align:center;padding:46px 22px;color:#6d655a;font-size:.8rem}
+footer b{font-family:'Cinzel',serif;letter-spacing:.26em;color:var(--oro);font-size:.95rem}
+:focus-visible{outline:2px solid var(--oro);outline-offset:2px}
+</style>
+</head>
+<body>
+<canvas id="braci" aria-hidden="true"></canvas>
+
+<nav class="nav" aria-label="principale">
+  <a class="nav-brand" href="#top"><img src="../img/logo-mark.png" alt="Logo Pyramis"><span>PYRAMIS</span></a>
+  <button class="panino" aria-label="Apri il menu" aria-expanded="false">☰</button>
+  <div class="nav-links" id="menu">
+    <a href="#sfilata">Le opere</a>
+    <a href="#gioielli">Le residenze</a>
+    <a href="#contatti">Contatti</a>
+  </div>
+</nav>
+
+<header class="hero sopra" id="top">
+  <div class="hero-bg" role="img" aria-label="La gru Pyramis sulla cupola della Cattedrale di Catania"></div>
+  <div class="hero-velo"></div>
+  <div class="hero-corpo">
+    <p class="hero-eyebrow">Catania · dal 1955</p>
+    <h1>Costruiamo con il fuoco<br>lento di <em>tre generazioni</em>.</h1>
+    <p class="hero-sub">Dal restauro della Cattedrale alle prime case a consumo quasi zero: l'impresa della famiglia Russo, pietra dopo pietra.</p>
+    <div class="hero-cta">
+      <a class="btn btn-oro" href="#sfilata">La sfilata delle opere</a>
+      <a class="btn btn-b" href="#contatti">Parla con noi</a>
+    </div>
+  </div>
+</header>
+
+<!-- SFILATA ORIZZONTALE -->
+<section class="sfilata sopra" id="sfilata">
+  <div class="sez" style="padding-bottom:20px">
+    <div class="stretta">
+      <p class="eyebrow reveal">La sfilata</p>
+      <h2 class="titolo reveal">Scorri: le opere sfilano.</h2>
+      <p class="sotto reveal">Diciotto cantieri in processione. Tocca un'opera per aprire la sua galleria completa.</p>
+    </div>
+  </div>
+  <div class="sfilata-finestra">
+    <div class="sfilata-treno" id="treno"><!-- carri generati da JS --></div>
+  </div>
+  <div class="sfilata-spazio" id="sfilata-spazio" aria-hidden="true"></div>
+</section>
+
+<!-- NUMERI -->
+<section class="sez sopra">
+  <div class="stretta">
+    <p class="eyebrow reveal">La misura</p>
+    <h2 class="titolo reveal">Il mestiere, in numeri.</h2>
+    <div class="lapide reveal">
+      <div><b>1955</b><span>Le radici</span></div>
+      <div><b>18</b><span>Grandi opere raccontate</span></div>
+      <div><b>150</b><span>Fotografie d'archivio</span></div>
+      <div><b>A4</b><span>Classe energetica NZEB</span></div>
+      <div><b>&gt;99%</b><span>Energia dal sole*</span></div>
+    </div>
+    <p class="reveal" style="margin-top:12px;font-size:.75rem;color:var(--fumo)">* Blu Dalmazia, dati di progetto Base51 Architettura.</p>
+  </div>
+</section>
+
+<!-- GIOIELLI -->
+<section class="sez sopra" id="gioielli" style="padding-top:30px">
+  <div class="stretta">
+    <p class="eyebrow reveal">Le residenze</p>
+    <h2 class="titolo reveal">Case che producono la propria energia.</h2>
+    <div class="duo reveal">
+      <div class="gioiello" data-opera="imm-blue-residence-via-dalmazia-ct">
+        <div class="bg" style="background-image:url(../img/dalmazia-5.jpg)"></div>
+        <div class="velo"></div>
+        <div class="in">
+          <h3>Blu Dalmazia</h3>
+          <p>Via Dalmazia 29, Catania. Progetto Base51, sviluppo Vinci Immobiliare, costruzione Pyramis.</p>
+          <div class="dati"><span class="dato">A4 · NZEB</span><span class="dato">&gt;99% FV</span><span class="dato">14 unità</span><span class="dato">Acustica A</span></div>
+        </div>
+      </div>
+      <div class="gioiello" data-opera="imm-appartamenti-gravina-catania">
+        <div class="bg" style="background-image:url(../img/gravina445-render.png)"></div>
+        <div class="velo"></div>
+        <div class="in">
+          <h3>Gravina Etnea 445</h3>
+          <p>Alle pendici dell'Etna: giardini, terrazzi, garage e cantina.</p>
+          <div class="dati"><span class="dato">A4 · NZEB</span><span class="dato">2–7 vani</span><span class="dato">Ricarica EV</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="sez sopra quote">
+  <blockquote class="reveal">«In ogni lavoro, ogni riunione e ogni attività, ci chiediamo sempre: cosa farebbe l'Amore?»</blockquote>
+  <cite class="reveal">Antonino Russo · fondatore</cite>
+</section>
+
+<!-- CONTATTI -->
+<section class="sez sopra" id="contatti" style="padding-top:40px">
+  <div class="stretta">
+    <p class="eyebrow reveal">Contatti</p>
+    <h2 class="titolo reveal">Parliamo del tuo progetto.</h2>
+    <div class="contatti-g">
+      <div class="reveal">
+        <div class="voce-c"><span>Telefono</span><a href="tel:+39095491181">095 49 11 81</a></div>
+        <div class="voce-c"><span>Cellulare</span><a href="tel:+393473362039">347 33 62 039</a></div>
+        <div class="voce-c"><span>Email</span><a href="mailto:pyramiscostruzioni@gmail.com">pyramiscostruzioni@gmail.com</a></div>
+        <div class="voce-c"><span>Sede</span><b>Via Matteo Ricci 19, Catania</b></div>
+      </div>
+      <div class="reveal"><div class="contatto-azioni">
+        <a class="btn btn-oro" href="https://wa.me/393473362039?text=Salve%2C%20vi%20scrivo%20dal%20sito%20Pyramis%20Costruzioni">Scrivici su WhatsApp</a>
+        <a class="btn btn-b" href="tel:+39095491181">Chiama la sede · 095 49 11 81</a>
+        <a class="btn btn-b" href="mailto:pyramiscostruzioni@gmail.com">Scrivi una email</a>
+        <p class="contatto-nota">Rispondiamo in giornata. Se preferisci, chiamaci: c'è sempre una persona, non un centralino.</p>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <b>PYRAMIS COSTRUZIONI S.R.L.</b>
+  <p style="margin-top:8px">Via Matteo Ricci 19, Catania · Costruzione, vendita e manutenzione di edifici residenziali, ricettivi e commerciali</p>
+</footer>
+
+<script>
+// ---- braci d'oro (canvas) ----
+(function(){
+  var ridotto=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var c=document.getElementById('braci');
+  if(ridotto){c.remove();return}
+  var ctx=c.getContext('2d'),P=[],N=70;
+  function dim(){c.width=innerWidth;c.height=innerHeight}
+  dim();addEventListener('resize',dim);
+  function nuova(p){
+    p.x=Math.random()*c.width;p.y=c.height+10+Math.random()*40;
+    p.r=.6+Math.random()*1.9;p.v=.25+Math.random()*.75;
+    p.o=.15+Math.random()*.5;p.d=(Math.random()-.5)*.3;return p;
+  }
+  for(var i=0;i<N;i++){var p=nuova({});p.y=Math.random()*c.height;P.push(p)}
+  (function anima(){
+    ctx.clearRect(0,0,c.width,c.height);
+    P.forEach(function(p){
+      p.y-=p.v;p.x+=p.d+Math.sin(p.y/60)*.18;
+      if(p.y<-12)nuova(p);
+      var g=ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*3.5);
+      g.addColorStop(0,'rgba(247,223,166,'+p.o+')');
+      g.addColorStop(.5,'rgba(233,188,95,'+(p.o*.5)+')');
+      g.addColorStop(1,'rgba(233,188,95,0)');
+      ctx.fillStyle=g;ctx.beginPath();ctx.arc(p.x,p.y,p.r*3.5,0,7);ctx.fill();
+    });
+    requestAnimationFrame(anima);
+  })();
+})();
+// ---- reveal ----
+(function(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vista');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+// ---- sfilata: carri dal JSON + scroll orizzontale guidato ----
+(function(){
+  fetch('../img/opere/opere.json').then(function(r){return r.json()}).then(function(d){
+    var treno=document.getElementById('treno');
+    Object.keys(d).forEach(function(slug){
+      var o=d[slug];
+      var el=document.createElement('div');
+      el.className='carro';el.setAttribute('data-opera',slug);
+      el.innerHTML='<img loading="lazy" src="../img/opere/'+slug+'/'+encodeURIComponent(o.foto[0])+'" alt="'+o.titolo+'">'+
+        '<div class="carro-info"><span>'+o.sotto+'</span><b>'+o.titolo+'</b></div>';
+      treno.appendChild(el);
+    });
+    var s=document.createElement('script');s.src='../galleria.js';document.body.appendChild(s);
+    // scroll-jack dolce solo desktop
+    if(matchMedia('(min-width:821px)').matches){
+      var sez=document.getElementById('sfilata'),spazio=document.getElementById('sfilata-spazio');
+      function misura(){
+        var extra=treno.scrollWidth-innerWidth;
+        spazio.style.height=Math.max(0,extra)+ 'px';
+      }
+      misura();addEventListener('resize',misura);
+      var pronto=true;
+      addEventListener('scroll',function(){
+        if(!pronto)return;pronto=false;
+        requestAnimationFrame(function(){
+          var r=sez.getBoundingClientRect();
+          var extra=treno.scrollWidth-innerWidth;
+          var avanz=Math.min(Math.max(-r.top/(extra||1),0),1);
+          treno.style.transform='translateX('+(-avanz*extra)+'px)';
+          pronto=true;
+        });
+      },{passive:true});
+    }
+  });
+})();
+
+(function(){
+  var b=document.querySelector('.panino'),m=document.getElementById('menu');
+  if(!b)return;
+  b.addEventListener('click',function(){var ap=m.classList.toggle('aperto');b.setAttribute('aria-expanded',ap)});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('aperto')})});
+})();
+</script>
+</body>
+</html>

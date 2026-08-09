@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pyramis Costruzioni · Tre generazioni · Catania</title>
+<meta name="description" content="Dal 1955 la famiglia Russo costruisce Catania: il racconto in capitoli, dal Duomo alle case a consumo zero.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/png" href="../img/logo-mark.png">
+<meta property="og:title" content="Pyramis Costruzioni · Tre generazioni · Catania">
+<meta property="og:description" content="Dal 1955 la famiglia Russo costruisce Catania: il racconto in capitoli, dal Duomo alle case a consumo zero.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<!-- TODO al deploy: og:image e og:url con URL assoluti del dominio definitivo -->
+<meta property="og:image" content="../img/dalmazia-1.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Mulish:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--lb-font:'Italiana',serif;--lb-accent:#D8AE5E;
+  --notte:#0E1420; --seppia:#151B28; --oro:#D8AE5E; --oro-2:#EFD9A7; --latte:#F2ECDD; --velo:#9AA5B5;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--notte);color:var(--latte);font-family:'Mulish',sans-serif;font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.italiana{font-family:'Italiana',serif;font-weight:400}
+
+/* progress + nav minima */
+.segnalibro{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:60;display:flex;flex-direction:column;gap:10px}
+.segnalibro a{width:9px;height:9px;border-radius:50%;border:1px solid var(--oro);opacity:.5;transition:all .25s}
+.segnalibro a.on{opacity:1;background:var(--oro);transform:scale(1.25)}
+@media(max-width:700px){.segnalibro{display:none}}
+.firma{position:fixed;top:18px;left:22px;z-index:60;display:flex;align-items:center;gap:10px}
+.firma img{width:34px;height:34px;border-radius:50%}
+.firma span{font-family:'Italiana',serif;font-size:1.05rem;letter-spacing:.3em;color:var(--oro-2)}
+.contattaci{position:fixed;top:18px;right:22px;z-index:60;border:1px solid var(--oro);color:var(--oro-2);padding:9px 18px;border-radius:2px;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;background:rgba(14,20,32,.5);backdrop-filter:blur(8px);transition:all .25s}
+.contattaci:hover{background:var(--oro);color:var(--notte)}
+
+/* capitoli a schermo intero */
+main{scroll-snap-type:y proximity}
+.capitolo{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;scroll-snap-align:start;padding:80px 22px}
+.capitolo-bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.12);transition:transform 1.8s ease}
+.capitolo.vista .capitolo-bg{transform:scale(1.02)}
+@media(min-aspect-ratio:9/8){#c7 .capitolo-bg{background-size:125% auto;background-position:0% 30%!important}}
+.capitolo-velo{position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 50%,rgba(14,20,32,.28) 0%,rgba(14,20,32,.82) 78%)}
+.capitolo-corpo{position:relative;z-index:2;max-width:900px}
+.anno{font-family:'Italiana',serif;font-size:clamp(3.2rem,9vw,7rem);line-height:1;color:var(--oro);letter-spacing:.06em;opacity:0;transform:translateY(24px);transition:opacity .9s ease .1s,transform .9s ease .1s}
+.frase{font-family:'Italiana',serif;font-size:clamp(1.5rem,3.8vw,3rem);line-height:1.22;margin-top:18px;text-wrap:balance;opacity:0;transform:translateY(24px);transition:opacity .9s ease .3s,transform .9s ease .3s}
+.dettaglio{margin:20px auto 0;max-width:600px;color:#C8CEDA;font-size:clamp(.92rem,1.4vw,1.05rem);opacity:0;transform:translateY(24px);transition:opacity .9s ease .5s,transform .9s ease .5s}
+.capitolo.vista .anno,.capitolo.vista .frase,.capitolo.vista .dettaglio{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.anno,.frase,.dettaglio{opacity:1!important;transform:none!important}.capitolo-bg{transform:none!important}}
+.tocca{margin-top:26px;display:inline-block;border:1px solid rgba(216,174,94,.55);color:var(--oro-2);padding:11px 24px;border-radius:2px;font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;transition:all .25s;opacity:0;transform:translateY(24px);transition:opacity .9s ease .65s,transform .9s ease .65s,background .25s,color .25s}
+.capitolo.vista .tocca{opacity:1;transform:none}
+.tocca:hover{background:var(--oro);color:var(--notte)}
+.giu{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:3;color:var(--oro-2);font-size:1.5rem;opacity:.8;animation:giu 2.2s ease-in-out infinite}
+@keyframes giu{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,10px)}}
+@media(prefers-reduced-motion:reduce){.giu{animation:none}}
+
+/* capitolo finale: archivio + contatti */
+.finale{background:var(--seppia);padding:110px 24px;text-align:left}
+.finale-in{max-width:1180px;margin:0 auto}
+.eyebrow{font-size:.75rem;letter-spacing:.4em;text-transform:uppercase;color:var(--oro);margin-bottom:14px}
+.finale h2{font-family:'Italiana',serif;font-size:clamp(1.9rem,4vw,3rem);line-height:1.15}
+.finale .sotto{color:var(--velo);max-width:620px;margin-top:14px}
+.mosaico{columns:4 240px;column-gap:12px;margin-top:44px}
+.mosaico figure{break-inside:avoid;margin-bottom:12px;position:relative;overflow:hidden;border-radius:3px;border:1px solid rgba(216,174,94,.2)}
+.mosaico img{width:100%;display:block;transition:transform .6s;filter:saturate(.9)}
+.mosaico figure:hover img{transform:scale(1.045)}
+.mosaico figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;background:linear-gradient(180deg,transparent,rgba(14,20,32,.9))}
+.contatti{display:grid;grid-template-columns:1fr 1fr;gap:50px;margin-top:90px}
+@media(max-width:860px){.contatti{grid-template-columns:1fr}}
+.voce-c{padding:16px 0;border-bottom:1px solid rgba(216,174,94,.25)}
+.voce-c span{display:block;font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:var(--oro);margin-bottom:4px}
+.voce-c a,.voce-c b{font-family:'Italiana',serif;font-weight:400;font-size:1.35rem}
+.voce-c a:hover{color:var(--oro-2)}
+.form label{display:block;margin-bottom:16px}
+.form span{display:block;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--velo);margin-bottom:7px}
+.form input,.form textarea{width:100%;background:rgba(242,236,221,.05);border:1px solid rgba(216,174,94,.3);border-radius:2px;color:var(--latte);padding:12px 13px;font-family:'Mulish',sans-serif;font-size:.95rem}
+.form input:focus,.form textarea:focus{outline:2px solid var(--oro)}
+.form textarea{min-height:110px;resize:vertical}
+.form button{margin-top:4px;background:var(--oro);border:0;color:var(--notte);padding:13px 30px;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;cursor:pointer;border-radius:2px}
+.form button:hover{background:var(--oro-2)}
+.tocca-pieno{display:block;text-align:center;background:var(--oro);color:var(--notte);padding:14px 24px;border-radius:2px;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+.tocca-pieno:hover{background:var(--oro-2)}
+.tocca-vuoto{display:block;text-align:center;border:1px solid rgba(216,174,94,.55);color:var(--oro-2);padding:13px 24px;border-radius:2px;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase}
+.tocca-vuoto:hover{background:rgba(216,174,94,.14)}
+.contatto-azioni{display:flex;flex-direction:column;gap:14px;align-items:stretch}
+.contatto-azioni a{text-align:center}
+.contatto-nota{font-size:.85rem;opacity:.65;margin-top:6px}
+footer{background:#0A0F18;text-align:center;padding:46px 22px;color:#77808f;font-size:.8rem}
+footer b{font-family:'Italiana',serif;letter-spacing:.26em;color:var(--oro-2);font-size:1rem}
+:focus-visible{outline:2px solid var(--oro-2);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<div class="firma"><img src="../img/logo-mark.png" alt="Logo Pyramis"><span>PYRAMIS</span></div>
+<a class="contattaci" href="#contatti">Contattaci</a>
+<nav class="segnalibro" aria-label="capitoli">
+  <a href="#c1" aria-label="1955"></a><a href="#c2" aria-label="2003"></a><a href="#c3" aria-label="Il Duomo"></a><a href="#c4" aria-label="La Badia"></a><a href="#c5" aria-label="Blu Dalmazia"></a><a href="#c6" aria-label="Gravina 445"></a><a href="#c7" aria-label="La squadra"></a><a href="#fine" aria-label="Le opere e i contatti"></a>
+</nav>
+
+<main>
+<section class="capitolo" id="c1">
+  <div class="capitolo-bg" style="background-image:url(../img/origini.jpg)"></div>
+  <div class="capitolo-velo"></div>
+  <div class="capitolo-corpo">
+    <div class="anno">1955</div>
+    <h1 class="frase">Il nonno Francesco Russo.<br>Un uomo, le mani, la pietra.</h1>
+    <p class="dettaglio">Comincia così, in Sicilia: Francesco Russo, il capostipite, posa le prime pietre di una famiglia di costruttori. Il mestiere passa di padre in figlio, di cantiere in cantiere: settant'anni dopo, non si è ancora fermato.</p>
+  </div>
+  <div class="giu" aria-hidden="true">↓</div>
+</section>
+
+<section class="capitolo" id="c2">
+  <div class="capitolo-bg" style="background-image:url(../img/dante.jpg)"></div>
+  <div class="capitolo-velo"></div>
+  <div class="capitolo-corpo">
+    <div class="anno">2003</div>
+    <h2 class="frase">Antonino e Santa fondano Pyramis.<br>La regola è una sola: cosa farebbe l'Amore?</h2>
+    <p class="dettaglio">Prima l'edilizia civile tra Catania e Messina — 65 appartamenti in un solo residence — poi l'industria, il turismo, e i monumenti. Etica, Passione, Professionalità, Sicurezza.</p>
+  </div>
+</section>
+
+<section class="capitolo" id="c3">
+  <div class="capitolo-bg" style="background-image:url(../img/hero-pietra.jpg)"></div>
+  <div class="capitolo-velo"></div>
+  <div class="capitolo-corpo">
+    <div class="anno">2009</div>
+    <h2 class="frase">Poi la città le affida<br>il suo cuore: il Duomo.</h2>
+    <p class="dettaglio">Accreditata presso la Soprintendenza e l'Arcidiocesi: altari, cappelle, statue, l'organo, il sagrato. Dentro la Cattedrale di Catania, per anni, in punta di piedi.</p>
+    <a class="tocca" data-opera="vari-interventi-cattedrale-catania">Sfoglia le foto del Duomo</a>
+  </div>
+</section>
+
+<section class="capitolo" id="c4">
+  <div class="capitolo-bg" style="background-image:url(../img/badia-terrazza-lavori.jpg)"></div>
+  <div class="capitolo-velo"></div>
+  <div class="capitolo-corpo">
+    <div class="anno">2015</div>
+    <h2 class="frase">Riapre alla città il balcone<br>sul Barocco: la Badia.</h2>
+    <p class="dettaglio">Le terrazze e la cupola del capolavoro del Vaccarini, restituite a catanesi e turisti. Oggi è una delle mete più amate di Catania: lassù ci sono anche le nostre mani.</p>
+    <a class="tocca" data-opera="chiesa-badia-di-s-agata">Sali sulle terrazze</a>
+  </div>
+</section>
+
+<section class="capitolo" id="c5">
+  <div class="capitolo-bg" style="background-image:url(../img/dalmazia-2.jpg)"></div>
+  <div class="capitolo-velo"></div>
+  <div class="capitolo-corpo">
+    <div class="anno">2025</div>
+    <h2 class="frase">Blu Dalmazia: la casa<br>che produce la sua energia.</h2>
+    <p class="dettaglio">Classe A4, NZEB, oltre il 99% del fabbisogno dal fotovoltaico, 14 case su 8 piani nel centro di Catania. La stampa di settore la racconta come un riferimento del costruire sostenibile.</p>
+    <a class="tocca" data-opera="imm-blue-residence-via-dalmazia-ct">Entra in Blu Dalmazia</a>
+  </div>
+</section>
+
+<section class="capitolo" id="c6">
+  <div class="capitolo-bg" style="background-image:url(../img/gravina445-render.png)"></div>
+  <div class="capitolo-velo"></div>
+  <div class="capitolo-corpo">
+    <div class="anno">2026</div>
+    <h2 class="frase">Gravina Etnea 445:<br>panorami sull'Etna, consumi quasi zero.</h2>
+    <p class="dettaglio">Appartamenti da 2 a 7 vani con giardino o terrazzo, fotovoltaico e ricarica elettrica. La terza generazione costruisce il futuro.</p>
+    <a class="tocca" data-opera="imm-appartamenti-gravina-catania">Guarda il cantiere</a>
+  </div>
+</section>
+
+<section class="capitolo" id="c7">
+  <div class="capitolo-bg" style="background-image:url(../img/squadra.jpg);background-position:center 30%"></div>
+  <div class="capitolo-velo"></div>
+  <div class="capitolo-corpo">
+    <div class="anno italiana">OGGI</div>
+    <h2 class="frase">Venti persone.<br>Una famiglia più grande.</h2>
+    <p class="dettaglio">Amministrativi, tecnici e maestranze, con professionisti di provata esperienza. La qualità passa dalla sicurezza di chi costruisce.</p>
+  </div>
+</section>
+
+<!-- FINALE: tutte le opere + contatti -->
+<section class="finale" id="fine">
+  <div class="finale-in">
+    <p class="eyebrow">1955 → 2026</p>
+    <h2>Tutte le opere, tutte le foto.</h2>
+    <p class="sotto">Diciotto cantieri raccontati per immagini: tocca un'opera e sfoglia la sua galleria completa.</p>
+    <div class="mosaico" id="mosaico"><!-- generato da JS --></div>
+
+    <div class="contatti" id="contatti">
+      <div>
+        <p class="eyebrow">Contatti</p>
+        <h2 style="margin-bottom:18px">Parliamo del tuo progetto.</h2>
+        <div class="voce-c"><span>Telefono</span><a href="tel:+39095491181">095 49 11 81</a></div>
+        <div class="voce-c"><span>Cellulare</span><a href="tel:+393473362039">347 33 62 039</a></div>
+        <div class="voce-c"><span>Email</span><a href="mailto:pyramiscostruzioni@gmail.com">pyramiscostruzioni@gmail.com</a></div>
+        <div class="voce-c"><span>Sede</span><b>Via Matteo Ricci 19, Catania</b></div>
+      </div>
+      <div class="contatto-azioni">
+        <a class="tocca-pieno" href="https://wa.me/393473362039?text=Salve%2C%20vi%20scrivo%20dal%20sito%20Pyramis%20Costruzioni">Scrivici su WhatsApp</a>
+        <a class="tocca-vuoto" href="tel:+39095491181">Chiama la sede · 095 49 11 81</a>
+        <a class="tocca-vuoto" href="mailto:pyramiscostruzioni@gmail.com">Scrivi una email</a>
+        <p class="contatto-nota">Rispondiamo in giornata. Se preferisci, chiamaci: c'è sempre una persona, non un centralino.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <b>PYRAMIS COSTRUZIONI S.R.L.</b>
+  <p style="margin-top:8px">Via Matteo Ricci 19, Catania · Costruzione, vendita e manutenzione di edifici residenziali, ricettivi e commerciali</p>
+</footer>
+
+<script>
+// capitoli: attiva animazioni + segnalibro
+(function(){
+  var caps=document.querySelectorAll('.capitolo');
+  var dots=document.querySelectorAll('.segnalibro a');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting){
+      e.target.classList.add('vista');
+      var id=e.target.id;
+      dots.forEach(function(d){d.classList.toggle('on',d.getAttribute('href')==='#'+id)});
+    }
+  })},{threshold:.45});
+  caps.forEach(function(c){io.observe(c)});
+})();
+// mosaico opere dal JSON
+(function(){
+  fetch('../img/opere/opere.json').then(function(r){return r.json()}).then(function(d){
+    var m=document.getElementById('mosaico');
+    Object.keys(d).forEach(function(slug){
+      var o=d[slug];
+      var f=document.createElement('figure');
+      f.setAttribute('data-opera',slug);
+      f.innerHTML='<img loading="lazy" src="../img/opere/'+slug+'/'+encodeURIComponent(o.foto[0])+'" alt="'+o.titolo+'"><figcaption>'+o.titolo+' · '+o.foto.length+' foto</figcaption>';
+      m.appendChild(f);
+    });
+    // il motore galleria si aggancia dopo che il mosaico esiste
+    var s=document.createElement('script');s.src='../galleria.js';document.body.appendChild(s);
+  });
+})();
+</script>
+</body>
+</html>

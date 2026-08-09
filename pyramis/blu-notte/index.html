@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pyramis Costruzioni S.r.l. — Catania · Dal 1955</title>
+<meta name="description" content="Impresa di costruzioni della famiglia Russo a Catania. Restauro monumentale — Cattedrale di Catania, Badia di Sant'Agata — residenze NZEB come Blu Dalmazia e Gravina 445, efficientamento energetico e sismico.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/png" href="../img/logo-mark.png">
+<meta property="og:title" content="Pyramis Costruzioni S.r.l. — Catania · Dal 1955">
+<meta property="og:description" content="Impresa di costruzioni della famiglia Russo a Catania: restauro monumentale, residenze NZEB, efficientamento.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<!-- TODO al deploy: og:image e og:url con URL assoluti del dominio definitivo -->
+<meta property="og:image" content="../img/dalmazia-1.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Archivo:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blu:#0D1B2E; --blu-2:#0A1524; --blu-3:#122540;
+  --oro:#C9A050; --oro-chiaro:#E3C07E;
+  --avorio:#EAE3D3; --muto:#8FA0B5;
+  --lava:#131318;
+  --glass:rgba(16,30,51,.55); --glass-bordo:rgba(201,160,80,.35);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--blu);color:var(--avorio);font-family:'Archivo',sans-serif;font-weight:300;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.serif{font-family:'Marcellus',serif;font-weight:400}
+.corsivo{font-family:'Cormorant Garamond',serif;font-style:italic}
+
+/* ---------- NAV ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:14px 28px;background:rgba(10,21,36,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,160,80,.18)}
+.nav-brand{display:flex;align-items:center;gap:12px}
+.nav-brand img{height:38px;width:38px;border-radius:50%}
+.nav-brand span{font-family:'Marcellus',serif;font-size:1.05rem;letter-spacing:.22em;color:var(--oro-chiaro)}
+.nav-links{display:flex;gap:26px;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase}
+.nav-links a{color:var(--avorio);opacity:.85;transition:color .2s,opacity .2s}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--oro-chiaro);opacity:1}
+.nav-cta{border:1px solid var(--oro);color:var(--oro-chiaro)!important;padding:8px 18px;border-radius:2px}
+.nav-cta:hover{background:var(--oro);color:var(--blu)!important}
+.panino{display:none;background:none;border:1px solid var(--oro);color:var(--oro-chiaro);width:42px;height:38px;border-radius:2px;font-size:1.1rem;cursor:pointer}
+@media(max-width:900px){
+  .nav-links{display:none;position:fixed;top:66px;left:0;right:0;background:rgba(10,21,36,.97);backdrop-filter:blur(14px);flex-direction:column;padding:22px;gap:18px;border-bottom:1px solid rgba(201,160,80,.25)}
+  .nav-links.aperto{display:flex}
+  .panino{display:block}
+}
+
+/* ---------- HERO DITTICO ---------- */
+.hero{position:relative;height:100svh;min-height:620px;overflow:hidden;background:var(--lava)}
+.hero-lato{position:absolute;inset:0;background-size:cover;background-position:center}
+.hero-pietra{background-image:url(../img/hero-pietra.jpg)}
+.hero-luce{background-image:url(../img/hero-luce.jpg);clip-path:inset(0 0 0 var(--split,50%))}
+.hero-divisore{position:absolute;top:0;bottom:0;left:var(--split,50%);width:2px;background:linear-gradient(180deg,transparent,var(--oro) 18%,var(--oro) 82%,transparent);z-index:6;transform:translateX(-1px)}
+.hero-manico{position:absolute;top:50%;left:var(--split,50%);transform:translate(-50%,-50%);z-index:7;width:52px;height:52px;border-radius:50%;border:1px solid var(--oro);background:rgba(10,21,36,.6);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;color:var(--oro-chiaro);font-size:.9rem;cursor:ew-resize;user-select:none;letter-spacing:.08em}
+.hero-scrim{position:absolute;inset:0;z-index:5;background:linear-gradient(180deg,rgba(10,21,36,.55) 0%,rgba(10,21,36,.08) 35%,rgba(10,21,36,.78) 100%);pointer-events:none}
+.hero-testo{position:absolute;left:0;right:0;bottom:9vh;z-index:10;text-align:center;padding:0 22px;pointer-events:none}
+.hero-eyebrow{font-size:.78rem;letter-spacing:.42em;text-transform:uppercase;color:var(--oro-chiaro);margin-bottom:18px}
+.hero-titolo{font-family:'Marcellus',serif;font-size:clamp(1.9rem,5.2vw,4.2rem);line-height:1.14;letter-spacing:.02em;text-wrap:balance;text-shadow:0 2px 30px rgba(0,0,0,.55)}
+.hero-sub{margin:20px auto 0;max-width:640px;color:#CBD4DE;font-size:clamp(.95rem,1.4vw,1.08rem)}
+.hero-cta{margin-top:30px;display:flex;gap:14px;justify-content:center;pointer-events:auto}
+.btn{display:inline-block;padding:13px 30px;border-radius:2px;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;transition:all .25s}
+.btn-oro{background:var(--oro);color:var(--blu-2);font-weight:500}
+.btn-oro:hover{background:var(--oro-chiaro)}
+.btn-ghost{border:1px solid rgba(234,227,211,.5);color:var(--avorio)}
+.btn-ghost:hover{border-color:var(--oro);color:var(--oro-chiaro)}
+.hero-tag{position:absolute;bottom:12px;z-index:8;font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(234,227,211,.75);padding:6px 12px;background:rgba(10,21,36,.45);backdrop-filter:blur(6px);border-radius:2px;pointer-events:none}
+.tag-pietra{left:16px}.tag-luce{right:16px}
+
+/* ---------- SEZIONI ---------- */
+.sez{padding:110px 24px}
+.sez-stretta{max-width:1140px;margin:0 auto}
+.eyebrow{font-size:.75rem;letter-spacing:.4em;text-transform:uppercase;color:var(--oro);margin-bottom:16px}
+.titolo{font-family:'Marcellus',serif;font-size:clamp(1.7rem,3.6vw,2.9rem);line-height:1.18;letter-spacing:.02em;text-wrap:balance}
+.sotto{color:var(--muto);max-width:640px;margin-top:16px}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+.reveal.vista{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* Manifesto */
+.manifesto{background:var(--blu-2);text-align:center}
+.manifesto blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.5rem,3.4vw,2.6rem);line-height:1.35;max-width:830px;margin:0 auto;color:var(--avorio)}
+.manifesto cite{display:block;margin-top:22px;font-family:'Archivo',sans-serif;font-style:normal;font-size:.8rem;letter-spacing:.3em;text-transform:uppercase;color:var(--oro)}
+.motto{display:flex;flex-wrap:wrap;gap:0 18px;justify-content:center;margin-top:44px;font-family:'Marcellus',serif;font-size:clamp(.9rem,1.6vw,1.15rem);letter-spacing:.3em;text-transform:uppercase;color:var(--oro-chiaro)}
+.motto span{display:flex;align-items:center;gap:18px}
+.motto span+span::before{content:"·";color:var(--oro);font-size:1.4em}
+
+/* Timeline */
+.storia{position:relative}
+.tl{position:relative;margin-top:70px}
+.tl::before{content:"";position:absolute;left:18px;top:0;bottom:0;width:1px;background:rgba(201,160,80,.25)}
+.tl-linea{position:absolute;left:18px;top:0;width:1px;height:100%;background:var(--oro);transform:scaleY(0);transform-origin:top;transition:transform .2s linear}
+.tl-voce{position:relative;padding:0 0 58px 64px}
+.tl-voce::before{content:"";position:absolute;left:12px;top:6px;width:13px;height:13px;border-radius:50%;border:1px solid var(--oro);background:var(--blu)}
+.tl-anno{font-family:'Marcellus',serif;font-size:1.5rem;color:var(--oro-chiaro);letter-spacing:.06em}
+.tl-titolo{font-size:1.05rem;font-weight:500;margin-top:6px}
+.tl-testo{color:var(--muto);font-size:.95rem;max-width:520px;margin-top:6px}
+.tl-foto{margin-top:16px;max-width:420px;border-radius:3px;overflow:hidden;border:1px solid rgba(201,160,80,.2)}
+.tl-foto img{aspect-ratio:16/10;object-fit:cover;width:100%;filter:saturate(.92)}
+@media(min-width:860px){
+  .tl{max-width:780px;margin-left:auto;margin-right:auto}
+  .tl-voce{padding:0 0 52px 72px}
+  .tl-foto{max-width:520px}
+}
+
+/* Capitolo fotografico full-bleed */
+.cap{position:relative;min-height:88vh;display:flex;align-items:flex-end;overflow:hidden}
+.cap-bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.08)}
+.kenburns .cap-bg{animation:kb 26s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.02) translateY(0)}to{transform:scale(1.12) translateY(-2.5%)}}
+@media (prefers-reduced-motion:reduce){.kenburns .cap-bg{animation:none}}
+.cap-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,21,36,.25),rgba(10,21,36,.88) 78%)}
+.cap-corpo{position:relative;z-index:2;width:100%;max-width:1140px;margin:0 auto;padding:60px 24px}
+.chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.chip{background:var(--glass);border:1px solid var(--glass-bordo);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:3px;padding:14px 20px;min-width:130px}
+.chip b{display:block;font-family:'Marcellus',serif;font-weight:400;font-size:1.5rem;color:var(--oro-chiaro);letter-spacing:.03em}
+.chip span{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muto)}
+.stampa{margin-top:30px;max-width:620px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.25rem;color:#D9D2C2;border-left:2px solid var(--oro);padding-left:20px}
+.stampa small{display:block;margin-top:8px;font-family:'Archivo',sans-serif;font-style:normal;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muto)}
+
+/* Trittico verticale (foto 3:4 intere) */
+.trittico{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px}
+@media(max-width:760px){.trittico{grid-template-columns:1fr;gap:12px}}
+.trittico figure{position:relative;overflow:hidden;border-radius:3px;border:1px solid rgba(201,160,80,.2)}
+.trittico img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;transition:transform .6s}
+.trittico figure:hover img{transform:scale(1.03)}
+.trittico figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 12px;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--avorio);background:linear-gradient(180deg,transparent,rgba(10,21,36,.85))}
+
+/* Gallerie */
+.galleria{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:36px}
+.galleria figure{position:relative;overflow:hidden;border-radius:3px;border:1px solid rgba(201,160,80,.16)}
+.galleria img{aspect-ratio:4/5;object-fit:cover;width:100%;transition:transform .6s ease;filter:saturate(.94)}
+.galleria figure:hover img{transform:scale(1.045)}
+.galleria figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 12px;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--avorio);background:linear-gradient(180deg,transparent,rgba(10,21,36,.85))}
+
+/* Planimetrie */
+.piani{margin-top:52px;background:var(--blu-2);border:1px solid rgba(201,160,80,.2);border-radius:4px;overflow:hidden}
+.piani-testa{padding:26px 26px 0}
+.piani-tabs{display:flex;flex-wrap:wrap;gap:8px;padding:18px 26px}
+.piani-tab{font-family:'Archivo',sans-serif;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;padding:9px 16px;border:1px solid rgba(201,160,80,.3);border-radius:2px;background:transparent;color:var(--avorio);cursor:pointer;transition:all .2s}
+.piani-tab[aria-selected="true"]{background:var(--oro);color:var(--blu-2);border-color:var(--oro);font-weight:600}
+.piani-vista{background:#F4F1EA;display:flex;align-items:center;justify-content:center;min-height:380px;padding:20px}
+.piani-vista img{max-height:520px;width:auto;max-width:100%;object-fit:contain}
+.piani-nota{padding:16px 26px 24px;font-size:.85rem;color:var(--muto)}
+
+/* Griglia opere */
+.opere{background:var(--blu-2)}
+.opere-griglia{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:44px}
+.opera{position:relative;overflow:hidden;border-radius:3px;border:1px solid rgba(201,160,80,.14)}
+.opera img{aspect-ratio:4/3;object-fit:cover;width:100%;transition:transform .6s;filter:saturate(.9)}
+.opera:hover img{transform:scale(1.05)}
+.opera-info{position:absolute;left:0;right:0;bottom:0;padding:30px 16px 14px;background:linear-gradient(180deg,transparent,rgba(10,21,36,.92))}
+.opera-info b{display:block;font-weight:500;font-size:.95rem}
+.opera-info span{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--oro-chiaro)}
+
+/* Squadra */
+.squadra{position:relative;min-height:80vh;display:flex;align-items:flex-end;overflow:hidden}
+.squadra .cap-bg{background-position:center 30%}
+
+/* Tour 360 */
+.tour{background:var(--blu-2);text-align:center}
+.tour-box{max-width:760px;margin:40px auto 0;border:1px dashed rgba(201,160,80,.4);border-radius:4px;padding:56px 26px;background:rgba(18,37,64,.35)}
+.tour-box .serif{font-size:1.3rem;color:var(--oro-chiaro)}
+.tour-box p{color:var(--muto);margin-top:12px;max-width:480px;margin-left:auto;margin-right:auto}
+
+/* Contatti */
+.contatti-griglia{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:50px}
+@media(max-width:860px){.contatti-griglia{grid-template-columns:1fr}}
+.contatto-voce{padding:20px 0;border-bottom:1px solid rgba(201,160,80,.18)}
+.contatto-voce span{display:block;font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--oro);margin-bottom:6px}
+.contatto-voce a,.contatto-voce b{font-family:'Marcellus',serif;font-weight:400;font-size:1.25rem;color:var(--avorio)}
+.contatto-voce a:hover{color:var(--oro-chiaro)}
+.form label{display:block;margin-bottom:18px}
+.form span{display:block;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muto);margin-bottom:8px}
+.form input,.form textarea{width:100%;background:var(--blu-2);border:1px solid rgba(201,160,80,.25);border-radius:2px;color:var(--avorio);padding:13px 14px;font-family:'Archivo',sans-serif;font-size:.95rem}
+.form input:focus,.form textarea:focus{outline:2px solid var(--oro);outline-offset:1px}
+.form textarea{min-height:120px;resize:vertical}
+
+.contatto-azioni{display:flex;flex-direction:column;gap:14px;align-items:stretch}
+.contatto-azioni a{text-align:center}
+.contatto-nota{font-size:.85rem;opacity:.65;margin-top:6px}
+/* Footer */
+footer{background:var(--lava);padding:52px 24px;text-align:center}
+footer .serif{letter-spacing:.24em;color:var(--oro-chiaro);font-size:1rem}
+footer p{color:#7d8794;font-size:.8rem;margin-top:10px}
+:focus-visible{outline:2px solid var(--oro-chiaro);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="principale">
+  <a class="nav-brand" href="#top">
+    <img src="../img/logo-mark.png" alt="Logo Pyramis">
+    <span>PYRAMIS</span>
+  </a>
+  <button class="panino" aria-label="Apri il menu" aria-expanded="false">☰</button>
+  <div class="nav-links" id="menu">
+    <a href="#storia">La storia</a>
+    <a href="#dalmazia">Blu Dalmazia</a>
+    <a href="#gravina">Gravina 445</a>
+    <a href="#restauro">Restauro sacro</a>
+    <a href="#opere">Le opere</a>
+    <a href="#contatti" class="nav-cta">Contattaci</a>
+  </div>
+</nav>
+
+<!-- HERO DITTICO -->
+<header class="hero" id="top">
+  <div class="hero-lato hero-pietra" role="img" aria-label="La gru Pyramis al lavoro sulla cupola della Cattedrale di Catania"></div>
+  <div class="hero-lato hero-luce" role="img" aria-label="La facciata ultimata di Blu Dalmazia, Catania"></div>
+  <div class="hero-scrim"></div>
+  <div class="hero-divisore" aria-hidden="true"></div>
+  <button class="hero-manico" id="manico" aria-label="Trascina per confrontare pietra e luce">⇔</button>
+  <span class="hero-tag tag-pietra">Pietra · Il Duomo</span>
+  <span class="hero-tag tag-luce">Luce · Blu Dalmazia</span>
+  <div class="hero-testo">
+    <p class="hero-eyebrow">Pyramis Costruzioni · Catania</p>
+    <h1 class="hero-titolo">Dalla pietra del Duomo<br>alle case a consumo zero.</h1>
+    <p class="hero-sub">L'impresa della famiglia Russo costruisce, restaura e rinnova Catania: il restauro dei suoi monumenti, le prime residenze NZEB e l'efficientamento di ciò che esiste.</p>
+    <div class="hero-cta">
+      <a class="btn btn-oro" href="#dalmazia">Guarda i lavori</a>
+      <a class="btn btn-ghost" href="#contatti">Parla con noi</a>
+    </div>
+  </div>
+</header>
+
+<!-- MANIFESTO -->
+<section class="sez manifesto">
+  <div class="sez-stretta reveal">
+    <blockquote>«In ogni lavoro, ogni riunione e ogni attività, ci chiediamo sempre: cosa farebbe l'Amore?»</blockquote>
+    <cite>Antonino Russo, fondatore</cite>
+    <div class="motto" aria-label="I valori">
+      <span>Etica</span><span>Passione</span><span>Professionalità</span><span>Sicurezza</span>
+    </div>
+  </div>
+</section>
+
+<!-- STORIA -->
+<section class="sez storia" id="storia">
+  <div class="sez-stretta">
+    <p class="eyebrow reveal">La storia</p>
+    <h2 class="titolo reveal">Tre generazioni, un mestiere:<br>costruire bene.</h2>
+    <p class="sotto reveal">Le radici affondano nel 1955, nel cantiere di famiglia. Nel 2003 Antonino Russo e Santa Fazio fondano Pyramis Costruzioni: da allora l'impresa è accreditata presso la Soprintendenza ai Beni Culturali di Catania e l'Arcidiocesi, e firma residenze che guardano avanti.</p>
+
+    <div class="tl" id="tl">
+      <div class="tl-linea" id="tl-linea" aria-hidden="true"></div>
+
+      <div class="tl-voce reveal">
+        <div class="tl-anno">1955</div>
+        <div class="tl-titolo">Le radici</div>
+        <p class="tl-testo">La famiglia Russo inizia a costruire in Sicilia. Il mestiere passa di mano in mano, di padre in figlio.</p>
+      </div>
+
+      <div class="tl-voce reveal">
+        <div class="tl-anno">2003</div>
+        <div class="tl-titolo">Nasce Pyramis Costruzioni</div>
+        <p class="tl-testo">Antonino Russo e Santa Fazio fondano la S.r.l. a Catania. Prima l'edilizia civile in appalto tra Catania e Messina, poi l'industriale, il turistico-ricettivo e il restauro monumentale.</p>
+      </div>
+
+      <div class="tl-voce reveal">
+        <div class="tl-anno">2004 – 2007</div>
+        <div class="tl-titolo">Residence Villa Dante, Messina</div>
+        <p class="tl-testo">65 appartamenti in sopraelevazione dal 3° al 6° piano, con mansarde, garage e un supermercato.</p>
+        <figure class="tl-foto"><img src="../img/dante.jpg" alt="Residence Villa Dante a Messina" loading="lazy"></figure>
+      </div>
+
+      <div class="tl-voce reveal">
+        <div class="tl-anno">2009 – 2016</div>
+        <div class="tl-titolo">Le chiese</div>
+        <p class="tl-testo">La nuova chiesa di San Paolo Apostolo ad Adrano per l'Arcidiocesi, il restauro del Sacro Cuore ai Cappuccini, la chiesa di San Giuseppe. E l'impianto di depolverizzazione per l'unica acciaieria dell'isola.</p>
+        <figure class="tl-foto"><img src="../img/adrano-notte.jpg" alt="La chiesa di San Paolo Apostolo ad Adrano illuminata di notte" loading="lazy"></figure>
+      </div>
+
+      <div class="tl-voce reveal">
+        <div class="tl-anno">2013 – 2017</div>
+        <div class="tl-titolo">Casa del Clero, Catania</div>
+        <p class="tl-testo">Demolizione e ricostruzione della "Casa del Clero Tullio Allegra" per l'Arcidiocesi di Catania.</p>
+        <figure class="tl-foto"><img src="../img/casa-clero.jpg" alt="Casa del Clero Tullio Allegra, Catania" loading="lazy"></figure>
+      </div>
+
+      <div class="tl-voce reveal">
+        <div class="tl-anno">2015 – 2016</div>
+        <div class="tl-titolo">La Badia di Sant'Agata torna alla città</div>
+        <p class="tl-testo">I lavori che aprono al pubblico le terrazze e la cupola del capolavoro del Vaccarini: oggi "il balcone sul Barocco" è una delle mete più amate di Catania. Nel 2016, la rimozione dell'asfalto dal sagrato della Cattedrale, in accordo con la Soprintendenza.</p>
+        <figure class="tl-foto"><img src="../img/badia-terrazza-lavori.jpg" alt="Operai Pyramis al lavoro sulle terrazze della Badia di Sant'Agata" loading="lazy"></figure>
+      </div>
+
+      <div class="tl-voce reveal">
+        <div class="tl-anno">2017 – 2019</div>
+        <div class="tl-titolo">Rigenerare l'esistente</div>
+        <p class="tl-testo">Nove appartamenti riqualificati ed efficientati a Gravina di Catania, il Residence Acacie ad Augusta: l'efficientamento energetico diventa il terzo mestiere di casa.</p>
+        <figure class="tl-foto"><img src="../img/gravina-seminara.jpg" alt="Appartamenti in Residence a Gravina di Catania, via Seminara" loading="lazy"></figure>
+      </div>
+
+      <div class="tl-voce reveal">
+        <div class="tl-anno">2022 – 2025</div>
+        <div class="tl-titolo">Blu Dalmazia</div>
+        <p class="tl-testo">Nel centro di Catania nasce un edificio NZEB in classe A4: quasi tutta l'energia che consuma, la produce. La stampa di settore lo racconta come un riferimento del costruire sostenibile in città.</p>
+        <figure class="tl-foto"><img src="../img/dalmazia-cantiere.jpg" alt="Il cantiere di Blu Dalmazia" loading="lazy"></figure>
+      </div>
+
+      <div class="tl-voce reveal">
+        <div class="tl-anno">2026</div>
+        <div class="tl-titolo">Gravina Etnea 445</div>
+        <p class="tl-testo">Appartamenti panoramici all'insegna dell'innovazione e dell'ecosostenibilità, alle pendici dell'Etna.</p>
+        <figure class="tl-foto"><img src="../img/gravina445-cantiere-b.jpg" alt="Il cantiere di Gravina Etnea 445" loading="lazy"></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLU DALMAZIA -->
+<section class="cap kenburns" id="dalmazia">
+  <div class="cap-bg" style="background-image:url(../img/dalmazia-2.jpg)"></div>
+  <div class="cap-scrim"></div>
+  <div class="cap-corpo">
+    <p class="eyebrow reveal">Il gioiello · Via Dalmazia 29, Catania</p>
+    <h2 class="titolo reveal">Blu Dalmazia.<br>La casa che produce la sua energia.</h2>
+    <p class="sotto reveal">Un edificio residenziale NZEB nel centro di Catania: struttura antisismica, involucro ad alte prestazioni, fotovoltaico che copre quasi per intero il fabbisogno. Progetto Base51 Architettura, sviluppo Vinci Immobiliare, costruzione Pyramis.</p>
+    <div class="chips reveal">
+      <div class="chip"><b>A4</b><span>Classe energetica</span></div>
+      <div class="chip"><b>NZEB</b><span>Consumo quasi zero</span></div>
+      <div class="chip"><b>&gt;99%</b><span>Fabbisogno da fotovoltaico</span></div>
+      <div class="chip"><b>14</b><span>Unità abitative</span></div>
+      <div class="chip"><b>8</b><span>Piani fuori terra</span></div>
+      <div class="chip"><b>A</b><span>Classe acustica</span></div>
+    </div>
+    <blockquote class="stampa reveal">«Il progetto sviluppato da Vinci Immobiliare e realizzato da Pyramis Costruzioni segue i criteri dell'architettura bioclimatica e sostenibile.»
+      <small>NiiProgetti, aprile 2022</small>
+    </blockquote>
+    <div class="trittico reveal">
+      <figure data-opera="imm-blue-residence-via-dalmazia-ct"><img src="../img/dalmazia-1.jpg" alt="Blu Dalmazia, la facciata dalla strada" loading="lazy"><figcaption>La facciata</figcaption></figure>
+      <figure data-opera="imm-blue-residence-via-dalmazia-ct"><img src="../img/dalmazia-5.jpg" alt="Blu Dalmazia al tramonto, col sole tra i listelli" loading="lazy"><figcaption>Il tramonto</figcaption></figure>
+      <figure data-opera="imm-blue-residence-via-dalmazia-ct"><img src="../img/dalmazia-3.jpg" alt="Le cornici blu e il legno visti dal basso" loading="lazy"><figcaption>Cornici e legno</figcaption></figure>
+    </div>
+
+    <!-- PLANIMETRIE INTERATTIVE -->
+    <div class="piani reveal">
+      <div class="piani-testa">
+        <p class="eyebrow" style="margin-bottom:6px">Entra nei piani</p>
+        <h3 class="serif" style="font-size:1.4rem">Le planimetrie, piano per piano</h3>
+      </div>
+      <div class="piani-tabs" role="tablist" aria-label="Piani dell'edificio">
+        <button class="piani-tab" role="tab" aria-selected="true" data-p="1">Terra</button>
+        <button class="piani-tab" role="tab" aria-selected="false" data-p="2">Primo</button>
+        <button class="piani-tab" role="tab" aria-selected="false" data-p="3">Secondo</button>
+        <button class="piani-tab" role="tab" aria-selected="false" data-p="4">Terzo</button>
+        <button class="piani-tab" role="tab" aria-selected="false" data-p="5">Quarto</button>
+        <button class="piani-tab" role="tab" aria-selected="false" data-p="6">Quinto</button>
+        <button class="piani-tab" role="tab" aria-selected="false" data-p="7">Sesto</button>
+        <button class="piani-tab" role="tab" aria-selected="false" data-p="8">Settimo</button>
+      </div>
+      <div class="piani-vista"><img id="piani-img" src="../img/pianta-1.png" alt="Planimetria del piano terra di Blu Dalmazia"></div>
+      <p class="piani-nota">Piano terra libero e porticato, con i quattro portali scultorei in acciaio. Ogni piano ospita due unità con logge e balconi terrazzati. Per metrature e disponibilità: <a href="#contatti" style="color:var(--oro-chiaro)">contattaci</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GRAVINA 445 -->
+<section class="cap" id="gravina">
+  <div class="cap-bg" style="background-image:url(../img/gravina445-render.png);filter:saturate(1.02)"></div>
+  <div class="cap-scrim"></div>
+  <div class="cap-corpo">
+    <p class="eyebrow reveal">Il gioiello · Gravina di Catania</p>
+    <h2 class="titolo reveal">Gravina Etnea 445.<br>Panorami sull'Etna, consumi quasi zero.</h2>
+    <p class="sotto reveal">Appartamenti da 2 a 7 vani con giardino o terrazzo, garage e cantina. Classe A4 NZEB, pannelli fotovoltaici, colonnina di ricarica elettrica: l'innovazione di Blu Dalmazia, portata alle pendici dell'Etna.</p>
+    <div class="chips reveal">
+      <div class="chip"><b>A4</b><span>Classe energetica</span></div>
+      <div class="chip"><b>NZEB</b><span>Consumo quasi zero</span></div>
+      <div class="chip"><b>2–7</b><span>Vani per unità</span></div>
+      <div class="chip"><b>EV</b><span>Ricarica elettrica</span></div>
+    </div>
+    <div class="galleria reveal">
+      <figure data-opera="imm-appartamenti-gravina-catania"><img src="../img/gravina445-render2.png" alt="Render del progetto Gravina Etnea 445" loading="lazy"><figcaption>Il progetto</figcaption></figure>
+      <figure data-opera="imm-appartamenti-gravina-catania"><img src="../img/gravina445-cantiere-a.jpg" alt="Il cantiere di Gravina Etnea 445" loading="lazy"><figcaption>Il cantiere</figcaption></figure>
+      <figure data-opera="imm-appartamenti-gravina-catania"><img src="../img/gravina445-cantiere-b.jpg" alt="La struttura di Gravina Etnea 445 in costruzione" loading="lazy"><figcaption>La struttura</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- RESTAURO SACRO -->
+<section class="cap kenburns" id="restauro">
+  <div class="cap-bg" style="background-image:url(../img/hero-pietra.jpg)"></div>
+  <div class="cap-scrim"></div>
+  <div class="cap-corpo">
+    <p class="eyebrow reveal">Il restauro sacro</p>
+    <h2 class="titolo reveal">Le mani sulla pietra<br>del cuore di Catania.</h2>
+    <p class="sotto reveal">Accreditata presso la Soprintendenza ai Beni Culturali, la Chiesa Cattedrale e l'Arcidiocesi di Catania, Pyramis lavora da anni dentro i monumenti della città: altari, cappelle, statue, grate, il museo, l'organo, il sagrato. E le terrazze della Badia di Sant'Agata, riaperte alla città.</p>
+    <div class="galleria reveal">
+      <figure data-opera="chiesa-badia-di-s-agata"><img src="../img/badia-facciata.jpg" alt="La facciata della Badia di Sant'Agata" loading="lazy"><figcaption>Badia di Sant'Agata</figcaption></figure>
+      <figure data-opera="pavimentazione-esterna-cattedrale-di-catania"><img src="../img/sagrato.jpg" alt="I lavori sul sagrato della Cattedrale di Catania" loading="lazy"><figcaption>Il sagrato della Cattedrale</figcaption></figure>
+      <figure data-opera="chiesa-frati-minori-cappuccini-catania"><img src="../img/cappuccini.jpg" alt="La chiesa del Sacro Cuore ai Cappuccini" loading="lazy"><figcaption>Sacro Cuore ai Cappuccini</figcaption></figure>
+      <figure data-opera="chiesa-san-giuseppe"><img src="../img/sangiuseppe.jpg" alt="La chiesa di San Giuseppe" loading="lazy"><figcaption>Chiesa di San Giuseppe</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- LE OPERE -->
+<section class="sez opere" id="opere">
+  <div class="sez-stretta">
+    <p class="eyebrow reveal">Le opere</p>
+    <h2 class="titolo reveal">Vent'anni di cantieri.</h2>
+    <p class="sotto reveal">Residenziale, industriale, turistico-ricettivo, sociale: tutte le opere, ognuna con la sua galleria fotografica completa. Clicca e sfoglia.</p>
+    <div class="opere-griglia reveal">
+      <a class="opera" data-opera="imm-blue-residence-via-dalmazia-ct"><img src="../img/dalmazia-1.jpg" alt="" loading="lazy"><span class="opera-info"><span>Catania · 2022–2025</span><b>Blu Dalmazia · residenze NZEB</b></span></a>
+      <a class="opera" data-opera="imm-appartamenti-gravina-catania"><img src="../img/gravina445-cantiere-b.jpg" alt="" loading="lazy"><span class="opera-info"><span>Gravina di Catania · 2026</span><b>Gravina Etnea 445</b></span></a>
+      <a class="opera" data-opera="vari-interventi-cattedrale-catania"><img src="../img/hero-pietra.jpg" alt="" loading="lazy"><span class="opera-info"><span>Catania · 2009–2016</span><b>Cattedrale di Catania · gli interventi</b></span></a>
+      <a class="opera" data-opera="chiesa-badia-di-s-agata"><img src="../img/badia-terrazza-lavori.jpg" alt="" loading="lazy"><span class="opera-info"><span>Catania · 2015–2016</span><b>Badia di S. Agata · terrazze e cupola</b></span></a>
+      <a class="opera" data-opera="pavimentazione-esterna-cattedrale-di-catania"><img src="../img/sagrato.jpg" alt="" loading="lazy"><span class="opera-info"><span>Catania · 2016</span><b>Il sagrato della Cattedrale</b></span></a>
+      <a class="opera" data-opera="chiesa-san-paolo-adrano"><img src="../img/adrano-notte.jpg" alt="" loading="lazy"><span class="opera-info"><span>Adrano · 2009–2016</span><b>Chiesa di San Paolo Apostolo</b></span></a>
+      <a class="opera" data-opera="casa-del-clero-viale-flemming-ct"><img src="../img/casa-clero.jpg" alt="" loading="lazy"><span class="opera-info"><span>Catania · 2013–2017</span><b>Casa del Clero “Tullio Allegra”</b></span></a>
+      <a class="opera" data-opera="chiesa-frati-minori-cappuccini-catania"><img src="../img/cappuccini.jpg" alt="" loading="lazy"><span class="opera-info"><span>Catania · 2009–2010</span><b>Sacro Cuore ai Cappuccini</b></span></a>
+      <a class="opera" data-opera="chiesa-san-giuseppe"><img src="../img/sangiuseppe.jpg" alt="" loading="lazy"><span class="opera-info"><span>2008–2009</span><b>Chiesa di San Giuseppe</b></span></a>
+      <a class="opera" data-opera="suore-francescane-casa-anziani"><img src="../img/suore.jpg" alt="" loading="lazy"><span class="opera-info"><span>2013–2016</span><b>Casa per anziani · Suore Francescane</b></span></a>
+      <a class="opera" data-opera="appartamenti-in-residence-gravina-via-seminara"><img src="../img/gravina-seminara.jpg" alt="" loading="lazy"><span class="opera-info"><span>Gravina di Catania · 2017–2019</span><b>Residence Gravina · riqualificazione</b></span></a>
+      <a class="opera" data-opera="residence-acacie"><img src="../img/acacie.jpg" alt="" loading="lazy"><span class="opera-info"><span>Augusta · 2017–2019</span><b>Residence Acacie</b></span></a>
+      <a class="opera" data-opera="residence-victoria"><img src="../img/victoria.jpg" alt="" loading="lazy"><span class="opera-info"><span>Misterbianco · 2006–2011</span><b>Residence Victoria</b></span></a>
+      <a class="opera" data-opera="residence-via-catania"><img src="../img/dante.jpg" alt="" loading="lazy"><span class="opera-info"><span>Messina · 2004–2007</span><b>Residence Villa Dante · 65 appartamenti</b></span></a>
+      <a class="opera" data-opera="residence-pietrapura"><img src="../img/pietrapura.jpg" alt="" loading="lazy"><span class="opera-info"><span>Misterbianco · 2009–2017</span><b>Residence Pietra Pura</b></span></a>
+      <a class="opera" data-opera="acciaieria-catania"><img src="../img/acciaieria.jpg" alt="" loading="lazy"><span class="opera-info"><span>Catania · 2009</span><b>Acciaierie di Sicilia · impianti</b></span></a>
+      <a class="opera" data-opera="imm-deposito-misterbianco"><img src="../img/opere/imm-deposito-misterbianco/Planimetria-sub.19-1.jpg" alt="" loading="lazy"><span class="opera-info"><span>Misterbianco</span><b>Depositi e botteghe</b></span></a>
+      <a class="opera" data-opera="imm-appartamento-alfio-catania"><img src="../img/opere/imm-appartamento-alfio-catania/appartamenti-gravina-Via-Seminara-5.jpg" alt="" loading="lazy"><span class="opera-info"><span>Gravina di Catania</span><b>Deposito Gravina Etnea</b></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- SQUADRA -->
+<section class="squadra cap">
+  <div class="cap-bg" style="background-image:url(../img/squadra.jpg)"></div>
+  <div class="cap-scrim"></div>
+  <div class="cap-corpo">
+    <p class="eyebrow reveal">La squadra</p>
+    <h2 class="titolo reveal">Venti persone,<br>un solo modo di lavorare.</h2>
+    <p class="sotto reveal">Amministrativi, tecnici e maestranze, con professionisti esterni di provata esperienza. Personale qualificato e specializzato, perché la qualità del risultato passa anche dalla sicurezza di chi lo costruisce.</p>
+  </div>
+</section>
+
+<!-- TOUR 360 -->
+<section class="sez tour">
+  <div class="sez-stretta reveal">
+    <p class="eyebrow">Prossimamente</p>
+    <h2 class="titolo">Entra negli appartamenti.</h2>
+    <div class="tour-box">
+      <p class="serif">Tour virtuale 360°</p>
+      <p>Stiamo preparando la visita immersiva degli appartamenti: potrai camminare dentro le case dal telefono, prima ancora di visitarle.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATTI -->
+<section class="sez" id="contatti">
+  <div class="sez-stretta">
+    <p class="eyebrow reveal">Contatti</p>
+    <h2 class="titolo reveal">Parliamo del tuo progetto.</h2>
+    <div class="contatti-griglia">
+      <div class="reveal">
+        <div class="contatto-voce"><span>Telefono</span><a href="tel:+39095491181">095 49 11 81</a></div>
+        <div class="contatto-voce"><span>Cellulare</span><a href="tel:+393473362039">347 33 62 039</a></div>
+        <div class="contatto-voce"><span>Email</span><a href="mailto:pyramiscostruzioni@gmail.com">pyramiscostruzioni@gmail.com</a></div>
+        <div class="contatto-voce"><span>Sede</span><b>Via Matteo Ricci 19, Catania</b></div>
+      </div>
+      <div class="reveal"><div class="contatto-azioni">
+        <a class="btn btn-oro" href="https://wa.me/393473362039?text=Salve%2C%20vi%20scrivo%20dal%20sito%20Pyramis%20Costruzioni">Scrivici su WhatsApp</a>
+        <a class="btn btn-ghost" href="tel:+39095491181">Chiama la sede · 095 49 11 81</a>
+        <a class="btn btn-ghost" href="mailto:pyramiscostruzioni@gmail.com">Scrivi una email</a>
+        <p class="contatto-nota">Rispondiamo in giornata. Se preferisci, chiamaci: c'è sempre una persona, non un centralino.</p>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p class="serif">PYRAMIS COSTRUZIONI S.R.L.</p>
+  <p>Via Matteo Ricci 19, Catania · Costruzione, vendita e manutenzione di edifici residenziali, ricettivi e commerciali</p>
+</footer>
+
+<script>
+// Dittico: drag del divisore
+(function(){
+  const hero=document.querySelector('.hero');
+  const manico=document.getElementById('manico');
+  let attivo=false;
+  function setSplit(clientX){
+    const r=hero.getBoundingClientRect();
+    let p=(clientX-r.left)/r.width*100;
+    p=Math.max(8,Math.min(92,p));
+    hero.style.setProperty('--split',p+'%');
+  }
+  manico.addEventListener('pointerdown',e=>{attivo=true;manico.setPointerCapture(e.pointerId)});
+  window.addEventListener('pointermove',e=>{if(attivo)setSplit(e.clientX)});
+  window.addEventListener('pointerup',()=>attivo=false);
+  manico.addEventListener('keydown',e=>{
+    const cur=parseFloat(getComputedStyle(hero).getPropertyValue('--split'))||50;
+    if(e.key==='ArrowLeft'){hero.style.setProperty('--split',Math.max(8,cur-4)+'%')}
+    if(e.key==='ArrowRight'){hero.style.setProperty('--split',Math.min(92,cur+4)+'%')}
+  });
+})();
+
+// Reveal on scroll
+(function(){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vista');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+})();
+
+// Linea timeline che si costruisce
+(function(){
+  const tl=document.getElementById('tl'),linea=document.getElementById('tl-linea');
+  if(!tl)return;
+  function agg(){
+    const r=tl.getBoundingClientRect();
+    const vh=innerHeight;
+    const prog=Math.max(0,Math.min(1,(vh*0.75-r.top)/r.height));
+    linea.style.transform='scaleY('+prog+')';
+  }
+  addEventListener('scroll',agg,{passive:true});agg();
+})();
+
+// Planimetrie
+(function(){
+  const tabs=document.querySelectorAll('.piani-tab');
+  const img=document.getElementById('piani-img');
+  const nomi={1:'terra',2:'primo',3:'secondo',4:'terzo',5:'quarto',6:'quinto',7:'sesto',8:'settimo'};
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.setAttribute('aria-selected','false'));
+    t.setAttribute('aria-selected','true');
+    const p=t.dataset.p;
+    img.src='../img/pianta-'+p+'.png';
+    img.alt='Planimetria del piano '+nomi[p]+' di Blu Dalmazia';
+  }));
+})();
+</script>
+<script src="../galleria.js" defer></script>
+<script>
+(function(){
+  var b=document.querySelector('.panino'),m=document.getElementById('menu');
+  if(!b)return;
+  b.addEventListener('click',function(){var ap=m.classList.toggle('aperto');b.setAttribute('aria-expanded',ap)});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('aperto')})});
+})();
+</script>
+</body>
+</html>
