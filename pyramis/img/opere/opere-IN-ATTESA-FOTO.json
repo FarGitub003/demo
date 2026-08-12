@@ -1,0 +1,21 @@
+{
+ "imm-appartamento-alfio-catania": {
+  "titolo": "Deposito Gravina Etnea",
+  "sotto": "Gravina di Catania",
+  "testo": "Deposito di 350 mq con piazzale esterno e posti auto.",
+  "foto": [
+   "Schermata-2021-02-16-alle-18.01.43.png"
+  ]
+ },
+ "imm-deposito-misterbianco": {
+  "titolo": "Depositi e botteghe",
+  "sotto": "Misterbianco",
+  "testo": "Botteghe, depositi e garage in via Plebiscito 9-11-15, zona commerciale con parcheggio.",
+  "foto": [
+   "0001-scaled.jpg",
+   "0001-2-scaled.jpg",
+   "Planimetria-sub.19-1.jpg",
+   "Planimetria-sub.20-1.jpg"
+  ]
+ }
+}

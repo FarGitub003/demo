@@ -50,6 +50,8 @@
   "sotto": "Catania · 2015–2016",
   "testo": "I lavori per la valorizzazione turistica delle terrazze e della cupola del capolavoro del Vaccarini: il “balcone sul Barocco”.",
   "foto": [
+   "MAIN.jpeg",
+   "Badia-SantAgata-abside.jpg",
    "05449a9a-2850-4a54-a2a5-154bad7b87db.jpeg",
    "Badia-ponteggio.jpg",
    "Badia-Restauro-ostensorio-1.jpg",
@@ -57,11 +59,8 @@
    "IMG_0211.jpg",
    "IMG_0388.jpg",
    "IMG_0704.jpg",
-   "IMG_3838.jpeg",
-   "IMG_3839.jpeg",
    "IMG_3841.jpeg",
-   "IMG_3853.jpeg",
-   "MAIN.jpeg"
+   "IMG_3853.jpeg"
   ]
  },
  "chiesa-frati-minori-cappuccini-catania": {
@@ -70,8 +69,8 @@
   "testo": "Manutenzione straordinaria e restauro del prospetto neoromanico della chiesa di via Plebiscito.",
   "foto": [
    "Chiesa-Cappuccini-6-scaled.jpg",
+   "Chiesa-Cappuccini-interno.jpg",
    "Chiesa-Cappuccini.jpg",
-   "WhatsApp-Image-2021-01-12-at-22.13.14.jpeg",
    "Chiesa-Cappuccini-3.jpg",
    "Chiesa-Cappuccini-2.jpg"
   ]
@@ -84,8 +83,7 @@
    "Chiesa-San-Giuseppe-5.jpg",
    "Chiesa-San-Giuseppe.jpg",
    "Chiesa-San-Giuseppe-4.jpg",
-   "Chiesa-San-Giuseppe-3.jpg",
-   "Chiesa-San-Giuseppe-2.jpg"
+   "Chiesa-San-Giuseppe-3.jpg"
   ]
  },
  "chiesa-san-paolo-adrano": {
@@ -93,6 +91,7 @@
   "sotto": "Adrano · 2009–2016",
   "testo": "Il complesso parrocchiale nuovo: aula liturgica, uffici di ministero pastorale e casa canonica, per l'Arcidiocesi di Catania.",
   "foto": [
+   "Chiesa-san-Paolo-Adrano-notturna.jpg",
    "IMG_4407-scaled.jpeg",
    "Chiesa-san-Paolo-Adrano-7.jpg",
    "Chiesa-san-Paolo-Adrano-9.jpg",
@@ -100,7 +99,6 @@
    "Chiesa-san-Paolo-Adrano-5.jpg",
    "Chiesa-san-Paolo-Adrano-4.jpg",
    "IMG_4410.jpeg",
-   "IMG_4407.jpeg",
    "Chiesa-san-Paolo-Adrano-1.jpg",
    "IMG_4411.jpeg",
    "IMG_4412.jpeg",
@@ -114,6 +112,8 @@
   "foto": [
    "gravina445-2026-02-27-b.jpg",
    "gravina445-2026-02-27-a.jpg",
+   "Gravina445-panorama.jpg",
+   "Gravina445-panorama-Etna.jpg",
    "Appartamento-gravina-2.png",
    "Efficenza-energetica.png",
    "271546095_4992450044122818_5503376152250670865_n.jpeg",
@@ -122,22 +122,7 @@
    "19.190_200507_Pianta_Piano_Terra_Variante_Agenzia-1-1.png",
    "19.190_200514_Pianta_Piano_Primo_Variante3-1.png",
    "19.190_AT1-Pianta-Piano-Seminterrato-1.png",
-   "19.190_AT4-Pianta-Piano-Secondo-1.png",
-   "Appartamento-gravina-2-1.png",
-   "Schermata-2021-02-10-alle-17.05.44.png",
-   "Schermata-2021-02-10-alle-17.06.03.png",
-   "Schermata-2021-02-10-alle-16.08.26.png",
-   "Schermata-2021-02-10-alle-17.06.18.png"
-  ]
- },
- "imm-appartamento-alfio-catania": {
-  "titolo": "Deposito Gravina Etnea",
-  "sotto": "Gravina di Catania",
-  "testo": "Deposito di 350 mq con piazzale esterno e posti auto.",
-  "foto": [
-   "appartamenti-gravina-Via-Seminara-5.jpg",
-   "appartamenti-gravina-Via-Seminara-4.jpg",
-   "Schermata-2021-02-16-alle-18.01.43.png"
+   "19.190_AT4-Pianta-Piano-Secondo-1.png"
   ]
  },
  "imm-blue-residence-via-dalmazia-ct": {
@@ -155,26 +140,14 @@
    "WhatsApp-Image-2020-12-18-at-16.17.15.jpeg",
    "WhatsApp-Image-2020-12-20-at-21.19.08.jpeg",
    "WhatsApp-Image-2020-12-27-at-11.25.15.jpeg",
+   "20.209_201221_Pianta_Piano_Terra-1.png",
    "20.209_201221_Pianta_Piano_Primo-1.png",
+   "20.209_201221_Pianta_Piano_Secondo-1.png",
+   "20.209_201221_Pianta_Piano_Terzo-1.png",
    "20.209_201221_Pianta_Piano_Quarto-1.png",
    "20.209_201221_Pianta_Piano_Quinto-1.png",
-   "20.209_201221_Pianta_Piano_Secondo-1.png",
    "20.209_201221_Pianta_Piano_Sesto-1.png",
-   "20.209_201221_Pianta_Piano_Settimo-1.png",
-   "20.209_201221_Pianta_Piano_Terra-1.png",
-   "20.209_201221_Pianta_Piano_Terzo-1.png"
-  ]
- },
- "imm-deposito-misterbianco": {
-  "titolo": "Depositi e botteghe",
-  "sotto": "Misterbianco",
-  "testo": "Botteghe, depositi e garage in via Plebiscito 9-11-15, zona commerciale con parcheggio.",
-  "foto": [
-   "Victoria-residence.jpg",
-   "0001-scaled.jpg",
-   "0001-2-scaled.jpg",
-   "Planimetria-sub.19-1.jpg",
-   "Planimetria-sub.20-1.jpg"
+   "20.209_201221_Pianta_Piano_Settimo-1.png"
   ]
  },
  "pavimentazione-esterna-cattedrale-di-catania": {
@@ -194,7 +167,6 @@
   "foto": [
    "Residence-Acaice-4-1.jpg",
    "Residence-Acaice.jpg",
-   "Residence-Acaice-6.jpg",
    "Residence-Acaice-5.jpg",
    "Residence-Acaice-4.jpg",
    "Residence-Acaice-3.jpg",
@@ -244,6 +216,7 @@
   "sotto": "2013–2016",
   "testo": "La struttura per anziani delle Suore Francescane del Cuore di Gesù: elegante, accogliente, piena di pace.",
   "foto": [
+   "Casa-per-Anziani-Suore-Francescane-ingresso.jpg",
    "Casa-per-Anziani-Suore-Francescane-Del-Cuore-di-Gesu-4-scaled.jpg",
    "Casa-per-Anziani-Suore-Francescane-Del-Cuore-di-Gesu-2.jpg",
    "Casa-per-Anziani-Suore-Francescane-Del-Cuore-di-Gesu-8.jpg",
@@ -258,7 +231,6 @@
    "ciccio-1067.jpg",
    "IMG_2583.jpg",
    "Immagine-177.jpg",
-   "Immagine-177-scaled.jpg",
    "2011-07-28-15.03.06.jpg",
    "068-sito.jpg",
    "28022009116.jpg",
