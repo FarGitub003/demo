@@ -55,13 +55,19 @@ fetch(BASE+'opere.json').then(function(r){return r.json()}).then(function(j){
 }).catch(function(e){console.warn('galleria: dati non caricati',e)});
 
 /* ---------- lightbox ---------- */
+/* "N foto" deve contare SOLO fotografie. Render, certificati e planimetrie
+   stanno in o.tecniche e si contano a parte come "tavole". */
+function conteggio(o){
+  var t=(o.tecniche||[]).length, f=o.foto.length-t;
+  return f+(f===1?' foto':' foto')+(t?' · '+t+(t===1?' tavola':' tavole'):'');
+}
 var lb=null;
 function apri(slug){
   corrente=slug;indice=0;
   var o=dati[slug];
   lb=document.createElement('div');lb.className='lb';lb.setAttribute('role','dialog');lb.setAttribute('aria-modal','true');lb.setAttribute('aria-label',o.titolo);
   lb.innerHTML=
-    '<div class="lb-testa"><div><h2 class="lb-titolo">'+o.titolo+'</h2><p class="lb-sotto">'+o.sotto+' · '+o.foto.length+' foto</p></div>'+
+    '<div class="lb-testa"><div><h2 class="lb-titolo">'+o.titolo+'</h2><p class="lb-sotto">'+o.sotto+' · '+conteggio(o)+'</p></div>'+
     '<button class="lb-chiudi" aria-label="Chiudi">✕</button></div>'+
     '<div class="lb-palco">'+
       '<button class="lb-freccia lb-prev" aria-label="Foto precedente">‹</button>'+

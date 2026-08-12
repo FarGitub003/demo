@@ -232,7 +232,9 @@ footer b{font-family:'Italiana',serif;letter-spacing:.26em;color:var(--oro-2);fo
       var o=d[slug];
       var f=document.createElement('figure');
       f.setAttribute('data-opera',slug);
-      f.innerHTML='<img loading="lazy" src="../img/opere/'+slug+'/'+encodeURIComponent(o.foto[0])+'" alt="'+o.titolo+'"><figcaption>'+o.titolo+' · '+o.foto.length+' foto</figcaption>';
+      var nt=(o.tecniche||[]).length, nf=o.foto.length-nt;
+      var conta=nf+' foto'+(nt?' · '+nt+(nt===1?' tavola':' tavole'):'');
+      f.innerHTML='<img loading="lazy" src="../img/opere/'+slug+'/'+encodeURIComponent(o.foto[0])+'" alt="'+o.titolo+'"><figcaption>'+o.titolo+' · '+conta+'</figcaption>';
       m.appendChild(f);
     });
     // il motore galleria si aggancia dopo che il mosaico esiste

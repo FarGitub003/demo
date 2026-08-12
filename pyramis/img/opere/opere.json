@@ -7,6 +7,7 @@
    "MAIN.jpg",
    "Acciaieria-2009.jpg",
    "Foto0049.jpg",
+   "Immagine-120.jpg",
    "Foto0058.jpg",
    "Foto0062.jpg",
    "Foto0083.jpg",
@@ -14,8 +15,7 @@
    "Foto0211.jpg",
    "Foto0231.jpg",
    "Foto0265.jpg",
-   "Foto0364.jpg",
-   "Immagine-120.jpg"
+   "Foto0364.jpg"
   ]
  },
  "appartamenti-in-residence-gravina-via-seminara": {
@@ -24,9 +24,9 @@
   "testo": "Acquisto, progettazione, efficientamento energetico e ristrutturazione di 9 appartamenti con uffici, garage e depositi.",
   "foto": [
    "appartamenti-gravina-Via-Seminara-3.jpg",
-   "appartamenti-gravina-Via-Seminara.jpg",
    "appartamenti-gravina-Via-Seminara-5.jpg",
    "appartamenti-gravina-Via-Seminara-4.jpg",
+   "appartamenti-gravina-Via-Seminara.jpg",
    "appartamenti-gravina-Via-Seminara-1.jpg"
   ]
  },
@@ -37,11 +37,9 @@
   "foto": [
    "Casa-del-Clero-55.jpg",
    "Casa-del-Clero.jpg",
-   "Casa-del-Clero-7.jpg",
-   "Casa-del-Clero-6.jpg",
    "Casa-del-Clero-5.jpg",
    "Casa-del-Clero-4.jpg",
-   "Casa-del-Clero-2.jpg",
+   "Casa-del-Clero-7.jpg",
    "Casa-del-Clero-1.jpg"
   ]
  },
@@ -69,8 +67,6 @@
   "testo": "Manutenzione straordinaria e restauro del prospetto neoromanico della chiesa di via Plebiscito.",
   "foto": [
    "Chiesa-Cappuccini-6-scaled.jpg",
-   "Chiesa-Cappuccini-interno.jpg",
-   "Chiesa-Cappuccini.jpg",
    "Chiesa-Cappuccini-3.jpg",
    "Chiesa-Cappuccini-2.jpg"
   ]
@@ -80,9 +76,9 @@
   "sotto": "2008–2009",
   "testo": "Restauro della chiesa settecentesca: facciata con statue in gesso, interni con le storie del Santo.",
   "foto": [
+   "Chiesa-San-Giuseppe-4.jpg",
    "Chiesa-San-Giuseppe-5.jpg",
    "Chiesa-San-Giuseppe.jpg",
-   "Chiesa-San-Giuseppe-4.jpg",
    "Chiesa-San-Giuseppe-3.jpg"
   ]
  },
@@ -92,17 +88,21 @@
   "testo": "Il complesso parrocchiale nuovo: aula liturgica, uffici di ministero pastorale e casa canonica, per l'Arcidiocesi di Catania.",
   "foto": [
    "Chiesa-san-Paolo-Adrano-notturna.jpg",
-   "IMG_4407-scaled.jpeg",
-   "Chiesa-san-Paolo-Adrano-7.jpg",
-   "Chiesa-san-Paolo-Adrano-9.jpg",
-   "Chiesa-san-Paolo-Adrano.jpg",
    "Chiesa-san-Paolo-Adrano-5.jpg",
    "Chiesa-san-Paolo-Adrano-4.jpg",
-   "IMG_4410.jpeg",
    "Chiesa-san-Paolo-Adrano-1.jpg",
+   "IMG_4407-scaled.jpeg",
+   "IMG_4410.jpeg",
    "IMG_4411.jpeg",
    "IMG_4412.jpeg",
-   "IMG_4413.jpeg"
+   "Chiesa-san-Paolo-Adrano-7.jpg",
+   "IMG_4413.jpeg",
+   "Chiesa-san-Paolo-Adrano-9.jpg",
+   "Chiesa-san-Paolo-Adrano.jpg"
+  ],
+  "tecniche": [
+   "Chiesa-san-Paolo-Adrano-9.jpg",
+   "Chiesa-san-Paolo-Adrano.jpg"
   ]
  },
  "imm-appartamenti-gravina-catania": {
@@ -113,10 +113,19 @@
    "gravina445-2026-02-27-b.jpg",
    "gravina445-2026-02-27-a.jpg",
    "Gravina445-panorama.jpg",
-   "Gravina445-panorama-Etna.jpg",
+   "271546095_4992450044122818_5503376152250670865_n.jpeg",
    "Appartamento-gravina-2.png",
    "Efficenza-energetica.png",
-   "271546095_4992450044122818_5503376152250670865_n.jpeg",
+   "Appartamento-gravina-3.png",
+   "Appartamento-gravina-4.png",
+   "19.190_200507_Pianta_Piano_Terra_Variante_Agenzia-1-1.png",
+   "19.190_200514_Pianta_Piano_Primo_Variante3-1.png",
+   "19.190_AT1-Pianta-Piano-Seminterrato-1.png",
+   "19.190_AT4-Pianta-Piano-Secondo-1.png"
+  ],
+  "tecniche": [
+   "Appartamento-gravina-2.png",
+   "Efficenza-energetica.png",
    "Appartamento-gravina-3.png",
    "Appartamento-gravina-4.png",
    "19.190_200507_Pianta_Piano_Terra_Variante_Agenzia-1-1.png",
@@ -133,13 +142,23 @@
    "PHOTO-2025-12-25-18-46-29.jpg",
    "PHOTO-2025-07-09-19-31-19.jpg",
    "PHOTO-2025-12-25-18-47-48.jpg",
-   "PHOTO-2025-12-29-13-56-19.jpg",
    "PHOTO-2025-12-29-13-56-18.jpg",
-   "PHOTO-2025-12-29-13-56-17.jpg",
-   "WhatsApp-Image-2021-02-22-at-16.47.53.jpeg",
    "WhatsApp-Image-2020-12-18-at-16.17.15.jpeg",
-   "WhatsApp-Image-2020-12-20-at-21.19.08.jpeg",
    "WhatsApp-Image-2020-12-27-at-11.25.15.jpeg",
+   "WhatsApp-Image-2021-02-22-at-16.47.53.jpeg",
+   "WhatsApp-Image-2020-12-20-at-21.19.08.jpeg",
+   "20.209_201221_Pianta_Piano_Terra-1.png",
+   "20.209_201221_Pianta_Piano_Primo-1.png",
+   "20.209_201221_Pianta_Piano_Secondo-1.png",
+   "20.209_201221_Pianta_Piano_Terzo-1.png",
+   "20.209_201221_Pianta_Piano_Quarto-1.png",
+   "20.209_201221_Pianta_Piano_Quinto-1.png",
+   "20.209_201221_Pianta_Piano_Sesto-1.png",
+   "20.209_201221_Pianta_Piano_Settimo-1.png"
+  ],
+  "tecniche": [
+   "WhatsApp-Image-2021-02-22-at-16.47.53.jpeg",
+   "WhatsApp-Image-2020-12-20-at-21.19.08.jpeg",
    "20.209_201221_Pianta_Piano_Terra-1.png",
    "20.209_201221_Pianta_Piano_Primo-1.png",
    "20.209_201221_Pianta_Piano_Secondo-1.png",
@@ -166,10 +185,8 @@
   "testo": "Manutenzione straordinaria, consolidamento strutturale, impianti nuovi ed efficientamento di 12 appartamenti.",
   "foto": [
    "Residence-Acaice-4-1.jpg",
-   "Residence-Acaice.jpg",
-   "Residence-Acaice-5.jpg",
-   "Residence-Acaice-4.jpg",
    "Residence-Acaice-3.jpg",
+   "Residence-Acaice-5.jpg",
    "Residence-Acaice-1.jpg"
   ]
  },
@@ -178,10 +195,9 @@
   "sotto": "Misterbianco · 2009–2017",
   "testo": "Apparta-ville con giardino in contrada Madonna degli Ammalati, zona di villeggiatura.",
   "foto": [
-   "Residence-pietra-pura-2.jpg",
-   "Residence-pietra-pura-8.jpg",
-   "Residence-pietra-pura-7.jpg",
    "Residence-pietra-pura-5.jpg",
+   "Residence-pietra-pura-2.jpg",
+   "Residence-pietra-pura-7.jpg",
    "Residence-pietra-pura-4.jpg",
    "Residence-pietra-pura-3.jpg"
   ]
@@ -193,10 +209,10 @@
   "foto": [
    "Residence-Via-Catania-1.jpg",
    "Residence-Via-Catania.jpg",
-   "Residence-Via-Catania-5.jpg",
    "Residence-Via-Catania-4.jpg",
-   "Residence-Via-Catania-3.jpg",
-   "Residence-Via-Catania-2.jpg"
+   "Residence-Via-Catania-2.jpg",
+   "Residence-Via-Catania-5.jpg",
+   "Residence-Via-Catania-3.jpg"
   ]
  },
  "residence-victoria": {
@@ -205,10 +221,10 @@
   "testo": "Fabbricato per civile abitazione e locali commerciali, per Vinci Immobiliare.",
   "foto": [
    "Victoria-residence.jpg",
-   "Victoria-residence-4.jpg",
-   "Victoria-residence-3.jpg",
+   "Victoria-residence-1.jpg",
    "Victoria-residence-2.jpg",
-   "Victoria-residence-1.jpg"
+   "Victoria-residence-3.jpg",
+   "Victoria-residence-4.jpg"
   ]
  },
  "suore-francescane-casa-anziani": {
@@ -217,9 +233,9 @@
   "testo": "La struttura per anziani delle Suore Francescane del Cuore di Gesù: elegante, accogliente, piena di pace.",
   "foto": [
    "Casa-per-Anziani-Suore-Francescane-ingresso.jpg",
+   "Casa-per-Anziani-Suore-Francescane-Del-Cuore-di-Gesu-8.jpg",
    "Casa-per-Anziani-Suore-Francescane-Del-Cuore-di-Gesu-4-scaled.jpg",
    "Casa-per-Anziani-Suore-Francescane-Del-Cuore-di-Gesu-2.jpg",
-   "Casa-per-Anziani-Suore-Francescane-Del-Cuore-di-Gesu-8.jpg",
    "Casa-per-Anziani-Suore-Francescane-Del-Cuore-di-Gesu-1.jpg"
   ]
  },
@@ -228,13 +244,12 @@
   "sotto": "Catania · 2009–2016",
   "testo": "Tutti gli interventi nel Duomo: altare, cappella della Madonna, statue, grate, museo, restauro dell'organo, sagrato.",
   "foto": [
-   "ciccio-1067.jpg",
-   "IMG_2583.jpg",
    "Immagine-177.jpg",
-   "2011-07-28-15.03.06.jpg",
-   "068-sito.jpg",
    "28022009116.jpg",
-   "Immagine-119.jpg"
+   "ciccio-1067.jpg",
+   "068-sito.jpg",
+   "IMG_2583.jpg",
+   "2011-07-28-15.03.06.jpg"
   ]
  }
 }
