@@ -67,9 +67,10 @@
   var cima = 0;
   var altezza = 0;
 
-  var PASSO = 16;   // di quanto si sposta a destra a ogni piega
-  var RAGGIO = 12;  // raggio della piega
-  var X0 = 8;       // partenza, allineata allo stelo del monogramma
+  var PASSO_MAX = 16;   // spostamento a destra a ogni piega, quando c'è spazio
+  var RAGGIO_MAX = 12;  // raggio della piega
+  var GAP_TESTO = 18;   // spazio che il filo lascia SEMPRE alla colonna di testo
+  var BORDO_MIN = 12;   // distanza minima dal bordo sinistro della finestra
 
   function costruisciFilo() {
     if (!filo || getComputedStyle(filo).display === 'none') return;
@@ -84,24 +85,46 @@
     var fine = contatti.offsetTop + Math.min(260, contatti.offsetHeight * 0.42);
 
     altezza = fine;
-    var x = X0;
-    var d = 'M' + x + ',' + partenza;
 
-    var ancore = Array.prototype.slice.call(main.querySelectorAll('[data-filo]'));
-    ancore.forEach(function (sez) {
-      var y = sez.offsetTop;
-      if (y <= partenza + RAGGIO * 2 || y >= fine - RAGGIO * 2) return;
-      d += ' L' + x + ',' + (y - RAGGIO);
-      d += ' Q' + x + ',' + y + ' ' + (x + RAGGIO) + ',' + y;
-      d += ' L' + (x + PASSO - RAGGIO) + ',' + y;
-      d += ' Q' + (x + PASSO) + ',' + y + ' ' + (x + PASSO) + ',' + (y + RAGGIO);
-      x += PASSO;
-    });
+    /* Il filo vive nel margine sinistro. Il bordo del testo si misura sulla
+       colonna vera, non su 100vw (che include la barra di scorrimento). */
+    var colonna = main.querySelector('.wrap');
+    var bordoTesto = colonna
+      ? colonna.getBoundingClientRect().left + parseFloat(getComputedStyle(colonna).paddingLeft)
+      : 0;
+    if (bordoTesto <= BORDO_MIN + GAP_TESTO) { filoPath.setAttribute('d', ''); return; }
+
+    /* le sezioni che fanno davvero una piega: servono contate prima, perché il
+       passo si divide fra loro */
+    var ancore = Array.prototype.slice.call(main.querySelectorAll('[data-filo]'))
+      .map(function (sez) { return sez.offsetTop; })
+      .filter(function (y) { return y > partenza + RAGGIO_MAX * 2 && y < fine - RAGGIO_MAX * 2; });
+
+    /* Il passo si adatta allo spazio disponibile: il filo FINISCE a GAP_TESTO dal
+       testo e parte più a sinistra, quindi non lo tocca mai, a nessuna larghezza. */
+    var xFine = bordoTesto - GAP_TESTO;
+    var passo = ancore.length ? Math.min(PASSO_MAX, (xFine - BORDO_MIN) / ancore.length) : 0;
+    if (passo < 2) passo = 0;                              // niente spazio: filo dritto
+    var raggio = Math.min(RAGGIO_MAX, passo / 2);          // mai > metà passo, se no la piega torna indietro
+    var x = xFine - passo * ancore.length;
+
+    var d = 'M' + x + ',' + partenza;
+    if (passo) {
+      ancore.forEach(function (y) {
+        d += ' L' + x + ',' + (y - raggio);
+        d += ' Q' + x + ',' + y + ' ' + (x + raggio) + ',' + y;
+        d += ' L' + (x + passo - raggio) + ',' + y;
+        d += ' Q' + (x + passo) + ',' + y + ' ' + (x + passo) + ',' + (y + raggio);
+        x += passo;
+      });
+    }
     d += ' L' + x + ',' + fine;
 
-    filo.setAttribute('viewBox', '0 0 120 ' + fine);
+    var larghezza = Math.ceil(bordoTesto);
+    filo.setAttribute('viewBox', '0 0 ' + larghezza + ' ' + fine);
     filo.setAttribute('height', fine);
     filo.style.height = fine + 'px';
+    filo.style.width = larghezza + 'px';
     filoPath.setAttribute('d', d);
     filoPunto.setAttribute('cx', x);
     filoPunto.setAttribute('cy', fine);

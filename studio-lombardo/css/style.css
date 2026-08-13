@@ -327,7 +327,7 @@ section { position: relative; }
    pagina e si piega a ogni sezione, avvicinandosi al testo fino ai contatti. */
 .filo {
   position: absolute;
-  top: 0; left: calc((100vw - min(100vw, var(--colonna))) / 2 + var(--gutter) - 46px);
+  top: 0; left: 0;                 /* posizione e larghezza le calcola il JS sul testo vero */
   width: var(--spine-w);
   pointer-events: none;
   z-index: 1;
