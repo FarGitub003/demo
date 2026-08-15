@@ -1,0 +1,7 @@
+/* onda — un'increspatura attraversa la sezione e la scopre.
+   Il taglio e' una maschera SVG generata: nessun numero magico. */
+.fmx-onda-sez { position: relative; }
+.fmx-onda-vela {
+  position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  background: var(--fmx-fondo, #0d1014);
+}
