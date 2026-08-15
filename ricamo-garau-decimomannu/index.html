@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>L'Isola del Ricamo · ricamo a mano delle sorelle Garau — Decimomannu</title>
+<meta name="description" content="L'Isola del Ricamo di Paola e Daniela Garau, Decimomannu: ricamo a mano su lino, cotone e seta. Punto antico, sfilatura, orlo a giorno, trine ad ago e a fuselli, ricami in oro. Corredo da sposa, arredi per la casa, costumi tradizionali e paramenti sacri.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#1B1310">
+<meta property="og:type" content="website">
+<meta property="og:title" content="L'Isola del Ricamo · ricamo a mano delle sorelle Garau — Decimomannu">
+<meta property="og:description" content="Ricamo a mano su lino, cotone e seta a Decimomannu: punto antico, sfilatura, trine, ricami in oro. Ogni pezzo è unico.">
+<meta property="og:image" content="https://demo.francescoar.com/ricamo-garau-decimomannu/img/hero-farfalla-intaglio.jpg">
+<meta property="og:locale" content="it_IT">
+<link rel="icon" href="img/medaglione.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "@id":"https://demo.francescoar.com/ricamo-garau-decimomannu/#isoladelricamo",
+  "name":"L'Isola del Ricamo",
+  "alternateName":"L'Isola del Ricamo di Paola Garau",
+  "description":"Ricamo a mano su lino, cotone e seta a Decimomannu: punto antico, sfilatura, orlo a giorno, trine ad ago e a fuselli, ricami in oro. Corredo da sposa, arredi per la casa, costumi tradizionali e paramenti sacri.",
+  "image":["https://demo.francescoar.com/ricamo-garau-decimomannu/img/hero-farfalla-intaglio.jpg","https://demo.francescoar.com/ricamo-garau-decimomannu/img/scialle-nero-fiori.jpg","https://demo.francescoar.com/ricamo-garau-decimomannu/img/ventola-ricamata.jpg"],
+  "telephone":"+39 347 497 2889",
+  "email":"isolaricamo@gmail.com",
+  "url":"https://www.isoladelricamo.com/",
+  "foundingDate":"2005",
+  "address":{"@type":"PostalAddress","addressLocality":"Decimomannu","addressRegion":"CA","postalCode":"09033","addressCountry":"IT"}
+}
+</script>
+<link rel="stylesheet" href="far-motion.min.css">
+<link rel="stylesheet" href="sceniche/strisce.css">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+/* ============================================================
+   L'ISOLA DEL RICAMO — demo FAR AI
+   Identità n. 29 del REGISTRO_IDENTITA: Gilda Display + Cabin.
+   Palette CAMPIONATA dalle sue foto e dal suo marchio, non scelta.
+   ============================================================ */
+:root{
+  /* fondi MISURATI */
+  --foglio:#FFFFFF;        /* fondo esatto degli 8 scatti scontornati (33 angoli su 36) */
+  --lino:#E4E0D3;          /* mediana del lino dell'hero */
+  --lino-chiaro:#F2EFE7;
+  --bottega:#1B1310;       /* dominante dei 4 scatti in laboratorio */
+  /* testo */
+  --inchiostro:#1B1310;    /* 18,30:1 sul foglio · 13,86:1 sul lino */
+  --luce:#E9E6DB;          /* 14,65:1 sulla bottega */
+  /* tinte del marchio e del filo — SOLO SEGNO/MATERIA sul chiaro */
+  --blu:#1997D9;           /* il blu del suo marchio: 3,25:1 sul foglio */
+  --oro:#BFA87E;           /* il filo d'oro della farfalla: 2,30:1 sul foglio, 7,95:1 sulla bottega */
+  /* varianti CALCOLATE a 7:1 */
+  --blu-testo:#0C4B6C;     /* 7,10:1 sul peggiore dei due fondi chiari */
+  --oro-testo:#504634;     /* 7,02:1 */
+  --cuoio-testo:#57433A;   /* 7,01:1 */
+  --blu-chiaro:#44AAE0;    /* 7,04:1 sulla bottega */
+  --display:'Gilda Display',Georgia,'Times New Roman',serif;
+  --testo:'Cabin',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --barra:72px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--foglio);color:var(--inchiostro);
+  font-family:var(--testo);font-size:17px;line-height:1.68;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+/* ⚠️ `height:auto` NON è cosmetico: senza, l'attributo height="…" dell'HTML
+   resta come altezza CSS e `aspect-ratio` viene IGNORATO — le tessere della
+   galleria rendevano alla misura nativa (1452px di altezza in una colonna da
+   352px). Misurato, non dedotto. */
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.16;margin:0}
+p{margin:0 0 1.05em}
+a{color:var(--blu-testo)}
+.wrap{width:min(1120px,92vw);margin-inline:auto}
+.stretta{width:min(760px,92vw);margin-inline:auto}
+.occhiello{
+  font-family:var(--testo);font-size:.76rem;font-weight:600;
+  letter-spacing:.19em;text-transform:uppercase;color:var(--oro-testo);margin:0 0 .9rem;
+}
+.sez{padding:88px 0}
+.sez--lino{background:var(--lino)}
+.sez--scura{background:var(--bottega);color:var(--luce)}
+.sez--scura .occhiello{color:var(--oro)}
+.sez--scura h2{color:var(--luce)}
+.sez--scura a{color:var(--blu-chiaro)}
+:where(section,footer)[id]{scroll-margin-top:calc(var(--barra) + 15px)}
+
+/* ---------- skip link ---------- */
+.skip{
+  position:absolute;left:12px;top:-70px;z-index:120;
+  background:var(--inchiostro);color:#fff;padding:11px 18px;border-radius:3px;
+  font-weight:600;text-decoration:none;
+}
+.skip:focus{top:12px}
+
+/* ---------- barra ---------- */
+#nav{
+  position:fixed;inset:0 0 auto 0;z-index:90;height:var(--barra);
+  display:flex;align-items:center;gap:18px;
+  padding:0 clamp(14px,4vw,34px);
+  background:rgba(255,255,255,.94);
+  border-bottom:1px solid rgba(27,19,16,.14);
+}
+.nav-brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--inchiostro);min-width:0}
+.nav-brand img{width:36px;height:36px;flex:0 0 36px}
+.nav-brand b{font-family:var(--display);font-weight:400;font-size:1.16rem;white-space:nowrap}
+.nav-links{display:flex;gap:26px;margin-left:auto;list-style:none;padding:0;margin-block:0}
+.nav-links a{color:var(--inchiostro);text-decoration:none;font-size:.95rem;font-weight:500;padding:6px 0;border-bottom:2px solid transparent}
+.nav-links a:hover,.nav-links a:focus-visible{border-bottom-color:var(--blu)}
+.nav-tel{margin-left:22px}
+.nav-tel a.nav-cta{
+  display:inline-block;background:var(--inchiostro);color:#fff;text-decoration:none;
+  padding:10px 18px;border-radius:2px;font-weight:600;font-size:.92rem;white-space:nowrap;
+}
+.nav-tel a.nav-cta:hover{background:var(--blu-testo)}
+.burger{
+  display:none;margin-left:auto;width:44px;height:44px;border:1px solid rgba(27,19,16,.28);
+  background:transparent;border-radius:2px;cursor:pointer;position:relative;
+}
+.burger span{position:absolute;left:11px;right:11px;height:2px;background:var(--inchiostro)}
+.burger span:nth-child(1){top:15px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:27px}
+.burger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+#mobileMenu{
+  position:fixed;inset:var(--barra) 0 auto 0;z-index:89;background:var(--foglio);
+  border-bottom:1px solid rgba(27,19,16,.16);padding:16px clamp(14px,4vw,34px) 26px;
+  transform:translateY(-14px);opacity:0;visibility:hidden;
+}
+#mobileMenu.open{transform:none;opacity:1;visibility:visible}
+#mobileMenu ul{list-style:none;padding:0;margin:0 0 16px}
+#mobileMenu a{display:block;padding:13px 2px;color:var(--inchiostro);text-decoration:none;font-size:1.06rem;border-bottom:1px solid rgba(27,19,16,.1)}
+@media (max-width:920px){
+  .nav-links{display:none}
+  .burger{display:block}
+  .nav-tel{margin-left:12px;order:3}
+}
+@media (max-width:560px){
+  .nav-brand b{font-size:1rem}
+  .nav-tel a.nav-cta{padding:10px 13px}
+}
+
+/* ---------- hero ---------- */
+.hero{padding-top:var(--barra)}
+.hero-media{position:relative;background:var(--lino)}
+/* ⛔ nessun ritaglio in pagina: il pezzo È l'hero e non si taglia.
+   Il ritaglio 2,05:1 è fatto sul FILE, misurando dove sta la farfalla
+   (y 0,280→0,834): restano 119px di lino sopra e 117 sotto. */
+.hero-media img{width:100%;height:auto}
+.hero-testo{background:var(--lino);padding:44px 0 60px;text-align:center}
+.hero-testo h1{font-size:clamp(2.15rem,6.2vw,3.7rem)}
+.hero-mest{
+  font-family:var(--testo);font-size:.78rem;font-weight:600;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--oro-testo);margin:1.1rem 0 0;
+}
+.hero-luogo{margin:.45rem 0 0;color:var(--cuoio-testo);font-size:1.02rem}
+.hero-cred{margin:1.5rem 0 0;font-size:.78rem;color:var(--cuoio-testo)}
+
+/* ---------- griglie ---------- */
+.due{display:grid;grid-template-columns:0.85fr 1.15fr;gap:clamp(26px,4.5vw,62px);align-items:center}
+@media (max-width:860px){.due{grid-template-columns:1fr}}
+/* La riga a sinistra della citazione non è una barra d'accento: è un ORLO A
+   GIORNO, cioè uno dei suoi punti — un filo interrotto a intervalli regolari.
+   1px con i vuoti, non 3px pieni. */
+.cit{
+  font-family:var(--display);font-size:clamp(1.28rem,2.5vw,1.72rem);line-height:1.42;
+  margin:0 0 1.1rem;padding-left:22px;
+  background-image:repeating-linear-gradient(to bottom,
+    var(--cuoio-testo) 0 7px, transparent 7px 12px);
+  background-size:1px 100%;background-repeat:no-repeat;background-position:left top;
+}
+.cit-fonte{font-size:.83rem;color:var(--cuoio-testo);margin:0 0 2rem;padding-left:22px}
+.sez--scura .cit{background-image:repeating-linear-gradient(to bottom,
+    var(--oro) 0 7px, transparent 7px 12px);color:var(--luce)}
+.sez--scura .cit-fonte{color:var(--oro)}
+
+.mano{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.mano figure{margin:0}
+.mano img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.mano figcaption,.cap-larga{font-size:.86rem;color:var(--oro);margin-top:.6rem;line-height:1.5}
+@media (max-width:820px){.mano{grid-template-columns:1fr}.mano img{aspect-ratio:16/10}}
+
+/* ---------- i punti ---------- */
+.punti-media img{width:100%;height:clamp(240px,38vh,420px);object-fit:cover}
+.punti-lista{list-style:none;padding:0;margin:34px 0 0;display:grid;grid-template-columns:repeat(2,1fr);gap:14px 40px}
+.punti-lista li{padding-left:22px;position:relative;line-height:1.55}
+.punti-lista li::before{
+  content:"";position:absolute;left:0;top:.62em;width:11px;height:11px;
+  border:2px solid var(--blu);border-radius:50%;
+}
+@media (max-width:720px){.punti-lista{grid-template-columns:1fr}}
+
+/* ---------- galleria ---------- */
+.gallery-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));
+  gap:clamp(18px,2.4vw,32px);margin-top:44px;padding:0;list-style:none;
+}
+.gallery-grid button{
+  display:block;width:100%;padding:0;border:0;background:var(--foglio);
+  cursor:pointer;text-align:left;font:inherit;color:inherit;
+}
+.gallery-grid button img{width:100%;aspect-ratio:4/3;object-fit:contain;background:var(--foglio)}
+.gallery-grid button:hover img,.gallery-grid button:focus-visible img{transform:scale(1.028)}
+.gallery-grid button:focus-visible{outline:3px solid var(--blu-testo);outline-offset:3px}
+/* Sette foto su otto sono scontornate su bianco PURO (misurato): poggiano sulla
+   pagina senza cornice. La ventola no — è fotografata su un fondo grigio suo
+   (150,159,161 misurati da bordo a bordo). ⇒ il suo rettangolo si DICHIARA con
+   un filo, invece di far sembrare un errore una scelta del fotografo. */
+.gallery-grid button img.ha-fondo{outline:1px solid rgba(27,19,16,.16);outline-offset:-1px}
+.gg-tit{display:block;font-weight:600;margin-top:.75rem;font-size:.99rem}
+.gg-tec{display:block;font-size:.86rem;color:var(--cuoio-testo);margin-top:.16rem;line-height:1.5}
+
+/* ---------- lightbox ---------- */
+#lightbox{
+  position:fixed;inset:0;z-index:130;background:rgba(20,14,12,.95);
+  display:flex;align-items:center;justify-content:center;padding:clamp(14px,4vw,54px);
+  opacity:0;visibility:hidden;
+}
+#lightbox.open{opacity:1;visibility:visible}
+#lightbox figure{margin:0;max-width:min(1080px,100%);max-height:100%;position:relative;z-index:1}
+#lightbox img{max-width:100%;max-height:74vh;object-fit:contain;margin-inline:auto;background:#fff}
+#lightbox figcaption{color:var(--luce);text-align:center;margin-top:1rem;font-size:.97rem;line-height:1.55}
+#lightbox figcaption b{display:block;font-family:var(--display);font-size:1.2rem;font-weight:400;margin-bottom:.3rem}
+.lb-close,.lb-prev,.lb-next{
+  position:absolute;z-index:3;border:1px solid rgba(233,230,219,.5);
+  background:rgba(20,16,11,.86);color:var(--luce);
+  width:52px;height:52px;border-radius:50%;cursor:pointer;font-size:1.5rem;line-height:1;
+  display:flex;align-items:center;justify-content:center;
+}
+.lb-close:hover,.lb-prev:hover,.lb-next:hover{background:rgba(12,75,108,.95)}
+.lb-close:focus-visible,.lb-prev:focus-visible,.lb-next:focus-visible{outline:3px solid var(--blu-chiaro);outline-offset:2px}
+.lb-close{top:clamp(12px,3vw,26px);right:clamp(12px,3vw,26px)}
+.lb-prev{left:clamp(8px,2vw,26px);top:50%;transform:translateY(-50%)}
+.lb-next{right:clamp(8px,2vw,26px);top:50%;transform:translateY(-50%)}
+
+/* ---------- marchio ---------- */
+/* stessa regola della ventola: la scansione del marchio ha un fondo suo
+   (carta bianca) e sta su una fascia lino ⇒ il rettangolo si dichiara. */
+.marchio-box{background:var(--foglio);padding:clamp(22px,4vw,46px);text-align:center;
+  outline:1px solid rgba(27,19,16,.16);outline-offset:-1px}
+.marchio-box img{margin-inline:auto;max-width:min(680px,100%)}
+
+/* ---------- contatti ---------- */
+.contatti{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,60px)}
+@media (max-width:760px){.contatti{grid-template-columns:1fr}}
+.rec{list-style:none;padding:0;margin:0}
+.rec li{padding:13px 0;border-bottom:1px solid rgba(233,230,219,.2)}
+.rec b{display:block;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--oro);font-weight:600;margin-bottom:.22rem}
+.rec a{color:var(--blu-chiaro);text-decoration:none;font-size:1.14rem}
+.rec a:hover{text-decoration:underline}
+/* ⚠️ selettore COMPOSTO apposta: `.sez--scura a` (classe+elemento) batte
+   `.cta-tel` (classe singola) e gli mangiava il colore in silenzio — misurato
+   2,08:1 prima del fix. Il colore dichiarato non è quello che arriva a schermo. */
+.sez--scura a.cta-tel,.cta-tel{
+  display:inline-block;margin-top:26px;background:var(--luce);color:var(--bottega);
+  text-decoration:none;padding:15px 30px;border-radius:2px;font-weight:700;font-size:1.04rem;
+}
+.sez--scura a.cta-tel:hover,.cta-tel:hover{background:var(--oro);color:var(--bottega)}
+
+/* ---------- footer ---------- */
+footer{background:var(--lino);padding:52px 0 46px;font-size:.86rem;color:var(--cuoio-testo)}
+footer p{margin:0 0 .7em}
+.f-marchio{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.f-marchio img{width:40px;height:40px}
+.f-marchio b{font-family:var(--display);font-weight:400;font-size:1.16rem;color:var(--inchiostro)}
+.f-ai{margin-top:22px;padding-top:20px;border-top:1px solid rgba(27,19,16,.18);font-size:.8rem}
+
+/* ---------- movimento: OPT-IN, mai opt-out (P-023) ----------
+   Il movimento si AGGIUNGE dentro `no-preference`. Così, con «riduci
+   movimento» attivo, non c'è niente da disfare: i pannelli aprono e chiudono
+   lo stesso, solo di colpo. ⛔ Un blocco `reduce` che spegne le transizioni
+   è la forma sbagliata: dice che il movimento è il caso normale.
+   Delle comparse [data-fm] si occupa già il kit, con la stessa logica. */
+@media (prefers-reduced-motion:no-preference){
+  .burger span{transition:transform .25s ease,opacity .2s ease}
+  #mobileMenu{transition:transform .28s ease,opacity .22s ease,visibility .28s}
+  .gallery-grid button img{transition:transform .35s ease}
+  #lightbox{transition:opacity .26s ease,visibility .26s}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Vai al contenuto</a>
+
+<header id="nav">
+  <a class="nav-brand" href="#top">
+    <img src="img/medaglione.png" alt="Marchio de L'Isola del Ricamo: una G in un anello di cerchi intrecciati" width="36" height="36">
+    <b>L'Isola del Ricamo</b>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#sorelle">Chi siamo</a></li>
+    <li><a href="#mano">La mano</a></li>
+    <li><a href="#punti">I punti</a></li>
+    <li><a href="#pezzi">I pezzi</a></li>
+    <li><a href="#contatti">Contatti</a></li>
+  </ul>
+  <div class="nav-tel"><a class="nav-cta" href="tel:+393474972889">Chiama</a></div>
+  <button class="burger" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobileMenu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav id="mobileMenu" aria-label="Menu principale">
+  <ul>
+    <li><a href="#sorelle">Chi siamo</a></li>
+    <li><a href="#mano">La mano</a></li>
+    <li><a href="#punti">I punti</a></li>
+    <li><a href="#pezzi">I pezzi</a></li>
+    <li><a href="#contatti">Contatti</a></li>
+  </ul>
+  <a class="nav-cta" href="tel:+393474972889" style="display:inline-block;background:var(--inchiostro);color:#fff;text-decoration:none;padding:12px 22px;border-radius:2px;font-weight:600">Chiama 347 497 2889</a>
+</nav>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ============ HERO ============ -->
+<section class="hero" aria-labelledby="h-titolo">
+  <div class="hero-media fm-palco" data-fms="strisce" data-fms-quante="12" data-fms-durata="900">
+    <picture>
+      <source media="(max-width:640px)" srcset="img/hero-farfalla-intaglio-mob.jpg">
+      <img src="img/hero-farfalla-intaglio.jpg" width="1800" height="877" fetchpriority="high"
+           alt="Farfalla ricamata a intaglio su una tela naturale a trama larga: il contorno delle ali è a punto pieno color oro e i vuoti delle ali sono chiusi da un retino di fili">
+    </picture>
+  </div>
+  <div class="hero-testo">
+    <div class="stretta">
+      <h1 id="h-titolo">L'Isola del Ricamo</h1>
+      <p class="hero-mest">Ricamo a mano · le sorelle Garau</p>
+      <p class="hero-luogo">Decimomannu, a venti chilometri da Cagliari</p>
+      <p class="hero-cred">Fotografie dalla vetrina dell'artigianato artistico della Regione Sardegna e dal sito de L'Isola del Ricamo. Restano di proprietà dell'attività.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHI SIAMO ============ -->
+<section class="sez" id="sorelle" aria-labelledby="h-sorelle">
+  <div class="wrap due">
+    <figure style="margin:0" data-fm="sali">
+      <img src="img/ritratto-titolari-bn.jpg" width="1400" height="933"
+           alt="Ritratto in bianco e nero delle due titolari de L'Isola del Ricamo, affiancate su fondo bianco: quella di sinistra tiene una mano sulla spalla dell'altra">
+    </figure>
+    <div data-fm="sali">
+      <p class="occhiello">Chi siamo</p>
+      <h2 id="h-sorelle" style="font-size:clamp(1.75rem,3.4vw,2.5rem);margin-bottom:1.1rem">Due sorelle, un mestiere imparato in casa</h2>
+      <p class="cit">«Sin da bambine abbiamo preso dimestichezza con ago, filo e uncinetto, manualità apprese da nonna e mamma.»</p>
+      <p class="cit-fonte">Paola Garau, intervista pubblicata il 21 settembre 2018</p>
+      <p>Paola e Daniela Garau hanno dato vita a <b>L'Isola del Ricamo nel 2005</b>, a Decimomannu. La ditta è individuale ed è intestata a Paola.</p>
+      <p>Dopo la famiglia sono venuti i corsi professionali, e con loro le tecniche nuove: «Abbiamo migliorato le tecniche e ne abbiamo apprese di nuove».</p>
+      <p>Oggi il lavoro guarda in due direzioni insieme: «Siamo alla continua ricerca di tecniche, materiali e disegni per ampliare la collezione con nuovi stili oppure reinterpretando antichi manufatti».</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LA MANO ============ -->
+<section class="sez sez--scura" id="mano" aria-labelledby="h-mano">
+  <div class="wrap">
+    <div class="stretta" style="width:min(720px,100%);margin-inline:0" data-fm="sali">
+      <p class="occhiello">La mano</p>
+      <h2 id="h-mano" style="font-size:clamp(1.75rem,3.4vw,2.5rem);margin-bottom:1.1rem">Si fa a mano, e si vede da vicino</h2>
+      <p>La produzione è in prevalenza a mano, in parte a macchina. Quello che non cambia è il risultato: «Ma i nostri sono tutti “pezzi unici”, dagli abiti tradizionali agli arredi per la casa».</p>
+    </div>
+    <div class="mano" data-fm-passo="140">
+      <figure data-fm="sali">
+        <img src="img/mani-ago-filo.jpg" width="1600" height="1066"
+             alt="Primo piano di due mani che tendono un tessuto chiaro e tirano l'ago attraverso la stoffa">
+        <figcaption>L'ago passa e torna: il punto si forma un filo alla volta.</figcaption>
+      </figure>
+      <figure data-fm="sali">
+        <img src="img/mani-velo.jpg" width="1600" height="1066"
+             alt="Primo piano di due mani che ricamano un velo leggerissimo teso su una forma">
+        <figcaption>Il velo si tiene teso con le dita mentre l'ago lo attraversa.</figcaption>
+      </figure>
+      <figure data-fm="sali">
+        <img src="img/ricama-alla-finestra.jpg" width="1600" height="1066"
+             alt="Una delle due titolari, seduta accanto a una finestra, ricama un telo color panna; dietro di lei sono appesi uno scialle scuro con frangia e ricami a fiori e un velo bianco a fiorellini sopra una gonna a righe rosse e nere">
+        <figcaption>Alla luce della finestra; dietro, un capo scuro ricamato a fiori.</figcaption>
+      </figure>
+    </div>
+    <div style="margin-top:44px" data-fm="sali">
+      <figure style="margin:0">
+        <img src="img/laboratorio-due-titolari.jpg" width="1600" height="1066"
+             alt="Le due titolari al lavoro nel laboratorio: una ricama un tessuto teso su un supporto imbottito, l'altra stira un capo scuro sullo stesso tavolo">
+        <figcaption class="cap-larga">Il laboratorio: si ricama e si rifinisce sullo stesso tavolo.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ I PUNTI ============ -->
+<section class="punti-media">
+  <img src="img/rose-ricamate.jpg" width="1700" height="1274" loading="lazy"
+       alt="Dettaglio di un ricamo su tessuto chiaro: un mazzo a colori con rose rosa, boccioli, due spighe color ocra e fiordalisi lilla fra foglie verdi">
+</section>
+<section class="sez sez--lino" id="punti" aria-labelledby="h-punti">
+  <div class="wrap">
+    <div style="max-width:760px" data-fm="sali">
+      <p class="occhiello">I punti</p>
+      <h2 id="h-punti" style="font-size:clamp(1.75rem,3.4vw,2.5rem);margin-bottom:1.1rem">Quello che sappiamo fare, detto con i suoi nomi</h2>
+      <p>Le lavorazioni si eseguono manualmente su tessuti naturali: lana, lino e cotone, e su tessuti leggeri come organza di seta, tulle di cotone e tutti i tipi di seta.</p>
+    </div>
+    <ul class="punti-lista" data-fm="sali">
+      <li>Tutti i punti di ricamo classici, in bianco e a colori</li>
+      <li>Punti di sfilatura, orlo a giorno e smerli</li>
+      <li>Ricami a fili contati: punto antico e retini di fondo</li>
+      <li>Trine e chiacchierino</li>
+      <li>Trine ad ago e a fuselli</li>
+      <li>Lavorazioni a nodi, come il macramè</li>
+      <li>Ricami e pizzi con filati metallici e pietre</li>
+      <li>Ricami in filigrana d'oro e d'argento</li>
+    </ul>
+    <div style="max-width:760px;margin-top:38px" data-fm="sali">
+      <p class="cit">«Corredo da sposa, sicuramente, poi tovaglie, tende, copriletti e paramenti per le chiese.»</p>
+      <p class="cit-fonte">Paola Garau, alla domanda su quali siano i manufatti più richiesti</p>
+      <p>Si lavora anche su misura: capi e accessori, arredi per la casa, costumi tradizionali sardi, arredi e paramenti sacri, corredini e bomboniere.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ I PEZZI ============ -->
+<section class="sez" id="pezzi" aria-labelledby="h-pezzi">
+  <div class="wrap">
+    <div style="max-width:760px" data-fm="sali">
+      <p class="occhiello">I pezzi</p>
+      <h2 id="h-pezzi" style="font-size:clamp(1.75rem,3.4vw,2.5rem);margin-bottom:1.1rem">Ogni pezzo è unico</h2>
+      <p>«Ogni pezzo è unico, frutto dello studio di antichi disegni, e di una ricerca accurata dei materiali, delle linee, dei colori, utilizzando tessuti preziosi come i broccati, le sete, le lane e i velluti non comunemente disponibili in commercio.»</p>
+    </div>
+
+    <ul class="gallery-grid" id="gallery">
+      <li><button type="button" data-src="img/ventola-ricamata.jpg"
+          data-tit="Ventola ricamata" data-tec="Motivo geometrico a fili contati e bordo a trina sopra e sotto">
+        <img class="ha-fondo" src="img/ventola-ricamata.jpg" loading="lazy" width="1700" height="1283"
+             alt="Ventola da parete in tessuto naturale color crema, con tre motivi geometrici color nocciola uniti da una linea ondulata e un bordo a trina lungo il profilo superiore e inferiore">
+        <span class="gg-tit">Ventola ricamata</span>
+        <span class="gg-tec">Motivo geometrico a fili contati e bordo a trina sopra e sotto</span>
+      </button></li>
+
+      <li><button type="button" data-src="img/scialle-nero-fiori.jpg"
+          data-tit="Scialle nero" data-tec="Ricamo floreale a colori e frangia annodata">
+        <img src="img/scialle-nero-fiori.jpg" loading="lazy" width="1800" height="1318"
+             alt="Scialle nero drappeggiato a punta, con lunga frangia nera e ricami di fiori a colori lungo i due lati e un mazzo al centro">
+        <span class="gg-tit">Scialle nero</span>
+        <span class="gg-tec">Ricamo floreale a colori e frangia annodata</span>
+      </button></li>
+
+      <li><button type="button" data-src="img/tenda-frangia-macrame.jpg"
+          data-tit="Pannello con macramè" data-tec="Orlo a giorno in alto, fascia a macramè e frangia lunga in basso">
+        <img src="img/tenda-frangia-macrame.jpg" loading="lazy" width="1700" height="965"
+             alt="Pannello di tessuto naturale con un orlo a giorno orizzontale nella parte alta e, in basso, una fascia a macramè a rombi che termina in una frangia lunga e sciolta">
+        <span class="gg-tit">Pannello con macramè</span>
+        <span class="gg-tec">Orlo a giorno in alto, fascia a macramè e frangia lunga in basso</span>
+      </button></li>
+
+      <li><button type="button" data-src="img/telo-losanghe.jpg"
+          data-tit="Telo con losanghe" data-tec="Losanghe a fili contati tono su tono, bande a giorno e bordo a picot">
+        <img src="img/telo-losanghe.jpg" loading="lazy" width="1800" height="891"
+             alt="Telo avorio con due losanghe ricamate a fili contati nello stesso tono del tessuto, una banda a giorno orizzontale fra le due, due brevi bande a giorno che scendono dal bordo alto e un bordo a picot lungo il profilo">
+        <span class="gg-tit">Telo con losanghe</span>
+        <span class="gg-tec">Losanghe a fili contati tono su tono, bande a giorno, bordo a picot</span>
+      </button></li>
+
+      <li><button type="button" data-src="img/striscia-frange-giorno.jpg"
+          data-tit="Striscia con frange" data-tec="Bande a giorno verticali e riquadro traforato al centro">
+        <img src="img/striscia-frange-giorno.jpg" loading="lazy" width="1800" height="632"
+             alt="Striscia di tessuto beige con frange chiare sui due lati corti, bande a giorno verticali e un piccolo riquadro traforato spostato verso destra">
+        <span class="gg-tit">Striscia con frange</span>
+        <span class="gg-tec">Bande a giorno verticali e riquadro traforato al centro</span>
+      </button></li>
+
+      <li><button type="button" data-src="img/striscia-avorio-traforo.jpg"
+          data-tit="Striscia avorio" data-tec="Frange annodate e banda traforata a occhielli tondi">
+        <img src="img/striscia-avorio-traforo.jpg" loading="lazy" width="1800" height="758"
+             alt="Striscia di tessuto avorio con frange annodate sui due lati corti e una banda verticale traforata a occhielli tondi, spostata verso sinistra">
+        <span class="gg-tit">Striscia avorio</span>
+        <span class="gg-tec">Frange annodate e banda traforata a occhielli tondi</span>
+      </button></li>
+
+      <li><button type="button" data-src="img/telo-zigzag.jpg"
+          data-tit="Telo bianco" data-tec="Orlo a giorno e volute agli angoli opposti">
+        <img src="img/telo-zigzag.jpg" loading="lazy" width="1800" height="1062"
+             alt="Telo rettangolare bianco con orlo a giorno lungo il bordo, linee ricamate a zigzag in filo chiaro e una piccola voluta a due angoli opposti">
+        <span class="gg-tit">Telo bianco</span>
+        <span class="gg-tec">Orlo a giorno e volute agli angoli opposti</span>
+      </button></li>
+
+      <li><button type="button" data-src="img/quadro-cornice-azzurra.jpg"
+          data-tit="Ricamo incorniciato" data-tec="Ricamo a rilievo, con perline sugli stami">
+        <img src="img/quadro-cornice-azzurra.jpg" loading="lazy" width="1100" height="1452"
+             alt="Quadro con cornice di legno azzurra: su tessuto blu, una farfalla ricamata a rilievo in due toni di azzurro e, accanto, un fiore rosa dal gambo ricurvo con perline in punta agli stami">
+        <span class="gg-tit">Ricamo incorniciato</span>
+        <span class="gg-tec">Ricamo a rilievo, con perline sugli stami</span>
+      </button></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ IL MARCHIO ============ -->
+<section class="sez sez--lino" id="marchio" aria-labelledby="h-marchio">
+  <div class="wrap due">
+    <div data-fm="sali">
+      <p class="occhiello">Il marchio</p>
+      <h2 id="h-marchio" style="font-size:clamp(1.75rem,3.4vw,2.5rem);margin-bottom:1.1rem">Il segno è già suo</h2>
+      <p>Una <b>G</b> dentro un anello di cerchi intrecciati, e la <b>sagoma della Sardegna al posto della «o»</b> di «Isola»: una lettera per colore.</p>
+      <p style="margin-bottom:0">È il marchio che sta sul sito de L'Isola del Ricamo, ripreso da lì. È il motivo per cui in questa pagina non c'è nessun segno inventato.</p>
+    </div>
+    <div class="marchio-box" data-fm="sali">
+      <img src="img/marchio-esteso.jpg" width="1400" height="335"
+           alt="Il marchio de L'Isola del Ricamo: a sinistra una G gotica dentro un anello di cerchi intrecciati azzurri, a destra la scritta «L'Isola del Ricamo» con ogni lettera di un colore diverso e la sagoma della Sardegna al posto della o di Isola">
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTATTI ============ -->
+<section class="sez sez--scura" id="contatti" aria-labelledby="h-contatti">
+  <div class="wrap contatti">
+    <div data-fm="sali">
+      <p class="occhiello">Dove siamo</p>
+      <h2 id="h-contatti" style="font-size:clamp(1.75rem,3.4vw,2.5rem);margin-bottom:1.1rem">Siamo a Decimomannu</h2>
+      <p>Molti dei pezzi si fanno su misura: corredi, tende, capi e accessori, costumi tradizionali, arredi e paramenti sacri.</p>
+      <p class="cit">«In occasione dei grandi eventi identitari ci arrivano richieste da tutti i paesi della Sardegna.»</p>
+      <p class="cit-fonte" style="margin-bottom:0">Paola Garau, intervista pubblicata il 21 settembre 2018</p>
+      <a class="cta-tel" href="tel:+393474972889">Chiama 347 497 2889</a>
+    </div>
+    <div data-fm="sali">
+      <ul class="rec">
+        <li><b>Telefono</b><a href="tel:+393474972889">347 497 2889</a></li>
+        <li><b>Altro numero</b><a href="tel:+390708009743">070 800 9743</a></li>
+        <li><b>Email</b><a href="mailto:isolaricamo@gmail.com">isolaricamo@gmail.com</a></li>
+        <li><b>Comune</b><span style="font-size:1.14rem">Decimomannu (CA)</span></li>
+        <li><b>Orari</b><span style="font-size:1.14rem">Da confermare</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-marchio">
+      <img src="img/medaglione.png" alt="" width="40" height="40">
+      <b>L'Isola del Ricamo</b>
+    </div>
+    <p>Ricamo a mano delle sorelle Paola e Daniela Garau · Decimomannu (CA) · <a href="tel:+393474972889">347 497 2889</a></p>
+    <p>Fotografie: vetrina dell'artigianato artistico della Regione Sardegna e sito de L'Isola del Ricamo. Restano di proprietà dell'attività.</p>
+    <p class="f-ai">Sito dimostrativo realizzato con AI da FAR AI · contenuti da rivedere con l'attività prima della pubblicazione<br>
+    Testi e fotografie provengono dal sito attuale di L'Isola del Ricamo e dalle sue schede pubbliche, e restano di proprietà dell'attività.</p>
+  </div>
+</footer>
+
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Fotografia ingrandita" hidden>
+  <button class="lb-close" type="button" aria-label="Chiudi">&times;</button>
+  <button class="lb-prev" type="button" aria-label="Foto precedente">&#8249;</button>
+  <button class="lb-next" type="button" aria-label="Foto successiva">&#8250;</button>
+  <figure>
+    <img id="lbImg" src="img/ventola-ricamata.jpg" alt="Ventola da parete in tessuto naturale color crema, con tre motivi geometrici color nocciola uniti da una linea ondulata e un bordo a trina lungo il profilo superiore e inferiore">
+    <figcaption id="lbCap"><b>Ventola ricamata</b>Motivo geometrico a fili contati e bordo a trina sopra e sotto</figcaption>
+  </figure>
+</div>
+
+<noscript><style>
+  #nav{position:static;height:auto;flex-wrap:wrap;padding-block:10px}
+  .burger{display:none!important}
+  .nav-links{display:flex!important;flex-wrap:nowrap;overflow-x:auto;gap:16px;margin-left:0;width:100%;order:5;padding-bottom:4px}
+  .nav-links a{white-space:nowrap;font-size:.9rem}
+  .nav-tel{margin-left:auto}
+  .hero{padding-top:0}
+  [data-fm]{opacity:1!important;transform:none!important}
+  #lightbox{display:none!important}
+</style></noscript>
+
+<script src="far-motion.min.js"></script>
+<script src="sceniche/strisce.js"></script>
+<script>
+(function(){
+  /* ---- menu mobile ---- */
+  var burger=document.querySelector('.burger'),
+      menu=document.getElementById('mobileMenu'),
+      nav=document.getElementById('nav'),
+      main=document.getElementById('main'),
+      piede=document.querySelector('footer'),
+      skip=document.querySelector('.skip');
+
+  function inerti(on){
+    [main,piede,skip].forEach(function(n){ if(n){ on?n.setAttribute('inert',''):n.removeAttribute('inert'); } });
+  }
+  function apriMenu(){
+    menu.classList.add('open'); burger.classList.add('open');
+    burger.setAttribute('aria-expanded','true'); burger.setAttribute('aria-label','Chiudi il menu');
+    inerti(true);
+    attendi(menu,function(){ var a=menu.querySelector('a'); if(a) a.focus(); });
+  }
+  function chiudiMenu(torna){
+    menu.classList.remove('open'); burger.classList.remove('open');
+    burger.setAttribute('aria-expanded','false'); burger.setAttribute('aria-label','Apri il menu');
+    inerti(false);
+    if(torna!==false) burger.focus();
+  }
+  /* Non si conta il numero di fotogrammi: si aspetta la CONDIZIONE vera
+     (visibility), perché finché è hidden il .focus() fallisce in silenzio. */
+  function attendi(pannello,poi){
+    var tetto=0;
+    (function giro(){
+      if(getComputedStyle(pannello).visibility==='visible') return poi();
+      if(++tetto>40) return poi();
+      requestAnimationFrame(giro);
+    })();
+  }
+  burger.addEventListener('click',function(){
+    menu.classList.contains('open')?chiudiMenu():apriMenu();
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){ chiudiMenu(false); });
+  });
+
+  /* ---- lightbox ---- */
+  var lb=document.getElementById('lightbox'),
+      lbImg=document.getElementById('lbImg'),
+      lbCap=document.getElementById('lbCap'),
+      tasti=Array.prototype.slice.call(document.querySelectorAll('#gallery button')),
+      chiudiB=lb.querySelector('.lb-close'),
+      prevB=lb.querySelector('.lb-prev'),
+      nextB=lb.querySelector('.lb-next'),
+      idx=0, apertoDa=null;
+
+  function mostra(i){
+    idx=(i+tasti.length)%tasti.length;
+    var b=tasti[idx], im=b.querySelector('img');
+    lbImg.src=b.getAttribute('data-src');
+    lbImg.alt=im?im.getAttribute('alt'):'';
+    lbCap.innerHTML='<b>'+b.getAttribute('data-tit')+'</b>'+b.getAttribute('data-tec');
+  }
+  function apriLb(i,da){
+    apertoDa=da||null; mostra(i);
+    lb.hidden=false;
+    requestAnimationFrame(function(){ lb.classList.add('open'); });
+    inerti(true); nav.setAttribute('inert','');
+    attendi(lb,function(){ chiudiB.focus(); });
+  }
+  function chiudiLb(){
+    lb.classList.remove('open');
+    inerti(false); nav.removeAttribute('inert');
+    setTimeout(function(){ lb.hidden=true; },300);
+    if(apertoDa) apertoDa.focus();
+  }
+  tasti.forEach(function(b,i){
+    b.addEventListener('click',function(){ apriLb(i,b); });
+  });
+  chiudiB.addEventListener('click',chiudiLb);
+  prevB.addEventListener('click',function(){ mostra(idx-1); });
+  nextB.addEventListener('click',function(){ mostra(idx+1); });
+  lb.addEventListener('click',function(e){ if(e.target===lb) chiudiLb(); });
+
+  /* ---- tastiera: Esc, frecce, trappola del Tab su OGNI pannello ---- */
+  function fuocabili(root){
+    return Array.prototype.slice.call(root.querySelectorAll(
+      'a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])'
+    ));
+  }
+  document.addEventListener('keydown',function(e){
+    var lbAperta=lb.classList.contains('open'), menuAperto=menu.classList.contains('open');
+    if(e.key==='Escape'){
+      if(lbAperta){ e.preventDefault(); chiudiLb(); }
+      else if(menuAperto){ e.preventDefault(); chiudiMenu(); }
+      return;
+    }
+    if(lbAperta){
+      if(e.key==='ArrowLeft'){ e.preventDefault(); mostra(idx-1); return; }
+      if(e.key==='ArrowRight'){ e.preventDefault(); mostra(idx+1); return; }
+    }
+    if(e.key!=='Tab') return;
+    var pannello = lbAperta?lb : (menuAperto?menu:null);
+    if(!pannello) return;
+    /* ⛔ niente filtro su offsetParent: dentro un position:fixed è null
+       anche per gli elementi perfettamente visibili. */
+    var f=fuocabili(pannello); if(!f.length) return;
+    var primo=f[0], ultimo=f[f.length-1];
+    if(e.shiftKey && document.activeElement===primo){ e.preventDefault(); ultimo.focus(); }
+    else if(!e.shiftKey && document.activeElement===ultimo){ e.preventDefault(); primo.focus(); }
+  });
+})();
+</script>
+<script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
