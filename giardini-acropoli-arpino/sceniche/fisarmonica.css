@@ -1,0 +1,11 @@
+/* fisarmonica — pannelli verticali che si aprono al passaggio del cursore.
+   Da tastiera si aprono col focus: non e' un effetto solo per il mouse. */
+.fmx-fisarmonica { display: flex; gap: 6px; overflow: hidden; }
+.fmx-fisarmonica > * {
+  flex: 1 1 0; min-width: 0; position: relative; overflow: hidden;
+  transition: flex-grow .55s cubic-bezier(.22, 1, .36, 1);
+}
+.fmx-fisarmonica > *:hover, .fmx-fisarmonica > *:focus-within { flex-grow: var(--fmx-apri, 3.2); }
+@media (prefers-reduced-motion: reduce) {
+  .fmx-fisarmonica > * { transition: none; }
+}

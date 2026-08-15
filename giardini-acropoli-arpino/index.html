@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>I Giardini dell'Acropoli — Parco Ristorante ad Arpino (FR)</title>
+<meta name="description" content="Parco ristorante a Civitavecchia di Arpino, sotto le mura ciclopiche: due sale a vetri con 110 posti, bar salotto, aree picnic, area camper e parco giochi.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="I Giardini dell'Acropoli — Parco Ristorante ad Arpino (FR)">
+<meta property="og:description" content="Sotto le mura ciclopiche di Civitavecchia di Arpino: ristorante, bar salotto, picnic, area camper e parco giochi.">
+<meta property="og:image" content="https://demo.francescoar.com/giardini-acropoli-arpino/img/veduta-borgo-dalle-mura.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="stylesheet" href="far-motion.min.css">
+<script src="far-motion.min.js"></script>
+<link rel="stylesheet" href="sceniche/fisarmonica.css">
+<script src="sceniche/fisarmonica.js" defer></script>
+<style>
+/* ============================================================================
+   I Giardini dell'Acropoli — palette MISURATA (vedi dossier §4)
+   verde e rosso vengono dal LORO logo e passano il contrasto come sono.
+   ========================================================================== */
+:root{
+  --foglio:#F7F3EC; --carta:#FFFDF8; --inchiostro:#1B1A16;
+  --verde:#055D24; --rosso:#771417;
+  --notte:#241A21; --bosco:#2B2C19; --luce:#F6F1E8;
+  --pietra:#565248; --oliva:#585327; --stoppia:#998F6B;
+  --verde-luce:#61B980; --rosso-luce:#EE8B8E; --pietra-luce:#ABA79D;
+  --display:Marcellus,"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --testo:"Public Sans","Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
+  --barra:74px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{overflow-x:clip;scroll-behavior:smooth}
+body{margin:0;background:var(--foglio);color:var(--inchiostro);
+  font-family:var(--testo);font-size:17px;line-height:1.65;
+  -webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.14;
+  letter-spacing:-.012em;margin:0}
+p{margin:0 0 1em}
+a{color:var(--verde)}
+.avvolge{width:min(1140px,100% - 44px);margin-inline:auto}
+.stretto{width:min(760px,100% - 44px);margin-inline:auto}
+section{scroll-margin-top:calc(var(--barra) + 15px)}
+
+/* --- salta al contenuto ------------------------------------------------- */
+.salta{position:absolute;left:12px;top:-64px;z-index:120;background:var(--notte);
+  color:var(--luce);padding:11px 18px;border-radius:8px;font-weight:600;
+  text-decoration:none;transition:top .18s}
+.salta:focus{top:12px}
+
+/* --- barra --------------------------------------------------------------- */
+#nav{position:sticky;top:0;z-index:100;background:var(--carta);
+  border-bottom:1px solid #E4DCCE;min-height:var(--barra)}
+.nav-int{display:flex;align-items:center;gap:22px;min-height:var(--barra);
+  width:min(1140px,100% - 32px);margin-inline:auto}
+.nav-marchio{display:flex;align-items:center;text-decoration:none;flex:0 0 auto}
+.nav-marchio img{width:168px;height:auto}
+.nav-links{display:flex;gap:22px;margin-left:auto;list-style:none;padding:0;margin-block:0}
+.nav-links a{color:var(--pietra);text-decoration:none;font-size:15px;font-weight:600;
+  padding:6px 2px;border-bottom:2px solid transparent}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--verde);border-bottom-color:var(--verde)}
+.nav-tel{flex:0 0 auto}
+.nav-tel a.nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--verde);
+  color:#FFFFFF;text-decoration:none;font-weight:700;font-size:15px;
+  padding:11px 17px;border-radius:999px;white-space:nowrap}
+.nav-tel a.nav-cta:hover,.nav-tel a.nav-cta:focus-visible{background:#04471B}
+.burger{display:none;margin-left:auto;width:44px;height:44px;border:1px solid #DCD3C3;
+  border-radius:10px;background:var(--carta);cursor:pointer;padding:0;
+  align-items:center;justify-content:center}
+.burger span{display:block;width:20px;height:2px;background:var(--inchiostro);
+  position:relative}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;
+  width:20px;height:2px;background:var(--inchiostro)}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+/* il menu scende SOTTO la barra: cosi' il burger resta scoperto e fa da
+   interruttore (se lo coprisse, sweep_mouse.py non potrebbe mai richiuderlo). */
+#mobileMenu{position:fixed;inset:var(--barra) 0 auto;z-index:99;background:var(--notte);
+  padding:12px 30px 26px;display:flex;flex-direction:column;gap:2px;
+  max-height:calc(100svh - var(--barra));overflow-y:auto;
+  transform:translate3d(0,-14px,0);opacity:0;visibility:hidden;
+  transition:transform .3s cubic-bezier(.22,1,.36,1),opacity .3s,visibility .3s}
+#mobileMenu.open{transform:none;opacity:1;visibility:visible}
+#mobileMenu a{color:var(--luce);text-decoration:none;font-family:var(--display);
+  font-size:25px;padding:12px 0;border-bottom:1px solid #4A3F42}
+#mobileMenu a:last-of-type{border-bottom:0}
+.burger[aria-expanded="true"]{background:var(--notte);border-color:var(--notte)}
+.burger[aria-expanded="true"] span{background:transparent}
+.burger[aria-expanded="true"] span::before{top:0;transform:rotate(45deg);background:var(--luce)}
+.burger[aria-expanded="true"] span::after{top:0;transform:rotate(-45deg);background:var(--luce)}
+
+/* --- hero: la foto sopra, il TITOLO SOTTO (dossier §4) ------------------- */
+.hero-foto{width:100%;max-width:1560px;margin-inline:auto}
+.hero-foto img{width:100%;height:auto;aspect-ratio:1200/420;object-fit:cover}
+@media (max-width:640px){
+  /* a 390px una fascia 2,86:1 e' alta 136px: il borgo non si legge piu'.
+     Si stringe il taglio (16:9) tenendo il borgo al centro, senza ingrandire nulla. */
+  .hero-foto img{aspect-ratio:16/9;object-position:56% center}
+}
+.hero-testo{padding:38px 0 46px}
+.occhiello{font-size:13px;letter-spacing:.15em;text-transform:uppercase;
+  font-weight:700;color:var(--rosso);margin:0 0 12px}
+h1{font-size:clamp(2.3rem,6.4vw,4.15rem)}
+.sotto-h1{font-size:clamp(1.02rem,2.1vw,1.2rem);color:var(--pietra);
+  max-width:58ch;margin:16px 0 0}
+.hero-dati{display:flex;flex-wrap:wrap;gap:12px 26px;margin-top:26px;
+  align-items:center}
+.hero-dati .btn{display:inline-flex;align-items:center;gap:9px;background:var(--verde);
+  color:#FFFFFF;text-decoration:none;font-weight:700;padding:14px 24px;border-radius:999px}
+.hero-dati .btn:hover,.hero-dati .btn:focus-visible{background:#04471B}
+.hero-dati .dove{color:var(--pietra);font-size:15.5px;font-weight:600}
+
+/* --- divisore che si disegna -------------------------------------------- */
+.divisore{display:block;width:min(1140px,100% - 44px);margin:0 auto;height:14px}
+.divisore line{stroke:var(--stoppia);stroke-width:2}
+
+/* --- sezioni ------------------------------------------------------------- */
+.sez{padding:62px 0}
+.sez-occhiello{font-size:12.5px;letter-spacing:.15em;text-transform:uppercase;
+  font-weight:700;color:var(--verde);margin:0 0 12px}
+h2{font-size:clamp(1.72rem,3.9vw,2.62rem);margin-bottom:20px}
+h3{font-size:1.16rem;margin-bottom:8px}
+.testo-lungo p{max-width:64ch}
+.scuro{background:var(--notte);color:var(--luce)}
+.scuro h2,.scuro h3{color:var(--luce)}
+.scuro .sez-occhiello{color:var(--verde-luce)}
+.scuro p{color:var(--luce)}
+.scuro .nota{color:var(--pietra-luce)}
+.citazione{font-family:var(--display);font-size:clamp(1.16rem,2.5vw,1.5rem);
+  line-height:1.42;margin:30px 0;max-width:56ch;position:relative;
+  padding-left:clamp(26px,4vw,46px)}
+.citazione::before{content:"\201C";position:absolute;left:0;top:-.16em;
+  font-family:var(--display);font-size:2.85em;line-height:1;color:var(--rosso);
+  opacity:.34;pointer-events:none}
+.scuro .citazione::before{color:var(--rosso-luce);opacity:.42}
+.nota{font-size:14.5px;color:var(--pietra)}
+
+/* --- fascia foto larga --------------------------------------------------- */
+.fascia{width:100%;max-width:1560px;margin:0 auto}
+.fascia img{width:100%;height:auto}
+.fascia figcaption{width:min(1140px,100% - 44px);margin:12px auto 0;padding-bottom:22px;
+  font-size:14px;color:var(--pietra)}
+.scuro .fascia figcaption{color:var(--pietra-luce)}
+
+/* --- i numeri ------------------------------------------------------------ */
+.cifre{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));
+  gap:18px;margin-top:32px}
+.cifra{background:var(--carta);border:1px solid #E7DFD2;border-radius:14px;padding:20px}
+.scuro .cifra{background:#2F2229;border-color:#453640}
+.cifra b{display:block;font-family:var(--display);font-weight:400;font-size:2.25rem;
+  line-height:1;color:var(--verde)}
+.scuro .cifra b{color:var(--verde-luce)}
+.cifra span{display:block;font-size:14px;color:var(--pietra);margin-top:7px}
+.scuro .cifra span{color:var(--pietra-luce)}
+
+/* --- galleria (nomi convenzionali, DEC-117) ------------------------------ */
+.gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:14px}
+.gallery-grid button{padding:0;border:1px solid #E7DFD2;background:var(--carta);
+  border-radius:14px;overflow:hidden;cursor:pointer;display:block;width:100%;
+  text-align:left;font:inherit;color:inherit}
+.gallery-grid button:hover,.gallery-grid button:focus-visible{border-color:var(--verde)}
+.gallery-grid img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.gallery-grid .did{display:block;padding:11px 14px 13px;font-size:14.5px;
+  color:var(--pietra);line-height:1.45}
+
+/* --- i sei capitoli: la scenica ----------------------------------------- */
+.sei{margin-top:26px;border-radius:16px;overflow:hidden}
+.sei > article{background:var(--notte);border:1px solid #453640;
+  display:flex;flex-direction:column;padding:0;border-radius:12px;overflow:hidden}
+.sei > article:focus-visible{outline:3px solid var(--verde-luce);outline-offset:2px}
+/* 🔴 la foto NON riempie il riquadro in assoluto: cosi' del paesaggio si vedeva solo
+   la striscia alta, cioe' quasi solo cielo. Sta in alto, con un'altezza sua, e si
+   vede per intero in verticale (il ritaglio lo fa la larghezza, che e' quella che
+   cambia quando il pannello si apre). */
+.sei .sfondo{position:static;width:100%;height:236px;object-fit:cover;flex:0 0 auto}
+.sei .vel{position:relative;z-index:1;background:var(--notte);padding:15px 16px 17px;
+  width:100%;min-height:150px;flex:1 1 auto}
+.sei h3{color:var(--luce);font-size:1.06rem}
+.sei p{color:var(--luce);font-size:14.5px;margin:6px 0 0}
+@media (max-width:860px){
+  /* 🔴 il kit mette flex:1 1 0 sui figli: in colonna vuol dire ALTEZZA ZERO e i sei
+     pannelli collassano in sei righe vuote. Va rimesso flex:0 0 auto. */
+  .sei{display:flex;flex-direction:column;gap:12px;overflow:visible;border-radius:0}
+  .sei > article{flex:0 0 auto}
+  .sei .sfondo{height:190px}
+  .sei .vel{min-height:0}
+  .solo-largo{display:none}
+}
+
+/* --- dove siamo ---------------------------------------------------------- */
+.due{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+.strada{list-style:none;padding:0;margin:0}
+.strada li{padding:13px 0;border-bottom:1px solid #E4DCCE}
+.strada li:last-child{border-bottom:0}
+.strada b{color:var(--verde)}
+.scuro .strada li{border-bottom-color:#453640}
+.scuro .strada b{color:var(--verde-luce)}
+
+/* --- contatti + piede ---------------------------------------------------- */
+.contatti{display:grid;grid-template-columns:repeat(auto-fit,minmax(238px,1fr));gap:24px}
+.contatti a{color:var(--verde-luce)}
+.piede{background:var(--bosco);color:var(--luce);padding:44px 0 34px}
+.piede a{color:var(--verde-luce)}
+.piede .nota{color:var(--pietra-luce)}
+.piede .fine{margin-top:26px;padding-top:22px;border-top:1px solid #454733;
+  font-size:13.5px;color:var(--pietra-luce)}
+.piede .fine p{color:var(--pietra-luce);margin:0 0 7px}
+
+/* --- lightbox (nomi convenzionali) -------------------------------------- */
+#lightbox{position:fixed;inset:0;z-index:130;background:rgba(20,16,11,.94);
+  display:flex;align-items:center;justify-content:center;padding:22px;
+  opacity:0;visibility:hidden;transition:opacity .26s,visibility .26s}
+#lightbox.open{opacity:1;visibility:visible}
+#lightbox figure{margin:0;max-width:1100px;width:100%;position:relative;z-index:1}
+#lightbox img{width:100%;height:auto;max-height:74svh;object-fit:contain;border-radius:10px}
+#lightbox figcaption{color:var(--luce);font-size:15px;margin-top:14px;text-align:center}
+.lb-close,.lb-prev,.lb-next{position:absolute;z-index:3;background:rgba(20,16,11,.86);
+  border:1px solid #7D6E5C;color:var(--luce);width:52px;height:52px;border-radius:50%;
+  font-size:23px;cursor:pointer;line-height:1;display:flex;align-items:center;
+  justify-content:center}
+.lb-close:hover,.lb-prev:hover,.lb-next:hover{background:rgba(20,16,11,.98)}
+.lb-close{top:-4px;right:-4px}
+.lb-prev{left:-6px;top:50%;transform:translateY(-50%)}
+.lb-next{right:-6px;top:50%;transform:translateY(-50%)}
+
+/* --- responsive ---------------------------------------------------------- */
+@media (max-width:980px){
+  .nav-links{display:none}
+  .burger{display:flex}
+  .nav-int{gap:12px}
+  .nav-tel{order:3}
+  .nav-tel a.nav-cta{padding:10px 14px}
+  .due{grid-template-columns:1fr;gap:26px}
+}
+@media (max-width:560px){
+  .nav-marchio img{width:132px}
+  .nav-tel a.nav-cta .lungo{display:none}
+  .gallery-grid{grid-template-columns:1fr}
+  .lb-close{top:6px;right:6px}
+  .lb-prev{left:2px}.lb-next{right:2px}
+  .sez{padding:46px 0}
+}
+@media (max-width:340px){
+  .nav-marchio img{width:112px}
+}
+/* la barra senza JS resta bassa e col menu visibile (senza_js.py, soglia 140px) */
+.nav-nojs{display:none}
+</style>
+<noscript><style>
+  #mobileMenu{display:none}
+  .burger{display:none}
+  .nav-nojs{display:flex;gap:18px;overflow-x:auto;list-style:none;margin:0 0 0 auto;
+    padding:0 0 4px}
+  .nav-nojs a{color:var(--pietra);text-decoration:none;font-size:14px;font-weight:600;
+    white-space:nowrap}
+  /* Sotto i 980px il marchio e il tasto Chiama mangiano tutta la riga: la striscia
+     dei link finiva a 70px da scorrere di lato. Va su una riga sua, a tutta larghezza.
+     La barra passa da 75px a ~110px: sotto il tetto di 140px di senza_js.py. */
+  @media (max-width:980px){
+    .nav-int{flex-wrap:wrap;padding-bottom:4px;min-height:0}
+    #nav{min-height:0}
+    .nav-marchio{margin-right:auto}
+    .nav-nojs{order:9;flex-basis:100%;margin:0;padding-top:2px}
+  }
+</style></noscript>
+</head>
+<body>
+<a class="salta" href="#main">Salta al contenuto</a>
+
+<header id="nav">
+  <div class="nav-int">
+    <a class="nav-marchio" href="#main">
+      <img src="img/logo-giardini-acropoli.png" width="260" height="125"
+           alt="Marchio de I Giardini dell'Acropoli: un ovale rosso con scritto «Parco Ristorante» sopra e «bar-salotto-picnic-camper-giochi-sport» sotto, e dentro un ovale verde con la sagoma delle mura e della torre.">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#posto">Il posto</a></li>
+      <li><a href="#ristorante">Il ristorante</a></li>
+      <li><a href="#gallery">La cucina</a></li>
+      <li><a href="#sei">Cosa c'è</a></li>
+      <li><a href="#dove">Dove siamo</a></li>
+    </ul>
+    <ul class="nav-nojs">
+      <li><a href="#posto">Il posto</a></li>
+      <li><a href="#ristorante">Il ristorante</a></li>
+      <li><a href="#gallery">La cucina</a></li>
+      <li><a href="#sei">Cosa c'è</a></li>
+      <li><a href="#dove">Dove siamo</a></li>
+    </ul>
+    <button class="burger" type="button" aria-label="Apri il menu" aria-expanded="false"
+            aria-controls="mobileMenu"><span></span></button>
+    <div class="nav-tel">
+      <a class="nav-cta" href="tel:+393357475409">Chiama<span class="lungo">&nbsp;335 747 5409</span></a>
+    </div>
+  </div>
+</header>
+
+<nav id="mobileMenu" class="mobile-menu" aria-label="Menu principale">
+  <a href="#posto">Il posto</a>
+  <a href="#ristorante">Il ristorante</a>
+  <a href="#gallery">La cucina</a>
+  <a href="#sei">Cosa c'è</a>
+  <a href="#dove">Dove siamo</a>
+  <a href="tel:+393357475409">Chiama 335 747 5409</a>
+</nav>
+
+<main id="main">
+
+  <!-- HERO: foto sopra, titolo SOTTO su fondo controllato (dossier §4) -->
+  <div class="hero-foto">
+    <img src="img/veduta-borgo-dalle-mura.jpg" width="1200" height="420" fetchpriority="high"
+         alt="Veduta dall'alto sul borgo di Civitavecchia di Arpino, inquadrata fra due blocchi di pietra chiara: sotto, una chiesa con il tetto in coppi e il campanile; oltre, le case in pietra del borgo e le colline boscose.">
+  </div>
+  <div class="stretto hero-testo">
+    <p class="occhiello">Parco Ristorante &middot; Arpino (FR)</p>
+    <h1 data-fm="righe">I Giardini dell'Acropoli</h1>
+    <p class="sotto-h1">Due sale a vetri sotto le mura ciclopiche di Civitavecchia, a due chilometri
+      dal centro storico di Arpino. Un ristorante, e intorno un parco.</p>
+    <div class="hero-dati" data-fm="sfuma">
+      <a class="btn" href="tel:+393357475409">Chiama 335 747 5409</a>
+      <span class="dove">Via Civitavecchia snc &middot; localit&agrave; Civitavecchia di Arpino</span>
+    </div>
+  </div>
+
+  <svg class="divisore" viewBox="0 0 1140 14" preserveAspectRatio="none" aria-hidden="true"
+       focusable="false"><line data-fm="traccia" x1="0" y1="7" x2="1140" y2="7"/></svg>
+
+  <!-- IL POSTO -->
+  <section class="sez" id="posto">
+    <div class="stretto testo-lungo">
+      <p class="sez-occhiello">Il posto</p>
+      <h2 data-fm="sali">Dentro una cinta di mura di oltre 2500 anni</h2>
+      <p data-fm="sali">I Giardini dell'Acropoli sono una struttura polifunzionale creata a sostegno
+        logistico-ricreativo del parco archeologico di Civitavecchia di Arpino. La posizione &egrave;
+        strategica rispetto alle vestigia ciclopiche e all'ambiente naturale d'alta collina che le
+        incornicia.</p>
+      <blockquote class="citazione" data-fm="sali">&laquo;Le superbe montagne circostanti, la sottostante
+        Valle del Liri, le colline boschive, a sfondo dello spettacolare borgo antico chiuso tra mura
+        ciclopiche e torri medioevali, garantiscono un panorama a 360&deg; fortemente
+        suggestivo.&raquo;</blockquote>
+      <p class="nota" data-fm="sfuma">Sono parole loro, dal sito attuale.</p>
+    </div>
+  </section>
+
+  <figure class="fascia" data-fm="sfuma">
+    <img src="img/torre-mura-spighe.jpg" width="1200" height="500" loading="lazy"
+         alt="La torre medievale a pianta quadrata con la merlatura, accanto a un tratto di mura in blocchi di pietra chiara e a una chiesetta, viste attraverso le spighe di un campo in primo piano.">
+    <figcaption>La torre e le mura poligonali, viste dal campo accanto ai Giardini.</figcaption>
+  </figure>
+
+  <!-- IL RISTORANTE -->
+  <section class="sez scuro" id="ristorante">
+    <div class="avvolge">
+      <div class="testo-lungo">
+        <p class="sez-occhiello">Il ristorante</p>
+        <h2 data-fm="sali">Due sale a vetri, 110 posti</h2>
+        <p data-fm="sali">La linea di cucina parte dalla tradizione e utilizza il pi&ugrave; possibile
+          quanto offrono la natura circostante e i produttori locali.</p>
+        <blockquote class="citazione" data-fm="sali">&laquo;Tutte le preparazioni quindi partono dall'utilizzo di
+          materie prime genuine, selezionate quanto pi&ugrave; possibile fra i produttori locali o
+          direttamente prodotte da noi come l'olio extravergine, gran parte della carne ovina, liquori
+          antichi. Cos&igrave; come le paste tradizionali, sia all'uovo che acqua e farina, vengono
+          &lsquo;fatte a mano&rsquo; con farina di piccoli mulini che macinano esclusivamente grano e
+          granturco locali.&raquo;</blockquote>
+        <p data-fm="sali">In carta c'&egrave; anche un men&ugrave; degustazione, che cambia ogni settimana.
+          Per le cerimonie si concordano men&ugrave; personalizzati.</p>
+      </div>
+      <div class="cifre">
+        <div class="cifra" data-fm="sfalsa"><b data-fm-conta="110">110</b><span>posti a sedere,
+          in due sale a vetri</span></div>
+        <div class="cifra" data-fm="sfalsa"><b data-fm-conta="80">80</b><span>persone nella sala
+          affittabile per feste e conferenze</span></div>
+        <div class="cifra" data-fm="sfalsa"><b data-fm-conta="30">30</b><span>piazzole per camper,
+          illuminate di notte</span></div>
+        <div class="cifra" data-fm="sfalsa"><b data-fm-conta="9">9</b><span>itinerari ad anello
+          che partono da qui intorno</span></div>
+      </div>
+    </div>
+  </section>
+
+  <figure class="fascia" data-fm="sfuma">
+    <img src="img/tavolata-sotto-il-tetto-di-legno.jpg" width="1200" height="500" loading="lazy"
+         alt="Una tavolata lunga apparecchiata con tovaglie chiare, tovaglioli marroni e bicchieri capovolti, con sedie verdi impagliate, sotto un tetto di travi di legno chiaro; le pareti sono vetrate e fuori si vede una siepe potata.">
+    <figcaption>Una delle due sale a vetri, apparecchiata.</figcaption>
+  </figure>
+
+  <!-- LA CUCINA: galleria -->
+  <section class="sez" id="gallery">
+    <div class="avvolge">
+      <p class="sez-occhiello">La cucina</p>
+      <h2 data-fm="sali">Qualche piatto, come lo fotografano loro</h2>
+      <p class="nota" data-fm="sfuma">Le didascalie dicono quello che si vede nella foto: il men&ugrave;
+        lo scrivono loro.</p>
+      <div class="gallery-grid">
+        <button type="button" data-src="img/pizza-rucola-e-agrumi.jpg"
+          data-did="Pizza con rucola, fette di arancia, falde di pesce affumicato rosa, una pallina di formaggio fresco bianco al centro e grani di pepe rosa.">
+          <img src="img/pizza-rucola-e-agrumi.jpg" width="1200" height="500" loading="lazy"
+            alt="Pizza vista dall'alto, coperta di rucola, fette di arancia, falde di pesce affumicato rosa e una pallina di formaggio fresco bianco al centro, con grani di pepe rosa.">
+          <span class="did">Rucola, arancia e una pallina di formaggio fresco</span>
+        </button>
+        <button type="button" data-src="img/pizza-rossa-con-formaggio-fresco.jpg"
+          data-did="Pizza rossa con ciuffi irregolari di formaggio fresco bianco, erbe secche sparse e un filo d'olio; il bordo &egrave; alto e chiazzato di cottura.">
+          <img src="img/pizza-rossa-con-formaggio-fresco.jpg" width="800" height="600" loading="lazy"
+            alt="Pizza con base di pomodoro e ciuffi irregolari di formaggio fresco bianco, erbe secche sparse sopra e bordo alto chiazzato dalla cottura.">
+          <span class="did">Pomodoro e ciuffi di formaggio fresco</span>
+        </button>
+        <button type="button" data-src="img/pizza-bianca-con-verdure-scure.jpg"
+          data-did="Pizza bianca senza pomodoro, con formaggio filante e ciuffi di verdura a foglia verde scuro distribuiti sulla superficie.">
+          <img src="img/pizza-bianca-con-verdure-scure.jpg" width="800" height="600" loading="lazy"
+            alt="Pizza bianca senza pomodoro, con formaggio filante dorato dalla cottura e ciuffi di verdura a foglia verde scuro sparsi sulla superficie.">
+          <span class="did">Bianca, con verdura a foglia scura</span>
+        </button>
+        <button type="button" data-src="img/gnocchi-con-formaggio-grattugiato.jpg"
+          data-did="Piatto bianco tondo con gnocchi chiari, formaggio grattugiato sparso fin sul bordo e una foglia verde al centro. Accanto, forchetta e coltello su un tovagliolo marrone.">
+          <img src="img/gnocchi-con-formaggio-grattugiato.jpg" width="800" height="600" loading="lazy"
+            alt="Piatto bianco tondo con gnocchi chiari, formaggio grattugiato sparso fin sul bordo e una foglia verde al centro; a lato le posate su un tovagliolo marrone.">
+          <span class="did">Gnocchi, con formaggio grattugiato</span>
+        </button>
+        <button type="button" data-src="img/piatto-di-formaggi-e-olive.jpg"
+          data-did="Piatto ovale bianco con quattro formaggi di forma e colore diversi, olive verdi, gherigli di noce, un pomodorino tagliato a rosa e una foglia di insalata; intorno, gocce scure di condimento disegnate a raggiera.">
+          <img src="img/piatto-di-formaggi-e-olive.jpg" width="900" height="675" loading="lazy"
+            alt="Piatto ovale bianco con quattro formaggi diversi, olive verdi, gherigli di noce, un pomodorino tagliato a rosa e una foglia di insalata, con gocce scure di condimento disegnate a raggiera.">
+          <span class="did">Formaggi, olive e noci</span>
+        </button>
+        <button type="button" data-src="img/piatto-di-dolci.jpg"
+          data-did="Piatto ovale bianco con tre dolci in fila: uno rosa chiaro adagiato su una salsa rosso scuro, uno tondo spolverato di cacao con una fogliolina verde, e una cupola coperta di cioccolato scuro con zucchero a velo.">
+          <img src="img/piatto-di-dolci.jpg" width="900" height="675" loading="lazy"
+            alt="Piatto ovale bianco con tre dolci in fila: uno rosa chiaro su una salsa rosso scuro, uno tondo spolverato di cacao con una fogliolina verde, e una cupola ricoperta di cioccolato scuro con zucchero a velo.">
+          <span class="did">Tre dolci nello stesso piatto</span>
+        </button>
+        <button type="button" data-src="img/vassoio-di-mozzarelle.jpg"
+          data-did="Vassoio ovale di metallo con mozzarelle bianche di forme diverse &mdash; trecce, bocconcini e nodi &mdash; disposte a corona su un letto di insalata verde, con pomodorini rossi fra l'una e l'altra.">
+          <img src="img/vassoio-di-mozzarelle.jpg" width="900" height="675" loading="lazy"
+            alt="Vassoio ovale di metallo con mozzarelle bianche di forme diverse &mdash; trecce, bocconcini e nodi &mdash; disposte a corona su un letto di insalata verde, con pomodorini rossi fra l'una e l'altra.">
+          <span class="did">Un vassoio da tavolata</span>
+        </button>
+        <button type="button" data-src="img/ulivo-nel-cortile-interno.jpg"
+          data-did="Un ulivo dal tronco nodoso cresce in un'aiuola bordata di pietre, in un cortile chiuso fra le vetrate della sala; ai piedi, fiori rossi e bianchi, e accanto una botte di legno con una cesta di fiori.">
+          <img src="img/ulivo-nel-cortile-interno.jpg" width="900" height="687" loading="lazy"
+            alt="Un ulivo dal tronco nodoso in un'aiuola bordata di pietre, dentro un cortile chiuso fra le vetrate della sala, con fiori rossi e bianchi ai piedi e una botte di legno accanto.">
+          <span class="did">L'ulivo nel cortile fra le vetrate</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- I SEI: la scenica fisarmonica -->
+  <section class="sez scuro" id="sei">
+    <div class="avvolge">
+      <p class="sez-occhiello">Cosa c'&egrave;</p>
+      <h2 data-fm="sali">Sei cose in un posto solo</h2>
+      <p data-fm="sali">Sono le sei scritte nel loro marchio: bar salotto, picnic, camper, giochi, sport
+        &mdash; e il ristorante.</p>
+      <div class="sei fm-palco" data-fms="fisarmonica" data-fms-apri="3">
+        <article>
+          <img class="sfondo" src="img/tavolo-tondo-sala-a-vetri.jpg" width="900" height="675" loading="lazy"
+            alt="Un tavolo tondo apparecchiato con una tovaglia di pizzo e un centrotavola di fiori rossi e bianchi, dentro la sala a vetri; oltre le vetrate si vedono la siepe e, in lontananza, la torre.">
+          <div class="vel"><h3>Il ristorante</h3><p>Due sale a vetri, 110 posti.</p></div>
+        </article>
+        <article>
+          <img class="sfondo" src="img/bar-salotto-bancone.jpg" width="800" height="532" loading="lazy"
+            alt="Il bancone del bar in legno scuro con due colonne di spillatura in ottone dalle manopole nere, sotto un tetto di travi di legno chiaro; intorno poltroncine di vimini e pareti vetrate.">
+          <div class="vel"><h3>Bar salotto</h3><p>Una sala tutta a vetri, affittabile fino a 80 persone.</p></div>
+        </article>
+        <article>
+          <img class="sfondo" src="img/area-picnic-tavoli.jpg" width="800" height="532" loading="lazy"
+            alt="Un tavolo da picnic in assi di legno spesse in primo piano, su un prato fra ulivi e muretti a secco, con un edificio in pietra sullo sfondo.">
+          <div class="vel"><h3>Picnic</h3><p>Due aree verdi con tavoli e barbecue.</p></div>
+        </article>
+        <article>
+          <img class="sfondo" src="img/area-camper-con-la-torre.jpg" width="800" height="600" loading="lazy"
+            alt="Camper parcheggiati su un prato falciato fra alberi giovani, con la torre medievale che si vede sullo sfondo oltre le chiome.">
+          <div class="vel"><h3>Area camper</h3><p>30 piazzole, illuminate di notte.</p></div>
+        </article>
+        <article>
+          <img class="sfondo" src="img/parco-giochi-scivolo.jpg" width="800" height="532" loading="lazy"
+            alt="Una torretta di legno con scivolo rosso su un prato, fra alberi spogli e ulivi; sullo sfondo, sulla collina, la sagoma della torre.">
+          <div class="vel"><h3>Parco giochi</h3><p>Altalene, scivoli, ponte tibetano.</p></div>
+        </article>
+        <article>
+          <img class="sfondo" src="img/prato-aperto-con-attrezzi.jpg" width="800" height="532" loading="lazy"
+            alt="Un ampio prato falciato fra ulivi, con una struttura di legno e metallo per arrampicarsi in primo piano e altro prato aperto dietro.">
+          <div class="vel"><h3>Sport</h3><p>Ampi spazi verdi: pallone, pallavolo, basket.</p></div>
+        </article>
+      </div>
+      <p class="nota solo-largo" style="margin-top:20px">Passa sopra un riquadro per aprirlo.</p>
+    </div>
+  </section>
+
+  <figure class="fascia" data-fm="sfuma">
+    <img src="img/giardini-di-sera-lumini.jpg" width="1200" height="500" loading="lazy"
+         alt="I Giardini di sera: la sala a vetri illuminata da dentro, una siepe alta, e un vialetto in terra battuta segnato da due file di lumini accesi appoggiati a terra.">
+    <figcaption>La sera, con i lumini lungo il vialetto.</figcaption>
+  </figure>
+
+  <!-- DOVE SIAMO -->
+  <section class="sez" id="dove">
+    <div class="avvolge">
+      <p class="sez-occhiello">Dove siamo</p>
+      <h2 data-fm="sali">Arpino (FR), localit&agrave; Civitavecchia</h2>
+      <div class="due">
+        <div class="testo-lungo">
+          <p data-fm="sali">Via Civitavecchia snc, sulla Strada Provinciale Arpino-Casalvieri, a due
+            chilometri dal centro storico di Arpino.</p>
+          <p data-fm="sali"><b>Nel navigatore</b> conviene inserire <b>via San Francesco 23</b> e poi
+            proseguire per un chilometro in direzione Casalvieri. Arrivati ad Arpino, si seguono le
+            indicazioni per l'Acropoli di Civitavecchia o Mura Poligonali.</p>
+          <p class="nota">Coordinate: 41.650367, 13.618683</p>
+        </div>
+        <ul class="strada">
+          <li data-fm="sfalsa"><b>Da Roma</b> &mdash; A1, uscita Ferentino; superstrada per Sora,
+            uscita Castelliri; si attraversa Isola del Liri e si seguono le indicazioni per Arpino.</li>
+          <li data-fm="sfalsa"><b>Da Napoli</b> &mdash; A1, uscita Cassino; poi uscita
+            Broccostella/Sora sud.</li>
+          <li data-fm="sfalsa"><b>Dalla A25</b> &mdash; uscita Avezzano; superstrada per Sora/Cassino,
+            uscita Broccostella/Sora sud.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <figure class="fascia" data-fm="sfuma">
+    <img src="img/ingresso-targa-pietra.jpg" width="1200" height="500" loading="lazy"
+         alt="L'ingresso: un muro in blocchi di pietra chiara con una targa incisa &laquo;I Giardini dell'Acropoli&raquo;, edera che sale sul muro, un cancello di ferro nero e quattro bandiere su altrettanti pennoni, fra cui il tricolore italiano e quella dell'Unione Europea; sullo sfondo, la torre.">
+    <figcaption>L'ingresso su via Civitavecchia.</figcaption>
+  </figure>
+
+  <!-- CONTATTI -->
+  <section class="sez scuro" id="contatti">
+    <div class="avvolge">
+      <p class="sez-occhiello">Contatti</p>
+      <h2 data-fm="sali">Per prenotare si chiama</h2>
+      <div class="contatti" style="margin-top:22px">
+        <div data-fm="sfalsa"><h3>Telefono</h3>
+          <p><a href="tel:+393357475409">335 747 5409</a></p></div>
+        <div data-fm="sfalsa"><h3>Email</h3>
+          <p><a href="mailto:info@igiardinidellacropoli.it">info@igiardinidellacropoli.it</a></p></div>
+        <div data-fm="sfalsa"><h3>Indirizzo</h3>
+          <p>Via Civitavecchia snc<br>03033 Arpino (FR)<br>localit&agrave; Civitavecchia</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="piede">
+  <div class="avvolge">
+    <p><b>I Giardini dell'Acropoli</b> &middot; Parco Ristorante &middot; Via Civitavecchia snc,
+      03033 Arpino (FR) &middot; <a href="tel:+393357475409">335 747 5409</a> &middot;
+      <a href="mailto:info@igiardinidellacropoli.it">info@igiardinidellacropoli.it</a></p>
+    <p class="nota">P. IVA 02545310605</p>
+    <div class="fine">
+      <p>Fotografie dal sito attuale de I Giardini dell'Acropoli; su alcune resta il watermark
+        dell'autore, lasciato intatto.</p>
+      <p>Sito dimostrativo realizzato con AI da FAR AI &middot; contenuti da rivedere con
+        l'attivit&agrave; prima della pubblicazione</p>
+      <p>Testi e fotografie provengono dal sito attuale di I Giardini dell'Acropoli e restano di
+        propriet&agrave; dell'attivit&agrave;.</p>
+    </div>
+  </div>
+</footer>
+
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Foto ingrandita">
+  <figure>
+    <button class="lb-close" type="button" aria-label="Chiudi">&#10005;</button>
+    <button class="lb-prev" type="button" aria-label="Foto precedente">&#8249;</button>
+    <button class="lb-next" type="button" aria-label="Foto successiva">&#8250;</button>
+    <img src="img/pizza-rucola-e-agrumi.jpg"
+         alt="Pizza vista dall'alto, coperta di rucola, fette di arancia, falde di pesce affumicato rosa e una pallina di formaggio fresco bianco al centro, con grani di pepe rosa.">
+    <figcaption>&nbsp;</figcaption>
+  </figure>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "@id":"https://www.igiardinidellacropoli.it/#ristorante",
+  "name":"I Giardini dell'Acropoli",
+  "url":"https://www.igiardinidellacropoli.it/",
+  "telephone":"+39 335 7475409",
+  "email":"info@igiardinidellacropoli.it",
+  "image":["https://demo.francescoar.com/giardini-acropoli-arpino/img/veduta-borgo-dalle-mura.jpg","https://demo.francescoar.com/giardini-acropoli-arpino/img/tavolata-sotto-il-tetto-di-legno.jpg"],
+  "address":{"@type":"PostalAddress","streetAddress":"Via Civitavecchia snc",
+    "addressLocality":"Arpino","addressRegion":"FR","postalCode":"03033","addressCountry":"IT"},
+  "geo":{"@type":"GeoCoordinates","latitude":41.650367,"longitude":13.618683},
+  "vatID":"02545310605"
+}
+</script>
+
+<script>
+(function(){
+  "use strict";
+  var burger=document.querySelector('.burger'),
+      menu=document.getElementById('mobileMenu'),
+      main=document.getElementById('main'),
+      piede=document.querySelector('.piede'),
+      nav=document.getElementById('nav'),
+      lb=document.getElementById('lightbox'),
+      lbImg=lb.querySelector('img'),
+      lbCap=lb.querySelector('figcaption'),
+      tessere=[].slice.call(document.querySelectorAll('.gallery-grid button')),
+      indice=0, tornaA=null;
+
+  /* 🔴 la barra NON va resa inerte quando e' aperto il MENU: dentro c'e' il burger,
+     cioe' proprio il bottone che deve richiuderlo. Per la lightbox invece si. */
+  function fuoriGioco(on, ancheBarra){
+    var el=[main,piede]; if(ancheBarra) el.push(nav);
+    el.forEach(function(e){ if(e){ if(on) e.setAttribute('inert','');
+      else e.removeAttribute('inert'); } });
+    if(!on && nav) nav.removeAttribute('inert');
+  }
+  function focalizzabili(root){
+    return [].slice.call(root.querySelectorAll(
+      'a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])'));
+  }
+  function trappola(e,root){
+    if(e.key!=='Tab') return;
+    var f=focalizzabili(root); if(!f.length) return;
+    var primo=f[0], ultimo=f[f.length-1];
+    if(e.shiftKey && document.activeElement===primo){ e.preventDefault(); ultimo.focus(); }
+    else if(!e.shiftKey && document.activeElement===ultimo){ e.preventDefault(); primo.focus(); }
+  }
+  function quandoVisibile(el,fn){
+    var giri=0;
+    (function attendi(){
+      if(getComputedStyle(el).visibility==='visible'){ fn(); return; }
+      if(++giri>40) { fn(); return; }
+      requestAnimationFrame(attendi);
+    })();
+  }
+
+  /* --- menu mobile --- */
+  function apriMenu(){
+    menu.classList.add('open');
+    burger.setAttribute('aria-expanded','true');
+    burger.setAttribute('aria-label','Chiudi il menu');
+    fuoriGioco(true,false); tornaA=burger;
+    quandoVisibile(menu,function(){ var a=menu.querySelector('a'); if(a) a.focus(); });
+  }
+  function chiudi(){
+    menu.classList.remove('open');
+    burger.setAttribute('aria-expanded','false');
+    burger.setAttribute('aria-label','Apri il menu');
+    fuoriGioco(false,false); if(tornaA) tornaA.focus();
+  }
+  burger.addEventListener('click',function(){
+    if(menu.classList.contains('open')) chiudi(); else apriMenu();
+  });
+  [].forEach.call(menu.querySelectorAll('a'),function(a){ a.addEventListener('click',chiudi); });
+
+  /* --- lightbox --- */
+  function mostra(i){
+    indice=(i+tessere.length)%tessere.length;
+    var b=tessere[indice], img=b.querySelector('img');
+    lbImg.src=b.getAttribute('data-src');
+    lbImg.alt=img.getAttribute('alt');
+    lbCap.textContent=b.getAttribute('data-did');
+  }
+  function apriLb(i,da){
+    mostra(i); lb.classList.add('open'); fuoriGioco(true,true); tornaA=da||null;
+    quandoVisibile(lb,function(){ lb.querySelector('.lb-close').focus(); });
+  }
+  function chiudiLb(){
+    lb.classList.remove('open'); fuoriGioco(false,true); if(tornaA) tornaA.focus();
+  }
+  tessere.forEach(function(b,i){ b.addEventListener('click',function(){ apriLb(i,b); }); });
+  lb.querySelector('.lb-close').addEventListener('click',chiudiLb);
+  lb.querySelector('.lb-prev').addEventListener('click',function(){ mostra(indice-1); });
+  lb.querySelector('.lb-next').addEventListener('click',function(){ mostra(indice+1); });
+  lb.addEventListener('click',function(e){ if(e.target===lb) chiudiLb(); });
+
+  document.addEventListener('keydown',function(e){
+    if(lb.classList.contains('open')){
+      if(e.key==='Escape'){ chiudiLb(); return; }
+      if(e.key==='ArrowLeft'){ mostra(indice-1); return; }
+      if(e.key==='ArrowRight'){ mostra(indice+1); return; }
+      trappola(e,lb); return;
+    }
+    if(menu.classList.contains('open')){
+      if(e.key==='Escape'){ chiudi(); return; }
+      trappola(e,menu);
+    }
+  });
+})();
+</script>
+<script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
