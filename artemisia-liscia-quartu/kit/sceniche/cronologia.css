@@ -1,0 +1,34 @@
+/* cronologia — la linea del tempo si disegna mentre scorri e ogni tappa si
+   accende quando la linea la raggiunge. Il percorso lo costruisce lo script
+   dalle posizioni vere delle tappe: se cambi il testo, resta giusto. */
+/* overflow:hidden NON e' cosmetico. L'svg del filo e' position:absolute con
+   width/height ESPLICITI (misurati), e un assoluto allarga lo scrollWidth del
+   suo contenitore di scorrimento: fra un ridimensionamento e il ridisegno
+   (smorzato di 220 ms) la pagina resta larga quanto era PRIMA. Misurato il
+   09/08/2026 su Zedda: scrollWidth 1159 a fronte di 320 di finestra, cioe'
+   overflow orizzontale su 87 larghezze su 113. Qui il filo resta in casa sua. */
+.fmx-cronologia { position: relative; overflow: hidden; }
+.fmx-cronologia-linea { position: absolute; left: 0; top: 0; pointer-events: none; z-index: 0; }
+.fmx-cronologia-linea path {
+  fill: none; stroke: var(--fmx-colore, currentColor); stroke-width: 2;
+  stroke-linecap: round; opacity: .7;
+}
+/* z-index NON e' cosmetico. Lo script appende l'svg del filo DOPO le tappe, e
+   fra due elementi posizionati senza z-index vince l'ultimo del DOM: il filo
+   taglia sopra il testo delle schede. Su Zedda era stato chiuso nel CSS DEL
+   SITO (`.passo{z-index:1}`), non qui — cioe' il difetto era ancora dentro il
+   modulo e il sito successivo se lo sarebbe ripreso. Provato il 09/08/2026
+   rimettendo z-index:auto e riscorrendo in scheda vera, 6 tappe su 6 accese:
+   il filo torna sopra al testo di 4 schede su 6. Qui il filo resta dietro. */
+.fmx-tappa { position: relative; z-index: 1; }
+/* Il pavimento e' .66, non .32. Le tappe sono TESTO DI CONTENUTO, non
+   decorazione: a .32 il loro contrasto misurato su Zedda e' 2,24:1 contro la
+   soglia AA di 4,5:1, e restano illeggibili finche' la linea non le raggiunge.
+   A .66 fanno 5,63:1. (Il minimo che passerebbe e' ~.60 = 4,86:1; .66 tiene
+   margine anche su fondi meno contrastati.) */
+html.fm-js .fmx-tappa { opacity: .66; }
+html.fm-js .fmx-tappa.fmx-accesa { opacity: 1; }
+@media (prefers-reduced-motion: no-preference) {
+  html.fm-js .fmx-tappa { transition: opacity .55s cubic-bezier(.22, 1, .36, 1); }
+}
+@media (prefers-reduced-motion: reduce) { html.fm-js .fmx-tappa { opacity: 1 !important; } }

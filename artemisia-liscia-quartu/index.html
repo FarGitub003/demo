@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simonetta Liscia · Ceramiche e vetro artistico · Quartu Sant'Elena</title>
+<meta name="description" content="Laboratorio Artemisia, dal 1999. Ceramica e vetrofusione con inserti in rame, a Quartu Sant'Elena.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Simonetta Liscia · Ceramiche e vetro artistico">
+<meta property="og:description" content="Laboratorio Artemisia, dal 1999. Ceramica e vetrofusione con inserti in rame, a Quartu Sant'Elena.">
+<meta property="og:image" content="img/vaso-fazzoletto-petrolio.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="kit/far-motion.min.css">
+<script src="kit/far-motion.min.js"></script>
+<link rel="stylesheet" href="kit/sceniche/cronologia.css">
+<script src="kit/sceniche/cronologia.js" defer></script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23ffffff'/%3E%3Cg fill='none' stroke='%2305543B' stroke-width='2.6' stroke-linecap='round'%3E%3Cpath d='M32 60 L32 10'/%3E%3Cpath d='M32 50 C22 48 16 42 14 34 C22 34 29 40 32 48'/%3E%3Cpath d='M32 50 C42 48 48 42 50 34 C42 34 35 40 32 48'/%3E%3Cpath d='M32 38 C24 36 19 31 17 24 C24 24 30 29 32 36'/%3E%3Cpath d='M32 38 C40 36 45 31 47 24 C40 24 34 29 32 36'/%3E%3Cpath d='M32 26 C26 24 22 20 21 14 C26 15 31 19 32 24'/%3E%3Cpath d='M32 26 C38 24 42 20 43 14 C38 15 33 19 32 24'/%3E%3C/g%3E%3C/svg%3E">
+
+<style>
+/* ============================================================
+   SIMONETTA LISCIA — «Artemisia», Quartu Sant'Elena
+   Identità n. 26 del REGISTRO_IDENTITA.md: Tenor Sans + Literata
+   Palette CAMPIONATA dalle sue foto e dai suoi due marchi.
+   VETRINA CHIARA: il fondo dei suoi scatti (#FFFFFF) è il fondo pagina.
+   ============================================================ */
+:root{
+  /* --- misurati --- */
+  --foglio:#FFFFFF;              /* fondo dei suoi 10 scatti di prodotto */
+  --perla:#E8E8EE;               /* mediana dei fondi dei suoi 5 scatti di ceramica */
+  --inchiostro:#2F2018;          /* 15,66:1 su foglio · 12,84:1 su perla */
+  --bordeaux:#8A3E3B;            /* 7,41:1 su foglio */
+  --petrolio:#3C5352;            /* 8,23:1 su foglio */
+  --verde-bottega:#05543B;       /* 8,98:1 · 7,36:1 — dal SUO logo 2006-2018 */
+  /* --- solo materia, MAI testo --- */
+  --ambra:#EEC747;               /* 1,63:1 */
+  --rame:#966A4E;                /* 4,70:1 */
+  --verde-artemisia:#BED15B;     /* 1,69:1 — il suo segno di oggi */
+  --oliva:#6E6A50;               /* 5,47:1 */
+  /* --- calcolate: ≥8,5:1 su foglio E ≥7,0:1 su perla --- */
+  --bordeaux-testo:#7C3735;
+  --petrolio-testo:#3A504F;
+  --ambra-testo:#5A4B1A;
+  --rame-testo:#634533;
+  --verde-testo:#484F22;
+  --oliva-testo:#4F4C39;
+
+  --barra:66px;
+  --mis:min(1180px, calc(100vw - 3rem));
+}
+/* overflow-x su <html> come clip, MAI su body (LEGGIMI del kit) */
+html{overflow-x:clip; scroll-behavior:smooth; background:var(--foglio);}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+*,*::before,*::after{box-sizing:border-box}
+body{
+  margin:0; background:var(--foglio); color:var(--inchiostro);
+  font-family:Literata,Georgia,serif; font-size:1.0625rem; line-height:1.72;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.tit{font-family:'Tenor Sans',system-ui,sans-serif; font-weight:400; line-height:1.15; letter-spacing:.005em}
+img{max-width:100%; height:auto; display:block}
+a{color:var(--verde-bottega)}
+:focus-visible{outline:3px solid var(--verde-bottega); outline-offset:3px; border-radius:2px}
+
+.mis{width:var(--mis); margin-inline:auto}
+section{scroll-margin-top:calc(var(--barra) + 15px)}
+#main{display:block}
+
+/* ---------- occhiello ---------- */
+.occhiello{
+  font-family:'Tenor Sans',sans-serif; text-transform:uppercase;
+  letter-spacing:.19em; font-size:.735rem; color:var(--verde-bottega);
+  display:flex; align-items:center; gap:.7rem; margin:0 0 1.1rem;
+}
+.occhiello::after{content:""; flex:1; height:1px; background:var(--verde-bottega); opacity:.34; max-width:130px}
+
+/* ---------- salta al contenuto ---------- */
+.salta{position:absolute; left:1rem; top:-70px; z-index:200; background:var(--verde-bottega);
+  color:#fff; padding:.7rem 1.1rem; border-radius:4px; text-decoration:none; font-family:'Tenor Sans',sans-serif;
+  transition:top .18s}
+.salta:focus{top:.7rem}
+
+/* ---------- barra ---------- */
+#nav{
+  position:fixed; inset:0 0 auto 0; z-index:100; height:var(--barra);
+  display:flex; align-items:center; gap:1rem;
+  padding-inline:clamp(1rem,4vw,2.4rem);
+  background:rgba(255,255,255,.93); border-bottom:1px solid rgba(47,32,24,.13);
+}
+@supports (backdrop-filter:blur(8px)){#nav{backdrop-filter:blur(8px)}}
+.nav-brand{display:flex; align-items:center; gap:.6rem; text-decoration:none; color:var(--inchiostro);
+  font-family:'Tenor Sans',sans-serif; font-size:1.02rem; letter-spacing:.055em; white-space:nowrap}
+.nav-brand svg{width:19px; height:19px; flex:none}
+.nav-links{display:flex; gap:1.5rem; margin-left:auto; list-style:none; padding:0; margin-block:0}
+.nav-links a{color:var(--inchiostro); text-decoration:none; font-family:'Tenor Sans',sans-serif;
+  font-size:.9rem; letter-spacing:.045em; padding:.3rem 0; border-bottom:1px solid transparent}
+.nav-links a:hover,.nav-links a:focus-visible{border-bottom-color:var(--verde-bottega)}
+.nav-tel{margin-left:1.4rem}
+.nav-tel a.nav-cta{
+  display:inline-block; background:var(--verde-bottega); color:#fff; text-decoration:none;
+  font-family:'Tenor Sans',sans-serif; font-size:.87rem; letter-spacing:.045em;
+  padding:.5rem 1.05rem; border-radius:3px; white-space:nowrap;
+}
+.nav-tel a.nav-cta:hover{background:#03422e}
+.burger{display:none; margin-left:auto; width:44px; height:44px; border:1px solid rgba(47,32,24,.24);
+  background:transparent; border-radius:4px; cursor:pointer; padding:0; position:relative}
+.burger span{position:absolute; left:11px; width:22px; height:2px; background:var(--inchiostro); transition:transform .22s,opacity .18s}
+.burger span:nth-child(1){top:14px} .burger span:nth-child(2){top:21px} .burger span:nth-child(3){top:28px}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+#mobileMenu{
+  position:fixed; inset:var(--barra) 0 auto 0; z-index:99; background:var(--foglio);
+  border-bottom:1px solid rgba(47,32,24,.16);
+  transform:translateY(-8px); opacity:0; visibility:hidden; transition:opacity .2s,transform .2s,visibility .2s;
+}
+#mobileMenu.open{transform:none; opacity:1; visibility:visible}
+#mobileMenu ul{list-style:none; margin:0; padding:.6rem 0 1rem}
+#mobileMenu a{display:block; padding:.85rem clamp(1rem,4vw,2.4rem); text-decoration:none;
+  color:var(--inchiostro); font-family:'Tenor Sans',sans-serif; letter-spacing:.045em}
+#mobileMenu a:hover{background:var(--perla)}
+
+@media (max-width:920px){
+  .nav-links{display:none}
+  .burger{display:block}
+  .nav-tel{margin-left:.7rem; order:3}
+  #nav{gap:.5rem}
+  .burger{margin-left:auto; order:4}
+}
+@media (max-width:560px){
+  .nav-brand{font-size:.9rem}
+  .nav-tel a.nav-cta{padding:.5rem .8rem; font-size:.82rem}
+}
+/* 🪤 MISURATO a 320px: il burger si comprimeva a 28×44px — sotto il minimo di
+   44px per un bersaglio tattile, e visibilmente troncato contro il bordo.
+   Nessuno dei sette strumenti lo vede: sweep_mouse controlla altezza barra,
+   presenza del menu e overflow, non la larghezza del bersaglio. Uscito solo
+   guardando lo screenshot a 320px.
+   ⇒ il bersaglio e il telefono non cedono mai; a cedere è il marchio. */
+.burger,.nav-tel{flex:none}
+.nav-brand{min-width:0}
+@media (max-width:400px){
+  #nav{padding-inline:.75rem; gap:.4rem}
+  .nav-brand{font-size:.85rem; letter-spacing:.03em}
+}
+
+/* ---------- eroe ---------- */
+.eroe{padding:calc(var(--barra) + clamp(2.6rem,6vw,4.6rem)) 0 clamp(2.6rem,6vw,4.4rem)}
+.eroe-griglia{display:grid; grid-template-columns:minmax(0,.86fr) minmax(0,1fr); gap:clamp(1.6rem,5vw,4rem); align-items:center}
+.eroe h1{font-size:clamp(2.5rem,6.4vw,4.25rem); margin:0 0 .35rem}
+.eroe .mestiere{font-family:'Tenor Sans',sans-serif; font-size:clamp(1.02rem,2.2vw,1.32rem);
+  letter-spacing:.055em; color:var(--petrolio-testo); margin:0 0 1.35rem}
+.eroe .dove{margin:0 0 1.9rem; color:var(--inchiostro); max-width:34ch}
+.firma-eroe{width:clamp(78px,10vw,104px); height:auto; margin:0 0 1.6rem}
+.firma-eroe path{fill:none; stroke:var(--verde-bottega); stroke-width:2.4; stroke-linecap:round}
+/* il pezzo poggia sul foglio: il fondo della sua foto È il fondo pagina (mossa Cossu) */
+.eroe-pezzo figure{margin:0}
+.eroe-pezzo img{width:100%; height:auto}
+.eroe-pezzo figcaption{font-size:.86rem; color:var(--rame-testo); margin-top:.7rem; font-style:italic}
+@media (max-width:820px){
+  .eroe-griglia{grid-template-columns:1fr; gap:1.8rem}
+  .eroe-pezzo{order:-1}
+  .eroe-pezzo img{max-width:min(100%,420px); margin-inline:auto}
+}
+
+/* ---------- sezioni ---------- */
+.sez{padding:clamp(3rem,7vw,5.4rem) 0}
+.sez h2{font-size:clamp(1.75rem,3.7vw,2.6rem); margin:0 0 1.4rem}
+.sez p{max-width:66ch}
+/* 👁️ Il divisore era un solo SVG largo con `preserveAspectRatio="none"`: stirato
+   a 1180px il rametto si deformava di ~3× e sembrava un'elica, non una pianta.
+   ⇒ i filetti li fanno due righe CSS, il rametto resta un SVG a proporzioni intatte. */
+.divisore{display:flex; align-items:center; gap:1.1rem; width:var(--mis); margin:0 auto}
+.divisore::before,.divisore::after{content:""; flex:1; height:1px; background:var(--verde-bottega); opacity:.32}
+.divisore svg{width:20px; height:20px; flex:none; opacity:.72}
+.divisore path{fill:none; stroke:var(--verde-bottega); stroke-width:3.2; stroke-linecap:round}
+
+/* ---------- chi è ---------- */
+.chi-griglia{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,.72fr); gap:clamp(1.6rem,4.5vw,3.4rem); align-items:start}
+blockquote.sue{margin:0 0 1.35rem; padding-left:1.15rem; border-left:2px solid var(--verde-bottega);
+  font-size:1.09rem; line-height:1.7}
+blockquote.sue p{margin:0 0 .85rem}
+blockquote.sue p:last-child{margin-bottom:0}
+.ritratto figure{margin:0}
+.ritratto img{width:100%}
+.didascalia{font-size:.83rem; line-height:1.55; color:var(--rame-testo); margin-top:.6rem}
+@media (max-width:820px){.chi-griglia{grid-template-columns:1fr}}
+
+/* ---------- cronologia (scenica) ---------- */
+.tempo{--fmx-colore:var(--verde-bottega); padding-block:1rem; margin-top:1.6rem}
+.tappa{width:min(430px,86%); padding:1.15rem 1.3rem; background:var(--foglio);
+  border:1px solid rgba(5,84,59,.28); border-radius:3px; margin-block:clamp(1.4rem,4vw,2.6rem)}
+.tappa:nth-child(odd){margin-right:auto; margin-left:0}
+.tappa:nth-child(even){margin-left:auto; margin-right:0}
+.tappa h3{font-size:1.16rem; margin:0 0 .5rem; color:var(--verde-bottega)}
+.tappa .anno{display:block; font-family:'Tenor Sans',sans-serif; font-size:.75rem; letter-spacing:.17em;
+  text-transform:uppercase; color:var(--rame-testo); margin-bottom:.35rem}
+.tappa p{margin:0; font-size:.985rem}
+/* Il modulo attenua la tappa spenta con l'OPACITÀ (pavimento .66). Misurato qui:
+   anche alzandola a .78 l'occhiello da 12px scendeva a 4,78:1, mentre tutto il
+   resto della pagina sta sopra il 7:1 — e un'opacità sul testo abbassa il
+   contrasto senza che nessun controllo che legga il CSS se ne accorga.
+   ⇒ qui la tappa non si accende sbiadendo il TESTO, si accende sul BORDO:
+   l'opacità resta 1 e il contrasto non scende mai. */
+html.fm-js .fmx-tappa{opacity:1; border-color:rgba(5,84,59,.15); transform:translateY(5px)}
+html.fm-js .fmx-tappa.fmx-accesa{opacity:1; border-color:rgba(5,84,59,.52); transform:none}
+@media (prefers-reduced-motion:no-preference){
+  html.fm-js .fmx-tappa{transition:border-color .55s ease, transform .55s cubic-bezier(.22,1,.36,1)}
+}
+/* ⛔ Nessun blocco `prefers-reduced-motion: reduce` qui, e non è una dimenticanza:
+   il movimento del kit è OPT-IN (regola 4 del LEGGIMI), quindi si accende dentro
+   `no-preference` invece di spegnerlo dentro `reduce`. E con movimento ridotto
+   cronologia.js accende da sé TUTTE le tappe (`if (FM.ridotto())`), che quindi
+   prendono già `.fmx-accesa` → opacità 1 e transform:none. Provato sotto. */
+@media (max-width:700px){
+  .tappa{width:100%; margin-inline:0 !important}
+}
+
+/* ---------- galleria vetro ---------- */
+#gallery{padding-bottom:clamp(3rem,7vw,5rem)}
+.gallery-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));
+  gap:clamp(1.6rem,3.4vw,2.8rem); margin-top:2.2rem; padding:0; list-style:none}
+/* 🪤 MISURATO: un <button> centra verticalmente il proprio contenuto quando la
+   griglia lo allunga alla riga (scatola anonima interna del browser). Con
+   descrizioni di lunghezza diversa questo spingeva l'immagine giù di 11px su
+   2 tessere su 5, e i titoli non si allineavano. `display:flex` in colonna
+   toglie quella centratura. (offsetTop dell'img: 0,0,11,11,0 → 0,0,0,0,0) */
+.gallery-grid button{
+  display:flex; flex-direction:column; align-items:stretch; justify-content:flex-start;
+  width:100%; border:0; padding:0; background:var(--foglio); cursor:pointer;
+  font:inherit; color:inherit; text-align:left;
+}
+/* 👁️ MISURATO guardando lo screenshot: i cinque pezzi hanno rapporti diversi
+   (due verticali, uno quadrato, uno panoramico) e i loro titoli partivano a
+   quote diverse — in una vetrina si vede, e sembra sciatto.
+   ⇒ ogni pezzo sta in una fascia di altezza uguale, con `contain`: il pezzo
+   NON viene mai ritagliato, e le bande che avanzano sono dello stesso bianco
+   del fondo della sua foto ⇒ nessuna cornice compare. */
+.gallery-grid button img{
+  width:100%; height:clamp(250px,25vw,340px); object-fit:contain;
+  background:var(--foglio);
+}
+.gallery-grid button:hover img,.gallery-grid button:focus-visible img{transform:scale(1.025)}
+/* opt-in, non opt-out: la transizione si ACCENDE dentro `no-preference`,
+   non si spegne dentro `reduce` (regola 4 del kit) */
+@media (prefers-reduced-motion:no-preference){
+  .gallery-grid button img{transition:transform .3s ease}
+}
+.gallery-grid .nome{display:block; font-family:'Tenor Sans',sans-serif; font-size:1.02rem;
+  letter-spacing:.03em; margin:.85rem 0 .35rem; color:var(--inchiostro)}
+.gallery-grid .desc{display:block; font-size:.875rem; line-height:1.6; color:var(--rame-testo)}
+
+/* ---------- rame ---------- */
+.rame-griglia{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,.9fr); gap:clamp(1.6rem,4.5vw,3.4rem); align-items:center}
+.rame-griglia figure{margin:0}
+@media (max-width:820px){.rame-griglia{grid-template-columns:1fr}}
+
+/* ---------- ceramica: fascia perla, tessere con bordo DICHIARATO ----------
+   Le sue foto di ceramica NON sono su bianco: stanno su un azzurro-grigio a
+   sfumatura (#C4CAD9 → #F4F9FD). Nessun fondo piatto le fa sparire, quindi il
+   rettangolo si dichiara invece di subirlo. */
+.ceramica{background:var(--perla)}
+.ceramica .occhiello{color:var(--verde-testo)}
+.ceramica .occhiello::after{background:var(--verde-testo)}
+.ceramica h2,.ceramica p{color:var(--inchiostro)}
+/* 👁️ 6 tessere: a 1180px la griglia usciva 4+2, con due buchi in fondo.
+   A 330px di misura minima esce 3+3, che si chiude. */
+.cer-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));
+  gap:clamp(1.2rem,2.6vw,1.9rem); margin-top:2.2rem}
+.cer-grid figure{margin:0; background:var(--foglio); border:1px solid rgba(47,32,24,.16); padding:.55rem;
+  display:flex; flex-direction:column}
+/* stessa correzione della galleria vetro: fascia uguale, `contain`, nessun ritaglio */
+.cer-grid img{width:100%; height:clamp(230px,22vw,300px); object-fit:contain; background:var(--foglio)}
+/* la didascalia sta ATTACCATA alla sua immagine (misurato: con `margin-top:auto`
+   sprofondava di 21px sulle tessere con didascalia di una riga sola, e lo spazio
+   vuoto finiva fra foto e testo invece che in fondo alla tessera) */
+.cer-grid figcaption{font-size:.83rem; line-height:1.55; color:var(--rame-testo); padding:.6rem .25rem .15rem}
+
+/* ---------- dove ---------- */
+.dove-griglia{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr)); gap:2rem; margin-top:2rem}
+.dato .et{display:block; font-family:'Tenor Sans',sans-serif; font-size:.735rem; letter-spacing:.17em;
+  text-transform:uppercase; color:var(--rame-testo); margin-bottom:.45rem}
+.dato p{margin:0; font-size:1.03rem}
+.dato a{color:var(--verde-bottega); text-decoration-thickness:1px; text-underline-offset:3px}
+
+/* ---------- piede ---------- */
+footer{background:var(--petrolio); color:#fff; padding:clamp(2.6rem,6vw,4rem) 0 2.2rem; margin-top:clamp(2rem,5vw,3.4rem)}
+footer h2{color:#fff}
+footer a{color:#fff}
+.piede-note{margin-top:2.2rem; padding-top:1.5rem; border-top:1px solid rgba(255,255,255,.28);
+  font-size:.83rem; line-height:1.68; color:#fff}
+.piede-note p{margin:0 0 .6rem; max-width:80ch}
+.piede-note p:last-child{margin-bottom:0}
+
+/* ---------- lightbox ---------- */
+#lightbox{position:fixed; inset:0; z-index:200; background:rgba(24,18,14,.94);
+  display:flex; align-items:center; justify-content:center; padding:clamp(1rem,4vw,3rem);
+  opacity:0; visibility:hidden; transition:opacity .22s,visibility .22s}
+#lightbox.open{opacity:1; visibility:visible}
+#lightbox figure{margin:0; max-width:min(1000px,100%); max-height:100%; display:flex; flex-direction:column; gap:.9rem}
+#lightbox img{max-height:74vh; width:auto; margin-inline:auto; background:#fff}
+#lightbox figcaption{color:#fff; text-align:center; font-size:.94rem; line-height:1.6; max-width:64ch; margin-inline:auto}
+.lb-close,.lb-prev,.lb-next{
+  position:absolute; z-index:2; width:48px; height:48px; border-radius:50%;
+  border:1px solid rgba(255,255,255,.5); background:rgba(20,16,11,.78); color:#fff;
+  font-size:1.4rem; line-height:1; cursor:pointer; display:grid; place-items:center; padding:0;
+}
+.lb-close{top:clamp(.7rem,2vw,1.3rem); right:clamp(.7rem,2vw,1.3rem)}
+.lb-prev{left:clamp(.5rem,2vw,1.3rem); top:50%; transform:translateY(-50%)}
+.lb-next{right:clamp(.5rem,2vw,1.3rem); top:50%; transform:translateY(-50%)}
+.lb-close:hover,.lb-prev:hover,.lb-next:hover{background:rgba(20,16,11,.95)}
+
+/* ---------- senza JS: la barra resta usabile e nulla resta invisibile ---------- */
+</style>
+<noscript><style>
+  #nav{position:static; height:auto; min-height:0; flex-wrap:wrap; padding-block:.5rem}
+  .burger{display:none !important}
+  .nav-links{display:flex !important; flex-wrap:nowrap; overflow-x:auto; gap:1.05rem;
+    margin-left:0; width:100%; order:5; padding-bottom:.25rem}
+  .nav-links a{font-size:.82rem; white-space:nowrap}
+  .nav-tel{margin-left:auto}
+  .eroe{padding-top:clamp(2rem,5vw,3.4rem)}
+  #mobileMenu{display:none}
+</style></noscript>
+</head>
+<body>
+
+<a class="salta" href="#main">Salta al contenuto</a>
+
+<header id="nav">
+  <a class="nav-brand" href="#top">
+    <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+      <g fill="none" stroke="#05543B" stroke-width="3.4" stroke-linecap="round">
+        <path d="M32 60 L32 10"/>
+        <path d="M32 50 C22 48 16 42 14 34 C22 34 29 40 32 48"/>
+        <path d="M32 50 C42 48 48 42 50 34 C42 34 35 40 32 48"/>
+        <path d="M32 38 C24 36 19 31 17 24 C24 24 30 29 32 36"/>
+        <path d="M32 38 C40 36 45 31 47 24 C40 24 34 29 32 36"/>
+      </g>
+    </svg>
+    Simonetta Liscia
+  </a>
+  <ul class="nav-links">
+    <li><a href="#chi">Chi è</a></li>
+    <li><a href="#vetro">Il vetro</a></li>
+    <li><a href="#rame">Il rame</a></li>
+    <li><a href="#ceramica">La ceramica</a></li>
+    <li><a href="#dove">Dove</a></li>
+  </ul>
+  <div class="nav-tel"><a class="nav-cta" href="tel:+39070807027">Chiama</a></div>
+  <button class="burger" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobileMenu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav id="mobileMenu" aria-label="Menu principale">
+  <ul>
+    <li><a href="#chi">Chi è</a></li>
+    <li><a href="#vetro">Il vetro</a></li>
+    <li><a href="#rame">Il rame</a></li>
+    <li><a href="#ceramica">La ceramica</a></li>
+    <li><a href="#dove">Dove</a></li>
+  </ul>
+</nav>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ============ EROE ============ -->
+<section class="eroe">
+  <div class="mis eroe-griglia">
+    <div>
+      <svg class="firma-eroe" viewBox="0 0 64 64" data-fm="traccia" data-fm-durata="1500" aria-hidden="true" focusable="false">
+        <path d="M32 60 L32 10"/>
+        <path d="M32 50 C22 48 16 42 14 34 C22 34 29 40 32 48"/>
+        <path d="M32 50 C42 48 48 42 50 34 C42 34 35 40 32 48"/>
+        <path d="M32 38 C24 36 19 31 17 24 C24 24 30 29 32 36"/>
+        <path d="M32 38 C40 36 45 31 47 24 C40 24 34 29 32 36"/>
+        <path d="M32 26 C26 24 22 20 21 14 C26 15 31 19 32 24"/>
+        <path d="M32 26 C38 24 42 20 43 14 C38 15 33 19 32 24"/>
+      </svg>
+      <p class="occhiello">Quartu Sant'Elena · Sardegna</p>
+      <h1 data-fm="righe">Simonetta Liscia</h1>
+      <p class="mestiere">Ceramiche e vetro artistico</p>
+      <p class="dove" data-fm="sali">Laboratorio «Artemisia», dal 1999.</p>
+      <p class="dove" data-fm="sali" data-fm-ritardo="120">Vetrofusione e ceramica, con il rame lavorato a sbalzo e inglobato nel vetro.</p>
+    </div>
+    <div class="eroe-pezzo" data-fm="sfuma">
+      <figure>
+        <img src="img/vaso-fazzoletto-petrolio.jpg" width="1387" height="1600" fetchpriority="high"
+             alt="Vaso in vetro a corolla, azzurro-verde petrolio, con macchie blu scuro sulle punte e colature di rame arancione.">
+        <figcaption>Vaso fazzoletto petrolio</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<div class="divisore" aria-hidden="true">
+  <svg viewBox="0 0 64 64" focusable="false">
+    <path d="M32 60 L32 10"/>
+    <path d="M32 50 C22 48 16 42 14 34 C22 34 29 40 32 48"/>
+    <path d="M32 50 C42 48 48 42 50 34 C42 34 35 40 32 48"/>
+    <path d="M32 38 C24 36 19 31 17 24 C24 24 30 29 32 36"/>
+    <path d="M32 38 C40 36 45 31 47 24 C40 24 34 29 32 36"/>
+  </svg>
+</div>
+
+<!-- ============ CHI È ============ -->
+<section id="chi" class="sez">
+  <div class="mis chi-griglia">
+    <div>
+      <p class="occhiello">Chi è</p>
+      <h2 data-fm="sali">Le sue parole</h2>
+      <blockquote class="sue" data-fm="sali" data-fm-ritardo="90">
+        <p>«Passione da sempre per arte e manualità.»</p>
+        <p>«Ho studiato al liceo artistico di Cagliari e in seguito un obiettivo, trasformare la passione in professione.»</p>
+        <p>«Il mio laboratorio è la mia casa, per questo ho voluto che fosse in mezzo al verde rilassante della campagna, ma a due passi dal mare e dalla città.»</p>
+        <p>«Dal 2006 vivo e lavoro a Quartu Sant'Elena.»</p>
+      </blockquote>
+      <p data-fm="sfuma">Le frasi sono riportate parola per parola dalla sua scheda sulla Fiera dell'Artigianato Artistico della Sardegna.</p>
+    </div>
+    <div class="ritratto" data-fm="sfuma" data-fm-ritardo="140">
+      <figure>
+        <img src="img/ritratto-studio.jpg" width="887" height="1110" loading="lazy"
+             alt="Ritratto in bianco e nero: una donna con occhiali dalla montatura scura e camicia a fantasia floreale, su fondo chiaro.">
+        <p class="didascalia">Il ritratto pubblicato sulla sua scheda della Fiera dell'Artigianato Artistico della Sardegna.</p>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LE TRE SCELTE — scenica «cronologia» ============ -->
+<section id="scelte" class="sez">
+  <div class="mis">
+    <p class="occhiello">Dal 1999, tre scelte</p>
+    <h2 data-fm="sali">La ceramica, il vetro, e di nuovo la ceramica</h2>
+    <div class="tempo" data-fms="cronologia" data-fms-tappe=".tappa">
+      <article class="tappa">
+        <h3><span class="anno">1999</span>La ceramica</h3>
+        <p>«Nel 1999 inizio l'avventura nel mondo della ceramica, aprendo a Cagliari il mio laboratorio.»</p>
+      </article>
+      <article class="tappa">
+        <h3><span class="anno">Poi</span>Il vetro</h3>
+        <p>«Ma la curiosità è forte, e la voglia di sperimentare mi spinge poi verso il vetro, un materiale leggero, trasparente e apparentemente fragile che mi ha dato grandi soddisfazioni.»</p>
+      </article>
+      <article class="tappa">
+        <h3><span class="anno">Da qualche anno</span>Di nuovo la ceramica</h3>
+        <p>«Da qualche anno, però, la mia prima passione è tornata la protagonista della mia arte e ho ripreso con la lavorazione della ceramica, con la quale riesco ad esprimere a pieno la mia creatività.»</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ IL VETRO ============ -->
+<section id="vetro" class="sez">
+  <div class="mis">
+    <p class="occhiello">Il vetro</p>
+    <h2 data-fm="sali">Cinque pezzi in vetrofusione</h2>
+    <p data-fm="sfuma">«La produzione di Simonetta Liscia è composta principalmente da una pregiata varietà di elementi d'illuminotecnica e di complementi d'arredo in vetro: lampadari, lampade da muro e da tavolo, vasi e piatti decorativi, si caratterizzano per le forme eleganti e per le preziose decorazioni in rame che l'artigiana realizza con procedure personalizzate.»</p>
+    <p class="didascalia" data-fm="sfuma">Dalla sua scheda nel registro regionale «Vetrine dell'Artigiano Artistico», che è anche la fonte dei nomi e delle descrizioni qui sotto.</p>
+  </div>
+  <div class="mis" id="gallery">
+    <div class="gallery-grid" data-fm="sali" data-fm-passo="80">
+
+      <button type="button" data-src="img/vaso-fazzoletto-petrolio.jpg"
+        data-nome="Vaso fazzoletto petrolio"
+        data-desc="«Il dinamismo delle forme nell'importante vaso in vetro è enfatizzato dalla pregiata resa della decorazione in rame che, con struttura organica, emerge dalle trasparenze irregolari blu petrolio.»">
+        <img src="img/vaso-fazzoletto-petrolio.jpg" width="1387" height="1600" loading="lazy"
+             alt="Vaso in vetro a corolla, azzurro-verde petrolio, con macchie blu scuro sulle punte e colature di rame arancione.">
+        <span class="nome">Vaso fazzoletto petrolio</span>
+        <span class="desc">«Il dinamismo delle forme nell'importante vaso in vetro è enfatizzato dalla pregiata resa della decorazione in rame che, con struttura organica, emerge dalle trasparenze irregolari blu petrolio.»</span>
+      </button>
+
+      <button type="button" data-src="img/vaso-fazzoletto-bordeaux.jpg"
+        data-nome="Vaso fazzoletto bordeaux"
+        data-desc="«Ricorda una preziosa corolla la forma organica del vaso in vetro bordeaux, screziato nella trasparenza da piccole bolle e decorato con elementi in lasta di rame incisa.»">
+        <img src="img/vaso-fazzoletto-bordeaux.jpg" width="1319" height="1600" loading="lazy"
+             alt="Vaso in vetro a corolla, rosso bordeaux scuro, con bollicine nella trasparenza e due inserti chiari incisi.">
+        <span class="nome">Vaso fazzoletto bordeaux</span>
+        <span class="desc">«Ricorda una preziosa corolla la forma organica del vaso in vetro bordeaux, screziato nella trasparenza da piccole bolle e decorato con elementi in lasta di rame incisa.»</span>
+      </button>
+
+      <button type="button" data-src="img/piatto-quadro-rame.jpg"
+        data-nome="Piatto quadro fondo rame"
+        data-desc="«Dalle vitree trasparenze blu petrolio emerge l'equilibrata decorazione in lastra di rame sapientemente lavorata nel grande piatto quadro.»">
+        <img src="img/piatto-quadro-rame.jpg" width="1800" height="1800" loading="lazy"
+             alt="Piatto quadrato in vetro verde-petrolio con bordo ondulato; al centro una griglia di rame arancione.">
+        <span class="nome">Piatto quadro fondo rame</span>
+        <span class="desc">«Dalle vitree trasparenze blu petrolio emerge l'equilibrata decorazione in lastra di rame sapientemente lavorata nel grande piatto quadro.»</span>
+      </button>
+
+      <button type="button" data-src="img/piatto-ovale-barchetta.jpg"
+        data-nome="Piatto ovale Barchetta"
+        data-desc="«La forma equilibrata del grande piatto ovale accoglie la decorazione a piccoli quadrati in lastra di rame martellata, disposti con asimmetrica armonia nella superficie ambrata ed irregolare.»">
+        <img src="img/piatto-ovale-barchetta.jpg" width="1600" height="855" loading="lazy"
+             alt="Piatto ovale in vetro giallo ambra, con quadratini di rame inciso disposti in diagonale sulla superficie.">
+        <span class="nome">Piatto ovale Barchetta</span>
+        <span class="desc">«La forma equilibrata del grande piatto ovale accoglie la decorazione a piccoli quadrati in lastra di rame martellata, disposti con asimmetrica armonia nella superficie ambrata ed irregolare.»</span>
+      </button>
+
+      <button type="button" data-src="img/lampada-cubo.jpg"
+        data-nome="Lampada Cubo"
+        data-desc="«Minimale nelle linee e armoniosa nei particolari decorativi, la lampada in vetro a forma di cubo è decorata con elementi in lastra di rame martellata con motivi sempre differenti che emergono dall'interno restituendo pregiati effetti materici.»">
+        <img src="img/lampada-cubo.jpg" width="1600" height="1300" loading="lazy"
+             alt="Lampada a cubo in vetro giallo, con quadratini di rame inciso distribuiti sulle facce.">
+        <span class="nome">Lampada Cubo</span>
+        <span class="desc">«Minimale nelle linee e armoniosa nei particolari decorativi, la lampada in vetro a forma di cubo è decorata con elementi in lastra di rame martellata con motivi sempre differenti che emergono dall'interno restituendo pregiati effetti materici.»</span>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ IL RAME ============ -->
+<section id="rame" class="sez">
+  <div class="mis rame-griglia">
+    <div>
+      <p class="occhiello">Il rame</p>
+      <h2 data-fm="sali">Il metallo entra nel vetro</h2>
+      <p data-fm="sfuma">«Nel laboratorio si eseguono le tecniche della vetrofusione, della legatura a piombo, della lavorazione a lume, affiancate da procedure sperimentali che coinvolgono l'inserimento di decorazioni in lastra e filo di rame lavorato preliminarmente a sbalzo e ad intreccio.»</p>
+      <p data-fm="sfuma" data-fm-ritardo="110">«…inglobando nel vetro lastre di rame che sagoma e lavora preliminarmente nella texture con effetti a sbalzo, ricercando procedure che mantengono ed esaltano il colore del metallo nella trasparenza del manufatto finito, catturando preziosità nella preziosità.»</p>
+      <p class="didascalia" data-fm="sfuma">Le due descrizioni sono riportate parola per parola dal registro regionale.</p>
+    </div>
+    <figure data-fm="sfuma" data-fm-ritardo="150">
+      <img src="img/incisione-lastra-rame.jpg" width="800" height="535" loading="lazy"
+           alt="Due mani incidono con uno stilo una lastra di rame decorata a volute, appoggiata su un banco.">
+      <p class="didascalia">La lavorazione della lastra di rame, prima che entri nel vetro.</p>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ LA CERAMICA ============ -->
+<section id="ceramica" class="sez ceramica">
+  <div class="mis">
+    <p class="occhiello">La ceramica</p>
+    <h2 data-fm="sali">La prima passione, tornata</h2>
+    <p data-fm="sfuma">«Simonetta Liscia ha aperto il suo laboratorio “Artemisia” nel 1999. Ha iniziato realizzando lampade e complementi d'arredo in ceramica, acquisendo grande esperienza e manualità.»</p>
+    <p class="didascalia" data-fm="sfuma">Da Wellmade, il repertorio della Fondazione Cologni dei Mestieri d'Arte.</p>
+
+    <div class="cer-grid" data-fm="sali" data-fm-passo="70">
+      <figure>
+        <img src="img/ceramica-vasi-decori-geometrici.jpg" width="1119" height="1400" loading="lazy"
+             alt="Cinque vasi in ceramica bianca a sezione quadrata e profilo piegato, con fasce di decoro geometrico grigio; le imboccature sono colorate in azzurro, rosso, verde oliva e nero.">
+        <figcaption>Vasi a sezione quadrata, con fasce di decoro geometrico.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/ceramica-brocche-fiori.jpg" width="1400" height="1400" loading="lazy"
+             alt="Brocche in ceramica bianca con manico, alcune in piedi e alcune coricate, ognuna decorata con un fiore dipinto e una fascia di ornato.">
+        <figcaption>Brocche con un fiore dipinto su ciascuna.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/ceramica-tazze-soffioni.jpg" width="1400" height="1400" loading="lazy"
+             alt="Due tazze in ceramica bianca con manico, decorate con fiori a ombrella su steli lunghi; la fascia rigata alla base è verde oliva su una tazza e gialla sull'altra.">
+        <figcaption>Due tazze, con il disegno a stelo lungo; le fasce alla base sono verde oliva e gialla.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/ceramica-brocche-zigzag.jpg" width="1100" height="1090" loading="lazy"
+             alt="Brocche in ceramica bianca; su quella in primo piano una fascia verticale di decoro nero a zig-zag e reticolo.">
+        <figcaption>Il decoro nero a zig-zag, sulla brocca in primo piano.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/ceramica-ciotole.jpg" width="820" height="816" loading="lazy"
+             alt="Tre ciotole in ceramica bianca, una grande davanti e due impilate dietro, con l'interno verde chiaro decorato a foglie.">
+        <figcaption>Ciotole con l'interno decorato a foglie.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/decoro-a-mano.jpg" width="476" height="508" loading="lazy"
+             alt="In laboratorio, una donna con occhiali disegna a mano foglie verdi e un fiore rosa su una brocca in ceramica bianca; sul banco, matite colorate.">
+        <figcaption>Il decoro si disegna a mano.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOVE ============ -->
+<section id="dove" class="sez">
+  <div class="mis">
+    <p class="occhiello">Dove si trova</p>
+    <h2 data-fm="sali">Il laboratorio</h2>
+    <p data-fm="sfuma">Il laboratorio è a Quartu Sant'Elena, in campagna, «a due passi dal mare e dalla città». Si visita <strong>su appuntamento</strong>.</p>
+    <div class="dove-griglia" data-fm="sali" data-fm-passo="80">
+      <div class="dato">
+        <span class="et">Indirizzo</span>
+        <p>Via dell'Autonomia Regionale Sarda<br>09045 Quartu Sant'Elena (CA)</p>
+      </div>
+      <div class="dato">
+        <span class="et">Telefono</span>
+        <p><a href="tel:+39070807027">070 807027</a><br><a href="tel:+393395341987">339 5341987</a></p>
+      </div>
+      <div class="dato">
+        <span class="et">Email</span>
+        <p><a href="mailto:simonettaliscia@tiscali.it">simonettaliscia@tiscali.it</a></p>
+      </div>
+      <div class="dato">
+        <span class="et">Visite</span>
+        <p>Su appuntamento</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="mis">
+    <p class="occhiello" style="color:#fff">Contatti</p>
+    <h2>Simonetta Liscia · Artemisia</h2>
+    <p>Ceramiche e vetro artistico — Quartu Sant'Elena (CA)<br>
+      <a href="tel:+39070807027">070 807027</a> ·
+      <a href="tel:+393395341987">339 5341987</a> ·
+      <a href="mailto:simonettaliscia@tiscali.it">simonettaliscia@tiscali.it</a></p>
+
+    <div class="piede-note">
+      <p><strong>Fotografie.</strong> I cinque pezzi in vetro e le loro descrizioni provengono dal registro regionale «Vetrine dell'Artigiano Artistico»; il ritratto e la lavorazione del rame dalla scheda della Fiera dell'Artigianato Artistico della Sardegna, che le pubblica con licenza Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) dichiarandole di proprietà di Simonetta Liscia ceramiche e vetro artistico. Le sei fotografie di ceramica provengono da Wellmade (Fondazione Cologni dei Mestieri d'Arte), che le accredita ad <strong>Artimanos</strong>.</p>
+      <p>Sito dimostrativo realizzato con AI da FAR AI · contenuti da rivedere con l'attività prima della pubblicazione</p>
+      <p>Testi e immagini provengono dalle fonti pubbliche dell'attività (registro regionale «Vetrine dell'Artigiano Artistico», Fiera dell'Artigianato Artistico della Sardegna, Wellmade) e restano di proprietà dell'attività.</p>
+    </div>
+  </div>
+</footer>
+
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Fotografia ingrandita" hidden>
+  <button class="lb-close" type="button" aria-label="Chiudi">&#10005;</button>
+  <button class="lb-prev" type="button" aria-label="Fotografia precedente">&#8249;</button>
+  <button class="lb-next" type="button" aria-label="Fotografia successiva">&#8250;</button>
+  <figure>
+    <img id="lbImg" src="img/vaso-fazzoletto-petrolio.jpg" alt="">
+    <figcaption id="lbCap"></figcaption>
+  </figure>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var nav=document.getElementById('nav'), burger=document.querySelector('.burger'),
+      menu=document.getElementById('mobileMenu'), main=document.getElementById('main'),
+      piede=document.querySelector('footer'), salta=document.querySelector('.salta');
+
+  /* ---------- menu mobile ---------- */
+  function inerti(on){
+    [main,piede].forEach(function(e){ if(e){ if(on) e.setAttribute('inert',''); else e.removeAttribute('inert'); } });
+    if(salta){ if(on) salta.setAttribute('inert',''); else salta.removeAttribute('inert'); }
+  }
+  function apriMenu(){
+    menu.classList.add('open'); burger.classList.add('open');
+    burger.setAttribute('aria-expanded','true'); burger.setAttribute('aria-label','Chiudi il menu');
+    inerti(true);
+  }
+  function chiudiMenu(torna){
+    menu.classList.remove('open'); burger.classList.remove('open');
+    burger.setAttribute('aria-expanded','false'); burger.setAttribute('aria-label','Apri il menu');
+    inerti(false);
+    if(torna) burger.focus();
+  }
+  burger.addEventListener('click', function(){
+    if(menu.classList.contains('open')) chiudiMenu(false); else apriMenu();
+  });
+  menu.addEventListener('click', function(e){ if(e.target.closest('a')) chiudiMenu(false); });
+
+  /* ---------- lightbox ---------- */
+  var lb=document.getElementById('lightbox'), lbImg=document.getElementById('lbImg'),
+      lbCap=document.getElementById('lbCap'),
+      tess=Array.prototype.slice.call(document.querySelectorAll('.gallery-grid button[data-src]')),
+      idx=0, ultimo=null;
+
+  function mostra(i){
+    idx=(i+tess.length)%tess.length;
+    var b=tess[idx], im=b.querySelector('img');
+    lbImg.src=b.getAttribute('data-src');
+    lbImg.alt=im?im.getAttribute('alt'):'';
+    lbCap.textContent=b.getAttribute('data-nome')+' — '+b.getAttribute('data-desc');
+  }
+  function attesaVisibile(el, poi){
+    var t=0;
+    (function giro(){
+      if(getComputedStyle(el).visibility==='visible'||t>40){ poi(); return; }
+      t++; requestAnimationFrame(giro);
+    })();
+  }
+  function apriLb(i){
+    ultimo=document.activeElement;
+    mostra(i); lb.hidden=false;
+    requestAnimationFrame(function(){ lb.classList.add('open'); });
+    inerti(true); nav.setAttribute('inert','');
+    attesaVisibile(lb, function(){ lb.querySelector('.lb-close').focus(); });
+  }
+  function chiudiLb(){
+    lb.classList.remove('open');
+    inerti(false); nav.removeAttribute('inert');
+    setTimeout(function(){ lb.hidden=true; }, 240);
+    if(ultimo && ultimo.focus) ultimo.focus();
+  }
+  tess.forEach(function(b,i){ b.addEventListener('click', function(){ apriLb(i); }); });
+  lb.querySelector('.lb-close').addEventListener('click', chiudiLb);
+  lb.querySelector('.lb-prev').addEventListener('click', function(){ mostra(idx-1); });
+  lb.querySelector('.lb-next').addEventListener('click', function(){ mostra(idx+1); });
+  lb.addEventListener('click', function(e){ if(e.target===lb) chiudiLb(); });
+
+  /* ---------- tastiera: Esc, frecce, trappola del Tab ---------- */
+  function focusabili(root){
+    return Array.prototype.slice.call(root.querySelectorAll(
+      'a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])'
+    )).filter(function(e){ return !e.hasAttribute('inert') && getComputedStyle(e).visibility!=='hidden'; });
+  }
+  document.addEventListener('keydown', function(e){
+    var lbAperta=lb.classList.contains('open'), menuAperto=menu.classList.contains('open');
+    if(e.key==='Escape'){
+      if(lbAperta){ chiudiLb(); return; }
+      if(menuAperto){ chiudiMenu(true); return; }
+    }
+    if(lbAperta && (e.key==='ArrowLeft'||e.key==='ArrowRight')){
+      e.preventDefault(); mostra(idx + (e.key==='ArrowRight'?1:-1)); return;
+    }
+    if(e.key==='Tab' && (lbAperta||menuAperto)){
+      var pannello = lbAperta ? lb : menu, f=focusabili(pannello);
+      if(!f.length) return;
+      var primo=f[0], ultimoF=f[f.length-1];
+      if(e.shiftKey && document.activeElement===primo){ e.preventDefault(); ultimoF.focus(); }
+      else if(!e.shiftKey && document.activeElement===ultimoF){ e.preventDefault(); primo.focus(); }
+      else if(f.indexOf(document.activeElement)===-1){ e.preventDefault(); primo.focus(); }
+    }
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://demo.francescoar.com/artemisia-liscia-quartu/#laboratorio",
+  "name": "Simonetta Liscia ceramiche e vetro artistico",
+  "alternateName": "Artemisia",
+  "description": "Laboratorio di ceramica e vetrofusione con inserti in rame, a Quartu Sant'Elena.",
+  "image": "img/vaso-fazzoletto-petrolio.jpg",
+  "telephone": "+39070807027",
+  "email": "simonettaliscia@tiscali.it",
+  "foundingDate": "1999",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via dell'Autonomia Regionale Sarda",
+    "postalCode": "09045",
+    "addressLocality": "Quartu Sant'Elena",
+    "addressRegion": "CA",
+    "addressCountry": "IT"
+  }
+}
+</script>
+<!-- ⛔ Niente "url": non ha un sito proprio, e `arte-liscia.it` non risolve.
+     ⛔ Niente civico: 94 sulla Fiera contro 95 su tre fonti, conflitto aperto.
+     ⛔ Niente openingHours: le due fonti si contraddicono (lun-sab 9-13/16-19
+        contro lun-ven 17-20). Un orario sbagliato manda qualcuno a porta chiusa.
+     "image" è RELATIVO apposta: assoluto verso un dominio del cliente darebbe 404. -->
+
+<script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
