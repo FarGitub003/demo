@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Azienda Agricola Di Meo · vini d'Irpinia a Salza Irpina (Avellino)</title>
+<meta name="description" content="Dai primi anni '80 i fratelli Di Meo coltivano solo uve autoctone nei tre areali DOCG dell'Irpinia: Fiano di Avellino, Greco di Tufo e Taurasi. 25 ettari a Salza Irpina, visite in cantina su prenotazione.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:title" content="Azienda Agricola Di Meo · vini d'Irpinia a Salza Irpina (Avellino)">
+<meta property="og:description" content="Solo uve autoctone nei tre areali DOCG dell'Irpinia. 25 ettari attorno a un Casino di caccia del '700, a Salza Irpina.">
+<meta property="og:image" content="https://demo.francescoar.com/dimeo-salza-irpina/img/marchio-fuoco-testata-botte.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400..700;1,400..700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%2314100B' stroke-width='3' stroke-linecap='square' stroke-linejoin='miter'%3E%3Cpath d='M6 54h52'/%3E%3Cpath d='M14 54V22l10-6 10 6v32'/%3E%3Cpath d='M14 22h20'/%3E%3Cpath d='M34 54V30h16v24'/%3E%3Cpath d='M40 38h4M40 46h4'/%3E%3Cpath d='M20 30h4M20 40h4'/%3E%3C/g%3E%3C/svg%3E">
+<script>document.documentElement.classList.add('js');</script>
+<!-- FAR Motion: il nucleo va senza defer (mette html.fm-js prima del primo disegno) -->
+<link rel="stylesheet" href="far-motion.min.css">
+<script src="far-motion.min.js"></script>
+<link rel="stylesheet" href="sceniche/timbro.css">
+<script src="sceniche/timbro.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Winery",
+  "@id": "https://demo.francescoar.com/dimeo-salza-irpina/#attivita",
+  "name": "Azienda Agricola Di Meo s.a.s.",
+  "description": "Azienda vitivinicola di famiglia a Salza Irpina (Avellino). Solo uve autoctone nei tre areali DOCG dell'Irpinia: Fiano di Avellino, Greco di Tufo e Taurasi.",
+  "image": "img/marchio-fuoco-testata-botte.jpg",
+  "telephone": "+390825981419",
+  "email": "info@dimeo.it",
+  "url": "https://www.dimeo.it/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Contrada Coccovoni, 1",
+    "addressLocality": "Salza Irpina",
+    "addressRegion": "Campania",
+    "postalCode": "83050",
+    "addressCountry": "IT"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "09:00", "closes": "17:30"
+  }]
+}
+</script>
+<style>
+/* ═══════════════════════════════════════════════════════════════════════════
+   Di Meo — Salza Irpina · identità n. 26 del REGISTRO_IDENTITA.md
+   Palette CAMPIONATA dalle loro fotografie, non scelta. I contrasti a fianco
+   sono CALCOLATI, non stimati (vedi §4.5 del dossier).
+   ═══════════════════════════════════════════════════════════════════════════ */
+:root{
+  --avorio:#F5F5DB;        /* fondo ESATTO dei loro 12 scatti di bottiglia — 100,0% dei pixel */
+  --avorio-caldo:#EDEDCF;  /* stesso colore, un gradino giù, per le fasce alterne */
+  --bottaia:#14100B;       /* dominante misurata dei sotterranei — 17,11:1 sull'avorio */
+  --notte:#22201B;         /* seconda dominante dello stesso scatto — 14,70:1 */
+  --irpinia:#2F3D2C;       /* verde misurato dello sfondo di casa loro — 10,39:1 */
+  --rovere:#C19876;        /* botti — 7,23:1 SULLA BOTTAIA · ⛔ 2,36:1 sull'avorio: mai testo */
+  --vigna:#B99659;         /* vigna d'ottobre — ⛔ 2,51:1 sull'avorio: mai testo */
+  --pietra:#96978C;        /* intonaco del Casino — ⛔ 2,67:1 sull'avorio: mai testo */
+  --rovere-scuro:#624E3C;  /* CALCOLATO — 7,09:1 sull'avorio ✅ AAA */
+  --vigna-scuro:#62502F;   /* CALCOLATO — 7,00:1 sull'avorio ✅ AAA */
+  --pietra-scuro:#52534D;  /* CALCOLATO — 7,02:1 sull'avorio ✅ AAA */
+  --vigna-chiaro:#BB995E;  /* CALCOLATO — 7,06:1 sulla bottaia ✅ AAA */
+  --pietra-chiaro:#9E9F95; /* CALCOLATO — 7,08:1 sulla bottaia ✅ AAA */
+  --display:'Brygada 1918',Georgia,'Times New Roman',serif;
+  --testo:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --barra:66px;
+  --gutter:clamp(18px,4.4vw,44px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{overflow-x:clip;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--avorio);color:var(--bottaia);
+  font-family:var(--testo);font-size:17px;line-height:1.65;font-weight:400;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{font-family:var(--display);font-weight:600;margin:0;line-height:1.14;letter-spacing:.005em}
+p{margin:0 0 1em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--rovere-scuro);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:var(--gutter)}
+.stretto{max-width:760px}
+section{scroll-margin-top:calc(var(--barra) + 15px)}
+.occhiello{
+  font-family:var(--testo);font-size:12px;font-weight:600;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--vigna-scuro);margin:0 0 14px;
+}
+.scuro .occhiello{color:var(--vigna-chiaro)}
+.skip{
+  position:absolute;left:12px;top:-70px;z-index:120;background:var(--bottaia);color:var(--avorio);
+  padding:11px 18px;border-radius:3px;font-size:15px;font-weight:600;text-decoration:none;
+  transition:top .18s;
+}
+.skip:focus{top:12px}
+
+/* ── barra ─────────────────────────────────────────────────────────────── */
+#nav{
+  position:fixed;inset:0 0 auto;z-index:60;height:var(--barra);
+  background:var(--avorio);border-bottom:1px solid rgba(20,16,11,.14);
+  display:flex;align-items:center;
+}
+#nav .wrap{display:flex;align-items:center;gap:20px;width:100%}
+.nav-brand{display:flex;align-items:center;gap:11px;text-decoration:none;margin-right:auto;flex-shrink:0}
+.nav-brand img{height:34px;width:auto}
+.nav-brand b{
+  font-family:var(--display);font-size:19px;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--bottaia);white-space:nowrap;
+}
+.nav-links{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+.nav-links a{
+  text-decoration:none;font-size:14.5px;font-weight:500;color:var(--pietra-scuro);
+  padding:6px 0;border-bottom:2px solid transparent;white-space:nowrap;
+}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--bottaia);border-bottom-color:var(--rovere-scuro)}
+.nav-tel{flex-shrink:0}
+.nav-tel a.nav-cta{
+  display:inline-block;background:var(--bottaia);color:var(--avorio);text-decoration:none;
+  font-size:14.5px;font-weight:600;padding:9px 17px;border-radius:3px;white-space:nowrap;
+}
+.nav-tel a.nav-cta:hover{background:var(--irpinia)}
+.burger{
+  display:none;width:44px;height:44px;border:1px solid rgba(20,16,11,.28);border-radius:3px;
+  background:transparent;cursor:pointer;padding:0;flex-shrink:0;
+}
+.burger span{display:block;width:20px;height:2px;background:var(--bottaia);margin:4px auto}
+#mobileMenu{
+  position:fixed;inset:var(--barra) 0 auto;z-index:59;background:var(--avorio);
+  border-bottom:1px solid rgba(20,16,11,.18);
+  transform:translateY(-102%);visibility:hidden;transition:transform .26s ease,visibility .26s;
+}
+#mobileMenu.open{transform:translateY(0);visibility:visible}
+#mobileMenu ul{list-style:none;margin:0;padding:10px var(--gutter) 22px}
+#mobileMenu a{
+  display:block;padding:13px 0;text-decoration:none;font-size:17px;font-weight:500;
+  color:var(--bottaia);border-bottom:1px solid rgba(20,16,11,.1);
+}
+
+/* ── hero ──────────────────────────────────────────────────────────────── */
+#hero{padding:calc(var(--barra) + clamp(38px,7vw,80px)) 0 clamp(40px,6vw,74px)}
+.hero-griglia{display:grid;grid-template-columns:1fr;gap:clamp(30px,5vw,58px);align-items:center}
+@media(min-width:900px){.hero-griglia{grid-template-columns:1.02fr .98fr}}
+.hero-marchio{display:inline-block;margin:0 0 26px}
+.hero-marchio img{width:clamp(178px,20vw,232px);height:auto}
+#hero h1{font-size:clamp(38px,6.2vw,62px);letter-spacing:-.005em;margin:0 0 14px}
+.hero-luogo{
+  font-family:var(--testo);font-size:clamp(13px,1.5vw,15px);font-weight:600;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--vigna-scuro);margin:0 0 22px;
+}
+.hero-frase{font-size:clamp(18px,2.1vw,21px);line-height:1.55;max-width:31em;color:#3D3F38}
+.hero-frase strong{color:var(--bottaia);font-weight:600}
+.hero-foto figure{margin:0}
+.hero-foto img{width:100%;height:auto;border-radius:2px}
+.didascalia{
+  font-size:13.5px;line-height:1.5;color:var(--pietra-scuro);margin-top:11px;
+  border-left:2px solid var(--rovere-scuro);padding-left:12px;
+}
+.scuro .didascalia{color:var(--pietra-chiaro);border-left-color:var(--vigna-chiaro)}
+
+/* ── fasce ─────────────────────────────────────────────────────────────── */
+.fascia{padding:clamp(52px,8vw,96px) 0}
+.fascia.alterna{background:var(--avorio-caldo)}
+.fascia.scuro{background:var(--bottaia);color:var(--avorio)}
+.fascia.scuro h2,.fascia.scuro h3{color:var(--avorio)}
+.fascia.scuro p{color:var(--pietra-chiaro)}
+/* ⛔ un solo fondo scuro: due fondi diversi facevano scendere le varianti calcolate */
+h2{font-size:clamp(28px,4.1vw,42px);margin:0 0 10px}
+.sottotitolo{font-size:clamp(16.5px,1.9vw,18.5px);color:var(--pietra-scuro);max-width:44em;margin-bottom:clamp(28px,4vw,44px)}
+.scuro .sottotitolo{color:var(--pietra-chiaro)}
+.filetto{width:56px;height:2px;background:var(--rovere-scuro);border:0;margin:0 0 22px}
+.scuro .filetto{background:var(--vigna-chiaro)}
+
+/* ── i nomi di casa ────────────────────────────────────────────────────── */
+.nomi{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:clamp(20px,3vw,34px)}
+.nome{
+  background:var(--avorio);border:1px solid rgba(20,16,11,.13);border-radius:2px;
+  padding:24px 22px 26px;display:flex;flex-direction:column;
+}
+.fascia.alterna .nome{background:var(--avorio)}
+.nome img{width:auto;height:210px;margin:0 auto 18px;object-fit:contain}
+.nome h3{font-size:24px;margin:0 0 4px}
+.nome .ruolo{
+  font-family:var(--testo);font-size:12px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--vigna-scuro);margin:0 0 12px;
+}
+.nome blockquote{
+  margin:0;font-size:15px;line-height:1.6;color:var(--pietra-scuro);font-style:italic;
+  border-left:2px solid var(--rovere-scuro);padding-left:13px;
+}
+
+/* ── mensola delle bottiglie ───────────────────────────────────────────── */
+.linea{margin-bottom:clamp(34px,5vw,58px)}
+.linea h3{font-size:22px;margin:0 0 4px}
+.linea .linea-nota{font-size:14.5px;color:var(--pietra-scuro);margin:0 0 22px;max-width:46em}
+.mensola{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));
+  gap:clamp(16px,2.4vw,30px) clamp(10px,1.6vw,20px);align-items:start;
+  border-bottom:2px solid rgba(20,16,11,.16);padding-bottom:20px;
+}
+.fascia.sep{border-top:1px solid rgba(20,16,11,.14)}
+.bott{display:flex;flex-direction:column;align-items:center;text-align:center}
+.bott img{height:clamp(158px,20vw,210px);width:100%;object-fit:contain;object-position:center bottom}
+.bott .b-nome{
+  font-family:var(--display);font-size:15.5px;font-weight:600;line-height:1.24;
+  margin:12px 0 3px;color:var(--bottaia);min-height:2.48em;
+}
+.bott .b-dato{font-size:12.5px;line-height:1.42;color:var(--pietra-scuro)}
+
+/* ── scheda per esteso ─────────────────────────────────────────────────── */
+.scheda{display:grid;grid-template-columns:1fr;gap:clamp(28px,4vw,52px);align-items:start}
+@media(min-width:820px){.scheda{grid-template-columns:250px 1fr}}
+.scheda-foto{text-align:center}
+.scheda-foto img{height:clamp(300px,38vw,430px);width:auto;margin:0 auto;object-fit:contain}
+.dati{list-style:none;margin:0 0 26px;padding:0;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:0 30px}
+.dati li{
+  display:flex;justify-content:space-between;gap:14px;padding:9px 0;
+  border-bottom:1px solid rgba(245,245,219,.16);font-size:14.5px;
+}
+.dati b{font-weight:400;color:var(--pietra-chiaro)}
+.dati span{font-weight:600;text-align:right;color:var(--avorio);font-variant-numeric:tabular-nums}
+.premi{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.premi li{
+  border-left:2px solid var(--vigna-chiaro);padding:2px 0 2px 15px;font-size:15px;line-height:1.55;
+  color:var(--pietra-chiaro);
+}
+.premi b{color:var(--avorio);font-weight:600}
+
+/* ── i tre luoghi ──────────────────────────────────────────────────────── */
+.luoghi{display:grid;grid-template-columns:1fr;gap:clamp(34px,5vw,62px)}
+.luogo{display:grid;grid-template-columns:1fr;gap:clamp(20px,3vw,40px);align-items:center}
+@media(min-width:860px){
+  .luogo{grid-template-columns:1fr 1fr}
+  .luogo.rovescia .luogo-testo{order:2}
+}
+.luogo img{width:100%;height:auto;border-radius:2px}
+.luogo h3{font-size:clamp(24px,3.2vw,31px);margin:0 0 12px}
+
+/* ── galleria ──────────────────────────────────────────────────────────── */
+.gallery-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+  gap:clamp(9px,1.4vw,15px);
+}
+.gallery-grid button{
+  border:0;padding:0;background:var(--notte);cursor:pointer;display:block;
+  aspect-ratio:3/2;overflow:hidden;border-radius:2px;
+}
+.gallery-grid button img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease,opacity .3s}
+.gallery-grid button:hover img,.gallery-grid button:focus-visible img{transform:scale(1.045);opacity:.93}
+
+/* ── lightbox ──────────────────────────────────────────────────────────── */
+#lightbox{
+  position:fixed;inset:0;z-index:100;background:rgba(10,8,5,.965);
+  display:flex;align-items:center;justify-content:center;padding:clamp(14px,3vw,40px);
+  opacity:0;visibility:hidden;transition:opacity .24s ease,visibility .24s;
+}
+#lightbox.open{opacity:1;visibility:visible}
+#lightbox figure{margin:0;max-width:1180px;width:100%;text-align:center;position:relative}
+#lightbox img{max-height:min(76vh,860px);width:auto;max-width:100%;margin:0 auto;border-radius:2px}
+#lightbox figcaption{
+  color:var(--avorio);font-size:15px;line-height:1.5;margin-top:16px;
+  max-width:56em;margin-inline:auto;padding:0 8px;
+}
+.lb-close,.lb-prev,.lb-next{
+  position:absolute;z-index:3;background:rgba(20,16,11,.86);border:1px solid rgba(245,245,219,.4);
+  color:var(--avorio);width:52px;height:52px;border-radius:50%;cursor:pointer;
+  font-size:23px;line-height:1;display:flex;align-items:center;justify-content:center;
+}
+.lb-close:hover,.lb-prev:hover,.lb-next:hover{background:rgba(20,16,11,.98)}
+.lb-close{top:-8px;right:0}
+.lb-prev{left:0;top:50%;transform:translateY(-50%)}
+.lb-next{right:0;top:50%;transform:translateY(-50%)}
+
+/* ── contatti ──────────────────────────────────────────────────────────── */
+.contatti{display:grid;grid-template-columns:1fr;gap:clamp(26px,4vw,50px)}
+@media(min-width:760px){.contatti{grid-template-columns:1fr 1fr}}
+.dl{margin:0}
+.dl dt{
+  font-size:12px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--vigna-chiaro);margin-top:20px;
+}
+.dl dt:first-child{margin-top:0}
+.dl dd{margin:5px 0 0;font-size:17.5px;line-height:1.55}
+.dl dd a{color:var(--avorio)}
+.bottone{
+  display:inline-block;margin-top:26px;background:var(--avorio);color:var(--bottaia);
+  text-decoration:none;font-weight:600;font-size:16px;padding:13px 26px;border-radius:3px;
+}
+.bottone:hover{background:#fff}
+
+/* ── piede ─────────────────────────────────────────────────────────────── */
+footer{background:var(--bottaia);color:var(--pietra-chiaro);padding:44px 0 52px;font-size:13.5px;line-height:1.62;
+  border-top:1px solid rgba(245,245,219,.14)}
+footer a{color:var(--avorio)}
+footer .marchio-piede{width:150px;height:auto;margin-bottom:20px;opacity:.94}
+footer .ai{margin-top:22px;padding-top:20px;border-top:1px solid rgba(245,245,219,.16)}
+
+/* ── movimento: rete di sicurezza ──────────────────────────────────────── */
+/* Ogni elemento che parte da opacity:0 lo fa SOLO sotto html.fm-js: senza JS
+   resta a 1 (regola 3 del kit + la classe di difetto pagata su Pignatta/T&T). */
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* ── mobile ────────────────────────────────────────────────────────────── */
+@media(max-width:920px){
+  .nav-links{display:none}
+  .burger{display:block}
+  .nav-brand b{font-size:17px}
+}
+@media(max-width:560px){
+  .nav-brand img{height:30px}
+  .nav-brand b{font-size:15px;letter-spacing:.07em}
+  .nav-tel a.nav-cta{padding:9px 13px;font-size:14px}
+  .lb-close{top:-4px;right:-2px;width:46px;height:46px}
+  .lb-prev,.lb-next{width:46px;height:46px}
+  .mensola{grid-template-columns:repeat(auto-fill,minmax(112px,1fr))}
+  .bott img{height:150px}
+}
+@media(max-width:380px){
+  .nav-brand b{display:none}
+}
+</style>
+<noscript><style>
+  #nav{position:static}
+  .burger{display:none}   /* senza JS non apre niente: i link stanno gia' in vista */
+  #mobileMenu{position:static;transform:none;visibility:visible;border-bottom:1px solid rgba(20,16,11,.18)}
+  #mobileMenu ul{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:20px;padding:8px var(--gutter)}
+  #mobileMenu a{border-bottom:0;padding:6px 0;font-size:15px;white-space:nowrap}
+  #hero{padding-top:26px}
+</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Salta al contenuto</a>
+
+<header id="nav">
+  <div class="wrap">
+    <a class="nav-brand" href="#main">
+      <img src="img/logo-di-meo-villa.png" alt="" aria-hidden="true" width="249" height="101">
+      <b>Di Meo</b>
+    </a>
+    <nav aria-label="Principale">
+      <ul class="nav-links">
+        <li><a href="#nomi">I nomi di casa</a></li>
+        <li><a href="#storia">La famiglia</a></li>
+        <li><a href="#vini">I vini</a></li>
+        <li><a href="#luoghi">La tenuta</a></li>
+        <li><a href="#gallery">Fotografie</a></li>
+        <li><a href="#contatti">Visite</a></li>
+      </ul>
+    </nav>
+    <div class="nav-tel"><a class="nav-cta" href="tel:+390825981419">0825 981419</a></div>
+    <button class="burger" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div id="mobileMenu">
+  <ul>
+    <li><a href="#nomi">I nomi di casa</a></li>
+    <li><a href="#storia">La famiglia</a></li>
+    <li><a href="#vini">I vini</a></li>
+    <li><a href="#luoghi">La tenuta</a></li>
+    <li><a href="#gallery">Fotografie</a></li>
+    <li><a href="#contatti">Visite e contatti</a></li>
+  </ul>
+</div>
+
+<main id="main">
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="wrap hero-griglia">
+    <div>
+      <span class="hero-marchio" data-fms="timbro">
+        <img src="img/logo-di-meo.png" alt="Il marchio Di Meo: l'incisione a tratto della villa (torre merlata, palazzo a due piani e tempietto) sopra la scritta DI MEO e, più piccola, SALZA IRPINA." width="249" height="157">
+      </span>
+      <h1 data-fm="righe">Azienda Agricola Di Meo</h1>
+      <p class="hero-luogo" data-fm="sfuma" data-fm-ritardo="200">Salza Irpina · Irpinia</p>
+      <p class="hero-frase" data-fm="sfuma" data-fm-ritardo="300">
+        Dal <strong>1986</strong>, solo <strong>uve autoctone</strong> nei tre areali DOCG dell'Irpinia:
+        Fiano di Avellino, Greco di Tufo e Taurasi. Circa venticinque ettari, che comprendono un
+        <strong>Casino di caccia del '700</strong>.
+      </p>
+    </div>
+    <div class="hero-foto" data-fm="sfuma" data-fm-ritardo="120">
+      <figure>
+        <img src="img/marchio-fuoco-testata-botte.jpg" width="1300" height="867" fetchpriority="high"
+             alt="La testata di una botte di rovere dalla venatura verticale: al centro, impresso a fuoco nel legno, il marchio Di Meo: l'incisione della villa e, sotto, il nome in corsivo. In basso un nodo del legno.">
+        <p class="didascalia">Il disegno della villa che sta su ogni etichetta, qui impresso a fuoco nel legno.</p>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ I NOMI DI CASA ═══ -->
+<section id="nomi" class="fascia alterna">
+  <div class="wrap">
+    <p class="occhiello">Il filo di questa cantina</p>
+    <h2 data-fm="righe">I vini portano i nomi della famiglia</h2>
+    <hr class="filetto">
+    <p class="sottotitolo">Nella <strong>Linea Tempo</strong>, che raccoglie le Riserve, quattro etichette
+      portano un nome di persona. Per tre di queste è l'azienda stessa a scrivere di chi si tratta.</p>
+
+    <div class="nomi" data-fm="sali" data-fm-passo="90">
+
+      <article class="nome">
+        <img src="img/bott/alessandra-2015.png" width="173" height="520"
+             alt="Bottiglia di vino bianco Di Meo Alessandra, etichetta chiara con un volto disegnato a tratto sotto un copricapo e un tondo rosso.">
+        <h3>Alessandra</h3>
+        <p class="ruolo">Fiano di Avellino</p>
+        <blockquote>«questo vino porta il nome della <strong>madre</strong> di Roberto, Generoso ed Erminia Di&nbsp;Meo»</blockquote>
+      </article>
+
+      <article class="nome">
+        <img src="img/bott/vittorio-2010.png" width="169" height="520"
+             alt="Bottiglia di vino bianco Di Meo Vittorio, etichetta chiara con un volto disegnato a tratto sotto un copricapo.">
+        <h3>Vittorio</h3>
+        <p class="ruolo">Greco di Tufo Riserva</p>
+        <blockquote>«Il vino porta il nome del <strong>papà</strong> di Erminia, Generoso e Roberto Di&nbsp;Meo e del <strong>figlio</strong> di quest'ultimo»</blockquote>
+      </article>
+
+      <article class="nome">
+        <img src="img/bott/don-generoso-2015.png" width="170" height="520"
+             alt="Bottiglia di vino rosso Di Meo Don Generoso, capsula rossa ed etichetta chiara con un volto disegnato a tratto e due tocchi di rosso.">
+        <h3>Don Generoso</h3>
+        <p class="ruolo">Campania Rosso IGT</p>
+        <blockquote>«Don Generoso, dal nome del <strong>nonno</strong> di Erminia, Generoso e Roberto Di&nbsp;Meo»</blockquote>
+      </article>
+
+      <article class="nome">
+        <img src="img/bott/erminia-2004.png" width="177" height="520"
+             alt="Bottiglia di vino bianco Di Meo Erminia, etichetta chiara con un volto disegnato a tratto sotto un copricapo e un tondo rosso.">
+        <h3>Erminia</h3>
+        <p class="ruolo">Fiano di Avellino</p>
+        <blockquote>«nel tempo si è arricchito di complessità e valore affettivo, divenendo, infine, <strong>un doveroso omaggio</strong>. Produzione limitata e numerata»</blockquote>
+      </article>
+
+    </div>
+
+    <p class="sottotitolo" style="margin-top:34px;margin-bottom:0">
+      E i nomi tornano anche fuori dal vino: la grappa <strong>Alessandrina</strong>, il brandy
+      <strong>Don Vittorio</strong>, che «rende omaggio al papà dei fratelli Erminia, Generoso e Roberto
+      Di Meo», e il liquore <strong>Ratafià di Nonna Erminia</strong>, «ricavato da un'antica ricetta
+      di famiglia, gelosamente custodita».</p>
+  </div>
+</section>
+
+<!-- ═══ LA FAMIGLIA ═══ -->
+<section id="storia" class="fascia">
+  <div class="wrap luogo">
+    <div class="luogo-testo">
+      <p class="occhiello">Dai primi anni Ottanta a oggi</p>
+      <h2 data-fm="righe">Tre fratelli, una collina</h2>
+      <hr class="filetto">
+      <p>All'inizio degli anni '80 i fratelli <strong>Erminia, Generoso e Roberto Di Meo</strong>
+        rilevano la storica azienda agricola dei genitori <strong>Vittorio e Alessandrina</strong>, a
+        pochi chilometri da Avellino, nel comune di <strong>Salza Irpina</strong>. La proprietà, in
+        passato appartenuta ai <strong>Principi Caracciolo</strong>, è circondata da lievi e ventilati
+        declivi collinari, sui quali domina un caratteristico Casino di caccia del '700.</p>
+      <p>L'obiettivo dei tre fratelli è produrre vini a partire dalle varietà autoctone più diffuse in
+        Irpinia (Fiano, Greco, Aglianico e Coda di volpe) e valorizzare il patrimonio di tradizioni
+        culturali di cui sono ereditari. Vengono impiantati i vigneti e nel <strong>1986</strong>
+        arrivano i primi vini di famiglia.</p>
+      <p>Oggi l'azienda è gestita da <strong>Roberto</strong>, enologo e responsabile commerciale, e da
+        <strong>Generoso</strong>, promotore di «Di Meo Vini ad Arte»: anche questo, come il vino, un
+        modo per celebrare il legame familiare con il territorio.</p>
+    </div>
+    <div>
+      <figure style="margin:0">
+        <img src="img/fratelli-di-meo.jpg" width="910" height="634"
+             alt="Tre persone sedute vicine su una panca dorata, in una sala con una grande cornice dorata alle spalle e un pavimento a scacchi bianchi e rossi."
+             data-fm="sfuma">
+        <p class="didascalia">La fotografia che l'azienda pubblica accanto alla propria storia, nel
+          punto in cui nomina «i tre fratelli».</p>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ I VINI ═══ -->
+<section id="vini" class="fascia sep">
+  <div class="wrap">
+    <p class="occhiello">Quindici etichette di vino, più grappe e liquori</p>
+    <h2 data-fm="righe">I vini, i distillati, i liquori</h2>
+    <hr class="filetto">
+    <p class="sottotitolo">«La produzione vitivinicola conta oggi 15 etichette, suddivise in due linee di
+      prodotti: Tradizione e Tempo.» E i vini «si contraddistinguono per uno stile essenziale, sobrio, che
+      richiede una buona dose di pazienza e un lungo affinamento in bottiglia».</p>
+
+    <div class="linea">
+      <h3>Linea Tradizione</h3>
+      <p class="linea-nota">La Linea Classica: i vini monovitigno simbolo dell'Irpinia, «espressioni
+        immediate del terroir e dell'annata».</p>
+      <div class="mensola" data-fm="sali" data-fm-passo="60">
+        <div class="bott"><img src="img/bott/fiano-di-avellino-2023.png" width="172" height="520" alt="Bottiglia di vino bianco Di Meo Fiano di Avellino, capsula scura ed etichetta chiara."><p class="b-nome">Fiano di Avellino</p><p class="b-dato">D.O.C.G. · Fiano 100%<br>Salza Irpina (AV)</p></div>
+        <div class="bott"><img src="img/bott/greco-di-tufo-2023.png" width="169" height="520" alt="Bottiglia di vino bianco Di Meo Greco di Tufo, capsula scura ed etichetta chiara."><p class="b-nome">Greco di Tufo</p><p class="b-dato">D.O.C.G. · Greco 100%<br>Santa Paolina e Tufo (AV)</p></div>
+        <div class="bott"><img src="img/bott/campania-falanghina-2023.png" width="166" height="520" alt="Bottiglia di vino bianco Di Meo Campania Falanghina, capsula scura ed etichetta chiara."><p class="b-nome">Campania Falanghina</p><p class="b-dato">Falanghina 100%<br>Guardia Sanframondi (BN)</p></div>
+        <div class="bott"><img src="img/bott/campania-aglianico-2019.png" width="169" height="520" alt="Bottiglia di vino rosso Di Meo Campania Aglianico, capsula rossa ed etichetta chiara."><p class="b-nome">Campania Aglianico</p><p class="b-dato">Aglianico 100%<br>Montemarano / Mirabella Eclano (AV)</p></div>
+        <div class="bott"><img src="img/bott/vigna-olmo-taurasi-riserva-2015.png" width="170" height="520" alt="Bottiglia di vino rosso Di Meo Vigna Olmo Taurasi Riserva, capsula rossa ed etichetta chiara."><p class="b-nome">Vigna Olmo</p><p class="b-dato">Taurasi Riserva D.O.C.G. · Aglianico 100%<br>Montemarano (AV)</p></div>
+      </div>
+    </div>
+
+    <div class="linea">
+      <h3>Linea Tempo</h3>
+      <p class="linea-nota">Le Riserve: «una sfida aperta e continua alle potenzialità di affinamento
+        del Fiano principalmente, e delle altre varietà autoctone».</p>
+      <div class="mensola" data-fm="sali" data-fm-passo="60">
+        <div class="bott"><img src="img/bott/alessandra-2015.png" width="173" height="520" alt="Bottiglia di vino bianco Di Meo Alessandra, etichetta chiara con un volto disegnato a tratto sotto un copricapo e un tondo rosso."><p class="b-nome">Alessandra</p><p class="b-dato">Fiano 100%<br>Vigna Alessandra, Salza Irpina (AV)</p></div>
+        <div class="bott"><img src="img/bott/colle-dei-cerri.png" width="168" height="520" alt="Bottiglia di vino bianco Di Meo Colle dei Cerri, etichetta chiara con un ramo disegnato a tratto e alcune bacche rosse."><p class="b-nome">Colle dei Cerri</p><p class="b-dato">Fiano di Avellino D.O.C.G.<br>Vigna Colle dei Cerri, Salza Irpina (AV)</p></div>
+        <div class="bott"><img src="img/bott/erminia-2004.png" width="177" height="520" alt="Bottiglia di vino bianco Di Meo Erminia, etichetta chiara con un volto disegnato a tratto sotto un copricapo e un tondo rosso."><p class="b-nome">Erminia</p><p class="b-dato">Fiano di Avellino D.O.C.G.<br>Salza Irpina (AV)</p></div>
+        <div class="bott"><img src="img/bott/vittorio-2010.png" width="169" height="520" alt="Bottiglia di vino bianco Di Meo Vittorio, etichetta chiara con un volto disegnato a tratto sotto un copricapo."><p class="b-nome">Vittorio</p><p class="b-dato">Greco di Tufo Riserva · Greco 100%<br>Montefusco (AV), 750 m</p></div>
+        <div class="bott"><img src="img/bott/don-generoso-2015.png" width="170" height="520" alt="Bottiglia di vino rosso Di Meo Don Generoso, capsula rossa ed etichetta chiara con un volto disegnato a tratto e due tocchi di rosso."><p class="b-nome">Don Generoso</p><p class="b-dato">Campania Rosso I.G.T. · Aglianico 80% e Piedirosso 20%<br>Paternopoli (AV)</p></div>
+      </div>
+    </div>
+
+    <div class="linea">
+      <h3>Vini d'Arte</h3>
+      <p class="linea-nota">Due Taurasi Riserva. Il primo «rende omaggio a Sir William Hamilton,
+        l'ambasciatore britannico che contribuì a rendere la Napoli di fine '700 una tra le mete più
+        ambite del Grand Tour»; il secondo è «prodotto in collaborazione con il MANN».</p>
+      <div class="mensola" data-fm="sali" data-fm-passo="60">
+        <div class="bott"><img src="img/bott/hamilton-taurasi-riserva.png" width="165" height="520" alt="Bottiglia scura di vino rosso Di Meo Hamilton, con un'etichetta a riquadri fotografici sulla fascia centrale."><p class="b-nome">Hamilton</p><p class="b-dato">Taurasi Riserva D.O.C.G. · Aglianico 100%<br>Edizione limitata a 3.000 bottiglie</p></div>
+        <div class="bott"><img src="img/bott/vino-blu-taurasi-riserva.png" width="169" height="520" alt="Bottiglia scura di vino rosso Di Meo Vino Blu, con etichetta nera, scritte bianche e un tralcio disegnato."><p class="b-nome">Vino Blu</p><p class="b-dato">Taurasi Riserva D.O.C.G. · Aglianico 100%<br>Montemarano (AV)</p></div>
+      </div>
+    </div>
+
+    <div class="linea">
+      <h3>Spumanti</h3>
+      <p class="linea-nota">Uno spumante Brut da Greco e Fiano e un rosé Extra Dry da Aglianico.</p>
+      <div class="mensola" data-fm="sali" data-fm-passo="60">
+        <div class="bott"><img src="img/bott/di-meo-brut.png" width="172" height="520" alt="Bottiglia di spumante Di Meo Brut, vetro verde scuro, collo lungo e capsula scura."><p class="b-nome">Di Meo Brut</p><p class="b-dato">Spumante Brut · Greco 65% e Fiano 35%</p></div>
+        <div class="bott"><img src="img/bott/rose-extra-dry.png" width="174" height="520" alt="Bottiglia di spumante rosé Di Meo, capsula rossa ed etichetta chiara."><p class="b-nome">Rosé Extra Dry</p><p class="b-dato">Spumante rosé Extra Dry · Aglianico 100%<br>Mirabella Eclano (AV)</p></div>
+      </div>
+    </div>
+
+    <div class="linea" style="margin-bottom:0">
+      <h3>Liquori e distillati</h3>
+      <p class="linea-nota">Grappe di singolo vitigno, un brandy con venticinque anni di
+        invecchiamento e due liquori di tradizione familiare.</p>
+      <div class="mensola" data-fm="sali" data-fm-passo="60" style="border-bottom:0;padding-bottom:0">
+        <div class="bott"><img src="img/bott/ratafia-di-nonna-erminia.png" width="363" height="433" alt="Bottiglia bassa e panciuta di liquore scuro, con un'etichetta ovale color lilla chiaro e il collo nero."><p class="b-nome">Ratafià di Nonna Erminia</p><p class="b-dato">Dodici erbe aromatiche e vino Taurasi</p></div>
+        <div class="bott"><img src="img/bott/schiaccianoci.png" width="363" height="429" alt="Bottiglia bassa e panciuta di liquore bruno, con un'etichetta ovale color crema e il collo nero."><p class="b-nome">Schiaccianoci</p><p class="b-dato">Infuso di mallo di noci e vino Taurasi</p></div>
+        <div class="bott"><img src="img/bott/alessandrina-grappa-di-taurasi.png" width="308" height="446" alt="Bottiglia squadrata di grappa ambrata, con tappo chiaro ed etichetta serigrafata sul vetro."><p class="b-nome">Alessandrina</p><p class="b-dato">Grappa di Taurasi Riserva · 43% vol.<br>60 mesi in barriques di ciliegio</p></div>
+        <div class="bott"><img src="img/bott/don-vittorio-brandy.png" width="161" height="520" alt="Bottiglia alta e stretta di brandy ambrato, con tappo dorato e una piccola etichetta scura con le scritte chiare."><p class="b-nome">Don Vittorio</p><p class="b-dato">Brandy vendemmia 1986 · vinacce di Fiano</p></div>
+        <div class="bott"><img src="img/bott/grappa-di-fiano.png" width="360" height="411" alt="Bottiglia bassa e panciuta di grappa trasparente, con tappo chiaro."><p class="b-nome">Grappa di Fiano di Avellino</p><p class="b-dato">43% vol. · 36 mesi in acciaio</p></div>
+        <div class="bott"><img src="img/bott/grappa-di-greco.png" width="368" height="421" alt="Bottiglia bassa e panciuta di grappa trasparente, con tappo chiaro."><p class="b-nome">Grappa di Greco di Tufo</p><p class="b-dato">43% vol. · 36 mesi in acciaio</p></div>
+        <div class="bott"><img src="img/bott/grappa-di-taurasi.png" width="369" height="424" alt="Bottiglia bassa e panciuta di grappa trasparente, con tappo chiaro."><p class="b-nome">Grappa di Taurasi</p><p class="b-dato">43% vol. · vinacce di Aglianico di Taurasi</p></div>
+        <div class="bott"><img src="img/bott/dgin-london-dry-gin.png" width="216" height="516" alt="Bottiglia di gin trasparente con etichetta bianca a fitto disegno di erbe e fiori, tappo nero."><p class="b-nome">DGin</p><p class="b-dato">London Dry Gin</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SCHEDA ALESSANDRA ═══ -->
+<section id="alessandra" class="fascia scuro">
+  <div class="wrap">
+    <p class="occhiello">Una scheda per esteso</p>
+    <h2 data-fm="righe">Alessandra, Fiano di Avellino</h2>
+    <hr class="filetto">
+    <div class="scheda">
+      <div class="scheda-foto" data-fm="sfuma">
+        <img src="img/bott/alessandra-2015.png" width="173" height="520"
+             alt="Bottiglia di vino bianco Di Meo Alessandra: capsula scura ed etichetta chiara con, in alto, il marchio della villa e sotto un volto disegnato a tratto con un copricapo.">
+      </div>
+      <div>
+        <p>«Prodotto con le selezionate uve del vigneto di Fiano che circonda la cantina a Salza Irpina,
+          questo vino porta il nome della madre di Roberto, Generoso ed Erminia Di Meo. Leggera
+          surmaturazione, raccolta manuale, macerazione sulle bucce, fermentazione a temperatura
+          controllata e <strong>nove anni di affinamento</strong>, di cui otto in acciaio e uno in
+          bottiglia.»</p>
+        <ul class="dati">
+          <li><b>Composizione</b><span>Fiano 100%</span></li>
+          <li><b>Zona di produzione</b><span>Vigna Alessandra, Salza Irpina (AV)</span></li>
+          <li><b>Anno di impianto</b><span>1995</span></li>
+          <li><b>Altitudine</b><span>550 m s.l.m.</span></li>
+          <li><b>Terreno</b><span>argilloso, semi calcareo</span></li>
+          <li><b>Esposizione</b><span>Nord-Est</span></li>
+          <li><b>Densità di impianto</b><span>4.500 ceppi per ettaro</span></li>
+          <li><b>Resa</b><span>50 quintali per ettaro</span></li>
+          <li><b>Raccolta</b><span>seconda decade di ottobre</span></li>
+          <li><b>Formati</b><span>0,75 L · 1,5 L</span></li>
+        </ul>
+        <p class="occhiello" style="margin-bottom:16px">Riconosciuta nel 2026, l'annata 2015</p>
+        <ul class="premi">
+          <li><b>Gambero Rosso, Vini d'Italia 2026 · Tre Bicchieri</b><br>«Fiano di Avellino Alessandra Ris. '15 · Di Meo»</li>
+          <li><b>Guida Oro I Vini di Veronelli 2026 · Tre Stelle Oro, 94/100</b><br>«Fiano di Avellino Riserva Alessandra 2015 · Salza Irpina, Avellino · Di Meo»</li>
+        </ul>
+        <p style="margin-top:26px;font-size:15px">Nello stesso anno Veronelli assegna alla cantina il
+          diploma <strong>Tre Stelle Rosse</strong>, e <strong>Forbes Italia</strong> il Premio
+          Speciale <strong>Pioneer</strong> di «Iconic Wineries 2026».</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ I TRE LUOGHI ═══ -->
+<section id="luoghi" class="fascia">
+  <div class="wrap">
+    <p class="occhiello">Circa venticinque ettari fra Salza Irpina e Parolise</p>
+    <h2 data-fm="righe">La tenuta, il Casino di caccia, la cantina</h2>
+    <hr class="filetto">
+    <p class="sottotitolo">«L'Azienda Agricola Di Meo, a 15 km a Est di Avellino, è situata tra i Monti
+      Picentini ed il Partenio, nel cuore dell'Irpinia.»</p>
+
+    <div class="luoghi">
+      <article class="luogo">
+        <div class="luogo-testo">
+          <h3>La tenuta</h3>
+          <p>Una collina di circa venti ettari che accoglie vigneti, alberi da frutto e piante. Oltre ai
+            vigneti di Fiano, divisi in <strong>quattro parcelle</strong>, la proprietà conta
+            <strong>più di 50 diverse specie arbustive ed arboree</strong>: querce, pioppi, pini,
+            cipressi, salici, acacie, aceri, eucalipti, mimose, mandorli, meli e ulivi.</p>
+          <p>Un raro esemplare di <strong>vite prefillossera</strong>, una pianta di Aglianico della
+            fine del XIX secolo allevata secondo l'antico sistema a «tennecchia avellinese», è ancora
+            in produzione. C'è anche una vasca di raccolta di acqua surgiva della metà del '700.</p>
+        </div>
+        <figure style="margin:0">
+          <img src="img/vigna-ottobre-pino.jpg" width="1300" height="867" loading="lazy" data-fm="sfuma"
+               alt="Un versante di vigna dalle foglie gialle in autunno, attraversato da un sentiero chiaro; in alto a destra un grande pino marittimo isolato e, dietro, i boschi della collina.">
+          <p class="didascalia">La vigna in ottobre.</p>
+        </figure>
+      </article>
+
+      <article class="luogo rovescia">
+        <div class="luogo-testo">
+          <h3>Il Casino di caccia</h3>
+          <p>Edificato nel <strong>XVIII secolo dai Principi Caracciolo</strong>, in un'area ricca di
+            boschi e selvaggina, è «una meravigliosa testimonianza storica del principato borbonico in
+            Irpinia». L'edificio, di <strong>stile sobrio e classicheggiante</strong>, si sviluppa su
+            due livelli: il piano nobile e il pian terreno, che ospitava le aree di servizio e una
+            <strong>piccola cappella</strong>.</p>
+          <p>Dopo un accurato restauro conservativo, la struttura è oggi una residenza di campagna,
+            presidio dell'attività agricola e sede di eventi aziendali.</p>
+        </div>
+        <figure style="margin:0">
+          <img src="img/casino-facciata.jpg" width="1300" height="867" loading="lazy" data-fm="sfuma"
+               alt="La facciata del Casino di caccia vista dalla corte: due piani intonacati di chiaro, persiane verde scuro, balconi in ferro con gerani rossi e, al piano terra, un portale ad arco con un lampione a fianco. Davanti, piante in vaso e una fioriera di gerani rossi; a destra, conifere alte.">
+          <p class="didascalia">La facciata, dalla corte.</p>
+        </figure>
+      </article>
+
+      <article class="luogo">
+        <div class="luogo-testo">
+          <h3>La cantina e la bottaia</h3>
+          <p>I serbatoi, «tutti in <strong>puro acciaio inox</strong>, di varie capacità e con controllo
+            della temperatura», servono ai lunghi affinamenti dei bianchi della Linea Tempo. Si
+            effettuano <strong>pressature soffici</strong>, con gas inerte per evitare ossidazioni;
+            l'utilizzo dei <strong>solfiti è assai limitato</strong> e sono stati isolati lieviti
+            specifici del Fiano e dell'Aglianico.</p>
+          <p>La <strong>bottaia</strong> è stata ricavata negli <strong>antichi sotterranei della
+            tenuta</strong>, mantenendo l'originario impianto: qui botti, tonneau e barriques di
+            <strong>rovere francese di Allier</strong> accolgono il Fiano e l'Aglianico.</p>
+        </div>
+        <figure style="margin:0">
+          <img src="img/bottaia-botti-rovere.jpg" width="1300" height="867" loading="lazy" data-fm="sfuma"
+               alt="Due grandi botti di rovere affacciate su un corridoio scuro dal pavimento in cotto, con un pilastro intonacato al centro e faretti caldi sul soffitto.">
+          <p class="didascalia">La bottaia, negli antichi sotterranei.</p>
+        </figure>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TERRITORIO ═══ -->
+<section id="territorio" class="fascia scuro">
+  <div class="wrap stretto">
+    <p class="occhiello">Solo uve autoctone</p>
+    <h2 data-fm="righe">Tre areali, tre DOCG</h2>
+    <hr class="filetto">
+    <p>«L'azienda vitivinicola Di Meo alleva solo uve autoctone ed i vigneti di famiglia sono dislocati
+      nelle zone più vocate dell'Irpinia, nei tre areali delle rispettive DOCG irpine.»</p>
+    <ul class="premi" data-fm="sali" data-fm-passo="110" style="margin-top:26px">
+      <li><b>Salza Irpina</b> · areale DOCG Fiano</li>
+      <li><b>Montemarano</b> · areale DOCG Taurasi</li>
+      <li><b>Montefusco e Santa Paolina</b> · areale DOCG Greco</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══ GALLERIA ═══ -->
+<section id="gallery" class="fascia alterna">
+  <div class="wrap">
+    <p class="occhiello">Diciotto fotografie</p>
+    <h2 data-fm="righe">La collina, la casa, il legno</h2>
+    <hr class="filetto">
+    <p class="sottotitolo">Tocca una fotografia per vederla grande.</p>
+
+    <div class="gallery-grid">
+      <button type="button" data-src="img/casino-corte-arco.jpg" data-cap="La corte: un muro chiaro con un portale ad arco in pietra al piano terra, una finestra ovale sopra e un piccolo balcone; alberelli in vaso di terracotta, un lampione e il verde alto sullo sfondo."><img src="img/casino-corte-arco.jpg" width="1300" height="867" loading="lazy" alt="La corte: un muro chiaro con un portale ad arco in pietra al piano terra, una finestra ovale sopra e un piccolo balcone; alberelli in vaso di terracotta, un lampione e il verde alto sullo sfondo."></button>
+      <button type="button" data-src="img/casino-ingresso-specchio.jpg" data-cap="L'ingresso interno, sotto un arco in pietra: una consolle di noce con dei libri, un grande specchio sopra, una lanterna in ferro appesa, quadri e un ritratto alle pareti e due sedie imbottite ai lati."><img src="img/casino-ingresso-specchio.jpg" width="1300" height="867" loading="lazy" alt="L'ingresso interno, sotto un arco in pietra: una consolle di noce con dei libri, un grande specchio sopra, una lanterna in ferro appesa, quadri e un ritratto alle pareti e due sedie imbottite ai lati."></button>
+      <button type="button" data-src="img/casino-cappella.jpg" data-cap="La piccola cappella: pareti verde chiaro, un tappeto rosso a motivi, due panche di legno ai lati e un altare con un dipinto sopra."><img src="img/casino-cappella.jpg" width="1300" height="867" loading="lazy" alt="La piccola cappella: pareti verde chiaro, un tappeto rosso a motivi, due panche di legno ai lati e un altare con un dipinto sopra."></button>
+      <button type="button" data-src="img/casino-sala-gialla.jpg" data-cap="Una sala dalle pareti gialle con tavola apparecchiata, candelabri accesi, quadri alle pareti e una testa di cervo sopra la porta ad arco."><img src="img/casino-sala-gialla.jpg" width="1300" height="867" loading="lazy" alt="Una sala dalle pareti gialle con tavola apparecchiata, candelabri accesi, quadri alle pareti e una testa di cervo sopra la porta ad arco."></button>
+      <button type="button" data-src="img/casino-facciata.jpg" data-cap="La facciata del Casino vista dalla corte: due piani intonacati di chiaro, persiane verde scuro, balconi in ferro con gerani rossi e un portale ad arco al piano terra."><img src="img/casino-facciata.jpg" width="1300" height="867" loading="lazy" alt="La facciata del Casino vista dalla corte: due piani intonacati di chiaro, persiane verde scuro, balconi in ferro con gerani rossi e un portale ad arco al piano terra."></button>
+      <button type="button" data-src="img/targa-bottaia.jpg" data-cap="Una targa rettangolare fissata al muro bianco: il vetro scuro riflette il verde del giardino e sopra si legge la scritta BOTTAIA."><img src="img/targa-bottaia.jpg" width="1300" height="867" loading="lazy" alt="Una targa rettangolare fissata al muro bianco: il vetro scuro riflette il verde del giardino e sopra si legge la scritta BOTTAIA."></button>
+      <button type="button" data-src="img/bottaia-botti-rovere.jpg" data-cap="Due grandi botti di rovere affacciate su un corridoio scuro dal pavimento in cotto, con un pilastro intonacato al centro."><img src="img/bottaia-botti-rovere.jpg" width="1300" height="867" loading="lazy" alt="Due grandi botti di rovere affacciate su un corridoio scuro dal pavimento in cotto, con un pilastro intonacato al centro."></button>
+      <button type="button" data-src="img/bottaia-sotterranei.jpg" data-cap="Il sotterraneo della bottaia quasi al buio: due botti illuminate da una striscia di luce sul soffitto e un lampadario acceso in fondo al corridoio."><img src="img/bottaia-sotterranei.jpg" width="1300" height="975" loading="lazy" alt="Il sotterraneo della bottaia quasi al buio: due botti illuminate da una striscia di luce sul soffitto e un lampadario acceso in fondo al corridoio."></button>
+      <button type="button" data-src="img/barriques-in-fila.jpg" data-cap="Cinque barriques di rovere chiaro coricate in fila su un pavimento di lastre grigie, con una lavagnetta appoggiata sulla prima."><img src="img/barriques-in-fila.jpg" width="1300" height="867" loading="lazy" alt="Cinque barriques di rovere chiaro coricate in fila su un pavimento di lastre grigie, con una lavagnetta appoggiata sulla prima."></button>
+      <button type="button" data-src="img/testata-botte-marchiata.jpg" data-cap="Le testate di due grandi botti in primo piano: sul legno chiaro si vede impresso il marchio con l'incisione della villa e il nome Di Meo."><img src="img/testata-botte-marchiata.jpg" width="1300" height="975" loading="lazy" alt="Le testate di due grandi botti in primo piano: sul legno chiaro si vede impresso il marchio con l'incisione della villa e il nome Di Meo."></button>
+      <button type="button" data-src="img/marchio-fuoco-testata-botte.jpg" data-cap="La testata di una botte di rovere dalla venatura verticale: al centro, impresso a fuoco, il marchio Di Meo: l'incisione della villa e il nome in corsivo."><img src="img/marchio-fuoco-testata-botte.jpg" width="1300" height="867" loading="lazy" alt="La testata di una botte di rovere dalla venatura verticale: al centro, impresso a fuoco, il marchio Di Meo: l'incisione della villa e il nome in corsivo."></button>
+      <button type="button" data-src="img/bottaia-quadro-sopra-botti.jpg" data-cap="Nella bottaia, un quadro dal fondo blu con una grande macchia dorata è appeso alla parete sopra la fila delle botti coricate."><img src="img/bottaia-quadro-sopra-botti.jpg" width="1300" height="867" loading="lazy" alt="Nella bottaia, un quadro dal fondo blu con una grande macchia dorata è appeso alla parete sopra la fila delle botti coricate."></button>
+      <button type="button" data-src="img/vigna-ottobre-pino.jpg" data-cap="Un versante di vigna dalle foglie gialle in autunno, attraversato da un sentiero chiaro; in alto a destra un grande pino marittimo isolato."><img src="img/vigna-ottobre-pino.jpg" width="1300" height="867" loading="lazy" alt="Un versante di vigna dalle foglie gialle in autunno, attraversato da un sentiero chiaro; in alto a destra un grande pino marittimo isolato."></button>
+      <button type="button" data-src="img/vigna-filari-autunno.jpg" data-cap="Filari di vite dalle foglie gialle dietro un filo di recinzione, con un grande albero d'autunno a sinistra e colline sullo sfondo."><img src="img/vigna-filari-autunno.jpg" width="1300" height="867" loading="lazy" alt="Filari di vite dalle foglie gialle dietro un filo di recinzione, con un grande albero d'autunno a sinistra e colline sullo sfondo."></button>
+      <button type="button" data-src="img/viale-alberato.jpg" data-cap="Una strada asfaltata che entra nella tenuta fra due file di alberi; a destra, oltre il ciglio, comincia la vigna."><img src="img/viale-alberato.jpg" width="1300" height="867" loading="lazy" alt="Una strada asfaltata che entra nella tenuta fra due file di alberi; a destra, oltre il ciglio, comincia la vigna."></button>
+      <button type="button" data-src="img/valle-monti.jpg" data-cap="La valle vista dalla collina: campi e boschi in basso, una catena di monti azzurri sullo sfondo e cielo terso."><img src="img/valle-monti.jpg" width="1300" height="867" loading="lazy" alt="La valle vista dalla collina: campi e boschi in basso, una catena di monti azzurri sullo sfondo e cielo terso."></button>
+      <button type="button" data-src="img/pali-vigna-accatastati.jpg" data-cap="Un mucchio di pali di legno appuntiti per la vigna, accatastati con le punte verso l'alto, contro il cielo."><img src="img/pali-vigna-accatastati.jpg" width="1300" height="867" loading="lazy" alt="Un mucchio di pali di legno appuntiti per la vigna, accatastati con le punte verso l'alto, contro il cielo."></button>
+      <button type="button" data-src="img/botte-gerani.jpg" data-cap="Mezza botte cerchiata di ferro usata come fioriera, piena di gerani rossi in fiore, davanti a una siepe e ad alberi verdi."><img src="img/botte-gerani.jpg" width="1300" height="867" loading="lazy" alt="Mezza botte cerchiata di ferro usata come fioriera, piena di gerani rossi in fiore, davanti a una siepe e ad alberi verdi."></button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTATTI ═══ -->
+<section id="contatti" class="fascia scuro">
+  <div class="wrap">
+    <p class="occhiello">Contrada Coccovoni, 1 · Salza Irpina (AV)</p>
+    <h2 data-fm="righe">Visite e contatti</h2>
+    <hr class="filetto">
+    <div class="contatti">
+      <div>
+        <dl class="dl">
+          <dt>Visita in cantina e visite guidate</dt>
+          <dd>Tutti i giorni, previa prenotazione</dd>
+          <dt>Orario di apertura</dt>
+          <dd>Dal lunedì al venerdì, dalle 9.00 alle 17.30</dd>
+          <dt>Telefono</dt>
+          <dd><a href="tel:+390825981419">+39 0825 981419</a></dd>
+          <dt>Posta</dt>
+          <dd><a href="mailto:info@dimeo.it">info@dimeo.it</a></dd>
+        </dl>
+        <a class="bottone" href="tel:+390825981419">Chiama per prenotare</a>
+      </div>
+      <div>
+        <dl class="dl">
+          <dt>Indirizzo</dt>
+          <dd>Azienda Agricola Di Meo s.a.s.<br>Contrada Coccovoni, 1<br>83050 Salza Irpina (AV)</dd>
+          <dt>Dove siamo</dt>
+          <dd>A 15 km a Est di Avellino, tra i Monti Picentini e il Partenio, fra i borghi di Salza
+            Irpina e Parolise.</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <img class="marchio-piede" src="img/logo-di-meo-bianco.png" width="250" height="157"
+         alt="Il marchio Di Meo in bianco: l'incisione della villa sopra la scritta DI MEO e, sotto, SALZA IRPINA.">
+    <p><strong>Azienda Agricola Di Meo s.a.s.</strong> · Contrada Coccovoni, 1, 83050 Salza Irpina (AV)<br>
+      Telefono <a href="tel:+390825981419">+39 0825 981419</a> · <a href="mailto:info@dimeo.it">info@dimeo.it</a></p>
+    <p class="ai">Sito dimostrativo realizzato con AI da FAR AI · contenuti da rivedere con l'attività
+      prima della pubblicazione.<br>
+      Testi e fotografie provengono dal sito attuale di Azienda Agricola Di Meo e restano di proprietà
+      dell'attività.</p>
+  </div>
+</footer>
+
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Fotografia ingrandita" hidden>
+  <figure>
+    <button class="lb-close" type="button" aria-label="Chiudi">&times;</button>
+    <button class="lb-prev" type="button" aria-label="Fotografia precedente">&#8249;</button>
+    <button class="lb-next" type="button" aria-label="Fotografia successiva">&#8250;</button>
+    <img id="lbImg" src="img/marchio-fuoco-testata-botte.jpg" alt="La testata di una botte di rovere con il marchio Di Meo impresso a fuoco.">
+    <figcaption></figcaption>
+  </figure>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  var d=document;
+
+  /* ── menu mobile ─────────────────────────────────────────────────────── */
+  var burger=d.querySelector('.burger'), menu=d.getElementById('mobileMenu');
+  var main=d.getElementById('main'), footer=d.querySelector('footer'),
+      nav=d.getElementById('nav'), skip=d.querySelector('.skip');
+  function inertOn(on){
+    [main,footer].forEach(function(e){ if(e){ on?e.setAttribute('inert',''):e.removeAttribute('inert'); } });
+    if(skip) on?skip.setAttribute('inert',''):skip.removeAttribute('inert');
+  }
+  function menuApri(){
+    menu.classList.add('open'); burger.setAttribute('aria-expanded','true');
+    burger.setAttribute('aria-label','Chiudi il menu'); inertOn(true);
+    aspettaVisibile(menu,function(){ var a=menu.querySelector('a'); if(a) a.focus(); });
+  }
+  function menuChiudi(torna){
+    menu.classList.remove('open'); burger.setAttribute('aria-expanded','false');
+    burger.setAttribute('aria-label','Apri il menu'); inertOn(false);
+    if(torna!==false) burger.focus();
+  }
+  burger.addEventListener('click',function(){
+    menu.classList.contains('open')?menuChiudi():menuApri();
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){ menuChiudi(false); });
+  });
+
+  /* Si aspetta la CONDIZIONE vera (visibility), non i fotogrammi: la
+     transizione anima anche visibility e finché è hidden .focus() fallisce
+     in silenzio. Tetto di sicurezza a 900 ms. */
+  function aspettaVisibile(el,poi){
+    var t0=Date.now();
+    (function giro(){
+      if(getComputedStyle(el).visibility==='visible') return poi();
+      if(Date.now()-t0>900) return poi();
+      requestAnimationFrame(giro);
+    })();
+  }
+
+  /* ── trappola del focus, su OGNI pannello ────────────────────────────── */
+  function trappola(pannello,chiudi){
+    pannello.addEventListener('keydown',function(e){
+      if(e.key==='Escape'){ e.preventDefault(); chiudi(); return; }
+      if(e.key!=='Tab') return;
+      var f=[].slice.call(pannello.querySelectorAll('a[href],button:not([disabled]),[tabindex]:not([tabindex="-1"])'));
+      /* ⛔ niente filtro su offsetParent: dentro un position:fixed è null
+         anche per gli elementi perfettamente visibili. */
+      f=f.filter(function(el){ var r=el.getBoundingClientRect(); return r.width>0&&r.height>0; });
+      if(!f.length) return;
+      var primo=f[0], ultimo=f[f.length-1];
+      if(e.shiftKey && d.activeElement===primo){ e.preventDefault(); ultimo.focus(); }
+      else if(!e.shiftKey && d.activeElement===ultimo){ e.preventDefault(); primo.focus(); }
+    });
+  }
+  trappola(menu,menuChiudi);
+
+  /* ── lightbox ────────────────────────────────────────────────────────── */
+  var lb=d.getElementById('lightbox'), lbImg=d.getElementById('lbImg'),
+      lbCap=lb.querySelector('figcaption'),
+      tessere=[].slice.call(d.querySelectorAll('.gallery-grid button[data-src]')),
+      i=0, apritore=null;
+
+  function mostra(n){
+    i=(n+tessere.length)%tessere.length;
+    var b=tessere[i], img=b.querySelector('img');
+    lbImg.src=b.getAttribute('data-src');
+    lbImg.alt=img?img.getAttribute('alt'):'';
+    lbCap.textContent=b.getAttribute('data-cap')||'';
+  }
+  function lbApri(n,da){
+    apritore=da||null; mostra(n);
+    lb.hidden=false; void lb.offsetWidth; lb.classList.add('open');
+    inertOn(true); if(nav) nav.setAttribute('inert','');
+    aspettaVisibile(lb,function(){ lb.querySelector('.lb-close').focus(); });
+  }
+  function lbChiudi(){
+    lb.classList.remove('open'); inertOn(false); if(nav) nav.removeAttribute('inert');
+    setTimeout(function(){ lb.hidden=true; },260);
+    if(apritore) apritore.focus();
+  }
+  tessere.forEach(function(b,n){
+    b.addEventListener('click',function(){ lbApri(n,b); });
+  });
+  lb.querySelector('.lb-close').addEventListener('click',lbChiudi);
+  lb.querySelector('.lb-prev').addEventListener('click',function(){ mostra(i-1); });
+  lb.querySelector('.lb-next').addEventListener('click',function(){ mostra(i+1); });
+  lb.addEventListener('click',function(e){ if(e.target===lb) lbChiudi(); });
+  trappola(lb,lbChiudi);
+  d.addEventListener('keydown',function(e){
+    if(lb.hidden) return;
+    if(e.key==='ArrowLeft') mostra(i-1);
+    if(e.key==='ArrowRight') mostra(i+1);
+  });
+})();
+</script>
+<script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

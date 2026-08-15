@@ -1,0 +1,21 @@
+/* timbro — il marchio arriva come un timbro: cade, schiaccia, la carta trema
+   e resta un alone di polvere. */
+.fmx-timbro { display: inline-block; transform-origin: 50% 50%; will-change: transform; }
+.fmx-timbro-alone {
+  position: absolute; border-radius: 50%; pointer-events: none;
+  border: 2px solid var(--fmx-colore, currentColor); opacity: 0;
+}
+/* Messa dal JS solo per la durata del battito: il fotogramma 0% ingrandisce il
+   marchio 3,2 volte e su uno schermo stretto allargherebbe la pagina di lato,
+   pur essendo invisibile. `clip` non crea un contenitore di scorrimento (quello
+   romperebbe `window.scrollY` e le posizioni appiccicate), `hidden` si'. */
+.fmx-timbro-taglia { overflow-x: clip; }
+@media (prefers-reduced-motion: no-preference) {
+  .fmx-timbro.fmx-batti { animation: fmx-timbro var(--fmx-durata, .62s) cubic-bezier(.3, 0, .2, 1) both; }
+}
+@keyframes fmx-timbro {
+  0%   { transform: scale(3.2) rotate(var(--fmx-giro, -8deg)); opacity: 0; }
+  55%  { transform: scale(.92) rotate(0deg); opacity: 1; }
+  72%  { transform: scale(1.04) rotate(0deg); }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
