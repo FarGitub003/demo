@@ -1,0 +1,7 @@
+/* mosaico — l'immagine si compone da tessere che arrivano una per volta. */
+.fmx-mosaico { position: relative; overflow: hidden; }
+.fmx-mosaico-velo { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+.fmx-tessera {
+  position: absolute; background: var(--fmx-fondo, #0d1014);
+  will-change: transform, opacity;
+}

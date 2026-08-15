@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peppino Mele · Laboratorio orafo dell'ossidiana — Oristano</title>
+<meta name="description" content="Laboratorio orafo nel centro di Oristano, specializzato nella lavorazione dell'ossidiana montata in oro e argento. Pendenti, collane e filigrana sarda.">
+<meta name="robots" content="noindex,nofollow">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Peppino Mele · Laboratorio orafo dell'ossidiana — Oristano">
+<meta property="og:description" content="Da oltre trent'anni scheggia, taglia e monta l'ossidiana in oro e argento, nel centro di Oristano.">
+<meta property="og:image" content="https://demo.francescoar.com/ossidiana-mele-oristano/img/pendente-nido-ape.jpg">
+<meta property="og:locale" content="it_IT">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="far-motion.min.css">
+<script src="far-motion.min.js"></script>
+<link rel="stylesheet" href="sceniche/mosaico.css">
+<script src="sceniche/mosaico.js" defer></script>
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 128'%3E%3Cpath d='M32 5 L55 44 L46 101 L25 122 L9 77 L15 30 Z' fill='none' stroke='%231A1713' stroke-width='7' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+<style>
+:root{
+  /* MISURATI dalle sue foto — vedi il dossier §④ */
+  --foglio:#FFFFFF;         /* fondo dei suoi 5 scatti di prodotto, 94 campioni su 100 */
+  --ossidiana:#000000;      /* la pietra: nero pieno, 4.624 campioni sul disco */
+  --oro:#E8D898;            /* filigrana — 1,43:1 sul foglio: MAI testo, solo materia */
+  --corallo:#E97C54;        /* 7,48:1 sull'ossidiana */
+  --pietra:#54514C;         /* 7,90:1 — mediana della sua ossidiana grezza */
+  --bottega:#664B26;        /* 8,08:1 — mediana dei suoi scatti al banco */
+  /* CALCOLATI per passare AAA */
+  --oro-scuro:#5F593E;      /* 7,03:1 sul foglio */
+  --corallo-scuro:#854730;  /* 7,14:1 sul foglio */
+  --inchiostro:#1A1713;     /* 17,86:1 sul foglio */
+  --luce:#F6F2EA;           /* 18,81:1 sull'ossidiana */
+  --nebbia:#F2F0EC;
+  --barra:64px;
+  --display:'Forum',Georgia,serif;
+  --testo:'Instrument Sans',system-ui,-apple-system,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{overflow-x:clip;scroll-behavior:smooth}          /* clip su html, MAI su body (nota del kit) */
+body{
+  margin:0;background:var(--foglio);color:var(--inchiostro);
+  font-family:var(--testo);font-size:17px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--corallo-scuro)}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.12;margin:0}
+:where(h1,h2,h3,p,ul,figure){margin:0}
+section{scroll-margin-top:calc(var(--barra) + 15px)}
+.avvolge{width:min(1180px,92vw);margin-inline:auto}
+
+/* accessibilità */
+.salta{
+  position:fixed;left:12px;top:-80px;z-index:300;background:var(--inchiostro);color:var(--luce);
+  padding:12px 18px;border-radius:2px;font-weight:600;text-decoration:none;transition:top .18s
+}
+.salta:focus{top:12px}
+:focus-visible{outline:3px solid var(--corallo-scuro);outline-offset:3px}
+
+/* ---------- barra ---------- */
+#nav{
+  position:fixed;inset:0 0 auto;z-index:200;background:var(--foglio);
+  border-bottom:1px solid #E3DFD8;min-height:var(--barra);
+  display:flex;align-items:center
+}
+.nav-in{display:flex;align-items:center;gap:20px;width:min(1180px,92vw);margin-inline:auto;padding:9px 0}
+.nav-brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--inchiostro);margin-right:auto}
+.nav-brand svg{width:17px;height:34px;flex:none}
+.nav-brand b{font-family:var(--display);font-weight:400;font-size:20px;letter-spacing:.06em;line-height:1}
+.nav-brand .nav-testo > span{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--pietra);margin-top:3px}
+.nav-links{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+.nav-links a{color:var(--inchiostro);text-decoration:none;font-size:14.5px;font-weight:500;letter-spacing:.01em}
+.nav-links a:hover{color:var(--corallo-scuro)}
+.nav-tel a.nav-cta{
+  display:inline-block;background:var(--inchiostro);color:var(--luce);text-decoration:none;
+  padding:10px 17px;border-radius:2px;font-size:14px;font-weight:600;white-space:nowrap
+}
+.nav-tel a.nav-cta:hover{background:var(--bottega)}
+.burger{
+  display:none;width:44px;height:44px;border:1px solid #DDD8CF;background:var(--foglio);
+  border-radius:2px;cursor:pointer;padding:0;position:relative
+}
+.burger i{position:absolute;left:11px;width:22px;height:2px;background:var(--inchiostro);transition:transform .22s,opacity .22s}
+.burger i:nth-child(1){top:14px}.burger i:nth-child(2){top:21px}.burger i:nth-child(3){top:28px}
+.burger.open i:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open i:nth-child(2){opacity:0}
+.burger.open i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+#mobileMenu{
+  position:fixed;inset:var(--barra) 0 auto;z-index:190;background:var(--foglio);
+  border-bottom:1px solid #E3DFD8;padding:8px 0 20px;
+  transform:translateY(-14px);opacity:0;visibility:hidden;transition:transform .24s,opacity .24s,visibility .24s
+}
+#mobileMenu.open{transform:none;opacity:1;visibility:visible}
+#mobileMenu ul{list-style:none;margin:0;padding:0;width:min(1180px,92vw);margin-inline:auto}
+#mobileMenu a{display:block;padding:13px 2px;color:var(--inchiostro);text-decoration:none;font-size:17px;border-bottom:1px solid #EFEBE4}
+
+/* ---------- hero ---------- */
+.hero{padding:calc(var(--barra) + 54px) 0 66px}
+.hero-griglia{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+.occhiello{font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--pietra);font-weight:600}
+.hero h1{font-size:clamp(42px,6.4vw,80px);letter-spacing:.005em;margin:18px 0 0}
+.hero .mestiere{font-family:var(--display);font-size:clamp(19px,2.3vw,27px);color:var(--bottega);margin-top:12px;line-height:1.3}
+.hero p.intro{margin-top:22px;max-width:46ch;color:#332C24}
+.hero-azioni{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px}
+.bottone{
+  display:inline-block;text-decoration:none;padding:14px 25px;border-radius:2px;
+  font-weight:600;font-size:15px;letter-spacing:.01em
+}
+.b-pieno{background:var(--inchiostro);color:var(--luce)}
+.b-pieno:hover{background:var(--bottega)}
+.b-vuoto{border:1px solid #CFC8BC;color:var(--inchiostro)}
+.b-vuoto:hover{border-color:var(--inchiostro)}
+/* la mossa: il fondo della foto è ESATTAMENTE il fondo pagina, quindi niente cornice */
+.hero-pezzo img{width:100%}
+.hero-firma{margin-top:26px}
+.hero-firma svg{width:34px;height:68px}
+.hero-firma path{fill:none;stroke:var(--pietra);stroke-width:6;stroke-linejoin:round;stroke-linecap:round}
+
+/* ---------- sezioni ---------- */
+.sez{padding:74px 0}
+.sez-scura{background:var(--ossidiana);color:var(--luce)}
+.sez-nebbia{background:var(--nebbia)}
+.tit{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:34px}
+.tit h2{font-size:clamp(28px,3.6vw,42px)}
+.tit .segno{flex:none;width:11px;height:22px;align-self:center}
+.tit .segno path{fill:none;stroke:var(--pietra);stroke-width:8;stroke-linejoin:round}
+.sez-scura .tit .segno path{stroke:#B9B2A4}
+.sez-scura p{color:var(--luce)}
+
+.due{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:start}
+.due p+p{margin-top:16px}
+.citazione{
+  font-family:var(--display);font-size:clamp(20px,2.5vw,28px);line-height:1.42;
+  padding-top:20px;margin:0 0 24px;position:relative
+}
+.citazione::before{content:'';position:absolute;top:0;left:0;width:56px;height:2px;background:var(--oro)}
+figure.ritratto figcaption,figure.scatto figcaption{
+  font-size:13px;color:var(--pietra);margin-top:9px;line-height:1.5
+}
+/* ⚠️ specificita: `figure.scatto figcaption` (0-1-2) batteva `.sez-scura figcaption`
+   (0-1-1) e si mangiava l'override in silenzio → 2,66:1 sul nero. Trappola Anfora.
+   Qui l'override e piu specifico della regola chiara, quindi vince davvero. */
+.sez-scura figure.ritratto figcaption,
+.sez-scura figure.scatto figcaption{color:#C4BDAF}   /* 11,25:1 sull'ossidiana */
+
+/* lavorazione */
+.passi{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:26px}
+.passo{background:var(--foglio);border:1px solid #E7E2DA;border-radius:2px;overflow:hidden}
+.sez-nebbia .passo{background:var(--foglio)}
+.passo img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.passo .corpo{padding:16px 18px 20px}
+.passo h3{font-size:19px;margin-bottom:7px}
+.passo .n{font-size:11px;letter-spacing:.2em;color:var(--corallo-scuro);font-weight:700;display:block;margin-bottom:8px}
+.passo p{font-size:14.5px;color:#3C342B;line-height:1.6}
+
+/* galleria */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;padding:0;margin:0}
+.gallery-grid button{
+  display:block;width:100%;padding:0;border:0;background:transparent;
+  cursor:pointer;text-align:left;font:inherit;color:inherit
+}
+.gallery-grid img{
+  width:100%;aspect-ratio:1/1;object-fit:contain;background:var(--foglio);
+  transition:transform .3s cubic-bezier(.22,1,.36,1)      /* solo transform: regola 5 del kit */
+}
+.gallery-grid button:hover img{transform:scale(1.025)}
+.gallery-grid button:hover .did b{color:var(--corallo-scuro)}
+.gallery-grid .did{padding:12px 2px 2px}
+.gallery-grid .did b{display:block;font-family:var(--display);font-size:18px;font-weight:400;line-height:1.25}
+.gallery-grid .did span{display:block;font-size:13px;color:var(--pietra);margin-top:6px}
+.apri-primo{grid-column:1/-1}
+.apri-primo img{aspect-ratio:5/4;object-fit:contain}
+.apri-primo .did b{font-size:22px}
+
+/* lightbox */
+#lightbox{
+  position:fixed;inset:0;z-index:250;background:rgba(8,7,6,.94);
+  display:flex;align-items:center;justify-content:center;padding:22px;
+  opacity:0;visibility:hidden;transition:opacity .22s,visibility .22s
+}
+#lightbox.open{opacity:1;visibility:visible}
+#lightbox figure{margin:0;max-width:min(980px,94vw);position:relative;z-index:1}
+#lightbox img{max-height:74vh;width:auto;margin-inline:auto;background:var(--foglio)}
+#lightbox figcaption{color:var(--luce);font-size:15px;margin-top:16px;text-align:center;line-height:1.55}
+#lightbox figcaption b{font-family:var(--display);font-weight:400;font-size:20px;display:block;margin-bottom:5px}
+.lb-close,.lb-prev,.lb-next{
+  position:absolute;z-index:3;background:rgba(20,16,11,.86);border:1px solid rgba(246,242,234,.42);
+  color:var(--luce);width:48px;height:48px;border-radius:2px;cursor:pointer;
+  font-size:22px;line-height:1;display:flex;align-items:center;justify-content:center;padding:0
+}
+.lb-close:hover,.lb-prev:hover,.lb-next:hover{background:rgba(20,16,11,.98)}
+.lb-close{top:16px;right:16px}
+.lb-prev{left:16px;top:50%;transform:translateY(-50%)}
+.lb-next{right:16px;top:50%;transform:translateY(-50%)}
+
+/* dove */
+.dati{list-style:none;margin:0;padding:0}
+.dati li{display:flex;gap:14px;padding:13px 0;border-bottom:1px solid #E7E2DA}
+.sez-scura .dati li{border-bottom-color:#241F19}
+.dati .et{flex:none;width:104px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--pietra);padding-top:3px;font-weight:600}
+.sez-scura .dati .et{color:#B9B2A4}
+.dati .vl{font-size:16.5px}
+.dati a{color:inherit;text-decoration:none;border-bottom:1px solid var(--oro)}
+
+/* piede */
+footer{background:var(--ossidiana);color:var(--luce);padding:56px 0 40px}
+footer a{color:var(--luce)}
+.piede-griglia{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:38px;padding-bottom:30px;border-bottom:1px solid #241F19}
+.piede-griglia h3{font-size:20px;margin-bottom:12px}
+.piede-griglia p,.piede-griglia li{font-size:14.5px;color:#DBD5C9;line-height:1.7}
+.piede-griglia ul{list-style:none;margin:0;padding:0}
+.minuta{font-size:12.5px;color:#B0A99B;line-height:1.75;padding-top:22px}
+.minuta strong{color:#D6D0C4;font-weight:600}
+
+/* ---------- responsive ---------- */
+@media (max-width:980px){
+  .hero-griglia{grid-template-columns:1fr;gap:34px}
+  .hero-pezzo{order:-1}
+  .due{grid-template-columns:1fr;gap:32px}
+  .piede-griglia{grid-template-columns:1fr;gap:26px}
+}
+@media (max-width:920px){
+  .nav-links{display:none}
+  .burger{display:block;order:3}
+  .nav-tel{order:2}                      /* il telefono resta VISIBILE (senza_js.py) */
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .nav-in{gap:10px}
+  .nav-brand .nav-testo > span{display:none}   /* solo il sottotitolo: il NOME resta */
+  .nav-brand b{font-size:17px}
+  .nav-tel a.nav-cta{padding:10px 13px;font-size:13.5px}
+  .sez{padding:56px 0}
+  .hero{padding:calc(var(--barra) + 34px) 0 48px}
+  .lb-prev{left:8px}.lb-next{right:8px}
+  .lb-close{top:8px;right:8px}
+}
+
+/* movimento ridotto: nulla resta invisibile (regola 4 del kit, opt-in) */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+}
+</style>
+
+<noscript><style>
+  /* Senza JS la barra resta statica e i link diventano UNA striscia orizzontale
+     scorrevole: a 320px andando a capo la barra arrivava a 169px, sopra il
+     tetto di 140 del controllo. Una riga sola la tiene bassa e nessun link
+     sparisce (si scorre). */
+  #nav{position:static}
+  .hero{padding-top:44px}
+  .nav-in{flex-wrap:wrap;row-gap:6px}
+  .nav-brand{margin-right:auto}
+  nav[aria-label]{order:9;flex:1 0 100%;min-width:0;max-width:100%}
+  .nav-links{
+    display:flex;flex-wrap:nowrap;gap:18px;overflow-x:auto;min-width:0;max-width:100%;
+    -webkit-overflow-scrolling:touch;padding-bottom:2px
+  }
+  .nav-links a{white-space:nowrap}
+  .burger{display:none!important}
+  #mobileMenu{display:none}
+</style></noscript>
+</head>
+<body>
+
+<a class="salta" href="#main">Vai al contenuto</a>
+
+<header id="nav">
+  <div class="nav-in">
+    <a class="nav-brand" href="#main">
+      <svg viewBox="0 0 64 128" aria-hidden="true" focusable="false">
+        <path d="M32 5 L55 44 L46 101 L25 122 L9 77 L15 30 Z" fill="none" stroke="currentColor" stroke-width="7" stroke-linejoin="round"/>
+      </svg>
+      <span class="nav-testo"><b>Peppino Mele</b><span>Laboratorio orafo · Oristano</span></span>
+    </a>
+    <nav aria-label="Sezioni del sito">
+      <ul class="nav-links">
+        <li><a href="#artigiano">L'artigiano</a></li>
+        <li><a href="#lavorazione">La lavorazione</a></li>
+        <li><a href="#gallery">I pezzi</a></li>
+        <li><a href="#dove">Dove si trova</a></li>
+      </ul>
+    </nav>
+    <div class="nav-tel"><a class="nav-cta" href="tel:+393358478921">Chiama</a></div>
+    <button class="burger" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobileMenu">
+      <i></i><i></i><i></i>
+    </button>
+  </div>
+</header>
+
+<div id="mobileMenu" aria-label="Menu">
+  <ul>
+    <li><a href="#artigiano">L'artigiano</a></li>
+    <li><a href="#lavorazione">La lavorazione</a></li>
+    <li><a href="#gallery">I pezzi</a></li>
+    <li><a href="#dove">Dove si trova</a></li>
+  </ul>
+</div>
+
+<main id="main">
+
+  <!-- ① HERO -->
+  <section class="hero">
+    <div class="avvolge hero-griglia">
+      <div class="hero-testo">
+        <p class="occhiello" data-fm="sfuma">Oristano · Sardegna</p>
+        <h1 data-fm="sali">Peppino Mele</h1>
+        <p class="mestiere" data-fm="sali" data-fm-ritardo="90">Laboratorio orafo, specializzato nella lavorazione dell'ossidiana</p>
+        <p class="intro" data-fm="sali" data-fm-ritardo="170">Da oltre trent'anni, nel centro di Oristano, scheggia, taglia e monta l'ossidiana in oro e pietre preziose.</p>
+        <div class="hero-azioni" data-fm="sali" data-fm-ritardo="240">
+          <a class="bottone b-pieno" href="tel:+393358478921">Chiama il laboratorio</a>
+          <a class="bottone b-vuoto" href="#gallery">Guarda i pezzi</a>
+        </div>
+        <div class="hero-firma" data-fm="traccia" aria-hidden="true">
+          <svg viewBox="0 0 64 128" focusable="false">
+            <path d="M32 5 L55 44 L46 101 L25 122 L9 77 L15 30 Z"/>
+            <path d="M32 5 L27 72 L25 122"/>
+          </svg>
+        </div>
+      </div>
+      <figure class="hero-pezzo" data-fm="sfuma" data-fm-ritardo="120">
+        <picture>
+          <source media="(max-width:560px)" srcset="img/pendente-nido-ape-mob.jpg">
+          <img src="img/pendente-nido-ape.jpg" width="2137" height="2200"
+               alt="Pendente rotondo in ossidiana nera lucida, con al centro in alto un rettangolo in filigrana d'oro a sfere; il cordino è nero intrecciato, il fondo è bianco." fetchpriority="high">
+        </picture>
+        <figcaption>Pendente in ossidiana con lavorazione a nido d'ape</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ② L'ARTIGIANO -->
+  <section class="sez sez-nebbia" id="artigiano">
+    <div class="avvolge">
+      <div class="tit"><svg class="segno" viewBox="0 0 64 128" aria-hidden="true" focusable="false"><path d="M32 5 L55 44 L46 101 L25 122 L9 77 L15 30 Z"/></svg><h2 data-fm="sali">L'artigiano</h2></div>
+      <div class="due">
+        <div data-fm="sali">
+          <blockquote class="citazione">«Il mio laboratorio, oreficeria con una lunga storia, si trova nel centro di Oristano ed è specializzata nella lavorazione dell'ossidiana, un minerale a base di silice con struttura amorfa, estremamente elegante.»</blockquote>
+          <p>Dopo un periodo di apprendistato a bottega presso un orafo filigranista di Cagliari, apre il proprio laboratorio. L'incontro con l'ossidiana avviene in modo quasi casuale, e deriva dalla sua attitudine a realizzare gioielli personalizzati in stretta relazione con il cliente.</p>
+          <p>Da oltre trent'anni lavora l'ossidiana, il corallo e altre pietre, di cui esalta la naturale bellezza con montature in oro e argento. Con le sue collezioni partecipa alle manifestazioni fieristiche regionali.</p>
+          <p>«L'ossidiana ha una storia antica e affascinante. Essa veniva scolpita anche dagli antichi Egizi per realizzare scarabei e sigilli e dai Romani per ricavarne delle coppe finemente intarsiate.»</p>
+        </div>
+        <figure class="ritratto" data-fm="sfuma" data-fm-ritardo="110">
+          <img src="img/al-banco-fronte.jpg" width="1600" height="1068"
+               alt="Peppino Mele al banco del laboratorio: occhiali, camicia a righe e grembiule rosso a motivi chiari, mentre lavora un pezzo su un macchinario verde." loading="lazy">
+          <figcaption>Al banco, nel laboratorio di Oristano</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ③ LA LAVORAZIONE -->
+  <section class="sez sez-nebbia" id="lavorazione">
+    <div class="avvolge">
+      <div class="tit"><svg class="segno" viewBox="0 0 64 128" aria-hidden="true" focusable="false"><path d="M32 5 L55 44 L46 101 L25 122 L9 77 L15 30 Z"/></svg><h2 data-fm="sali">La lavorazione</h2></div>
+      <p style="max-width:60ch;margin-bottom:30px" data-fm="sali">Le sue parole: «Nel mio laboratorio scheggio, taglio e monto l'ossidiana in oro e pietre preziose per ottenere monili unici quali ciondoli, orecchini, anelli e centrali in abbinamento a pietre dure e coralli.»</p>
+      <div class="passi" data-fm="sali" data-fm-passo="110">
+        <figure class="passo">
+          <img src="img/ossidiana-grezza.jpg" width="1600" height="1200" alt="Blocchi di ossidiana grezza, nera e spigolosa, appoggiati su un panno bianco." loading="lazy">
+          <div class="corpo"><span class="n">LA PIETRA</span><h3>L'ossidiana grezza</h3><p>Pietra vitrea vulcanica, di arcaico utilizzo in Sardegna.</p></div>
+        </figure>
+        <figure class="passo">
+          <img src="img/scheggia-alla-mola.jpg" width="1600" height="1068" alt="Una mano tiene una scheggia scura di ossidiana contro il disco scuro di una mola." loading="lazy">
+          <div class="corpo"><span class="n">PRIMO</span><h3>Scheggia</h3><p>«Scheggio, taglio e monto»: la prima delle tre operazioni che nomina.</p></div>
+        </figure>
+        <figure class="passo">
+          <img src="img/levigatura-acqua.jpg" width="1600" height="1068" alt="Due mani bagnate tengono una lastra scura e bagnata di ossidiana appoggiata a una guida di metallo, davanti a un disco rotante." loading="lazy">
+          <div class="corpo"><span class="n">SECONDO</span><h3>Taglia</h3><p>La lastra contro la guida di metallo, bagnata dall'acqua.</p></div>
+        </figure>
+        <figure class="passo">
+          <img src="img/filigrana-alla-fiamma.jpg" width="1600" height="534" alt="Primo piano: una pinzetta tiene un elemento a spirale in filigrana d'oro appoggiato a un filo ricurvo, su un mattone chiazzato, nel bagliore arancione della fiamma." loading="lazy">
+          <div class="corpo"><span class="n">TERZO</span><h3>Monta</h3><p>La filigrana sarda in oro e argento, che tiene la pietra.</p></div>
+        </figure>
+        <figure class="passo">
+          <img src="img/finitura-pennello.jpg" width="1600" height="2132" alt="Una mano regge un pendente allungato in ossidiana, con un piccolo elemento in oro, accanto a un pennello e a un blocchetto di legno." loading="lazy">
+          <div class="corpo"><span class="n">QUARTO</span><h3>Finisce</h3><p>Il pennello sul pezzo montato, con la pietra e l'oro insieme.</p></div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ④ I PEZZI -->
+  <section class="sez" id="gallery">
+    <div class="avvolge">
+      <div class="tit"><svg class="segno" viewBox="0 0 64 128" aria-hidden="true" focusable="false"><path d="M32 5 L55 44 L46 101 L25 122 L9 77 L15 30 Z"/></svg><h2 data-fm="sali">I pezzi</h2></div>
+      <div class="gallery-grid">
+
+        <figure class="apri-primo" data-fms="mosaico" data-fms-fondo="#000000" data-fms-colonne="12" data-fms-righe="5">
+          <button type="button" data-src="img/pendente-corbula.jpg"
+                  data-titolo="Pendente in ossidiana con corbula"
+                  data-testo="Ha linee perfette giocate sulla forma del cerchio: l'elemento in filigrana d'oro ha la tradizionale forma della corbula."
+                  data-alt="Pendente rotondo in ossidiana nera lucida con al centro una spirale piatta in filigrana d'oro, appeso a un cordino nero intrecciato, su fondo bianco.">
+            <img src="img/pendente-corbula.jpg" width="1800" height="1604" alt="Pendente rotondo in ossidiana nera lucida con al centro una spirale piatta in filigrana d'oro, appeso a un cordino nero intrecciato, su fondo bianco." loading="lazy">
+            <span class="did"><b>Pendente in ossidiana con corbula</b><span>Ossidiana e filigrana d'oro</span></span>
+          </button>
+        </figure>
+
+        <figure>
+          <button type="button" data-src="img/pendente-nido-ape.jpg"
+                  data-titolo="Pendente in ossidiana con lavorazione a nido d'ape"
+                  data-testo="Il caldo colore dell'oro si contrappone all'intenso nero della pietra: la lavorazione pulita dell'ossidiana contro quella ricca della filigrana."
+                  data-alt="Pendente rotondo in ossidiana nera lucida, con al centro in alto un rettangolo in filigrana d'oro a sfere; cordino nero intrecciato, fondo bianco.">
+            <img src="img/pendente-nido-ape.jpg" width="2137" height="2200" alt="Pendente rotondo in ossidiana nera lucida, con al centro in alto un rettangolo in filigrana d'oro a sfere; cordino nero intrecciato, fondo bianco." loading="lazy">
+            <span class="did"><b>Pendente a nido d'ape</b><span>Ossidiana e filigrana d'oro</span></span>
+          </button>
+        </figure>
+
+        <figure>
+          <button type="button" data-src="img/collana-corallo.jpg"
+                  data-titolo="Collana con ramo di corallo"
+                  data-testo="La decorazione centrale è ricavata da un ramo unico di corallo di Castelsardo, con incastonatura in oro."
+                  data-alt="Collana di grani di corallo rosso-arancio con al centro un ramo di corallo e terminali in oro, su fondo bianco.">
+            <img src="img/collana-corallo.jpg" width="1800" height="1738" alt="Collana di grani di corallo rosso-arancio con al centro un ramo di corallo e terminali in oro, su fondo bianco." loading="lazy">
+            <span class="did"><b>Collana con ramo di corallo</b><span>Corallo di Castelsardo e oro</span></span>
+          </button>
+        </figure>
+
+        <figure>
+          <button type="button" data-src="img/pendente-fiore.jpg"
+                  data-titolo="Pendente Fiore con lavorazione a filigrana e quarzo"
+                  data-testo="Della linea di pendenti in filigrana d'argento e quarzi: forme classiche della tradizione con una soluzione contemporanea."
+                  data-alt="Pendente a forma di fiore in filigrana d'argento, con petali ad anello attorno a un quarzo arancione sfaccettato, su fondo bianco.">
+            <img src="img/pendente-fiore.jpg" width="1800" height="1800" alt="Pendente a forma di fiore in filigrana d'argento, con petali ad anello attorno a un quarzo arancione sfaccettato, su fondo bianco." loading="lazy">
+            <span class="did"><b>Pendente Fiore</b><span>Filigrana d'argento e quarzo</span></span>
+          </button>
+        </figure>
+
+        <figure>
+          <button type="button" data-src="img/pendente-sole.jpg"
+                  data-titolo="Pendente Sole con lavorazione a filigrana e quarzo"
+                  data-testo="Stessa linea del Fiore, che comprende oltre ai pendenti anche gli orecchini."
+                  data-alt="Pendente a forma di sole in filigrana d'argento, con raggi ritorti attorno a un quarzo arancione sfaccettato, su fondo bianco.">
+            <img src="img/pendente-sole.jpg" width="1800" height="1800" alt="Pendente a forma di sole in filigrana d'argento, con raggi ritorti attorno a un quarzo arancione sfaccettato, su fondo bianco." loading="lazy">
+            <span class="did"><b>Pendente Sole</b><span>Filigrana d'argento e quarzo</span></span>
+          </button>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑤ DOVE SI TROVA -->
+  <section class="sez sez-scura" id="dove">
+    <div class="avvolge">
+      <div class="tit"><svg class="segno" viewBox="0 0 64 128" aria-hidden="true" focusable="false"><path d="M32 5 L55 44 L46 101 L25 122 L9 77 L15 30 Z"/></svg><h2 data-fm="sali">Dove si trova</h2></div>
+      <div class="due">
+        <div data-fm="sali">
+          <ul class="dati">
+            <li><span class="et">Indirizzo</span><span class="vl">Piazza Mariano — Oristano</span></li>
+            <li><span class="et">Telefono</span><span class="vl"><a href="tel:+393358478921">335 8478921</a></span></li>
+            <li><span class="et">Email</span><span class="vl"><a href="mailto:peppino.mele@libero.it">peppino.mele@libero.it</a></span></li>
+            <li><span class="et">Orari</span><span class="vl">Dal lunedì al sabato<br>9.00 – 13.00 · 16.00 – 19.00</span></li>
+          </ul>
+        </div>
+        <figure class="scatto" data-fm="sfuma" data-fm-ritardo="110">
+          <img src="img/al-banco-profilo.jpg" width="1600" height="1068" alt="Peppino Mele di profilo al banco, con occhiali e grembiule rosso a motivi chiari, mentre lavora una pietra sul disco di un macchinario verde; sotto, un vassoio pieno di pezzi di ossidiana nera." loading="lazy">
+          <figcaption>Il laboratorio, nel centro di Oristano</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="avvolge">
+    <div class="piede-griglia">
+      <div>
+        <h3>Peppino Mele</h3>
+        <p>Laboratorio orafo specializzato nella lavorazione dell'ossidiana, nel centro di Oristano.</p>
+      </div>
+      <div>
+        <h3>Contatti</h3>
+        <ul>
+          <li><a href="tel:+393358478921">335 8478921</a></li>
+          <li><a href="mailto:peppino.mele@libero.it">peppino.mele@libero.it</a></li>
+          <li>Piazza Mariano — Oristano</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Orari</h3>
+        <ul>
+          <li>Lunedì – Sabato</li>
+          <li>9.00 – 13.00</li>
+          <li>16.00 – 19.00</li>
+        </ul>
+      </div>
+    </div>
+    <p class="minuta">
+      <strong>Sito dimostrativo realizzato con AI da FAR AI · contenuti da rivedere con l'attività prima della pubblicazione.</strong><br>
+      Testi e immagini provengono dalle fonti pubbliche dell'attività (scheda espositore della Fiera dell'Artigianato Artistico della Sardegna – Mogoro, e registro regionale «Vetrine dell'Artigiano Artistico») e restano di proprietà dell'attività.<br>
+      Fotografie di proprietà di Peppino Mele laboratorio orafo, pubblicate dalle fonti sopra con licenza Attribution-NonCommercial 4.0 International (CC BY-NC 4.0).
+    </p>
+  </div>
+</footer>
+
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Fotografia ingrandita">
+  <button class="lb-close" type="button" aria-label="Chiudi">&#10005;</button>
+  <button class="lb-prev" type="button" aria-label="Foto precedente">&#8249;</button>
+  <button class="lb-next" type="button" aria-label="Foto successiva">&#8250;</button>
+  <figure>
+    <img id="lbImg" src="img/pendente-corbula.jpg" alt="">
+    <figcaption id="lbCap"><b></b><span></span></figcaption>
+  </figure>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"JewelryStore",
+  "@id":"https://demo.francescoar.com/ossidiana-mele-oristano/#laboratorio",
+  "name":"Peppino Mele laboratorio orafo",
+  "description":"Laboratorio orafo nel centro di Oristano, specializzato nella lavorazione dell'ossidiana montata in oro e argento.",
+  "image":["https://demo.francescoar.com/ossidiana-mele-oristano/img/pendente-nido-ape.jpg","https://demo.francescoar.com/ossidiana-mele-oristano/img/pendente-corbula.jpg"],
+  "telephone":"+39 335 8478921",
+  "email":"peppino.mele@libero.it",
+  "address":{"@type":"PostalAddress","streetAddress":"Piazza Mariano","addressLocality":"Oristano","addressRegion":"OR","addressCountry":"IT"},
+  "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:00","closes":"13:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"16:00","closes":"19:00"}]
+}
+</script>
+
+<script>
+(function(){
+  var barra=document.getElementById('nav'),
+      burger=document.querySelector('.burger'),
+      menu=document.getElementById('mobileMenu'),
+      lb=document.getElementById('lightbox'),
+      lbImg=document.getElementById('lbImg'),
+      lbCap=document.getElementById('lbCap'),
+      tessere=[].slice.call(document.querySelectorAll('.gallery-grid button')),
+      indice=0, tornaA=null;
+
+  function fuori(stato){
+    ['main','footer'].forEach(function(s){
+      var n=document.querySelector(s); if(n) stato?n.setAttribute('inert',''):n.removeAttribute('inert');
+    });
+    var salta=document.querySelector('.salta');
+    if(salta) stato?salta.setAttribute('inert',''):salta.removeAttribute('inert');
+  }
+
+  /* ---- menu mobile ---- */
+  /* col menu aperto tutto il resto e inert — MA NON il burger, che sta dentro
+     la barra ed e l'unico modo di richiudere (per la lightbox invece la barra
+     intera puo essere inert, perche si chiude col suo bottone). */
+  function attorno(stato){
+    ['.nav-brand','.nav-links','.nav-tel'].forEach(function(s){
+      var n=document.querySelector(s); if(n) stato?n.setAttribute('inert',''):n.removeAttribute('inert');
+    });
+  }
+  function menuApri(){
+    menu.classList.add('open'); burger.classList.add('open');
+    burger.setAttribute('aria-expanded','true'); burger.setAttribute('aria-label','Chiudi il menu');
+    fuori(true); attorno(true);
+  }
+  function menuChiudi(){
+    menu.classList.remove('open'); burger.classList.remove('open');
+    burger.setAttribute('aria-expanded','false'); burger.setAttribute('aria-label','Apri il menu');
+    fuori(false); attorno(false);
+  }
+  burger.addEventListener('click',function(){
+    menu.classList.contains('open')?menuChiudi():menuApri();
+  });
+  menu.addEventListener('click',function(e){ if(e.target.tagName==='A') menuChiudi(); });
+
+  /* ---- lightbox ---- */
+  function mostra(i){
+    var n=tessere.length; indice=(i%n+n)%n;
+    var b=tessere[indice];
+    lbImg.src=b.dataset.src;
+    lbImg.alt=b.dataset.alt||'';
+    lbCap.querySelector('b').textContent=b.dataset.titolo||'';
+    lbCap.querySelector('span').textContent=b.dataset.testo||'';
+  }
+  function lbApri(i,da){
+    tornaA=da||null; mostra(i); lb.classList.add('open'); fuori(true); barra.setAttribute('inert','');
+    var t0=performance.now();
+    (function aspetta(){
+      if(getComputedStyle(lb).visibility==='visible'){ lb.querySelector('.lb-close').focus(); return; }
+      if(performance.now()-t0<1200) requestAnimationFrame(aspetta);
+    })();
+  }
+  function lbChiudi(){
+    lb.classList.remove('open'); fuori(false); barra.removeAttribute('inert');
+    if(tornaA) tornaA.focus();
+  }
+  tessere.forEach(function(b,i){ b.addEventListener('click',function(){ lbApri(i,b); }); });
+  lb.querySelector('.lb-close').addEventListener('click',lbChiudi);
+  lb.querySelector('.lb-prev').addEventListener('click',function(){ mostra(indice-1); });
+  lb.querySelector('.lb-next').addEventListener('click',function(){ mostra(indice+1); });
+  lb.addEventListener('click',function(e){ if(e.target===lb) lbChiudi(); });
+
+  /* ---- tastiera: Esc ovunque, frecce nella lightbox, trap del Tab ---- */
+  function focusabili(root){
+    return [].slice.call(root.querySelectorAll('a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])'))
+      .filter(function(el){ return el.getClientRects().length>0; });
+  }
+  document.addEventListener('keydown',function(e){
+    var lbAperta=lb.classList.contains('open'), menuAperto=menu.classList.contains('open');
+    if(e.key==='Escape'){
+      if(lbAperta){ lbChiudi(); return; }
+      if(menuAperto){ menuChiudi(); burger.focus(); return; }
+    }
+    if(lbAperta){
+      if(e.key==='ArrowLeft'){ e.preventDefault(); mostra(indice-1); }
+      if(e.key==='ArrowRight'){ e.preventDefault(); mostra(indice+1); }
+    }
+    if(e.key==='Tab'){
+      var pannello = lbAperta ? lb : (menuAperto ? menu : null);
+      if(!pannello) return;
+      var f=focusabili(pannello); if(!f.length) return;
+      var primo=f[0], ultimo=f[f.length-1];
+      if(e.shiftKey && document.activeElement===primo){ e.preventDefault(); ultimo.focus(); }
+      else if(!e.shiftKey && document.activeElement===ultimo){ e.preventDefault(); primo.focus(); }
+      else if(!pannello.contains(document.activeElement)){ e.preventDefault(); primo.focus(); }
+    }
+  });
+})();
+</script>
+
+<script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
