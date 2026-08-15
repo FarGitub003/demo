@@ -1,0 +1,15 @@
+/* sipario — due ante si aprono sul contenuto. L'apertura di un sito
+   che vuole farsi ricordare senza rubare tempo: un secondo scarso. */
+.fmx-sipario { position: absolute; inset: 0; z-index: 240; pointer-events: none; }
+.fmx-sipario.fmx-schermo { position: fixed; }
+.fmx-anta {
+  position: absolute; top: 0; bottom: 0; width: 50.5%;
+  background: var(--fmx-fondo, #0d1014);
+  will-change: transform;
+}
+.fmx-anta-sx { left: 0; }
+.fmx-anta-dx { right: 0; }
+.fmx-sipario-marchio {
+  position: absolute; inset: 0; display: grid; place-items: center;
+  color: var(--fmx-testo, #e8edf2); font-size: clamp(1.2rem, 4vw, 2.4rem);
+}
