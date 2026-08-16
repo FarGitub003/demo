@@ -1,0 +1,7 @@
+/* cascata — colonne affiancate che scorrono a velocita' diverse.
+   Solo transform: nessuna proprieta' di impaginazione toccata. */
+.fmx-cascata { display: grid; gap: var(--fmx-vuoto, 16px); grid-auto-flow: column; overflow: hidden; }
+.fmx-cascata > * { display: grid; gap: var(--fmx-vuoto, 16px); will-change: transform; }
+@media (prefers-reduced-motion: no-preference) {
+  .fmx-cascata > * { transform: translate3d(0, var(--fmx-py, 0px), 0); }
+}
