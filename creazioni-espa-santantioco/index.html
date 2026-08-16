@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Caterina Espa Creazioni Orafe · laboratorio orafo a Sant'Antioco</title>
+<meta name="description" content="Laboratorio orafo di Caterina Espa a Sant'Antioco, dal 2011. Gioielli in oro e argento fatti a mano: filigrana, fedi, pendenti, anelli smaltati. Via Regina Margherita 53, lunedì-sabato.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#302C0E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Caterina Espa Creazioni Orafe · laboratorio orafo a Sant'Antioco">
+<meta property="og:description" content="Dal 2011 a Sant'Antioco, l'isola nell'isola. Gioielli in oro e argento fatti a mano.">
+<meta property="og:image" content="https://demo.francescoar.com/creazioni-espa-santantioco/img/orecchini-filigrana-oro.jpg">
+<meta property="og:locale" content="it_IT">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23302C0E' stroke-width='3.4'%3E%3Cellipse cx='32' cy='33' rx='26' ry='28'/%3E%3Cellipse cx='32' cy='33' rx='12.5' ry='14'/%3E%3C/g%3E%3Cg fill='none' stroke='%239D814A' stroke-width='2.6'%3E%3Cellipse cx='32' cy='33' rx='19.2' ry='21'/%3E%3C/g%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "@id":"https://demo.francescoar.com/creazioni-espa-santantioco/#caterinaespa",
+  "name":"Caterina Espa Creazioni Orafe",
+  "alternateName":"Laboratorio Orafo Caterina Espa",
+  "description":"Laboratorio orafo a Sant'Antioco dal 2011. Gioielli in oro e argento che si fondono con la storia e le tradizioni della Sardegna, senza rinunciare alla contemporaneità.",
+  "image":["https://demo.francescoar.com/creazioni-espa-santantioco/img/orecchini-filigrana-oro.jpg","https://demo.francescoar.com/creazioni-espa-santantioco/img/fedi-oro-filigrana.jpg","https://demo.francescoar.com/creazioni-espa-santantioco/img/ciondolo-sardegna-argento.jpg"],
+  "telephone":"+39 347 184 1620",
+  "email":"caterina.espa@tiscali.it",
+  "foundingDate":"2011",
+  "address":{"@type":"PostalAddress","streetAddress":"Via Regina Margherita 53","addressLocality":"Sant'Antioco","addressRegion":"SU","postalCode":"09017","addressCountry":"IT"},
+  "openingHours":"Mo-Sa 09:00-13:00,17:30-20:30"
+}
+</script>
+<link rel="stylesheet" href="far-motion.min.css">
+<script src="far-motion.min.js"></script>
+<script>document.documentElement.classList.add('js');</script>
+<style>
+/* ============================================================
+   CATERINA ESPA CREAZIONI ORAFE — demo FAR AI
+   Identità n. 51 del REGISTRO_IDENTITA: Gloock + Urbanist.
+   Palette MISURATA sulle sue 4 foto (mediane e quantizzazioni su
+   migliaia di campioni), varianti AA CALCOLATE sul fondo più
+   difficile (sabbia) e verificate sul foglio. Vedi il dossier §4.
+   ============================================================ */
+:root{
+  /* --- misurati sulle sue foto --- */
+  --foglio:#FFFBF1;        /* 61,8% della luce nella foto in riva al mare */
+  --sabbia:#FAF5E9;        /* 28,7% della stessa foto */
+  --inchiostro:#302C0E;    /* 27,1% del pendente in filigrana — 13,62:1 sul foglio */
+  --oro:#9D814A;           /* 22,3% delle fedi — SOLO MATERIA (3,58:1) */
+  --oro-luce:#E1D9B7;      /* 9,3% delle fedi — 9,92:1 sull'inchiostro */
+  --mare:#037FD2;          /* fondo dell'acqua del ciondolo — SOLO MATERIA */
+  --argento:#B8D2D3;       /* 19,2% del ciondolo — 8,84:1 sull'inchiostro */
+  --smalto:#6D1036;        /* 42,6% del pesce rosso — 11,43:1, passa così */
+  /* --- calcolati a >=7:1 sulla SABBIA, verificati sul foglio --- */
+  --oro-testo:#644E25;     /* 7,26 sabbia · 7,64 foglio */
+  --argento-testo:#455757; /* 7,01 sabbia · 7,38 foglio */
+  --mare-testo:#005598;    /* 7,01 sabbia · 7,38 foglio */
+  --oro-chiaro:#C8B896;    /* 7,21:1 sull'inchiostro */
+  --mare-chiaro:#3FC7ED;   /* 7,11:1 sull'inchiostro */
+
+  --display:'Gloock',Georgia,'Times New Roman',serif;
+  --testo:'Urbanist',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --barra:64px;
+  --gutter:clamp(20px,5vw,64px);
+}
+*{box-sizing:border-box}
+html{overflow-x:clip;scroll-behavior:smooth}
+body{
+  margin:0;background:var(--foglio);color:var(--inchiostro);
+  font:400 17px/1.68 var(--testo);-webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;margin:0}
+p{margin:0 0 1em}
+a{color:var(--mare-testo)}
+:where(a,button,[tabindex]):focus-visible{outline:3px solid var(--mare-testo);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:var(--gutter)}
+section{scroll-margin-top:calc(var(--barra) + 15px)}
+
+/* ---------- skip ---------- */
+.skip{position:absolute;left:12px;top:-70px;z-index:120;background:var(--inchiostro);color:var(--foglio);
+  padding:11px 18px;border-radius:3px;font-weight:600;text-decoration:none;transition:top .18s}
+.skip:focus{top:12px}
+
+/* ---------- marchio: la fede sarda a tratto singolo ---------- */
+.marchio{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;overflow:visible}
+.marchio .filo{stroke-width:.95}
+
+/* ---------- barra ---------- */
+#nav{
+  position:sticky;top:0;z-index:90;min-height:var(--barra);
+  display:flex;align-items:center;gap:18px;
+  padding:9px var(--gutter);
+  background:var(--foglio);border-bottom:1px solid rgba(48,44,14,.16);
+}
+.nav-brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--inchiostro);flex:0 0 auto}
+.nav-brand .marchio{width:30px;height:30px;color:var(--oro-testo)}
+.nav-brand b{font-family:var(--display);font-weight:400;font-size:1.06rem;letter-spacing:.012em;white-space:nowrap}
+.nav-links{display:flex;gap:clamp(12px,2vw,26px);list-style:none;margin:0 0 0 auto;padding:0}
+.nav-links a{color:var(--inchiostro);text-decoration:none;font-size:.93rem;font-weight:500;white-space:nowrap}
+.nav-links a:hover{color:var(--mare-testo)}
+.nav-tel{flex:0 0 auto;margin-left:14px}
+.nav-cta{
+  display:inline-block;background:var(--inchiostro);color:var(--foglio);text-decoration:none;
+  padding:10px 19px;border-radius:999px;font-weight:600;font-size:.9rem;white-space:nowrap;
+  transition:transform .18s,opacity .18s
+}
+.nav-cta:hover{transform:translateY(-1px);opacity:.92}
+.burger{display:none;flex:0 0 auto;width:44px;height:44px;margin-left:6px;background:none;border:0;padding:9px;cursor:pointer}
+.burger span{display:block;height:2px;background:var(--inchiostro);margin:5px 0;border-radius:2px;transition:transform .22s,opacity .22s}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+#mobileMenu{
+  position:fixed;inset:0;z-index:80;background:var(--inchiostro);color:var(--foglio);
+  display:flex;flex-direction:column;justify-content:center;gap:6px;
+  padding:var(--barra) var(--gutter) 0;
+  opacity:0;visibility:hidden;transform:translateY(-10px);
+  transition:opacity .26s,transform .26s,visibility .26s
+}
+#mobileMenu.open{opacity:1;visibility:visible;transform:none}
+#mobileMenu a{color:var(--foglio);text-decoration:none;font-family:var(--display);font-size:clamp(1.5rem,7vw,2.1rem);padding:11px 0}
+#mobileMenu a:hover{color:var(--oro-chiaro)}
+
+@media (max-width:920px){
+  .nav-links{display:none}
+  .burger{display:block;margin-left:auto}
+  .nav-tel{margin-left:0;order:2}
+  .burger{order:3}
+}
+@media (max-width:560px){
+  .nav-brand b{font-size:.95rem}
+  .nav-cta{padding:9px 14px;font-size:.85rem}
+}
+/* Il nome sparisce solo sotto i 360px: a 390 (il telefono piu' comune) ci sta,
+   e una barra senza nome e' una prima riga sprecata. */
+@media (max-width:359px){
+  .nav-brand b{display:none}
+}
+
+/* ---------- hero ---------- */
+.hero{padding:clamp(46px,8vw,96px) 0 clamp(38px,6vw,72px)}
+.hero-griglia{display:grid;grid-template-columns:1fr auto;gap:clamp(24px,5vw,64px);align-items:start}
+.occhiello{font-size:.79rem;letter-spacing:.19em;text-transform:uppercase;font-weight:600;color:var(--oro-testo);margin:0 0 18px}
+.hero h1{font-size:clamp(2.5rem,7.4vw,4.6rem);letter-spacing:-.012em}
+.hero h1 > span{display:block}
+.hero h1 em{display:block;font-style:normal;font-size:.42em;letter-spacing:.15em;text-transform:uppercase;
+  font-family:var(--testo);font-weight:600;color:var(--oro-testo);margin-top:14px}
+/* Il filo sopra la frase, non una fascia di colore accanto: è un capoverso
+   editoriale, e per un'orafa il filo sottile è il materiale giusto. */
+.hero-frase{
+  font-family:var(--display);font-size:clamp(1.24rem,2.7vw,1.86rem);line-height:1.36;
+  margin:clamp(26px,4vw,42px) 0 0;max-width:26ch;
+  padding-top:clamp(20px,3vw,30px);position:relative
+}
+.hero-frase::before{
+  content:"";position:absolute;top:0;left:0;width:74px;height:1px;background:var(--oro-testo)
+}
+.hero-firma{margin:16px 0 0;font-size:.88rem;color:var(--argento-testo)}
+.hero-sotto{margin:clamp(24px,4vw,36px) 0 0;font-size:1.03rem;max-width:40ch}
+.hero-azioni{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.bottone{display:inline-block;padding:13px 25px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.95rem;
+  transition:transform .18s,opacity .18s}
+.bottone:hover{transform:translateY(-1px);opacity:.92}
+.b-pieno{background:var(--inchiostro);color:var(--foglio)}
+.b-vuoto{background:none;color:var(--inchiostro);box-shadow:inset 0 0 0 1.5px rgba(48,44,14,.34)}
+.hero-marchio{width:clamp(112px,17vw,196px);height:auto;color:var(--oro-testo);flex:0 0 auto}
+@media (max-width:760px){
+  .hero-griglia{grid-template-columns:1fr;gap:26px}
+  .hero-marchio{width:104px;order:-1}
+}
+
+/* ---------- fasce ---------- */
+.fascia{padding:clamp(52px,8vw,104px) 0}
+.fascia.chiara{background:var(--sabbia)}
+.fascia.scura{background:var(--inchiostro);color:var(--foglio)}
+.fascia.scura a{color:var(--mare-chiaro)}
+.fascia.scura .occhiello{color:var(--oro-chiaro)}
+h2{font-size:clamp(1.85rem,4.2vw,3rem);letter-spacing:-.006em;margin-bottom:.55em}
+.intro{max-width:56ch;font-size:1.06rem}
+
+/* divisore — la fede, seconda volta */
+.divisore{display:flex;align-items:center;gap:20px;margin:0 auto clamp(30px,5vw,46px);max-width:340px;color:var(--oro-testo)}
+.divisore::before,.divisore::after{content:"";flex:1;height:1px;background:currentColor;opacity:.42}
+.divisore .marchio{width:38px;height:38px;flex:0 0 auto}
+.fascia.scura .divisore{color:var(--oro-chiaro)}
+
+/* ---------- le sue parole ---------- */
+.parole{max-width:64ch;margin:0 auto}
+.parole blockquote{
+  margin:0;font-family:var(--display);font-size:clamp(1.16rem,2.3vw,1.58rem);line-height:1.46;
+}
+.parole cite{display:block;margin-top:22px;font-style:normal;font-family:var(--testo);
+  font-size:.86rem;letter-spacing:.055em;text-transform:uppercase;color:var(--oro-chiaro)}
+
+/* ---------- galleria ---------- */
+/* Quattro pezzi: 2×2, non 3+1. Un orfano in seconda riga è un difetto di
+   composizione, e con quattro foto la griglia larga le rimpicciolisce e basta. */
+.gallery-grid{display:grid;grid-template-columns:1fr;gap:clamp(18px,2.6vw,30px);
+  list-style:none;margin:0;padding:0}
+@media (min-width:620px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+.gallery-grid button{
+  display:block;width:100%;padding:0;border:0;cursor:pointer;text-align:left;
+  background:var(--foglio);box-shadow:0 1px 0 rgba(48,44,14,.16), 0 0 0 1px rgba(48,44,14,.09);
+  border-radius:4px;overflow:hidden;color:inherit;font:inherit;
+  transition:transform .2s,box-shadow .2s
+}
+.gallery-grid button:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(48,44,14,.16), 0 0 0 1px rgba(48,44,14,.13)}
+.gallery-grid img{width:100%;height:clamp(224px,27vw,330px);object-fit:cover;background:var(--sabbia)}
+.tessera-testo{padding:15px 17px 19px}
+.tessera-testo b{display:block;font-family:var(--display);font-weight:400;font-size:1.12rem;margin-bottom:5px}
+.tessera-testo span{display:block;font-size:.9rem;color:var(--argento-testo);line-height:1.5}
+
+/* ---------- l'anello delle famiglie ---------- */
+.famiglie{list-style:none;margin:clamp(28px,4vw,44px) 0 0;padding:0;
+  display:grid;grid-template-columns:1fr;gap:0}
+.famiglie li{
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 20px;
+  padding:clamp(14px,2vw,20px) 0;border-top:1px solid rgba(255,251,241,.17)
+}
+.famiglie li:last-child{border-bottom:1px solid rgba(255,251,241,.17)}
+.famiglie b{font-family:var(--display);font-weight:400;font-size:clamp(1.5rem,3.6vw,2.3rem);
+  flex:0 0 auto}
+.chiusa{margin:clamp(26px,4vw,38px) 0 0;max-width:58ch;color:var(--argento)}
+
+/* ---------- pratico ---------- */
+.pratico{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:clamp(20px,3vw,38px)}
+.pratico h3{font-size:1.16rem;margin-bottom:9px}
+.pratico p{margin-bottom:.35em}
+.pratico .nota{font-size:.9rem;color:var(--argento-testo)}
+.fascia.scura .pratico .nota{color:var(--argento)}
+
+/* ---------- piede ---------- */
+footer{background:var(--inchiostro);color:var(--foglio);padding:clamp(40px,6vw,64px) 0 clamp(30px,4vw,44px);font-size:.9rem}
+footer a{color:var(--mare-chiaro)}
+.piede-righe{max-width:74ch;color:var(--argento);line-height:1.6}
+.piede-righe p{margin-bottom:.7em}
+.piede-marchio{display:flex;align-items:center;gap:12px;margin-bottom:22px;color:var(--oro-chiaro)}
+.piede-marchio .marchio{width:32px;height:32px}
+.piede-marchio b{font-family:var(--display);font-weight:400;font-size:1.06rem}
+
+/* ---------- lightbox ---------- */
+#lightbox{
+  position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;
+  padding:clamp(14px,3vw,44px);background:rgba(20,18,6,.93);
+  opacity:0;visibility:hidden;transition:opacity .28s,visibility .28s
+}
+#lightbox.open{opacity:1;visibility:visible}
+#lightbox figure{margin:0;max-width:min(940px,100%);max-height:100%;display:flex;flex-direction:column;gap:14px;position:relative;z-index:1}
+#lightbox img{max-height:70vh;width:auto;margin:0 auto;object-fit:contain;border-radius:3px}
+#lightbox figcaption{color:var(--foglio);text-align:center;font-size:.94rem;line-height:1.55}
+#lightbox figcaption b{display:block;font-family:var(--display);font-weight:400;font-size:1.2rem;margin-bottom:4px}
+#lightbox button{
+  position:absolute;z-index:3;background:rgba(20,18,6,.82);color:var(--foglio);
+  border:1.5px solid rgba(255,251,241,.5);border-radius:999px;cursor:pointer;
+  width:48px;height:48px;font-size:1.6rem;line-height:1;display:grid;place-items:center;
+  transition:transform .18s,background .18s
+}
+#lightbox button:hover{transform:scale(1.06);background:rgba(20,18,6,.95)}
+.lb-close{top:clamp(12px,2.4vw,26px);right:clamp(12px,2.4vw,26px)}
+.lb-prev{left:clamp(10px,2.2vw,26px);top:50%;transform:translateY(-50%)}
+.lb-next{right:clamp(10px,2.2vw,26px);top:50%;transform:translateY(-50%)}
+.lb-prev:hover,.lb-next:hover{transform:translateY(-50%) scale(1.06)}
+
+/* ---------- senza JavaScript: niente resta invisibile ---------- */
+</style>
+<noscript><style>
+  #nav{position:static;flex-wrap:wrap;min-height:0}
+  .nav-links{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:15px;margin:6px 0 0;width:100%;order:5;padding-bottom:3px;-webkit-overflow-scrolling:touch}
+  .nav-links a{font-size:.88rem}
+  .burger{display:none!important}
+  #mobileMenu{display:none}
+  #lightbox{display:none}
+  .palco{height:auto;display:flex;flex-wrap:wrap;gap:14px 30px;justify-content:center}
+</style></noscript>
+</head>
+<body id="top">
+<a class="skip" href="#main">Salta al contenuto</a>
+
+<header id="nav">
+  <a class="nav-brand" href="#top">
+    <svg class="marchio" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="33" rx="26" ry="28"/><ellipse cx="32" cy="33" rx="12.5" ry="14"/></svg>
+    <b>Caterina Espa</b>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#laboratorio">Il laboratorio</a></li>
+    <li><a href="#pezzi">I pezzi</a></li>
+    <li><a href="#famiglie">Cosa fa</a></li>
+    <li><a href="#dove">Dove si trova</a></li>
+    <li><a href="#contatti">Contatti</a></li>
+  </ul>
+  <div class="nav-tel"><a class="nav-cta" href="tel:+393471841620">Chiama</a></div>
+  <button class="burger" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobileMenu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav id="mobileMenu" aria-label="Menu">
+  <a href="#laboratorio">Il laboratorio</a>
+  <a href="#pezzi">I pezzi</a>
+  <a href="#famiglie">Cosa fa</a>
+  <a href="#dove">Dove si trova</a>
+  <a href="#contatti">Contatti</a>
+</nav>
+
+<main id="main">
+
+  <section class="hero wrap" aria-labelledby="titolo">
+    <div class="hero-griglia">
+      <div>
+        <p class="occhiello" data-fm="sfuma">Laboratorio orafo · Sant'Antioco</p>
+        <h1 id="titolo"><span data-fm="righe">Caterina Espa</span><em data-fm="sfuma">Creazioni orafe</em></h1>
+        <p class="hero-frase" data-fm="sali">«Gioielli in oro e argento che si fondono con la storia e le tradizioni della Sardegna, senza rinunciare alla contemporaneità.»</p>
+        <p class="hero-firma" data-fm="sfuma">Parole di Caterina Espa</p>
+        <p class="hero-sotto" data-fm="sali">Dal 2011, a Sant'Antioco — l'isola nell'isola, nel sud ovest della Sardegna.</p>
+        <div class="hero-azioni" data-fm="sali" data-fm-passo="90">
+          <a class="bottone b-pieno" href="tel:+393471841620">Chiama il laboratorio</a>
+          <a class="bottone b-vuoto" href="https://wa.me/c/393471841620" rel="noopener">Guarda il catalogo</a>
+        </div>
+      </div>
+      <svg class="marchio hero-marchio" viewBox="0 0 64 64" data-fm="traccia" data-fm-passo="34" role="img" aria-label="Segno della pagina: una fede vista di fronte, con la fascia centrale lavorata a filo intrecciato">
+        <ellipse cx="32" cy="33" rx="26" ry="28"/>
+        <ellipse cx="32" cy="33" rx="12.5" ry="14"/>
+        <ellipse cx="32" cy="33" rx="16.8" ry="18.2"/><ellipse cx="32" cy="33" rx="21.6" ry="23.4"/><line class="filo" x1="32.0" y1="14.8" x2="36.1" y2="10.0"/><line class="filo" x1="36.0" y1="15.3" x2="41.1" y2="11.8"/><line class="filo" x1="39.8" y1="16.9" x2="45.5" y2="14.7"/><line class="filo" x1="43.1" y1="19.4" x2="49.1" y2="18.8"/><line class="filo" x1="45.8" y1="22.7" x2="51.8" y2="23.6"/><line class="filo" x1="47.7" y1="26.5" x2="53.3" y2="29.0"/><line class="filo" x1="48.7" y1="30.8" x2="53.5" y2="34.7"/><line class="filo" x1="48.7" y1="35.2" x2="52.6" y2="40.2"/><line class="filo" x1="47.7" y1="39.5" x2="50.4" y2="45.3"/><line class="filo" x1="45.8" y1="43.3" x2="47.1" y2="49.7"/><line class="filo" x1="43.1" y1="46.6" x2="43.0" y2="53.2"/><line class="filo" x1="39.8" y1="49.1" x2="38.2" y2="55.4"/><line class="filo" x1="36.0" y1="50.7" x2="33.1" y2="56.4"/><line class="filo" x1="32.0" y1="51.2" x2="27.9" y2="56.0"/><line class="filo" x1="28.0" y1="50.7" x2="22.9" y2="54.2"/><line class="filo" x1="24.2" y1="49.1" x2="18.5" y2="51.3"/><line class="filo" x1="20.9" y1="46.6" x2="14.9" y2="47.2"/><line class="filo" x1="18.2" y1="43.3" x2="12.2" y2="42.4"/><line class="filo" x1="16.3" y1="39.5" x2="10.7" y2="37.0"/><line class="filo" x1="15.3" y1="35.2" x2="10.5" y2="31.3"/><line class="filo" x1="15.3" y1="30.8" x2="11.4" y2="25.8"/><line class="filo" x1="16.3" y1="26.5" x2="13.6" y2="20.7"/><line class="filo" x1="18.2" y1="22.7" x2="16.9" y2="16.3"/><line class="filo" x1="20.9" y1="19.4" x2="21.0" y2="12.8"/><line class="filo" x1="24.2" y1="16.9" x2="25.8" y2="10.6"/><line class="filo" x1="28.0" y1="15.3" x2="30.9" y2="9.6"/>
+      </svg>
+    </div>
+  </section>
+
+  <section class="fascia scura" id="laboratorio" aria-labelledby="t-lab">
+    <div class="wrap">
+      <div class="divisore" aria-hidden="true">
+        <svg class="marchio" viewBox="0 0 64 64"><ellipse cx="32" cy="33" rx="26" ry="28"/><ellipse cx="32" cy="33" rx="12.5" ry="14"/></svg>
+      </div>
+      <div class="parole">
+        <h2 id="t-lab" style="text-align:center;margin-bottom:1em" data-fm="sali">Il laboratorio, con le sue parole</h2>
+        <blockquote data-fm="sali">«Caterina Espa creazioni orafe nasce nel 2011 dando vita ad un laboratorio creativo a Sant'Antioco, l'isola nell'isola nel sud ovest della Sardegna. Dopo aver fatto esperienza da diversi maestri orafi inizia la sua produzione di gioielli. Gioielli in oro e argento che si fondono con la storia e le tradizioni della Sardegna, senza rinunciare alla contemporaneità.»</blockquote>
+        <cite data-fm="sfuma">Caterina Espa</cite>
+      </div>
+    </div>
+  </section>
+
+  <section class="fascia" id="pezzi" aria-labelledby="t-pezzi">
+    <div class="wrap">
+      <p class="occhiello" data-fm="sfuma">Quattro pezzi</p>
+      <h2 id="t-pezzi" data-fm="sali">Oro, argento e smalto</h2>
+      <p class="intro" data-fm="sali">Le fotografie sono sue. Tocca una foto per vederla intera.</p>
+      <ul class="gallery-grid" id="gallery" data-fm="sali" data-fm-passo="110">
+        <li>
+          <button type="button"
+            data-src="img/orecchini-filigrana-oro.jpg"
+            data-tit="Orecchini in filigrana"
+            data-tec="Due medaglioni ovali per orecchino, uniti da catenelle e da una perla; dentro, una foglia di vite e un grappolo di perline.">
+            <img src="img/orecchini-filigrana-oro.jpg" alt="Coppia di orecchini in oro: due medaglioni ovali sovrapposti, bordati da un filo ritorto e riempiti da spirali di filigrana, con dentro una foglia di vite in lamina e un grappolo di perline bianche; catenelle e una perla li uniscono" loading="lazy" width="1404" height="1361">
+            <span class="tessera-testo"><b>Orecchini in filigrana</b><span>Due medaglioni ovali per orecchino: foglia di vite in lamina e grappolo di perline dentro un fondo di spirali.</span></span>
+          </button>
+        </li>
+        <li>
+          <button type="button"
+            data-src="img/fedi-oro-filigrana.jpg"
+            data-tit="Fedi in oro"
+            data-tec="Due fedi a fascia, con la banda centrale lavorata a filo intrecciato fra due bordi lisci.">
+            <img src="img/fedi-oro-filigrana.jpg" alt="Due fedi in oro giallo appoggiate in piedi su un piano che le riflette, davanti a un muro di mattoni sfocato; ognuna ha una banda centrale a fili intrecciati fra due bordi lisci e lucidi" loading="lazy" width="1398" height="1014">
+            <span class="tessera-testo"><b>Fedi in oro</b><span>Banda centrale a filo intrecciato, fra due bordi lisci lucidati.</span></span>
+          </button>
+        </li>
+        <li>
+          <button type="button"
+            data-src="img/ciondolo-sardegna-argento.jpg"
+            data-tit="Ciondolo Sardegna"
+            data-tec="Sagoma dell'isola in argento, con il cuore traforato e la superficie lasciata a texture; montato su cordino.">
+            <img src="img/ciondolo-sardegna-argento.jpg" alt="Ciondolo in argento a forma della Sardegna, con un cuore traforato al centro-destra e la superficie percorsa da una texture irregolare, appeso a un cordino nero intrecciato su uno sfondo di acqua azzurra" loading="lazy" width="1362" height="1402">
+            <span class="tessera-testo"><b>Ciondolo Sardegna</b><span>La sagoma dell'isola in argento, col cuore traforato e la superficie lasciata ruvida.</span></span>
+          </button>
+        </li>
+        <li>
+          <button type="button"
+            data-src="img/anelli-pesce-smalto.jpg"
+            data-tit="Anelli a pesce"
+            data-tec="Tre anelli a forma di pesce: due smaltati, uno lasciato in argento con il bordo a filo ritorto.">
+            <img src="img/anelli-pesce-smalto.jpg" alt="Tre anelli a forma di pesce appoggiati sulla sabbia in riva al mare: uno smaltato di rosso con la coda blu, uno in argento con il bordo a filo ritorto, uno smaltato di giallo-verde" loading="lazy" width="1324" height="951">
+            <span class="tessera-testo"><b>Anelli a pesce</b><span>Due smaltati e uno lasciato in argento, col bordo a filo ritorto.</span></span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="fascia scura" id="famiglie" aria-labelledby="t-fam">
+    <div class="wrap">
+      <p class="occhiello" data-fm="sfuma">Cosa esce dal banco</p>
+      <h2 id="t-fam" data-fm="sali">Poche famiglie, fatte a mano</h2>
+      <p class="intro" data-fm="sali">Sono le cinque famiglie con cui teneva ordinato il suo catalogo quando vendeva anche online.</p>
+      <ul class="famiglie" data-fm="sali" data-fm-passo="90">
+        <li><b>Anelli</b></li>
+        <li><b>Orecchini</b></li>
+        <li><b>Pendenti</b></li>
+        <li><b>Collane</b></li>
+        <li><b>Bracciali</b></li>
+      </ul>
+      <p class="chiusa" data-fm="sfuma">«Handmade Jewelry» è la prima riga con cui si presenta su Instagram, e «Fatto a Mano» era una sezione del suo catalogo a sé, accanto alle cinque qui sopra.</p>
+    </div>
+  </section>
+
+  <section class="fascia chiara" id="dove" aria-labelledby="t-dove">
+    <div class="wrap">
+      <div class="divisore" aria-hidden="true">
+        <svg class="marchio" viewBox="0 0 64 64"><ellipse cx="32" cy="33" rx="26" ry="28"/><ellipse cx="32" cy="33" rx="12.5" ry="14"/></svg>
+      </div>
+      <h2 id="t-dove" style="text-align:center" data-fm="sali">Dove si trova</h2>
+      <div class="pratico" data-fm="sali" data-fm-passo="100" style="margin-top:clamp(26px,4vw,42px)">
+        <div>
+          <h3>Il laboratorio</h3>
+          <p>Via Regina Margherita 53<br>09017 Sant'Antioco (SU)</p>
+        </div>
+        <div>
+          <h3>Quando è aperto</h3>
+          <p>Da lunedì a sabato</p>
+          <p>9:00 – 13:00 e 17:30 – 20:30</p>
+        </div>
+        <div>
+          <h3>Per chiamare</h3>
+          <p><a href="tel:+393471841620">+39 347 184 1620</a></p>
+          <p class="nota">Lo stesso numero risponde su WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fascia" id="contatti" aria-labelledby="t-cont">
+    <div class="wrap">
+      <p class="occhiello" data-fm="sfuma">Contatti</p>
+      <h2 id="t-cont" data-fm="sali">Scrivere o passare</h2>
+      <div class="pratico" data-fm="sali" data-fm-passo="100" style="margin-top:clamp(22px,3vw,34px)">
+        <div>
+          <h3>Telefono</h3>
+          <p><a href="tel:+393471841620">+39 347 184 1620</a></p>
+        </div>
+        <div>
+          <h3>WhatsApp</h3>
+          <p><a href="https://wa.me/c/393471841620" rel="noopener">Il catalogo su WhatsApp</a></p>
+        </div>
+        <div>
+          <h3>Email</h3>
+          <p><a href="mailto:caterina.espa@tiscali.it">caterina.espa@tiscali.it</a></p>
+        </div>
+        <div>
+          <h3>Dove la trovi</h3>
+          <p><a href="https://www.instagram.com/caterina_espa_creazioni_orafe/" rel="noopener">Instagram</a></p>
+          <p><a href="https://www.facebook.com/caterinaespacreazioni/" rel="noopener">Facebook</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="piede-marchio">
+      <svg class="marchio" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="33" rx="26" ry="28"/><ellipse cx="32" cy="33" rx="12.5" ry="14"/></svg>
+      <b>Caterina Espa Creazioni Orafe</b>
+    </div>
+    <div class="piede-righe">
+      <p>Via Regina Margherita 53 · 09017 Sant'Antioco (SU) · <a href="tel:+393471841620">+39 347 184 1620</a></p>
+      <p>Fotografie di Caterina Espa Creazioni Orafe, dalla sua scheda alla Fiera dell'Artigianato artistico della Sardegna di Mogoro, usate con licenza Attribution-NonCommercial 4.0 International (CC BY-NC 4.0).</p>
+      <p>Sito dimostrativo realizzato con AI da FAR AI · contenuti da rivedere con l'attività prima della pubblicazione. Testi e immagini provengono dalle fonti pubbliche dell'attività (scheda della Fiera dell'Artigianato artistico della Sardegna, Pagina Facebook e profilo Instagram) e restano di proprietà dell'attività.</p>
+    </div>
+  </div>
+</footer>
+
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Fotografia ingrandita" hidden>
+  <button class="lb-close" type="button" aria-label="Chiudi">&times;</button>
+  <button class="lb-prev" type="button" aria-label="Foto precedente">&#8249;</button>
+  <button class="lb-next" type="button" aria-label="Foto successiva">&#8250;</button>
+  <figure>
+    <img id="lbImg" src="img/orecchini-filigrana-oro.jpg" alt="Coppia di orecchini in oro a medaglioni ovali con filigrana, foglia di vite e grappolo di perline">
+    <figcaption id="lbCap"><b>Orecchini in filigrana</b>Due medaglioni ovali per orecchino, uniti da catenelle e da una perla; dentro, una foglia di vite e un grappolo di perline.</figcaption>
+  </figure>
+</div>
+
+<script>
+(function(){
+  /* ---- menu mobile ---- */
+  var burger=document.querySelector('.burger'),
+      menu=document.getElementById('mobileMenu'),
+      nav=document.getElementById('nav'),
+      main=document.getElementById('main'),
+      piede=document.querySelector('footer'),
+      marchio=document.querySelector('.nav-brand'),
+      skip=document.querySelector('.skip');
+
+  function inerti(on){
+    [main,piede,skip,marchio].forEach(function(n){ if(n){ on?n.setAttribute('inert',''):n.removeAttribute('inert'); } });
+  }
+  /* Non si conta il numero di fotogrammi: si aspetta la CONDIZIONE vera
+     (visibility), perché finché è hidden il .focus() fallisce in silenzio. */
+  function attendi(pannello,poi){
+    var tetto=0;
+    (function giro(){
+      if(getComputedStyle(pannello).visibility==='visible') return poi();
+      if(++tetto>40) return poi();
+      requestAnimationFrame(giro);
+    })();
+  }
+  function apriMenu(){
+    menu.classList.add('open'); burger.classList.add('open');
+    burger.setAttribute('aria-expanded','true'); burger.setAttribute('aria-label','Chiudi il menu');
+    inerti(true);
+    attendi(menu,function(){ var a=menu.querySelector('a'); if(a) a.focus(); });
+  }
+  function chiudiMenu(torna){
+    menu.classList.remove('open'); burger.classList.remove('open');
+    burger.setAttribute('aria-expanded','false'); burger.setAttribute('aria-label','Apri il menu');
+    inerti(false);
+    if(torna!==false) burger.focus();
+  }
+  burger.addEventListener('click',function(){
+    menu.classList.contains('open')?chiudiMenu():apriMenu();
+  });
+  Array.prototype.forEach.call(menu.querySelectorAll('a'),function(a){
+    a.addEventListener('click',function(){ chiudiMenu(false); });
+  });
+
+  /* ---- lightbox ---- */
+  var lb=document.getElementById('lightbox'),
+      lbImg=document.getElementById('lbImg'),
+      lbCap=document.getElementById('lbCap'),
+      tasti=Array.prototype.slice.call(document.querySelectorAll('#gallery button')),
+      chiudiB=lb.querySelector('.lb-close'),
+      prevB=lb.querySelector('.lb-prev'),
+      nextB=lb.querySelector('.lb-next'),
+      idx=0, apertoDa=null;
+
+  function mostra(i){
+    idx=(i+tasti.length)%tasti.length;
+    var b=tasti[idx], im=b.querySelector('img');
+    lbImg.src=b.getAttribute('data-src');
+    lbImg.alt=im?im.getAttribute('alt'):'';
+    lbCap.innerHTML='<b>'+b.getAttribute('data-tit')+'</b>'+b.getAttribute('data-tec');
+  }
+  function apriLb(i,da){
+    apertoDa=da||null; mostra(i);
+    lb.hidden=false;
+    requestAnimationFrame(function(){ lb.classList.add('open'); });
+    inerti(true); nav.setAttribute('inert','');
+    attendi(lb,function(){ chiudiB.focus(); });
+  }
+  function chiudiLb(){
+    lb.classList.remove('open');
+    inerti(false); nav.removeAttribute('inert');
+    setTimeout(function(){ lb.hidden=true; },320);
+    if(apertoDa) apertoDa.focus();
+  }
+  tasti.forEach(function(b,i){
+    b.addEventListener('click',function(){ apriLb(i,b); });
+  });
+  chiudiB.addEventListener('click',chiudiLb);
+  prevB.addEventListener('click',function(){ mostra(idx-1); });
+  nextB.addEventListener('click',function(){ mostra(idx+1); });
+  lb.addEventListener('click',function(e){ if(e.target===lb) chiudiLb(); });
+
+  /* ---- tastiera: Esc, frecce, trappola del Tab su OGNI pannello ---- */
+  function fuocabili(root){
+    return Array.prototype.slice.call(root.querySelectorAll(
+      'a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])'
+    ));
+  }
+  document.addEventListener('keydown',function(e){
+    var lbAperta=lb.classList.contains('open'), menuAperto=menu.classList.contains('open');
+    if(e.key==='Escape'){
+      if(lbAperta){ e.preventDefault(); chiudiLb(); }
+      else if(menuAperto){ e.preventDefault(); chiudiMenu(); }
+      return;
+    }
+    if(lbAperta){
+      if(e.key==='ArrowLeft'){ e.preventDefault(); mostra(idx-1); return; }
+      if(e.key==='ArrowRight'){ e.preventDefault(); mostra(idx+1); return; }
+    }
+    if(e.key!=='Tab') return;
+    var pannello = lbAperta?lb : (menuAperto?menu:null);
+    if(!pannello) return;
+    /* ⛔ niente filtro su offsetParent: dentro un position:fixed è null
+       anche per gli elementi perfettamente visibili. */
+    var f=fuocabili(pannello); if(!f.length) return;
+    var primo=f[0], ultimo=f[f.length-1];
+    if(e.shiftKey && document.activeElement===primo){ e.preventDefault(); ultimo.focus(); }
+    else if(!e.shiftKey && document.activeElement===ultimo){ e.preventDefault(); primo.focus(); }
+  });
+})();
+</script>
+<script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
