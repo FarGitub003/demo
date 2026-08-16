@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ristorante Pizzeria Le Macine — Pianoconte, Lipari (Isole Eolie)</title>
+<meta name="description" content="Osteria di famiglia a Pianoconte di Lipari: grani coltivati nei loro campi, macinati nel loro mulino, pasta fresca e pizza nel forno a legna. Chiocciola Osterie d'Italia 2026.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Ristorante Pizzeria Le Macine — Pianoconte, Lipari">
+<meta property="og:description" content="Il grano dai loro campi, il loro mulino, la pasta fresca e il forno a legna. Chiocciola Osterie d'Italia 2026.">
+<meta property="og:image" content="https://demo.francescoar.com/le-macine-lipari/img/giardino-agrumi-sera.jpg">
+<meta name="theme-color" content="#171E17">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23171E17'/%3E%3Cg fill='none' stroke='%23C9AA6B' stroke-width='3'%3E%3Ccircle cx='32' cy='32' r='21'/%3E%3Ccircle cx='32' cy='32' r='5'/%3E%3Cpath d='M32 11v8M32 45v8M11 32h8M45 32h8'/%3E%3C/g%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,600;0,700;1,400&family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap">
+
+<link rel="stylesheet" href="far-motion.min.css">
+<script src="far-motion.min.js"></script>
+
+<style>
+:root{
+  /* --- palette CAMPIONATA dalle loro foto (quantizzazione a 6 colori + percentuali) --- */
+  --foglio:#F6F0E4;        /* la calce della sala, schiarita */
+  --calce:#E4DACA;         /* fascia chiara */
+  --notte:#171E17;         /* MISURATO: dominante del giardino la sera, 22,2% */
+  --pergola:#151209;       /* MISURATO: dominante sotto il pergolato, 21,9% */
+  --inchiostro:#382C25;    /* 11,9:1 sul foglio · 9,76:1 sulla calce */
+  --bosco:#2C3A24;         /* 10,65:1 · 8,74:1 — passa cosi' com'e' */
+  --luce:#E3D6A1;          /* MISURATO: la luce dei lampioni — 11,66:1 sulla notte */
+  --calce-chiara:#E0D6C5;  /* 11,82:1 sulla notte */
+  --pietra:#C9AA6B;        /* 7,65:1 sulla notte — accento SOLO sul buio */
+  --pasta:#C1A87A;         /* 7,41:1 sulla notte */
+  /* varianti AA CALCOLATE sul fondo piu' difficile (la calce), verificate anche sul foglio */
+  --legno-testo:#4F4235;   /* 7,02 / 8,55 */
+  --ocra-testo:#544119;    /* 7,07 / 8,62 */
+  --ghiaia-testo:#484435;  /* 7,05 / 8,59 */
+  --barra-h:64px;      /* altezza DECISA della barra: costante, mai misurata */
+  --barra:65px;        /* altezza MISURATA (barra + bordo): solo per gli scostamenti */
+  --display:'Aleo',Georgia,serif;
+  --testo:'Fira Sans',system-ui,-apple-system,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--foglio);color:var(--inchiostro);font-family:var(--testo);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);line-height:1.12;margin:0 0 .5em;letter-spacing:-.01em}
+h1{font-size:clamp(2.3rem,6.2vw,4.1rem);font-weight:700}
+h2{font-size:clamp(1.75rem,4.2vw,2.7rem);font-weight:700}
+h3{font-size:clamp(1.15rem,2.4vw,1.4rem);font-weight:600}
+p{margin:0 0 1.05em}
+a{color:inherit}
+.wrap{width:min(1180px,92vw);margin-inline:auto}
+section{padding:clamp(56px,7.5vw,104px) 0;scroll-margin-top:calc(var(--barra) + 15px)}
+.occhiello{font-family:var(--testo);font-size:.79rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ocra-testo);margin:0 0 .85em}
+.scuro{background:var(--notte);color:var(--calce-chiara)}
+.scuro h1,.scuro h2,.scuro h3{color:var(--luce)}
+.scuro .occhiello{color:var(--pietra)}
+.chiara{background:var(--calce)}
+.chiara .occhiello{color:var(--ocra-testo)}
+
+/* ---------- salto al contenuto ---------- */
+.skip{position:absolute;left:-9999px;top:0;z-index:120;background:var(--notte);color:var(--luce);padding:12px 20px;font-weight:600;border-radius:0 0 8px 0}
+.skip:focus{left:0}
+
+/* ---------- barra (SEMPRE scura: il loro logo e' bianco su trasparente) ---------- */
+#nav{position:fixed;inset:0 0 auto 0;z-index:90;background:var(--notte);border-bottom:1px solid rgba(227,214,161,.22)}
+.nav-in{display:flex;align-items:center;gap:18px;height:var(--barra-h);width:min(1180px,92vw);margin-inline:auto}
+.nav-brand{display:flex;align-items:center;gap:11px;text-decoration:none;flex:0 0 auto}
+.nav-brand img{width:150px;height:auto}
+.nav-links{display:flex;gap:22px;margin-left:auto;list-style:none;padding:0;margin-block:0}
+.nav-links a{color:var(--calce-chiara);text-decoration:none;font-size:.92rem;font-weight:500;padding:6px 2px;border-bottom:2px solid transparent}
+.nav-links a:hover,.nav-links a:focus-visible{border-bottom-color:var(--pietra)}
+.nav-tel{margin-left:18px;flex:0 0 auto}
+.nav-cta{display:inline-flex;align-items:center;gap:7px;background:var(--pietra);color:var(--pergola);text-decoration:none;font-weight:700;font-size:.92rem;padding:9px 16px;border-radius:999px;white-space:nowrap}
+.nav-cta:hover,.nav-cta:focus-visible{background:var(--luce)}
+.burger{display:none;margin-left:12px;width:44px;height:44px;background:transparent;border:1px solid rgba(227,214,161,.4);border-radius:9px;cursor:pointer;padding:0;align-items:center;justify-content:center;flex-direction:column;gap:5px}
+.burger span{display:block;width:20px;height:2px;background:var(--calce-chiara);transition:transform .22s ease,opacity .22s ease}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+#mobileMenu{position:fixed;inset:var(--barra) 0 auto 0;z-index:89;background:var(--pergola);border-bottom:1px solid rgba(227,214,161,.22);transform:translateY(-115%);visibility:hidden;transition:transform .28s ease,visibility .28s}
+#mobileMenu.open{transform:translateY(0);visibility:visible}
+#mobileMenu ul{list-style:none;margin:0;padding:10px 0 20px}
+#mobileMenu a{display:block;padding:14px 6vw;color:var(--calce-chiara);text-decoration:none;font-size:1.06rem;font-weight:500}
+#mobileMenu a:hover,#mobileMenu a:focus-visible{background:rgba(227,214,161,.1);color:var(--luce)}
+
+/* ---------- hero: DUE COLONNE, foto a DESTRA, nessun testo sopra la foto ---------- */
+.hero{padding-top:calc(var(--barra) + clamp(40px,6vw,76px));padding-bottom:clamp(44px,6vw,84px)}
+.hero-in{display:grid;grid-template-columns:1fr .92fr;gap:clamp(30px,4.4vw,62px);align-items:center}
+.hero-testo p.sotto{font-size:1.12rem;max-width:33ch;color:var(--legno-testo)}
+.hero-chiocciola{display:inline-flex;align-items:center;gap:9px;background:var(--bosco);color:var(--foglio);font-size:.79rem;font-weight:600;letter-spacing:.06em;padding:7px 15px;border-radius:999px;margin-bottom:18px}
+.hero-dove{font-family:var(--display);font-size:1.06rem;font-weight:500;color:var(--legno-testo);margin:0 0 26px}
+.bottoni{display:flex;flex-wrap:wrap;gap:13px}
+.btn{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-weight:700;font-size:1rem;padding:15px 26px;border-radius:999px}
+.btn-1{background:var(--notte);color:var(--luce)}
+.btn-1:hover,.btn-1:focus-visible{background:var(--bosco)}
+.btn-2{background:transparent;color:var(--inchiostro);border:2px solid var(--legno-testo)}
+.btn-2:hover,.btn-2:focus-visible{background:var(--calce)}
+.hero-foto{margin:0}
+.hero-foto img{width:100%;height:auto;border-radius:4px}
+.didascalia{font-size:.8rem;color:var(--ghiaia-testo);margin:9px 0 0;line-height:1.5}
+.scuro .didascalia{color:var(--pietra)}
+
+/* ---------- la firma: la macina a tratto singolo ---------- */
+.firma{display:block;margin:0 auto clamp(26px,3.4vw,44px);width:clamp(54px,7vw,78px);height:auto}
+.firma path,.firma circle{fill:none;stroke:var(--ocra-testo);stroke-width:2.4;stroke-linecap:round}
+.scuro .firma path,.scuro .firma circle{stroke:var(--pietra)}
+
+/* ---------- prosa ---------- */
+.prosa{max-width:64ch}
+.prosa.centro{margin-inline:auto;text-align:center}
+.due{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,58px);align-items:center}
+blockquote.loro{margin:0;padding:0 0 0 22px;border-left:3px solid var(--pietra);font-family:var(--display);font-size:clamp(1.1rem,2.2vw,1.32rem);font-style:italic;line-height:1.5}
+.scuro blockquote.loro{border-left-color:var(--pietra);color:var(--calce-chiara)}
+.fonte{font-size:.8rem;color:var(--ghiaia-testo);font-style:normal;margin-top:10px}
+.scuro .fonte{color:var(--pietra)}
+
+/* ---------- capitoli (scenica) ---------- */
+.capitoli-griglia{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(22px,3vw,40px);margin-top:clamp(28px,3.6vw,48px)}
+.capitolo{background:rgba(227,214,161,.07);border:1px solid rgba(227,214,161,.2);border-radius:6px;padding:clamp(22px,2.6vw,32px)}
+.capitolo h3{color:var(--luce)}
+.capitolo p{margin-bottom:0;font-size:.98rem}
+.grani{list-style:none;padding:0;margin:clamp(26px,3.4vw,44px) 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(178px,1fr));gap:14px}
+.grani li{background:rgba(201,170,107,.1);border:1px solid rgba(201,170,107,.3);border-radius:5px;padding:15px 17px}
+.grani b{display:block;font-family:var(--display);font-size:1.04rem;color:var(--luce);margin-bottom:3px}
+.grani span{font-size:.87rem;color:var(--calce-chiara)}
+
+/* ---------- galleria: TRE colonne (anti-somiglianza) ---------- */
+/* colonne vere: le foto tengono la loro proporzione nativa, ⛔ nessun ritaglio (riga del piano #25) */
+.gallery-grid{column-count:3;column-gap:14px;margin-top:clamp(26px,3.4vw,44px)}
+.gallery-grid button{padding:0;border:0;background:var(--calce);cursor:pointer;border-radius:4px;overflow:hidden;display:block;line-height:0;width:100%;margin:0 0 14px;break-inside:avoid}
+.gallery-grid button:focus-visible{outline:3px solid var(--ocra-testo);outline-offset:3px}
+.gallery-grid img{width:100%;height:auto;transition:transform .4s ease}
+.gallery-grid button:hover img{transform:scale(1.035)}
+.piatti-nota{background:var(--foglio);border:1px solid var(--legno-testo);border-radius:5px;padding:clamp(18px,2.2vw,26px);margin-top:clamp(26px,3.4vw,42px)}
+.piatti-nota p:last-child{margin-bottom:0}
+.piatti-lista{list-style:none;padding:0;margin:0 0 1em}
+.piatti-lista li{padding:9px 0;border-bottom:1px solid var(--calce)}
+.piatti-lista li:last-child{border-bottom:0}
+.piatti-lista b{font-family:var(--display);font-weight:600}
+
+/* ---------- sala: due foto affiancate ---------- */
+.sala-due{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,2.4vw,30px);margin-top:clamp(26px,3.4vw,44px)}
+.sala-due figure{margin:0}
+.sala-due img{border-radius:4px;width:100%}
+
+/* ---------- info pratiche ---------- */
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(22px,3vw,40px);margin-top:clamp(26px,3.4vw,44px)}
+.info h3{color:var(--luce);font-size:1.08rem}
+.info p{margin-bottom:.4em}
+.info a{color:var(--pietra);font-weight:600}
+.info .grande{font-family:var(--display);font-size:clamp(1.35rem,3vw,1.75rem);font-weight:700;color:var(--luce);text-decoration:none;display:inline-block;margin-bottom:.2em}
+
+/* ---------- lightbox ---------- */
+#lightbox{position:fixed;inset:0;z-index:110;background:rgba(10,8,5,.94);display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s}
+#lightbox.open{opacity:1;visibility:visible}
+#lightbox figure{margin:0;max-width:min(1000px,92vw);position:relative;z-index:1}
+#lightbox img{max-height:76vh;width:auto;margin-inline:auto;border-radius:4px}
+#lightbox figcaption{color:var(--calce-chiara);font-size:.93rem;margin-top:14px;text-align:center;max-width:62ch;margin-inline:auto}
+.lb-close,.lb-prev,.lb-next{position:absolute;z-index:3;background:rgba(20,16,11,.86);color:var(--luce);border:1px solid rgba(227,214,161,.5);border-radius:999px;width:52px;height:52px;font-size:1.5rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.lb-close:hover,.lb-prev:hover,.lb-next:hover,.lb-close:focus-visible,.lb-prev:focus-visible,.lb-next:focus-visible{background:var(--pietra);color:var(--pergola)}
+.lb-close{top:18px;right:18px}
+.lb-prev{left:14px;top:50%;transform:translateY(-50%)}
+.lb-next{right:14px;top:50%;transform:translateY(-50%)}
+
+/* ---------- footer ---------- */
+footer{background:var(--pergola);color:var(--calce-chiara);padding:clamp(46px,5.5vw,72px) 0 30px}
+footer h2{color:var(--luce);font-size:1.5rem}
+.foot-griglia{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:clamp(26px,3.4vw,48px)}
+footer a{color:var(--pietra)}
+.foot-logo{width:170px;margin-bottom:16px}
+.etichetta{border-top:1px solid rgba(227,214,161,.2);margin-top:clamp(34px,4vw,52px);padding-top:22px;font-size:.81rem;line-height:1.6;color:var(--calce-chiara)}
+.etichetta p{margin:0 0 .5em}
+.etichetta p:last-child{margin-bottom:0}
+
+@media (max-width:920px){
+  .nav-links{display:none}
+  .burger{display:flex}
+  .hero-in,.due,.sala-due,.foot-griglia{grid-template-columns:1fr}
+  .capitoli-griglia,.info{grid-template-columns:1fr}
+  .gallery-grid{column-count:2}
+  .hero-foto{order:-1}
+}
+@media (max-width:560px){
+  .nav-brand img{width:118px}
+  .nav-cta{padding:9px 13px}
+  .nav-cta .lungo{display:none}
+  .lb-prev{left:8px}.lb-next{right:8px}
+  .lb-close,.lb-prev,.lb-next{width:46px;height:46px}
+}
+@media (max-width:380px){ .nav-brand img{width:96px} }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Salta al contenuto</a>
+
+<nav id="nav" aria-label="Principale">
+  <div class="nav-in">
+    <a class="nav-brand" href="#top" aria-label="Le Macine, ristorante tipico eoliano, Lipari">
+      <img src="img/logo-le-macine.png" alt="Le Macine, ristorante tipico eoliano. Lipari, Eolie" width="198" height="85">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#villa">La villa</a></li>
+      <li><a href="#campo">Dal campo al piatto</a></li>
+      <li><a href="#gallery">I piatti</a></li>
+      <li><a href="#sala">La sala</a></li>
+      <li><a href="#dove">Dove siamo</a></li>
+    </ul>
+    <div class="nav-tel">
+      <a class="nav-cta" href="tel:+390909822387">Chiama<span class="lungo">&nbsp;0909822387</span></a>
+    </div>
+    <button class="burger" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div id="mobileMenu" class="mobile-menu" aria-label="Menu">
+  <ul>
+    <li><a href="#villa">La villa</a></li>
+    <li><a href="#campo">Dal campo al piatto</a></li>
+    <li><a href="#gallery">I piatti</a></li>
+    <li><a href="#sala">La sala</a></li>
+    <li><a href="#dove">Dove siamo</a></li>
+  </ul>
+</div>
+
+<main id="main">
+<div id="top"></div>
+
+<!-- ============ HERO — due colonne, foto a destra, nessun testo sopra la foto ============ -->
+<section class="hero">
+  <div class="wrap hero-in">
+    <div class="hero-testo">
+      <p class="hero-chiocciola" data-fm="sfuma">Chiocciola Osterie d'Italia 2026, Slow Food</p>
+      <h1 data-fm="sali">Il grano è dei nostri campi.<br>La macina è di casa.</h1>
+      <p class="hero-dove" data-fm="sali" data-fm-ritardo="120">Ristorante e pizzeria · Loc. Pianoconte di Lipari, isole Eolie</p>
+      <p class="sotto" data-fm="sali" data-fm-ritardo="200">I grani autoctoni coltivati nei campi di famiglia, macinati nel mulino di casa, diventano qui pasta fresca, pane e pizza.</p>
+      <div class="bottoni" data-fm="sali" data-fm-ritardo="280">
+        <a class="btn btn-1" href="tel:+390909822387">Prenota allo 0909822387</a>
+        <a class="btn btn-2" href="#dove">Come si arriva</a>
+      </div>
+    </div>
+    <figure class="hero-foto" data-fm="sfuma" data-fm-ritardo="160">
+      <img src="img/giardino-agrumi-sera.jpg" alt="Il giardino del ristorante al crepuscolo: tavoli apparecchiati sulla ghiaia chiara sotto alberi di agrumi, faretti a terra e cielo blu scuro." width="1200" height="900" fetchpriority="high">
+      <p class="didascalia">Il giardino la sera. Fotografia dell'archivio del ristorante.</p>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ LA VILLA E LA MACINA ============ -->
+<section id="villa" class="chiara">
+  <div class="wrap">
+    <svg class="firma" viewBox="0 0 100 100" aria-hidden="true" data-fm="traccia">
+      <circle cx="50" cy="50" r="36"/><circle cx="50" cy="50" r="9"/>
+      <path d="M50 14v13M50 73v13M14 50h13M73 50h13"/>
+      <path d="M24 24l9 9M76 24l-9 9M24 76l9-9M76 76l-9-9"/>
+    </svg>
+    <div class="due">
+      <div>
+        <p class="occhiello" data-fm="sfuma">Una delle più antiche ville di Lipari</p>
+        <h2 data-fm="sali">Il nome viene dalla pietra</h2>
+        <blockquote class="loro" data-fm="sali" data-fm-ritardo="90">
+          «Il locale è stato ricavato dalla ristrutturazione di una delle più antiche ville di Lipari e prende il nome dall'antica e grande macina in pietra […] risalente al 1700 la quale serviva per macinare le olive.»
+          <p class="fonte">Le loro parole, dal sito del ristorante.</p>
+        </blockquote>
+        <p style="margin-top:1.3em" data-fm="sali" data-fm-ritardo="150">Il viale d'ingresso è realizzato in pietra, e la sala è anche un piccolo museo dell'arte contadina: alle pareti ci sono gli antichi attrezzi che venivano utilizzati per coltivare le campagne.</p>
+      </div>
+      <figure style="margin:0" data-fm="sfuma" data-fm-ritardo="120">
+        <img src="img/macina-pietra-pergolato.jpg" alt="La macina: una grande ruota di pietra grigia con il perno in ferro, in piedi sotto un pergolato di canne e travi, accanto a trecce di peperoncini rossi appese." width="900" height="600" loading="lazy">
+        <p class="didascalia">La macina in pietra sotto il pergolato. Fotografia dell'archivio del ristorante.</p>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DAL CAMPO AL PIATTO — scenica «capitoli» ============ -->
+<section id="campo" class="scuro">
+  <div class="wrap">
+    <p class="occhiello">Un progetto di famiglia</p>
+    <h2>Dal campo al piatto, senza uscire dall'isola</h2>
+    <p class="prosa">«Le Macine non è solo un ristorante, è un progetto di famiglia, nell'intento di valorizzare il più possibile i prodotti coltivati nei loro campi.» In cucina c'è Emiliano, al forno a legna Duilio; con loro i genitori, Giovanni Cipicchia e Tina Villanti. I terreni sono di proprietà della famiglia.</p>
+
+    <div class="capitoli-griglia" data-fm="sfalsa" data-fm-passo="130">
+      <article class="capitolo">
+        <h3>I campi</h3>
+        <p>I grani autoctoni e gli ortaggi crescono nei terreni di proprietà della famiglia, qui a Lipari.</p>
+      </article>
+      <article class="capitolo">
+        <h3>Il mulino</h3>
+        <p>I cereali vengono moliti in proprio: una piccola macina da 10 chili all'ora dà le farine per la pasta e per gli impasti.</p>
+      </article>
+      <article class="capitolo">
+        <h3>La tavola</h3>
+        <p>Un piccolo laboratorio artigianale di pasta fresca, lavorata con trafile di bronzo. Pane fatto in casa e pizza nel forno a legna, la sera.</p>
+      </article>
+    </div>
+
+    <ul class="grani">
+      <li><b>Perciasacchi</b><span>Grano duro siciliano, detto anche farro lungo.</span></li>
+      <li><b>Russello</b><span>Grano duro dal colore tendente al rosso.</span></li>
+      <li><b>Tumminia</b><span>Grano scuro: è quello del pane nero di Castelvetrano.</span></li>
+      <li><b>Maiorca</b><span>Grano tenero dal colore bianco crema.</span></li>
+      <li><b>Senatore Cappelli</b><span>«Il padre di tutti i grani duri».</span></li>
+    </ul>
+    <p class="fonte" style="margin-top:1.2em">Le varietà e il mulino da 10 chili/ora sono descritti da Pina Sozio sul Gambero Rosso, 15 agosto 2024.</p>
+
+    <blockquote class="loro" style="margin-top:2em">
+      «Il ristorante appartiene alla rete dell'Alleanza dei cuochi Slow Food, una rete di cuochi di tutto il mondo che hanno l'obiettivo di stringere un patto con i produttori locali per promuovere un cibo buono, pulito e giusto e salvaguardare la biodiversità.»
+      <p class="fonte">Le loro parole, dal sito del ristorante.</p>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ============ I PIATTI ============ -->
+<section id="gallery">
+  <div class="wrap">
+    <p class="occhiello" data-fm="sfuma">Cucina eoliana e siciliana</p>
+    <h2 data-fm="sali">I piatti dello chef Emiliano</h2>
+    <p class="prosa" data-fm="sali" data-fm-ritardo="80">«Il menù proposto dallo chef Emiliano vanta specialità preparate esclusivamente con ingredienti genuini e freschi e presentate con un tocco di creatività per rendere ogni pietanza bella da vedere oltre che buona da mangiare.» La carta dei vini raccoglie etichette eoliane e siciliane.</p>
+
+    <div class="gallery-grid" data-fm="sfalsa" data-fm-passo="70">
+      <button type="button" data-src="img/piatto-crema-verde-calamari.jpg" data-cap="Crema verde con anelli di calamaro, granella e una foglia di menta, in un piatto fondo bianco."><img src="img/piatto-crema-verde-calamari.jpg" alt="Crema verde con anelli di calamaro, granella e una foglia di menta, in un piatto fondo bianco." width="1100" height="1376" loading="lazy"></button>
+      <button type="button" data-src="img/piatto-arance-cavolo.jpg" data-cap="Primo piano di un involtino di foglia verde chiara con sopra un ciuffo di cipolla rossa, accanto a una sfoglia arancione, chicchi chiari di cereale e carote a cubetti."><img src="img/piatto-arance-cavolo.jpg" alt="Primo piano di un involtino di foglia verde chiara con sopra un ciuffo di cipolla rossa, accanto a una sfoglia arancione, chicchi chiari di cereale e carote a cubetti." width="1100" height="826" loading="lazy"></button>
+      <button type="button" data-src="img/piatto-ardesia-pancetta.jpg" data-cap="Un tortino servito su una lastra di ardesia nera, al centro di un piatto quadro bianco, sopra piastrelle decorate a motivi blu."><img src="img/piatto-ardesia-pancetta.jpg" alt="Un tortino servito su una lastra di ardesia nera, al centro di un piatto quadro bianco, sopra piastrelle decorate a motivi blu." width="1100" height="826" loading="lazy"></button>
+      <button type="button" data-src="img/piatto-sformato-arancio.jpg" data-cap="Uno sformato dorato appoggiato su una base arancione, in un piatto quadro bianco."><img src="img/piatto-sformato-arancio.jpg" alt="Uno sformato dorato appoggiato su una base arancione, in un piatto quadro bianco." width="1100" height="826" loading="lazy"></button>
+      <button type="button" data-src="img/piatto-carne-salsa-rosa.jpg" data-cap="Un medaglione farcito accompagnato da una salsa rosa stesa a virgola sul piatto bianco."><img src="img/piatto-carne-salsa-rosa.jpg" alt="Un medaglione farcito accompagnato da una salsa rosa stesa a virgola sul piatto bianco." width="1100" height="826" loading="lazy"></button>
+      <button type="button" data-src="img/piatto-verdure-piastrelle.jpg" data-cap="Lo stesso piatto visto d'insieme: chicchi chiari di cereale e carote a cubetti, una foglia verde, un ciuffo di cipolla rossa e una sfoglia arancione a forma di fiore, su un piatto bianco spolverato di polvere arancione."><img src="img/piatto-verdure-piastrelle.jpg" alt="Lo stesso piatto visto d'insieme: chicchi chiari di cereale e carote a cubetti, una foglia verde, un ciuffo di cipolla rossa e una sfoglia arancione a forma di fiore, su un piatto bianco spolverato di polvere arancione." width="1100" height="826" loading="lazy"></button>
+      <button type="button" data-src="img/piatto-base-scura-pancetta.jpg" data-cap="Un tortino su base scura con una falda di pancetta croccante, servito sopra un tovagliolo blu."><img src="img/piatto-base-scura-pancetta.jpg" alt="Un tortino su base scura con una falda di pancetta croccante, servito sopra un tovagliolo blu." width="1100" height="826" loading="lazy"></button>
+      <button type="button" data-src="img/chef-pasta-fresca.jpg" data-cap="Lo chef Emiliano Cipicchia in giacca bianca, con la sacca da pasticciere in mano, davanti a una sfoglia gialla stesa sul banco."><img src="img/chef-pasta-fresca.jpg" alt="Lo chef Emiliano Cipicchia in giacca bianca, con la sacca da pasticciere in mano, davanti a una sfoglia gialla stesa sul banco." width="1400" height="1750" loading="lazy"></button>
+      <button type="button" data-src="img/chef-sacca-ripieno.jpg" data-cap="Lo chef di profilo mentre dosa il ripieno a ciuffi lungo la sfoglia di pasta fresca."><img src="img/chef-sacca-ripieno.jpg" alt="Lo chef di profilo mentre dosa il ripieno a ciuffi lungo la sfoglia di pasta fresca." width="1400" height="1750" loading="lazy"></button>
+    </div>
+
+    <div class="piatti-nota" data-fm="sfuma">
+      <p class="occhiello">Alcuni piatti raccontati dal Gambero Rosso, agosto 2024</p>
+      <ul class="piatti-lista">
+        <li><b>A Boccia</b>: insalatina di arance e finocchi con alici marinate e affumicatura al melo</li>
+        <li><b>Caserecce di grano perciasacchi</b>: con gamberetti di nassa, pesto agli agrumi e mandorle tostate</li>
+        <li><b>Tagliata di totano ripieno</b>: in salsa eoliana con cipolla croccante</li>
+        <li><b>Coniglio in agrodolce</b>: con salsa di vin cotto e mandorle tostate</li>
+        <li><b>Pizza Eoliana</b>: mozzarella, scarola riccia, acciughe, pomodori. Impasti a lievito madre, cottura nel forno a legna</li>
+      </ul>
+      <p>Sono i piatti descritti nell'articolo di Pina Sozio sul Gambero Rosso del 15 agosto 2024. Per la carta di oggi conviene chiamare.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LA SALA E IL MUSEO ============ -->
+<section id="sala" class="chiara">
+  <div class="wrap">
+    <p class="occhiello" data-fm="sfuma">Un piccolo museo dell'arte e cultura contadina</p>
+    <h2 data-fm="sali">Dentro, la casa di prima</h2>
+    <p class="prosa" data-fm="sali" data-fm-ritardo="80">Tre buoni motivi per venirci a trovare, nelle loro parole: «mangiare sotto il pergolato in un'atmosfera calda e accogliente e lontano dal centro dell'isola»; «gustare le ricette tipiche della cucina isolana con un tocco di creatività, originalità ed innovazione»; «immergersi nel passato dove rivivere la tradizione e la cultura contadina eoliana».</p>
+    <div class="sala-due">
+      <figure data-fm="sfuma">
+        <img src="img/sala-museo-attrezzi.jpg" alt="La sala vista da sotto un arco bianco: tavoli apparecchiati e una parete con attrezzi contadini appesi, tra cui seghe, tenaglie, ferri di cavallo, catene e un finimento in cuoio." width="1200" height="900" loading="lazy">
+        <p class="didascalia">La parete degli attrezzi contadini. Fotografia dell'archivio del ristorante.</p>
+      </figure>
+      <figure data-fm="sfuma" data-fm-ritardo="110">
+        <img src="img/sala-credenza-calici.jpg" alt="Una credenza in legno scuro con i calici appesi a testa in giù, due pigne in terracotta e un cesto di vimini sopra, sotto un soffitto di travi e canne." width="1200" height="900" loading="lazy">
+        <p class="didascalia">La credenza e il soffitto in travi e canne. Fotografia dell'archivio del ristorante.</p>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOVE SIAMO ============ -->
+<section id="dove" class="scuro">
+  <div class="wrap">
+    <p class="occhiello">Un angolo di pace e verde a Pianoconte</p>
+    <h2>Dove siamo, e quando</h2>
+    <blockquote class="loro">
+      «Il Ristorante Le Macine si trova a Pianoconte di Lipari. Dista 1,5 Km da Quattrocchi, il panorama più bello e suggestivo di Lipari, e solo 100 metri dal bivio che porta ad una fra le più note terme d'Italia, quelle di San Calogero.»
+      <p class="fonte">Le loro parole, dal sito del ristorante.</p>
+    </blockquote>
+    <div class="info">
+      <div>
+        <h3>Prenotazioni</h3>
+        <a class="grande" href="tel:+390909822387">0909822387</a>
+        <p>Servizio navetta gratuito.</p>
+      </div>
+      <div>
+        <h3>Apertura</h3>
+        <p>Tutti i giorni, da Pasqua a fine ottobre.</p>
+        <p>12.00 – 14.30 e 19.00 – 23.00</p>
+        <p>La pizzeria solo la sera.</p>
+      </div>
+      <div>
+        <h3>Indirizzo</h3>
+        <p>Loc. Pianoconte<br>Lipari, isole Eolie (ME)</p>
+        <p><a href="https://www.openstreetmap.org/search?query=Pianoconte%20Lipari" rel="noopener">Apri la mappa</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-griglia">
+      <div>
+        <img class="foot-logo" src="img/logo-le-macine.png" alt="Le Macine, ristorante tipico eoliano. Lipari, Eolie" width="198" height="85" loading="lazy">
+        <p>Ristorante e pizzeria a Pianoconte di Lipari, isole Eolie.</p>
+        <p>P.IVA 01929720835</p>
+      </div>
+      <div>
+        <h2>Contatti</h2>
+        <p><a href="tel:+390909822387">0909822387</a></p>
+        <p><a href="mailto:info@lemacine.org">info@lemacine.org</a></p>
+      </div>
+      <div>
+        <h2>Riconoscimenti</h2>
+        <p>Chiocciola Osterie d'Italia 2026, Slow Food</p>
+        <p>Alleanza dei cuochi Slow Food</p>
+      </div>
+    </div>
+    <div class="etichetta">
+      <p>Sito dimostrativo realizzato con AI da FAR AI · contenuti da rivedere con l'attività prima della pubblicazione</p>
+      <p>Testi e fotografie provengono dal sito attuale di Ristorante Le Macine e restano di proprietà dell'attività.</p>
+    </div>
+  </div>
+</footer>
+
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Fotografia ingrandita">
+  <button class="lb-close" type="button" aria-label="Chiudi">&times;</button>
+  <button class="lb-prev" type="button" aria-label="Fotografia precedente">&#8249;</button>
+  <button class="lb-next" type="button" aria-label="Fotografia successiva">&#8250;</button>
+  <figure>
+    <img id="lbImg" src="img/piatto-crema-verde-calamari.jpg" alt="">
+    <figcaption></figcaption>
+  </figure>
+</div>
+
+<noscript><style>
+  #nav{position:static}
+  .nav-links{display:flex!important;gap:14px;overflow-x:auto;margin-left:auto}
+  .burger{display:none!important}
+  #mobileMenu{display:none}
+  .hero{padding-top:clamp(30px,4vw,54px)}
+  .gallery-grid button{cursor:default}
+</style></noscript>
+
+<script>
+(function(){
+  'use strict';
+  var nav = document.getElementById('nav');
+  var menu = document.getElementById('mobileMenu');
+  var burger = document.querySelector('.burger');
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lbImg');
+  var lbCap = lb.querySelector('figcaption');
+  var tessere = Array.prototype.slice.call(document.querySelectorAll('.gallery-grid button[data-src]'));
+  var indice = 0, tornaA = null;
+
+  function altezzaBarra(){
+    document.documentElement.style.setProperty('--barra', nav.offsetHeight + 'px');
+  }
+  altezzaBarra();
+  window.addEventListener('resize', altezzaBarra);
+
+  /* --- inert su tutto il resto quando un pannello e' aperto (serve ai lettori di schermo) --- */
+  var fuori = [document.getElementById('main'), document.querySelector('footer'), document.querySelector('.skip')];
+  function inerte(si, tranne){
+    fuori.forEach(function(el){ if(el && el !== tranne){ if(si) el.setAttribute('inert',''); else el.removeAttribute('inert'); } });
+    var b = document.querySelector('.nav-brand'), t = document.querySelector('.nav-tel');
+    [b,t].forEach(function(el){ if(el){ if(si) el.setAttribute('inert',''); else el.removeAttribute('inert'); } });
+  }
+
+  /* --- trap del Tab (serve alla tastiera; inert da solo non basta) --- */
+  function focalizzabili(cont){
+    return Array.prototype.filter.call(
+      cont.querySelectorAll('a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])'),
+      function(el){ var r = el.getBoundingClientRect(); return r.width > 0 || r.height > 0; });
+  }
+  function trap(e, cont){
+    if(e.key !== 'Tab') return;
+    var f = focalizzabili(cont); if(!f.length) return;
+    var primo = f[0], ultimo = f[f.length-1];
+    if(e.shiftKey && document.activeElement === primo){ e.preventDefault(); ultimo.focus(); }
+    else if(!e.shiftKey && document.activeElement === ultimo){ e.preventDefault(); primo.focus(); }
+  }
+
+  /* --- attende che il pannello sia DAVVERO visibile prima di dare il focus --- */
+  function quandoVisibile(el, poi){
+    var tetto = 0;
+    (function giro(){
+      if(getComputedStyle(el).visibility === 'visible'){ poi(); return; }
+      if(++tetto > 60){ poi(); return; }
+      requestAnimationFrame(giro);
+    })();
+  }
+
+  /* ---------- menu mobile ---------- */
+  function apriMenu(){
+    menu.classList.add('open'); burger.classList.add('open');
+    burger.setAttribute('aria-expanded','true'); burger.setAttribute('aria-label','Chiudi il menu');
+    inerte(true, null);
+    quandoVisibile(menu, function(){ var f = focalizzabili(menu); if(f.length) f[0].focus(); });
+  }
+  function chiudiMenu(daTastiera){
+    menu.classList.remove('open'); burger.classList.remove('open');
+    burger.setAttribute('aria-expanded','false'); burger.setAttribute('aria-label','Apri il menu');
+    inerte(false, null);
+    if(daTastiera) burger.focus();
+  }
+  burger.addEventListener('click', function(){ menu.classList.contains('open') ? chiudiMenu(false) : apriMenu(); });
+  menu.addEventListener('click', function(e){ if(e.target.tagName === 'A') chiudiMenu(false); });
+  menu.addEventListener('keydown', function(e){ trap(e, menu); });
+
+  /* ---------- lightbox ---------- */
+  function mostra(i){
+    indice = (i + tessere.length) % tessere.length;
+    var b = tessere[indice];
+    lbImg.src = b.getAttribute('data-src');
+    lbImg.alt = b.getAttribute('data-cap') || '';
+    lbCap.textContent = b.getAttribute('data-cap') || '';
+  }
+  function apriLb(i, daTastiera){
+    tornaA = daTastiera ? tessere[i] : null;
+    mostra(i);
+    lb.classList.add('open');
+    inerte(true, null);
+    quandoVisibile(lb, function(){ lb.querySelector('.lb-close').focus(); });
+  }
+  function chiudiLb(){
+    lb.classList.remove('open');
+    inerte(false, null);
+    if(tornaA){ tornaA.focus(); tornaA = null; }
+  }
+  tessere.forEach(function(b, i){
+    b.addEventListener('click', function(e){ apriLb(i, e.detail === 0); });
+  });
+  lb.querySelector('.lb-close').addEventListener('click', chiudiLb);
+  lb.querySelector('.lb-prev').addEventListener('click', function(){ mostra(indice - 1); });
+  lb.querySelector('.lb-next').addEventListener('click', function(){ mostra(indice + 1); });
+  lb.addEventListener('click', function(e){ if(e.target === lb) chiudiLb(); });
+  lb.addEventListener('keydown', function(e){ trap(e, lb); });
+
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+      if(lb.classList.contains('open')) chiudiLb();
+      else if(menu.classList.contains('open')) chiudiMenu(true);
+    }
+    if(lb.classList.contains('open')){
+      if(e.key === 'ArrowLeft') mostra(indice - 1);
+      if(e.key === 'ArrowRight') mostra(indice + 1);
+    }
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "@id":"https://www.lemacine.org/#ristorante",
+  "name":"Ristorante Pizzeria Le Macine",
+  "url":"https://www.lemacine.org/",
+  "telephone":"+390909822387",
+  "email":"info@lemacine.org",
+  "image":["https://demo.francescoar.com/le-macine-lipari/img/giardino-agrumi-sera.jpg","https://demo.francescoar.com/le-macine-lipari/img/macina-pietra-pergolato.jpg"],
+  "servesCuisine":["Eoliana","Siciliana","Pizza"],
+  "address":{"@type":"PostalAddress","addressLocality":"Lipari","addressRegion":"ME","addressCountry":"IT","streetAddress":"Loc. Pianoconte"},
+  "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"12:00","closes":"14:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"19:00","closes":"23:00"}]
+}
+</script>
+
+<script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
