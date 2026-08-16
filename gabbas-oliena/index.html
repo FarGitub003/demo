@@ -1,0 +1,818 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Azienda Vitivinicola Giuseppe Gabbas — Cannonau di Sardegna, Oliena (NU)</title>
+<meta name="description" content="Trenta ettari ai piedi del Supramonte, fra Nuoro e Oliena: Cannonau di Sardegna, olio extravergine e grappa dell'azienda di Giuseppe Gabbas, dal 1974.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Azienda Vitivinicola Giuseppe Gabbas — Cannonau di Sardegna, Oliena (NU)">
+<meta property="og:description" content="Trenta ettari ai piedi del Supramonte: Cannonau di Sardegna, olio extravergine e grappa. Premio Angelo Betti 2026 al Vinitaly.">
+<meta property="og:image" content="https://demo.francescoar.com/gabbas-oliena/img/hero-vigna-supramonte.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="img/favicon.png">
+<link rel="stylesheet" href="far-motion.min.css">
+<script src="far-motion.min.js"></script>
+<link rel="stylesheet" href="sceniche/cronologia.css">
+<script src="sceniche/cronologia.js" defer></script>
+<style>
+/* ============================================================================
+   GABBAS — palette MISURATA, non scelta (dossier §2.4)
+   · vino  #9A052F  = mediana di 28.760 px delle lettere del LORO logo, ed e'
+     anche il fondo esatto delle loro schede Lillove e Solianu.
+     8,04:1 sul foglio (AAA). SUL VETRO FA 2,14:1 => vietato sullo scuro.
+   · grigio #ABACAE = fascia del LORO logo + fondo della loro scheda Avra.
+     8,13:1 sul vetro (AAA). Sul foglio 2,12:1 => solo materia.
+   · foglio #F8F7F4 = la carta della loro etichetta Solianu (#E9E6DA, 7.650
+     campioni) schiarita a L .965.
+   · vetro  #1A120F = il vetro della bottiglia Arbore (9.000 campioni).
+   ========================================================================== */
+:root{
+  --foglio:#F8F7F4; --carta:#FFFFFF; --vetro:#1A120F; --pece:#120C09;
+  --vino:#9A052F; --grigio:#ABACAE;
+  --legno:#4E2B1C; --autunno:#664824; --studio:#785031;
+  --oro:#A18453; --calcare:#99ACD8; --cielo:#5AA4E5;
+  /* varianti CALCOLATE a 7:1, non indovinate */
+  --grigio-testo:#535456; --studio-testo:#724C2F; --oro-testo:#645234;
+  --oro-chiaro:#B69C70; --studio-chiaro:#C59671;
+  --display:Lusitana,"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --testo:"Wix Madefor Text","Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
+  --barra:72px;
+}
+*,*::before,*::after{box-sizing:border-box}
+/* overflow-x su <html> come clip, MAI su body: su body il body diventa il
+   contenitore di scorrimento e si rompe tutto cio' che legge window.scrollY */
+html{overflow-x:clip;scroll-behavior:smooth}
+body{margin:0;background:var(--foglio);color:var(--vetro);
+  font-family:var(--testo);font-size:17px;line-height:1.66;
+  -webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.14;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--vino);outline-offset:3px;border-radius:2px}
+.scuro :focus-visible{outline-color:var(--calcare)}
+
+.contenuto{width:min(1180px,calc(100% - 44px));margin-inline:auto}
+.stretto{width:min(760px,calc(100% - 44px));margin-inline:auto}
+section{scroll-margin-top:calc(var(--barra) + 15px)}
+.scuro{background:var(--vetro);color:var(--foglio)}
+.occhiello{font-size:12px;letter-spacing:.2em;text-transform:uppercase;
+  font-weight:600;color:var(--studio-testo)}
+.scuro .occhiello{color:var(--grigio)}
+.titolo{font-size:clamp(30px,4.6vw,52px);letter-spacing:.005em}
+.piombo{font-size:clamp(18px,2vw,21px);color:var(--grigio-testo)}
+.scuro .piombo{color:var(--grigio)}
+
+/* ---------- skip link ---------- */
+.skip{position:absolute;left:14px;top:-70px;z-index:120;background:var(--vino);
+  color:#fff;padding:11px 18px;border-radius:3px;font-weight:700;font-size:15px}
+.skip:focus{top:12px}
+
+/* ---------- barra ---------- */
+#nav{position:fixed;inset:0 0 auto;z-index:100;height:var(--barra);
+  display:flex;align-items:center;background:rgba(26,18,15,.30);
+  transition:background .3s ease,box-shadow .3s ease}
+#nav.solida{background:var(--vetro);box-shadow:0 1px 0 rgba(171,172,174,.28)}
+.nav-in{display:flex;align-items:center;gap:20px;width:min(1180px,calc(100% - 44px));margin-inline:auto}
+.nav-brand{display:flex;flex-direction:column;align-items:flex-start;gap:5px;text-decoration:none;flex:0 0 auto}
+.nav-brand img.parola{height:23px;width:auto}
+/* il fregio VERO sotto il marchio: e' la firma, e non e' ripetuto perche' non
+   e' periodico (autocorrelazione 0,31) */
+/* il fregio prende la LARGHEZZA del marchio (align-self:stretch nella colonna):
+   a 11px di altezza si vedeva meno di un cartiglio ed era una macchia grigia */
+.nav-brand img.fregio{width:138px;height:auto}
+.nav-links{display:flex;gap:26px;margin-left:auto;list-style:none;padding:0;margin-block:0}
+.nav-links a{color:var(--foglio);text-decoration:none;font-size:14.5px;font-weight:500;
+  letter-spacing:.05em;padding:6px 0;border-bottom:1px solid transparent}
+.nav-links a:hover{border-bottom-color:var(--grigio)}
+.nav-tel{flex:0 0 auto;margin-left:22px}
+.nav-tel a.nav-cta{display:inline-block;background:var(--vino);color:#fff;
+  text-decoration:none;font-weight:700;font-size:14.5px;padding:10px 17px;border-radius:3px;
+  white-space:nowrap;transition:transform .2s ease,filter .2s ease}
+.nav-tel a.nav-cta:hover{filter:brightness(1.14);transform:translateY(-1px)}
+.burger{display:none;margin-left:auto;background:none;border:0;cursor:pointer;
+  width:44px;height:44px;padding:9px;align-items:center;justify-content:center}
+.burger span{display:block;width:26px;height:2px;background:var(--foglio);position:relative;
+  transition:transform .28s ease,opacity .18s ease}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:26px;height:2px;
+  background:var(--foglio);transition:transform .28s ease}
+.burger span::before{transform:translateY(-8px)}
+.burger span::after{transform:translateY(8px)}
+.burger.open span{transform:rotate(45deg)}
+.burger.open span::before{transform:rotate(90deg)}
+.burger.open span::after{transform:translateY(0) rotate(90deg);opacity:0}
+
+#mobileMenu{position:fixed;inset:0;z-index:99;background:var(--vetro);
+  display:flex;flex-direction:column;justify-content:center;gap:6px;padding:0 34px;
+  opacity:0;visibility:hidden;transform:translateY(-12px);
+  transition:opacity .3s ease,transform .3s ease,visibility .3s}
+#mobileMenu.open{opacity:1;visibility:visible;transform:none}
+#mobileMenu a{color:var(--foglio);text-decoration:none;font-family:var(--display);
+  font-size:29px;padding:11px 0;border-bottom:1px solid rgba(171,172,174,.22)}
+#mobileMenu .mm-tel{margin-top:24px;font-family:var(--testo);font-size:17px;
+  color:var(--grigio);border:0}
+
+/* ---------- hero: FOTO SOPRA, TITOLO SOTTO (nessun testo su pixel non controllati) ---------- */
+.hero{padding-top:var(--barra);background:var(--vetro);color:var(--foglio)}
+.hero-figura{margin:0;position:relative}
+.hero-figura img{width:100%;height:clamp(240px,44vw,560px);object-fit:cover}
+@media(max-width:700px){.hero-figura img{height:min(56vh,430px)}}
+.hero-testo{padding:34px 0 46px}
+.hero-testo h1{font-size:clamp(34px,6.2vw,74px);letter-spacing:.004em;margin:12px 0 0}
+.hero-nome{display:block;font-size:clamp(15px,1.7vw,19px);letter-spacing:.34em;
+  text-transform:uppercase;color:var(--grigio);font-family:var(--testo);font-weight:600}
+.hero-sotto{margin:18px 0 0;max-width:62ch;color:var(--grigio);font-size:clamp(17px,1.9vw,20px)}
+.hero-fatti{display:flex;flex-wrap:wrap;gap:11px;margin:26px 0 0;padding:0;list-style:none}
+.hero-fatti li{border:1px solid rgba(171,172,174,.42);border-radius:2px;
+  padding:8px 14px;font-size:13.5px;letter-spacing:.05em;color:var(--foglio)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.bottone{display:inline-block;text-decoration:none;font-weight:700;font-size:15.5px;
+  padding:13px 22px;border-radius:3px;transition:transform .2s ease,filter .2s ease}
+.bottone:hover{transform:translateY(-1px)}
+.b-pieno{background:var(--vino);color:#fff}
+.b-pieno:hover{filter:brightness(1.16)}
+.b-vuoto{border:1px solid var(--grigio);color:var(--foglio)}
+.b-vuoto:hover{background:rgba(171,172,174,.14)}
+.b-scuro{background:var(--vino);color:#fff}
+.b-scuro:hover{filter:brightness(1.12)}
+
+/* ---------- il fregio come divisore: fascia INTERA, centrata, bordi sfumati ---------- */
+.divisore{display:block;margin:0 auto;width:min(660px,86%);height:auto;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 16%,#000 84%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 16%,#000 84%,transparent)}
+
+/* ---------- fasce ---------- */
+.fascia{padding:clamp(56px,7vw,92px) 0}
+.fascia-testa{max-width:66ch;margin-bottom:clamp(30px,4vw,46px)}
+.fascia-testa .titolo{margin:10px 0 0}
+.fascia-testa .piombo{margin:14px 0 0}
+
+/* ---------- le loro parole ---------- */
+.parole{columns:2;column-gap:44px;max-width:none}
+.parole p{margin:0 0 1.05em;break-inside:avoid}
+.parole p:first-child{font-size:20px;line-height:1.56;color:var(--legno)}
+@media(max-width:820px){.parole{columns:1}}
+.nota-terra{margin-top:34px;display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center}
+.nota-terra figure{margin:0}
+.nota-terra img{border-radius:3px}
+.nota-terra figcaption{font-size:13.5px;color:var(--grigio-testo);margin-top:9px}
+@media(max-width:820px){.nota-terra{grid-template-columns:1fr}}
+
+/* ---------- i vini ---------- */
+/* min(300px,100%): senza il min() a 320px la colonna resta larga 300 dentro un
+   contenitore di 276 e sfonda di 2px (misurato in QA: scrollWidth 322) */
+.vini{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:26px}
+.vino-scheda{background:var(--carta);border:1px solid rgba(120,80,49,.2);border-radius:3px;
+  overflow:hidden;display:flex;flex-direction:column;
+  transition:transform .26s ease,box-shadow .26s ease}
+.vino-scheda:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(26,18,15,.13)}
+/* la foto RIEMPIE il suo riquadro: con `contain` ogni bottiglia si portava
+   dietro il rettangolo del proprio fondale bruno su fondo nero (visto in QA).
+   Il rapporto e' quello vero degli scatti (650/1182, normalizzati tagliando
+   solo l'aria in alto), quindi `cover` non taglia e non deforma niente. */
+.vino-foto{background:var(--vetro);aspect-ratio:650/1182}
+.vino-foto img{width:100%;height:100%;object-fit:cover}
+.vino-corpo{padding:22px 22px 24px;display:flex;flex-direction:column;gap:9px;flex:1}
+.vino-corpo h3{font-size:31px;color:var(--vino)}
+.vino-den{font-size:12.5px;letter-spacing:.13em;text-transform:uppercase;
+  font-weight:700;color:var(--studio-testo)}
+.vino-testo{margin:4px 0 0;font-size:15.6px;line-height:1.62;color:var(--vetro)}
+.vino-testo em{font-style:italic}
+.vino-dato{margin-top:auto;padding-top:14px;border-top:1px solid rgba(120,80,49,.2);
+  font-size:13.5px;color:var(--studio-testo);font-weight:600}
+.vini-nota{margin-top:30px;font-size:14.5px;color:var(--grigio-testo);max-width:78ch}
+
+/* ---------- la linea del tempo (scenica cronologia) ---------- */
+.linea{--fmx-colore:var(--oro-chiaro);max-width:940px;margin-inline:auto;
+  padding:6px 0 4px;display:flex;flex-direction:column;gap:34px}
+/* le schede stanno alternate ai due lati: e' cosi' che il filo della scenica
+   si VEDE (il modulo lo disegna al 18% e all'82% del contenitore) */
+.linea .tappa{max-width:min(58%,500px)}
+.linea > *:nth-child(even){align-self:flex-end}
+.linea > *:nth-child(odd){align-self:flex-start}
+@media(max-width:760px){.linea .tappa{max-width:none}.linea > *{align-self:stretch!important}}
+/* LEZIONE LISCIA 15/08: il modulo attenua la tappa spenta con opacity .66, e
+   contrasti_tutto.py misura solo lo stato ACCESO => lo stato spento non lo
+   misura nessuno. Qui l'opacita' del testo resta 1 IN OGNI STATO e ad
+   accendersi e' il BORDO: cosi' il contrasto non puo' scendere, in nessuno stato. */
+html.fm-js .linea .fmx-tappa{opacity:1}
+/* fondo OPACO, non traslucido: col traslucido il filo dorato della scenica
+   trasparisce attraverso la scheda e finisce sotto il testo. Misurato in QA:
+   1,85:1 sul fondo (140,121,90), cioe' il filo stesso. Opaco: 15,62:1 spenta,
+   14,37:1 accesa. */
+.tappa{background:#241C19;border:1px solid rgba(171,172,174,.28);
+  border-left:3px solid rgba(171,172,174,.34);border-radius:3px;padding:20px 24px;
+  transition:border-color .5s ease,background-color .5s ease}
+.fmx-accesa .tappa{border-color:rgba(182,156,112,.5);border-left-color:var(--oro-chiaro);
+  background:#2B2320}
+.tappa .anno{font-size:13px;letter-spacing:.18em;font-weight:700;color:#C2AC88}
+.tappa h3{font-size:26px;margin:7px 0 0;color:var(--foglio)}
+.tappa p{margin:9px 0 0;color:var(--grigio);font-size:15.6px}
+.tappa blockquote{margin:14px 0 0;padding-left:16px;border-left:2px solid rgba(182,156,112,.55);
+  font-family:var(--display);font-size:18px;line-height:1.5;color:var(--foglio)}
+.tappa cite{display:block;margin-top:9px;font-family:var(--testo);font-style:normal;
+  font-size:13px;color:var(--grigio);letter-spacing:.03em}
+
+/* ---------- territorio + galleria ---------- */
+.terr{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+@media(max-width:880px){.terr{grid-template-columns:1fr}}
+.terr p{color:var(--grigio);margin:0 0 1em}
+.terr figure{margin:0}
+.terr figcaption{font-size:13.5px;color:var(--grigio);margin-top:9px}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(248px,100%),1fr));
+  gap:12px;margin-top:34px;padding:0;list-style:none}
+.gallery-grid button{padding:0;border:0;background:none;cursor:zoom-in;display:block;
+  border-radius:2px;overflow:hidden;position:relative}
+.gallery-grid button img{width:100%;height:172px;object-fit:cover;
+  transition:transform .5s cubic-bezier(.22,1,.36,1),filter .3s ease}
+.gallery-grid button:hover img{transform:scale(1.05);filter:brightness(1.07)}
+
+/* ---------- lightbox ---------- */
+#lightbox{position:fixed;inset:0;z-index:110;background:rgba(18,12,9,.96);
+  display:flex;align-items:center;justify-content:center;padding:26px;
+  opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s}
+#lightbox.open{opacity:1;visibility:visible}
+#lightbox figure{margin:0;max-width:1080px;width:100%;text-align:center;position:relative;z-index:1}
+#lightbox img{width:100%;max-height:76vh;object-fit:contain;border-radius:2px}
+#lightbox figcaption{margin-top:14px;color:var(--foglio);font-size:15px}
+.lb-close,.lb-prev,.lb-next{position:absolute;z-index:3;background:rgba(20,16,11,.78);
+  border:1px solid rgba(171,172,174,.5);color:var(--foglio);cursor:pointer;
+  width:50px;height:50px;border-radius:50%;font-size:22px;line-height:1;
+  display:flex;align-items:center;justify-content:center;
+  transition:background-color .2s ease,transform .2s ease}
+.lb-close:hover,.lb-prev:hover,.lb-next:hover{background:var(--vino);transform:scale(1.06)}
+.lb-close{top:18px;right:18px}
+.lb-prev{left:14px;top:50%;transform:translateY(-50%)}
+.lb-next{right:14px;top:50%;transform:translateY(-50%)}
+.lb-prev:hover,.lb-next:hover{transform:translateY(-50%) scale(1.06)}
+
+/* ---------- dove siamo ---------- */
+.dove{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:start}
+@media(max-width:880px){.dove{grid-template-columns:1fr}}
+.riga-dato{display:flex;gap:14px;padding:15px 0;border-bottom:1px solid rgba(120,80,49,.2)}
+.riga-dato .et{flex:0 0 108px;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;
+  font-weight:700;color:var(--studio-testo);padding-top:3px}
+.riga-dato .vl{font-size:17px}
+.riga-dato .vl a{color:var(--vino);font-weight:700;text-decoration:none;
+  border-bottom:1px solid rgba(154,5,47,.35)}
+.riga-dato .vl a:hover{border-bottom-color:var(--vino)}
+.dove-nota{margin-top:22px;font-size:14.5px;color:var(--grigio-testo)}
+
+/* ---------- footer ---------- */
+footer{background:var(--pece);color:var(--grigio);padding:52px 0 40px;font-size:14.5px}
+footer .f-top{display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between;align-items:flex-end}
+footer img.parola{height:26px;width:auto}
+footer img.fregio{height:13px;width:auto;margin-top:8px}
+footer a{color:var(--calcare)}
+.f-righe{margin-top:34px;padding-top:22px;border-top:1px solid rgba(171,172,174,.22);
+  display:flex;flex-direction:column;gap:8px;font-size:13.5px;line-height:1.6}
+
+/* ---------- responsive ---------- */
+@media(max-width:920px){
+  .nav-links{display:none}
+  .burger{display:flex}
+  .nav-tel{margin-left:0;order:3}
+  .nav-in{gap:12px}
+  .nav-brand img.parola{height:20px}
+}
+@media(max-width:560px){
+  .nav-tel a.nav-cta{padding:9px 13px;font-size:14px}
+  .nav-brand img.fregio{display:none}
+  .gallery-grid{grid-template-columns:repeat(auto-fill,minmax(min(150px,100%),1fr))}
+  .gallery-grid button img{height:126px}
+  .riga-dato{flex-direction:column;gap:4px}
+  .riga-dato .et{flex:none}
+}
+@media(max-width:380px){
+  .nav-tel a.nav-cta .lungo{display:none}
+}
+</style>
+<noscript><style>
+  /* senza JS la barra resta statica e i link restano visibili (max 140px) */
+  #nav{position:static;height:auto;background:var(--vetro)}
+  .hero{padding-top:0}
+  .nav-in{flex-wrap:wrap;padding-block:7px;gap:10px}
+  .nav-brand img.fregio{display:none}
+  .nav-tel{order:2;margin-left:auto}
+  .nav-links{order:3;display:flex;overflow-x:auto;gap:17px;margin-left:0;width:100%;
+    padding-bottom:2px;white-space:nowrap}
+  .nav-links a{padding:2px 0}
+  .burger{display:none!important}
+  #mobileMenu{display:none}
+</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Salta al contenuto</a>
+
+<header id="nav">
+  <div class="nav-in">
+    <a class="nav-brand" href="#top" aria-label="Azienda Vitivinicola Giuseppe Gabbas, torna in cima">
+      <img class="parola" src="img/logo-gabbas.png" alt="Gabbas" width="867" height="145">
+      <img class="fregio" src="img/fregio.png" alt="" width="1024" height="161">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#terra">La terra</a></li>
+      <li><a href="#vini">I vini</a></li>
+      <li><a href="#linea">Dal 1974</a></li>
+      <li><a href="#territorio">Oliena</a></li>
+      <li><a href="#dove">Dove siamo</a></li>
+    </ul>
+    <div class="nav-tel">
+      <a class="nav-cta" href="tel:+39078433745" aria-label="Telefona alla cantina, zero sette otto quattro tre tre sette quattro cinque">
+        <span class="lungo">Chiama </span>0784 33745</a>
+    </div>
+    <button class="burger" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobileMenu"><span></span></button>
+  </div>
+</header>
+
+<nav id="mobileMenu" class="mobile-menu" aria-label="Menu principale" aria-hidden="true">
+  <a href="#terra">La terra</a>
+  <a href="#vini">I vini</a>
+  <a href="#linea">Dal 1974</a>
+  <a href="#territorio">Oliena</a>
+  <a href="#dove">Dove siamo</a>
+  <span class="mm-tel">Via Trieste, 59 &middot; 08100 Nuoro</span>
+</nav>
+
+<main id="main">
+
+<!-- ═══ HERO: la foto sopra, il titolo SOTTO (nessun testo su pixel che non controllo) ═══ -->
+<section class="hero" id="top">
+  <figure class="hero-figura">
+    <picture>
+      <source media="(max-width:700px)" srcset="img/hero-mobile-vigna.jpg">
+      <img src="img/hero-vigna-supramonte.jpg"
+           alt="Il vigneto in settembre: filari carichi di foglie in primo piano, la collina coperta di macchia e ulivi dietro, l&rsquo;edificio dell&rsquo;azienda intonacato color terra con la torre cilindrica in mezzo alle vigne, cielo azzurro con nuvole bianche."
+           width="2200" height="1100" fetchpriority="high">
+    </picture>
+  </figure>
+  <div class="contenuto hero-testo">
+    <span class="hero-nome" data-fm="sali">Azienda Vitivinicola</span>
+    <h1 data-fm="righe">Giuseppe Gabbas</h1>
+    <p class="hero-sotto" data-fm="sali" data-fms-ritardo="120">Cannonau di Sardegna, olio extravergine e grappa.
+      Trenta ettari in una vallata ai piedi del Supramonte, fra Nuoro e Oliena.</p>
+    <ul class="hero-fatti" data-fm="sali" data-fm-passo="80">
+      <li>Dal 1974</li>
+      <li>30 ettari, 20 a vigneto e 5 a oliveto</li>
+      <li>240&ndash;350 m s.l.m.</li>
+      <li>Premio Angelo Betti 2026</li>
+    </ul>
+    <div class="hero-cta">
+      <a class="bottone b-pieno" href="tel:+39078433745">Chiama 0784 33745</a>
+      <a class="bottone b-vuoto" href="#vini">Guarda i vini</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LE LORO PAROLE ═══ -->
+<section class="fascia" id="terra">
+  <div class="contenuto">
+    <div class="fascia-testa" data-fm="sali">
+      <span class="occhiello">La terra</span>
+      <h2 class="titolo">Trenta ettari ai piedi del Supramonte</h2>
+      <p class="piombo">Quello che segue &egrave; il racconto dell&rsquo;azienda con le parole
+        che Giuseppe Gabbas ha gi&agrave; pubblicato.</p>
+    </div>
+    <div class="parole" data-fm="comparsa">
+      <p>L&rsquo;azienda agricola di Giuseppe Gabbas si estende su una superficie di circa 30 ettari,
+        dei quali 20 a vigneto e 5 a oliveto, ad un altitudine tra i 240m e i 350m s.l.m. in una
+        vallata ai piedi del Supramonte, nel cuore della Sardegna, a dieci Km. da Nuoro, capoluogo
+        della Barbagia.</p>
+      <p>Terreni profondi, di origine granitica e sufficientemente permeabili, conservano una certa
+        umidit&agrave; anche nei periodi di lunga siccit&agrave;.</p>
+      <p>Il particolare clima della zona, influenzato dalle brezze temperate che giungono dal mare,
+        distante poco pi&ugrave; di venti Km, e la vicinanza di rilievi montuosi assicurano una buona
+        escursione termica, con positivi effetti sul colore e sul profilo aromatico delle uve.</p>
+      <p>Questo favorisce un ecosistema ideale per la vite, riducendo, tra l&rsquo;altro, i trattamenti
+        antiparassitari, eseguiti solo con prodotti tradizionali.</p>
+      <p>La razionalit&agrave; degli impianti e la loro piccola estensione consentono di praticare una
+        viticoltura di altissima qualit&agrave;, basata su principi colturali come le potature corte e
+        le rese contenute, mirati ad ottenere l&rsquo;esaltazione delle caratteristiche varietali delle uve.</p>
+      <p>Il vitigno maggiormente coltivato &egrave; il Cannonau, al quale sono state aggiunte altre
+        variet&agrave; locali, selezionate tra le pi&ugrave; interessanti del ricco panorama viticolo sardo.</p>
+      <p>Questa piccola e dinamica realt&agrave; produttiva in un territorio particolarmente vocato alla
+        coltivazione della vite riesce sempre ad esprimersi al meglio, regalando al vino tratti di
+        eleganza e di territorialit&agrave; altrove difficilmente raggiungibili.</p>
+    </div>
+    <div class="nota-terra" data-fm="comparsa">
+      <figure>
+        <img src="img/cantina-esterno.jpg" width="1600" height="800" loading="lazy"
+             alt="L&rsquo;edificio dell&rsquo;azienda visto dalle vigne: un corpo lungo a due livelli intonacato color terra, con una torre cilindrica al centro e infissi azzurri, circondato da ulivi e da filari che salgono sulla collina.">
+        <figcaption>L&rsquo;edificio dell&rsquo;azienda fra le vigne, settembre 2019.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/g-vigna-fiori-primavera.jpg" width="1000" height="728" loading="lazy"
+             alt="Vigneto con i tralci ancora corti sui fili, l&rsquo;erba alta punteggiata di fiori viola fra i filari e il crinale roccioso del Monte Corrasi sullo sfondo.">
+        <figcaption>Il vigneto con l&rsquo;erba alta e i fiori fra i filari.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<img class="divisore" src="img/fregio.png" alt="" width="1024" height="161">
+
+<!-- ═══ I VINI: il testo che oggi vive dentro sei JPEG ═══ -->
+<section class="fascia" id="vini">
+  <div class="contenuto">
+    <div class="fascia-testa" data-fm="sali">
+      <span class="occhiello">Cosa si produce</span>
+      <h2 class="titolo">I vini, l&rsquo;olio e la grappa</h2>
+      <p class="piombo">Sei prodotti, descritti con le parole dell&rsquo;azienda.</p>
+    </div>
+    <div class="vini" data-fm="sali" data-fm-passo="90">
+
+      <article class="vino-scheda">
+        <div class="vino-foto"><img src="img/arbore.jpg" width="650" height="1182" loading="lazy"
+          alt="Bottiglia di Arb&ograve;re su un tavolo di legno: etichetta rossa con la scritta GABBAS in alto, il fregio a tralcio di vite e il nome in bianco."></div>
+        <div class="vino-corpo">
+          <h3>Arb&ograve;re</h3>
+          <p class="vino-den">Cannonau di Sardegna DOC &middot; Riserva</p>
+          <p class="vino-testo">&laquo;&Egrave; ottenuto da una mirata selezione di uve cannonau provenienti
+            da viti di oltre quarant&rsquo;anni, con aggiunta di <em>muristellu</em>, antico vitigno sardo.
+            L&rsquo;uvaggio esalta il profilo aromatico del cannonau conferendo al vino note di mora e rosa
+            selvatica. &Egrave; consigliato con piatti a base di selvaggina, carni rosse e formaggi
+            stagionati. Servire a 18&deg;C.&raquo;</p>
+          <p class="vino-dato">Tre Bicchieri Gambero Rosso 2026</p>
+        </div>
+      </article>
+
+      <article class="vino-scheda">
+        <div class="vino-foto"><img src="img/dule.jpg" width="650" height="1182" loading="lazy"
+          alt="Bottiglia di Dule su un tavolo di legno: etichetta chiara con la scritta GABBAS in grigio, il fregio a tralcio di vite e il nome in corsivo rosso."></div>
+        <div class="vino-corpo">
+          <h3>Dule</h3>
+          <p class="vino-den">Cannonau di Sardegna DOC &middot; Riserva</p>
+          <p class="vino-testo">&laquo;&Egrave; ottenuto da un&rsquo;accurata cernita di uve Cannonau prodotte
+            da viti di oltre quarant&rsquo;anni nell&rsquo;omonimo vigneto di &ldquo;Dule&rdquo;. Un basso numero
+            di gemme per pianta e mirati interventi di &ldquo;vendemmia verde&rdquo; nel mese di Agosto
+            favoriscono una ottimale concentrazione di sostanze aromatiche e polifenoliche esaltandone la
+            qualit&agrave;. Dopo la fermentazione sulle bucce, protratta per 20-25 giorni, matura in barriques
+            di rovere Francese per 12 mesi; segue poi l&rsquo;affinamento in bottiglia per altri 10-12 mesi,
+            necessari per esprimere al meglio il &ldquo;bouquet&rdquo; del territorio. Vino di corpo e frutto
+            che ben si abbina a piatti di carni rosse e salsate. Servire a 18&deg; gradi&raquo;</p>
+          <p class="vino-dato">Il vigneto d&agrave; il nome al vino</p>
+        </div>
+      </article>
+
+      <article class="vino-scheda">
+        <div class="vino-foto"><img src="img/lillove.jpg" width="650" height="1182" loading="lazy"
+          alt="Bottiglia di Lillov&egrave; su un tavolo di legno: etichetta chiara con fascia rossa in alto, la scritta GABBAS e il fregio a tralcio di vite."></div>
+        <div class="vino-corpo">
+          <h3>Lillov&egrave;</h3>
+          <p class="vino-den">Cannonau di Sardegna DOC</p>
+          <p class="vino-testo">&laquo;Nasce in Barbagia, nel cuore della Sardegna, una zona di grande
+            solarit&agrave; che favorisce l&rsquo;ottimale maturazione delle uve. I suoli di medio impasto, di
+            origine granitica, rimangono abbastanza freschi anche nelle estati pi&ugrave; siccitose. Il clima
+            asciutto e ventilato mantiene solitamente sani i vigneti, riducendo al minimo gli interventi a
+            difesa delle viti. Un basso numero di gemme per pianta limita la produzione di uva, esaltandone
+            le qualit&agrave;. Lillov&egrave;, ottenuto da uve Cannonau con piccole aggiunte di altre rosse
+            autoctone, prende il nome dall&rsquo;ubicazione del vigneto. Da abbinare preferibilmente con carni
+            rosse e formaggi stagionati. Servire a 18&deg; gradi.&raquo;</p>
+          <p class="vino-dato">Prende il nome dal vigneto</p>
+        </div>
+      </article>
+
+      <article class="vino-scheda">
+        <div class="vino-foto"><img src="img/avra.jpg" width="650" height="1182" loading="lazy"
+          alt="Bottiglia piccola di Avra su un tavolo di legno: etichetta arancione con la scritta GABBAS e il nome in corsivo chiaro."></div>
+        <div class="vino-corpo">
+          <h3>Avra</h3>
+          <p class="vino-den">Rosso di Barbagia IGT &middot; dolce</p>
+          <p class="vino-testo">&laquo;Il sole, il vento e la tradizione della Barbagia hanno riportato un
+            vino dal gusto moderno che incontra la storia. Nel vigneto posto nella collina pi&ugrave; alta
+            dell&rsquo;azienda, un vento fresco (<em>Avra</em>, nella lingua locale) e una torsione del rachide,
+            eseguita con estrema attenzione prima dell&rsquo;epoca vendemmiale, favoriscono l&rsquo;appassimento
+            dei grappoli sulla pianta. Avra viene vinificato in piccoli contenitori ed elevato in fusti di legno
+            di rovere per circa un anno. Con questo prodotto si vuole valorizzare l&rsquo;antica tradizione del
+            vino dell&rsquo;ospitalit&agrave; della nostra aspra ma accogliente terra.&raquo;</p>
+          <p class="vino-dato">Bottiglia da 37,5 cl</p>
+        </div>
+      </article>
+
+      <article class="vino-scheda">
+        <div class="vino-foto"><img src="img/solianu.jpg" width="650" height="1182" loading="lazy"
+          alt="Bottiglia di olio Solianu su un tavolo di legno: vetro scuro, tappo verde, etichetta bianca con un ramo di olivo disegnato e due olive."></div>
+        <div class="vino-corpo">
+          <h3>Solianu</h3>
+          <p class="vino-den">Olio extravergine di oliva</p>
+          <p class="vino-testo">&laquo;Questo olio &egrave; prodotto da olive della cultivar <em>bosana</em>
+            raccolte a mano nei primi giorni di dicembre e frante immediatamente. &Egrave; un olio che da giovane
+            esalta le spiccate caratteristiche di freschezza con toni amarognoli, tipici della cultivar e della
+            raccolta precoce; con la maturazione si arrotonda e si addolcisce e pu&ograve; essere utilizzato anche
+            per condimenti pi&ugrave; delicati.&raquo;</p>
+          <p class="vino-dato">Bottiglia da 50 cl</p>
+        </div>
+      </article>
+
+      <article class="vino-scheda">
+        <div class="vino-foto"><img src="img/grappa.jpg" width="650" height="1182" loading="lazy"
+          alt="Due bottiglie alte e sottili di grappa di Cannonau su un tavolo di legno: quella a sinistra ambrata con capsula bordeaux, quella a destra trasparente con capsula argento."></div>
+        <div class="vino-corpo">
+          <h3>Grappa di Cannonau</h3>
+          <p class="vino-den">Distillata a vapore &middot; due versioni</p>
+          <p class="vino-testo">&laquo;Grappa ottenuta dalla distillazione a vapore di scelte vinacce provenienti
+            dalle zone pi&ugrave; vocate alla produzione del Cannonau. La giusta permanenza in fusti diversi dona
+            alla grappa un profumo fresco ed un sapore morbido e fragrante.&raquo;<br><br>
+            Affinata in legno: &laquo;L&rsquo;affinamento in fusti di legno diversi dona alla grappa un profumo
+            elegante ed un sapore vellutato e persistente&raquo;.</p>
+          <p class="vino-dato">Tutte e due in bottiglia da 50 cl &middot; 40 % vol. &middot; affinata in legno 43 % vol.</p>
+        </div>
+      </article>
+
+    </div>
+    <p class="vini-nota">Fotografie e descrizioni sono quelle pubblicate dall&rsquo;azienda.
+      Le annate stampate sulle etichette sono quelle degli scatti, non quelle in commercio oggi:
+      per le annate disponibili conviene telefonare.</p>
+  </div>
+</section>
+
+<!-- ═══ LA LINEA DEL TEMPO ═══ -->
+<section class="fascia scuro" id="linea">
+  <div class="contenuto">
+    <div class="fascia-testa" data-fm="sali">
+      <span class="occhiello">Il percorso</span>
+      <h2 class="titolo">Dal 1974 a oggi</h2>
+      <p class="piombo">Mezzo secolo di lavoro, in quattro date.</p>
+    </div>
+    <div class="linea" data-fms="cronologia">
+      <div class="tappa">
+        <span class="anno">1974</span>
+        <h3>Nasce la cantina</h3>
+        <p>Giuseppe Gabbas fonda l&rsquo;azienda in una vallata ai piedi del Supramonte,
+          a pochi chilometri da Nuoro.</p>
+      </div>
+      <div class="tappa">
+        <span class="anno">18 SETTEMBRE 2014</span>
+        <h3>Viticoltore dell&rsquo;Anno</h3>
+        <p>Premio speciale della guida <em>Vini d&rsquo;Italia 2015</em> del Gambero Rosso.
+          La motivazione ufficiale:</p>
+        <blockquote>&laquo;Uomo di pochissime parole, produce vini che, invece, hanno tanto da dire e
+          stanno segnando un tracciato importante nella produzione del Cannonau di Sardegna. Giuseppe
+          &egrave; un viticoltore vero, che ama la campagna e le sue vigne. &Egrave; il vignaiolo per
+          eccellenza.&raquo;
+          <cite>Gambero Rosso, motivazione del premio</cite></blockquote>
+      </div>
+      <div class="tappa">
+        <span class="anno">SETTEMBRE 2025</span>
+        <h3>Tre Bicchieri 2026</h3>
+        <p>Il <strong>Cannonau di Sardegna Arb&ograve;re 2022</strong> entra fra i diciassette vini sardi
+          premiati con i Tre Bicchieri dalla guida del Gambero Rosso.</p>
+      </div>
+      <div class="tappa">
+        <span class="anno">12 APRILE 2026</span>
+        <h3>Premio Angelo Betti</h3>
+        <p>Benemeriti della Vitivinicoltura per la Sardegna, consegnato all&rsquo;Auditorium Verdi di
+          Veronafiere durante il 58&deg; Vinitaly. &Egrave; il pi&ugrave; antico dei premi Vinitaly,
+          istituito nel 1973, e ogni anno ne va <strong>uno per regione</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ IL TERRITORIO + GALLERIA ═══ -->
+<section class="fascia scuro" id="territorio" style="padding-top:0">
+  <div class="contenuto">
+    <div class="terr" data-fm="comparsa">
+      <div>
+        <span class="occhiello">Dove nasce</span>
+        <h2 class="titolo" style="margin:10px 0 18px">Oliena, il Corrasi, la Barbagia</h2>
+        <p>La vallata sta fra Nuoro e Oliena, alle pendici del <strong>Monte Corrasi</strong>:
+          &egrave; il crinale roccioso che chiude l&rsquo;orizzonte in cinque delle dodici
+          fotografie qui sotto.</p>
+        <p>Il mare &egrave; poco pi&ugrave; di venti chilometri pi&ugrave; in l&agrave;, e da l&igrave;
+          arrivano le brezze che l&rsquo;azienda indica fra le ragioni dell&rsquo;escursione termica.
+          I terreni sono granitici, i filari stanno fra i 240 e i 350 metri.</p>
+        <p>Le fotografie sono dell&rsquo;azienda e mostrano la stessa valle in momenti diversi
+          dell&rsquo;anno: il verde pieno dei filari, l&rsquo;oro dell&rsquo;erba secca, il rosso e il
+          rame delle foglie d&rsquo;autunno.</p>
+      </div>
+      <figure>
+        <img src="img/filare-verticale.jpg" width="1100" height="1278" loading="lazy"
+             alt="I filari carichi di foglie verdi in primo piano, la collina coperta di macchia dietro e altri vigneti che salgono sul versante, sotto un cielo azzurro con qualche nuvola.">
+        <figcaption>I filari e la collina che chiude la vallata, settembre 2019.</figcaption>
+      </figure>
+    </div>
+
+    <ul class="gallery-grid" id="gallery" data-fm="comparsa">
+      <li><button type="button" data-src="img/g-corrasi-filari-autunno.jpg" data-cap="Il crinale roccioso del Monte Corrasi sopra i filari gialli di ottobre."><img src="img/g-corrasi-filari-autunno.jpg" width="1000" height="728" loading="lazy" alt="Il crinale roccioso e frastagliato del Monte Corrasi che chiude la valle, con una fila di viti dalle foglie gialle in primo piano."></button></li>
+      <li><button type="button" data-src="img/g-corrasi-nuvola.jpg" data-cap="Una nuvola bianca ferma sopra il Corrasi, e le vigne sotto."><img src="img/g-corrasi-nuvola.jpg" width="1000" height="728" loading="lazy" alt="Il Monte Corrasi in ombra sotto una grande nuvola bianca, con i filari verdi e un albero isolato in primo piano."></button></li>
+      <li><button type="button" data-src="img/g-corrasi-tra-i-fili.jpg" data-cap="Il Corrasi visto da dentro il filare, fra i pali e i fili della spalliera."><img src="img/g-corrasi-tra-i-fili.jpg" width="1000" height="728" loading="lazy" alt="La montagna inquadrata fra due pali di cemento e i fili tesi della spalliera, con i tralci ancora spogli in primo piano."></button></li>
+      <li><button type="button" data-src="img/g-vigna-fiori-primavera.jpg" data-cap="L&rsquo;erba alta e fiorita fra i filari, coi tralci ancora corti."><img src="img/g-vigna-fiori-primavera.jpg" width="1000" height="728" loading="lazy" alt="Vigneto con l&rsquo;erba alta punteggiata di fiori viola fra le file e il Monte Corrasi all&rsquo;orizzonte."></button></li>
+      <li><button type="button" data-src="img/g-vigna-pali-montagne.jpg" data-cap="I filari verdi che scendono verso il fondovalle."><img src="img/g-vigna-pali-montagne.jpg" width="1000" height="728" loading="lazy" alt="Filari verdi ordinati che scendono lungo il pendio, con pali chiari e rilievi montuosi sullo sfondo."></button></li>
+      <li><button type="button" data-src="img/g-filari-strada-bianca.jpg" data-cap="La strada bianca che attraversa i vigneti, fra gli ulivi."><img src="img/g-filari-strada-bianca.jpg" width="1000" height="728" loading="lazy" alt="Veduta dall&rsquo;alto dei filari verdi tagliati da una strada sterrata chiara, con ulivi sparsi lungo il bordo."></button></li>
+      <li><button type="button" data-src="img/g-filari-dallalto.jpg" data-cap="Le file viste dall&rsquo;alto: il disegno del vigneto."><img src="img/g-filari-dallalto.jpg" width="1000" height="728" loading="lazy" alt="Veduta dall&rsquo;alto del vigneto: decine di file parallele di viti verdi che seguono la curva della collina."></button></li>
+      <li><button type="button" data-src="img/g-erba-secca-valle.jpg" data-cap="L&rsquo;erba secca dorata a fine estate, sopra la valle."><img src="img/g-erba-secca-valle.jpg" width="1000" height="728" loading="lazy" alt="Un campo di erba secca color oro in primo piano e la valle coltivata che si apre dietro, sotto un cielo azzurro."></button></li>
+      <li><button type="button" data-src="img/g-mosaico-autunno.jpg" data-cap="Ottobre: ogni appezzamento vira di un colore diverso."><img src="img/g-mosaico-autunno.jpg" width="1000" height="728" loading="lazy" alt="La valle in autunno vista dall&rsquo;alto: appezzamenti di vigna bruni, rossi e dorati accostati come un mosaico, con erba secca in primo piano."></button></li>
+      <li><button type="button" data-src="img/g-vigna-rossa-corrasi.jpg" data-cap="Il rosso delle foglie di ottobre sotto il Corrasi."><img src="img/g-vigna-rossa-corrasi.jpg" width="1000" height="728" loading="lazy" alt="Filari con le foglie rosse e ramate in primo piano e il profilo bianco e frastagliato del Monte Corrasi sullo sfondo."></button></li>
+      <li><button type="button" data-src="img/g-ulivo-autunno.jpg" data-cap="Due appezzamenti che virano insieme, visti da sopra gli ulivi."><img src="img/g-ulivo-autunno.jpg" width="1000" height="728" loading="lazy" alt="Due appezzamenti di vigna in autunno, uno arancione e uno dorato, affiancati sul versante; in primo piano le chiome argentee di alcuni ulivi e sullo sfondo le colline."></button></li>
+      <li><button type="button" data-src="img/g-valle-autunno.jpg" data-cap="La valle in autunno, con gli ulivi in primo piano."><img src="img/g-valle-autunno.jpg" width="1000" height="728" loading="lazy" alt="Veduta della valle in autunno: macchie di vigneto arancione e ocra fra la macchia verde scuro, con rami di ulivo in primo piano."></button></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══ DOVE SIAMO ═══ -->
+<section class="fascia" id="dove">
+  <div class="contenuto">
+    <div class="dove">
+      <div data-fm="sali">
+        <span class="occhiello">Contatti</span>
+        <h2 class="titolo" style="margin:10px 0 20px">Dove siamo</h2>
+        <div class="riga-dato"><span class="et">Azienda</span><span class="vl">Azienda Vitivinicola Giuseppe Gabbas</span></div>
+        <div class="riga-dato"><span class="et">Indirizzo</span><span class="vl">Via Trieste, 59 &middot; 08100 Nuoro (NU)</span></div>
+        <div class="riga-dato"><span class="et">Vigneti</span><span class="vl">Nella vallata verso Oliena, alle pendici del Monte Corrasi</span></div>
+        <div class="riga-dato"><span class="et">Telefono</span><span class="vl"><a href="tel:+39078433745">0784 33745</a></span></div>
+        <div class="riga-dato"><span class="et">Email</span><span class="vl"><a href="mailto:info@gabbas.it">info@gabbas.it</a></span></div>
+        <p class="dove-nota">Per gli orari e per le visite conviene telefonare.</p>
+        <div class="hero-cta" style="margin-top:22px">
+          <a class="bottone b-scuro" href="https://www.google.com/maps/search/?api=1&amp;query=Via+Trieste+59+08100+Nuoro+NU"
+             target="_blank" rel="noopener">Apri la mappa</a>
+        </div>
+      </div>
+      <figure style="margin:0" data-fm="comparsa">
+        <img src="img/g-valle-autunno.jpg" width="1000" height="728" loading="lazy"
+             alt="La valle dell&rsquo;azienda in autunno vista dalla strada, con gli ulivi in primo piano e i vigneti color ocra sul versante opposto.">
+        <figcaption style="font-size:13.5px;color:var(--grigio-testo);margin-top:9px">
+          La valle dell&rsquo;azienda, fra Nuoro e Oliena.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Fotografia ingrandita" aria-hidden="true">
+  <button class="lb-close" type="button" aria-label="Chiudi">&times;</button>
+  <button class="lb-prev" type="button" aria-label="Fotografia precedente">&#8249;</button>
+  <button class="lb-next" type="button" aria-label="Fotografia successiva">&#8250;</button>
+  <figure>
+    <img id="lbImg" src="img/g-corrasi-filari-autunno.jpg" alt="">
+    <figcaption>Il crinale roccioso del Monte Corrasi sopra i filari gialli di ottobre.</figcaption>
+  </figure>
+</div>
+
+<footer>
+  <div class="contenuto">
+    <div class="f-top">
+      <div>
+        <img class="parola" src="img/logo-gabbas.png" alt="Gabbas" width="867" height="145">
+        <img class="fregio" src="img/fregio.png" alt="" width="1024" height="161">
+      </div>
+      <div style="line-height:1.8">
+        Via Trieste, 59 &middot; 08100 Nuoro (NU)<br>
+        <a href="tel:+39078433745">0784 33745</a> &middot; <a href="mailto:info@gabbas.it">info@gabbas.it</a>
+      </div>
+    </div>
+    <div class="f-righe">
+      <span>Fotografie e testi provengono dal sito attuale di Azienda Vitivinicola Giuseppe Gabbas
+        e restano di propriet&agrave; dell&rsquo;attivit&agrave;.</span>
+      <span>Sito dimostrativo realizzato con AI da FAR AI &middot; contenuti da rivedere con
+        l&rsquo;attivit&agrave; prima della pubblicazione</span>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Winery",
+  "@id":"https://www.gabbas.it/#azienda",
+  "name":"Azienda Vitivinicola Giuseppe Gabbas",
+  "alternateName":"Gabbas",
+  "url":"http://www.gabbas.it",
+  "founder":{"@type":"Person","name":"Giuseppe Gabbas"},
+  "foundingDate":"1974",
+  "telephone":"+39 0784 33745",
+  "email":"info@gabbas.it",
+  "image":["https://demo.francescoar.com/gabbas-oliena/img/hero-vigna-supramonte.jpg","https://demo.francescoar.com/gabbas-oliena/img/arbore.jpg"],
+  "address":{"@type":"PostalAddress","streetAddress":"Via Trieste, 59","postalCode":"08100",
+    "addressLocality":"Nuoro","addressRegion":"NU","addressCountry":"IT"},
+  "award":["Premio Angelo Betti - Benemeriti della Vitivinicoltura per la Sardegna, Vinitaly 2026",
+    "Tre Bicchieri Gambero Rosso 2026 - Cannonau di Sardegna Arbore 2022",
+    "Viticoltore dell'Anno, guida Vini d'Italia 2015 del Gambero Rosso"],
+  "makesOffer":[
+    {"@type":"Offer","itemOffered":{"@type":"Product","name":"Arbore","category":"Cannonau di Sardegna DOC Riserva"}},
+    {"@type":"Offer","itemOffered":{"@type":"Product","name":"Dule","category":"Cannonau di Sardegna DOC Riserva"}},
+    {"@type":"Offer","itemOffered":{"@type":"Product","name":"Lillove","category":"Cannonau di Sardegna DOC"}},
+    {"@type":"Offer","itemOffered":{"@type":"Product","name":"Avra","category":"Rosso di Barbagia IGT dolce"}},
+    {"@type":"Offer","itemOffered":{"@type":"Product","name":"Solianu","category":"Olio extravergine di oliva"}},
+    {"@type":"Offer","itemOffered":{"@type":"Product","name":"Grappa di Cannonau","category":"Grappa"}}
+  ]
+}
+</script>
+
+<script>
+(function(){
+  "use strict";
+  var nav=document.getElementById('nav'),
+      burger=document.querySelector('.burger'),
+      menu=document.getElementById('mobileMenu'),
+      lb=document.getElementById('lightbox'),
+      lbImg=document.getElementById('lbImg'),
+      lbCap=lb.querySelector('figcaption'),
+      tessere=Array.prototype.slice.call(document.querySelectorAll('#gallery button[data-src]')),
+      corrente=0, ultimoFuoco=null;
+
+  /* barra: trasparente sopra la foto, solida dopo lo scorrimento */
+  function barra(){ nav.classList.toggle('solida', window.scrollY > 40); }
+  barra();
+  if(window.FM && FM.aScorrimento){ FM.aScorrimento(barra); }
+  else { window.addEventListener('scroll', barra, {passive:true}); }
+
+  /* --- inert su tutto cio' che sta fuori dal pannello aperto --- */
+  var fuori=[document.getElementById('main'), document.querySelector('footer'),
+             document.querySelector('.skip'), document.querySelector('.nav-brand'),
+             document.querySelector('.nav-links'), document.querySelector('.nav-tel')];
+  function isola(attivo, tranne){
+    fuori.forEach(function(el){ if(el && el!==tranne){ if(attivo) el.setAttribute('inert',''); else el.removeAttribute('inert'); } });
+  }
+  function fuocabili(root){
+    return Array.prototype.slice.call(root.querySelectorAll(
+      'a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])'))
+      /* dentro un pannello position:fixed offsetParent e' null anche per gli
+         elementi visibili: si filtra sui rettangoli, non su offsetParent */
+      .filter(function(el){ var r=el.getBoundingClientRect(); return r.width>0 && r.height>0; });
+  }
+  function trappola(e, root){
+    if(e.key!=='Tab') return;
+    var f=fuocabili(root); if(!f.length) return;
+    var primo=f[0], ultimo=f[f.length-1];
+    if(e.shiftKey && document.activeElement===primo){ e.preventDefault(); ultimo.focus(); }
+    else if(!e.shiftKey && document.activeElement===ultimo){ e.preventDefault(); primo.focus(); }
+  }
+  function quandoVisibile(el, fn){
+    var t=0;
+    (function attendi(){
+      if(getComputedStyle(el).visibility==='visible'){ fn(); return; }
+      if(++t>60) { fn(); return; }               /* tetto di sicurezza */
+      requestAnimationFrame(attendi);
+    })();
+  }
+
+  /* --- menu mobile --- */
+  function apriMenu(){
+    menu.classList.add('open'); burger.classList.add('open');
+    burger.setAttribute('aria-expanded','true'); burger.setAttribute('aria-label','Chiudi il menu');
+    menu.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden'; isola(true, null);
+    quandoVisibile(menu, function(){ var f=fuocabili(menu); if(f[0]) f[0].focus(); });
+  }
+  function chiudiMenu(tornaAlBurger){
+    menu.classList.remove('open'); burger.classList.remove('open');
+    burger.setAttribute('aria-expanded','false'); burger.setAttribute('aria-label','Apri il menu');
+    menu.setAttribute('aria-hidden','true');
+    document.body.style.overflow=''; isola(false, null);
+    if(tornaAlBurger) burger.focus();
+  }
+  burger.addEventListener('click', function(){
+    if(menu.classList.contains('open')) chiudiMenu(true); else apriMenu();
+  });
+  Array.prototype.forEach.call(menu.querySelectorAll('a'), function(a){
+    a.addEventListener('click', function(){ chiudiMenu(false); });
+  });
+  menu.addEventListener('keydown', function(e){ trappola(e, menu); });
+
+  /* --- lightbox --- */
+  function mostra(i){
+    corrente=(i+tessere.length)%tessere.length;
+    var b=tessere[corrente];
+    lbImg.src=b.getAttribute('data-src');
+    lbImg.alt=b.querySelector('img').getAttribute('alt');
+    lbCap.innerHTML=b.getAttribute('data-cap');
+  }
+  function apriLb(i){
+    ultimoFuoco=document.activeElement;
+    mostra(i);
+    lb.classList.add('open'); lb.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden'; isola(true, null);
+    quandoVisibile(lb, function(){ lb.querySelector('.lb-close').focus(); });
+  }
+  function chiudiLb(){
+    lb.classList.remove('open'); lb.setAttribute('aria-hidden','true');
+    document.body.style.overflow=''; isola(false, null);
+    if(ultimoFuoco) ultimoFuoco.focus();
+  }
+  tessere.forEach(function(b,i){ b.addEventListener('click', function(){ apriLb(i); }); });
+  lb.querySelector('.lb-close').addEventListener('click', chiudiLb);
+  lb.querySelector('.lb-prev').addEventListener('click', function(){ mostra(corrente-1); });
+  lb.querySelector('.lb-next').addEventListener('click', function(){ mostra(corrente+1); });
+  lb.addEventListener('click', function(e){ if(e.target===lb) chiudiLb(); });
+  lb.addEventListener('keydown', function(e){ trappola(e, lb); });
+
+  document.addEventListener('keydown', function(e){
+    if(e.key==='Escape'){
+      if(lb.classList.contains('open')) chiudiLb();
+      else if(menu.classList.contains('open')) chiudiMenu(true);
+    }
+    if(!lb.classList.contains('open')) return;
+    if(e.key==='ArrowLeft') mostra(corrente-1);
+    if(e.key==='ArrowRight') mostra(corrente+1);
+  });
+})();
+</script>
+<script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
