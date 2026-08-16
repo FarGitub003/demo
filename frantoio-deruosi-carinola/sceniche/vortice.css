@@ -1,0 +1,15 @@
+/* vortice — gli elementi arrivano ruotando lungo una spirale e si assestano. */
+html.fm-js .fmx-vortice > * {
+  opacity: 0;
+  transform: translate3d(var(--fmx-dx, 0), var(--fmx-dy, 0), 0) rotate(var(--fmx-giro, 0deg)) scale(.6);
+}
+@media (prefers-reduced-motion: no-preference) {
+  html.fm-js .fmx-vortice > * {
+    transition: opacity .7s cubic-bezier(.22, 1, .36, 1) var(--fmx-ritardo, 0ms),
+                transform .95s cubic-bezier(.22, 1, .36, 1) var(--fmx-ritardo, 0ms);
+  }
+}
+html.fm-js .fmx-vortice.fmx-fermo > * { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html.fm-js .fmx-vortice > * { opacity: 1 !important; transform: none !important; }
+}

@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frantoio De Ruosi · Azienda Olivicola Biologica · Casanova di Carinola (CE)</title>
+<meta name="description" content="Frantoio di famiglia dal 1954 a Casanova di Carinola. Olio extra vergine biologico certificato ICEA: SOLO, Monte Greci, Terra Felix. Migliore produzione regionale della Campania, Mastro d'Oro 2026.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Frantoio De Ruosi · Azienda Olivicola Biologica">
+<meta property="og:description" content="Frantoio di famiglia dal 1954 a Casanova di Carinola (CE). Olio extra vergine biologico certificato ICEA.">
+<meta property="og:image" content="https://demo.francescoar.com/frantoio-deruosi-carinola/img/01-olive-sul-ramo.jpg">
+<meta name="theme-color" content="#20261D">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@500;600;700;800&family=Domine:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="far-motion.min.css">
+<script src="far-motion.min.js"></script>
+<link rel="stylesheet" href="sceniche/vortice.css">
+<script src="sceniche/vortice.js" defer></script>
+<style>
+:root{
+  --foglio:#F5F3E9;
+  --verde-marchio:#006B33;
+  --verde-testo:#005F2D;
+  --verde-chiaro:#89BAA1;
+  --oliva-logo:#A8C664;
+  --oliva-testo:#49572B;
+  --insegna:#233F69;
+  --insegna-chiaro:#A4B0C1;
+  --frantoio:#252B38;
+  --inchiostro:#20261D;
+  --uliveto:#3E3F38;
+  --uliveto-testo:#485447;
+  --acciaio-testo:#525253;
+  --acciaio-chiaro:#AEAFB0;
+  --luce:#F5F3E9;
+  --carta:#EDEADC;
+  --barra:64px;
+  --display:"Darker Grotesque",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --testo:"Domine",Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--foglio);color:var(--inchiostro);
+  font-family:var(--testo);font-size:17px;line-height:1.72;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3,.disp{font-family:var(--display);letter-spacing:.06em;text-transform:uppercase;
+  font-weight:700;line-height:1.02;margin:0}
+p{margin:0 0 1.05em}
+a{color:var(--verde-testo)}
+.wrap{width:min(1140px,92vw);margin:0 auto}
+.stretto{width:min(760px,92vw);margin:0 auto}
+[id]{scroll-margin-top:calc(var(--barra) + 15px)}
+
+/* ---------- skip ---------- */
+.skip{position:absolute;left:12px;top:-70px;z-index:120;background:var(--inchiostro);
+  color:var(--luce);padding:11px 18px;border-radius:4px;font-family:var(--display);
+  font-size:19px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
+.skip:focus{top:12px}
+
+/* ---------- barra ---------- */
+#nav{position:fixed;inset:0 0 auto 0;z-index:100;height:var(--barra);
+  background:var(--inchiostro);color:var(--luce);
+  display:flex;align-items:center;gap:18px;padding:0 clamp(14px,4vw,34px);
+  border-bottom:1px solid rgba(245,243,233,.16)}
+.nav-brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--luce);flex:0 0 auto}
+.nav-brand img{height:38px;width:auto}
+.nav-brand b{font-family:var(--display);font-size:22px;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.nav-links{display:flex;gap:clamp(10px,1.7vw,24px);margin-left:auto;list-style:none;padding:0}
+.nav-links a{color:var(--luce);text-decoration:none;font-family:var(--display);
+  font-size:20px;letter-spacing:.09em;text-transform:uppercase;font-weight:600;
+  padding:6px 2px;border-bottom:2px solid transparent}
+.nav-links a:hover,.nav-links a:focus-visible{border-bottom-color:var(--oliva-logo)}
+.nav-tel{margin-left:auto;flex:0 0 auto}
+.nav-links + .nav-tel{margin-left:clamp(10px,1.7vw,24px)}
+.nav-tel a.nav-cta{display:inline-block;background:var(--oliva-logo);color:var(--inchiostro);
+  text-decoration:none;font-family:var(--display);font-size:20px;letter-spacing:.07em;
+  text-transform:uppercase;font-weight:800;padding:8px 15px;border-radius:3px;white-space:nowrap}
+.nav-cta .lungo{display:inline}
+.nav-cta .corto{display:none}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:9px;margin-left:6px;flex:0 0 auto}
+.burger span{display:block;width:24px;height:2px;background:var(--luce);margin:5px 0;
+  transition:transform .25s ease,opacity .2s ease}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+#mobileMenu{position:fixed;inset:var(--barra) 0 auto 0;z-index:99;background:var(--inchiostro);
+  border-bottom:1px solid rgba(245,243,233,.16);
+  opacity:0;visibility:hidden;transform:translateY(-8px);
+  transition:opacity .22s ease,transform .22s ease,visibility .22s}
+#mobileMenu.open{opacity:1;visibility:visible;transform:none}
+#mobileMenu ul{list-style:none;margin:0;padding:8px 0 16px}
+#mobileMenu a{display:block;color:var(--luce);text-decoration:none;padding:12px clamp(14px,4vw,34px);
+  font-family:var(--display);font-size:23px;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+@media (max-width:920px){
+  .nav-links{display:none}
+  .burger{display:block;order:9}
+  .nav-tel{margin-left:auto}
+}
+@media (max-width:560px){
+  .nav-brand b{display:none}
+  .nav-cta .lungo{display:none}
+  .nav-cta .corto{display:inline}
+}
+
+/* ---------- hero: titolo SOTTO la foto ---------- */
+.hero{padding-top:var(--barra)}
+.hero-media{position:relative;background:var(--inchiostro)}
+.hero-media img{width:100%;height:clamp(280px,54vh,560px);object-fit:cover}
+.hero-cred{position:absolute;right:10px;bottom:8px;background:rgba(32,38,29,.82);color:var(--luce);
+  font-family:var(--display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;
+  padding:4px 9px;border-radius:3px}
+.hero-testo{background:var(--inchiostro);color:var(--luce);padding:clamp(26px,5vw,52px) 0 clamp(30px,5vw,56px)}
+.hero-occhio{font-family:var(--display);font-size:clamp(19px,2.2vw,23px);letter-spacing:.22em;
+  text-transform:uppercase;color:var(--oliva-logo);font-weight:600;margin:0 0 10px}
+.hero h1{font-size:clamp(44px,8.4vw,104px);color:var(--luce)}
+.hero h1 em{font-style:normal;color:var(--oliva-logo)}
+.hero-sotto{margin:16px 0 0;max-width:62ch;color:var(--luce);font-size:clamp(17px,1.7vw,19px)}
+.hero-dati{display:flex;flex-wrap:wrap;gap:10px 30px;margin:22px 0 0;padding:0;list-style:none}
+.hero-dati li{font-family:var(--display);font-size:20px;letter-spacing:.1em;text-transform:uppercase;
+  font-weight:600;color:var(--insegna-chiaro)}
+.hero-dati b{color:var(--luce);font-weight:800}
+
+/* ---------- sezioni ---------- */
+section{padding:clamp(44px,6.5vw,86px) 0}
+section.scura{background:var(--frantoio);color:var(--luce)}
+section.scura h2,section.scura h3{color:var(--luce)}
+section.scura a{color:var(--verde-chiaro)}
+.occhio{font-family:var(--display);font-size:19px;letter-spacing:.24em;text-transform:uppercase;
+  font-weight:600;color:var(--verde-testo);margin:0 0 8px}
+.scura .occhio{color:var(--oliva-logo)}
+h2{font-size:clamp(32px,5vw,58px);margin:0 0 18px}
+h3{font-size:clamp(24px,2.6vw,30px);margin:0 0 8px}
+.guida{max-width:66ch}
+
+/* premio */
+.premio{background:var(--verde-marchio);color:#fff;padding:clamp(26px,4vw,44px) 0}
+.premio .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:14px 40px}
+.premio .anno{font-family:var(--display);font-size:clamp(58px,9vw,104px);font-weight:800;
+  line-height:.86;letter-spacing:.02em;color:#fff}
+.premio .txt{flex:1 1 340px}
+.premio h2{font-size:clamp(24px,3.1vw,36px);margin:0 0 6px;color:#fff}
+.premio p{margin:0;color:#fff;font-size:16px}
+.premio cite{font-style:normal;display:block;margin-top:8px;font-size:14px;
+  font-family:var(--display);letter-spacing:.07em;text-transform:uppercase;color:#D8EBDF}
+
+/* colonne testo+foto */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(22px,3.6vw,52px);align-items:center}
+.duo.rov > *:first-child{order:2}
+@media (max-width:860px){.duo{grid-template-columns:1fr}.duo.rov > *:first-child{order:0}}
+figure{margin:0}
+figure img{width:100%;height:auto;border-radius:3px}
+figcaption{font-family:var(--display);font-size:17px;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--acciaio-testo);margin-top:7px}
+.scura figcaption{color:var(--acciaio-chiaro)}
+
+/* numeri del processo */
+.passi{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:26px 30px;
+  margin:34px 0 0;padding:0;list-style:none}
+.passi li{padding:14px 0 0;border-top:1px solid rgba(168,198,100,.42)}
+.passi .n{font-family:var(--display);font-size:clamp(30px,3.4vw,42px);font-weight:800;line-height:1;
+  color:var(--oliva-logo);display:block;margin-bottom:6px;letter-spacing:.02em}
+.passi .n small{font-size:.46em;font-weight:600;letter-spacing:.12em;margin-left:.28em}
+.passi h3{font-size:21px;margin-bottom:4px}
+.passi p{font-size:15.5px;margin:0;color:var(--acciaio-chiaro)}
+
+/* oli */
+.oli{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:34px}
+.olio{background:var(--carta);border-radius:4px;padding:24px 22px}
+.olio h3{font-size:26px;margin-bottom:2px;color:var(--verde-testo)}
+.olio.b h3{color:var(--insegna)}
+.olio.c h3{color:var(--oliva-testo)}
+.olio .var{font-family:var(--display);font-size:18px;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--acciaio-testo);font-weight:600;margin-bottom:10px}
+.olio p{font-size:16px;margin-bottom:0}
+.valori{display:flex;gap:18px;flex-wrap:wrap;margin:14px 0 0;padding:12px 0 0;list-style:none;
+  border-top:1px solid rgba(32,38,29,.16)}
+.valori li{font-family:var(--display);font-size:17px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--acciaio-testo);font-weight:600}
+.valori b{color:var(--inchiostro);font-size:21px;font-weight:800}
+.altri{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:22px}
+.altro{border:1px solid rgba(32,38,29,.17);border-radius:4px;padding:18px 18px}
+.altro h3{font-size:21px}
+.altro p{font-size:15.5px;margin:0}
+
+/* riconoscimenti (scenica vortice) */
+.premi{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:34px}
+.premio-card{background:rgba(245,243,233,.07);border:1px solid rgba(245,243,233,.2);
+  border-radius:4px;padding:18px 18px}
+.premio-card .a{font-family:var(--display);font-size:32px;font-weight:800;line-height:1;
+  color:var(--oliva-logo);display:block;margin-bottom:6px}
+.premio-card h3{font-size:19px;margin-bottom:4px}
+.premio-card p{font-size:14.5px;margin:0;color:var(--acciaio-chiaro)}
+
+/* galleria */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;
+  margin-top:30px;padding:0;list-style:none}
+.gallery-grid button{padding:0;border:0;background:none;cursor:pointer;display:block;width:100%;
+  border-radius:3px;overflow:hidden;line-height:0}
+.gallery-grid img{width:100%;height:180px;object-fit:cover;
+  transition:transform .4s cubic-bezier(.22,1,.36,1),opacity .3s ease}
+.gallery-grid button:hover img,.gallery-grid button:focus-visible img{transform:scale(1.045);opacity:.93}
+.gallery-grid button:focus-visible{outline:3px solid var(--oliva-logo);outline-offset:2px}
+
+/* lightbox */
+#lightbox{position:fixed;inset:0;z-index:200;background:rgba(20,24,18,.96);
+  display:flex;align-items:center;justify-content:center;padding:clamp(14px,4vw,48px);
+  opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s}
+#lightbox.open{opacity:1;visibility:visible}
+#lightbox figure{max-width:min(1100px,94vw);position:relative;z-index:1}
+#lightbox img{max-height:78vh;width:auto;max-width:100%;margin:0 auto;border-radius:3px}
+#lightbox figcaption{color:var(--luce);text-align:center;margin-top:12px;font-size:17px;
+  text-transform:none;letter-spacing:.02em;font-family:var(--testo)}
+.lb-close,.lb-prev,.lb-next{position:absolute;z-index:5;background:rgba(20,24,18,.86);
+  color:var(--luce);border:1px solid rgba(245,243,233,.4);border-radius:50%;
+  width:48px;height:48px;cursor:pointer;font-size:24px;line-height:1;
+  font-family:var(--display);font-weight:700;display:grid;place-items:center}
+.lb-close{top:clamp(10px,2.5vw,26px);right:clamp(10px,2.5vw,26px)}
+.lb-prev{left:clamp(6px,2vw,26px);top:50%;transform:translateY(-50%)}
+.lb-next{right:clamp(6px,2vw,26px);top:50%;transform:translateY(-50%)}
+.lb-close:focus-visible,.lb-prev:focus-visible,.lb-next:focus-visible{outline:3px solid var(--oliva-logo);outline-offset:2px}
+
+/* contatti */
+.contatti{display:grid;grid-template-columns:1fr 1fr;gap:clamp(22px,4vw,54px)}
+@media (max-width:860px){.contatti{grid-template-columns:1fr}}
+.dati{list-style:none;padding:0;margin:0 0 20px}
+.dati li{padding:11px 0;border-bottom:1px solid rgba(32,38,29,.16)}
+.dati .et{font-family:var(--display);font-size:17px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--oliva-testo);display:block;font-weight:600}
+.dati a{color:var(--inchiostro);text-decoration:none;border-bottom:1px solid var(--verde-testo)}
+.dati b{font-size:19px;font-weight:600}
+.scura .dati li{border-bottom-color:rgba(245,243,233,.18)}
+.scura .dati .et{color:var(--oliva-logo)}
+.scura .dati a{color:var(--luce);border-bottom-color:var(--verde-chiaro)}
+.strada{background:var(--carta);padding:22px 24px;border-radius:4px;font-size:15.5px}
+.strada h3{font-size:19px;margin-bottom:6px}
+.strada p:last-child{margin-bottom:0}
+
+/* piede */
+footer{background:var(--inchiostro);color:var(--acciaio-chiaro);padding:38px 0 30px;font-size:14.5px}
+footer a{color:var(--verde-chiaro)}
+footer .marchio{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+footer .marchio img{height:44px;width:auto}
+footer .ai{margin-top:18px;padding-top:16px;border-top:1px solid rgba(245,243,233,.18);font-size:13.5px}
+</style>
+<noscript><style>
+/* Senza JS il burger non può aprire niente: la barra diventa statica e i link
+   compaiono su una striscia orizzontale scorrevole, sempre raggiungibili. */
+.burger{display:none!important}
+#mobileMenu{display:none}
+@media (max-width:920px){
+  #nav{position:static;height:auto;flex-wrap:wrap;padding-top:9px;padding-bottom:9px;row-gap:8px}
+  .hero{padding-top:0}
+  .nav-links{display:flex!important;order:9;width:100%;margin:0;overflow-x:auto;
+    gap:16px;padding-bottom:2px;-webkit-overflow-scrolling:touch}
+  .nav-links a{white-space:nowrap}
+}
+</style></noscript>
+</head>
+<body>
+
+<a class="skip" href="#main">Salta al contenuto</a>
+
+<nav id="nav" aria-label="Principale">
+  <a class="nav-brand" href="#main">
+    <img src="img/logo-deruosi.png" alt="Marchio del Frantoio De Ruosi: ovale verde con un ramo d'olivo, una oliva nera e la scritta Azienda Olivicola Biologica" width="200" height="120">
+    <b>De Ruosi</b>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#azienda">L'azienda</a></li>
+    <li><a href="#frantoio">Il frantoio</a></li>
+    <li><a href="#oli">Gli oli</a></li>
+    <li><a href="#premi">Riconoscimenti</a></li>
+    <li><a href="#visite">Visite</a></li>
+    <li><a href="#dove">Dove siamo</a></li>
+  </ul>
+  <span class="nav-tel"><a class="nav-cta" href="tel:+393403538012"><span class="lungo">340 3538012</span><span class="corto">Chiama</span></a></span>
+  <button class="burger" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobileMenu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="mobileMenu">
+  <ul>
+    <li><a href="#azienda">L'azienda</a></li>
+    <li><a href="#frantoio">Il frantoio</a></li>
+    <li><a href="#oli">Gli oli</a></li>
+    <li><a href="#premi">Riconoscimenti</a></li>
+    <li><a href="#visite">Visite e molitura</a></li>
+    <li><a href="#dove">Dove siamo</a></li>
+  </ul>
+</div>
+
+<main id="main">
+
+  <header class="hero">
+    <div class="hero-media">
+      <img src="img/01-olive-sul-ramo.jpg" alt="Olive mature blu-violacee coperte dalla pruina, attaccate ai rametti, con le foglie d'olivo sfocate sul fondo" width="2200" height="1650" fetchpriority="high">
+      <span class="hero-cred">Foto: Frantoio De Ruosi</span>
+    </div>
+    <div class="hero-testo">
+      <div class="wrap">
+        <p class="hero-occhio" data-fm="sfuma">Casanova di Carinola · Caserta</p>
+        <h1><span data-fm="sali">Frantoio</span><br><em data-fm="sali" data-fm-ritardo="130">De Ruosi</em></h1>
+        <p class="hero-sotto" data-fm="sali">Azienda olivicola biologica. Il frantoio di famiglia macina qui dal 1954: le olive dei nostri uliveti e quelle dei produttori locali che si affidano a noi per trasformare il loro prodotto.</p>
+        <ul class="hero-dati" data-fm="sali" data-fm-passo="80">
+          <li>Dal <b>1954</b></li>
+          <li>Biologico <b>ICEA</b></li>
+          <li>Estrazione <b>a due fasi</b></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <div class="premio">
+    <div class="wrap">
+      <span class="anno" data-fm="sfuma">2026</span>
+      <div class="txt">
+        <h2>Migliore produzione regionale della Campania</h2>
+        <p>Classifica Mastro d'Oro 2026, il concorso dell'Associazione Italiana Frantoiani Oleari, giunto all'ottava edizione. I vincitori sono stati proclamati a Evolio Expo, a Bari, dal 29 al 31 gennaio 2026. Nello stesso elenco, fra i migliori oli monocultivar italiani, il premio speciale all'Itrana del Frantoio De Ruosi.</p>
+        <cite>Fonte: classifica Mastro d'Oro 2026 · AIFO</cite>
+      </div>
+    </div>
+  </div>
+
+  <section id="azienda">
+    <div class="wrap">
+      <div class="duo">
+        <div>
+          <p class="occhio">L'azienda</p>
+          <h2>Un frantoio<br>di famiglia</h2>
+          <div class="guida">
+            <p>Il frantoio aziendale è il cuore pulsante dell'azienda: dal 1954, anno della sua fondazione, ha molito le olive di produzione aziendale e quelle dei produttori locali.</p>
+            <p>Nel 1994 Antonio De Ruosi è subentrato al padre nella gestione del frantoio di famiglia, decidendo da subito che i loro oli sarebbero stati venduti solo confezionati e con una filiera completa di tracciabilità.</p>
+            <p>Dalla campagna 2011/12, concluso il periodo di conversione, l'azienda certifica come biologico l'olio prodotto: tutte le fasi della produzione in regime di agricoltura biologica sono certificate dall'organo di controllo ICEA. Da gennaio 2023 il Frantoio De Ruosi fa parte della FIOI, la Federazione Italiana Olivicoltori Indipendenti.</p>
+          </div>
+        </div>
+        <figure data-fm="sali">
+          <img src="img/10-ingresso-insegna.jpg" alt="L'ingresso dell'azienda: un pilastro in pietra con il numero civico 10 su piastrella di ceramica e l'insegna ovale blu del Frantoio De Ruosi, con la collina alle spalle" width="2200" height="946" loading="lazy">
+          <figcaption>L'ingresso in via Nazionale 10</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="frantoio" class="scura">
+    <div class="wrap">
+      <p class="occhio">Il frantoio</p>
+      <h2>L'acciaio,<br>e i trenta gradi</h2>
+      <div class="duo">
+        <div class="guida">
+          <p>In mezzo secolo i macchinari sono stati rinnovati di continuo. Nel settembre 2015 sono stati sostituiti il gruppo di defogliazione e lavaggio e il gruppo di gramolazione: una nuova lavatrice capace di lavorare oltre trenta quintali l'ora e un defogliatore-deramificatore che manda in frangitura olive perfettamente pulite e defogliate. Tutta la parte di defogliazione e lavaggio è stata portata all'esterno, in un locale apposito, per salvaguardare al massimo l'igiene della sala di estrazione.</p>
+          <p>Le tre vecchie gramole sono state sostituite da cinque gramole da 700 litri ciascuna, monitorate per temperature e tempi. Nelle gramole la temperatura è controllata da una centralina elettronica e non supera mai i trenta gradi.</p>
+        </div>
+        <figure data-fm="sali">
+          <img src="img/02-gramole-linea.jpg" alt="La linea di gramolazione: corpi in acciaio con coperchi cilindrici allineati sotto una struttura portante blu, nella sala di lavorazione" width="2200" height="1650" loading="lazy">
+          <figcaption>La linea di gramolazione</figcaption>
+        </figure>
+      </div>
+      <ul class="passi" data-fm="sali" data-fm-passo="110">
+        <li><span class="n">30+<small>quintali l'ora</small></span><h3>Lavaggio</h3><p>La lavatrice installata nel 2015, in un locale separato dalla sala di estrazione.</p></li>
+        <li><span class="n">700<small>litri l'una</small></span><h3>Gramolazione</h3><p>Cinque gramole, con temperature e tempi monitorati da centralina.</p></li>
+        <li><span class="n">30<small>gradi, mai oltre</small></span><h3>Temperatura</h3><p>Il limite che la pasta di olive non supera prima di andare all'estrattore.</p></li>
+        <li><span class="n">2<small>fasi, dal 2020</small></span><h3>Estrazione</h3><p>La centrifuga installata nel marzo 2020 estrae l'olio senza alcuna aggiunta di acqua.</p></li>
+      </ul>
+      <p class="guida" style="margin-top:28px">Il residuo di lavorazione che esce dalla centrifuga a due fasi può essere utilizzato per produrre energia alternativa negli impianti a biogas.</p>
+    </div>
+  </section>
+
+  <section id="oli">
+    <div class="wrap">
+      <p class="occhio">I nostri oli</p>
+      <h2>Tre etichette</h2>
+      <p class="guida">Tre etichette, e per ognuna le cultivar che la compongono.</p>
+      <div class="oli">
+        <article class="olio" data-fm="sali">
+          <h3>Solo</h3>
+          <p class="var">Santa Caterina · Leccino</p>
+          <p>Dal primo dicembre 2019 sostituisce la storica etichetta Sant'Ilario. Il nome indica ciò che solo ed esclusivamente è contenuto nella bottiglia: olio extra vergine di oliva 100% italiano, unicamente dell'annata in corso e quindi millesimato, prodotto con olive dei nostri uliveti ed estratto a freddo nel nostro frantoio. In fondo a ogni etichetta c'è la firma di Antonio De Ruosi.</p>
+        </article>
+        <article class="olio b" data-fm="sali">
+          <h3>Monte Greci</h3>
+          <p class="var">Monovarietale Itrana</p>
+          <p>Il nostro monovarietale di cultivar Itrana. Alla sua annata biologica 2018 la Fondazione Italiana Sommelier, tramite l'Associazione Italiana Sommelier dell'Olio, ha assegnato le cinque gocce della guida Bibenda 2019.</p>
+        </article>
+        <article class="olio c" data-fm="sali">
+          <h3>Terra Felix</h3>
+          <p class="var">Monovarietale Sessana</p>
+          <p>Nasce dal progetto dell'Associazione Olivicoltori di Terra di Lavoro, di cui l'azienda fa parte, e viene prodotto nella scrupolosa osservanza del disciplinare che quell'associazione si è data. Le piante sono le quasi 350 di varietà Sessana in contrada Pastine, nella piana di Carinola.</p>
+          <ul class="valori">
+            <li>Acidità <b>0,30</b></li>
+            <li>Perossidi <b>6</b></li>
+            <li>Polifenoli <b>400</b></li>
+          </ul>
+          <p style="font-size:14px;margin-top:8px;color:var(--acciaio-testo)">Valori chimico-fisici dichiarati per la raccolta 2022.</p>
+        </article>
+      </div>
+      <div class="altri">
+        <div class="altro" data-fm="sali"><h3>Le Essenze</h3><p>La linea di oli aromatizzati.</p></div>
+        <div class="altro" data-fm="sali"><h3>I Sottoli</h3><p>Filetto di zucca gialla al naturale e filetti di melanzane in vasetto da 380 grammi, cime di rapa in vasetto da 300 grammi, tutti in olio extra vergine di oliva Solo.</p></div>
+        <div class="altro" data-fm="sali"><h3>Crem'olio</h3><p>Crema spalmabile di olio extra vergine biologico, su brevetto del dipartimento di Reologia dell'Università di Calabria. Consentita nell'alimentazione vegana e per celiaci, naturalmente priva di lattosio.</p></div>
+        <div class="altro" data-fm="sali"><h3>Gli Orci in ceramica</h3><p>Orci in ceramica smaltata decorata a mano da 90, 190 e 360 millilitri, realizzati da una azienda artigiana di Castellammare di Stabia. Si confezionano con una qualsiasi delle nostre tipologie di olio.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="premi" class="scura">
+    <div class="wrap">
+      <p class="occhio">Riconoscimenti</p>
+      <h2>Dal 2014 a oggi</h2>
+      <p class="guida">Gli oli dell'azienda sono presenti nelle guide di settore edite in Italia, e più volte l'azienda ha ottenuto risultati di prestigio nei concorsi e nei banchi di assaggio per olio extra vergine di oliva.</p>
+      <div class="premi fm-palco" data-fms="vortice" data-fms-raggio="150" data-fms-passo="80">
+        <article class="premio-card"><span class="a">2026</span><h3>Mastro d'Oro</h3><p>Migliore produzione regionale della Campania, e premio speciale monocultivar all'Itrana.</p></article>
+        <article class="premio-card"><span class="a">2023</span><h3>FIOI</h3><p>Ingresso nella Federazione Italiana Olivicoltori Indipendenti.</p></article>
+        <article class="premio-card"><span class="a">2020</span><h3>Premio ExtraBio</h3><p>L'olio riconosciuto tra i migliori oli biologici della Campania.</p></article>
+        <article class="premio-card"><span class="a">2019</span><h3>Cinque gocce Bibenda</h3><p>Guida Bibenda 2019 della Fondazione Italiana Sommelier, al Monte Greci Bio 2018.</p></article>
+        <article class="premio-card"><span class="a">2018</span><h3>Terra Laboris</h3><p>Secondo classificato nella categoria fruttato intenso, con il Terra Felix 2017, alla prima edizione del concorso della Camera di Commercio di Caserta.</p></article>
+        <article class="premio-card"><span class="a">2017</span><h3>Slow Olive</h3><p>Azienda selezionata da Slow Food Italia per la campagna olearia 2017-2018.</p></article>
+        <article class="premio-card"><span class="a">2015</span><h3>Guida Slow Food</h3><p>Gli oli recensiti nella guida agli extravergini.</p></article>
+        <article class="premio-card"><span class="a">2014</span><h3>Medaglia d'oro Biol</h3><p>Gold medal al concorso Biol 2014 per il cru biologico.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="territorio">
+    <div class="wrap">
+      <div class="duo rov">
+        <figure data-fm="sali">
+          <img src="img/13-uliveto-c.jpg" alt="Olivo secolare dal tronco largo e solcato, con chiazze di lichene chiaro, su un prato verde" width="1600" height="1066" loading="lazy">
+          <figcaption>Gli uliveti aziendali</figcaption>
+        </figure>
+        <div>
+          <p class="occhio">Il territorio</p>
+          <h2>La piana<br>di Carinola</h2>
+          <div class="guida">
+            <p>Il nome Terra Felix da millenni identifica un'area geografica ben precisa all'interno della Campania anch'essa Felix: la provincia di Caserta. Territorio di straordinaria fertilità, caratterizzato da un microclima che ha favorito da sempre l'eccellenza in agricoltura.</p>
+            <p>Sant'Ilario, il nome che l'azienda ha portato in etichetta dal 1994 al 2019, è il nome della località in cui si trova gran parte dei nostri oliveti. Le piante di varietà Sessana stanno in contrada Pastine, nella piana del comune di Carinola.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="wrap">
+      <p class="occhio">Le fotografie</p>
+      <h2>L'uliveto,<br>e la sala</h2>
+      <ul class="gallery-grid">
+        <li><button type="button" data-src="img/01-olive-sul-ramo.jpg" data-cap="Olive mature blu-violacee coperte dalla pruina, attaccate ai rametti, con le foglie d'olivo sfocate sul fondo"><img src="img/01-olive-sul-ramo.jpg" alt="Olive mature blu-violacee coperte dalla pruina, attaccate ai rametti, con le foglie d'olivo sfocate sul fondo" loading="lazy"></button></li>
+        <li><button type="button" data-src="img/02-gramole-linea.jpg" data-cap="La linea di gramolazione: corpi in acciaio con coperchi cilindrici allineati sotto una struttura portante blu"><img src="img/02-gramole-linea.jpg" alt="La linea di gramolazione: corpi in acciaio con coperchi cilindrici allineati sotto una struttura portante blu" loading="lazy"></button></li>
+        <li><button type="button" data-src="img/11-uliveto-a.jpg" data-cap="Filare di olivi secolari su prato verde, con le chiome argentate"><img src="img/11-uliveto-a.jpg" alt="Filare di olivi secolari su prato verde, con le chiome argentate" loading="lazy"></button></li>
+        <li><button type="button" data-src="img/03-gramole-due-corpi.jpg" data-cap="Due corpi gramolatori affiancati, con la fila dei comandi verdi sul fianco"><img src="img/03-gramole-due-corpi.jpg" alt="Due corpi gramolatori affiancati, con la fila dei comandi verdi sul fianco" loading="lazy"></button></li>
+        <li><button type="button" data-src="img/12-uliveto-b.jpg" data-cap="Olivi su un prato in pendenza, con la collina boscosa sul fondo"><img src="img/12-uliveto-b.jpg" alt="Olivi su un prato in pendenza, con la collina boscosa sul fondo" loading="lazy"></button></li>
+        <li><button type="button" data-src="img/04-gramole-sala.jpg" data-cap="La sala di lavorazione con le gramole in acciaio e le tubazioni sopra"><img src="img/04-gramole-sala.jpg" alt="La sala di lavorazione con le gramole in acciaio e le tubazioni sopra" loading="lazy"></button></li>
+        <li><button type="button" data-src="img/14-uliveto-d.jpg" data-cap="Un olivo dal tronco largo in primo piano, l'uliveto che continua sul fondo"><img src="img/14-uliveto-d.jpg" alt="Un olivo dal tronco largo in primo piano, l'uliveto che continua sul fondo" loading="lazy"></button></li>
+        <li><button type="button" data-src="img/09-terrafelix-tavolo.jpg" data-cap="Due bottiglie e una latta da tre litri di Terra Felix su un tavolo di legno, accanto a un cesto di vimini e a una ciotola di olive"><img src="img/09-terrafelix-tavolo.jpg" alt="Due bottiglie e una latta da tre litri di Terra Felix su un tavolo di legno, accanto a un cesto di vimini e a una ciotola di olive" loading="lazy"></button></li>
+        <li><button type="button" data-src="img/05-gramole-quadro.jpg" data-cap="Le gramole viste dal lato del quadro elettrico di comando"><img src="img/05-gramole-quadro.jpg" alt="Le gramole viste dal lato del quadro elettrico di comando" loading="lazy"></button></li>
+        <li><button type="button" data-src="img/15-uliveto-e.jpg" data-cap="L'uliveto in una giornata coperta, i tronchi scuri sull'erba"><img src="img/15-uliveto-e.jpg" alt="L'uliveto in una giornata coperta, i tronchi scuri sull'erba" loading="lazy"></button></li>
+        <li><button type="button" data-src="img/06-sala-lavorazione.jpg" data-cap="La sala di lavorazione vista d'insieme, con il pavimento chiaro e la struttura blu"><img src="img/06-sala-lavorazione.jpg" alt="La sala di lavorazione vista d'insieme, con il pavimento chiaro e la struttura blu" loading="lazy"></button></li>
+        <li><button type="button" data-src="img/16-uliveto-montegreci.jpg" data-cap="Olivi su prato verde, con le chiome che chiudono l'inquadratura sul fondo"><img src="img/16-uliveto-montegreci.jpg" alt="Olivi su prato verde, con le chiome che chiudono l'inquadratura sul fondo" loading="lazy"></button></li>
+        <li><button type="button" data-src="img/08-olive-raccolte.jpg" data-cap="Olive appena raccolte, verdi e violacee mescolate, viste da vicino"><img src="img/08-olive-raccolte.jpg" alt="Olive appena raccolte, verdi e violacee mescolate, viste da vicino" loading="lazy"></button></li>
+        <li><button type="button" data-src="img/07-estrazione-coclea.jpg" data-cap="La zona di estrazione: l'elevatore a coclea con la sua scala e i macchinari sul fondo"><img src="img/07-estrazione-coclea.jpg" alt="La zona di estrazione: l'elevatore a coclea con la sua scala e i macchinari sul fondo" loading="lazy"></button></li>
+        <li><button type="button" data-src="img/10-ingresso-insegna.jpg" data-cap="L'ingresso dell'azienda: pilastro in pietra con il civico 10 e l'insegna ovale blu del Frantoio De Ruosi"><img src="img/10-ingresso-insegna.jpg" alt="L'ingresso dell'azienda: pilastro in pietra con il civico 10 e l'insegna ovale blu del Frantoio De Ruosi" loading="lazy"></button></li>
+      </ul>
+      <p style="margin-top:14px;font-size:14.5px;color:var(--acciaio-testo)">Fotografie del Frantoio De Ruosi.</p>
+    </div>
+  </section>
+
+  <section id="visite" class="scura">
+    <div class="wrap">
+      <p class="occhio">Visite e molitura</p>
+      <h2>Venite a vedere<br>come si fa</h2>
+      <div class="duo">
+        <div class="guida">
+          <p>L'azienda è ben felice di ospitare visite guidate agli uliveti e al frantoio nel periodo di molitura. Organizza inoltre per i propri clienti, gratuitamente, corsi di assaggio e valutazione organolettica degli oli di oliva, con lo scopo di far comprendere al grande pubblico le caratteristiche organolettiche proprie degli oli extra vergine di qualità.</p>
+          <p>Il Frantoio De Ruosi da sempre è lieto di accogliere amici, appassionati e clienti presso la propria sede aziendale. Preavvisando del vostro arrivo sarà possibile organizzare percorsi didattici e divulgativi relativi all'assaggio e alla conoscenza del mondo dell'olio extra vergine di oliva.</p>
+          <p>Il frantoio mola anche le olive dei produttori locali che si affidano a noi per trasformare il loro prodotto.</p>
+        </div>
+        <figure data-fm="sali">
+          <img src="img/07-estrazione-coclea.jpg" alt="La zona di estrazione del frantoio, con l'elevatore a coclea e la scala di servizio" width="2200" height="1650" loading="lazy">
+          <figcaption>La sala di estrazione</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="dove">
+    <div class="wrap">
+      <p class="occhio">Dove siamo</p>
+      <h2>Via Nazionale 10<br>Casanova di Carinola</h2>
+      <div class="contatti" style="margin-top:30px">
+        <div>
+          <ul class="dati" style="border-top:1px solid rgba(32,38,29,.16)">
+            <li><span class="et">Indirizzo</span><b>Via Nazionale 10 &middot; 81030 Casanova di Carinola (CE)</b></li>
+            <li><span class="et">Telefono</span><b><a href="tel:+393403538012">340 3538012</a> &middot; <a href="tel:+390823939358">0823 939358</a></b></li>
+            <li><span class="et">Email</span><b><a href="mailto:olioderuosi@libero.it">olioderuosi@libero.it</a></b></li>
+            <li><span class="et">Visite</span><b>Su appuntamento, preavvisando del vostro arrivo</b></li>
+          </ul>
+        </div>
+        <div>
+          <div class="strada" style="background:var(--carta);border-left-color:var(--verde-marchio)">
+            <h3>Per chi arriva da sud</h3>
+            <p>Uscire al casello autostradale A1 di Capua, proseguire lungo la strada statale Appia per circa 18 km, quindi svoltare a sinistra in direzione Carinola. Giunti a Carinola proseguire per ancora 1 km fino al centro abitato di Casanova: a 50 metri sulla destra dall'inizio del centro abitato troverete la nostra azienda.</p>
+            <h3 style="margin-top:16px">Per chi arriva da nord</h3>
+            <p>Seguire la strada statale Appia fino a Sessa Aurunca, proseguire ancora sull'Appia per circa 5 km in direzione Napoli fino alle indicazioni per Carinola, quindi svoltare a destra per Carinola e proseguire come sopra.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Fotografia ingrandita">
+  <button class="lb-close" type="button" aria-label="Chiudi">&times;</button>
+  <button class="lb-prev" type="button" aria-label="Fotografia precedente">&#8249;</button>
+  <button class="lb-next" type="button" aria-label="Fotografia successiva">&#8250;</button>
+  <figure>
+    <img id="lbImg" src="img/01-olive-sul-ramo.jpg" alt="">
+    <figcaption id="lbCap">Olive mature blu-violacee coperte dalla pruina, attaccate ai rametti, con le foglie d'olivo sfocate sul fondo</figcaption>
+  </figure>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="marchio">
+      <img src="img/logo-deruosi.png" alt="Marchio del Frantoio De Ruosi" width="200" height="120">
+      <div>
+        <strong style="color:var(--luce);font-family:var(--display);font-size:24px;letter-spacing:.09em;text-transform:uppercase">Frantoio De Ruosi</strong><br>
+        Azienda Olivicola Biologica
+      </div>
+    </div>
+    <p>Via Nazionale 10 &middot; 81030 Casanova di Carinola (CE)<br>
+      <a href="tel:+393403538012">340 3538012</a> &middot; <a href="tel:+390823939358">0823 939358</a> &middot;
+      <a href="mailto:olioderuosi@libero.it">olioderuosi@libero.it</a></p>
+    <p class="ai">Sito dimostrativo realizzato con AI da FAR AI &middot; contenuti da rivedere con l'attività prima della pubblicazione<br>
+      Testi e immagini provengono dalle fonti pubbliche dell'attività (il loro sito olioderuosi.it, oggi non più raggiungibile, recuperato dall'archivio del web) e restano di proprietà dell'attività.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'), burger=document.querySelector('.burger'),
+      menu=document.getElementById('mobileMenu'), lb=document.getElementById('lightbox'),
+      lbImg=document.getElementById('lbImg'), lbCap=document.getElementById('lbCap'),
+      main=document.getElementById('main'), foot=document.querySelector('footer'),
+      skip=document.querySelector('.skip'), brand=document.querySelector('.nav-brand'),
+      cta=document.querySelector('.nav-tel'), links=document.querySelector('.nav-links');
+  var tessere=[].slice.call(document.querySelectorAll('.gallery-grid button[data-src]'));
+  var idx=0, ultimoFuoco=null;
+
+  function fuori(on,tranne){
+    [main,foot,skip,brand,cta,links].forEach(function(n){
+      if(!n||n===tranne) return;
+      if(on) n.setAttribute('inert',''); else n.removeAttribute('inert');
+    });
+  }
+  function focusabili(root){
+    return [].slice.call(root.querySelectorAll('a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])'));
+  }
+  function trappola(e,root){
+    if(e.key!=='Tab') return;
+    var f=focusabili(root); if(!f.length) return;
+    var primo=f[0], ultimo=f[f.length-1];
+    if(e.shiftKey && document.activeElement===primo){ e.preventDefault(); ultimo.focus(); }
+    else if(!e.shiftKey && document.activeElement===ultimo){ e.preventDefault(); primo.focus(); }
+  }
+  function attendiVisibile(el,poi){
+    var t=0;
+    (function giro(){
+      if(getComputedStyle(el).visibility==='visible'||t>40) return poi();
+      t++; requestAnimationFrame(giro);
+    })();
+  }
+
+  /* ---- menu ---- */
+  function apriMenu(){
+    menu.classList.add('open'); burger.classList.add('open');
+    burger.setAttribute('aria-expanded','true'); burger.setAttribute('aria-label','Chiudi il menu');
+    fuori(true,null); nav.removeAttribute('inert'); burger.removeAttribute('inert');
+    attendiVisibile(menu,function(){ var f=focusabili(menu); if(f[0]) f[0].focus(); });
+  }
+  function chiudiMenu(tornaAlBurger){
+    menu.classList.remove('open'); burger.classList.remove('open');
+    burger.setAttribute('aria-expanded','false'); burger.setAttribute('aria-label','Apri il menu');
+    fuori(false,null);
+    if(tornaAlBurger) burger.focus();
+  }
+  burger.addEventListener('click',function(){ menu.classList.contains('open')?chiudiMenu(true):apriMenu(); });
+  menu.addEventListener('click',function(e){ if(e.target.closest('a')) chiudiMenu(false); });
+  menu.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){ chiudiMenu(true); return; }
+    trappola(e,menu);
+  });
+  burger.addEventListener('keydown',function(e){ if(menu.classList.contains('open')) trappola(e,menu); });
+
+  /* ---- lightbox ---- */
+  function mostra(i){
+    idx=(i+tessere.length)%tessere.length;
+    var b=tessere[idx];
+    lbImg.src=b.getAttribute('data-src');
+    lbImg.alt=b.getAttribute('data-cap')||'';
+    lbCap.textContent=b.getAttribute('data-cap')||'';
+  }
+  function apriLb(i){
+    ultimoFuoco=document.activeElement;
+    mostra(i); lb.classList.add('open');
+    fuori(true,null); nav.setAttribute('inert','');
+    attendiVisibile(lb,function(){ lb.querySelector('.lb-close').focus(); });
+  }
+  function chiudiLb(){
+    lb.classList.remove('open');
+    fuori(false,null); nav.removeAttribute('inert');
+    if(ultimoFuoco) ultimoFuoco.focus();
+  }
+  tessere.forEach(function(b,i){ b.addEventListener('click',function(){ apriLb(i); }); });
+  lb.querySelector('.lb-close').addEventListener('click',chiudiLb);
+  lb.querySelector('.lb-prev').addEventListener('click',function(){ mostra(idx-1); });
+  lb.querySelector('.lb-next').addEventListener('click',function(){ mostra(idx+1); });
+  lb.addEventListener('click',function(e){ if(e.target===lb) chiudiLb(); });
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open')) return;
+    if(e.key==='Escape'){ chiudiLb(); return; }
+    if(e.key==='ArrowLeft'){ mostra(idx-1); return; }
+    if(e.key==='ArrowRight'){ mostra(idx+1); return; }
+    trappola(e,lb);
+  });
+})();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://demo.francescoar.com/frantoio-deruosi-carinola/#azienda",
+  "name": "Frantoio Oleario Biologico De Ruosi",
+  "description": "Frantoio di famiglia dal 1954 a Casanova di Carinola. Olio extra vergine di oliva biologico certificato ICEA.",
+  "image": ["https://demo.francescoar.com/frantoio-deruosi-carinola/img/01-olive-sul-ramo.jpg", "https://demo.francescoar.com/frantoio-deruosi-carinola/img/02-gramole-linea.jpg", "https://demo.francescoar.com/frantoio-deruosi-carinola/img/10-ingresso-insegna.jpg"],
+  "logo": "https://demo.francescoar.com/frantoio-deruosi-carinola/img/logo-deruosi.png",
+  "telephone": ["+39 340 3538012", "+39 0823 939358"],
+  "email": "olioderuosi@libero.it",
+  "foundingDate": "1954",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Nazionale 10",
+    "addressLocality": "Casanova di Carinola",
+    "addressRegion": "CE",
+    "postalCode": "81030",
+    "addressCountry": "IT"
+  }
+}
+</script>
+<script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
