@@ -1,0 +1,21 @@
+/* dittico — due immagini sovrapposte, una maniglia le confronta.
+   Dal Pyramis blu-notte (Pietra/Luce). Trascinabile col dito e con le frecce. */
+.fmx-dittico { position: relative; overflow: hidden; touch-action: none; --fmx-taglio: 50%; }
+/* ⚠️ La maniglia e' un figlio come gli altri: se non la si esclude qui, si
+   prende inset:0 e clip-path e sparisce. (Trovato in QA il 09/08/2026.) */
+.fmx-dittico > *:not(.fmx-maniglia) { display: block; width: 100%; height: 100%; object-fit: cover; }
+.fmx-dittico > *:not(.fmx-maniglia) + *:not(.fmx-maniglia) {
+  position: absolute; inset: 0; clip-path: inset(0 0 0 var(--fmx-taglio));
+}
+.fmx-maniglia {
+  position: absolute; top: 0; bottom: 0; left: var(--fmx-taglio);
+  width: 2px; margin-left: -1px; background: var(--fmx-riga, #fff);
+  cursor: ew-resize; touch-action: none;
+}
+.fmx-maniglia::after {
+  content: ""; position: absolute; top: 50%; left: 50%; width: 40px; height: 40px;
+  transform: translate(-50%, -50%); border-radius: 50%;
+  background: var(--fmx-riga, #fff);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .35);
+}
+.fmx-maniglia:focus-visible { outline: 3px solid var(--fmx-riga, #fff); outline-offset: 4px; }

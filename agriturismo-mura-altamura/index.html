@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agriturismo Murà — masseria nel Parco dell'Alta Murgia, Altamura (BA)</title>
+<meta name="description" content="Masseria San Domenico, contrada Sgolgore: ristorante in una stalla ottocentesca da circa ottanta ospiti, sei camere, due scuderie da dodici box. Nel Parco Nazionale dell'Alta Murgia.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Agriturismo Murà — Altamura, Alta Murgia">
+<meta property="og:description" content="Una masseria in contrada Sgolgore, nel Parco dell'Alta Murgia: la tavola, le camere, le scuderie. A trecento metri dalla Foresta di Mercadante.">
+<meta property="og:image" content="https://demo.francescoar.com/agriturismo-mura-altamura/img/masseria-giorno.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="stylesheet" href="far-motion.min.css">
+<link rel="stylesheet" href="sceniche/dittico.css">
+<script src="far-motion.min.js"></script>
+<script src="sceniche/dittico.js" defer></script>
+<style>
+:root{
+  /* ── palette MISURATA dalle loro fotografie (vedi dossier §3) ── */
+  --foglio:#FAF7EC;      /* calce della volta del ristorante, 12,9% */
+  --tufo:#EDE0C7;        /* il tufo caldo della stessa volta, 15,2% */
+  --notte:#1A1C24;       /* l'ora blu della masseria di sera, 29,1% */
+  --inchiostro:#1E1B14;  /* 16,02:1 sul foglio · 13,16:1 sul tufo */
+  --luce:#EED5AC;        /* calce illuminata di sera, 11,94:1 sul notte */
+  --arco:#5B312B;        /* il rosso dei LORO archi, 10,20:1 · 8,38:1 */
+  --murgia:#2B3C1A;      /* il prato della masseria, 11,10:1 · 9,12:1 */
+  --trave:#50341D;       /* le travi del soggiorno, 10,58:1 · 8,70:1 */
+  --pietra:#C9C1B5;      /* il muretto a secco — materia sul chiaro, 9,53:1 sul notte */
+  --oliva:#5E6E4A;       /* la parete verde — SOLO materia */
+  --arco-chiaro:#F98675; /* calcolata, 7,04:1 sul notte */
+  --barra:66px;
+  --serif:"Old Standard TT",Georgia,"Times New Roman",serif;
+  --sans:"Barlow",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--foglio);color:var(--inchiostro);
+  font-family:var(--sans);font-size:17px;line-height:1.65;font-weight:400}
+img{max-width:100%;display:block}
+h1,h2,h3,.serif{font-family:var(--serif);font-weight:400;line-height:1.16;letter-spacing:.005em}
+h2{font-size:clamp(1.95rem,4.4vw,3.1rem);margin:0 0 .5rem}
+h3{font-size:clamp(1.3rem,2.5vw,1.7rem);margin:0 0 .4rem}
+p{margin:0 0 1.05rem}
+p,li,h1,h2,h3,blockquote{overflow-wrap:break-word}
+a{color:var(--arco)}
+:where(a,button,input,summary):focus-visible{outline:3px solid var(--arco);outline-offset:3px;border-radius:2px}
+.avvolge{width:min(1180px,92vw);margin-inline:auto}
+.stretto{width:min(760px,92vw);margin-inline:auto}
+section{scroll-margin-top:calc(var(--barra) + 15px)}
+.occhiello{font-family:var(--sans);font-size:.76rem;font-weight:600;letter-spacing:.19em;
+  text-transform:uppercase;color:var(--trave);margin:0 0 .55rem}
+.scuro .occhiello{color:var(--luce)}
+
+/* ── salta al contenuto ── */
+.salta{position:absolute;left:12px;top:-70px;z-index:120;background:var(--notte);color:var(--foglio);
+  padding:.7rem 1.1rem;border-radius:3px;font-weight:600;text-decoration:none;transition:top .16s}
+.salta:focus{top:12px}
+
+/* ── barra: fascia OPACA piena, mai trasparente sopra la foto (§0.2) ── */
+#nav{position:sticky;top:0;z-index:60;background:var(--notte);color:var(--foglio)}
+.nav-h{display:flex;align-items:center;gap:1.1rem;height:var(--barra)}
+.nav-brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;flex:0 0 auto}
+.nav-brand img{height:38px;width:auto}
+.nav-brand span{font-family:var(--serif);font-size:1.16rem;letter-spacing:.06em}
+.nav-links{display:flex;gap:1.25rem;margin-left:auto;list-style:none;padding:0;margin-block:0}
+.nav-links a{color:var(--foglio);text-decoration:none;font-size:.9rem;font-weight:500;
+  letter-spacing:.05em;padding:.3rem 0;border-bottom:2px solid transparent}
+.nav-links a:hover{border-bottom-color:var(--luce)}
+.nav-tel{margin-left:1.1rem;flex:0 0 auto}
+.nav-tel a.nav-cta{display:inline-flex;align-items:center;gap:.45rem;background:var(--luce);
+  color:var(--inchiostro);text-decoration:none;font-weight:600;font-size:.88rem;
+  padding:.52rem .95rem;border-radius:3px;white-space:nowrap}
+.burger{display:none;margin-left:auto;background:none;border:1px solid var(--pietra);
+  color:var(--foglio);width:44px;height:38px;border-radius:3px;cursor:pointer;
+  align-items:center;justify-content:center;flex-direction:column;gap:4px;padding:0}
+.burger i{display:block;width:19px;height:2px;background:currentColor}
+#mobileMenu{position:fixed;inset:var(--barra) 0 auto 0;background:var(--notte);color:var(--foglio);
+  z-index:59;transform:translateY(-14px);opacity:0;visibility:hidden;
+  transition:opacity .2s,transform .2s,visibility .2s;border-top:1px solid #3A3B41;
+  max-height:calc(100vh - var(--barra));overflow-y:auto}
+#mobileMenu.open{transform:none;opacity:1;visibility:visible}
+#mobileMenu ul{list-style:none;margin:0;padding:.6rem 0 1.1rem}
+#mobileMenu a{display:block;padding:.82rem 6vw;color:var(--foglio);text-decoration:none;
+  font-size:1.02rem;font-weight:500;border-bottom:1px solid #2B2D35}
+
+/* ── hero: la foto NUDA, il titolo SOTTO (§0.2 modo 1) ── */
+.hero-media{margin:0;background:var(--notte)}
+.hero-media img{width:100%;height:clamp(320px,58vh,620px);object-fit:cover}
+.hero-testo{padding:2.6rem 0 2.2rem;text-align:center}
+.hero-testo h1{font-size:clamp(2.4rem,6.6vw,4.5rem);margin:0 0 .35rem;letter-spacing:.01em}
+.hero-dove{font-size:clamp(1rem,2.1vw,1.2rem);color:var(--trave);margin:0 0 .3rem}
+.hero-sotto{font-family:var(--sans);font-size:.78rem;font-weight:600;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--arco);margin:0 0 1.5rem}
+.chiama{display:inline-flex;align-items:center;gap:.5rem;background:var(--arco);color:var(--foglio);
+  text-decoration:none;font-weight:600;padding:.85rem 1.6rem;border-radius:3px;font-size:1.02rem}
+.chiama:hover{background:var(--trave)}
+
+/* ── fasce ── */
+.fascia{padding:clamp(3rem,7vw,5.2rem) 0}
+.fascia.tufo{background:var(--tufo)}
+.fascia.scuro{background:var(--notte);color:var(--foglio)}
+.scuro h2,.scuro h3{color:var(--foglio)}
+.scuro p{color:var(--luce)}
+.scuro a{color:var(--luce)}
+
+/* divisore: il medaglione del LORO marchio */
+.divisore{display:flex;align-items:center;gap:1rem;justify-content:center;margin:0 0 1.8rem}
+.divisore::before,.divisore::after{content:"";height:1px;flex:1 1 auto;max-width:120px;background:var(--pietra)}
+.fascia:not(.scuro) .divisore::before,.fascia:not(.scuro) .divisore::after{background:var(--oliva)}
+/* il loro medaglione e' BIANCO: sul chiaro sta dentro un disco scuro, ⛔ non lo ricoloro */
+.divisore img{height:34px;width:auto}
+.divisore .disco{display:flex;align-items:center;justify-content:center;flex:0 0 auto;
+  width:58px;height:58px;border-radius:50%;background:var(--notte)}
+
+/* due colonne */
+.duecol{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.6rem,4vw,3.4rem);align-items:center}
+.duecol.stretta{grid-template-columns:1.05fr .95fr}
+.duecol img{border-radius:3px}
+/* citazione: le « » del testo bastano. ⛔ Niente virgoletta decorativa in ::before:
+   in Old Standard TT il glifo esce come due trattini alti. Guardato in screenshot. */
+.citazione{font-family:var(--serif);font-size:clamp(1.14rem,2.1vw,1.42rem);line-height:1.5;
+  margin:0 0 1.25rem;font-style:italic;color:var(--arco)}
+.scuro .citazione{color:var(--luce)}
+
+/* elenco fatti */
+.fatti{list-style:none;padding:0;margin:1.2rem 0 0;display:grid;gap:.72rem}
+/* ⚠️ NON display:flex sull'li: ogni <strong> diventerebbe un elemento flex a se'
+   su una riga che non va a capo, e a 390px la pagina scorre in orizzontale.
+   Misurato in QA: 506px dentro un contenitore da 358. */
+.fatti li{position:relative;padding-left:1.5rem;font-size:1rem}
+.fatti li::before{content:"";position:absolute;left:0;top:.58em;width:9px;height:9px;
+  background:var(--arco);transform:rotate(45deg)}
+#intorno .fatti li::before{background:var(--murgia)}
+.scuro .fatti li::before{background:var(--arco-chiaro)}
+
+/* dittico */
+.dittico-guscio{position:relative;aspect-ratio:12/5;border-radius:3px;overflow:hidden;
+  background:var(--notte);--fmx-riga:#FAF7EC}
+.dittico-guscio img{width:100%;height:100%;object-fit:cover}
+.dittico-eti{display:flex;justify-content:space-between;margin-top:.7rem;
+  font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--luce)}
+.dittico-aiuto{margin:.55rem 0 0;font-size:.94rem;color:var(--luce)}
+
+/* galleria */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(228px,1fr));gap:.7rem;
+  list-style:none;padding:0;margin:1.6rem 0 0}
+.gallery-grid button{padding:0;border:0;background:var(--pietra);cursor:zoom-in;
+  border-radius:3px;overflow:hidden;display:block;width:100%;aspect-ratio:3/2}
+.gallery-grid button img{width:100%;height:100%;object-fit:cover}
+/* regola 4 del kit: il movimento e' OPT-IN, non opt-out */
+@media (prefers-reduced-motion:no-preference){
+  .gallery-grid button img{transition:transform .35s}
+  .gallery-grid button:hover img{transform:scale(1.045)}
+}
+
+/* lightbox */
+#lightbox{position:fixed;inset:0;z-index:100;background:rgba(20,16,11,.94);
+  display:flex;align-items:center;justify-content:center;padding:2.2rem 1rem 4.4rem;
+  opacity:0;visibility:hidden;transition:opacity .22s,visibility .22s}
+#lightbox.open{opacity:1;visibility:visible}
+#lightbox figure{margin:0;max-width:min(1120px,94vw);position:relative}
+#lightbox img{max-height:76vh;width:auto;margin-inline:auto;border-radius:3px}
+#lightbox figcaption{color:var(--foglio);text-align:center;margin-top:.95rem;font-size:.98rem}
+.lb-close,.lb-prev,.lb-next{position:absolute;z-index:2;background:rgba(20,16,11,.78);
+  color:var(--foglio);border:1px solid rgba(250,247,236,.38);cursor:pointer;
+  width:52px;height:52px;border-radius:50%;font-size:1.35rem;line-height:1;
+  display:flex;align-items:center;justify-content:center}
+.lb-close{top:1rem;right:1rem;position:fixed}
+.lb-prev{left:.6rem;top:50%;transform:translateY(-50%)}
+.lb-next{right:.6rem;top:50%;transform:translateY(-50%)}
+.lb-close:hover,.lb-prev:hover,.lb-next:hover{background:var(--arco)}
+
+/* come si arriva */
+.strade{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.4rem;margin-top:1.5rem}
+.strade h3{font-size:1.12rem;color:var(--luce);margin-bottom:.3rem}
+.strade p{font-size:.96rem;margin:0}
+.gps{font-family:var(--sans);font-variant-numeric:tabular-nums;letter-spacing:.04em;
+  color:var(--pietra);font-size:.95rem;margin-top:1.6rem}
+
+/* contatti */
+.contatti-griglia{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.6rem;margin-top:1.4rem}
+.tel-grande{font-family:var(--serif);font-size:clamp(1.5rem,3.4vw,2.15rem);line-height:1.3}
+.tel-grande a{color:var(--luce);text-decoration:none;border-bottom:1px solid rgba(238,213,172,.4)}
+.tel-lista{list-style:none;padding:0;margin:.5rem 0 0;display:grid;gap:.35rem}
+.tel-lista a{color:var(--luce);text-decoration:none;border-bottom:1px solid rgba(238,213,172,.35);font-size:1.06rem}
+
+/* piede */
+footer{background:var(--notte);color:var(--pietra);padding:2.8rem 0 2.2rem;font-size:.9rem}
+footer a{color:var(--luce)}
+footer .marchio{height:66px;width:auto;margin:0 auto 1.3rem}
+.nota{color:var(--pietra);font-size:.85rem;line-height:1.6;max-width:64ch;margin-inline:auto;text-align:center}
+.nota a{color:var(--luce)}
+.piede-riga{text-align:center;margin-top:1.5rem;padding-top:1.3rem;border-top:1px solid #2E3038}
+
+@media (max-width:920px){
+  .nav-links{display:none}
+  .burger{display:flex}
+  .nav-tel{margin-left:.55rem;order:2}
+  .duecol,.duecol.stretta{grid-template-columns:1fr}
+  .dittico-guscio{aspect-ratio:4/3}
+}
+@media (max-width:560px){
+  .nav-tel a.nav-cta{padding:.5rem .7rem}
+  .nav-tel a.nav-cta .lungo{display:none}
+  .nav-brand span{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+}
+</style>
+<noscript><style>
+  /* senza JS la barra resta bassa e i link restano visibili */
+  .nav-links{display:flex!important;flex-wrap:nowrap;overflow-x:auto;gap:.85rem;
+    margin-left:auto;max-width:100%;-webkit-overflow-scrolling:touch}
+  .nav-links a{font-size:.8rem;white-space:nowrap}
+  .burger{display:none!important}
+  #lightbox{display:none}
+  .gallery-grid button{cursor:default}
+</style></noscript>
+</head>
+<body>
+<a class="salta" href="#main">Salta al contenuto</a>
+
+<header id="nav">
+  <div class="avvolge nav-h">
+    <a class="nav-brand" href="#home">
+      <img src="img/logo-mura.png" alt="Agriturismo Murà" width="500" height="330">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#masseria">La masseria</a></li>
+      <li><a href="#giorno-sera">Giorno e sera</a></li>
+      <li><a href="#tavola">La tavola</a></li>
+      <li><a href="#camere">Le camere</a></li>
+      <li><a href="#scuderie">Le scuderie</a></li>
+      <li><a href="#intorno">Intorno</a></li>
+      <li><a href="#arrivare">Come si arriva</a></li>
+      <li><a href="#contatti">Contatti</a></li>
+    </ul>
+    <div class="nav-tel">
+      <a class="nav-cta" href="tel:+390809958769">Chiama<span class="lungo">&nbsp;080 995 8769</span></a>
+    </div>
+    <button class="burger" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobileMenu">
+      <i></i><i></i><i></i>
+    </button>
+  </div>
+</header>
+
+<nav id="mobileMenu" class="mobile-menu" aria-label="Menu">
+  <ul>
+    <li><a href="#masseria">La masseria</a></li>
+    <li><a href="#giorno-sera">Giorno e sera</a></li>
+    <li><a href="#tavola">La tavola</a></li>
+    <li><a href="#camere">Le camere</a></li>
+    <li><a href="#scuderie">Le scuderie</a></li>
+    <li><a href="#intorno">Intorno</a></li>
+    <li><a href="#arrivare">Come si arriva</a></li>
+    <li><a href="#contatti">Contatti</a></li>
+  </ul>
+</nav>
+
+<main id="main">
+
+  <!-- HERO — la foto nuda, il titolo SOTTO: nessun testo poggia su pixel non controllati -->
+  <section id="home">
+    <figure class="hero-media">
+      <img src="img/masseria-giorno.jpg" width="1920" height="1280" fetchpriority="high"
+           alt="La masseria di Murà vista dal prato: un lungo edificio basso in pietra chiara dietro un muretto a secco, con tre comignoli sul tetto e un albero cresciuto su una roccia affiorante in primo piano.">
+    </figure>
+    <div class="hero-testo avvolge">
+      <p class="hero-sotto" data-fm="sfuma">Agriturismo · B&amp;B · Equitazione</p>
+      <h1 data-fm="righe">Agriturismo Murà</h1>
+      <p class="hero-dove" data-fm="sali">Masseria San Domenico, contrada Sgolgore · Altamura (BA)<br>
+        nel Parco Nazionale dell'Alta Murgia</p>
+      <p data-fm="sali"><a class="chiama" href="tel:+390809958769">Chiama 080 995 8769</a></p>
+    </div>
+  </section>
+
+  <!-- LA MASSERIA — tutto verbatim dal loro sito -->
+  <section id="masseria" class="fascia tufo">
+    <div class="stretto">
+      <div class="divisore" data-fm="sfuma"><span class="disco"><img src="img/firma-medaglione.png" alt="" aria-hidden="true"></span></div>
+      <p class="occhiello" data-fm="sfuma">Il posto</p>
+      <h2 data-fm="righe">Il nome viene dai muri</h2>
+      <blockquote class="citazione" data-fm="sali">«Trae il nome dai numerosi muretti a secco presenti nella zona.»</blockquote>
+      <p data-fm="sali">L'agriturismo Murà sta presso la <strong>Masseria San Domenico</strong>, a circa
+        8 km da Cassano delle Murge e a 11 da Altamura, in zona rurale dentro il
+        <strong>Parco Nazionale dell'Alta Murgia</strong>, in contrada Sgolgore.</p>
+      <p data-fm="sali">Nasce dalla ristrutturazione degli edifici preesistenti, convertiti in strutture
+        ricettive. Intorno, il paesaggio murgiano: ondulazioni e avvallamenti dove a pascoli e seminativi
+        si alternano macchie di vegetazione spontanea.</p>
+      <ul class="fatti" data-fm="sali" data-fm-passo="90">
+        <li><strong>La Foresta di Mercadante a circa 300 metri</strong>: si fa a piedi, in mountain bike e a cavallo.</li>
+        <li>Tre cose in un posto solo: <strong>la tavola, sei camere, due scuderie</strong>.</li>
+        <li>La sala del ristorante è una <strong>struttura ottocentesca</strong>, in passato una stalla.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- LA SCENICA: giorno e sera, la stessa masseria dallo stesso punto -->
+  <section id="giorno-sera" class="fascia scuro">
+    <div class="avvolge">
+      <p class="occhiello" data-fm="sfuma">Lo stesso posto, due volte</p>
+      <h2 data-fm="righe">Trascina, e la sera arriva</h2>
+      <p class="stretto" style="margin-inline:0;max-width:62ch" data-fm="sali">Sono due fotografie
+        scattate dallo stesso punto: lo stesso muretto, lo stesso cancello, la stessa roccia con l'albero.
+        Cambia solo l'ora.</p>
+      <div class="dittico-guscio" data-fms="dittico" data-fms-taglio="52" data-fm="sfuma">
+        <img src="img/dittico-giorno.jpg" width="1920" height="800"
+             alt="La masseria di giorno: pietra chiara sotto un cielo azzurro con nuvole, prato verde in primo piano.">
+        <img src="img/dittico-sera.jpg" width="1920" height="800"
+             alt="La stessa masseria all'ora blu: cielo blu profondo e le facciate accese dalle luci basse lungo il muro.">
+      </div>
+      <div class="dittico-eti" aria-hidden="true"><span>Giorno</span><span>Sera</span></div>
+      <p class="dittico-aiuto">Si trascina col dito o col mouse. Da tastiera: metti a fuoco la maniglia e usa le frecce.</p>
+    </div>
+  </section>
+
+  <!-- LA TAVOLA -->
+  <section id="tavola" class="fascia">
+    <div class="avvolge">
+      <div class="duecol stretta">
+        <div>
+          <p class="occhiello" data-fm="sfuma">La tavola</p>
+          <h2 data-fm="righe">Una stalla dell'Ottocento, ottanta ospiti</h2>
+          <blockquote class="citazione" data-fm="sali">«Ricavato in seguito ad un accurato restauro, da una
+            struttura ottocentesca in passato adibita a stalla, accoglie circa ottanta ospiti.»</blockquote>
+          <p data-fm="sali">Loro la descrivono così: «l'originalità e l'eleganza della sala sono il risultato
+            dell'armonia tra architettura rustica e i motivi contemporanei dell'arredamento». Lo stesso vale
+            per la cucina, «in cui la ricca tradizione locale e le eccellenti materie prime vengono esaltate
+            grazie all'innovazione e alla fantasia dello Chef».</p>
+          <p data-fm="sali"><a class="chiama" href="tel:+390809958769">Chiedi al telefono</a></p>
+        </div>
+        <img src="img/sala-volte-larga.jpg" width="1920" height="800" loading="lazy" data-fm="sfuma"
+             alt="La sala del ristorante sotto una lunga volta a botte in pietra chiara, con tavoli apparecchiati di bianco e un lampadario in ferro.">
+      </div>
+    </div>
+  </section>
+
+  <!-- LE CAMERE -->
+  <section id="camere" class="fascia tufo">
+    <div class="avvolge">
+      <div class="duecol stretta">
+        <img src="img/soggiorno-verde-largo.jpg" width="1920" height="800" loading="lazy" data-fm="sfuma"
+             alt="Il soggiorno di una delle camere: parete verde, divano grigio ad angolo, una scala a giorno con struttura nera e legna accatastata accanto alla finestra.">
+        <div>
+          <p class="occhiello" data-fm="sfuma">Le camere</p>
+          <h2 data-fm="righe">Sei camere, e prima erano altro</h2>
+          <blockquote class="citazione" data-fm="sali">«Murà dispone di sei camere ottenute da una vecchia
+            stalla e da un locale impiegato in passato per la stagionatura dei formaggi.»</blockquote>
+          <p data-fm="sali">La ristrutturazione «ha mantenuto intatte le caratteristiche architettoniche
+            originali»: nelle fotografie qui sotto si vedono le volte in pietra e gli archi.</p>
+          <ul class="fatti" data-fm="sali" data-fm-passo="90">
+            <li><strong>Sei camere</strong>, ricavate da una vecchia stalla e dal locale per la stagionatura dei formaggi.</li>
+            <li>Al risveglio, «una ricca colazione tra <strong>dolci e marmellate di produzione Murà</strong>».</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LE SCUDERIE -->
+  <section id="scuderie" class="fascia scuro">
+    <div class="avvolge">
+      <div class="duecol stretta">
+        <div>
+          <p class="occhiello" data-fm="sfuma">Le scuderie</p>
+          <h2 data-fm="righe">Ventiquattro box, e il cavallo viene con te</h2>
+          <p data-fm="sali">Loro lo scrivono così: «Agli ospiti che condividono questa passione Murà offre la
+            possibilità di accogliere i cavalli in due scuderie da dodici box ciascuna comprensive di selleria
+            e box doccia».</p>
+          <ul class="fatti" data-fm="sali" data-fm-passo="90">
+            <li><strong>Due scuderie da dodici box</strong> ciascuna, con selleria e box doccia.</li>
+            <li>Un <strong>maneggio coperto</strong> e un <strong>maneggio scoperto</strong>.</li>
+            <li>Un <strong>tondino</strong> e «un'ampia area destinata a <strong>paddock</strong>».</li>
+          </ul>
+        </div>
+        <img src="img/scuderie-larga.jpg" width="1920" height="800" loading="lazy" data-fm="sfuma"
+             alt="Il corridoio centrale delle scuderie, con i box in legno chiaro e grate d'acciaio su entrambi i lati e tre cavalli che affacciano la testa: due scuri e uno bianco.">
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERIA -->
+  <section id="gallery" class="fascia">
+    <div class="avvolge">
+      <p class="occhiello" data-fm="sfuma">Le fotografie</p>
+      <h2 data-fm="righe">La tavola, le stanze, le scuderie</h2>
+      <p class="stretto" style="margin-inline:0;max-width:60ch" data-fm="sali">Sono le loro fotografie, così
+        come stanno sul loro sito.</p>
+      <ul class="gallery-grid" data-fm="sfalsa" data-fm-passo="60">
+        <li><button type="button" data-src="img/piatto-sformatino.jpg" data-cap="Un piatto del ristorante: uno sformatino dorato e croccante su una crema chiara, con un pomodorino confit e fili di verdura sopra."><img src="img/piatto-sformatino.jpg" loading="lazy" width="900" height="598" alt="Un piatto del ristorante: uno sformatino dorato e croccante su una crema chiara, con un pomodorino confit e fili di verdura sopra."></button></li>
+        <li><button type="button" data-src="img/piatto-timballo.jpg" data-cap="Un piatto del ristorante: un timballo con crosta dorata e un pomodorino intero, su specchi di salsa rossa e salsa verde."><img src="img/piatto-timballo.jpg" loading="lazy" width="900" height="598" alt="Un piatto del ristorante: un timballo con crosta dorata e un pomodorino intero, su specchi di salsa rossa e salsa verde."></button></li>
+        <li><button type="button" data-src="img/piatto-erbe.jpg" data-cap="Un piatto del ristorante: bocconcini impanati alle erbe aromatiche, con fettine di ravanello e fiori eduli su crema chiara."><img src="img/piatto-erbe.jpg" loading="lazy" width="900" height="598" alt="Un piatto del ristorante: bocconcini impanati alle erbe aromatiche, con fettine di ravanello e fiori eduli su crema chiara."></button></li>
+        <li><button type="button" data-src="img/piatto-funghi.jpg" data-cap="Un piatto del ristorante: bocconcini impanati e fritti con un pomodoro intagliato a fiore, nastri di carota e gocce di salsa scura."><img src="img/piatto-funghi.jpg" loading="lazy" width="900" height="598" alt="Un piatto del ristorante: bocconcini impanati e fritti con un pomodoro intagliato a fiore, nastri di carota e gocce di salsa scura."></button></li>
+        <li><button type="button" data-src="img/piatto-carpaccio.jpg" data-cap="Un piatto del ristorante: fettine sottili di carne rosata con funghi affettati, foglie di radicchio e un rametto di timo."><img src="img/piatto-carpaccio.jpg" loading="lazy" width="900" height="598" alt="Un piatto del ristorante: fettine sottili di carne rosata con funghi affettati, foglie di radicchio e un rametto di timo."></button></li>
+        <li><button type="button" data-src="img/piatto-insalata.jpg" data-cap="Un piatto del ristorante: verdure a cubetti sormontate da una sfoglia croccante arrotolata, con briciole rosse sparse intorno."><img src="img/piatto-insalata.jpg" loading="lazy" width="900" height="598" alt="Un piatto del ristorante: verdure a cubetti sormontate da una sfoglia croccante arrotolata, con briciole rosse sparse intorno."></button></li>
+        <li><button type="button" data-src="img/sala-volte.jpg" data-cap="La sala del ristorante sotto la volta a botte in pietra chiara: file di tavoli apparecchiati di bianco e un lampadario in ferro battuto."><img src="img/sala-volte.jpg" loading="lazy" width="900" height="598" alt="La sala del ristorante sotto la volta a botte in pietra chiara: file di tavoli apparecchiati di bianco e un lampadario in ferro battuto."></button></li>
+        <li><button type="button" data-src="img/sala-archi.jpg" data-cap="La sala vista dal fondo: colonne e archi in pietra, tavoli con tovaglia bianca e sopratovaglia beige, e alcuni gradini che salgono a una seconda sala."><img src="img/sala-archi.jpg" loading="lazy" width="900" height="598" alt="La sala vista dal fondo: colonne e archi in pietra, tavoli con tovaglia bianca e sopratovaglia beige, e alcuni gradini che salgono a una seconda sala."></button></li>
+        <li><button type="button" data-src="img/camera-volta.jpg" data-cap="Una camera con letto matrimoniale e testiera in legno intagliato contro una parete verde, e a sinistra una nicchia sotto la volta in pietra."><img src="img/camera-volta.jpg" loading="lazy" width="900" height="598" alt="Una camera con letto matrimoniale e testiera in legno intagliato contro una parete verde, e a sinistra una nicchia sotto la volta in pietra."></button></li>
+        <li><button type="button" data-src="img/camera-archi-rossi.jpg" data-cap="Una camera con due nicchie ad arco dipinte di rosso e la pietra a vista dentro, un letto in ferro battuto color bronzo e un lampadario a cinque bracci."><img src="img/camera-archi-rossi.jpg" loading="lazy" width="900" height="598" alt="Una camera con due nicchie ad arco dipinte di rosso e la pietra a vista dentro, un letto in ferro battuto color bronzo e un lampadario a cinque bracci."></button></li>
+        <li><button type="button" data-src="img/camera-arco-rosso.jpg" data-cap="Una camera con nicchie ad arco dipinte di rosso, il piede del letto in ferro battuto, una porta in legno scuro e il pavimento in pietra chiara."><img src="img/camera-arco-rosso.jpg" loading="lazy" width="900" height="598" alt="Una camera con nicchie ad arco dipinte di rosso, il piede del letto in ferro battuto, una porta in legno scuro e il pavimento in pietra chiara."></button></li>
+        <li><button type="button" data-src="img/camera-armadio.jpg" data-cap="Una camera con letto in ferro battuto davanti a una nicchia ad arco rossa, una credenza in legno scuro e un televisore."><img src="img/camera-armadio.jpg" loading="lazy" width="900" height="598" alt="Una camera con letto in ferro battuto davanti a una nicchia ad arco rossa, una credenza in legno scuro e un televisore."></button></li>
+        <li><button type="button" data-src="img/soggiorno-travi.jpg" data-cap="Il soggiorno di una camera: parete verde, divano grigio ad angolo, soffitto a travi di legno e una porta bianca."><img src="img/soggiorno-travi.jpg" loading="lazy" width="900" height="598" alt="Il soggiorno di una camera: parete verde, divano grigio ad angolo, soffitto a travi di legno e una porta bianca."></button></li>
+        <li><button type="button" data-src="img/consolle-fiori.jpg" data-cap="Una consolle in legno contro il muro chiaro, con un mazzo di margherite gialle in un vaso bianco e un libro aperto."><img src="img/consolle-fiori.jpg" loading="lazy" width="900" height="598" alt="Una consolle in legno contro il muro chiaro, con un mazzo di margherite gialle in un vaso bianco e un libro aperto."></button></li>
+        <li><button type="button" data-src="img/scuderie-corridoio.jpg" data-cap="Il corridoio delle scuderie: box in legno chiaro con grate d'acciaio su entrambi i lati, la copertura a due falde e una carriola verde appoggiata a destra."><img src="img/scuderie-corridoio.jpg" loading="lazy" width="900" height="598" alt="Il corridoio delle scuderie: box in legno chiaro con grate d'acciaio su entrambi i lati, la copertura a due falde e una carriola verde appoggiata a destra."></button></li>
+        <li><button type="button" data-src="img/scuderie-cavallo.jpg" data-cap="Un cavallo scuro fermo nel corridoio delle scuderie, davanti ai box aperti."><img src="img/scuderie-cavallo.jpg" loading="lazy" width="900" height="598" alt="Un cavallo scuro fermo nel corridoio delle scuderie, davanti ai box aperti."></button></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- INTORNO -->
+  <section id="intorno" class="fascia tufo">
+    <div class="stretto">
+      <div class="divisore" data-fm="sfuma"><span class="disco"><img src="img/firma-medaglione.png" alt="" aria-hidden="true"></span></div>
+      <p class="occhiello" data-fm="sfuma">Intorno</p>
+      <h2 data-fm="righe">Cosa c'è, a partire da qui</h2>
+      <p data-fm="sali">Sono i luoghi che indicano loro, nell'ordine in cui li elencano.</p>
+      <ul class="fatti" data-fm="sali" data-fm-passo="70">
+        <li><strong>La Foresta di Mercadante</strong>, a circa 300 metri: a piedi, in mountain bike, a cavallo.</li>
+        <li>Ad Altamura, la <strong>Cattedrale Federiciana</strong> nel centro storico, fra stradine e claustri.</li>
+        <li>In località Pontrelli, il sito delle <strong>impronte di dinosauri</strong> del Cretaceo superiore,
+          «collocabili fra gli 83,5 e gli 85,8 milioni di anni fa».</li>
+        <li>Nelle grotte di Lamalunga, l'<strong>Uomo di Altamura</strong>: uno scheletro di
+          <em>Homo neanderthalensis</em> «perfettamente conservato».</li>
+        <li>Il <strong>Pulo di Altamura</strong>, «una grande depressione di origine carsica caratterizzata da
+          un ecosistema unico».</li>
+        <li>I <strong>Sassi di Matera</strong>, patrimonio dell'umanità UNESCO dal 1993.</li>
+        <li>La <strong>Gravina di Laterza</strong>, «il secondo canyon di origine carsica più profondo d'Europa».</li>
+        <li><strong>Castel del Monte</strong>, «un edificio del XIII secolo fatto costruire dall'imperatore
+          Federico II».</li>
+        <li>Le <strong>Grotte di Castellana</strong>, Alberobello e i <strong>trulli</strong>, la Valle d'Itria,
+          Polignano a Mare, Bari e Trani.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- COME SI ARRIVA -->
+  <section id="arrivare" class="fascia scuro">
+    <div class="avvolge">
+      <p class="occhiello" data-fm="sfuma">Come si arriva</p>
+      <h2 data-fm="righe">Quattro strade, e l'indicazione è sul posto</h2>
+      <p style="max-width:62ch" data-fm="sali">Sono le indicazioni che danno loro, riscritte senza cambiare
+        una svolta.</p>
+      <div class="strade" data-fm="sali" data-fm-passo="90">
+        <div>
+          <h3>Da Bari</h3>
+          <p>Si raggiunge Cassano Murge, direzione Santeramo in Colle. Dopo circa 1 km a destra verso Altamura
+            (S.P. 79 Cassano–Altamura); a circa 8 km svoltare a destra per Murà, come da indicazione sul posto.</p>
+        </div>
+        <div>
+          <h3>Da Altamura</h3>
+          <p>Vecchia via per Cassano Murge (S.P. 79 Cassano–Altamura). Dopo circa 11 km svoltare a sinistra
+            per Murà, come da indicazione sul posto.</p>
+        </div>
+        <div>
+          <h3>Da Santeramo</h3>
+          <p>Direzione Altamura; a Casal Sabini svoltare a destra e proseguire per circa 5 km. All'incrocio
+            con la S.P. 79 a destra, dopo 2 km a sinistra per Murà.</p>
+        </div>
+        <div>
+          <h3>Da Matera</h3>
+          <p>Si seguono le indicazioni da Altamura.</p>
+        </div>
+      </div>
+      <p class="gps">S.P. 79 Cassano–Altamura, km 10.700 · contrada Sgolgore · 70022 Altamura (BA)<br>
+        GPS 40°50′48″ N, 16°41′25″ E</p>
+      <p><a class="chiama" href="https://www.google.com/maps?q=40.846667,16.690278"
+            target="_blank" rel="noopener">Apri il punto in Google Maps</a></p>
+    </div>
+  </section>
+
+  <!-- CONTATTI -->
+  <section id="contatti" class="fascia scuro" style="padding-top:0">
+    <div class="avvolge">
+      <div class="divisore" data-fm="sfuma"><span class="disco"><img src="img/firma-medaglione.png" alt="" aria-hidden="true"></span></div>
+      <p class="occhiello" data-fm="sfuma">Contatti</p>
+      <h2 data-fm="righe">Il modo più corto è il telefono</h2>
+      <div class="contatti-griglia">
+        <div data-fm="sali">
+          <p class="tel-grande"><a href="tel:+390809958769">080 995 8769</a></p>
+          <ul class="tel-lista">
+            <li><a href="tel:+393299286358">329 928 6358</a></li>
+            <li><a href="tel:+393293525799">329 352 5799</a></li>
+          </ul>
+        </div>
+        <div data-fm="sali">
+          <h3>Scrivere</h3>
+          <p><a href="mailto:info@agriturismomura.com">info@agriturismomura.com</a></p>
+        </div>
+        <div data-fm="sali">
+          <h3>Dove</h3>
+          <p>S.P. 79 Cassano–Altamura, km 10.700<br>contrada Sgolgore<br>70022 Altamura (BA)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="avvolge">
+    <img class="marchio" src="img/logo-mura.png" alt="Agriturismo Murà" width="500" height="330" loading="lazy">
+    <p class="nota">
+      Sito dimostrativo realizzato con AI da FAR AI · contenuti da rivedere con l'attività prima della pubblicazione.<br>
+      Testi e fotografie provengono dal sito attuale di Agriturismo Murà e restano di proprietà dell'attività.
+    </p>
+    <p class="piede-riga">Agriturismo Murà — contrada Sgolgore, Altamura (BA) · <a href="tel:+390809958769">080 995 8769</a></p>
+  </div>
+</footer>
+
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Fotografia ingrandita" hidden>
+  <button class="lb-close" type="button" aria-label="Chiudi">✕</button>
+  <button class="lb-prev" type="button" aria-label="Fotografia precedente">‹</button>
+  <button class="lb-next" type="button" aria-label="Fotografia successiva">›</button>
+  <figure>
+    <img src="img/sala-volte.jpg" alt="">
+    <figcaption></figcaption>
+  </figure>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LodgingBusiness",
+  "@id":"https://www.agriturismomura.com/#murà",
+  "name":"Agriturismo Murà",
+  "url":"http://www.agriturismomura.com/",
+  "image":["https://demo.francescoar.com/agriturismo-mura-altamura/img/masseria-giorno.jpg","https://demo.francescoar.com/agriturismo-mura-altamura/img/sala-volte.jpg","https://demo.francescoar.com/agriturismo-mura-altamura/img/scuderie-larga.jpg"],
+  "telephone":"+39 080 995 8769",
+  "email":"info@agriturismomura.com",
+  "address":{"@type":"PostalAddress","streetAddress":"S.P. 79 Cassano–Altamura, km 10.700 — contrada Sgolgore","addressLocality":"Altamura","addressRegion":"BA","postalCode":"70022","addressCountry":"IT"},
+  "geo":{"@type":"GeoCoordinates","latitude":40.846667,"longitude":16.690278}
+}
+</script>
+
+<script>
+(function(){
+  /* ── galleria: le tessere si costruiscono da un elenco, così l'alt sta in un posto solo ── */
+  /* la galleria sta nell'HTML: a JS spento le 17 fotografie restano in pagina */
+
+  /* ── barra: menu telefono ── */
+  var burger=document.querySelector('.burger'), pannello=document.getElementById('mobileMenu');
+  /* ⚠️ inert su tutto TRANNE il burger: il bottone che chiude il pannello deve
+     restare cliccabile (lezione Acropoli). Il Tab lo trattiene il trap qui sotto. */
+  var fuoriDalMenu=['#main','footer','.salta','.nav-brand','.nav-tel'];
+  function apriMenu(v){
+    pannello.classList.toggle('open',v);
+    burger.setAttribute('aria-expanded',v?'true':'false');
+    burger.setAttribute('aria-label',v?'Chiudi il menu':'Apri il menu');
+    fuoriDalMenu.forEach(function(sel){
+      var el=document.querySelector(sel); if(el) el.toggleAttribute('inert',v);
+    });
+  }
+  /* il giro del Tab quando il menu e' aperto: burger + le voci, e basta */
+  function giroMenu(){
+    return [burger].concat([].slice.call(pannello.querySelectorAll('a[href]')));
+  }
+  burger.addEventListener('click',function(){apriMenu(!pannello.classList.contains('open'))});
+  pannello.addEventListener('click',function(e){if(e.target.tagName==='A') apriMenu(false)});
+
+  /* ── lightbox ── */
+  var lb=document.getElementById('lightbox'), lbImg=lb.querySelector('img'),
+      lbCap=lb.querySelector('figcaption'), indice=0, tasti=[], ultimoFuoco=null;
+  function bottoni(){return [].slice.call(document.querySelectorAll('#gallery .gallery-grid button'))}
+  function mostra(i){
+    var b=bottoni(); indice=(i+b.length)%b.length;
+    lbImg.src=b[indice].dataset.src; lbImg.alt=b[indice].dataset.cap;
+    lbCap.textContent=b[indice].dataset.cap;
+  }
+  function apri(i){
+    ultimoFuoco=document.activeElement; lb.hidden=false; mostra(i);
+    requestAnimationFrame(function(){
+      lb.classList.add('open');
+      document.getElementById('main').setAttribute('inert','');
+      document.getElementById('nav').setAttribute('inert','');
+      document.querySelector('footer').setAttribute('inert','');
+      document.body.style.overflow='hidden';
+      attendiVisibile(function(){lb.querySelector('.lb-close').focus()});
+    });
+  }
+  function attendiVisibile(poi){
+    var n=0;
+    (function giro(){
+      if(getComputedStyle(lb).visibility==='visible'){poi();return}
+      if(++n>60){poi();return}
+      requestAnimationFrame(giro);
+    })();
+  }
+  function chiudi(){
+    lb.classList.remove('open');
+    document.getElementById('main').removeAttribute('inert');
+    document.getElementById('nav').removeAttribute('inert');
+    document.querySelector('footer').removeAttribute('inert');
+    document.body.style.overflow='';
+    setTimeout(function(){lb.hidden=true},240);
+    if(ultimoFuoco) ultimoFuoco.focus();
+  }
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('#gallery .gallery-grid button');
+    if(b){apri(bottoni().indexOf(b));return}
+    if(e.target.closest('.lb-close')||e.target===lb){chiudi();return}
+    if(e.target.closest('.lb-prev')){mostra(indice-1);return}
+    if(e.target.closest('.lb-next')){mostra(indice+1);return}
+  });
+  document.addEventListener('keydown',function(e){
+    if(pannello.classList.contains('open')){
+      if(e.key==='Escape'){apriMenu(false);burger.focus();return}
+      if(e.key==='Tab'){
+        var g=giroMenu(); if(!g.length) return;
+        var primo=g[0], ultimo=g[g.length-1], dove=g.indexOf(document.activeElement);
+        if(dove===-1){e.preventDefault();(e.shiftKey?ultimo:primo).focus();return}
+        if(e.shiftKey&&document.activeElement===primo){e.preventDefault();ultimo.focus()}
+        else if(!e.shiftKey&&document.activeElement===ultimo){e.preventDefault();primo.focus()}
+        return;
+      }
+    }
+    if(lb.hidden) return;
+    if(e.key==='Escape'){chiudi();return}
+    if(e.key==='ArrowLeft'){mostra(indice-1);return}
+    if(e.key==='ArrowRight'){mostra(indice+1);return}
+    if(e.key==='Tab'){
+      var f=[].slice.call(lb.querySelectorAll('button'));
+      if(!f.length) return;
+      var primo=f[0], ultimo=f[f.length-1];
+      if(e.shiftKey&&document.activeElement===primo){e.preventDefault();ultimo.focus()}
+      else if(!e.shiftKey&&document.activeElement===ultimo){e.preventDefault();primo.focus()}
+    }
+  });
+})();
+</script>
+<script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
