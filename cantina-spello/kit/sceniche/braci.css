@@ -1,0 +1,7 @@
+/* ⚠️ Un <canvas> e' un elemento SOSTITUITO: con position:absolute e inset:0
+   NON si stira, tiene la sua misura intrinseca (300x150) e il disegno esce
+   tutto sbagliato. Servono width/height espliciti. (Trovato il 09/08/2026
+   guardando `pioggia`: disegnava su una tela grande il doppio del palco.) */
+/* braci — pulviscolo caldo che sale dietro al contenuto. Da Pyramis braci.
+   Sotto movimento ridotto il canvas non viene nemmeno creato. */
+.fmx-braci-tela { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }

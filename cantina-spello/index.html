@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Cantina di Spello · Ristorante a Spello (PG)</title>
+<meta name="description" content="Ristorante La Cantina di Spello, Via Cavour 2, Spello (PG). Volte di pietra, luci soffuse e candele di pura cera d'api. Chiocciola Slow Food, Osterie d'Italia 2026. Tel. 0742 651775.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="La Cantina di Spello · Ristorante a Spello (PG)">
+<meta property="og:description" content="Volte di pietra, luci soffuse e candele di pura cera d'api. Chiocciola Slow Food, Osterie d'Italia 2026.">
+<meta property="og:image" content="https://demo.francescoar.com/cantina-spello/img/cantina-botti-candele.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 32'%3E%3Cpath d='M12 2.4c1.7 5.6 4.4 8.2 5.2 12 .9 4.6-1.6 10-5.2 10s-6.2-3.8-5.4-8c.6-3.2 3-4.4 4.2-7.8.5-1.3.8-3.5 1.2-6.2Z' fill='none' stroke='%23E2AC1F' stroke-width='2'/%3E%3Cpath d='M12 24.4v3.4M8.4 27.8h7.2' fill='none' stroke='%23E2AC1F' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,opsz,wght@0,8..30,400..900;1,8..30,400..600&family=Signika:wght@300..700&display=swap">
+<link rel="stylesheet" href="kit/far-motion.min.css">
+<script src="kit/far-motion.min.js"></script>
+<link rel="stylesheet" href="kit/sceniche/braci.css">
+<script src="kit/sceniche/braci.js" defer></script>
+<style>
+:root{
+  /* Palette CAMPIONATA dalle 27 foto del loro sito, non scelta.
+     Quantizzazione a 6 colori su 13 scatti + mediana su 72.360 campioni delle 9 foto di sala. */
+  --cantina:#150F07;        /* il buio MISURATO della loro sala: dominante di sala14 20,9% / sala11 23,0% / cucina8 22,3% */
+  --pietra:#231909;         /* cucina8, 16,0% */
+  --avorio:#F6E7CE;         /* la targa in ceramica di sala2, schiarita. 15,63:1 sulla cantina */
+  --luce:#FAE5B4;           /* la luce piena della candela, sala7 10,9%.  15,35:1 su cantina · 13,94:1 su pietra */
+  --fiamma:#E2AC1F;         /* sala11 11,6%.  9,20:1 su cantina — passa cosi' com'e' */
+  --ambra:#E9A953;          /* sala14 10,4%.  9,30:1 */
+  --tufo:#C5A587;           /* sala9 14,4%.   8,25:1 */
+  --oliva:#3A4625;          /* il verde degli involtini allo spiedo, piatti5 23,6%.  8,28:1 sull'avorio */
+  /* varianti AA CALCOLATE (la tinta si scala finche' passa, non si indovina) */
+  --fiamma-scuro:#5F480D;        /* 7,11:1 su avorio */
+  --terracotta-scuro:#7C391B;    /* 7,03:1 su avorio */
+  --terracotta-chiaro:#C4947E;   /* 7,13:1 su cantina */
+  --bronzo-chiaro:#A19D98;       /* 7,06:1 su cantina */
+  --bronzo-scuro:#4F4B46;        /* 7,10:1 su avorio */
+  --pietra-calda-scuro:#70401E;  /* 7,08:1 su avorio */
+  /* SOLO MATERIA — contrasto calcolato e insufficiente, mai testo */
+  --bronzo:#726D65;         /* 3,71:1 — il bronzo misurato della LORO insegna */
+  --terracotta:#994621;     /* 2,95:1 */
+  --pietra-calda:#7B4621;   /* 2,48:1 — mediana su 72.360 campioni della loro sala */
+  --barra:72px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{overflow-x:clip;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--cantina);color:var(--luce);
+  font-family:Signika,system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-weight:400;font-size:1.0625rem;line-height:1.66;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:Piazzolla,Georgia,"Times New Roman",serif;margin:0;line-height:1.12;letter-spacing:-.01em}
+h1{font-weight:800;font-size:clamp(2.5rem,7.2vw,4.6rem)}
+h2{font-weight:700;font-size:clamp(1.85rem,4.2vw,2.9rem)}
+h3{font-weight:700;font-size:1.28rem}
+p{margin:0 0 1.05em}
+a{color:inherit}
+img{max-width:100%;height:auto;display:block}
+.wrap{width:min(1180px,92vw);margin-inline:auto}
+section,#hero{scroll-margin-top:calc(var(--barra) + 15px)}
+.occhiello{font-size:.8rem;font-weight:600;letter-spacing:.19em;text-transform:uppercase;color:var(--fiamma);margin:0 0 .85rem}
+
+/* ---------- skip link ---------- */
+.skip{position:absolute;left:-9999px;top:0;z-index:400;background:var(--fiamma);color:#150F07;
+  padding:.8rem 1.3rem;font-weight:600;border-radius:0 0 6px 0}
+.skip:focus{left:0}
+
+/* ---------- barra ---------- */
+#nav{position:fixed;inset:0 0 auto 0;z-index:200;background:rgba(21,15,7,.94);
+  border-bottom:1px solid #3A2A15;backdrop-filter:blur(6px)}
+.nav-in{display:flex;align-items:center;gap:1.1rem;min-height:var(--barra);
+  width:min(1180px,92vw);margin-inline:auto}
+.nav-brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:Piazzolla,serif;
+  font-weight:700;font-size:1.06rem;color:var(--luce);white-space:nowrap;flex:0 0 auto}
+.nav-brand svg{width:19px;height:25px;flex:0 0 auto}
+.nav-links{display:flex;gap:1.45rem;margin-left:auto;list-style:none;padding:0}
+.nav-links a{text-decoration:none;font-size:.94rem;font-weight:500;color:var(--luce);padding:.45rem 0;
+  border-bottom:2px solid transparent}
+.nav-links a:hover,.nav-links a:focus-visible{border-bottom-color:var(--fiamma)}
+.nav-tel{flex:0 0 auto;margin-left:1.2rem}
+.nav-tel a.nav-cta{display:inline-flex;align-items:center;gap:.45rem;text-decoration:none;
+  background:var(--fiamma);color:#150F07;font-weight:700;font-size:.95rem;
+  padding:.62rem 1.15rem;border-radius:999px;white-space:nowrap}
+.nav-tel a.nav-cta:hover{background:var(--ambra)}
+.nav-cta .lungo{display:inline}
+.burger{display:none;margin-left:.7rem;width:44px;height:44px;flex:0 0 auto;background:none;
+  border:1px solid #4A3720;border-radius:8px;color:var(--luce);cursor:pointer;padding:0}
+.burger span{display:block;width:19px;height:2px;background:currentColor;margin:4px auto}
+.burger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+#mobileMenu{position:fixed;inset:var(--barra) 0 auto 0;z-index:190;background:var(--pietra);
+  border-bottom:1px solid #4A3720;transform:translateY(-118%);visibility:hidden}
+#mobileMenu.open{transform:translateY(0);visibility:visible}
+#mobileMenu ul{list-style:none;margin:0;padding:.6rem 0 1.2rem}
+#mobileMenu a{display:block;text-decoration:none;font-size:1.06rem;padding:.82rem 4vw;color:var(--luce);
+  border-bottom:1px solid #35270F}
+
+/* ---------- hero: foto a SINISTRA, testo a destra (anti-somiglianza) ---------- */
+.sez-hero{padding:calc(var(--barra) + 3.4rem) 0 3.4rem}
+.hero-griglia{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,1fr);gap:clamp(1.6rem,4vw,3.4rem);align-items:center}
+/* la foto sta alla misura NATIVA (1170x650) e non viene mai ingrandita oltre 1,3x */
+.hero-foto{margin:0;max-width:626px}
+.hero-foto img{border-radius:3px;border:1px solid #3A2A15}
+.hero-foto figcaption{font-size:.78rem;color:var(--tufo);margin-top:.55rem}
+.hero-testo h1{margin-bottom:.7rem}
+.hero-firma{width:34px;height:45px;margin-bottom:1rem}
+.hero-sotto{font-size:1.15rem;color:var(--tufo);max-width:34ch}
+.hero-dove{font-size:.98rem;color:var(--luce);font-weight:500;margin:0 0 1.6rem}
+.hero-azioni{display:flex;flex-wrap:wrap;gap:.7rem}
+.bottone{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;font-weight:700;
+  padding:.85rem 1.5rem;border-radius:999px;font-size:1rem}
+.bottone-pieno{background:var(--fiamma);color:#150F07}
+.bottone-pieno:hover{background:var(--ambra)}
+.bottone-vuoto{border:1px solid var(--tufo);color:var(--luce)}
+.bottone-vuoto:hover{border-color:var(--fiamma);color:var(--fiamma)}
+
+/* ---------- chiocciola ---------- */
+#chiocciola{background:var(--pietra);border-block:1px solid #3A2A15;padding:3.2rem 0}
+/* ⚠️ Il blocco di testo ha un fondo OPACO proprio, e non e' cosmesi: la scenica `braci`
+   fa passare particelle chiare DIETRO al testo, cioe' pixel di cui non conosco il contrasto.
+   Misurato prima del fix: 1,35-2,91:1 su cinque nodi. Regola §0.2 del piano stili: sotto una
+   riga di testo ci dev'essere un fondo di cui conosco il contrasto. Le braci restano visibili
+   TUTT'INTORNO al blocco, dove non c'e' testo. */
+.chio{display:grid;grid-template-columns:auto minmax(0,1fr);gap:1.6rem;align-items:start;
+  background:var(--pietra);border:1px solid #3A2A15;border-radius:3px;padding:clamp(1.5rem,3.4vw,2.4rem)}
+.chio-segno{width:56px;height:56px;color:var(--fiamma);flex:0 0 auto}
+.chio h2{margin-bottom:.7rem}
+.chio p:last-child{margin-bottom:0}
+.chio .fonte{font-size:.84rem;color:var(--tufo)}
+
+/* ---------- cosa si mangia: fascia CHIARA per l'informazione pratica ---------- */
+#cucina{background:var(--avorio);color:#2A1B0C;padding:3.8rem 0}
+#cucina .occhiello{color:var(--fiamma-scuro)}
+#cucina h2{color:#2A1B0C}
+.piatti-elenco{list-style:none;padding:0;margin:1.8rem 0 0;display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:0}
+.piatti-elenco li{border-top:1px solid #D9C4A2;padding:.95rem 0;font-size:1.09rem;font-weight:500;color:#2A1B0C}
+/* la citazione si distingue per TIPOGRAFIA (corpo, corsivo, rientro), non con una
+   barretta d'accento laterale: quella e' il tell piu' riconoscibile di un'interfaccia generata */
+.loro-voce{margin:2.2rem 0 0;padding:0;max-width:64ch;margin-inline-start:clamp(0rem,2.5vw,2.2rem)}
+.loro-voce p{font-family:Piazzolla,Georgia,serif;font-size:1.34rem;font-style:italic;font-weight:500;
+  line-height:1.48;color:#2A1B0C;margin:0 0 .7rem;text-indent:-.42em}
+.loro-voce footer{font-size:.84rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--bronzo-scuro)}
+.cucina-note{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:1.5rem;margin-top:2.6rem}
+.cucina-note h3{color:var(--terracotta-scuro);margin-bottom:.4rem;font-size:1.1rem}
+.cucina-note p{margin:0;color:#3A2A16;font-size:.99rem}
+.cucina-foto{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:1rem;margin-top:2.8rem}
+.cucina-foto figure{margin:0}
+.cucina-foto img{border-radius:3px}
+.cucina-foto figcaption{font-size:.82rem;color:var(--bronzo-scuro);margin-top:.5rem;line-height:1.45}
+
+/* ---------- la sala + galleria a TRE colonne (anti-somiglianza) ---------- */
+#gallery{padding:3.8rem 0}
+.sala-testa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(1.6rem,4vw,3rem);align-items:center;margin-bottom:2.6rem}
+.sala-testa figure{margin:0}
+.sala-testa img{border-radius:3px;border:1px solid #3A2A15}
+.sala-testa figcaption{font-size:.8rem;color:var(--tufo);margin-top:.5rem}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.85rem}
+.gallery-grid button{padding:0;border:1px solid #3A2A15;background:var(--pietra);cursor:pointer;
+  border-radius:3px;overflow:hidden;display:block;line-height:0}
+.gallery-grid button:hover{border-color:var(--fiamma)}
+.gallery-grid button:focus-visible{outline:3px solid var(--fiamma);outline-offset:2px}
+.gallery-grid img{width:100%;aspect-ratio:1170/650;object-fit:cover}
+
+/* ---------- lightbox ---------- */
+#lightbox{position:fixed;inset:0;z-index:300;background:rgba(9,6,2,.96);
+  display:flex;align-items:center;justify-content:center;padding:2.2rem 1rem 4.6rem;
+  opacity:0;visibility:hidden}
+#lightbox.open{opacity:1;visibility:visible}
+#lightbox figure{margin:0;max-width:1170px;position:relative}
+#lightbox img{max-height:76vh;width:auto;margin-inline:auto;border-radius:3px}
+#lightbox figcaption{color:var(--luce);font-size:.95rem;margin-top:.9rem;text-align:center;
+  max-width:62ch;margin-inline:auto}
+.lb-close,.lb-prev,.lb-next{position:absolute;z-index:2;background:rgba(20,16,11,.88);
+  border:1px solid var(--tufo);color:var(--luce);border-radius:999px;cursor:pointer;
+  width:52px;height:52px;font-size:1.5rem;line-height:1;display:grid;place-items:center}
+.lb-close:hover,.lb-prev:hover,.lb-next:hover{background:var(--fiamma);color:#150F07;border-color:var(--fiamma)}
+.lb-close{top:-64px;right:0}
+.lb-prev{left:-66px;top:calc(50% - 26px)}
+.lb-next{right:-66px;top:calc(50% - 26px)}
+
+/* ---------- dove siamo + contatti ---------- */
+#dove{background:var(--pietra);border-top:1px solid #3A2A15;padding:3.6rem 0}
+.dove-griglia{display:grid;grid-template-columns:repeat(auto-fit,minmax(262px,1fr));gap:2.2rem}
+.scheda h3{color:var(--fiamma);margin-bottom:.55rem}
+.scheda p{margin:0 0 .35rem}
+.scheda a{color:var(--luce)}
+.scheda .fioco{color:var(--tufo);font-size:.93rem}
+#contatti{padding:3.4rem 0 1rem}
+.contatti-griglia{display:grid;grid-template-columns:repeat(auto-fit,minmax(238px,1fr));gap:1.8rem}
+.tel-grande{font-family:Piazzolla,serif;font-weight:700;font-size:clamp(1.5rem,3.4vw,2.1rem);
+  text-decoration:none;color:var(--fiamma);display:inline-block}
+.tel-grande:hover{color:var(--ambra)}
+
+body>footer{border-top:1px solid #3A2A15;margin-top:2.6rem;padding:2rem 0 2.6rem;font-size:.86rem;color:var(--tufo)}
+body>footer p{margin:0 0 .5rem;max-width:82ch}
+body>footer .ai{color:var(--bronzo-chiaro)}
+
+/* ---------- responsivo ---------- */
+@media (max-width:1000px){
+  .hero-griglia,.sala-testa{grid-template-columns:1fr}
+  .hero-foto{max-width:none;order:2}
+  .hero-testo{order:1}
+  .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .lb-prev{left:4px} .lb-next{right:4px}
+  .lb-close{top:-58px}
+}
+@media (max-width:920px){
+  .nav-links{display:none}
+  .burger{display:block}
+  .nav-tel{margin-left:auto}
+}
+@media (max-width:560px){
+  .nav-cta .lungo{display:none}
+  .nav-brand{font-size:.98rem}
+  .nav-tel a.nav-cta{padding:.6rem .95rem}
+}
+@media (max-width:480px){
+  .nav-nome{display:none}
+  .nav-in{gap:.7rem}
+}
+@media (max-width:430px){
+  .gallery-grid{grid-template-columns:1fr}
+  .lb-close,.lb-prev,.lb-next{width:46px;height:46px}
+}
+/* MOVIMENTO OPT-IN — regola 4 del kit far-motion: le animazioni esistono solo dentro
+   `no-preference`. Chi ha chiesto meno movimento non deve sperare che ce ne ricordiamo:
+   di default queste transizioni NON esistono affatto. (Prima qui c'era un blocco `reduce`
+   opt-out: `kit_far_motion.py` l'ha segnalato, ed era la convenzione vecchia.) */
+@media (prefers-reduced-motion:no-preference){
+  html{scroll-behavior:smooth}
+  .burger span{transition:transform .22s ease,opacity .22s ease}
+  #mobileMenu{transition:transform .28s ease,visibility .28s}
+  #lightbox{transition:opacity .24s ease,visibility .24s}
+}
+</style>
+<noscript><style>
+/* Senza JS il burger e' inerte: sotto i 920px resterebbe una barra SENZA menu raggiungibile.
+   La barra va a due righe e i link diventano una striscia scorrevole. Misurata: resta sotto i 140px. */
+@media (max-width:920px){
+  .nav-in{flex-wrap:wrap;padding-block:.4rem;row-gap:.2rem}
+  .nav-links{display:flex !important;order:3;width:100%;gap:1rem;margin:0;
+    overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:.25rem}
+  .nav-links a{white-space:nowrap;font-size:.85rem;padding:.25rem 0}
+  .nav-tel{margin-left:auto}
+  .burger{display:none !important}
+}
+</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Vai al contenuto</a>
+
+<header id="nav">
+  <div class="nav-in">
+    <a class="nav-brand" href="#hero" aria-label="La Cantina di Spello, torna in cima">
+      <svg viewBox="0 0 24 32" aria-hidden="true" fill="none" stroke="#E2AC1F" stroke-width="2" stroke-linecap="round">
+        <path d="M12 2.4c1.7 5.6 4.4 8.2 5.2 12 .9 4.6-1.6 10-5.2 10s-6.2-3.8-5.4-8c.6-3.2 3-4.4 4.2-7.8.5-1.3.8-3.5 1.2-6.2Z"/>
+        <path d="M12 24.4v3.4M8.4 27.8h7.2"/>
+      </svg>
+      <span class="nav-nome">La Cantina di Spello</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#chiocciola">Il riconoscimento</a></li>
+      <li><a href="#cucina">Cosa si mangia</a></li>
+      <li><a href="#gallery">La sala</a></li>
+      <li><a href="#dove">Dove siamo</a></li>
+    </ul>
+    <div class="nav-tel">
+      <a class="nav-cta" href="tel:+390742651775">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.3.2 2.5.57 3.6a1 1 0 0 1-.25 1Z"/></svg>
+        <span class="lungo">Chiama&nbsp;</span>0742 651775
+      </a>
+    </div>
+    <button class="burger" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav id="mobileMenu" aria-label="Menu">
+  <ul>
+    <li><a href="#chiocciola">Il riconoscimento</a></li>
+    <li><a href="#cucina">Cosa si mangia</a></li>
+    <li><a href="#gallery">La sala</a></li>
+    <li><a href="#dove">Dove siamo</a></li>
+  </ul>
+</nav>
+
+<main id="main">
+
+<section class="sez-hero">
+  <div class="wrap hero-griglia" id="hero">
+    <figure class="hero-foto">
+      <img src="img/cantina-botti-candele.jpg" width="1170" height="650" fetchpriority="high"
+           alt="Candele accese e una bottiglia su un ripiano di legno, davanti a grandi botti cerchiate di metallo.">
+      <figcaption>Le candele accese davanti alle botti.</figcaption>
+    </figure>
+    <div class="hero-testo">
+      <svg class="hero-firma" viewBox="0 0 24 32" aria-hidden="true" fill="none" stroke="#E2AC1F"
+           stroke-width="2" stroke-linecap="round" data-fm="traccia" data-fm-passo="220">
+        <path d="M12 2.4c1.7 5.6 4.4 8.2 5.2 12 .9 4.6-1.6 10-5.2 10s-6.2-3.8-5.4-8c.6-3.2 3-4.4 4.2-7.8.5-1.3.8-3.5 1.2-6.2Z"/>
+        <path d="M12 24.4v3.4M8.4 27.8h7.2"/>
+      </svg>
+      <p class="occhiello">Ristorante · Spello (PG)</p>
+      <h1 data-fm="righe">La Cantina di Spello</h1>
+      <p class="hero-sotto" data-fm="sali" data-fm-ritardo="120">Volte di pietra, luci soffuse e candele di pura cera d&rsquo;api.</p>
+      <p class="hero-dove" data-fm="sali" data-fm-ritardo="180">Via Cavour 2, nel centro storico di Spello.</p>
+      <div class="hero-azioni" data-fm="sali" data-fm-ritardo="240">
+        <a class="bottone bottone-pieno" href="tel:+390742651775">Chiama 0742 651775</a>
+        <a class="bottone bottone-vuoto" href="#cucina">Cosa si mangia</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="chiocciola" data-fms="braci" data-fms-quante="46" data-fms-colore="226,172,31" style="position:relative;overflow:hidden">
+  <div class="wrap chio" style="position:relative;z-index:1">
+    <svg class="chio-segno" viewBox="0 0 24 32" aria-hidden="true" fill="none" stroke="currentColor"
+         stroke-width="1.7" stroke-linecap="round" data-fm="traccia" data-fm-passo="240">
+      <path d="M12 2.4c1.7 5.6 4.4 8.2 5.2 12 .9 4.6-1.6 10-5.2 10s-6.2-3.8-5.4-8c.6-3.2 3-4.4 4.2-7.8.5-1.3.8-3.5 1.2-6.2Z"/>
+      <path d="M12 24.4v3.4M8.4 27.8h7.2"/>
+    </svg>
+    <div>
+      <p class="occhiello">Il riconoscimento</p>
+      <h2 data-fm="sali">Chiocciola Slow Food</h2>
+      <p data-fm="sali" data-fm-ritardo="90">Nella guida <em>Osterie d&rsquo;Italia 2026</em> di Slow Food, alla voce
+        &laquo;Umbria&nbsp;|&nbsp;10 Chiocciole&raquo;, c&rsquo;&egrave; <strong>La Cantina di Spello &ndash; Spello (PG)</strong>.</p>
+      <p class="fonte" data-fm="sali" data-fm-ritardo="150">Fonte: slowfood.it, <em>Tutte le Chiocciole di Osterie d&rsquo;Italia 2026, regione per regione</em>.
+        Su Tripadvisor la scheda del ristorante conta 2.165 recensioni.</p>
+    </div>
+  </div>
+</section>
+
+<section id="cucina">
+  <div class="wrap">
+    <p class="occhiello">Cosa si mangia</p>
+    <h2 data-fm="sali">Prodotti locali di stagione</h2>
+    <p data-fm="sali" data-fm-ritardo="90" style="max-width:62ch;margin-top:1rem;color:#3A2A16">
+      &laquo;Solo la conoscenza del territorio fa la differenza&raquo; &egrave; il motto dei soci del ristorante,
+      quindi si servono prodotti locali di stagione.</p>
+
+    <blockquote class="loro-voce" data-fm="sali" data-fm-ritardo="140">
+      <p>&laquo;&Egrave; assodato che esiste una relazione tra ci&ograve; che mangiamo e la nostra salute, il nostro
+      benessere dipende da cosa e da quanto si mangia. La migliore cucina &egrave; quella della nostra civilt&agrave;
+      contadina: sana, stagionale, gustosa, nutriente.&raquo;</p>
+      <footer>Dal blog del ristorante</footer>
+    </blockquote>
+
+    <ul class="piatti-elenco" data-fm-passo="70">
+      <li data-fm="sali">Gnocchi di patate rosse di Colfiorito al tartufo nero</li>
+      <li data-fm="sali">Filetto di chianina certificata dei pascoli della Valnerina</li>
+      <li data-fm="sali">Piccione alla griglia</li>
+      <li data-fm="sali">Sformatino di patate al tartufo nero</li>
+      <li data-fm="sali">Insalata di rapunzoli</li>
+      <li data-fm="sali">Frittata di uova al tartufo</li>
+      <li data-fm="sali">Cinghiale in tegame</li>
+      <li data-fm="sali">Purea di patate rosse di Colfiorito al tartufo</li>
+    </ul>
+
+    <div class="cucina-note">
+      <div data-fm="sali"><h3>La pasta</h3><p>Tutta la pasta viene tirata a mano.</p></div>
+      <div data-fm="sali" data-fm-ritardo="80"><h3>I vini</h3><p>Una cinquantina di etichette, e ci sono il sagrantino e i rossi di Montefalco.</p></div>
+      <div data-fm="sali" data-fm-ritardo="160"><h3>Le materie prime</h3><p>Chianina certificata dei pascoli della Valnerina, olio extravergine monocultivar moraiolo delle colline di Assisi e Spoleto, tartufo delle tartufaie del Monte Subasio.</p></div>
+      <div data-fm="sali" data-fm-ritardo="240"><h3>Non solo a tavola</h3><p>Si possono acquistare candele di pura cera d&rsquo;api, sculture in marmo, piatti di ceramica artigianale umbra, confetture e grappe della casa.</p></div>
+    </div>
+
+    <div class="cucina-foto" data-fm-passo="90">
+      <figure data-fm="sfuma">
+        <img src="img/t/spiedo-brace.jpg" width="600" height="333" loading="lazy"
+             alt="Volatili interi legati con lo spago, infilzati su spiedi davanti alla fiamma, e sopra pezzi di carne coperti di erbe.">
+        <figcaption>Gli spiedi davanti alla fiamma.</figcaption>
+      </figure>
+      <figure data-fm="sfuma">
+        <img src="img/t/involtini-brace.jpg" width="600" height="333" loading="lazy"
+             alt="Un grosso arrosto interamente ricoperto di erbe tritate, su una barra sopra un letto di braci ardenti.">
+        <figcaption>L&rsquo;arrosto alle erbe sulla brace.</figcaption>
+      </figure>
+      <figure data-fm="sfuma">
+        <img src="img/t/tortino-tartufo.jpg" width="600" height="333" loading="lazy"
+             alt="Un tortino chiaro al centro di un piatto di ceramica, in una salsa chiara, coperto di lamelle di tartufo nero.">
+        <figcaption>Un tortino con le lamelle di tartufo nero.</figcaption>
+      </figure>
+      <figure data-fm="sfuma">
+        <img src="img/t/piatto-candela.jpg" width="600" height="333" loading="lazy"
+             alt="Un piatto di ceramica con verdure, pomodoro e fette di pane tostato, accanto a una candela accesa e a un cestino di pane.">
+        <figcaption>A tavola, a lume di candela.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="sala-testa">
+      <div>
+        <p class="occhiello">La sala</p>
+        <h2 data-fm="sali">Una cantina di pietra</h2>
+        <p data-fm="sali" data-fm-ritardo="90" style="max-width:46ch;margin-top:1rem;color:var(--tufo)">
+          Volte di pietra, luci soffuse e candele di pura cera d&rsquo;api rendono la sala avvolgente e calda,
+          esaltando lo stile decisamente informale degli arredi.</p>
+      </div>
+      <figure data-fm="sfuma">
+        <img src="img/insegna-bronzo.jpg" width="1170" height="650" loading="lazy"
+             alt="Una lastra di metallo a rilievo con il nome &laquo;La Cantina&raquo; scritto in corsivo, incorniciato da tralci di vite con foglie e grappoli.">
+        <figcaption>Il nome del locale su una lastra di metallo, fra i tralci di vite.</figcaption>
+      </figure>
+    </div>
+
+    <div class="gallery-grid" data-fm-passo="60">
+      <button type="button" data-fm="sfuma" data-src="img/targa-ceramica.jpg" data-cap="Una targa di ceramica chiara con «La Cantina di Spello» scritto a mano in bruno, su un cavalletto di ferro, accanto a una ciotola di legno con mandarini."><img src="img/t/targa-ceramica.jpg" width="600" height="333" loading="lazy" alt="Una targa di ceramica chiara con &laquo;La Cantina di Spello&raquo; scritto a mano in bruno, su un cavalletto di ferro, accanto a una ciotola di legno con mandarini."></button>
+      <button type="button" data-fm="sfuma" data-src="img/agli-peperoncini.jpg" data-cap="Una treccia di cipolle dorate con alcuni peperoncini intrecciati e, accanto, una treccia di peperoncini rossi secchi, appese davanti a un muro di pietra chiara."><img src="img/t/agli-peperoncini.jpg" width="600" height="333" loading="lazy" alt="Una treccia di cipolle dorate con alcuni peperoncini intrecciati e, accanto, una treccia di peperoncini rossi secchi, appese davanti a un muro di pietra chiara."></button>
+      <button type="button" data-fm="sfuma" data-src="img/nicchia-lampada.jpg" data-cap="Un grande piatto ovale di ceramica smaltata appoggiato al muro di pietra, con davanti due bicchieri e alcune ampolle bianche dal piede dorato."><img src="img/t/nicchia-lampada.jpg" width="600" height="333" loading="lazy" alt="Un grande piatto ovale di ceramica smaltata appoggiato al muro di pietra, con davanti due bicchieri e alcune ampolle bianche dal piede dorato."></button>
+      <button type="button" data-fm="sfuma" data-src="img/pane-tagliere.jpg" data-cap="Una pagnotta tagliata e alcune fette su un tagliere di legno, con un coltello dal manico chiaro, sopra un mobile di legno."><img src="img/t/pane-tagliere.jpg" width="600" height="333" loading="lazy" alt="Una pagnotta tagliata e alcune fette su un tagliere di legno, con un coltello dal manico chiaro, sopra un mobile di legno."></button>
+      <button type="button" data-fm="sfuma" data-src="img/banco-bottiglie.jpg" data-cap="Bottiglie d&rsquo;olio e ampolle di vetro allineate su un banco, davanti a un muro di pietra chiara, accanto a una cassapanca di legno."><img src="img/t/banco-bottiglie.jpg" width="600" height="333" loading="lazy" alt="Bottiglie d&rsquo;olio e ampolle di vetro allineate su un banco, davanti a un muro di pietra chiara, accanto a una cassapanca di legno."></button>
+      <button type="button" data-fm="sfuma" data-src="img/oliere-mensola.jpg" data-cap="Due ampolle di ceramica bianca con la base e il tappo dorati, su un piano scuro davanti al muro di pietra."><img src="img/t/oliere-mensola.jpg" width="600" height="333" loading="lazy" alt="Due ampolle di ceramica bianca con la base e il tappo dorati, su un piano scuro davanti al muro di pietra."></button>
+      <button type="button" data-fm="sfuma" data-src="img/candele-cera.jpg" data-cap="Candele di cera accese, alcune consumate a coppa, allineate su un ripiano."><img src="img/t/candele-cera.jpg" width="600" height="333" loading="lazy" alt="Candele di cera accese, alcune consumate a coppa, allineate su un ripiano."></button>
+      <button type="button" data-fm="sfuma" data-src="img/scultura-marmo.jpg" data-cap="Una scultura di marmo bianco dalla superficie panneggiata, accanto a candele accese su un mobile di legno."><img src="img/t/scultura-marmo.jpg" width="600" height="333" loading="lazy" alt="Una scultura di marmo bianco dalla superficie panneggiata, accanto a candele accese su un mobile di legno."></button>
+      <button type="button" data-fm="sfuma" data-src="img/tavola-apparecchiata.jpg" data-cap="Calici di vetro e un recipiente di ceramica col coperchio, su una tavola apparecchiata."><img src="img/t/tavola-apparecchiata.jpg" width="600" height="333" loading="lazy" alt="Calici di vetro e un recipiente di ceramica col coperchio, su una tavola apparecchiata."></button>
+      <button type="button" data-fm="sfuma" data-src="img/piatto-posate.jpg" data-cap="Un piatto fondo chiaro dentro un sottopiatto tondo, su un tavolo di legno, con due bicchieri e un tovagliolo con le posate."><img src="img/t/piatto-posate.jpg" width="600" height="333" loading="lazy" alt="Un piatto fondo chiaro dentro un sottopiatto tondo, su un tavolo di legno, con due bicchieri e un tovagliolo con le posate."></button>
+      <button type="button" data-fm="sfuma" data-src="img/fuoco-camino.jpg" data-cap="Le fiamme dentro il camino, dietro una griglia di ferro."><img src="img/t/fuoco-camino.jpg" width="600" height="333" loading="lazy" alt="Le fiamme dentro il camino, dietro una griglia di ferro."></button>
+      <button type="button" data-fm="sfuma" data-src="img/cantina-botti-candele.jpg" data-cap="Candele accese e una bottiglia su un ripiano di legno, davanti a grandi botti cerchiate di metallo."><img src="img/t/cantina-botti-candele.jpg" width="600" height="333" loading="lazy" alt="Candele accese e una bottiglia su un ripiano di legno, davanti a grandi botti cerchiate di metallo."></button>
+    </div>
+  </div>
+</section>
+
+<section id="dove">
+  <div class="wrap">
+    <p class="occhiello">Dove siamo</p>
+    <h2 data-fm="sali" style="margin-bottom:1.8rem">Via Cavour 2, Spello</h2>
+    <div class="dove-griglia">
+      <div class="scheda" data-fm="sali">
+        <h3>Al telefono</h3>
+        <a class="tel-grande" href="tel:+390742651775">0742 651775</a>
+        <p style="margin-top:.5rem"><a href="tel:+393391619624">Cellulare: +39 339 1619624</a></p>
+        <p class="fioco">Orari: da confermare.</p>
+      </div>
+      <div class="scheda" data-fm="sali" data-fm-ritardo="80">
+        <h3>L&rsquo;indirizzo</h3>
+        <p>Ristorante La Cantina<br>Via Cavour, 2<br>06038 Spello (PG)</p>
+        <p><a href="https://maps.google.it/maps?q=Via+Cavour,+2,+06038+Spello+Perugia,+Umbria" target="_blank" rel="noopener">Apri la mappa</a></p>
+      </div>
+      <div class="scheda" data-fm="sali" data-fm-ritardo="160">
+        <h3>Per scrivere</h3>
+        <p><a href="mailto:info@lacantinadispello.com">info@lacantinadispello.com</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Fotografia ingrandita" hidden>
+  <figure>
+    <button class="lb-close" type="button" aria-label="Chiudi">&times;</button>
+    <button class="lb-prev" type="button" aria-label="Fotografia precedente">&lsaquo;</button>
+    <button class="lb-next" type="button" aria-label="Fotografia successiva">&rsaquo;</button>
+    <img id="lbImg" src="img/targa-ceramica.jpg" alt="">
+    <figcaption id="lbCap">Una targa di ceramica chiara con «La Cantina di Spello» scritto a mano in bruno, su un cavalletto di ferro, accanto a una ciotola di legno con mandarini.</figcaption>
+  </figure>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p class="ai">Sito dimostrativo realizzato con AI da FAR AI &middot; contenuti da rivedere con l&rsquo;attivit&agrave; prima della pubblicazione</p>
+    <p class="ai">Testi e fotografie provengono dal sito attuale di La Cantina di Spello e restano di propriet&agrave; dell&rsquo;attivit&agrave;.</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "@id":"https://demo.francescoar.com/cantina-spello/#ristorante",
+  "name":"La Cantina di Spello",
+  "url":"https://www.lacantinadispello.com/",
+  "telephone":"+39 0742 651775",
+  "email":"info@lacantinadispello.com",
+  "image":["https://demo.francescoar.com/cantina-spello/img/cantina-botti-candele.jpg","https://demo.francescoar.com/cantina-spello/img/insegna-bronzo.jpg"],
+  "servesCuisine":"Umbra",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Via Cavour, 2",
+    "postalCode":"06038",
+    "addressLocality":"Spello",
+    "addressRegion":"PG",
+    "addressCountry":"IT"
+  }
+}
+</script>
+
+<script>
+(function(){
+  var burger = document.querySelector('.burger');
+  var menu   = document.getElementById('mobileMenu');
+  var lb     = document.getElementById('lightbox');
+  var lbImg  = document.getElementById('lbImg');
+  var lbCap  = document.getElementById('lbCap');
+  var tessere = [].slice.call(document.querySelectorAll('.gallery-grid button'));
+  var indice = 0, apritore = null;
+
+  /* --- inert su tutto cio' che sta fuori dal pannello aperto --- */
+  var fuori = ['#main','footer','#nav .nav-links','#nav .nav-tel','.nav-brand','.skip'];
+  function inerti(si, tranne){
+    fuori.forEach(function(s){
+      document.querySelectorAll(s).forEach(function(el){
+        if (tranne && (el === tranne || el.contains(tranne))) return;
+        if (si) el.setAttribute('inert',''); else el.removeAttribute('inert');
+      });
+    });
+  }
+  function focalizzabili(root){
+    return [].slice.call(root.querySelectorAll(
+      'a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])'
+    )).filter(function(el){ var r = el.getBoundingClientRect(); return r.width > 0 && r.height > 0; });
+  }
+  function trappola(e, root){
+    if (e.key !== 'Tab') return;
+    var f = focalizzabili(root); if (!f.length) return;
+    var primo = f[0], ultimo = f[f.length-1];
+    if (e.shiftKey && document.activeElement === primo){ e.preventDefault(); ultimo.focus(); }
+    else if (!e.shiftKey && document.activeElement === ultimo){ e.preventDefault(); primo.focus(); }
+  }
+  /* si aspetta la CONDIZIONE vera (visibility), non un numero di fotogrammi */
+  function quandoVisibile(el, poi){
+    var giri = 0;
+    (function prova(){
+      if (getComputedStyle(el).visibility === 'visible' || ++giri > 40) { poi(); return; }
+      requestAnimationFrame(prova);
+    })();
+  }
+
+  /* --- menu di telefono --- */
+  function menuApri(){
+    menu.classList.add('open'); burger.classList.add('open');
+    burger.setAttribute('aria-expanded','true'); burger.setAttribute('aria-label','Chiudi il menu');
+    inerti(true, burger);
+    quandoVisibile(menu, function(){ var f = focalizzabili(menu); if (f[0]) f[0].focus(); });
+  }
+  function menuChiudi(daTastiera){
+    menu.classList.remove('open'); burger.classList.remove('open');
+    burger.setAttribute('aria-expanded','false'); burger.setAttribute('aria-label','Apri il menu');
+    inerti(false);
+    if (daTastiera) burger.focus();
+  }
+  burger.addEventListener('click', function(){
+    menu.classList.contains('open') ? menuChiudi(false) : menuApri();
+  });
+  menu.addEventListener('keydown', function(e){ trappola(e, menu); });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ menuChiudi(false); });
+  });
+
+  /* --- lightbox --- */
+  function mostra(i){
+    indice = (i + tessere.length) % tessere.length;
+    var b = tessere[indice];
+    lbImg.src = b.getAttribute('data-src');
+    lbImg.alt = b.querySelector('img').alt;
+    lbCap.textContent = b.getAttribute('data-cap');
+  }
+  function lbApri(i, dallaTastiera){
+    apritore = tessere[i]; mostra(i);
+    lb.hidden = false; lb.classList.add('open');
+    inerti(true, null);
+    quandoVisibile(lb, function(){ lb.querySelector('.lb-close').focus(); });
+    void dallaTastiera;
+  }
+  function lbChiudi(){
+    lb.classList.remove('open'); inerti(false);
+    setTimeout(function(){ lb.hidden = true; }, 260);
+    if (apritore) apritore.focus();
+  }
+  tessere.forEach(function(b, i){
+    b.addEventListener('click', function(){ lbApri(i); });
+  });
+  lb.querySelector('.lb-close').addEventListener('click', lbChiudi);
+  lb.querySelector('.lb-prev').addEventListener('click', function(){ mostra(indice - 1); });
+  lb.querySelector('.lb-next').addEventListener('click', function(){ mostra(indice + 1); });
+  lb.addEventListener('click', function(e){ if (e.target === lb) lbChiudi(); });
+  lb.addEventListener('keydown', function(e){
+    if (e.key === 'ArrowLeft')  mostra(indice - 1);
+    if (e.key === 'ArrowRight') mostra(indice + 1);
+    trappola(e, lb);
+  });
+
+  document.addEventListener('keydown', function(e){
+    if (e.key !== 'Escape') return;
+    if (lb.classList.contains('open')) lbChiudi();
+    else if (menu.classList.contains('open')) menuChiudi(true);
+  });
+})();
+</script>
+<script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
