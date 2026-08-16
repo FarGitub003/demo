@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Piccolo Ristoro «Le Rocce» · Pietrapertosa, Dolomiti Lucane</title>
+<meta name="description" content="Cucina tipica lucana a Pietrapertosa, ai piedi del Castello Normanno-Svevo. Dal 1995. Maccheroni mollicati, noci e peperone crusco IGP. Telefono 0971 983260.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#141312">
+
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="Piccolo Ristoro «Le Rocce» · Pietrapertosa">
+<meta property="og:description" content="Cucina tipica lucana ai piedi del Castello Normanno-Svevo, nelle Dolomiti Lucane. Dal 1995.">
+<meta property="og:image" content="https://demo.francescoar.com/lerocce-pietrapertosa/img/arco-paese.jpg">
+<meta property="og:locale" content="it_IT">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Podkova:wght@400..800&family=Readex+Pro:wght@300..600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="kit/far-motion.min.css">
+<script src="kit/far-motion.min.js"></script>
+<link rel="stylesheet" href="kit/sceniche/cascata.css">
+<script src="kit/sceniche/cascata.js" defer></script>
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23141312'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-weight='600' letter-spacing='1' text-anchor='middle' fill='%23F5F1E8'%3ELR%3C/text%3E%3C/svg%3E">
+
+<style>
+/* ============================================================
+   Piccolo Ristoro «Le Rocce» — identità 35
+   Display Podkova · Testo Readex Pro
+   Palette CAMPIONATA dalle loro fotografie (vedi dossier §3)
+   ============================================================ */
+:root{
+  /* --- misurati sulle loro foto --- */
+  --foglio:#E7DFCF;        /* mediana dei 3 fondi di pietra */
+  --roccia:#141312;        /* dominante delle rocce al tramonto, 26,1% */
+  --tovaglia:#6A2A24;      /* 23,4% della foto della sala — 8,05:1 sul foglio */
+  --cielo:#A4B7D7;         /* 21,2% della foto dell'hero — 9,13:1 sulla roccia */
+  --cotto:#846447;         /* 18,7% — solo materia */
+  --pietra:#938478;        /* 18,6% — solo materia */
+  --bosco:#4D513B;         /* 16,2% */
+  /* --- varianti CALCOLATE a 7:1 sul fondo dichiarato --- */
+  --cotto-testo:#58432F;   /* 7,02:1 sul foglio */
+  --pietra-testo:#4D453F;  /* 7,08:1 sul foglio */
+  --bosco-testo:#454935;   /* 7,02:1 sul foglio */
+  --tovaglia-luce:#B79895; /* 7,02:1 sulla roccia */
+  --inchiostro:#131211;    /* 14,13:1 sul foglio */
+  --luce:#F5F1E8;          /* 16,46:1 sulla roccia */
+  --velo:rgba(19,18,17,.14);
+
+  --display:"Podkova",Georgia,"Times New Roman",serif;
+  --testo:"Readex Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --barra:68px;
+  --gutter:clamp(1.15rem,4vw,3.5rem);
+  --max:1180px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{
+  /* ⛔ overflow-x sta su html come clip, MAI su body (LEGGIMI del kit) */
+  overflow-x:clip; -webkit-text-size-adjust:100%;
+}
+body{
+  margin:0; background:var(--foglio); color:var(--inchiostro);
+  font-family:var(--testo); font-weight:300; font-size:clamp(1rem,.94rem + .3vw,1.115rem);
+  line-height:1.72; letter-spacing:.005em;
+  font-synthesis-weight:none; /* ⛔ mai un finto grassetto su una variabile */
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%; height:auto; display:block}
+h1,h2,h3{font-family:var(--display); font-weight:600; line-height:1.1; margin:0; letter-spacing:-.012em}
+h1{font-size:clamp(2.5rem,1.6rem + 4.4vw,5rem); font-weight:700}
+h2{font-size:clamp(1.85rem,1.35rem + 2.2vw,3.05rem)}
+h3{font-size:clamp(1.2rem,1.05rem + .7vw,1.55rem); font-weight:650}
+p{margin:0 0 1.1em}
+a{color:inherit}
+
+.wrap{width:100%; max-width:var(--max); margin-inline:auto; padding-inline:var(--gutter)}
+section{scroll-margin-top:calc(var(--barra) + 15px)}
+
+/* occhiello: sempre su un fondo di cui conosco il contrasto */
+.occhiello{
+  font-family:var(--testo); font-weight:500; font-size:.735rem;
+  letter-spacing:.24em; text-transform:uppercase; color:var(--cotto-testo);
+  margin:0 0 .95rem;
+}
+.scuro .occhiello{color:var(--tovaglia-luce)}
+
+/* divisore: è la LORO convenzione tipografica, ripresa dal loro sito
+   («__________ *** __________») */
+.divisore{
+  display:flex; align-items:center; gap:1rem; margin:0 0 2.1rem;
+  color:var(--pietra-testo); font-family:var(--display); font-size:1rem;
+}
+.divisore::before,.divisore::after{content:""; flex:1; height:1px; background:currentColor}
+.scuro .divisore{color:var(--tovaglia-luce)}
+
+/* ---------- BARRA ---------- */
+#nav{
+  position:fixed; inset:0 0 auto 0; z-index:60; height:var(--barra);
+  display:flex; align-items:center; gap:1rem;
+  padding-inline:var(--gutter);
+  background:var(--roccia); color:var(--luce);
+  border-bottom:1px solid rgba(245,241,232,.14);
+}
+.nav-brand{
+  font-family:var(--display); font-weight:650; font-size:1.02rem;
+  letter-spacing:.055em; text-transform:uppercase; text-decoration:none;
+  color:var(--luce); white-space:nowrap; line-height:1.05;
+}
+.nav-brand small{display:block; font-family:var(--testo); font-weight:300;
+  font-size:.6rem; letter-spacing:.2em; color:var(--tovaglia-luce); text-transform:uppercase}
+.nav-links{display:flex; gap:1.6rem; margin-left:auto; list-style:none; padding:0}
+.nav-links a{font-size:.895rem; font-weight:400; text-decoration:none; color:var(--luce); opacity:.94}
+.nav-links a:hover,.nav-links a:focus-visible{opacity:1; text-decoration:underline; text-underline-offset:5px}
+.nav-tel{margin-left:1.6rem}
+.nav-tel a.nav-cta{
+  display:inline-flex; align-items:center; gap:.45rem;
+  background:var(--luce); color:var(--roccia);
+  padding:.56rem 1.05rem; border-radius:2px; text-decoration:none;
+  font-weight:500; font-size:.885rem; white-space:nowrap;
+}
+.nav-tel a.nav-cta .corto{display:none}
+.nav-tel a.nav-cta:hover{transform:translateY(-1px)}
+.burger{
+  display:none; margin-left:auto; width:44px; height:44px; flex:0 0 44px;
+  background:none; border:1px solid rgba(245,241,232,.36); border-radius:2px;
+  color:var(--luce); cursor:pointer; padding:0;
+}
+.burger span{display:block; width:20px; height:1.5px; background:currentColor; margin:4px auto}
+.burger.open span:nth-child(1){transform:translateY(5.5px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
+
+#mobileMenu{
+  position:fixed; inset:var(--barra) 0 auto 0; z-index:59;
+  background:var(--roccia); color:var(--luce);
+  padding:1.4rem var(--gutter) 2rem;
+  border-bottom:1px solid rgba(245,241,232,.14);
+  transform:translateY(-14px); opacity:0; visibility:hidden;
+}
+#mobileMenu.open{transform:none; opacity:1; visibility:visible}
+#mobileMenu ul{list-style:none; margin:0 0 1.2rem; padding:0; display:grid; gap:.15rem}
+#mobileMenu a{display:block; padding:.62rem 0; text-decoration:none; color:var(--luce); font-size:1.06rem}
+#mobileMenu .menu-tel{
+  display:inline-flex; gap:.5rem; background:var(--luce); color:var(--roccia);
+  padding:.75rem 1.2rem; border-radius:2px; font-weight:500; text-decoration:none;
+}
+
+.skip{
+  position:absolute; left:.6rem; top:-64px; z-index:200;
+  background:var(--roccia); color:var(--luce); padding:.7rem 1.1rem;
+  border-radius:2px; text-decoration:none; font-weight:500;
+}
+.skip:focus{transform:translateY(72px)}
+
+/* ---------- HERO: foto in alto, TITOLO SOTTO (§0.2 modo 1) ---------- */
+.hero-foto{background:var(--roccia)}
+.hero-foto img{width:100%; max-height:74vh; object-fit:cover; object-position:center 58%}
+.hero-testo{padding:clamp(2.4rem,5vw,4.2rem) 0 clamp(2.2rem,4.4vw,3.4rem)}
+.hero-testo h1{max-width:15ch}
+.hero-sotto{
+  font-size:clamp(1.06rem,.98rem + .42vw,1.32rem); font-weight:300;
+  color:var(--cotto-testo); max-width:44ch; margin:1.15rem 0 0;
+}
+.hero-azioni{display:flex; flex-wrap:wrap; gap:.8rem; margin-top:1.9rem}
+.bottone{
+  display:inline-flex; align-items:center; gap:.5rem;
+  background:var(--roccia); color:var(--luce); text-decoration:none;
+  padding:.92rem 1.55rem; border-radius:2px; font-weight:500; font-size:1rem;
+}
+.bottone:hover{transform:translateY(-1px)}
+.bottone.chiaro{background:transparent; color:var(--inchiostro); border:1px solid var(--velo)}
+.scuro .bottone{background:var(--luce); color:var(--roccia)}
+.scuro .bottone.chiaro{background:transparent; color:var(--luce); border-color:rgba(245,241,232,.4)}
+
+/* ---------- fasce ---------- */
+.fascia{padding:clamp(3.2rem,7vw,6rem) 0}
+.scuro{background:var(--roccia); color:var(--luce)}
+.scuro h2,.scuro h3{color:var(--luce)}
+
+.due{display:grid; gap:clamp(1.6rem,4vw,3.4rem); align-items:center}
+@media (min-width:860px){
+  .due{grid-template-columns:1.05fr .95fr}
+  .due.rovescia > :first-child{order:2}
+}
+.due figure{margin:0}
+.due figcaption,.dida{
+  font-size:.815rem; color:var(--pietra-testo); margin-top:.6rem; line-height:1.5;
+}
+.scuro .dida,.scuro figcaption{color:var(--tovaglia-luce)}
+
+blockquote{
+  margin:1.6rem 0; padding:0 0 0 1.25rem;
+  border-left:2px solid var(--tovaglia);
+  font-family:var(--display); font-size:clamp(1.1rem,1rem + .5vw,1.4rem);
+  font-weight:400; font-style:italic; line-height:1.5; color:var(--inchiostro);
+}
+.scuro blockquote{border-left-color:var(--tovaglia-luce); color:var(--luce)}
+blockquote cite{
+  display:block; margin-top:.7rem; font-family:var(--testo); font-style:normal;
+  font-size:.775rem; font-weight:400; letter-spacing:.06em; text-transform:uppercase;
+  color:var(--pietra-testo);
+}
+.scuro blockquote cite{color:var(--tovaglia-luce)}
+
+/* piatti */
+.piatti{display:grid; gap:1.15rem; margin-top:2.2rem}
+@media (min-width:760px){.piatti{grid-template-columns:repeat(3,1fr)}}
+.piatto{
+  background:rgba(19,18,17,.045); border:1px solid var(--velo);
+  border-radius:3px; padding:1.5rem 1.35rem;
+}
+.piatto h3{margin-bottom:.5rem}
+.piatto p{margin:0; font-size:.945rem; color:var(--cotto-testo)}
+
+/* riconoscimenti */
+.premi{display:grid; gap:1rem; margin-top:2rem}
+@media (min-width:700px){.premi{grid-template-columns:repeat(3,1fr)}}
+.premio{
+  border:1px solid rgba(245,241,232,.24); border-radius:3px;
+  padding:1.5rem 1.2rem; text-align:center;
+}
+.premio b{display:block; font-family:var(--display); font-size:2.1rem; font-weight:700; color:var(--cielo)}
+.premio span{display:block; font-size:.82rem; color:var(--tovaglia-luce); margin-top:.4rem; letter-spacing:.05em}
+
+/* dati pratici */
+.dati{display:grid; gap:1.4rem; margin-top:2rem}
+@media (min-width:700px){.dati{grid-template-columns:repeat(2,1fr)}}
+.dato{border-top:1px solid var(--velo); padding-top:1rem}
+.scuro .dato{border-top-color:rgba(245,241,232,.24)}
+.dato dt{font-size:.735rem; letter-spacing:.2em; text-transform:uppercase; color:var(--pietra-testo); margin-bottom:.4rem}
+.scuro .dato dt{color:var(--tovaglia-luce)}
+.dato dd{margin:0; font-size:1.06rem}
+.dato dd a{font-weight:500}
+
+/* ---------- GALLERIA «IL POSTO» — scenica cascata ---------- */
+#gallery{
+  --fmx-vuoto:12px;
+  padding-block:4.5rem;           /* spazio perché le colonne scorrano senza tagliare */
+  margin-top:2.4rem;
+}
+#gallery .col{display:grid; gap:12px}
+#gallery button{
+  display:block; padding:0; border:0; background:none; cursor:zoom-in; width:100%;
+  border-radius:2px; overflow:hidden; line-height:0;
+}
+#gallery button:hover{transform:translateY(-2px)}
+#gallery button:focus-visible{outline:2px solid var(--cielo); outline-offset:3px}
+#gallery img{width:100%; aspect-ratio:auto}
+
+/* ---------- LIGHTBOX ---------- */
+#lightbox{
+  position:fixed; inset:0; z-index:120; display:grid; place-items:center;
+  background:rgba(10,9,8,.94); padding:clamp(1rem,4vw,3rem);
+  opacity:0; visibility:hidden;
+}
+#lightbox.open{opacity:1; visibility:visible}
+#lightbox figure{margin:0; max-width:min(1100px,100%); position:relative; z-index:1}
+#lightbox img{max-height:78vh; width:auto; margin-inline:auto; border-radius:2px}
+#lightbox figcaption{
+  color:var(--luce); font-size:.9rem; margin-top:1rem; text-align:center; line-height:1.55;
+}
+.lb-close,.lb-prev,.lb-next{
+  position:absolute; z-index:3;
+  background:rgba(20,19,18,.86); color:var(--luce);
+  border:1px solid rgba(245,241,232,.34); border-radius:2px;
+  width:52px; height:52px; font-size:1.5rem; line-height:1; cursor:pointer;
+  display:grid; place-items:center;
+}
+.lb-close{top:clamp(1rem,3vw,2rem); right:clamp(1rem,3vw,2rem)}
+.lb-prev{left:clamp(.6rem,2vw,1.6rem); top:50%; transform:translateY(-50%)}
+.lb-next{right:clamp(.6rem,2vw,1.6rem); top:50%; transform:translateY(-50%)}
+.lb-close:hover,.lb-prev:hover,.lb-next:hover{opacity:.86}
+.lb-prev:focus-visible,.lb-next:focus-visible,.lb-close:focus-visible{outline:2px solid var(--cielo); outline-offset:2px}
+
+/* ---------- PIEDE ---------- */
+footer{background:var(--roccia); color:var(--luce); padding:clamp(2.8rem,6vw,4.5rem) 0 2.4rem}
+footer a{color:var(--luce)}
+.piede-griglia{display:grid; gap:2rem}
+@media (min-width:760px){.piede-griglia{grid-template-columns:1.2fr 1fr 1fr}}
+.piede-nota{
+  margin-top:2.6rem; padding-top:1.5rem; border-top:1px solid rgba(245,241,232,.22);
+  font-size:.795rem; line-height:1.65; color:var(--tovaglia-luce);
+}
+.piede-nota p{margin:0 0 .5em}
+
+/* ---------- telefono e barra ai vari schermi ---------- */
+@media (max-width:920px){
+  .nav-links{display:none}
+  .burger{display:block; margin-left:auto; order:3}
+  .nav-tel{margin-left:auto; order:2}          /* ⛔ resta VISIBILE (senza_js.py) */
+}
+@media (max-width:560px){
+  /* 🔴 il marchio e' nowrap: per esteso spingeva telefono e burger FUORI SCHERMO
+     (misurato: burger a left 391px su 390px di finestra). Qui si accorcia. */
+  .nav-brand .nb-pre{display:none}
+  .nav-brand{font-size:.95rem}
+  /* si ABBREVIA il testo, ⛔ non si nasconde il nodo: al posto del numero compare «Chiama» */
+  .nav-tel a.nav-cta .lungo{display:none}
+  .nav-tel a.nav-cta .corto{display:inline}
+  .nav-tel a.nav-cta{padding:.5rem .85rem}
+  :root{--barra:62px}
+}
+@media (max-width:360px){ .nav-brand small{display:none} }
+
+/* ---------- il movimento è OPT-IN (regola 4 del kit) ----------
+   ⛔ Non si spegne sotto `reduce`: si ACCENDE sotto `no-preference`.
+   Chi ha chiesto meno movimento non deve sperare che ce ne ricordiamo noi. */
+@media (prefers-reduced-motion:no-preference){
+  html{scroll-behavior:smooth}
+  .nav-tel a.nav-cta{transition:transform .18s ease, opacity .18s ease}
+  .burger span{transition:transform .22s ease, opacity .22s ease}
+  #mobileMenu{transition:transform .26s ease, opacity .26s ease, visibility .26s}
+  .skip{transition:transform .2s ease}
+  .bottone{transition:transform .18s ease, opacity .18s ease}
+  #gallery button{transition:transform .22s ease, opacity .22s ease}
+  #lightbox{transition:opacity .24s ease, visibility .24s}
+  .lb-close,.lb-prev,.lb-next{transition:transform .18s ease, opacity .18s ease}
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Vai al contenuto</a>
+
+<header id="nav">
+  <a class="nav-brand" href="#top"><span class="nb-pre">Piccolo Ristoro </span>«Le&nbsp;Rocce»<small>Pietrapertosa</small></a>
+  <ul class="nav-links">
+    <li><a href="#dove">Dove sta</a></li>
+    <li><a href="#posto">Il posto</a></li>
+    <li><a href="#tavola">A tavola</a></li>
+    <li><a href="#sale">Le sale</a></li>
+    <li><a href="#contatti">Contatti</a></li>
+  </ul>
+  <div class="nav-tel">
+    <a class="nav-cta" href="tel:+390971983260"><span aria-hidden="true">✆</span><span class="lungo">0971 983260</span><span class="corto">Chiama</span></a>
+  </div>
+  <button class="burger" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobileMenu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav id="mobileMenu" class="mobile-menu" aria-label="Menu di navigazione">
+  <ul>
+    <li><a href="#dove">Dove sta</a></li>
+    <li><a href="#posto">Il posto</a></li>
+    <li><a href="#tavola">A tavola</a></li>
+    <li><a href="#sale">Le sale</a></li>
+    <li><a href="#contatti">Contatti</a></li>
+  </ul>
+  <a class="menu-tel" href="tel:+390971983260"><span aria-hidden="true">✆</span> 0971 983260</a>
+</nav>
+
+<main id="main">
+
+  <div id="top"></div>
+
+  <!-- ============ HERO: la foto, e il titolo SOTTO ============ -->
+  <div class="hero-foto">
+    <picture>
+      <source media="(max-width:640px)" srcset="img/arco-paese-mobile.jpg">
+      <img src="img/arco-paese.jpg" width="1125" height="530" fetchpriority="high"
+           alt="Il paese di Pietrapertosa visto attraverso un arco in pietra a tutto sesto: case addossate sul pendio e, dietro, le guglie rocciose delle Dolomiti Lucane sotto un cielo azzurro con nuvole.">
+    </picture>
+  </div>
+
+  <div class="hero-testo wrap">
+    <p class="occhiello" data-fm="sfuma">Pietrapertosa · Dolomiti Lucane</p>
+    <h1 data-fm="righe">Piccolo Ristoro «Le&nbsp;Rocce»</h1>
+    <p class="hero-sotto" data-fm="sali" data-fm-ritardo="120">
+      Cucina tipica lucana ai piedi del Castello Normanno-Svevo, dal 1995.
+    </p>
+    <div class="hero-azioni" data-fm="sali" data-fm-ritardo="220">
+      <a class="bottone" href="tel:+390971983260"><span aria-hidden="true">✆</span> Chiama 0971 983260</a>
+      <a class="bottone chiaro" href="#dove">Dove sta</a>
+    </div>
+  </div>
+
+  <!-- ============ DOVE STA ============ -->
+  <section id="dove" class="fascia">
+    <div class="wrap">
+      <div class="due">
+        <div>
+          <p class="occhiello">Dove ci troviamo</p>
+          <h2 data-fm="sali">Ai piedi del castello,<br>nel centro storico</h2>
+          <div class="divisore" aria-hidden="true">✳</div>
+          <blockquote data-fm="sali">
+            «Il piccolo Ristoro “LE ROCCE” é situato ai piedi del Castello Normanno Svevo, nella parte
+            bassa del paese a 50 mt. dal “Percorso delle sette pietre” nel centro storico, nei pressi
+            dell’Antico Convento di San Francesco in Via Giuseppe Garibaldi 107/109, adiacente al
+            Monumento/Casa del famoso Dantista e Letterato F. Torraca di fama mondiale.»
+            <cite>Le loro parole</cite>
+          </blockquote>
+          <p data-fm="sali">
+            Il Ristoro sta in Via Giuseppe Garibaldi 107/109, nella parte bassa del paese.
+            Il loro testo chiama Pietrapertosa «il nostro splendido Borgo rupestre».
+          </p>
+        </div>
+        <figure data-fm="sali" data-fm-ritardo="140">
+          <img src="img/vicolo-ingresso.jpg" width="1000" height="1362" loading="lazy"
+               alt="Vicolo fra case intonacate di rosa e di crema, con una porta di legno scuro e un rampicante su un graticcio di canne; accanto alla porta, botti di legno con fiori rossi. La strada scende e oltre i tetti si vede il costone di roccia.">
+          <figcaption>Un vicolo del centro storico. Fotografia dell’attività.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ IL POSTO — galleria a cascata ============ -->
+  <section id="posto" class="fascia scuro">
+    <div class="wrap">
+      <p class="occhiello">Il posto</p>
+      <h2 data-fm="sali">Il borgo rupestre,<br>e le sue guglie</h2>
+      <div class="divisore" aria-hidden="true">✳</div>
+      <p data-fm="sali" style="max-width:60ch">
+        Del posto scrivono del «richiamo della morfologia paesaggistica tramite scorciatoie di
+        mulattiere e vicoletti in pietra, trekking nei boschi del parco di “Gallipoli Cognato e
+        delle piccole Dolomiti Lucane” e ai sentieri fluviali». E raccontano che a farli uscire
+        «dall’anonimato» è stato «l’ormai rinomato Volo dell’Angelo».
+      </p>
+    </div>
+
+    <div class="wrap">
+      <div id="gallery" class="gallery-grid" data-fms="cascata" data-fms-ampiezza="58">
+        <div class="col">
+          <button type="button" data-src="img/luna-guglie.jpg"
+            data-cap="Le guglie delle Dolomiti Lucane di notte, con la luna alta sopra la cresta e il paese illuminato che scende lungo il pendio.">
+            <img src="img/luna-guglie.jpg" width="720" height="900" loading="lazy"
+                 alt="Le guglie rocciose di notte, con la luna sopra la cresta e le luci del paese sul pendio sotto.">
+          </button>
+          <button type="button" data-src="img/dolomiti-innevate.jpg"
+            data-cap="Le Dolomiti Lucane innevate al tramonto: la neve copre i pendii e il cielo dietro le guglie è arancione.">
+            <img src="img/dolomiti-innevate.jpg" width="720" height="406" loading="lazy"
+                 alt="Guglie rocciose innevate al tramonto, con il cielo arancione dietro le creste.">
+          </button>
+          <button type="button" data-src="img/veduta-aerea.jpg"
+            data-cap="Pietrapertosa vista dall’alto: i tetti rossi delle case addossate una all’altra e, sopra, la parete di roccia.">
+            <img src="img/veduta-aerea.jpg" width="720" height="904" loading="lazy"
+                 alt="Veduta dall’alto del paese: tetti di tegole rosse addossati fra loro sotto una parete rocciosa.">
+          </button>
+          <button type="button" data-src="img/strada-neve.jpg"
+            data-cap="La strada sgombrata dalla neve, con le guglie di roccia in fondo e il cielo rosa del crepuscolo.">
+            <img src="img/strada-neve.jpg" width="720" height="540" loading="lazy"
+                 alt="Strada di montagna sgombrata dalla neve, fra cumuli di neve e alberi spogli; in fondo le guglie di roccia si stagliano contro un cielo rosa e azzurro al crepuscolo.">
+          </button>
+        </div>
+        <div class="col">
+          <button type="button" data-src="img/paese-alba.jpg"
+            data-cap="Il paese al crepuscolo, addossato allo sperone di roccia, sotto nuvole rosa e viola.">
+            <img src="img/paese-alba.jpg" width="720" height="900" loading="lazy"
+                 alt="Il paese visto dall’alto al crepuscolo, addossato a uno sperone di roccia, sotto un cielo di nuvole rosa e viola.">
+          </button>
+          <button type="button" data-src="img/guglie-tramonto.jpg"
+            data-cap="Le guglie al tramonto, con le prime luci accese fra le case ai loro piedi.">
+            <img src="img/guglie-tramonto.jpg" width="720" height="540" loading="lazy"
+                 alt="Guglie rocciose scure contro un cielo che sfuma dall’arancio all’azzurro, con luci accese fra le case sotto.">
+          </button>
+          <button type="button" data-src="img/paese-notte.jpg"
+            data-cap="Pietrapertosa di notte vista dall’alto: le luci delle case disegnano le vie del centro storico.">
+            <img src="img/paese-notte.jpg" width="720" height="900" loading="lazy"
+                 alt="Il paese di notte visto dall’alto, con le luci arancioni che disegnano le vie fra le case.">
+          </button>
+        </div>
+      </div>
+      <p class="dida">Fotografie dell’attività. Alcune portano la firma di chi le ha scattate: è rimasta com’era.</p>
+    </div>
+  </section>
+
+  <!-- ============ A TAVOLA ============ -->
+  <section id="tavola" class="fascia">
+    <div class="wrap">
+      <p class="occhiello">Cosa si mangia</p>
+      <h2 data-fm="sali">Poche cose, fatte a mano</h2>
+      <div class="divisore" aria-hidden="true">✳</div>
+      <div class="due">
+        <blockquote data-fm="sali" style="margin-top:0">
+          «La logistica del Ristoro è incentrata su una carta Menù ristretta, studiata di proposito con
+          poche pietanze, per ottimizzare i flussi di risorse e l’approvvigionamento delle vivande, al
+          fine di garantire, tutelare la qualità e ridurre i Food cost.»
+          <cite>Le loro parole</cite>
+        </blockquote>
+        <figure data-fm="sali" data-fm-ritardo="120">
+          <img src="img/tagliere.jpg" width="660" height="494" loading="lazy"
+               alt="Piatto bianco con salumi affettati, due tipi di formaggio, frittelle dorate e una fetta di frittata; al centro una montagnola di conserva rossa con un rametto di rosmarino su una foglia di lattuga.">
+          <figcaption>Un antipasto servito al Ristoro. Fotografia dell’attività.</figcaption>
+        </figure>
+      </div>
+
+      <div class="piatti">
+        <article class="piatto" data-fm="sali">
+          <h3>Maccheroni mollicati, noci e peperone Crusco IGP</h3>
+          <p>Il piatto che chiamano il loro cavallo di battaglia. Pasta fresca lavorata a mano.</p>
+        </article>
+        <article class="piatto" data-fm="sali" data-fm-ritardo="90">
+          <h3>Antipasto della Casa</h3>
+          <p>Come lo descrivono loro: «Assaggini caserecci con prodotti Bio».</p>
+        </article>
+        <article class="piatto" data-fm="sali" data-fm-ritardo="180">
+          <h3>Pasta fresca fatta a mano</h3>
+          <p>«Le specialità della casa più note si trovano tra i primi piatti con Pasta Fresca fatta a mano.»</p>
+        </article>
+      </div>
+
+      <div class="due rovescia" style="margin-top:clamp(2.6rem,6vw,4.4rem)">
+        <figure data-fm="sali">
+          <img src="img/piatto-insegna.jpg" width="706" height="854" loading="lazy"
+               alt="Un piatto di pasta corta condita con briciole di peperone rosso, con due peperoni cruschi interi e un rametto di rosmarino infilati sopra; alle spalle, appesa al muro, l’insegna dipinta a mano «PICCOLO RISTORO LE ROCCE · dal 1995».">
+          <figcaption>Un piatto servito sotto l’insegna del Ristoro. Fotografia dell’attività, con la firma dell’autore lasciata intatta.</figcaption>
+        </figure>
+        <div>
+          <h3 data-fm="sali">Il piatto della Domenica delle Palme</h3>
+          <blockquote data-fm="sali">
+            «Questo piatto tipico della Cucina Pietrapertosana, veniva preparato la “Domenica delle
+            Palme” dalle nostre nonne. Una bontà unica, che affonda le radici nella tradizione povera
+            e nei sapori genuini più antichi…»
+            <cite>Le loro parole</cite>
+          </blockquote>
+          <p data-fm="sali">
+            Del condimento scrivono che serve «pane raffermo cotto a forno a legna», realizzato «con
+            lievito madre naturale, cereali assortiti e frumenti antichi selezionati», e «l’immancabile
+            oro rosso, lo zafferano della Basilicata, il famoso Peperone Crusco Igp».
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LE SALE ============ -->
+  <section id="sale" class="fascia scuro">
+    <div class="wrap">
+      <p class="occhiello">Le sale e il terrazzino</p>
+      <h2 data-fm="sali">Pietra a vista, e un arco del Trecento</h2>
+      <div class="divisore" aria-hidden="true">✳</div>
+      <div class="due">
+        <div>
+          <blockquote data-fm="sali">
+            «Il locale ti accoglie con il calore Rustico della pietra a vista in una struttura
+            millenaria, apposite luci soffuse da ricreare un’atmosfera rilassante e romantica. Sono
+            presenti due salette ed un Dehor.»
+            <cite>Le loro parole</cite>
+          </blockquote>
+          <p data-fm="sali">
+            Dell’architettura scrivono che «raggiunge il suo culmine artistico in un “Arco gotico
+            originale” del XIV secolo a sesto acuto».
+          </p>
+          <dl class="dati">
+            <div class="dato"><dt>Capienza interna</dt><dd>60/70 posti</dd></div>
+            <div class="dato"><dt>Terrazzino / Dehor</dt><dd>15/25 posti</dd></div>
+          </dl>
+        </div>
+        <figure data-fm="sali" data-fm-ritardo="140">
+          <img src="img/arco-sala.jpg" width="1100" height="1466" loading="lazy"
+               alt="Sala interna con un grande arco in pietra chiara e travi di legno scuro; sotto l’arco, tavoli apparecchiati con tovaglie bianche su sottotovaglie rosse, tovaglioli rossi piegati a fiore e sedie di legno scuro.">
+          <figcaption>Una delle due salette. Fotografia dell’attività.</figcaption>
+        </figure>
+      </div>
+
+      <div class="due rovescia" style="margin-top:clamp(2.4rem,5vw,3.8rem)">
+        <figure data-fm="sali">
+          <img src="img/dehors-stuoie.jpg" width="1000" height="1334" loading="lazy"
+               alt="Terrazzino coperto da una pergola di travi, chiuso ai lati da stuoie di canna; tavoli lunghi apparecchiati con tovaglioli rossi piegati a cono e bicchieri capovolti.">
+          <figcaption>Il terrazzino. Fotografia dell’attività.</figcaption>
+        </figure>
+        <figure data-fm="sali" data-fm-ritardo="120">
+          <img src="img/tavolata-tovaglioli.jpg" width="1080" height="810" loading="lazy"
+               alt="Tavolata lunga apparecchiata con tovaglia bianca e tovaglioli rossi piegati a fiore, bicchieri capovolti e posate; a sinistra un muro di pietra a vista.">
+          <figcaption>La tavolata grande, apparecchiata. Fotografia dell’attività.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RICONOSCIMENTI ============ -->
+  <section id="riconoscimenti" class="fascia">
+    <div class="wrap">
+      <p class="occhiello">Riconoscimenti</p>
+      <h2 data-fm="sali">Tre anni di fila</h2>
+      <div class="divisore" aria-hidden="true">✳</div>
+      <p data-fm="sali" style="max-width:56ch">
+        Sul loro sito, in apertura, espongono tre certificati di eccellenza di Restaurant Guru come
+        migliore ristorante italiano a Pietrapertosa.
+      </p>
+      <div class="premi" style="--x:0">
+        <div class="premio" data-fm="sali" style="border-color:var(--velo)">
+          <b style="color:var(--tovaglia)">2023</b><span style="color:var(--pietra-testo)">Certificato di eccellenza</span>
+        </div>
+        <div class="premio" data-fm="sali" data-fm-ritardo="90" style="border-color:var(--velo)">
+          <b style="color:var(--tovaglia)">2024</b><span style="color:var(--pietra-testo)">Certificato di eccellenza</span>
+        </div>
+        <div class="premio" data-fm="sali" data-fm-ritardo="180" style="border-color:var(--velo)">
+          <b style="color:var(--tovaglia)">2025</b><span style="color:var(--pietra-testo)">Certificato di eccellenza</span>
+        </div>
+      </div>
+      <p class="dida" style="margin-top:1.2rem">
+        Fonte: i tre certificati pubblicati dall’attività sul proprio sito.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ L'INSEGNA / LA STORIA ============ -->
+  <section id="storia" class="fascia" style="padding-top:0">
+    <div class="wrap">
+      <div class="due">
+        <figure data-fm="sali">
+          <img src="img/insegna-bacheca.jpg" width="1000" height="1300" loading="lazy"
+               alt="Insegna dipinta a mano su una targa chiara appesa al muro di pietra: «PICCOLO RISTORO LE ROCCE». Sotto, una bacheca con il menù esposto e una tavoletta di legno scuro con la scritta «CUCINA TIPICA» a lettere chiare. Attorno, foglie di vite americana.">
+          <figcaption>L’insegna e la bacheca del menù, all’ingresso. Fotografia dell’attività.</figcaption>
+        </figure>
+        <div>
+          <p class="occhiello">La nostra storia</p>
+          <h2 data-fm="sali">Dal 1995</h2>
+          <div class="divisore" aria-hidden="true">✳</div>
+          <blockquote data-fm="sali">
+            «Il Piccolo Ristoro “LE ROCCE” nacque nell’Aprile 1995 a Pietrapertosa, quando qui
+            qualsiasi iniziativa ristorativa, era molto prematura…»
+            <cite>Le loro parole</cite>
+          </blockquote>
+          <p data-fm="sali">
+            Del piatto che li ha fatti conoscere scrivono di essere stati «i primi a portare alla luce
+            questa Ricetta», e che negli anni «é divenuta il Simbolo e il Cavallo di Battaglia del
+            Piccolo Ristoro Le Rocce».
+          </p>
+          <blockquote data-fm="sali">
+            «La Moda passa, le Tradizioni restano indelebili nel tempo...»
+            <cite>Le loro parole</cite>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTATTI ============ -->
+  <section id="contatti" class="fascia scuro">
+    <div class="wrap">
+      <div class="due">
+        <div>
+          <p class="occhiello">Contattaci e vieni a trovarci</p>
+          <h2 data-fm="sali">Prenota il tuo tavolo</h2>
+          <div class="divisore" aria-hidden="true">✳</div>
+          <dl class="dati">
+            <div class="dato">
+              <dt>Telefono</dt>
+              <dd><a href="tel:+390971983260">0971 983260</a></dd>
+            </div>
+            <div class="dato">
+              <dt>Cellulare</dt>
+              <dd><a href="tel:+393494085771">349 408 5771</a></dd>
+            </div>
+            <div class="dato" style="grid-column:1/-1">
+              <dt>Indirizzo</dt>
+              <dd>Via Giuseppe Garibaldi 107-109<br>85010 Pietrapertosa (PZ), Basilicata</dd>
+            </div>
+            <div class="dato" style="grid-column:1/-1">
+              <dt>Orari</dt>
+              <dd>Te li conferma il telefono.</dd>
+            </div>
+          </dl>
+          <div class="hero-azioni">
+            <a class="bottone" href="tel:+390971983260"><span aria-hidden="true">✆</span> Chiama 0971 983260</a>
+            <a class="bottone chiaro" href="https://www.google.com/maps/search/?api=1&amp;query=Via+Giuseppe+Garibaldi+109%2C+85010+Pietrapertosa+PZ" target="_blank" rel="noopener">Apri la mappa</a>
+          </div>
+        </div>
+        <figure data-fm="sali" data-fm-ritardo="140">
+          <img src="img/ingresso-fiori.jpg" width="1000" height="1300" loading="lazy"
+               alt="L’ingresso del Ristoro: una porta a due ante di legno scuro, aperta in un muro di pietra e incorniciata da un rampicante con fiori rossi; ai lati due vasche di pietra con piante, e in alto a destra l’insegna con sotto la bacheca del menù.">
+          <figcaption>L’ingresso, in Via Giuseppe Garibaldi. Fotografia dell’attività.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="scuro">
+  <div class="wrap">
+    <div class="piede-griglia">
+      <div>
+        <p style="font-family:var(--display); font-size:1.3rem; font-weight:650; letter-spacing:.05em; text-transform:uppercase; margin-bottom:.3rem">
+          Piccolo Ristoro «Le&nbsp;Rocce»
+        </p>
+        <p style="color:var(--tovaglia-luce); font-size:.9rem; margin:0">
+          Cucina tipica lucana · Dal 1995<br>Pietrapertosa (PZ), Dolomiti Lucane
+        </p>
+      </div>
+      <div>
+        <p class="occhiello" style="margin-bottom:.6rem">Contatti</p>
+        <p style="font-size:.95rem; margin:0">
+          <a href="tel:+390971983260">0971 983260</a><br>
+          <a href="tel:+393494085771">349 408 5771</a>
+        </p>
+      </div>
+      <div>
+        <p class="occhiello" style="margin-bottom:.6rem">Dove</p>
+        <p style="font-size:.95rem; margin:0">
+          Via Giuseppe Garibaldi 107-109<br>85010 Pietrapertosa (PZ)
+        </p>
+      </div>
+    </div>
+
+    <div class="piede-nota">
+      <p>Fotografie dell’attività. Dove l’autore ha apposto la propria firma sull’immagine, è stata lasciata intatta.</p>
+      <p>Sito dimostrativo realizzato con AI da FAR AI · contenuti da rivedere con l’attività prima della pubblicazione</p>
+      <p>Testi e fotografie provengono dal sito attuale di Piccolo Ristoro «Le Rocce» e restano di proprietà dell’attività.</p>
+    </div>
+  </div>
+</footer>
+
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Fotografia ingrandita" hidden>
+  <button class="lb-close" type="button" aria-label="Chiudi">×</button>
+  <button class="lb-prev" type="button" aria-label="Fotografia precedente">‹</button>
+  <button class="lb-next" type="button" aria-label="Fotografia successiva">›</button>
+  <figure>
+    <img id="lbImg" src="img/luna-guglie.jpg" alt="">
+    <figcaption id="lbCap">Le guglie delle Dolomiti Lucane di notte, con la luna alta sopra la cresta e il paese illuminato che scende lungo il pendio.</figcaption>
+  </figure>
+</div>
+
+<noscript>
+  <style>
+    /* senza JS la barra resta bassa (tetto 140px) e i link restano visibili:
+       una riga col marchio e il telefono, una striscia scorrevole coi link */
+    #nav{
+      position:static; height:auto; min-height:0; flex-wrap:wrap;
+      padding-block:.32rem; gap:.3rem .8rem; align-items:center;
+    }
+    .burger{display:none !important}
+    .nav-brand{font-size:.92rem; line-height:1.15}
+    .nav-brand small{display:none}          /* il comune sta già nel titolo della pagina */
+    .nav-links{
+      display:flex !important; margin-left:0; width:100%; gap:1rem;
+      overflow-x:auto; padding:0 0 .15rem; -webkit-overflow-scrolling:touch;
+    }
+    .nav-links a{white-space:nowrap; font-size:.8rem; line-height:1.35; opacity:1}
+    .nav-tel{margin-left:auto; order:0}
+    .nav-tel a.nav-cta{padding:.38rem .8rem; font-size:.82rem; line-height:1.25}
+    #mobileMenu{display:none}
+    section{scroll-margin-top:8px}
+    #gallery button{cursor:default}
+  </style>
+</noscript>
+
+<script>
+(function(){
+  "use strict";
+  var doc = document;
+
+  /* ---------- barra: burger ---------- */
+  var burger = doc.querySelector(".burger");
+  var menu   = doc.getElementById("mobileMenu");
+  var fuori  = [doc.getElementById("main"), doc.querySelector("footer"),
+                doc.querySelector(".skip"), doc.querySelector(".nav-brand"),
+                doc.querySelector(".nav-tel")];
+
+  function inerti(si){
+    fuori.forEach(function(n){ if(!n) return; if(si) n.setAttribute("inert",""); else n.removeAttribute("inert"); });
+  }
+  /* rimettiFuoco: chiudendo con Esc o col burger il fuoco DEVE tornare sul burger,
+     altrimenti chi naviga da tastiera viene sbalzato su BODY. ⛔ Non quando si clicca
+     una voce del menu: lì il fuoco deve seguire l'ancora. */
+  function apriMenu(si, rimettiFuoco){
+    menu.classList.toggle("open", si);
+    burger.classList.toggle("open", si);
+    burger.setAttribute("aria-expanded", si ? "true" : "false");
+    burger.setAttribute("aria-label", si ? "Chiudi il menu" : "Apri il menu");
+    inerti(si);
+    if(si){ attendiVisibile(menu, function(){ var a = menu.querySelector("a"); if(a) a.focus(); }); }
+    else if(rimettiFuoco){ burger.focus(); }
+  }
+  burger.addEventListener("click", function(){ apriMenu(!menu.classList.contains("open"), true); });
+  menu.addEventListener("click", function(e){ if(e.target.closest("a")) apriMenu(false, false); });
+
+  /* si aspetta la CONDIZIONE vera, non un numero di fotogrammi */
+  function attendiVisibile(el, poi){
+    var t0 = performance.now();
+    (function giro(){
+      if(getComputedStyle(el).visibility === "visible"){ poi(); return; }
+      if(performance.now() - t0 > 900){ poi(); return; }   /* tetto di sicurezza */
+      requestAnimationFrame(giro);
+    })();
+  }
+
+  /* ---------- lightbox ---------- */
+  var lb    = doc.getElementById("lightbox");
+  var lbImg = doc.getElementById("lbImg");
+  var lbCap = doc.getElementById("lbCap");
+  var tessere = Array.prototype.slice.call(doc.querySelectorAll("#gallery button[data-src]"));
+  var i = 0, tornaA = null;
+
+  function mostra(n){
+    i = (n + tessere.length) % tessere.length;
+    var b = tessere[i];
+    lbImg.src = b.getAttribute("data-src");
+    lbImg.alt = b.querySelector("img").alt;
+    lbCap.textContent = b.getAttribute("data-cap") || "";
+  }
+  function apriLb(n, da){
+    tornaA = da || null;
+    mostra(n);
+    lb.hidden = false;
+    requestAnimationFrame(function(){ lb.classList.add("open"); });
+    inerti(true);
+    doc.documentElement.style.overflow = "hidden";
+    attendiVisibile(lb, function(){ lb.querySelector(".lb-close").focus(); });
+  }
+  function chiudiLb(){
+    lb.classList.remove("open");
+    inerti(false);
+    doc.documentElement.style.overflow = "";
+    setTimeout(function(){ lb.hidden = true; }, 260);
+    if(tornaA) tornaA.focus();
+  }
+  tessere.forEach(function(b, n){
+    b.addEventListener("click", function(){ apriLb(n, b); });
+  });
+  lb.querySelector(".lb-close").addEventListener("click", chiudiLb);
+  lb.querySelector(".lb-prev").addEventListener("click", function(){ mostra(i - 1); });
+  lb.querySelector(".lb-next").addEventListener("click", function(){ mostra(i + 1); });
+  lb.addEventListener("click", function(e){ if(e.target === lb) chiudiLb(); });
+
+  /* ---------- tastiera: Esc e trappola del Tab su OGNI pannello ---------- */
+  var CHE = 'a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])';
+  doc.addEventListener("keydown", function(e){
+    var aperto = lb.classList.contains("open") ? lb
+               : (menu.classList.contains("open") ? menu : null);
+    if(!aperto) return;
+
+    if(e.key === "Escape"){ e.preventDefault(); if(aperto === lb) chiudiLb(); else apriMenu(false, true); return; }
+    if(aperto === lb){
+      if(e.key === "ArrowLeft"){ e.preventDefault(); mostra(i - 1); return; }
+      if(e.key === "ArrowRight"){ e.preventDefault(); mostra(i + 1); return; }
+    }
+    if(e.key !== "Tab") return;
+
+    /* ⛔ niente filtro su offsetParent: dentro un position:fixed è null anche se si vede */
+    var f = Array.prototype.filter.call(aperto.querySelectorAll(CHE), function(n){
+      var r = n.getBoundingClientRect();
+      return (r.width > 0 || r.height > 0) && getComputedStyle(n).visibility !== "hidden";
+    });
+    if(!f.length) return;
+    var primo = f[0], ultimo = f[f.length - 1];
+    if(e.shiftKey && doc.activeElement === primo){ e.preventDefault(); ultimo.focus(); }
+    else if(!e.shiftKey && doc.activeElement === ultimo){ e.preventDefault(); primo.focus(); }
+  });
+
+  /* il menu si chiude se lo schermo torna largo */
+  var largo = window.matchMedia("(min-width:921px)");
+  (largo.addEventListener ? largo.addEventListener.bind(largo, "change") : largo.addListener.bind(largo))
+    (function(e){ if((e.matches !== undefined ? e.matches : largo.matches) && menu.classList.contains("open")) apriMenu(false, false); });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "@id": "https://piccoloristorolerocce.wordpress.com/#ristorante",
+  "name": "Piccolo Ristoro \"Le Rocce\"",
+  "url": "https://piccoloristorolerocce.wordpress.com/",
+  "image": ["https://demo.francescoar.com/lerocce-pietrapertosa/img/arco-paese.jpg", "https://demo.francescoar.com/lerocce-pietrapertosa/img/arco-sala.jpg", "https://demo.francescoar.com/lerocce-pietrapertosa/img/piatto-insegna.jpg"],
+  "telephone": "+390971983260",
+  "servesCuisine": "Cucina tipica lucana",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Giuseppe Garibaldi 107-109",
+    "addressLocality": "Pietrapertosa",
+    "addressRegion": "PZ",
+    "postalCode": "85010",
+    "addressCountry": "IT"
+  }
+}
+</script>
+
+<script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
