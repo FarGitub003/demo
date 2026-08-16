@@ -1,0 +1,11 @@
+/* piega — la sezione si apre come un foglio piegato a meta'. */
+.fmx-piega { perspective: 1400px; }
+.fmx-piega > * { transform-origin: 50% 0%; transform-style: preserve-3d; will-change: transform, opacity; }
+@media (prefers-reduced-motion: no-preference) {
+  html.fm-js .fmx-piega > * {
+    transform: rotateX(-72deg); opacity: 0;
+    transition: transform .95s cubic-bezier(.22, 1, .36, 1) var(--fmx-ritardo, 0ms),
+                opacity .7s linear var(--fmx-ritardo, 0ms);
+  }
+  html.fm-js .fmx-piega.fmx-aperta > * { transform: none; opacity: 1; }
+}
