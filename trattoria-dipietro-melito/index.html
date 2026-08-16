@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Antica Trattoria Di Pietro — Melito Irpino, dal 1934</title>
+<meta name="description" content="Trattoria di famiglia a Melito Irpino, in Irpinia, dal 1934. Paste fatte a mano, cucina del territorio. Chiocciola di Osterie d'Italia 2026.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="Antica Trattoria Di Pietro — Melito Irpino, dal 1934">
+<meta property="og:description" content="Trattoria di famiglia a Melito Irpino, in Irpinia, dal 1934. Paste fatte a mano, cucina del territorio. Chiocciola di Osterie d'Italia 2026.">
+<meta property="og:image" content="https://demo.francescoar.com/trattoria-dipietro-melito/img/famiglia.jpg">
+<meta property="og:locale" content="it_IT">
+<meta property="og:url" content="https://demo.francescoar.com/trattoria-dipietro-melito/">
+
+<link rel="stylesheet" href="far-motion.min.css">
+<script src="far-motion.min.js"></script>
+<link rel="stylesheet" href="sceniche/cronologia.css">
+<script src="sceniche/cronologia.js" defer></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unna:ital,wght@0,400;0,700;1,400&family=Asap:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "@id": "https://demo.francescoar.com/trattoria-dipietro-melito/#attivita",
+  "name": "Antica Trattoria Di Pietro",
+  "description": "Trattoria di famiglia a Melito Irpino, in Irpinia, dal 1934. Paste fatte a mano, cucina del territorio e delle stagioni. Chiocciola di Osterie d'Italia 2026 di Slow Food.",
+  "image": "https://demo.francescoar.com/trattoria-dipietro-melito/img/famiglia.jpg",
+  "servesCuisine": "Irpina",
+  "foundingDate": "1934",
+  "telephone": "+390825472010",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Corso Italia 8",
+    "addressLocality": "Melito Irpino",
+    "addressRegion": "Campania",
+    "postalCode": "83030",
+    "addressCountry": "IT"
+  },
+  "sameAs": [
+    "https://www.facebook.com/p/Antica-Trattoria-Di-Pietro-100063572442510/",
+    "https://www.instagram.com/anticatrattoriadipietro/"
+  ]
+}
+</script>
+<!-- ⛔ Niente "url": il loro sito NON esiste (dominio non registrato), e indicarne uno
+     sarebbe falso. ⛔ Niente "email"/cellulare: vengono da una fonte terza (mesali.org)
+     e non sono in pagina. "image" RELATIVA in build, assoluta solo al deploy. -->
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23C9BCA4'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' text-anchor='middle' fill='%23201B14'%3EDP%3C/text%3E%3C/svg%3E">
+
+<style>
+/* ============================================================
+   ANTICA TRATTORIA DI PIETRO — identità n. 33
+   Display: Unna · Testo: Asap
+   PALETTE CAMPIONATA DALLE LORO FOTO VERE, non scelta:
+   --beige   #C9BCA4  = colore dominante del loro marchio (15.274 px su ~25.600)
+   --inchiostro #201B14 = lettering del marchio (pixel scuri, rgb 32,27,20)
+   --legno   #2A1204  = credenza della sala (rgb 42,18,4)
+   --pomodoro/--orto  = derivati (scuriti per contrasto) dai pixel del loro piatto
+   ============================================================ */
+:root{
+  --foglio:#F7F3EC;
+  --foglio-2:#EFE9DE;
+  --beige:#C9BCA4;
+  --beige-bordo:#B3A288;
+  --inchiostro:#201B14;
+  --grigio:#5A5145;
+  --legno:#2A1204;
+  --pomodoro:#7A2A17;
+  --orto:#41521F;
+  --barra:70px;
+}
+*{box-sizing:border-box}
+html{overflow-x:clip;scroll-behavior:smooth}
+body{
+  margin:0;background:var(--foglio);color:var(--inchiostro);
+  font-family:'Asap',system-ui,-apple-system,sans-serif;
+  font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:'Unna',Georgia,serif;font-weight:700;line-height:1.12;margin:0}
+p{margin:0 0 1em}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--pomodoro)}
+.wrap{width:min(1180px,92vw);margin-inline:auto}
+section{scroll-margin-top:calc(var(--barra) + 15px)}
+
+/* ---------- elemento-firma: il riquadro del marchio (è già loro) ---------- */
+.marchio{
+  display:inline-block;background:var(--beige);color:var(--inchiostro);
+  font-family:'Unna',Georgia,serif;font-weight:700;text-transform:uppercase;
+  letter-spacing:.06em;line-height:1.15;padding:.5em .7em;text-align:left;
+}
+.occhiello{
+  font-family:'Asap',sans-serif;font-weight:600;font-size:.78rem;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--grigio);margin:0 0 .7em
+}
+
+/* ---------- barra ---------- */
+#nav{
+  position:fixed;inset:0 0 auto 0;z-index:60;height:var(--barra);
+  background:var(--foglio);border-bottom:1px solid var(--beige-bordo);
+  display:flex;align-items:center;gap:16px;
+}
+#nav .wrap{display:flex;align-items:center;gap:16px;width:min(1180px,94vw)}
+.nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--inchiostro);flex:0 0 auto}
+.nav-brand img{width:38px;height:38px;border-radius:2px}
+.nav-brand b{font-family:'Unna',Georgia,serif;font-size:1.02rem;font-weight:700;letter-spacing:.01em;white-space:nowrap}
+.nav-links{display:flex;gap:22px;margin-left:auto}
+.nav-links a{color:var(--inchiostro);text-decoration:none;font-weight:500;font-size:.95rem}
+.nav-links a:hover,.nav-links a:focus-visible{text-decoration:underline}
+.nav-tel{margin-left:18px;flex:0 0 auto}
+.nav-tel a.nav-cta{
+  display:inline-block;background:var(--pomodoro);color:#fff;text-decoration:none;
+  font-weight:600;font-size:.95rem;padding:.52em 1.05em;border-radius:3px;white-space:nowrap;
+}
+.nav-tel a.nav-cta:hover,.nav-tel a.nav-cta:focus-visible{background:#5E1F11}
+.burger{
+  display:none;margin-left:auto;background:none;border:1px solid var(--beige-bordo);
+  border-radius:3px;width:42px;height:38px;cursor:pointer;padding:0;color:var(--inchiostro)
+}
+.burger span{display:block;width:20px;height:2px;background:currentColor;margin:4px auto}
+#mobileMenu{
+  position:fixed;inset:var(--barra) 0 auto 0;z-index:59;background:var(--foglio);
+  border-bottom:1px solid var(--beige-bordo);padding:14px 0 20px;
+  transform:translateY(-8px);opacity:0;visibility:hidden;pointer-events:none;
+}
+#mobileMenu.open{transform:none;opacity:1;visibility:visible;pointer-events:auto}
+@media (prefers-reduced-motion: no-preference){
+  #mobileMenu{transition:opacity .22s ease,transform .22s ease,visibility .22s}
+}
+#mobileMenu a{display:block;padding:.62em 0;color:var(--inchiostro);text-decoration:none;font-weight:500;font-size:1.05rem}
+.skip{position:absolute;left:-9999px;top:0;background:var(--inchiostro);color:#fff;padding:.6em 1em;z-index:99}
+.skip:focus{left:8px;top:8px}
+
+/* ---------- hero: foto a SINISTRA (variazione di struttura voluta) ---------- */
+#hero{padding:calc(var(--barra) + 46px) 0 46px}
+.hero-griglia{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);gap:clamp(26px,4vw,54px);align-items:center}
+.hero-foto{margin:0}
+.hero-foto img{width:100%;border-radius:2px}
+.hero-foto figcaption{font-size:.8rem;color:var(--grigio);margin-top:.55em}
+.hero-testo h1{font-size:clamp(2.1rem,5.1vw,3.5rem);letter-spacing:-.005em}
+.hero-dove{font-family:'Unna',Georgia,serif;font-style:italic;font-size:clamp(1.08rem,2.4vw,1.35rem);color:var(--grigio);margin:.5em 0 1.1em}
+.hero-testo p.intro{font-size:1.06rem;max-width:44ch}
+.hero-azioni{display:flex;flex-wrap:wrap;gap:12px;margin-top:1.5em}
+.bottone{
+  display:inline-block;background:var(--pomodoro);color:#fff;text-decoration:none;
+  font-weight:600;padding:.78em 1.5em;border-radius:3px;font-size:1.02rem
+}
+.bottone:hover,.bottone:focus-visible{background:#5E1F11}
+.bottone.chiaro{background:transparent;color:var(--inchiostro);border:1.5px solid var(--inchiostro)}
+.bottone.chiaro:hover,.bottone.chiaro:focus-visible{background:var(--inchiostro);color:var(--foglio)}
+
+/* ---------- fascia riconoscimento ---------- */
+#riconoscimento{background:var(--legno);color:#F4EFE6;padding:34px 0}
+#riconoscimento .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:18px 30px}
+#riconoscimento .chiocciola{font-family:'Unna',Georgia,serif;font-size:1.5rem;font-weight:700;color:#F4EFE6;margin:0}
+#riconoscimento p{margin:0;color:#EDE5D6;font-size:.99rem;max-width:62ch}
+#riconoscimento a{color:#E8C9A0}
+
+/* ---------- sezioni ---------- */
+.sez{padding:62px 0}
+.sez h2{font-size:clamp(1.7rem,3.6vw,2.5rem);margin-bottom:.35em}
+.sez .sottotitolo{color:var(--grigio);max-width:60ch;margin-bottom:2em}
+
+/* piatti */
+.piatti{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;list-style:none;padding:0;margin:0}
+.piatti li{background:var(--foglio-2);border:1px solid var(--beige-bordo);border-radius:3px;padding:20px 20px 22px}
+.piatti h3{font-size:1.22rem;margin-bottom:.3em}
+.piatti p{margin:0;font-size:.96rem;color:var(--grigio)}
+.nota-menu{margin-top:1.6em;font-size:.95rem;color:var(--grigio);max-width:64ch}
+
+/* chi cucina */
+#chi{background:var(--foglio-2);border-top:1px solid var(--beige-bordo)}
+.chi-griglia{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(26px,4vw,54px);align-items:start}
+.chi-griglia p{color:var(--grigio);max-width:56ch}
+.chi-griglia h2{margin-bottom:.5em}
+.chi-foto{margin:0}
+.chi-foto img{width:100%;border-radius:3px;border:1px solid var(--beige-bordo)}
+.chi-foto figcaption{font-size:.8rem;color:var(--grigio);margin-top:.55em}
+.fonti{font-size:.85rem}
+
+/* cronologia */
+#storia{background:var(--foglio);border-block:1px solid var(--beige-bordo)}
+.linea{max-width:860px;margin:0 auto;padding:8px 0}
+.tappa{margin:0 0 40px;max-width:min(420px,78%)}
+.tappa:nth-child(even){margin-left:auto;text-align:right}
+.tappa .anno{font-family:'Unna',Georgia,serif;font-size:1.75rem;font-weight:700;line-height:1;display:block;margin-bottom:.18em;color:var(--inchiostro)}
+.tappa .corpo{
+  background:var(--foglio-2);border:1px solid var(--beige-bordo);
+  border-radius:3px;padding:16px 18px;
+}
+.tappa p{margin:0;font-size:.98rem;color:var(--grigio)}
+/* 🪤 RIMEDIO a una trappola nota del kit: attenua le tappe spente con
+   opacity:.66, e un testo attenuato perde CONTRASTO in uno stato che nessuno
+   strumento misura. Qui l'opacità del testo resta 1 in TUTTI gli stati: ad
+   accendersi sono il colore dell'anno e il bordo (1px, tutt'attorno, non una
+   barra laterale), quindi il contrasto del testo non può scendere in nessuno stato. */
+html.fm-js .fmx-tappa{opacity:1}
+html.fm-js .fmx-tappa.fmx-accesa .corpo{border-color:var(--pomodoro)}
+html.fm-js .fmx-tappa.fmx-accesa .anno{color:var(--pomodoro)}
+@media (prefers-reduced-motion: no-preference){
+  html.fm-js .fmx-tappa .corpo{transition:border-color .5s ease}
+  html.fm-js .fmx-tappa .anno{transition:color .5s ease}
+}
+.citazione{
+  max-width:760px;margin:44px auto 0;text-align:center;
+  font-family:'Unna',Georgia,serif;font-style:italic;font-size:clamp(1.15rem,2.6vw,1.55rem);
+  line-height:1.42;color:var(--inchiostro)
+}
+.citazione cite{display:block;font-style:normal;font-family:'Asap',sans-serif;font-size:.82rem;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--grigio);margin-top:1.1em}
+
+/* Galleria a 2 COLONNE (variazione di struttura voluta), a incastro.
+   ⛔ NIENTE aspect-ratio fisso: tre di queste foto sono VERTICALI e un 4/3 forzato
+   con object-fit:cover ne tagliava a fascia il 70% dell'altezza — sullo striscione
+   spariva la frase e restava solo il «2024». Ogni foto tiene la sua forma. */
+.gallery-grid{columns:2;column-gap:16px;list-style:none;padding:0;margin:0}
+.gallery-grid li{margin:0 0 16px;break-inside:avoid;-webkit-column-break-inside:avoid}
+.gallery-grid button{
+  display:block;width:100%;padding:0;border:1px solid var(--beige-bordo);background:var(--foglio-2);
+  border-radius:3px;overflow:hidden;cursor:pointer;
+}
+.gallery-grid button img{width:100%;height:auto;display:block}
+.gallery-grid button:focus-visible{outline:3px solid var(--pomodoro);outline-offset:2px}
+@media (prefers-reduced-motion: no-preference){
+  .gallery-grid button img{transition:transform .45s cubic-bezier(.22,1,.36,1)}
+  .gallery-grid button:hover img,.gallery-grid button:focus-visible img{transform:scale(1.035)}
+}
+.didascalie{margin:14px 0 0;padding:0;list-style:none;font-size:.86rem;color:var(--grigio)}
+
+/* lightbox */
+#lightbox{
+  position:fixed;inset:0;z-index:80;background:rgba(20,16,11,.94);
+  display:flex;align-items:center;justify-content:center;padding:22px;
+  opacity:0;visibility:hidden;pointer-events:none;
+}
+#lightbox.open{opacity:1;visibility:visible;pointer-events:auto}
+@media (prefers-reduced-motion: no-preference){#lightbox{transition:opacity .25s ease,visibility .25s}}
+#lightbox figure{margin:0;max-width:min(1000px,94vw);text-align:center;position:relative;z-index:1}
+#lightbox img{max-height:76vh;width:auto;margin-inline:auto;border-radius:2px}
+#lightbox figcaption{color:#F2EBDF;font-size:.95rem;margin-top:.9em;max-width:62ch;margin-inline:auto}
+.lb-close,.lb-prev,.lb-next{
+  position:absolute;z-index:3;background:rgba(20,16,11,.86);color:#fff;border:1px solid rgba(255,255,255,.5);
+  border-radius:999px;width:46px;height:46px;font-size:1.35rem;line-height:1;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+}
+.lb-close{top:16px;right:16px}
+.lb-prev{left:14px;top:50%;transform:translateY(-50%)}
+.lb-next{right:14px;top:50%;transform:translateY(-50%)}
+.lb-close:focus-visible,.lb-prev:focus-visible,.lb-next:focus-visible{outline:3px solid #E8C9A0;outline-offset:2px}
+
+/* dove siamo */
+.dove{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
+.dove h3{font-size:1.15rem;margin-bottom:.4em}
+.dove p{font-size:.99rem;color:var(--grigio)}
+.dove .grande{font-size:1.28rem;color:var(--inchiostro);font-weight:600}
+
+/* piede */
+#piede{background:var(--legno);color:#EDE5D6;padding:48px 0 34px;font-size:.93rem}
+#piede a{color:#E8C9A0}
+#piede .piede-top{display:flex;flex-wrap:wrap;gap:26px;justify-content:space-between;align-items:flex-start}
+#piede h3{font-family:'Unna',Georgia,serif;color:#F4EFE6;font-size:1.2rem;margin-bottom:.35em}
+#piede .nota{margin-top:28px;padding-top:20px;border-top:1px solid rgba(244,239,230,.34);color:#DFD5C2;font-size:.85rem;line-height:1.6}
+
+@media (max-width:920px){
+  .nav-links{display:none}
+  .burger{display:block}
+  .nav-tel{margin-left:10px}
+  .hero-griglia,.chi-griglia{grid-template-columns:1fr;gap:26px}
+  .tappa,.tappa:nth-child(even){max-width:100%;margin-left:0;text-align:left}
+}
+@media (max-width:560px){
+  /* a 390px due colonne fanno tessere da ~180px: troppo piccole per le foto di
+     un ristorante, che è esattamente ciò che il cliente apre dal telefono.
+     Una foto per volta, come vuole lo stile. */
+  .gallery-grid{columns:1}
+  .nav-brand b{display:none}
+  .nav-tel a.nav-cta .lungo{display:none}
+  .sez{padding:46px 0}
+  .gallery-grid{gap:12px}
+}
+</style>
+<noscript><style>
+  #mobileMenu{position:static;transform:none;opacity:1;visibility:visible;pointer-events:auto;border-bottom:1px solid var(--beige-bordo)}
+  #mobileMenu a{display:inline-block;padding:.35em .75em .35em 0;font-size:.95rem}
+  .burger{display:none!important}
+  #hero{padding-top:26px}
+  #nav{position:static;height:auto;padding:10px 0}
+</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Vai al contenuto</a>
+
+<header id="nav">
+  <div class="wrap">
+    <a class="nav-brand" href="#hero">
+      <img src="img/logo.png" alt="Marchio dell'Antica Trattoria Di Pietro: la scritta ANTICA TRATTORIA DI PIETRO DAL 1934 in maiuscole scure su fondo beige" width="402" height="402">
+      <b>Antica Trattoria Di Pietro</b>
+    </a>
+    <nav class="nav-links" aria-label="Sezioni del sito">
+      <a href="#cucina">Cosa si mangia</a>
+      <a href="#chi">Chi cucina</a>
+      <a href="#storia">Dal 1934</a>
+      <a href="#sala">La sala</a>
+      <a href="#dove">Dove siamo</a>
+    </nav>
+    <button class="burger" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-tel">
+      <a class="nav-cta" href="tel:+390825472010"><span class="lungo">Chiama </span>0825 472010</a>
+    </div>
+  </div>
+</header>
+
+<div id="mobileMenu">
+  <div class="wrap">
+    <a href="#cucina">Cosa si mangia</a>
+    <a href="#chi">Chi cucina</a>
+    <a href="#storia">Dal 1934</a>
+    <a href="#sala">La sala</a>
+    <a href="#dove">Dove siamo</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <section id="hero">
+    <div class="wrap hero-griglia">
+      <figure class="hero-foto" data-fm="sfuma">
+        <img src="img/famiglia.jpg" width="1170" height="781" alt="Due donne e un uomo seduti a un tavolo apparecchiato con la tovaglia bianca, i legumi secchi sparsi davanti a loro e due barattoli di vetro rovesciati; alle pareti fotografie incorniciate in bianco e nero">
+        <figcaption>La famiglia Di Pietro, nella sala della trattoria. Foto: Associazione Mesàli</figcaption>
+      </figure>
+      <div class="hero-testo">
+        <p class="occhiello" data-fm="sfuma">Melito Irpino · Irpinia</p>
+        <h1 data-fm="righe">Antica Trattoria Di Pietro</h1>
+        <p class="hero-dove" data-fm="sfuma">Una casa che cucina dal 1934.</p>
+        <p class="intro" data-fm="sfuma">Paste fatte a mano, cucina del territorio e delle stagioni.
+          In sala e in cucina c'è la famiglia, come da novant'anni.</p>
+        <div class="hero-azioni" data-fm="sali" data-fm-passo="90">
+          <a class="bottone" href="tel:+390825472010">Chiama 0825 472010</a>
+          <a class="bottone chiaro" href="#cucina">Cosa si mangia</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="riconoscimento">
+    <div class="wrap">
+      <p class="chiocciola" data-fm="sfuma">🐌 Chiocciola di Osterie d'Italia 2026</p>
+      <p data-fm="sfuma">Una delle 39 Chiocciole assegnate da Slow Food in Campania.
+        <a href="https://www.slowfood.it/tutte-le-chiocciole-di-osterie-ditalia-2026-regione-per-regione/" rel="noopener">L'elenco ufficiale</a></p>
+    </div>
+  </section>
+
+  <section id="cucina" class="sez">
+    <div class="wrap">
+      <p class="occhiello" data-fm="sfuma">Cosa si mangia</p>
+      <h2 data-fm="righe">La pasta si fa a mano</h2>
+      <p class="sottotitolo" data-fm="sfuma">Anita Di Pietro, che cucina insieme alla madre Teresa, nel 2023 ha
+        raccolto in un libro le paste della cucina popolare irpina: cicatielli, fusilli, ravioli e tagliatelle.</p>
+      <ul class="piatti" data-fm="sali" data-fm-passo="80">
+        <li>
+          <h3>Cicatielli</h3>
+          <p>Il formato a cui Anita è più legata. Fra i suoi, i cicatielli con il <em>pulieio</em>, la mentuccia selvatica.</p>
+        </li>
+        <li>
+          <h3>Fusilli, ravioli, tagliatelle</h3>
+          <p>Le altre paste fatte a mano che racconta nel suo libro, dalle farine fino alla tavola.</p>
+        </li>
+        <li>
+          <h3>Taralli e pomodori</h3>
+          <p>Un piatto di casa: «la semplicità che ci piace».</p>
+        </li>
+        <li>
+          <h3>Zuccotto</h3>
+          <p>Il dolce, con gli strati in vista.</p>
+        </li>
+      </ul>
+      <p class="nota-menu">Il menù cambia con le stagioni.</p>
+    </div>
+  </section>
+
+  <section id="chi" class="sez">
+    <div class="wrap chi-griglia">
+      <div>
+        <p class="occhiello" data-fm="sfuma">Chi cucina</p>
+        <h2 data-fm="righe">Teresa e Anita</h2>
+        <p data-fm="sfuma">In cucina c'è Teresa, e con lei la figlia Anita, cuoca di quarta generazione.</p>
+        <p data-fm="sfuma">Anita ha il diploma di cuoca e quello di sommelier dell'Associazione Italiana
+          Sommeliers, le certificazioni avanzate di Slow Food, e ha studiato storia dell'alimentazione
+          italiana all'Università di Scienze Gastronomiche di Pollenzo. La pasta fatta a mano l'ha
+          insegnata in università, scuole e festival, e fuori dall'Italia: Londra, Berlino, Praga,
+          l'Australia, New York.</p>
+        <p data-fm="sfuma">Nel 2023 ha raccolto tutto in un libro, <em>Storie di paste fatte a mano</em>.
+          L'11 febbraio 2026 il ristorante <span lang="en">A16</span> di San Francisco l'ha invitata a cucinare
+          una sera irpina: conosce questa famiglia da più di vent'anni.</p>
+        <p class="fonti" data-fm="sfuma">Fonti: <a href="https://www.a16pizza.com/events/an-evening-in-irpinia-with-chef-anita-di-pietro" rel="noopener">A16 San Francisco</a>
+          · <a href="https://www.libreriauniversitaria.it/storie-paste-fatte-mano-pietro/libro/9788830681392" rel="noopener">il libro</a></p>
+      </div>
+      <figure class="chi-foto" data-fm="sfuma">
+        <img src="img/cuoca-bancone.jpg" width="960" height="640" alt="Una donna con la bandana e gli occhiali, in giacca nera da cuoca, sorride dietro il bancone; alle spalle gli scaffali con le bottiglie e la macchina del caffè">
+        <figcaption>Dietro il bancone.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="storia" class="sez">
+    <div class="wrap">
+      <p class="occhiello" data-fm="sfuma">Dal 1934</p>
+      <h2 data-fm="righe">Quattro generazioni, la stessa casa</h2>
+      <p class="sottotitolo" data-fm="sfuma">Il nonno Pasquale e la nonna Anita, poi il figlio Enzo con la moglie
+        Teresa, e oggi la quarta generazione.</p>
+
+      <div class="linea fm-palco" data-fms="cronologia" data-fms-tappe=".tappa">
+        <div class="tappa">
+          <span class="anno">1934</span>
+          <div class="corpo"><p>La trattoria apre a Melito Irpino. Da allora è sempre rimasta della stessa famiglia.</p></div>
+        </div>
+        <div class="tappa">
+          <span class="anno">Enzo e Teresa</span>
+          <div class="corpo"><p>Dal nonno Pasquale e dalla nonna Anita l'eredità passa al figlio Enzo e a sua moglie Teresa, che è ai fornelli.</p></div>
+        </div>
+        <div class="tappa">
+          <span class="anno">2023</span>
+          <div class="corpo"><p>Anita pubblica <em>Storie di paste fatte a mano — Cuoca di una cucina minore</em> (Gruppo Albatros Il Filo).</p></div>
+        </div>
+        <div class="tappa">
+          <span class="anno">2024</span>
+          <div class="corpo"><p>La trattoria compie novant'anni, con la quarta generazione in cucina.</p></div>
+        </div>
+      </div>
+
+      <blockquote class="citazione" data-fm="sfuma">
+        «90 anni di tradizione, sapori autentici e accoglienza calorosa. Grazie a tutti voi che avete reso
+        questo viaggio possibile.»
+        <cite>Antica Trattoria Di Pietro, 2024</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section id="sala" class="sez">
+    <div class="wrap">
+      <p class="occhiello" data-fm="sfuma">La sala, la cucina, la casa</p>
+      <h2 data-fm="righe">Com'è dentro</h2>
+      <p class="sottotitolo" data-fm="sfuma">Tocca una foto per vederla grande.</p>
+      <div id="gallery">
+        <ul class="gallery-grid" data-fm="sali" data-fm-passo="70">
+          <li><button type="button" data-src="img/credenza.jpg" data-cap="La credenza di legno scuro della sala, con le ante a vetri piene di bottiglie e ceramiche, e delle bottiglie di vino sul tavolo davanti.">
+            <img src="img/credenza.jpg" width="640" height="1138" alt="Credenza di legno scuro con ante a vetri, piena di bottiglie e ceramiche; davanti, su un tavolo di legno, un gruppo di bottiglie di vino"></button></li>
+          <li><button type="button" data-src="img/cucina.jpg" data-cap="In cucina, sotto la fila dei mestoli e delle schiumaiole appesi.">
+            <img src="img/cucina.jpg" width="731" height="896" alt="Un uomo con la barba bianca e il grembiule nero e una donna in giacca bianca da cuoca con la bandana a quadretti, in cucina, sotto una fila di mestoli e schiumaiole di metallo appesi"></button></li>
+          <li><button type="button" data-src="img/taralli.jpg" data-cap="Taralli e pomodori: un piatto di casa.">
+            <img src="img/taralli.jpg" width="1080" height="880" alt="Piatto bianco dal bordo arancione con una crema verde, pezzi di tarallo e pomodorini tagliati a metà; accanto, su una lastra di vetro, un tarallo intero, un pomodorino e un ciuffo di basilico"></button></li>
+          <li><button type="button" data-src="img/zuccotto.jpg" data-cap="Lo zuccotto, tagliato, con gli strati in vista.">
+            <img src="img/zuccotto.jpg" width="1080" height="900" alt="Uno zuccotto tagliato che mostra gli strati interni, chiari e scuri, appoggiato su un piatto bianco"></button></li>
+          <li><button type="button" data-src="img/striscione.jpg" data-cap="Lo striscione dei novant'anni, appeso davanti alla trattoria nel 2024.">
+            <img src="img/striscione.jpg" width="818" height="1300" alt="Striscione di tela chiara appeso all'esterno con la scritta 90 anni di tradizione e il numero 2024 in grande, e il marchio della trattoria in un riquadro beige"></button></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="dove" class="sez">
+    <div class="wrap">
+      <p class="occhiello" data-fm="sfuma">Dove siamo</p>
+      <h2 data-fm="righe">Corso Italia 8, Melito Irpino</h2>
+      <div class="dove" data-fm="sali" data-fm-passo="80">
+        <div>
+          <h3>L'indirizzo</h3>
+          <p class="grande">Corso Italia, 8<br>83030 Melito Irpino (AV)</p>
+          <p><a class="bottone chiaro" href="https://www.google.com/maps/search/?api=1&amp;query=Antica+Trattoria+Di+Pietro+Corso+Italia+8+Melito+Irpino" rel="noopener">Aprire la mappa</a></p>
+        </div>
+        <div>
+          <h3>Come arrivare</h3>
+          <p>A16 Napoli/Bari, uscita Grottaminarda, poi si prosegue per Melito Irpino.</p>
+        </div>
+        <div>
+          <h3>Il telefono</h3>
+          <p>Si chiama e si chiede.</p>
+          <p><a class="bottone" href="tel:+390825472010">0825 472010</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="piede">
+  <div class="wrap">
+    <div class="piede-top">
+      <div>
+        <h3>Antica Trattoria Di Pietro</h3>
+        <p>Corso Italia, 8 · 83030 Melito Irpino (AV)<br>
+           <a href="tel:+390825472010">0825 472010</a></p>
+      </div>
+      <div>
+        <h3>Dove ci trovate</h3>
+        <p><a href="https://www.facebook.com/p/Antica-Trattoria-Di-Pietro-100063572442510/" rel="noopener">Facebook</a> ·
+           <a href="https://www.instagram.com/anticatrattoriadipietro/" rel="noopener">Instagram</a></p>
+      </div>
+      <div>
+        <span class="marchio">Antica<br>Trattoria<br>Di Pietro<br>dal 1934</span>
+      </div>
+    </div>
+    <p class="nota">
+      Sito dimostrativo realizzato con AI da FAR AI · contenuti da rivedere con l'attività prima della pubblicazione.<br>
+      Testi e immagini provengono dalle fonti pubbliche dell'attività (pagina Facebook, profilo Instagram e scheda
+      sul sito dell'Associazione Mesàli) e restano di proprietà dell'attività. La fotografia di famiglia è
+      pubblicata dall'Associazione Mesàli.
+    </p>
+  </div>
+</footer>
+
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ingrandita">
+  <figure>
+    <img id="lbImg" src="img/credenza.jpg" alt="">
+    <figcaption id="lbCap"></figcaption>
+    <button class="lb-close" type="button" aria-label="Chiudi">×</button>
+    <button class="lb-prev" type="button" aria-label="Foto precedente">‹</button>
+    <button class="lb-next" type="button" aria-label="Foto successiva">›</button>
+  </figure>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  var barra=document.getElementById('nav');
+  var menu=document.getElementById('mobileMenu');
+  var burger=document.querySelector('.burger');
+  var lb=document.getElementById('lightbox');
+  var lbImg=document.getElementById('lbImg');
+  var lbCap=document.getElementById('lbCap');
+  var tasti=Array.prototype.slice.call(document.querySelectorAll('.gallery-grid button'));
+  var indice=0, ultimoFocus=null;
+
+  /* `inert` serve ai lettori di schermo, che NON seguono il trap del Tab.
+     ⛔ Il .burger non entra MAI nell'elenco: col menu aperto è il bottone che
+     deve chiuderlo, e renderlo inerte lo disattiverebbe. Per la lightbox invece
+     va reso inerte tutto ciò che sta dietro, burger compreso. */
+  var DIETRO_MENU=['#main','#piede','.skip','.nav-brand','.nav-links','.nav-tel'];
+  var DIETRO_LB  =['#main','#piede','.skip','.nav-brand','.nav-links','.nav-tel','.burger','#mobileMenu'];
+  function inerti(attiva,elenco){
+    elenco.forEach(function(s){
+      document.querySelectorAll(s).forEach(function(n){
+        if(attiva) n.setAttribute('inert',''); else n.removeAttribute('inert');
+      });
+    });
+  }
+
+  /* --- menu --- */
+  function apriMenu(){
+    menu.classList.add('open');
+    burger.setAttribute('aria-expanded','true');
+    burger.setAttribute('aria-label','Chiudi il menu');
+    inerti(true,DIETRO_MENU);
+  }
+  function chiudiMenu(){
+    menu.classList.remove('open');
+    burger.setAttribute('aria-expanded','false');
+    burger.setAttribute('aria-label','Apri il menu');
+    inerti(false,DIETRO_MENU);
+  }
+  burger.addEventListener('click',function(){
+    menu.classList.contains('open') ? chiudiMenu() : apriMenu();
+  });
+  menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',chiudiMenu); });
+
+  /* --- lightbox --- */
+  function mostra(i){
+    indice=(i+tasti.length)%tasti.length;
+    var b=tasti[indice];
+    lbImg.src=b.getAttribute('data-src');
+    lbImg.alt=b.querySelector('img').getAttribute('alt');
+    lbCap.textContent=b.getAttribute('data-cap');
+  }
+  function apriLb(i){
+    ultimoFocus=document.activeElement;
+    mostra(i);
+    lb.classList.add('open');
+    inerti(true,DIETRO_LB);
+    attendiVisibile(lb,function(){ lb.querySelector('.lb-close').focus(); });
+  }
+  function chiudiLb(){
+    lb.classList.remove('open');
+    inerti(false,DIETRO_LB);
+    if(ultimoFocus) ultimoFocus.focus();
+  }
+  /* Si aspetta la CONDIZIONE vera (visibility), non un numero di fotogrammi:
+     finché è hidden il .focus() fallisce in silenzio. Tetto di sicurezza a 900 ms. */
+  function attendiVisibile(el,poi){
+    var t0=Date.now();
+    (function giro(){
+      if(getComputedStyle(el).visibility==='visible') return poi();
+      if(Date.now()-t0>900) return poi();
+      requestAnimationFrame(giro);
+    })();
+  }
+  tasti.forEach(function(b,i){ b.addEventListener('click',function(){ apriLb(i); }); });
+  lb.querySelector('.lb-close').addEventListener('click',chiudiLb);
+  lb.querySelector('.lb-prev').addEventListener('click',function(){ mostra(indice-1); });
+  lb.querySelector('.lb-next').addEventListener('click',function(){ mostra(indice+1); });
+  lb.addEventListener('click',function(e){ if(e.target===lb) chiudiLb(); });
+
+  /* --- tastiera: Esc e trap del Tab su ogni pannello modale --- */
+  function focusabili(root){
+    return Array.prototype.slice.call(root.querySelectorAll(
+      'a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])'
+    )); /* ⛔ niente filtro su offsetParent: dentro un position:fixed è null anche se visibile */
+  }
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){
+      if(lb.classList.contains('open')) chiudiLb();
+      else if(menu.classList.contains('open')){ chiudiMenu(); burger.focus(); }
+      return;
+    }
+    if(e.key==='Tab'){
+      var pannello=lb.classList.contains('open')?lb:(menu.classList.contains('open')?menu:null);
+      if(!pannello) return;
+      var f=focusabili(pannello); if(!f.length) return;
+      var primo=f[0], ultimo=f[f.length-1];
+      if(e.shiftKey && document.activeElement===primo){ e.preventDefault(); ultimo.focus(); }
+      else if(!e.shiftKey && document.activeElement===ultimo){ e.preventDefault(); primo.focus(); }
+      else if(!pannello.contains(document.activeElement)){ e.preventDefault(); primo.focus(); }
+      return;
+    }
+    if(lb.classList.contains('open')){
+      if(e.key==='ArrowLeft') mostra(indice-1);
+      if(e.key==='ArrowRight') mostra(indice+1);
+    }
+  });
+
+  /* --- il menu mobile si chiude se si allarga la finestra --- */
+  window.addEventListener('resize',function(){
+    if(window.innerWidth>920 && menu.classList.contains('open')) chiudiMenu();
+  });
+})();
+</script>
+<script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
