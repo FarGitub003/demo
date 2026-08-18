@@ -64,10 +64,18 @@ main{scroll-snap-type:y proximity}
 @media(max-width:900px){.storia-in{grid-template-columns:1fr;gap:44px}}
 .storia h2{font-family:'Italiana',serif;font-size:clamp(1.9rem,4vw,3rem);line-height:1.15;margin-bottom:22px}
 .storia p{color:#C8CEDA;margin-bottom:15px;max-width:62ch}
-.storia .citazione{margin:30px 0 0;padding-left:22px;border-left:2px solid var(--oro);font-family:'Italiana',serif;font-size:clamp(1.15rem,2vw,1.5rem);line-height:1.35;color:var(--latte)}
-.storia .citazione span{display:block;margin-top:10px;font-family:'Mulish',sans-serif;font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--oro)}
-.ritratto{position:sticky;top:90px}
-@media(max-width:900px){.ritratto{position:static}}
+.storia .citazione{margin:30px 0 0;padding-left:22px;border-left:2px solid var(--oro);font-family:'Mulish',sans-serif;font-weight:400;font-style:italic;font-size:clamp(1rem,1.6vw,1.2rem);line-height:1.65;color:var(--latte)}
+.storia .citazione span{display:block;margin-top:10px;font-family:'Mulish',sans-serif;font-style:normal;font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--oro)}
+.tocca-storia{margin-top:34px;display:inline-block;border:1px solid rgba(216,174,94,.55);color:var(--oro-2);padding:11px 24px;border-radius:2px;font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;transition:background .25s,color .25s}
+.tocca-storia:hover{background:var(--oro);color:var(--notte)}
+.lato-storia{position:sticky;top:90px}
+@media(max-width:900px){.lato-storia{position:static}}
+.santini{margin-top:26px;display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:440px}
+.santino{background:rgba(242,236,221,.035);border:1px solid rgba(216,174,94,.18);border-radius:3px;overflow:hidden;margin:0}
+.santino img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;filter:saturate(.88)}
+.santino figcaption{padding:13px 13px 15px;font-size:.8rem;line-height:1.5;color:#C8CEDA;font-style:italic}
+.santino figcaption b{display:block;margin-top:9px;font-style:normal;font-weight:400;font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--oro)}
+@media(max-width:460px){.santini{grid-template-columns:1fr}}
 .ritratto img{width:100%;height:auto;max-width:440px;border-radius:3px;border:1px solid rgba(216,174,94,.3);filter:saturate(.92)}
 .ritratto figcaption{margin-top:12px;font-size:.82rem;color:var(--velo);line-height:1.5}
 .ritratto b{font-family:'Italiana',serif;font-weight:400;font-size:1.15rem;color:var(--oro-2);display:block;margin-bottom:3px}
@@ -219,11 +227,24 @@ footer b{font-family:'Italiana',serif;letter-spacing:.26em;color:var(--oro-2);fo
       <p>Dal 2006 la Pyramis realizza edifici anche in proprio. Oggi si occupa di costruzioni, ristrutturazioni, restauri e manutenzioni, con una specializzazione negli interventi di efficientamento sismico ed energetico.</p>
       <p>L'azienda è attenta alla formazione del proprio personale, anche dal punto di vista comportamentale: organizza al suo interno corsi di leadership, management e comunicazione, affidati a docenti di provata esperienza.</p>
       <blockquote class="citazione">La parola chiave dell'azienda è «Amore».<br>Costruire con Amore, ristrutturare con Amore, restaurare con Amore, manutenzionare con Amore, donare con Amore.<span>Antonino Russo</span></blockquote>
+      <a class="tocca-storia" href="sponsor-eventi.html">Sponsor ed eventi →</a>
     </div>
-    <figure class="ritratto">
-      <img src="../img/nonno.jpg" alt="Francesco Russo, il capostipite della famiglia" width="640" height="800">
-      <figcaption><b>Francesco Russo</b>Il capostipite. Da lui, nel 1955, comincia il mestiere che la famiglia si passa di generazione in generazione.</figcaption>
-    </figure>
+    <div class="lato-storia">
+      <figure class="ritratto">
+        <img src="../img/nonno.jpg" alt="Francesco Russo, il capostipite della famiglia" width="640" height="800">
+        <figcaption><b>Francesco Russo</b>Il capostipite. Da lui, nel 1955, comincia il mestiere che la famiglia si passa di generazione in generazione.</figcaption>
+      </figure>
+      <div class="santini">
+        <figure class="santino">
+          <img loading="lazy" src="../img/papa-giovanni.jpg" alt="Papa Giovanni Paolo II" width="334" height="447">
+          <figcaption>«Prendete in mano la vostra vita e fatene un capolavoro.»<b>Papa Giovanni Paolo II</b></figcaption>
+        </figure>
+        <figure class="santino">
+          <img loading="lazy" src="../img/madre-teresa.jpg" alt="Madre Teresa di Calcutta, disegno" width="550" height="700">
+          <figcaption>«Importante non è ciò che facciamo, ma quanto amore mettiamo in ciò che facciamo: bisogna fare piccole cose con grande amore.»<b>Madre Teresa di Calcutta</b></figcaption>
+        </figure>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -360,6 +381,7 @@ footer b{font-family:'Italiana',serif;letter-spacing:.26em;color:var(--oro-2);fo
 <footer>
   <b>PYRAMIS COSTRUZIONI S.R.L.</b>
   <p style="margin-top:8px">Via Matteo Ricci 19, Catania · Costruzione, vendita e manutenzione di edifici residenziali, ricettivi e commerciali</p>
+  <p style="margin-top:8px"><a href="sponsor-eventi.html" style="text-decoration:underline">Sponsor ed eventi</a></p>
 </footer>
 
 <script>
@@ -391,6 +413,25 @@ footer b{font-family:'Italiana',serif;letter-spacing:.26em;color:var(--oro-2);fo
     });
     // il motore galleria si aggancia dopo che il mosaico esiste
     var s=document.createElement('script');s.src='../galleria.js';document.body.appendChild(s);
+  });
+})();
+// su computer il link tel: apre app tipo Skype/FaceTime: meglio copiare il numero.
+// Su telefono (puntatore touch) resta la chiamata diretta.
+(function(){
+  if(!matchMedia('(hover:hover) and (pointer:fine)').matches) return;
+  document.querySelectorAll('a[href^="tel:"]').forEach(function(a){
+    var orig=a.textContent, timer=null;
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var fatto=function(msg){
+        a.textContent=msg;
+        clearTimeout(timer);
+        timer=setTimeout(function(){a.textContent=orig},2600);
+      };
+      if(navigator.clipboard&&navigator.clipboard.writeText){
+        navigator.clipboard.writeText('347 33 62 039').then(function(){fatto('Numero copiato ✓')},function(){fatto('347 33 62 039')});
+      }else{fatto('347 33 62 039')}
+    });
   });
 })();
 </script>
