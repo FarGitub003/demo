@@ -13,3 +13,5 @@ html.fm-js .fmx-vortice.fmx-fermo > * { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   html.fm-js .fmx-vortice > * { opacity: 1 !important; transform: none !important; }
 }
+/* taglio di lato solo mentre i pezzi arrivano: vedi vortice.js */
+.fmx-vortice-taglia { overflow-x: clip; }
