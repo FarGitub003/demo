@@ -1,0 +1,9 @@
+/* zoompan — la foto si ingrandisce e segue il cursore dentro il riquadro.
+   Da anfora-murano. Il riquadro non si muove: si muove solo l'immagine. */
+.fmx-zoompan { position: relative; overflow: hidden; cursor: zoom-in; touch-action: pan-y; }
+.fmx-zoompan > img { display: block; width: 100%; transform-origin: 0 0; will-change: transform; }
+.fmx-zoompan.fmx-vicino { cursor: zoom-out; }
+@media (prefers-reduced-motion: no-preference) {
+  .fmx-zoompan > img { transition: transform .45s cubic-bezier(.22, 1, .36, 1); }
+  .fmx-zoompan.fmx-vicino > img { transition: transform .08s linear; }
+}

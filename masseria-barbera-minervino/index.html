@@ -4,6 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.classList.add('js')</script>
+<!-- FAR Motion: il nucleo va senza defer (mette html.fm-js prima del primo disegno) -->
+<link rel="stylesheet" href="far-motion.min.css">
+<script src="far-motion.min.js"></script>
+<link rel="stylesheet" href="sceniche/timbro.css">
+<script src="sceniche/timbro.js" defer></script>
 <title>Masseria Barbera · Minervino Murge, Alta Murgia</title>
 <meta name="description" content="Osteria di masseria sul balcone delle Puglie, dentro il Parco nazionale dell'Alta Murgia. Chiocciola nella guida Osterie d'Italia di Slow Food nel 2025 e nel 2026.">
 <meta name="robots" content="noindex,nofollow">
@@ -44,6 +49,10 @@
 }
 </script>
 <style>
+/* pathLength="100" sui <path>: la lunghezza la NORMALIZZA il browser, quindi
+   qui non resta nessun numero misurato a mano da tenere aggiornato. Se il
+   disegno cambia, il tratto resta giusto. (Regola 7 del kit, senza JS.) */
+
 :root{
   --calce:#F7F3EA;
   --calce-2:#EFE7D6;
@@ -90,10 +99,10 @@ main:focus,main:focus-visible{outline:none}
 .spiga{display:block;color:var(--grano-scuro)}
 .spiga path{fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
 @keyframes traccia{to{stroke-dashoffset:0}}
-.js .spiga-hero path{stroke-dasharray:640;stroke-dashoffset:640}
+.js .spiga-hero path{stroke-dasharray:100;stroke-dashoffset:100}
 .hero.play .spiga-hero path{animation:traccia 2.1s var(--ease-spiga) .3s forwards}
-.js .divisore .spiga path{stroke-dasharray:640;stroke-dashoffset:640}
-.divisore.on .spiga path{animation:traccia 1.7s var(--ease-spiga) .1s forwards}
+.js .divisore .spiga path{stroke-dasharray:100;stroke-dashoffset:100}
+.divisore.fm-dentro .spiga path{animation:traccia 1.7s var(--ease-spiga) .1s forwards}
 
 /* ---------- nav ---------- */
 .nav{
@@ -101,7 +110,7 @@ main:focus,main:focus-visible{outline:none}
   background:transparent;
   transition:background-color .3s ease, box-shadow .3s ease;
 }
-.nav.scrolled{background:rgba(247,243,234,.95);box-shadow:0 1px 0 rgba(34,26,13,.14);backdrop-filter:blur(8px)}
+.nav.fm-attaccata{background:rgba(247,243,234,.95);box-shadow:0 1px 0 rgba(34,26,13,.14);backdrop-filter:blur(8px)}
 .nav-inner{
   max-width:1140px;margin:0 auto;
   padding:13px clamp(20px,4.5vw,52px);
@@ -151,7 +160,7 @@ main:focus,main:focus-visible{outline:none}
 body.menu-open .nav{z-index:130}
 body.menu-open .nav-brand{color:var(--calce)}
 body.menu-open .nav-brand .spiga{color:var(--grano)}
-body.menu-open .nav.scrolled{background:transparent;box-shadow:none;backdrop-filter:none}
+body.menu-open .nav.fm-attaccata{background:transparent;box-shadow:none;backdrop-filter:none}
 .mobile-menu{
   position:fixed;inset:0;z-index:120;
   background:var(--arso);
@@ -382,10 +391,6 @@ footer{background:var(--calce-2);padding:clamp(46px,5vw,64px) 0 34px}
 }
 .foot-ai span{display:block}
 
-/* reveal */
-.js [data-reveal]{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s var(--ease-spiga)}
-.js [data-reveal].on{opacity:1;transform:translateY(0)}
-
 /* ---------- responsive ---------- */
 @media (max-width:940px){
   .nav-links,.nav-cta{display:none}
@@ -410,13 +415,7 @@ footer{background:var(--calce-2);padding:clamp(46px,5vw,64px) 0 34px}
   .nav-brand{font-size:1.02rem}
   .btn{padding:13px 20px;font-size:.95rem}
 }
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *,*::before,*::after{animation-duration:.001ms !important;animation-delay:0ms !important;transition-duration:.001ms !important}
-  .spiga path{stroke-dashoffset:0 !important}
-  .js .hero .att{opacity:1;transform:none}
-  .js [data-reveal]{opacity:1;transform:none}
-}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
 </style>
 <noscript><style>
   /* Senza JS il burger non puo' aprire nulla e la barra non puo' diventare solida
@@ -427,7 +426,6 @@ footer{background:var(--calce-2);padding:clamp(46px,5vw,64px) 0 34px}
   .nav{position:static;background:var(--calce);box-shadow:0 1px 0 rgba(34,26,13,.14)}
   .nav-inner{flex-wrap:wrap;justify-content:center;gap:8px 18px}
   .burger{display:none !important}
-  /* flex-shrink:0 del CSS base terrebbe la lista a 378px: a 320 sfonderebbe */
   .nav-links{display:flex !important;flex-wrap:wrap;justify-content:center;margin-left:0;gap:4px 18px;flex-shrink:1;max-width:100%}
   .nav-cta{display:inline-block !important}
   /* sotto i 940 la riga singola non ci sta: due righe, non tre.
@@ -445,10 +443,10 @@ footer{background:var(--calce-2);padding:clamp(46px,5vw,64px) 0 34px}
 <body>
 <a class="skip-link" href="#main">Vai al contenuto</a>
 
-<nav class="nav" id="nav" aria-label="Navigazione principale">
+<nav class="nav fm-testata" id="nav" aria-label="Navigazione principale" data-fm-soglia="10">
   <div class="nav-inner">
     <a class="nav-brand" href="#top">
-      <svg class="spiga" viewBox="0 0 60 124" aria-hidden="true"><path d="M30 118 C30 104 30 80 30 44 M30 100 C37 97,44 91,45 79 C36 82,31 90,30 100 M30 100 C23 97,16 91,15 79 C24 82,29 90,30 100 M30 85 C37 82,44 76,45 64 C36 67,31 75,30 85 M30 85 C23 82,16 76,15 64 C24 67,29 75,30 85 M30 70 C37 67,44 61,45 49 C36 52,31 60,30 70 M30 70 C23 67,16 61,15 49 C24 52,29 60,30 70 M30 55 C37 52,44 46,45 34 C36 37,31 45,30 55 M30 55 C23 52,16 46,15 34 C24 37,29 45,30 55 M30 47 C36.5 38 38 23 30 8 C22 23 23.5 38 30 47"/></svg>
+      <svg class="spiga" viewBox="0 0 60 124" aria-hidden="true"><path pathLength="100" d="M30 118 C30 104 30 80 30 44 M30 100 C37 97,44 91,45 79 C36 82,31 90,30 100 M30 100 C23 97,16 91,15 79 C24 82,29 90,30 100 M30 85 C37 82,44 76,45 64 C36 67,31 75,30 85 M30 85 C23 82,16 76,15 64 C24 67,29 75,30 85 M30 70 C37 67,44 61,45 49 C36 52,31 60,30 70 M30 70 C23 67,16 61,15 49 C24 52,29 60,30 70 M30 55 C37 52,44 46,45 34 C36 37,31 45,30 55 M30 55 C23 52,16 46,15 34 C24 37,29 45,30 55 M30 47 C36.5 38 38 23 30 8 C22 23 23.5 38 30 47"/></svg>
       Masseria Barbera
     </a>
     <ul class="nav-links">
@@ -478,7 +476,7 @@ footer{background:var(--calce-2);padding:clamp(46px,5vw,64px) 0 34px}
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <svg class="spiga spiga-hero hero-spiga att att-1" viewBox="0 0 60 124" aria-hidden="true"><path d="M30 118 C30 104 30 80 30 44 M30 100 C37 97,44 91,45 79 C36 82,31 90,30 100 M30 100 C23 97,16 91,15 79 C24 82,29 90,30 100 M30 85 C37 82,44 76,45 64 C36 67,31 75,30 85 M30 85 C23 82,16 76,15 64 C24 67,29 75,30 85 M30 70 C37 67,44 61,45 49 C36 52,31 60,30 70 M30 70 C23 67,16 61,15 49 C24 52,29 60,30 70 M30 55 C37 52,44 46,45 34 C36 37,31 45,30 55 M30 55 C23 52,16 46,15 34 C24 37,29 45,30 55 M30 47 C36.5 38 38 23 30 8 C22 23 23.5 38 30 47 M30 12 C30 8 30 4 30 1 M25.5 16 C23 11 21 7 19 3 M34.5 16 C37 11 39 7 41 3"/></svg>
+        <svg class="spiga spiga-hero hero-spiga att att-1" viewBox="0 0 60 124" aria-hidden="true"><path pathLength="100" d="M30 118 C30 104 30 80 30 44 M30 100 C37 97,44 91,45 79 C36 82,31 90,30 100 M30 100 C23 97,16 91,15 79 C24 82,29 90,30 100 M30 85 C37 82,44 76,45 64 C36 67,31 75,30 85 M30 85 C23 82,16 76,15 64 C24 67,29 75,30 85 M30 70 C37 67,44 61,45 49 C36 52,31 60,30 70 M30 70 C23 67,16 61,15 49 C24 52,29 60,30 70 M30 55 C37 52,44 46,45 34 C36 37,31 45,30 55 M30 55 C23 52,16 46,15 34 C24 37,29 45,30 55 M30 47 C36.5 38 38 23 30 8 C22 23 23.5 38 30 47 M30 12 C30 8 30 4 30 1 M25.5 16 C23 11 21 7 19 3 M34.5 16 C37 11 39 7 41 3"/></svg>
         <p class="hero-eyebrow att att-1">Minervino Murge · Alta Murgia · Puglia</p>
         <h1 class="att att-2">Masseria<em>Barbera</em></h1>
         <p class="hero-tag att att-3">Un'osteria di masseria sul balcone delle Puglie, a 429 metri sopra la valle dell'Ofanto. <b>Slow Food le ha dato la Chiocciola due anni di fila</b>, nell'edizione 2025 e in quella 2026 di Osterie d'Italia.</p>
@@ -488,7 +486,8 @@ footer{background:var(--calce-2);padding:clamp(46px,5vw,64px) 0 34px}
         </div>
       </div>
       <figure class="att att-5">
-        <div class="marchio-cornice">
+        <!-- Momento scenico: il marchio della masseria si IMPRIME sulla pagina. -->
+        <div class="marchio-cornice" data-fms="timbro" data-fms-giro="-6">
           <img src="img/marchio.jpg" width="900" height="900" alt="Il marchio di Masseria Barbera: un cerchio bianco tagliato da una stella a quattro punte, su fondo bruno.">
         </div>
         <figcaption class="marchio-didascalia">Il segno della masseria</figcaption>
@@ -512,7 +511,7 @@ footer{background:var(--calce-2);padding:clamp(46px,5vw,64px) 0 34px}
   </div>
 </header>
 
-<section class="scuro citazione" data-reveal>
+<section class="scuro citazione" data-fm="sali">
   <div class="wrap-stretto">
     <p class="kicker">Come si raccontano loro</p>
     <figure>
@@ -525,7 +524,7 @@ footer{background:var(--calce-2);padding:clamp(46px,5vw,64px) 0 34px}
   </div>
 </section>
 
-<section id="chiocciola" data-reveal>
+<section id="chiocciola" data-fm="sali">
   <div class="wrap">
     <p class="kicker">Il riconoscimento</p>
     <h2>La Chiocciola, due anni di fila</h2>
@@ -550,13 +549,13 @@ footer{background:var(--calce-2);padding:clamp(46px,5vw,64px) 0 34px}
   </div>
 </section>
 
-<div class="divisore" data-reveal>
+<div class="divisore" data-fm="sali">
   <i></i>
-  <svg class="spiga" viewBox="0 0 60 124" aria-hidden="true"><path d="M30 118 C30 104 30 80 30 44 M30 100 C37 97,44 91,45 79 C36 82,31 90,30 100 M30 100 C23 97,16 91,15 79 C24 82,29 90,30 100 M30 85 C37 82,44 76,45 64 C36 67,31 75,30 85 M30 85 C23 82,16 76,15 64 C24 67,29 75,30 85 M30 70 C37 67,44 61,45 49 C36 52,31 60,30 70 M30 70 C23 67,16 61,15 49 C24 52,29 60,30 70 M30 55 C37 52,44 46,45 34 C36 37,31 45,30 55 M30 55 C23 52,16 46,15 34 C24 37,29 45,30 55 M30 47 C36.5 38 38 23 30 8 C22 23 23.5 38 30 47 M30 12 C30 8 30 4 30 1 M25.5 16 C23 11 21 7 19 3 M34.5 16 C37 11 39 7 41 3"/></svg>
+  <svg class="spiga" viewBox="0 0 60 124" aria-hidden="true"><path pathLength="100" d="M30 118 C30 104 30 80 30 44 M30 100 C37 97,44 91,45 79 C36 82,31 90,30 100 M30 100 C23 97,16 91,15 79 C24 82,29 90,30 100 M30 85 C37 82,44 76,45 64 C36 67,31 75,30 85 M30 85 C23 82,16 76,15 64 C24 67,29 75,30 85 M30 70 C37 67,44 61,45 49 C36 52,31 60,30 70 M30 70 C23 67,16 61,15 49 C24 52,29 60,30 70 M30 55 C37 52,44 46,45 34 C36 37,31 45,30 55 M30 55 C23 52,16 46,15 34 C24 37,29 45,30 55 M30 47 C36.5 38 38 23 30 8 C22 23 23.5 38 30 47 M30 12 C30 8 30 4 30 1 M25.5 16 C23 11 21 7 19 3 M34.5 16 C37 11 39 7 41 3"/></svg>
   <i></i>
 </div>
 
-<section id="murgia" class="verde" data-reveal>
+<section id="murgia" class="verde" data-fm="sali">
   <div class="wrap">
     <div class="murgia-griglia">
       <div>
@@ -579,29 +578,29 @@ footer{background:var(--calce-2);padding:clamp(46px,5vw,64px) 0 34px}
   </div>
 </section>
 
-<section id="venire" data-reveal>
+<section id="venire" data-fm="sali">
   <div class="wrap">
     <p class="kicker">Come funziona</p>
     <h2>Prima di venire, una telefonata</h2>
     <p class="testo">La masseria non sta in centro e non ha una vetrina su cui leggere gli orari. Tre cose da sapere prima di mettersi in strada.</p>
     <div class="card-griglia">
       <article class="card">
-        <h3><svg class="spiga" viewBox="0 0 60 124" aria-hidden="true"><path d="M30 118 C30 104 30 80 30 44 M30 100 C37 97,44 91,45 79 C36 82,31 90,30 100 M30 100 C23 97,16 91,15 79 C24 82,29 90,30 100 M30 85 C37 82,44 76,45 64 C36 67,31 75,30 85 M30 85 C23 82,16 76,15 64 C24 67,29 75,30 85 M30 70 C37 67,44 61,45 49 C36 52,31 60,30 70 M30 70 C23 67,16 61,15 49 C24 52,29 60,30 70 M30 55 C37 52,44 46,45 34 C36 37,31 45,30 55 M30 55 C23 52,16 46,15 34 C24 37,29 45,30 55 M30 47 C36.5 38 38 23 30 8 C22 23 23.5 38 30 47"/></svg>Si sta fuori dal paese</h3>
+        <h3><svg class="spiga" viewBox="0 0 60 124" aria-hidden="true"><path pathLength="100" d="M30 118 C30 104 30 80 30 44 M30 100 C37 97,44 91,45 79 C36 82,31 90,30 100 M30 100 C23 97,16 91,15 79 C24 82,29 90,30 100 M30 85 C37 82,44 76,45 64 C36 67,31 75,30 85 M30 85 C23 82,16 76,15 64 C24 67,29 75,30 85 M30 70 C37 67,44 61,45 49 C36 52,31 60,30 70 M30 70 C23 67,16 61,15 49 C24 52,29 60,30 70 M30 55 C37 52,44 46,45 34 C36 37,31 45,30 55 M30 55 C23 52,16 46,15 34 C24 37,29 45,30 55 M30 47 C36.5 38 38 23 30 8 C22 23 23.5 38 30 47"/></svg>Si sta fuori dal paese</h3>
         <p>L'indirizzo è SP 97, km 5.8505, fuori dall'abitato di Minervino Murge, in provincia di Barletta-Andria-Trani. Ci si arriva in auto. <a href="https://www.google.com/maps/search/?api=1&amp;query=Masseria+Barbera+Minervino+Murge" target="_blank" rel="noopener">Apri la mappa</a></p>
       </article>
       <article class="card">
-        <h3><svg class="spiga" viewBox="0 0 60 124" aria-hidden="true"><path d="M30 118 C30 104 30 80 30 44 M30 100 C37 97,44 91,45 79 C36 82,31 90,30 100 M30 100 C23 97,16 91,15 79 C24 82,29 90,30 100 M30 85 C37 82,44 76,45 64 C36 67,31 75,30 85 M30 85 C23 82,16 76,15 64 C24 67,29 75,30 85 M30 70 C37 67,44 61,45 49 C36 52,31 60,30 70 M30 70 C23 67,16 61,15 49 C24 52,29 60,30 70 M30 55 C37 52,44 46,45 34 C36 37,31 45,30 55 M30 55 C23 52,16 46,15 34 C24 37,29 45,30 55 M30 47 C36.5 38 38 23 30 8 C22 23 23.5 38 30 47"/></svg>Gli orari si chiedono</h3>
+        <h3><svg class="spiga" viewBox="0 0 60 124" aria-hidden="true"><path pathLength="100" d="M30 118 C30 104 30 80 30 44 M30 100 C37 97,44 91,45 79 C36 82,31 90,30 100 M30 100 C23 97,16 91,15 79 C24 82,29 90,30 100 M30 85 C37 82,44 76,45 64 C36 67,31 75,30 85 M30 85 C23 82,16 76,15 64 C24 67,29 75,30 85 M30 70 C37 67,44 61,45 49 C36 52,31 60,30 70 M30 70 C23 67,16 61,15 49 C24 52,29 60,30 70 M30 55 C37 52,44 46,45 34 C36 37,31 45,30 55 M30 55 C23 52,16 46,15 34 C24 37,29 45,30 55 M30 47 C36.5 38 38 23 30 8 C22 23 23.5 38 30 47"/></svg>Gli orari si chiedono</h3>
         <p>Le aperture di una masseria seguono la stagione e le prenotazioni del giorno. Il modo più rapido per saperle è chiedere: <a href="tel:+393683705725">368 370 57 25</a></p>
       </article>
       <article class="card">
-        <h3><svg class="spiga" viewBox="0 0 60 124" aria-hidden="true"><path d="M30 118 C30 104 30 80 30 44 M30 100 C37 97,44 91,45 79 C36 82,31 90,30 100 M30 100 C23 97,16 91,15 79 C24 82,29 90,30 100 M30 85 C37 82,44 76,45 64 C36 67,31 75,30 85 M30 85 C23 82,16 76,15 64 C24 67,29 75,30 85 M30 70 C37 67,44 61,45 49 C36 52,31 60,30 70 M30 70 C23 67,16 61,15 49 C24 52,29 60,30 70 M30 55 C37 52,44 46,45 34 C36 37,31 45,30 55 M30 55 C23 52,16 46,15 34 C24 37,29 45,30 55 M30 47 C36.5 38 38 23 30 8 C22 23 23.5 38 30 47"/></svg>Meglio prenotare</h3>
+        <h3><svg class="spiga" viewBox="0 0 60 124" aria-hidden="true"><path pathLength="100" d="M30 118 C30 104 30 80 30 44 M30 100 C37 97,44 91,45 79 C36 82,31 90,30 100 M30 100 C23 97,16 91,15 79 C24 82,29 90,30 100 M30 85 C37 82,44 76,45 64 C36 67,31 75,30 85 M30 85 C23 82,16 76,15 64 C24 67,29 75,30 85 M30 70 C37 67,44 61,45 49 C36 52,31 60,30 70 M30 70 C23 67,16 61,15 49 C24 52,29 60,30 70 M30 55 C37 52,44 46,45 34 C36 37,31 45,30 55 M30 55 C23 52,16 46,15 34 C24 37,29 45,30 55 M30 47 C36.5 38 38 23 30 8 C22 23 23.5 38 30 47"/></svg>Meglio prenotare</h3>
         <p>Una chiamata il giorno prima evita di fare la strada per niente, e permette di dire in anticipo quante persone siete e se c'è qualcosa che non mangiate.</p>
       </article>
     </div>
   </div>
 </section>
 
-<section id="contatti" class="scuro" data-reveal>
+<section id="contatti" class="scuro" data-fm="sali">
   <div class="wrap">
     <p class="kicker">Contatti</p>
     <h2>Scrivere o chiamare</h2>
@@ -632,7 +631,7 @@ footer{background:var(--calce-2);padding:clamp(46px,5vw,64px) 0 34px}
   <div class="wrap">
     <div class="foot-top">
       <div class="foot-marchio">
-        <svg class="spiga" viewBox="0 0 60 124" aria-hidden="true"><path d="M30 118 C30 104 30 80 30 44 M30 100 C37 97,44 91,45 79 C36 82,31 90,30 100 M30 100 C23 97,16 91,15 79 C24 82,29 90,30 100 M30 85 C37 82,44 76,45 64 C36 67,31 75,30 85 M30 85 C23 82,16 76,15 64 C24 67,29 75,30 85 M30 70 C37 67,44 61,45 49 C36 52,31 60,30 70 M30 70 C23 67,16 61,15 49 C24 52,29 60,30 70 M30 55 C37 52,44 46,45 34 C36 37,31 45,30 55 M30 55 C23 52,16 46,15 34 C24 37,29 45,30 55 M30 47 C36.5 38 38 23 30 8 C22 23 23.5 38 30 47"/></svg>
+        <svg class="spiga" viewBox="0 0 60 124" aria-hidden="true"><path pathLength="100" d="M30 118 C30 104 30 80 30 44 M30 100 C37 97,44 91,45 79 C36 82,31 90,30 100 M30 100 C23 97,16 91,15 79 C24 82,29 90,30 100 M30 85 C37 82,44 76,45 64 C36 67,31 75,30 85 M30 85 C23 82,16 76,15 64 C24 67,29 75,30 85 M30 70 C37 67,44 61,45 49 C36 52,31 60,30 70 M30 70 C23 67,16 61,15 49 C24 52,29 60,30 70 M30 55 C37 52,44 46,45 34 C36 37,31 45,30 55 M30 55 C23 52,16 46,15 34 C24 37,29 45,30 55 M30 47 C36.5 38 38 23 30 8 C22 23 23.5 38 30 47"/></svg>
         <b>Masseria Barbera</b>
       </div>
       <div class="foot-link">
@@ -662,9 +661,6 @@ footer{background:var(--calce-2);padding:clamp(46px,5vw,64px) 0 34px}
 
   /* nav solida allo scroll */
   var nav = document.getElementById('nav');
-  function onScroll(){ nav.classList.toggle('scrolled', window.scrollY > 10); }
-  window.addEventListener('scroll', onScroll, {passive:true});
-  onScroll();
 
   /* count-up: solo su numeri veri e verificati */
   function conta(el){
@@ -679,23 +675,6 @@ footer{background:var(--calce-2);padding:clamp(46px,5vw,64px) 0 34px}
       else el.textContent = String(fine);
     }
     requestAnimationFrame(step);
-  }
-
-  /* reveal on scroll */
-  var revealed = document.querySelectorAll('[data-reveal]');
-  if ('IntersectionObserver' in window && !reduced){
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if (e.isIntersecting){
-          e.target.classList.add('on');
-          e.target.querySelectorAll('[data-conta]').forEach(conta);
-          io.unobserve(e.target);
-        }
-      });
-    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
-    revealed.forEach(function(el){ io.observe(el); });
-  } else {
-    revealed.forEach(function(el){ el.classList.add('on'); });
   }
 
   /* ------- inert di sfondo condiviso ------- */
@@ -767,6 +746,6 @@ footer{background:var(--calce-2);padding:clamp(46px,5vw,64px) 0 34px}
   });
 })();
 </script>
-  <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

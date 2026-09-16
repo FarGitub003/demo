@@ -4,6 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.classList.add('js')</script>
+<!-- FAR Motion: il nucleo va senza defer (mette html.fm-js prima del primo disegno) -->
+<link rel="stylesheet" href="far-motion.min.css">
+<script src="far-motion.min.js"></script>
+<link rel="stylesheet" href="sceniche/strisce.css">
+<script src="sceniche/strisce.js" defer></script>
 <title>La Pignatta · Gustoteca Mediterranea · Ristorante pizzeria a Locorotondo (BA)</title>
 <meta name="description" content="Cucina pugliese servita sul coccio e pizza dal forno a legna, anche d'asporto. Gustoteca Mediterranea La Pignatta, Via Vittorio Veneto 110, centro storico di Locorotondo (BA).">
 <meta name="robots" content="noindex,nofollow">
@@ -97,12 +102,7 @@ a{color:var(--coccio-scuro)}
 .sotto{max-width:44em;margin:0 0 8px;font-size:1.08rem}
 /* la comparsa allo scroll si accende SOLO se il JS e' partito (html.js): senza JS
    il contenuto resta visibile, non invisibile per sempre. */
-.js [data-reveal]{opacity:0;transform:translateY(16px);transition:opacity .8s cubic-bezier(.22,.9,.3,1),transform .8s cubic-bezier(.22,.9,.3,1)}
-.js [data-reveal].in{opacity:1;transform:none}
-@media (prefers-reduced-motion: reduce){
-  .js [data-reveal]{opacity:1;transform:none;transition:none}
-  html{scroll-behavior:auto}
-}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
 
 /* ============ NAV ============ */
 #nav{
@@ -122,14 +122,14 @@ a{color:var(--coccio-scuro)}
   background:var(--tovaglia);color:#fff !important;border-radius:999px;padding:.55em 1.25em;
 }
 .nav-cta:hover{background:var(--tovaglia-scura);text-decoration:none !important}
-#nav.solid{background:var(--calce);color:var(--inchiostro);box-shadow:0 1px 0 rgba(41,36,30,.12)}
-#nav.solid .nav-cta{color:#fff !important}
+#nav.fm-attaccata{background:var(--calce);color:var(--inchiostro);box-shadow:0 1px 0 rgba(41,36,30,.12)}
+#nav.fm-attaccata .nav-cta{color:#fff !important}
 .burger{
   display:none;background:none;border:0;padding:10px;cursor:pointer;
 }
 .burger span{display:block;width:26px;height:2.5px;background:#fff;border-radius:2px;transition:transform .3s ease,opacity .3s ease}
 .burger span+span{margin-top:6px}
-#nav.solid .burger span{background:var(--inchiostro)}
+#nav.fm-attaccata .burger span{background:var(--inchiostro)}
 body.menu-open .burger span{background:#fff}
 body.menu-open .burger span:nth-child(1){transform:translateY(8.5px) rotate(45deg)}
 body.menu-open .burger span:nth-child(2){opacity:0}
@@ -200,9 +200,7 @@ body.menu-open .burger span:nth-child(3){transform:translateY(-8.5px) rotate(-45
   .hero-up:nth-child(6){animation-delay:.75s}
   @keyframes heroup{to{opacity:1;transform:none}}
 }
-@media (prefers-reduced-motion: reduce){
-  .hero-pignatta path{stroke-dashoffset:0}
-}
+
 .ribbon{
   display:flex;flex-wrap:wrap;gap:10px 28px;list-style:none;margin:0;padding:18px 0 0;
   border-top:1px solid rgba(255,255,255,.32);
@@ -377,7 +375,7 @@ footer{background:#1C2030;color:rgba(255,255,255,.86);padding:44px 0 34px;font-s
 <body id="top">
 <a class="skip" href="#main">Salta al contenuto</a>
 
-<nav id="nav" aria-label="Principale">
+<nav id="nav" aria-label="Principale" class="fm-testata" data-fm-soglia="40">
   <div class="nav-in">
     <a class="nav-brand" href="#top" aria-label="La Pignatta, torna su">
       <svg width="30" height="26" viewBox="0 0 64 52" aria-hidden="true"><path d="M25 12 q7 -7 14 0 M20 16 h24 M20 16 c-6 1.5 -6 9 .5 10 M44 16 c6 1.5 6 9 -.5 10 M21 16 c-4 14 3 27 11 27 c8 0 15 -13 11 -27" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -410,7 +408,8 @@ footer{background:#1C2030;color:rgba(255,255,255,.86);padding:44px 0 34px;font-s
 
 <!-- ============ HERO ============ -->
 <header class="hero" aria-label="La Pignatta, gustoteca a Locorotondo">
-  <div class="hero-img">
+  <!-- Momento scenico: la copertina si sfila a lamelle e scopre la foto. -->
+  <div class="hero-img" data-fms="strisce" data-fms-quante="14">
     <picture>
       <source media="(max-width:700px)" srcset="img/hero-mobile.jpg">
       <img src="img/hero.jpg" alt="Piatto di cozze crude col limone sul coccio pugliese, con una bottiglia di Verdeca di Locorotondo" fetchpriority="high">
@@ -440,13 +439,13 @@ footer{background:#1C2030;color:rgba(255,255,255,.86);padding:44px 0 34px;font-s
 <!-- ============ INTRO: IL NOME ============ -->
 <section class="sez" id="pignatta">
   <div class="wrap">
-    <p class="eyebrow" data-reveal>
+    <p class="eyebrow" data-fm="sali">
       <svg width="26" height="12" viewBox="0 0 26 12" aria-hidden="true"><circle cx="13" cy="6" r="1.9" fill="currentColor"/><circle cx="7" cy="3.4" r="1.4" fill="currentColor"/><circle cx="19" cy="3.4" r="1.4" fill="currentColor"/><circle cx="8.4" cy="9.2" r="1.4" fill="currentColor"/><circle cx="17.6" cy="9.2" r="1.4" fill="currentColor"/></svg>
       Il nome sta in cucina
     </p>
-    <h2 class="claim" data-reveal>La pignatta è la pentola di coccio che cuoce piano, per ore. Qui non è solo l'insegna: è un modo di stare ai fornelli.</h2>
-    <p class="sotto" data-reveal>Dalla pignatta di pecora in brodo agli involtini di trippa d'agnello, i «gnumereddesuffuchete», fino al purè di fave con le cicorie di campo: la cucina di Lorenzo Zizzi tiene in vita i piatti della Valle d'Itria. E li serve come si deve, sul coccio pugliese dipinto a fiorellini.</p>
-    <div class="chips" data-reveal>
+    <h2 class="claim" data-fm="sali">La pignatta è la pentola di coccio che cuoce piano, per ore. Qui non è solo l'insegna: è un modo di stare ai fornelli.</h2>
+    <p class="sotto" data-fm="sali">Dalla pignatta di pecora in brodo agli involtini di trippa d'agnello, i «gnumereddesuffuchete», fino al purè di fave con le cicorie di campo: la cucina di Lorenzo Zizzi tiene in vita i piatti della Valle d'Itria. E li serve come si deve, sul coccio pugliese dipinto a fiorellini.</p>
+    <div class="chips" data-fm="sali">
       <span class="chip">Prodotti locali</span>
       <span class="chip">Gluten free</span>
       <span class="chip">Senza lattosio</span>
@@ -458,20 +457,20 @@ footer{background:#1C2030;color:rgba(255,255,255,.86);padding:44px 0 34px;font-s
 <section class="sez cucina" id="cucina">
   <div class="wrap cucina-grid">
     <div>
-      <p class="eyebrow" data-reveal>
+      <p class="eyebrow" data-fm="sali">
         <svg width="26" height="12" viewBox="0 0 26 12" aria-hidden="true"><circle cx="13" cy="6" r="1.9" fill="currentColor"/><circle cx="7" cy="3.4" r="1.4" fill="currentColor"/><circle cx="19" cy="3.4" r="1.4" fill="currentColor"/><circle cx="8.4" cy="9.2" r="1.4" fill="currentColor"/><circle cx="17.6" cy="9.2" r="1.4" fill="currentColor"/></svg>
         La cucina
       </p>
-      <h2 class="claim" data-reveal>Pasta fatta in casa, carni alla griglia e il pesce.</h2>
-      <p data-reveal>Lorenzo Zizzi ha imparato il mestiere tra l'Italia e l'estero, poi è tornato a cucinare quello che questa terra sa dare, con uno staff di collaboratori qualificati al suo fianco. Si mangia sia a pranzo sia a cena, e nei mesi estivi apre lo spazio esterno.</p>
-      <ul class="lista-fatti" data-reveal>
+      <h2 class="claim" data-fm="sali">Pasta fatta in casa, carni alla griglia e il pesce.</h2>
+      <p data-fm="sali">Lorenzo Zizzi ha imparato il mestiere tra l'Italia e l'estero, poi è tornato a cucinare quello che questa terra sa dare, con uno staff di collaboratori qualificati al suo fianco. Si mangia sia a pranzo sia a cena, e nei mesi estivi apre lo spazio esterno.</p>
+      <ul class="lista-fatti" data-fm="sali">
         <li><span><strong>Orecchiette con le cime di rapa</strong>, caserecci e strascinati fatti in casa</span></li>
         <li><span><strong>Pignatta di pecora in brodo</strong>, il piatto che dà il nome alla casa</span></li>
         <li><span><strong>Gnumereddesuffuchete</strong>, involtini di trippa d'agnello cotti nella pignatta, con cipolla, pomodoro e pecorino</span></li>
         <li><span><strong>Carni alla griglia e pesce</strong>, secondo il mercato del giorno</span></li>
       </ul>
     </div>
-    <div class="split-foto" data-reveal>
+    <div class="split-foto" data-fm="sali">
       <img src="img/tagliatelle-con-carne.jpg" alt="Tagliatelle al ragù di carne e funghi sul piatto di coccio pugliese" loading="lazy" width="1600" height="1200">
     </div>
   </div>
@@ -480,39 +479,39 @@ footer{background:#1C2030;color:rgba(255,255,255,.86);padding:44px 0 34px;font-s
 <!-- ============ ASSAGGI ============ -->
 <section class="sez assaggi" id="assaggi">
   <div class="wrap">
-    <p class="eyebrow" data-reveal>
+    <p class="eyebrow" data-fm="sali">
       <svg width="26" height="12" viewBox="0 0 26 12" aria-hidden="true"><circle cx="13" cy="6" r="1.9" fill="currentColor"/><circle cx="7" cy="3.4" r="1.4" fill="currentColor"/><circle cx="19" cy="3.4" r="1.4" fill="currentColor"/><circle cx="8.4" cy="9.2" r="1.4" fill="currentColor"/><circle cx="17.6" cy="9.2" r="1.4" fill="currentColor"/></svg>
       Assaggi dalla cucina
     </p>
-    <h2 class="claim" data-reveal>Ogni piatto arriva in tavola sullo stesso coccio.</h2>
-    <p class="sotto" data-reveal>La carta segue il mercato e la stagione: i piatti del giorno te li racconta lo staff al tavolo. Questi sono sei assaggi fotografati proprio qui, sul coccio coi fiorellini blu.</p>
+    <h2 class="claim" data-fm="sali">Ogni piatto arriva in tavola sullo stesso coccio.</h2>
+    <p class="sotto" data-fm="sali">La carta segue il mercato e la stagione: i piatti del giorno te li racconta lo staff al tavolo. Questi sono sei assaggi fotografati proprio qui, sul coccio coi fiorellini blu.</p>
     <div class="tondi">
-      <div class="tondo" data-reveal>
+      <div class="tondo" data-fm="sali">
         <div class="tondo-img"><img src="img/arancini.jpg" alt="Arancini fritti sul piatto di coccio" loading="lazy" width="1600" height="1458"></div>
         <h3>Arancini fritti</h3>
         <p>Dorati, serviti caldi come antipasto della casa.</p>
       </div>
-      <div class="tondo" data-reveal>
+      <div class="tondo" data-fm="sali">
         <div class="tondo-img"><img src="img/capicollo-affettato.jpg" alt="Capicollo affettato con spicchi di fichi freschi sul piatto di coccio" loading="lazy" width="1600" height="1600"></div>
         <h3>Capicollo coi fichi</h3>
         <p>Il salume affettato sottile, con gli spicchi di fico fresco.</p>
       </div>
-      <div class="tondo" data-reveal>
+      <div class="tondo" data-fm="sali">
         <div class="tondo-img"><img src="img/mozzarella.jpg" alt="Mozzarella con radicchio e basilico sul piatto di coccio" loading="lazy" width="1600" height="1588"></div>
         <h3>Mozzarella, radicchio e basilico</h3>
         <p>Bianco latte sul coccio, con una foglia di basilico.</p>
       </div>
-      <div class="tondo" data-reveal>
+      <div class="tondo" data-fm="sali">
         <div class="tondo-img"><img src="img/carne-con-rucola-e-parmigiano.jpg" alt="Tagliata di carne con rucola e scaglie di parmigiano" loading="lazy" width="1600" height="1200"></div>
         <h3>Tagliata con rucola e parmigiano</h3>
         <p>Carne alla griglia, rucola fresca e scaglie di parmigiano.</p>
       </div>
-      <div class="tondo" data-reveal>
+      <div class="tondo" data-fm="sali">
         <div class="tondo-img"><img src="img/cozze-crude-con-limone.jpg" alt="Cozze crude col limone e bottiglia di Verdeca di Locorotondo" loading="lazy" width="1600" height="1600"></div>
         <h3>Cozze crude col limone</h3>
         <p>Aperte al momento, con un bicchiere di Verdeca di Locorotondo.</p>
       </div>
-      <div class="tondo" data-reveal>
+      <div class="tondo" data-fm="sali">
         <div class="tondo-img"><img src="img/spaghetto-con-aragosta.jpg" alt="Spaghetti con aragosta intera sul piatto di coccio" loading="lazy" width="1600" height="1200"></div>
         <h3>Spaghetto all'aragosta</h3>
         <p>Il piatto delle occasioni, con l'aragosta intera sul coccio.</p>
@@ -528,23 +527,23 @@ footer{background:#1C2030;color:rgba(255,255,255,.86);padding:44px 0 34px;font-s
 <!-- ============ OFFERTA ============ -->
 <section class="sez offerta" id="forno">
   <div class="wrap">
-    <p class="eyebrow" data-reveal>
+    <p class="eyebrow" data-fm="sali">
       <svg width="26" height="12" viewBox="0 0 26 12" aria-hidden="true"><circle cx="13" cy="6" r="1.9" fill="currentColor"/><circle cx="7" cy="3.4" r="1.4" fill="currentColor"/><circle cx="19" cy="3.4" r="1.4" fill="currentColor"/><circle cx="8.4" cy="9.2" r="1.4" fill="currentColor"/><circle cx="17.6" cy="9.2" r="1.4" fill="currentColor"/></svg>
       In tavola
     </p>
-    <h2 class="claim" data-reveal>Il forno a legna, le feste, una tavola per tutti.</h2>
+    <h2 class="claim" data-fm="sali">Il forno a legna, le feste, una tavola per tutti.</h2>
     <div class="cards">
-      <article class="card" data-reveal>
+      <article class="card" data-fm="sali">
         <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c2 3 5 5 5 9a5 5 0 0 1-10 0c0-4 3-6 5-9z"/><path d="M12 21v-4"/><path d="M4 21h16"/></svg>
         <h3>Pizza dal forno a legna</h3>
         <p>Cotta nel forno a legna sia a pranzo sia a cena. E se la vuoi mangiare a casa, te la prepariamo d'asporto.</p>
       </article>
-      <article class="card" data-reveal>
+      <article class="card" data-fm="sali">
         <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8"/><path d="M12 21v-6"/><path d="M12 15a6 6 0 0 0 6-6V4H6v5a6 6 0 0 0 6 6z"/><path d="M18 6h2a2 2 0 0 1-2 4"/><path d="M6 6H4a2 2 0 0 0 2 4"/></svg>
         <h3>Banchetti e ricorrenze</h3>
         <p>Compleanni, lauree, anniversari: il menu si concorda con lo staff, piatto per piatto, con la carta dei vini a completare la tavola.</p>
       </article>
-      <article class="card" data-reveal>
+      <article class="card" data-fm="sali">
         <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>
         <h3>Una tavola per tutti</h3>
         <p>Il locale è privo di barriere architettoniche e la cucina prepara piatti gluten free e senza lattosio. Nei mesi estivi si mangia anche fuori.</p>
@@ -556,33 +555,33 @@ footer{background:#1C2030;color:rgba(255,255,255,.86);padding:44px 0 34px;font-s
 <!-- ============ SERVIZI ============ -->
 <section class="sez" id="servizi">
   <div class="wrap">
-    <p class="eyebrow" data-reveal>
+    <p class="eyebrow" data-fm="sali">
       <svg width="26" height="12" viewBox="0 0 26 12" aria-hidden="true"><circle cx="13" cy="6" r="1.9" fill="currentColor"/><circle cx="7" cy="3.4" r="1.4" fill="currentColor"/><circle cx="19" cy="3.4" r="1.4" fill="currentColor"/><circle cx="8.4" cy="9.2" r="1.4" fill="currentColor"/><circle cx="17.6" cy="9.2" r="1.4" fill="currentColor"/></svg>
       I servizi
     </p>
-    <h2 class="claim" data-reveal>Quello che trovi da noi.</h2>
+    <h2 class="claim" data-fm="sali">Quello che trovi da noi.</h2>
     <div class="servizi-grid">
-      <div class="serv" data-reveal>
+      <div class="serv" data-fm="sali">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c2 3 5 5 5 9a5 5 0 0 1-10 0c0-4 3-6 5-9z"/><path d="M12 21v-4"/></svg>
         <div><h3>Forno a legna</h3><p>La pizza cuoce nel forno a legna, come da tradizione.</p></div>
       </div>
-      <div class="serv" data-reveal>
+      <div class="serv" data-fm="sali">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.5 12h-11z"/><path d="M8 8a4 4 0 0 1 8 0"/></svg>
         <div><h3>Pizza d'asporto</h3><p>Anche da portare via, pure a pranzo.</p></div>
       </div>
-      <div class="serv" data-reveal>
+      <div class="serv" data-fm="sali">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8"/><path d="M12 21v-6"/><path d="M12 15a6 6 0 0 0 6-6V4H6v5a6 6 0 0 0 6 6z"/></svg>
         <div><h3>Banchetti e feste</h3><p>Menu concordabile con lo staff per le ricorrenze.</p></div>
       </div>
-      <div class="serv" data-reveal>
+      <div class="serv" data-fm="sali">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2"/><path d="M12 7v5l4 2"/><circle cx="10" cy="17" r="4"/><path d="M14 21l3-4h4"/></svg>
         <div><h3>Senza barriere</h3><p>Locale completamente privo di barriere architettoniche.</p></div>
       </div>
-      <div class="serv" data-reveal>
+      <div class="serv" data-fm="sali">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg>
         <div><h3>Spazio esterno</h3><p>Tavoli fuori nei mesi estivi.</p></div>
       </div>
-      <div class="serv" data-reveal>
+      <div class="serv" data-fm="sali">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-5 0-8-3-8-8 5 0 8 3 8 8z"/><path d="M12 21c5 0 8-3 8-8-5 0-8 3-8 8z"/><path d="M12 13V3"/><path d="M9 5l3-2 3 2"/></svg>
         <div><h3>Prodotti locali</h3><p>Materie prime del territorio, con opzioni gluten free e senza lattosio.</p></div>
       </div>
@@ -593,12 +592,12 @@ footer{background:#1C2030;color:rgba(255,255,255,.86);padding:44px 0 34px;font-s
 <!-- ============ GALLERY ============ -->
 <section class="sez galleria" id="galleria">
   <div class="wrap">
-    <p class="eyebrow" data-reveal>
+    <p class="eyebrow" data-fm="sali">
       <svg width="26" height="12" viewBox="0 0 26 12" aria-hidden="true"><circle cx="13" cy="6" r="1.9" fill="currentColor"/><circle cx="7" cy="3.4" r="1.4" fill="currentColor"/><circle cx="19" cy="3.4" r="1.4" fill="currentColor"/><circle cx="8.4" cy="9.2" r="1.4" fill="currentColor"/><circle cx="17.6" cy="9.2" r="1.4" fill="currentColor"/></svg>
       La tavola in foto
     </p>
-    <h2 class="claim" data-reveal>Il coccio, i fiorellini blu e quello che ci finisce sopra.</h2>
-    <div class="gal" data-reveal>
+    <h2 class="claim" data-fm="sali">Il coccio, i fiorellini blu e quello che ci finisce sopra.</h2>
+    <div class="gal" data-fm="sali">
       <button data-src="img/cozze-crude-con-limone.jpg" data-did="Cozze crude col limone e il Verdeca di Locorotondo"><img src="img/cozze-crude-con-limone.jpg" alt="Cozze crude col limone sul coccio, con bottiglia di Verdeca di Locorotondo" loading="lazy" width="1600" height="1600"><span class="did">Cozze crude e Verdeca</span></button>
       <button data-src="img/capicollo-affettato.jpg" data-did="Capicollo affettato con i fichi freschi"><img src="img/capicollo-affettato.jpg" alt="Capicollo affettato con spicchi di fichi freschi" loading="lazy" width="1600" height="1600"><span class="did">Capicollo coi fichi</span></button>
       <button data-src="img/arancini.jpg" data-did="Arancini fritti, caldi di cucina"><img src="img/arancini.jpg" alt="Arancini fritti sul piatto di coccio pugliese" loading="lazy" width="1600" height="1458"><span class="did">Arancini fritti</span></button>
@@ -615,28 +614,28 @@ footer{background:#1C2030;color:rgba(255,255,255,.86);padding:44px 0 34px;font-s
 <section class="finale" id="contatti">
   <div class="finale-img"><img src="img/capicollo-affettato.jpg" alt="" loading="lazy" aria-hidden="true"></div>
   <div class="wrap">
-    <p class="eyebrow" data-reveal>
+    <p class="eyebrow" data-fm="sali">
       <svg width="26" height="12" viewBox="0 0 26 12" aria-hidden="true"><circle cx="13" cy="6" r="1.9" fill="currentColor"/><circle cx="7" cy="3.4" r="1.4" fill="currentColor"/><circle cx="19" cy="3.4" r="1.4" fill="currentColor"/><circle cx="8.4" cy="9.2" r="1.4" fill="currentColor"/><circle cx="17.6" cy="9.2" r="1.4" fill="currentColor"/></svg>
       Ti aspettiamo in centro storico
     </p>
-    <h2 data-reveal>Chiama e vieni a tavola.</h2>
-    <p data-reveal>Siamo aperti sia a pranzo sia a cena. Per i giorni, gli orari e i tavoli chiamaci: al telefono rispondiamo noi.</p>
+    <h2 data-fm="sali">Chiama e vieni a tavola.</h2>
+    <p data-fm="sali">Siamo aperti sia a pranzo sia a cena. Per i giorni, gli orari e i tavoli chiamaci: al telefono rispondiamo noi.</p>
     <div class="contatti-grid">
-      <div class="cont" data-reveal>
+      <div class="cont" data-fm="sali">
         <span class="k">Telefono</span>
         <a href="tel:+390804316391">080 431 6391</a>
         <span class="nota">Il fisso del locale</span>
       </div>
-      <div class="cont" data-reveal>
+      <div class="cont" data-fm="sali">
         <span class="k">Cellulare</span>
         <a href="tel:+393334709206">333 470 9206</a>
         <span class="nota">Per messaggi e richieste</span>
       </div>
-      <div class="cont" data-reveal>
+      <div class="cont" data-fm="sali">
         <span class="k">Email</span>
         <a href="mailto:lorenzo.zizzi@libero.it">lorenzo.zizzi@libero.it</a>
       </div>
-      <div class="cont" data-reveal>
+      <div class="cont" data-fm="sali">
         <span class="k">Dove siamo</span>
         <span class="v">Via Vittorio Veneto, 110<br>70010 Locorotondo (BA)</span>
         <a href="https://www.google.com/maps/search/?api=1&amp;query=40.753068,17.33054" target="_blank" rel="noopener">Apri in Google Maps</a>
@@ -688,9 +687,6 @@ footer{background:#1C2030;color:rgba(255,255,255,.86);padding:44px 0 34px;font-s
   var skip=document.querySelector('.skip');
 
   /* nav solid on scroll */
-  function onScroll(){ nav.classList.toggle('solid', window.scrollY>40); }
-  window.addEventListener('scroll', onScroll, {passive:true});
-  onScroll();
 
   /* ---- menu mobile: apertura, inert, focus-trap, Esc ---- */
   var menuOpen=false;
@@ -737,14 +733,6 @@ footer{background:#1C2030;color:rgba(255,255,255,.86);padding:44px 0 34px;font-s
       }
     }
   });
-
-  /* ---- reveal on scroll ---- */
-  var io=new IntersectionObserver(function(entries){
-    entries.forEach(function(en){
-      if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
-    });
-  },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
-  document.querySelectorAll('[data-reveal]').forEach(function(el){ io.observe(el); });
 
   /* ---- lightbox ---- */
   var lb=document.getElementById('lightbox');
@@ -807,6 +795,6 @@ footer{background:#1C2030;color:rgba(255,255,255,.86);padding:44px 0 34px;font-s
   });
 })();
 </script>
-  <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

@@ -1,0 +1,8 @@
+/* portale — un cerchio si allarga dal punto che hai toccato e scopre la
+   schermata successiva. La transizione fra due sezioni, senza cambiare pagina. */
+.fmx-portale {
+  position: absolute; inset: 0; z-index: 250; overflow: hidden;
+  clip-path: circle(0px at var(--fmx-x, 50%) var(--fmx-y, 50%));
+  will-change: clip-path;
+}
+.fmx-portale.fmx-schermo { position: fixed; }

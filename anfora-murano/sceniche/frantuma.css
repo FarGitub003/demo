@@ -1,0 +1,88 @@
+/* frantuma — un proiettile arriva, colpisce, il vetro si crepa e cade.
+   È la pallina di VBora generalizzata: proiettile qualsiasi, crepe procedurali,
+   schegge in clip-path, scossa, flash, onda d'urto.
+   Il contenitore va in .fm-palco (o si usa document.body: allora è a schermo). */
+
+.fmx-frantuma {
+  position: absolute; inset: 0; z-index: 200;
+  overflow: hidden; isolation: isolate;
+  background: var(--fmx-fondo, radial-gradient(120% 100% at 50% 0%, #16202b, #080b0f));
+  color: var(--fmx-testo, #e8edf2);
+}
+.fmx-frantuma.fmx-schermo { position: fixed; }
+
+/* il vetro: è il pannello intero, quello che poi si spezza */
+.fmx-vetro {
+  position: absolute; inset: 0;
+  background: inherit;
+  display: grid; place-items: center; text-align: center;
+}
+
+/* il proiettile */
+.fmx-palla {
+  position: absolute; top: 0; left: 0;
+  width: var(--fmx-misura, 78px); height: var(--fmx-misura, 78px);
+  margin: calc(var(--fmx-misura, 78px) / -2) 0 0 calc(var(--fmx-misura, 78px) / -2);
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 28%, #fff, var(--fmx-palla, #4ade80) 42%, #12351f 100%);
+  display: grid; place-items: center;
+  font-size: calc(var(--fmx-misura, 78px) * .62); line-height: 1;
+  will-change: transform;
+}
+.fmx-palla.fmx-scritta {
+  background: none; border-radius: 0;
+  filter: drop-shadow(0 8px 26px rgba(0, 0, 0, .5));
+}
+.fmx-palla::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit;
+  background:
+    radial-gradient(closest-side at 30% 24%, rgba(255, 255, 255, .85), transparent 70%),
+    radial-gradient(closest-side at 72% 78%, rgba(255, 255, 255, .22), transparent 70%);
+}
+.fmx-palla.fmx-scritta::before { content: none; }
+
+/* impatto: flash, onda d'urto, crepe */
+.fmx-flash {
+  position: absolute; inset: 0; opacity: 0; pointer-events: none;
+  background: radial-gradient(circle at var(--fmx-x, 50%) var(--fmx-y, 50%),
+              var(--fmx-lampo, rgba(255, 255, 255, .95)), transparent 55%);
+}
+.fmx-onda {
+  position: absolute; top: var(--fmx-y, 50%); left: var(--fmx-x, 50%);
+  width: 10px; height: 10px; margin: -5px 0 0 -5px; border-radius: 50%;
+  border: 2px solid var(--fmx-palla, #4ade80); opacity: 0;
+}
+.fmx-crepe { position: absolute; inset: 0; pointer-events: none; }
+.fmx-crepe path {
+  fill: none; stroke: var(--fmx-crepa, rgba(255, 255, 255, .78));
+  stroke-width: 1.4; stroke-linecap: round;
+}
+
+/* le schegge: ognuna è il vetro intero, ritagliato a triangolo */
+.fmx-schegge { position: absolute; inset: 0; pointer-events: none; }
+.fmx-scheggia {
+  position: absolute; inset: 0;
+  background: inherit;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+/* il pulsante per saltare: sempre raggiungibile da tastiera */
+.fmx-salta {
+  position: absolute; right: 18px; bottom: 16px; z-index: 3;
+  padding: 8px 14px; border-radius: 999px; cursor: pointer;
+  font: inherit; font-size: .82rem; color: inherit;
+  background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .18);
+}
+.fmx-salta:hover, .fmx-salta:focus-visible { background: rgba(255, 255, 255, .16); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .fmx-frantuma.fmx-scossa { animation: fmx-scossa .35s steps(2, end) 3; }
+}
+@keyframes fmx-scossa {
+  0%   { transform: translate3d(0, 0, 0); }
+  25%  { transform: translate3d(-7px, 4px, 0); }
+  50%  { transform: translate3d(6px, -5px, 0); }
+  75%  { transform: translate3d(-4px, -3px, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}

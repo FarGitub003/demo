@@ -2,6 +2,11 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
+<!-- FAR Motion: il nucleo va senza defer (mette html.fm-js prima del primo disegno) -->
+<link rel="stylesheet" href="far-motion.min.css">
+<script src="far-motion.min.js"></script>
+<link rel="stylesheet" href="sceniche/portale.css">
+<script src="sceniche/portale.js" defer></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Le Case del Merlo — Agriturismo a Milo, sull'Etna, dal 1999</title>
 <meta name="description" content="Agriturismo di famiglia a Milo (CT), sulle terrazze dell'Etna con vista sul mare: camere nelle antiche case contadine, vigneto biologico di Carricante, cucina siciliana, piscina panoramica. Sito dimostrativo.">
@@ -107,7 +112,7 @@ h1,h2,h3{font-family:'Petrona',Georgia,serif;font-weight:400;line-height:1.08;le
   transition:background .45s var(--ease-soft),box-shadow .45s;
   color:var(--carta);
 }
-.nav.solid{background:rgba(22,19,15,.95);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(240,235,223,.12)}
+.nav.fm-attaccata{background:rgba(22,19,15,.95);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(240,235,223,.12)}
 .nav-brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;font-family:'Petrona',serif;font-size:1.05rem;letter-spacing:.16em;text-transform:uppercase}
 /* 🪤 Alzare la soglia del burger non basta: appena SOPRA la soglia ricompaiono
    link e CTA e per una manciata di pixel il marchio non ci sta piu' e va a capo
@@ -223,8 +228,6 @@ h1,h2,h3{font-family:'Petrona',Georgia,serif;font-weight:400;line-height:1.08;le
 .section{padding:clamp(4.6rem,9vw,7.6rem) 0}
 .wrap{width:min(1240px,92vw);margin-inline:auto}
 .wrap-stretto{width:min(940px,92vw);margin-inline:auto}
-[data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease-soft),transform .9s var(--ease-soft)}
-[data-reveal].in{opacity:1;transform:none}
 .divider{display:flex;justify-content:center;padding:.5rem 0;color:var(--cenere)}
 .divider .merlo{width:250px;height:auto;opacity:.85}
 .divider path{stroke-width:1.7}
@@ -455,18 +458,13 @@ footer .fine{font-size:.74rem;color:#9C9284;max-width:64ch;line-height:1.6}
   .banda .contenuto{padding:3rem 0 4.2rem}
   .gallery-grid button.largo{grid-column:span 2}
 }
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
-  html{scroll-behavior:auto}
-  [data-reveal]{opacity:1;transform:none}
-  .hero .cascade{opacity:1;transform:none}
-}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
 </style>
 </head>
 <body>
 <a class="skip-link" href="#main">Salta al contenuto</a>
 
-<header class="nav" id="nav">
+<header class="nav fm-testata" id="nav" data-fm-soglia="40">
   <a class="nav-brand" href="#top" aria-label="Le Case del Merlo, torna su">
     <svg class="merlo" viewBox="0 0 140 66" aria-hidden="true"><path d="M2 60 C16 58, 34 54, 48 47 C 42.5 43.1 40.2 35.3 43.3 32.2 L 36.3 29.8 L 44.9 31.4 C 48.0 26.7 55.0 27.5 55.8 33.7 C 63.6 32.2 73.0 35.3 80.0 42.3 L 66.7 40.0 L 55.0 43.9 L 48.0 47.0 C60 42, 76 32, 92 16 L96 12 C106 24, 118 38, 128 48 L134 54"/></svg>
     Le Case del Merlo
@@ -527,17 +525,17 @@ footer .fine{font-size:.74rem;color:#9C9284;max-width:64ch;line-height:1.6}
 <section class="section storia grana" id="storia">
   <div class="wrap storia-grid">
     <div>
-      <p class="eyebrow" data-reveal>Il bosco della Baronessa</p>
-      <span class="anno-grande" data-reveal>1999</span>
-      <h2 data-reveal>Terrazze incolte, case abbandonate. E dieci anni di lavoro.</h2>
-      <span class="voce" data-reveal>Questi terreni erano di una nobildonna siciliana, che li faceva coltivare dai contadini del posto. Poi il bosco si era ripreso tutto.</span>
-      <p data-reveal>Nel 1999 Alfio Russo e Angela Pantò comprano l'intera tenuta: terrazze incolte e caseggiati abbandonati. Ci vollero circa dieci anni per rimettere il vigneto in produzione. L'agriturismo nasce da lì, per dare nuova vita alle antiche case dei contadini.</p>
-      <div class="carricante" data-reveal>
+      <p class="eyebrow" data-fm="sali">Il bosco della Baronessa</p>
+      <span class="anno-grande" data-fm="sali">1999</span>
+      <h2 data-fm="sali">Terrazze incolte, case abbandonate. E dieci anni di lavoro.</h2>
+      <span class="voce" data-fm="sali">Questi terreni erano di una nobildonna siciliana, che li faceva coltivare dai contadini del posto. Poi il bosco si era ripreso tutto.</span>
+      <p data-fm="sali">Nel 1999 Alfio Russo e Angela Pantò comprano l'intera tenuta: terrazze incolte e caseggiati abbandonati. Ci vollero circa dieci anni per rimettere il vigneto in produzione. L'agriturismo nasce da lì, per dare nuova vita alle antiche case dei contadini.</p>
+      <div class="carricante" data-fm="sali">
         <b>Perché si chiama Carricante</b>
         <q>La terra vulcanica rendeva le viti talmente «cariche» di uva da piegarsi sotto il peso dei grappoli; da qui il nome Carricante il vitigno autoctono con cui gli attuali proprietari proseguirono la coltivazione.</q>
       </div>
     </div>
-    <figure class="storia-media" data-reveal>
+    <figure class="storia-media" data-fm="sali">
       <img src="img/uva.jpg" alt="Grappolo di uva bianca Carricante nel vigneto della tenuta" loading="lazy">
     </figure>
   </div>
@@ -546,14 +544,14 @@ footer .fine{font-size:.74rem;color:#9C9284;max-width:64ch;line-height:1.6}
 <div class="divider" aria-hidden="true"><svg class="merlo" viewBox="0 0 360 124"><path class="merlo-div" d="M4 110 C42 108, 88 102, 126 90 C 116.5 83.2 112.5 69.8 117.9 64.3 L 105.8 60.3 L 120.6 63.0 C 126.0 54.9 138.2 56.2 139.5 67.0 C 153.0 64.3 169.2 69.8 181.3 81.9 L 158.4 77.8 L 138.2 84.6 L 126.0 90.0 C150 82, 178 66, 206 42 L214 36 C244 56, 274 80, 306 96 C324 104, 340 108, 356 110"/></svg></div>
 
 <section class="banda" id="etna">
-  <div class="banda-media"><img src="img/etna.jpg" alt="L'Etna in eruzione visto dai terrazzamenti della tenuta, con i muretti a secco in primo piano" loading="lazy"></div>
+  <div class="banda-media" data-fms="portale" data-fms-durata="1100"><img src="img/etna.jpg" alt="L'Etna in eruzione visto dai terrazzamenti della tenuta, con i muretti a secco in primo piano" loading="lazy"></div>
   <div class="contenuto">
     <div class="box">
-      <p class="eyebrow" data-reveal>Il vulcano</p>
-      <h2 data-reveal>Questa è la vista, non una cartolina.</h2>
-      <span class="voce" data-reveal>La fotografia è scattata dalla tenuta, oltre i muretti a secco che reggono le terrazze.</span>
-      <p data-reveal>Milo è un paese sulle pendici dell'Etna, quello dove ogni anno si tiene la manifestazione «Vini Milo». Dalla posizione della tenuta si sale in cima al vulcano da tutti e due i versanti.</p>
-      <ul class="distanze" data-reveal>
+      <p class="eyebrow" data-fm="sali">Il vulcano</p>
+      <h2 data-fm="sali">Questa è la vista, non una cartolina.</h2>
+      <span class="voce" data-fm="sali">La fotografia è scattata dalla tenuta, oltre i muretti a secco che reggono le terrazze.</span>
+      <p data-fm="sali">Milo è un paese sulle pendici dell'Etna, quello dove ogni anno si tiene la manifestazione «Vini Milo». Dalla posizione della tenuta si sale in cima al vulcano da tutti e due i versanti.</p>
+      <ul class="distanze" data-fm="sali">
         <li>Cima dell'Etna <b>20 min</b></li>
         <li>Taormina e le spiagge <b>20 min</b></li>
         <li>Centro di Catania <b>30 min</b></li>
@@ -568,12 +566,12 @@ footer .fine{font-size:.74rem;color:#9C9284;max-width:64ch;line-height:1.6}
 <section class="section chiaro" id="camere">
   <div class="wrap">
     <div class="camere-head">
-      <p class="eyebrow" data-reveal>Dove si dorme</p>
-      <h2 data-reveal>Il Casale dei Fiori</h2>
-      <p data-reveal>L'antica casa del contadino, affacciata sulla piscina panoramica: cinque camere doppie e quattro camere multiple con il soppalco.</p>
+      <p class="eyebrow" data-fm="sali">Dove si dorme</p>
+      <h2 data-fm="sali">Il Casale dei Fiori</h2>
+      <p data-fm="sali">L'antica casa del contadino, affacciata sulla piscina panoramica: cinque camere doppie e quattro camere multiple con il soppalco.</p>
     </div>
     <div class="due-camere">
-      <article class="camera" data-reveal>
+      <article class="camera" data-fm="sali">
         <figure><img src="img/camera-doppia.jpg" alt="Interno di una camera doppia, con letto matrimoniale, travi a vista e scala in ferro battuto" loading="lazy"></figure>
         <div class="corpo">
           <span class="occhio">Da 1 a 2 ospiti</span>
@@ -584,7 +582,7 @@ footer .fine{font-size:.74rem;color:#9C9284;max-width:64ch;line-height:1.6}
           </ul>
         </div>
       </article>
-      <article class="camera" data-reveal>
+      <article class="camera" data-fm="sali">
         <figure><img src="img/camera-familiare.jpg" alt="Camera familiare con soppalco in legno e scala in ferro battuto verde" loading="lazy"></figure>
         <div class="corpo">
           <span class="occhio">Fino a 5 ospiti</span>
@@ -596,7 +594,7 @@ footer .fine{font-size:.74rem;color:#9C9284;max-width:64ch;line-height:1.6}
         </div>
       </article>
     </div>
-    <div class="casale" data-reveal>
+    <div class="casale" data-fm="sali">
       <b>La ristrutturazione</b>
       <q>Ha prediletto l'utilizzo dei materiali tipici del luogo: gli arredi in legno di castagno, i soffitti con le travi a vista, il pavimento in cotto siciliano, rendono l'ambiente caldo e accogliente.</q>
     </div>
@@ -606,11 +604,11 @@ footer .fine{font-size:.74rem;color:#9C9284;max-width:64ch;line-height:1.6}
 <section class="section chiaro" id="tariffe" style="padding-top:0">
   <div class="wrap-stretto">
     <div class="tariffe-head">
-      <p class="eyebrow centro" data-reveal>Quanto costa</p>
-      <h2 data-reveal>Tariffe</h2>
-      <p data-reveal>Prezzi per notte, in camera e colazione a buffet. Sono le tariffe pubblicate per il 2024: al momento di prenotare vanno riconfermate.</p>
+      <p class="eyebrow centro" data-fm="sali">Quanto costa</p>
+      <h2 data-fm="sali">Tariffe</h2>
+      <p data-fm="sali">Prezzi per notte, in camera e colazione a buffet. Sono le tariffe pubblicate per il 2024: al momento di prenotare vanno riconfermate.</p>
     </div>
-    <div class="tab-scroll" data-reveal role="region" aria-label="Tabella delle tariffe, scorrevole in orizzontale" tabindex="0">
+    <div class="tab-scroll" data-fm="sali" role="region" aria-label="Tabella delle tariffe, scorrevole in orizzontale" tabindex="0">
     <table class="tab">
       <caption>Tariffe 2024 · a notte, colazione inclusa</caption>
       <thead>
@@ -625,24 +623,24 @@ footer .fine{font-size:.74rem;color:#9C9284;max-width:64ch;line-height:1.6}
     </table>
     </div>
     <div class="tariffe-note">
-      <div data-reveal><b>Mezza pensione</b><p>€ 28 a persona, cena inclusa per tutta la durata del soggiorno. Menù bambino € 16.</p></div>
-      <div data-reveal><b>Cena singola</b><p>Menù alla carta ogni sera, senza pacchetto.</p></div>
-      <div data-reveal><b>Come si prenota</b><p>Per telefono o per email, direttamente con Antonio o Giuliana.</p></div>
+      <div data-fm="sali"><b>Mezza pensione</b><p>€ 28 a persona, cena inclusa per tutta la durata del soggiorno. Menù bambino € 16.</p></div>
+      <div data-fm="sali"><b>Cena singola</b><p>Menù alla carta ogni sera, senza pacchetto.</p></div>
+      <div data-fm="sali"><b>Come si prenota</b><p>Per telefono o per email, direttamente con Antonio o Giuliana.</p></div>
     </div>
   </div>
 </section>
 
 <section class="section cucina grana" id="cucina">
   <div class="wrap cucina-grid">
-    <div class="cucina-media" data-reveal>
+    <div class="cucina-media" data-fm="sali">
       <figure><img src="img/piatto.jpg" alt="Piatto tipico siciliano servito in agriturismo" loading="lazy"></figure>
       <figure><img src="img/tavola.jpg" alt="Tavolo apparecchiato con bottiglia di vino, affacciato sulla terrazza" loading="lazy"></figure>
     </div>
     <div>
-      <p class="eyebrow" data-reveal>A tavola</p>
-      <h2 data-reveal>Colazione, domenica e forno a legna.</h2>
-      <span class="voce" data-reveal>D'inverno si mangia nella sala col camino acceso. D'estate nel patio, all'ombra dei pergolati di castagno, in mezzo alle viti e alle querce.</span>
-      <dl class="pasti" data-reveal>
+      <p class="eyebrow" data-fm="sali">A tavola</p>
+      <h2 data-fm="sali">Colazione, domenica e forno a legna.</h2>
+      <span class="voce" data-fm="sali">D'inverno si mangia nella sala col camino acceso. D'estate nel patio, all'ombra dei pergolati di castagno, in mezzo alle viti e alle querce.</span>
+      <dl class="pasti" data-fm="sali">
         <div class="pasto"><dt>Colazione</dt><dd><b>08:00 · 10:00</b>, a buffet: pane fatto in casa, marmellate, dolci, formaggi e salumi locali, focacce, yogurt, cereali, frutta.</dd></div>
         <div class="pasto"><dt>Domenica</dt><dd>Pranzo tipico siciliano a <b>menù fisso</b>: antipasti, primi con ingredienti etnei, secondi di carne, dolce e amaro.</dd></div>
         <div class="pasto"><dt>Cena</dt><dd>Menù <b>alla carta</b> ogni sera, più le pizze del <b>forno a legna</b>: pistacchio, pecorino, salumi tipici.</dd></div>
@@ -655,21 +653,21 @@ footer .fine{font-size:.74rem;color:#9C9284;max-width:64ch;line-height:1.6}
 <section class="section vigna-sez" id="vigna">
   <div class="wrap">
     <div class="vigna-head">
-      <p class="eyebrow" data-reveal>La vigna</p>
-      <h2 data-reveal>Biologico vuol dire che ci abitano gli animali.</h2>
-      <p data-reveal>Il vigneto è certificato biologico e non si usano pesticidi, con molta attenzione alla sopravvivenza degli animali e degli uccelli selvatici. Sono loro il motivo, non un'etichetta.</p>
+      <p class="eyebrow" data-fm="sali">La vigna</p>
+      <h2 data-fm="sali">Biologico vuol dire che ci abitano gli animali.</h2>
+      <p data-fm="sali">Il vigneto è certificato biologico e non si usano pesticidi, con molta attenzione alla sopravvivenza degli animali e degli uccelli selvatici. Sono loro il motivo, non un'etichetta.</p>
     </div>
     <div class="bestie">
-      <div class="bestia" data-reveal><b>Conigli</b><span>nelle terrazze</span></div>
-      <div class="bestia" data-reveal><b>Volpi</b><span>al crepuscolo</span></div>
-      <div class="bestia" data-reveal><b>Istrici</b><span>tra i muretti</span></div>
-      <div class="bestia" data-reveal><b>Upupa</b><span>uccello ormai raro</span></div>
-      <div class="bestia" data-reveal><b>Picchio maggiore</b><span>uccello ormai raro</span></div>
+      <div class="bestia" data-fm="sali"><b>Conigli</b><span>nelle terrazze</span></div>
+      <div class="bestia" data-fm="sali"><b>Volpi</b><span>al crepuscolo</span></div>
+      <div class="bestia" data-fm="sali"><b>Istrici</b><span>tra i muretti</span></div>
+      <div class="bestia" data-fm="sali"><b>Upupa</b><span>uccello ormai raro</span></div>
+      <div class="bestia" data-fm="sali"><b>Picchio maggiore</b><span>uccello ormai raro</span></div>
     </div>
     <div class="vigna-foto">
-      <figure data-reveal><img src="img/capre.jpg" alt="Le capre dell'azienda agricola nel recinto" loading="lazy"><figcaption>Le capre dell'azienda</figcaption></figure>
-      <figure data-reveal><img src="img/galline.jpg" alt="Galline e gallo nel recinto dell'azienda agricola" loading="lazy"><figcaption>Il pollaio</figcaption></figure>
-      <figure data-reveal><img src="img/vigneto-mare-2.jpg" alt="Il vigneto in terrazze con vista sulla costa" loading="lazy"><figcaption>Le terrazze di Carricante</figcaption></figure>
+      <figure data-fm="sali"><img src="img/capre.jpg" alt="Le capre dell'azienda agricola nel recinto" loading="lazy"><figcaption>Le capre dell'azienda</figcaption></figure>
+      <figure data-fm="sali"><img src="img/galline.jpg" alt="Galline e gallo nel recinto dell'azienda agricola" loading="lazy"><figcaption>Il pollaio</figcaption></figure>
+      <figure data-fm="sali"><img src="img/vigneto-mare-2.jpg" alt="Il vigneto in terrazze con vista sulla costa" loading="lazy"><figcaption>Le terrazze di Carricante</figcaption></figure>
     </div>
   </div>
 </section>
@@ -677,31 +675,31 @@ footer .fine{font-size:.74rem;color:#9C9284;max-width:64ch;line-height:1.6}
 <section class="section esperienze grana" id="esperienze">
   <div class="wrap">
     <div class="esperienze-head">
-      <p class="eyebrow centro" data-reveal>Cosa si fa</p>
-      <h2 data-reveal>Escursioni, con partenza da qui</h2>
-      <p data-reveal>Il trasferimento parte e torna direttamente all'agriturismo.</p>
+      <p class="eyebrow centro" data-fm="sali">Cosa si fa</p>
+      <h2 data-fm="sali">Escursioni, con partenza da qui</h2>
+      <p data-fm="sali">Il trasferimento parte e torna direttamente all'agriturismo.</p>
     </div>
     <div class="tre-esperienze">
-      <article class="esperienza" data-reveal>
+      <article class="esperienza" data-fm="sali">
         <span class="quando">Tutti i giorni · minimo 2 persone · 4/5 ore</span>
         <h3>Escursione Etna</h3>
         <p>Si attraversano boschi alpini e paesaggi lunari fino ai crateri più rappresentativi, con la visita a una grotta vulcanica. Col tempo giusto si vedono Taormina, la Calabria e le Eolie.</p>
         <span class="prezzo">€ 59<small>a persona</small></span>
       </article>
-      <article class="esperienza" data-reveal>
+      <article class="esperienza" data-fm="sali">
         <span class="quando">Tutti i pomeriggi · minimo 4 persone · 4/5 ore</span>
         <h3>Gole dell'Alcantara</h3>
         <p>Il tour si fa a bordo dei pulmini anni Settanta «Fiat Panorama», attraversando vigneti, uliveti e le lave di antiche eruzioni, fino ai vari punti del fiume Alcantara e ai paesini antichi.</p>
         <span class="prezzo">€ 45<small>a persona</small></span>
       </article>
-      <article class="esperienza" data-reveal>
+      <article class="esperienza" data-fm="sali">
         <span class="quando">Nella tenuta</span>
         <h3>Percorso Vita</h3>
         <p>Una palestra all'aria aperta: un circuito che passa per i sentieri della tenuta, tra i castagni e il profumo delle viti. Su richiesta con un personal trainer.</p>
         <span class="prezzo">Incluso<small>per chi soggiorna</small></span>
       </article>
     </div>
-    <p class="esperienze-nota" data-reveal>Sulle escursioni: sconto di € 14 per i bambini fino a 12 anni (solo escursione Etna), gratuito da 0 a 3 anni.</p>
+    <p class="esperienze-nota" data-fm="sali">Sulle escursioni: sconto di € 14 per i bambini fino a 12 anni (solo escursione Etna), gratuito da 0 a 3 anni.</p>
   </div>
 </section>
 
@@ -709,10 +707,10 @@ footer .fine{font-size:.74rem;color:#9C9284;max-width:64ch;line-height:1.6}
   <div class="wrap">
     <div class="gallery-head">
       <div>
-        <p class="eyebrow" data-reveal>Gallery</p>
-        <h2 data-reveal>La tenuta, com'è davvero.</h2>
+        <p class="eyebrow" data-fm="sali">Gallery</p>
+        <h2 data-fm="sali">La tenuta, com'è davvero.</h2>
       </div>
-      <p data-reveal>Fotografie dell'attuale sito dell'agriturismo. Clicca per ingrandire.</p>
+      <p data-fm="sali">Fotografie dell'attuale sito dell'agriturismo. Clicca per ingrandire.</p>
     </div>
     <div class="gallery-grid">
       <button class="largo" data-tag="La piscina" data-caption="La piscina panoramica, davanti al Casale dei Fiori"><img src="img/piscina.jpg" alt="La piscina panoramica con lettini e gazebo" loading="lazy"></button>
@@ -728,24 +726,24 @@ footer .fine{font-size:.74rem;color:#9C9284;max-width:64ch;line-height:1.6}
 
 <section class="section prenota grana" id="prenota">
   <div class="wrap">
-    <p class="eyebrow" data-reveal>Prenota</p>
-    <h2 data-reveal>Si prenota parlando con qualcuno.</h2>
-    <span class="voce" data-reveal>I proprietari e i collaboratori ricevono dalle 11:00 alle 13:00 e dalle 17:00 in poi.</span>
+    <p class="eyebrow" data-fm="sali">Prenota</p>
+    <h2 data-fm="sali">Si prenota parlando con qualcuno.</h2>
+    <span class="voce" data-fm="sali">I proprietari e i collaboratori ricevono dalle 11:00 alle 13:00 e dalle 17:00 in poi.</span>
     <div class="contatti">
-      <div class="contatto" data-reveal>
+      <div class="contatto" data-fm="sali">
         <span class="k">Antonio</span>
         <p><a href="tel:+393407803635">340 7803635</a></p>
       </div>
-      <div class="contatto" data-reveal>
+      <div class="contatto" data-fm="sali">
         <span class="k">Giuliana</span>
         <p><a href="tel:+393450071962">345 0071962</a></p>
       </div>
-      <div class="contatto" data-reveal>
+      <div class="contatto" data-fm="sali">
         <span class="k">Dove siamo</span>
         <p>Via Sciara Praino 11/13<br>95010 Milo (CT)</p>
         <p><a href="https://maps.google.com/?q=Le+Case+del+Merlo,+Via+Sciara+Praino,+Milo+CT" target="_blank" rel="noopener">Apri in Google Maps</a></p>
       </div>
-      <div class="contatto" data-reveal>
+      <div class="contatto" data-fm="sali">
         <span class="k">Scrivici</span>
         <p><a href="mailto:info@lecasedelmerlo.it?subject=Richiesta%20disponibilit%C3%A0">info@lecasedelmerlo.it</a></p>
         <p class="sec">Prenotazione diretta, senza intermediari.</p>
@@ -785,8 +783,6 @@ footer .fine{font-size:.74rem;color:#9C9284;max-width:64ch;line-height:1.6}
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   var nav = document.getElementById('nav');
-  var onScroll = function(){ nav.classList.toggle('solid', window.scrollY > 40); };
-  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
 
   var burger = document.querySelector('.burger');
   var mm = document.getElementById('mobileMenu');
@@ -833,19 +829,6 @@ footer .fine{font-size:.74rem;color:#9C9284;max-width:64ch;line-height:1.6}
     p.getBoundingClientRect();
     p.style.transition = 'stroke-dashoffset 2.5s cubic-bezier(.2,.78,.28,1)';
     p.style.strokeDashoffset = '0';
-  }
-
-  if('IntersectionObserver' in window){
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, {threshold:.14});
-    document.querySelectorAll('[data-reveal]').forEach(function(el){ io.observe(el); });
-    var ioM = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){ if(e.isIntersecting){ drawPath(e.target); ioM.unobserve(e.target); } });
-    }, {threshold:.4});
-    document.querySelectorAll('.merlo-div').forEach(function(p){ ioM.observe(p); });
-  } else {
-    document.querySelectorAll('[data-reveal]').forEach(function(el){ el.classList.add('in'); });
   }
 
   var hp = document.getElementById('merloHero');
@@ -905,6 +888,6 @@ footer .fine{font-size:.74rem;color:#9C9284;max-width:64ch;line-height:1.6}
   });
 })();
 </script>
-  <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

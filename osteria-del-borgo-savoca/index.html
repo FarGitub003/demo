@@ -18,6 +18,11 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23F7F0E1'/%3E%3Cpath d='M14 56 L14 30 A18 18 0 0 1 50 30 L50 56' fill='none' stroke='%23842223' stroke-width='4.5' stroke-linecap='round'/%3E%3C/svg%3E">
 <script>document.documentElement.classList.add('js')</script>
+<!-- FAR Motion: il nucleo va senza defer (mette html.fm-js prima del primo disegno) -->
+<link rel="stylesheet" href="far-motion.min.css">
+<script src="far-motion.min.js"></script>
+<link rel="stylesheet" href="sceniche/piega.css">
+<script src="sceniche/piega.js" defer></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -103,7 +108,7 @@ a{color:inherit}
   transition:background-color .35s var(--curva),border-color .35s var(--curva),box-shadow .35s var(--curva);
 }
 @supports (backdrop-filter:blur(6px)){#nav{background:rgba(247,240,225,.82);backdrop-filter:blur(10px) saturate(1.1)}}
-#nav.solid{background:var(--calce);border-bottom-color:var(--calce-3);box-shadow:0 6px 26px rgba(36,30,25,.07)}
+#nav.fm-attaccata{background:var(--calce);border-bottom-color:var(--calce-3);box-shadow:0 6px 26px rgba(36,30,25,.07)}
 #nav .wrap{display:flex;align-items:center;gap:1.4rem;width:min(1180px,94vw)}
 .nav-brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:var(--display);font-weight:700;
   font-size:1.04rem;letter-spacing:.09em;text-transform:uppercase;color:var(--inchiostro);white-space:nowrap;margin-right:auto}
@@ -289,11 +294,6 @@ footer{background:var(--ionio);color:var(--calce);padding:clamp(3.4rem,6vh,4.6re
 /* ---------- reveal ----------
    Tutto sotto `.js`: senza JavaScript nessuno rimetterebbe .in e la pagina
    resterebbe vuota (28/28 blocchi invisibili, misurato con _qa/senza_js.py). */
-.js [data-reveal]{opacity:0;transform:translateY(22px);transition:opacity .85s var(--curva),transform .85s var(--curva)}
-.js [data-reveal].in{opacity:1;transform:none}
-.js [data-reveal][data-delay="1"]{transition-delay:.1s}
-.js [data-reveal][data-delay="2"]{transition-delay:.2s}
-.js [data-reveal][data-delay="3"]{transition-delay:.3s}
 
 /* ---------- responsive ---------- */
 @media(max-width:1000px){
@@ -321,17 +321,11 @@ footer{background:var(--ionio);color:var(--calce);padding:clamp(3.4rem,6vh,4.6re
 @media(max-width:360px){
   .hero-ribbon{flex-direction:column;gap:.3rem}
 }
-@media(prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
-  /* stesso peso di `.js [data-reveal]` sopra: senza il `.js` questa riga perderebbe
-     la precedenza e il movimento resterebbe acceso per chi l'ha spento. */
-  .js [data-reveal]{opacity:1;transform:none}
-}
+@media(prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
 </style>
 
 <noscript><style>
-  /* Senza JS il burger non puo' aprire nulla e la barra non puo' diventare .solid
+  /* Senza JS il burger non puo' aprire nulla e la barra non puo' diventare .fm-attaccata
      allo scroll (testo scuro che scorrerebbe sopra le bande ionio): la barra esce
      dal fisso, resta piena di calce e i link vanno a capo invece di sfondare la riga. */
   html{scroll-behavior:auto;scroll-padding-top:8px}
@@ -352,7 +346,6 @@ footer{background:var(--ionio);color:var(--calce);padding:clamp(3.4rem,6vh,4.6re
     .nav-links{flex-basis:100%;gap:.3rem 1.1rem}
     .nav-links a{font-size:.76rem;letter-spacing:.1em;padding:.15rem 0}
   }
-  /* la barra non e' piu' fissa: l'hero non deve piu' lasciarle spazio sopra */
   .hero{padding-top:3vh}
   .mobile-menu{display:none}
 </style></noscript>
@@ -360,7 +353,7 @@ footer{background:var(--ionio);color:var(--calce);padding:clamp(3.4rem,6vh,4.6re
 <body>
 <a class="skip-link" href="#main">Salta al contenuto</a>
 
-<nav id="nav">
+<nav id="nav" class="fm-testata" data-fm-soglia="40">
   <div class="wrap">
     <a class="nav-brand" href="#top">
       <svg class="arco" width="20" height="24" viewBox="0 0 440 520" aria-hidden="true"><path d="M30 520 L30 220 A190 190 0 0 1 410 220 L410 520" stroke-width="30"/></svg>
@@ -422,13 +415,13 @@ footer{background:var(--ionio);color:var(--calce);padding:clamp(3.4rem,6vh,4.6re
 <!-- ============ CLAIM + NUMERI ============ -->
 <section style="padding-top:clamp(3.4rem,7vh,5.4rem)">
   <div class="wrap">
-    <div class="divisore" data-reveal>
+    <div class="divisore" data-fm="sali">
       <span></span>
       <svg class="arco" viewBox="0 0 440 520" width="54" aria-hidden="true"><path id="arcoDiv" d="M30 520 L30 220 A190 190 0 0 1 410 220 L410 520" stroke-width="18"/></svg>
       <span></span>
     </div>
-    <p class="claim" data-reveal>Tre giorni su sette. Solo a pranzo. Venti coperti.</p>
-    <div class="numeri" data-reveal data-delay="1">
+    <p class="claim" data-fm="sali">Tre giorni su sette. Solo a pranzo. Venti coperti.</p>
+    <div class="numeri" data-fm="sali" data-delay="1">
       <div><b>20</b><small>coperti</small></div>
       <div><b>3</b><small>giorni a settimana</small></div>
       <div><b>12–15<span style="font-size:.6em">.30</span></b><small>l'orario del pranzo</small></div>
@@ -441,12 +434,12 @@ footer{background:var(--ionio);color:var(--calce);padding:clamp(3.4rem,6vh,4.6re
 <section id="aperture" class="su-scuro">
   <div class="wrap">
     <div class="due-col">
-      <div data-reveal>
+      <div data-fm="sali">
         <div class="occhiello">Quando siamo aperti</div>
         <h2>Venerdì, sabato<br>e domenica</h2>
         <p class="sommario" style="margin-top:1.4rem">Dalle 12:00 alle 15:30. L'osteria apre a pranzo e basta: da lunedì a giovedì resta chiusa.</p>
       </div>
-      <div data-reveal data-delay="1">
+      <div data-fm="sali" data-delay="1">
         <div class="stato" id="stato"><span class="pallino"></span><span id="statoTesto">Orari: venerdì, sabato e domenica, 12:00–15:30</span></div>
         <div class="settimana">
           <div><div class="g">Lun</div><div class="o">chiuso</div></div>
@@ -466,7 +459,7 @@ footer{background:var(--ionio);color:var(--calce);padding:clamp(3.4rem,6vh,4.6re
 <section id="osteria" class="su-chiaro-2">
   <div class="wrap">
     <div class="due-col">
-      <div id="gallery" data-reveal>
+      <div id="gallery" data-fm="sali">
         <figure class="gallery-grid">
           <button data-src="img/insegna.jpg" data-caption="L'insegna all'ingresso dell'Osteria del Borgo, a Savoca." aria-label="Ingrandisci la foto dell'insegna">
             <picture>
@@ -478,7 +471,7 @@ footer{background:var(--ionio);color:var(--calce);padding:clamp(3.4rem,6vh,4.6re
           <figcaption class="dida">L'insegna all'ingresso, con lo stemma del borgo e la fascia merlata.</figcaption>
         </figure>
       </div>
-      <div data-reveal data-delay="1">
+      <div data-fm="sali" data-delay="1">
         <div class="occhiello">L'osteria</div>
         <h2>Il gusto delle<br>tradizioni</h2>
         <p class="sommario" style="margin-top:1.4rem">È scritto sul muro, all'ingresso, sotto lo stemma con la forchetta e il cucchiaio. È anche il modo più breve per dire cosa si mangia qui: cucina siciliana classica, prodotti del posto, preparazioni fatte come si facevano.</p>
@@ -491,28 +484,30 @@ footer{background:var(--ionio);color:var(--calce);padding:clamp(3.4rem,6vh,4.6re
 <!-- ============ I PIATTI ============ -->
 <section id="piatti">
   <div class="wrap">
-    <div style="text-align:center;max-width:44rem;margin:0 auto clamp(2.6rem,5vh,3.6rem)" data-reveal>
+    <div style="text-align:center;max-width:44rem;margin:0 auto clamp(2.6rem,5vh,3.6rem)" data-fm="sali">
       <div class="occhiello">In tavola</div>
       <h2>Tre piatti,<br>per farsi un'idea</h2>
     </div>
-    <div class="piatti">
-      <article class="piatto" data-reveal>
+    <!-- Momento scenico: i tre piatti si aprono come pagine incernierate.
+         `sali` e i `data-delay` tolti: lo scaglionamento lo fa gia' `piega`. -->
+    <div class="piatti" data-fms="piega" data-fms-passo="160">
+      <article class="piatto">
         <span class="num">I</span>
         <h3>Pappardelle con finocchietto selvatico e salsiccia</h3>
         <p>Il finocchietto e la salsiccia stanno insieme in Sicilia da sempre. Qui finiscono su una pasta larga, che li tiene tutti e due.</p>
       </article>
-      <article class="piatto" data-reveal data-delay="1">
+      <article class="piatto">
         <span class="num">II</span>
         <h3>Le carni locali</h3>
         <p>I secondi si fanno con le carni del territorio, cucinate senza complicazioni: è la parte della tradizione che non ha bisogno di essere spiegata.</p>
       </article>
-      <article class="piatto" data-reveal data-delay="2">
+      <article class="piatto">
         <span class="num">III</span>
         <h3>Semifreddo alle mandorle</h3>
         <p>Il dolce con cui finisce il pranzo, e il motivo per cui vale la pena arrivare in fondo senza guardare l'orologio.</p>
       </article>
     </div>
-    <p class="nota" data-reveal>Il menù completo lo trovi in osteria. Questi tre piatti sono quelli citati nella scheda del Touring Club Italiano.</p>
+    <p class="nota" data-fm="sali">Il menù completo lo trovi in osteria. Questi tre piatti sono quelli citati nella scheda del Touring Club Italiano.</p>
   </div>
 </section>
 
@@ -521,12 +516,12 @@ footer{background:var(--ionio);color:var(--calce);padding:clamp(3.4rem,6vh,4.6re
 <section id="borgo" class="su-scuro-2">
   <div class="wrap">
     <div class="due-col">
-      <div data-reveal>
+      <div data-fm="sali">
         <div class="occhiello">La terrazza</div>
         <blockquote class="virgolettato">«Atmosfera semplice e con una bella terrazza sulla quale è possibile pranzare godendo di un panorama mozzafiato.»</blockquote>
         <p class="sommario" style="font-size:.92rem;letter-spacing:.06em;text-transform:uppercase">Scheda Touring Club Italiano</p>
       </div>
-      <div data-reveal data-delay="1">
+      <div data-fm="sali" data-delay="1">
         <div class="occhiello">Il borgo</div>
         <h2 style="font-size:clamp(1.7rem,3.6vw,2.5rem)">Savoca, sopra<br>la costa ionica</h2>
         <p class="sommario" style="margin-top:1.4rem">Il paese sta in alto, tra Taormina e Messina: vicoli stretti, scale, archi di pietra. Nel 1971 è stato il set siciliano di un film che conoscono tutti. Chi sale fin qui, di solito, poi si ferma a pranzo.</p>
@@ -539,32 +534,32 @@ footer{background:var(--ionio);color:var(--calce);padding:clamp(3.4rem,6vh,4.6re
 <!-- ============ SERVIZI ============ -->
 <section id="servizi" class="su-chiaro-2">
   <div class="wrap">
-    <div style="text-align:center;margin-bottom:clamp(2.4rem,4.6vh,3.4rem)" data-reveal>
+    <div style="text-align:center;margin-bottom:clamp(2.4rem,4.6vh,3.4rem)" data-fm="sali">
       <div class="occhiello">Buono a sapersi</div>
       <h2>Prima di salire</h2>
     </div>
     <div class="servizi">
-      <div class="servizio" data-reveal>
+      <div class="servizio" data-fm="sali">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10h18M12 10V4M5 10l-1 10M19 10l1 10M8 15h8"/></svg>
         <div><h3>Terrazza e tavoli all'aperto</h3><p>Si pranza fuori, con il panorama davanti.</p></div>
       </div>
-      <div class="servizio" data-reveal data-delay="1">
+      <div class="servizio" data-fm="sali" data-delay="1">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2"/><path d="M9 9h6M12 9v6M12 15h5M7 21a5 5 0 0 1 3-9"/></svg>
         <div><h3>Ingresso accessibile</h3><p>Il locale è indicato come accessibile.</p></div>
       </div>
-      <div class="servizio" data-reveal data-delay="2">
+      <div class="servizio" data-fm="sali" data-delay="2">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="8" r="2"/><circle cx="12" cy="6" r="2"/><circle cx="17" cy="8" r="2"/><path d="M12 12c-3 0-5 2.4-5 4.6C7 19 9 20 12 20s5-1 5-3.4C17 14.4 15 12 12 12Z"/></svg>
         <div><h3>Animali ammessi</h3><p>Il cane può venire con te.</p></div>
       </div>
-      <div class="servizio" data-reveal>
+      <div class="servizio" data-fm="sali">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.2"/><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5M16 14.5c2.9 0 5 1.9 5 4.5"/></svg>
         <div><h3>Gruppi ed eventi privati</h3><p>Venti coperti si prenotano anche tutti insieme.</p></div>
       </div>
-      <div class="servizio" data-reveal data-delay="1">
+      <div class="servizio" data-fm="sali" data-delay="1">
         <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="2"/><path d="M2.5 10h19M6 15h4"/></svg>
         <div><h3>Tutte le carte</h3><p>Contanti, contactless, Apple Pay, Visa, Mastercard, Maestro, Diners.</p></div>
       </div>
-      <div class="servizio" data-reveal data-delay="2">
+      <div class="servizio" data-fm="sali" data-delay="2">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 16h13v3H3zM19 16h2v3h-2M17 13c1.6-.7 1.6-2.3 0-3-1.4-.6-1.4-2 0-2.6"/></svg>
         <div><h3>Area fumatori</h3><p>C'è un'area per chi fuma.</p></div>
       </div>
@@ -576,21 +571,21 @@ footer{background:var(--ionio);color:var(--calce);padding:clamp(3.4rem,6vh,4.6re
 <div class="merlo merlo-vino" aria-hidden="true"></div>
 <section class="su-vino" style="text-align:center">
   <div class="stretto">
-    <div class="occhiello" data-reveal>Chi si è seduto qui</div>
-    <div class="voto" data-reveal data-delay="1"><b>4,6</b><i>su 5</i></div>
-    <p class="sommario" style="margin:1.4rem auto 0;text-align:center" data-reveal data-delay="2">La media di <b id="conta" style="font-family:var(--display)">683</b> recensioni.</p>
+    <div class="occhiello" data-fm="sali">Chi si è seduto qui</div>
+    <div class="voto" data-fm="sali" data-delay="1"><b>4,6</b><i>su 5</i></div>
+    <p class="sommario" style="margin:1.4rem auto 0;text-align:center" data-fm="sali" data-delay="2">La media di <b id="conta" style="font-family:var(--display)">683</b> recensioni.</p>
   </div>
 </section>
 
 <!-- ============ DOVE SIAMO ============ -->
 <section id="dove">
   <div class="wrap">
-    <div style="text-align:center;max-width:40rem;margin:0 auto" data-reveal>
+    <div style="text-align:center;max-width:40rem;margin:0 auto" data-fm="sali">
       <div class="occhiello">Dove siamo</div>
       <h2>Prenota<br>un tavolo</h2>
       <p class="sommario" style="margin:1.3rem auto 0;text-align:center">Venti coperti, tre giorni su sette. Una telefonata basta.</p>
     </div>
-    <div class="contatti" data-reveal data-delay="1">
+    <div class="contatti" data-fm="sali" data-delay="1">
       <div class="contatto">
         <h3>Telefono</h3>
         <a href="tel:+393331843877">+39 333 1843877</a>
@@ -612,10 +607,10 @@ footer{background:var(--ionio);color:var(--calce);padding:clamp(3.4rem,6vh,4.6re
         <small>Da lunedì a giovedì chiuso</small>
       </div>
     </div>
-    <div style="text-align:center;margin-top:2.8rem" data-reveal data-delay="2">
+    <div style="text-align:center;margin-top:2.8rem" data-fm="sali" data-delay="2">
       <a class="btn btn-pieno" href="https://osteriadelborgosavoca.eatbu.com/?lang=it" target="_blank" rel="noopener">Prenota online</a>
     </div>
-    <p class="pagamenti" data-reveal>Si paga in contanti, con contactless, Apple Pay, carta di debito, Visa, Mastercard, Maestro e Diners Club.</p>
+    <p class="pagamenti" data-fm="sali">Si paga in contanti, con contactless, Apple Pay, carta di debito, Visa, Mastercard, Maestro e Diners Club.</p>
   </div>
 </section>
 </main>
@@ -647,8 +642,6 @@ footer{background:var(--ionio);color:var(--calce);padding:clamp(3.4rem,6vh,4.6re
 
   /* ---- barra solida allo scroll ---- */
   var nav = document.getElementById('nav');
-  var onScroll = function(){ nav.classList.toggle('solid', window.scrollY > 40); };
-  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
 
   /* ---- burger + inert + trappola Tab (pattern provato sulle demo firmate) ---- */
   var burger = document.querySelector('.burger');
@@ -693,16 +686,6 @@ footer{background:var(--ionio);color:var(--calce);padding:clamp(3.4rem,6vh,4.6re
     if(e.key === 'Escape'){ chiudiMenu(); burger.focus(); return; }
     trappola(e, mm, burger);
   });
-
-  /* ---- reveal on scroll ---- */
-  if('IntersectionObserver' in window && !reduced){
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, {threshold:.14});
-    document.querySelectorAll('[data-reveal]').forEach(function(el){ io.observe(el); });
-  } else {
-    document.querySelectorAll('[data-reveal]').forEach(function(el){ el.classList.add('in'); });
-  }
 
   /* ---- la firma: l'arco che si disegna ---- */
   function disegna(path, durata, ritardo){
@@ -817,6 +800,6 @@ footer{background:var(--ionio);color:var(--calce);padding:clamp(3.4rem,6vh,4.6re
   });
 })();
 </script>
-  <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

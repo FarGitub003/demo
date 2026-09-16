@@ -2,6 +2,11 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
+<!-- FAR Motion: il nucleo va senza defer (mette html.fm-js prima del primo disegno) -->
+<link rel="stylesheet" href="far-motion.min.css">
+<script src="far-motion.min.js"></script>
+<link rel="stylesheet" href="sceniche/piega.css">
+<script src="sceniche/piega.js" defer></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>I Due Sassi — Trattoria e Pizzeria a Matera, tra Barisano e Caveoso</title>
 <meta name="description" content="Trattoria e pizzeria a gestione familiare nel cuore dei Sassi di Matera: cucina lucana di Anna Maria, vini scelti da Cosimo, terrazza panoramica sulla Gravina. Sito dimostrativo.">
@@ -104,8 +109,8 @@ h1,h2,h3{font-family:'Marcellus',serif;font-weight:400;line-height:1.08}
 .nav::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
   background:linear-gradient(180deg,rgba(29,23,16,.72) 0%,rgba(29,23,16,.34) 62%,rgba(29,23,16,0) 100%);
   transition:opacity .45s var(--ease-soft)}
-.nav.solid::before{opacity:0}
-.nav.solid{background:rgba(29,23,16,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(251,247,236,.08)}
+.nav.fm-attaccata::before{opacity:0}
+.nav.fm-attaccata{background:rgba(29,23,16,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(251,247,236,.08)}
 .nav-brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;font-family:'Marcellus',serif;font-size:1.15rem;letter-spacing:.12em}
 /* 🪤 Alzare la soglia del burger non basta: appena SOPRA la soglia ricompaiono
    link e CTA e per una manciata di pixel il marchio non ci sta piu' e va a capo
@@ -215,8 +220,6 @@ h1,h2,h3{font-family:'Marcellus',serif;font-weight:400;line-height:1.08}
 /* ---------- sezioni base ---------- */
 .section{padding:clamp(4.5rem,9vw,7.5rem) 0}
 .wrap{width:min(1200px,92vw);margin-inline:auto}
-[data-reveal]{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease-soft),transform .9s var(--ease-soft)}
-[data-reveal].in{opacity:1;transform:none}
 
 /* ---------- intro ---------- */
 .intro{background:var(--tufo);color:var(--inchiostro);text-align:center}
@@ -392,19 +395,13 @@ footer .fine{font-size:.72rem;opacity:.9}  /* .75 dava 4,24:1 */
   .finale::before{background:linear-gradient(180deg,rgba(29,23,16,.9) 0%,rgba(29,23,16,.86) 50%,rgba(29,23,16,.92) 100%)}
 }
 /* ---------- reduced motion ---------- */
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
-  html{scroll-behavior:auto}
-  [data-reveal]{opacity:1;transform:none}
-  .hero .cascade{opacity:1;transform:none}
-  .marquee-track{animation:none}
-}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
 </style>
 </head>
 <body>
 <a class="skip-link" href="#main">Salta al contenuto</a>
 
-<header class="nav" id="nav">
+<header class="nav fm-testata" id="nav" data-fm-soglia="40">
   <a class="nav-brand" href="#top" aria-label="I Due Sassi — torna su">
     <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="12" fill="none"/><path d="M8 46 L14 46 L14 38 L20 38 L20 42 L26 42 L26 30 L30 30 L30 22 L32 14 L34 22 L34 30 L38 30 L38 40 L44 40 L44 34 L50 34 L50 44 L56 44" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
     I DUE SASSI
@@ -459,21 +456,22 @@ footer .fine{font-size:.72rem;opacity:.9}  /* .75 dava 4,24:1 */
 
 <section class="section intro" id="chi-siamo">
   <div class="wrap">
-    <p class="eyebrow" data-reveal>Conduzione familiare</p>
-    <h2 data-reveal>Dove la città si divide in due, a tavola si è una famiglia sola.</h2>
-    <p data-reveal>La trattoria sta nel punto di divisione dei due rioni antichi di Matera, Barisano e Caveoso. In cucina, in sala e in cantina ci sono tre nomi, non tre reparti.</p>
-    <div class="intro-riga">
-      <article data-reveal>
+    <p class="eyebrow" data-fm="sali">Conduzione familiare</p>
+    <h2 data-fm="sali">Dove la città si divide in due, a tavola si è una famiglia sola.</h2>
+    <p data-fm="sali">La trattoria sta nel punto di divisione dei due rioni antichi di Matera, Barisano e Caveoso. In cucina, in sala e in cantina ci sono tre nomi, non tre reparti.</p>
+    <!-- Momento scenico: i tre nomi della famiglia si aprono uno dopo l'altro. -->
+    <div class="intro-riga" data-fms="piega" data-fms-passo="170">
+      <article>
         <h3>Anna Maria</h3>
         <span class="serif-voice">la cucina</span>
         <p>Piatti tipici lucani preparati ogni giorno, con prodotti che arrivano dalle campagne e dalle masserie della regione.</p>
       </article>
-      <article data-reveal>
+      <article>
         <h3>Cosimo</h3>
         <span class="serif-voice">la cantina</span>
         <p>Sceglie formaggi, salumi e vini uno a uno: Aglianico del Vulture, Primitivo, Greco di Basilicata.</p>
       </article>
-      <article data-reveal>
+      <article>
         <h3>Pasquale</h3>
         <span class="serif-voice">la sala</span>
         <p>Il figlio: racconta i piatti, consiglia gli abbinamenti e ti fa sedere come si fa con gli ospiti di casa.</p>
@@ -487,17 +485,17 @@ footer .fine{font-size:.72rem;opacity:.9}  /* .75 dava 4,24:1 */
 <section class="section cantina grain" id="cucina">
   <div class="wrap split">
     <div>
-      <p class="eyebrow" data-reveal>La materia prima</p>
-      <h2 data-reveal>Masserie lucane, non fornitori.</h2>
-      <p class="serif-voice" data-reveal>Formaggi, salumi, legumi e carni arrivano dalle campagne e dalle masserie della Basilicata.</p>
-      <p data-reveal style="margin-top:1rem">È la spesa come si faceva una volta: si sceglie con cura quello che c'è di buono, e il menù segue. Anche la pizza rispetta i tempi giusti — impasto a lievitazione lenta, come vuole la tradizione napoletana.</p>
-      <ul class="vini" data-reveal>
+      <p class="eyebrow" data-fm="sali">La materia prima</p>
+      <h2 data-fm="sali">Masserie lucane, non fornitori.</h2>
+      <p class="serif-voice" data-fm="sali">Formaggi, salumi, legumi e carni arrivano dalle campagne e dalle masserie della Basilicata.</p>
+      <p data-fm="sali" style="margin-top:1rem">È la spesa come si faceva una volta: si sceglie con cura quello che c'è di buono, e il menù segue. Anche la pizza rispetta i tempi giusti — impasto a lievitazione lenta, come vuole la tradizione napoletana.</p>
+      <ul class="vini" data-fm="sali">
         <li>Aglianico del Vulture <small>il rosso di casa</small></li>
         <li>Primitivo <small>per le carni di Anna Maria</small></li>
         <li>Greco di Basilicata <small>col baccalà e i fiori di zucca</small></li>
       </ul>
     </div>
-    <figure class="split-media" data-reveal>
+    <figure class="split-media" data-fm="sali">
       <img src="img/bancone.jpg" alt="Il bancone della trattoria nella sala scavata, con la rastrelliera dei vini lucani" loading="lazy">
     </figure>
   </div>
@@ -513,28 +511,28 @@ footer .fine{font-size:.72rem;opacity:.9}  /* .75 dava 4,24:1 */
 <section class="section menu" id="menu">
   <div class="wrap">
     <div class="menu-head">
-      <p class="eyebrow" data-reveal>Piatti tipici lucani</p>
-      <h2 data-reveal>Un assaggio dal menù</h2>
-      <p data-reveal>Quello che la famiglia porta in tavola tutti i giorni. Il menù completo segue la stagione e la spesa del mattino.</p>
+      <p class="eyebrow" data-fm="sali">Piatti tipici lucani</p>
+      <h2 data-fm="sali">Un assaggio dal menù</h2>
+      <p data-fm="sali">Quello che la famiglia porta in tavola tutti i giorni. Il menù completo segue la stagione e la spesa del mattino.</p>
     </div>
     <div class="piatti">
-      <article class="piatto" data-reveal>
+      <article class="piatto" data-fm="sali">
         <span class="corso">Primo</span>
         <h3>Cavatelli con purea di fave e funghi</h3>
         <p>Pasta fatta in casa, fave di campagna passate al setaccio e funghi: il piatto che spiega la Basilicata in tre ingredienti.</p>
       </article>
-      <article class="piatto" data-reveal>
+      <article class="piatto" data-fm="sali">
         <span class="corso">Primo</span>
         <h3>Orecchiette alle rape alla materana</h3>
         <p>Le orecchiette di casa con le cime di rapa, fatte come si fanno qui: "alla materana" non è un modo di dire.</p>
       </article>
-      <article class="piatto" data-reveal>
+      <article class="piatto" data-fm="sali">
         <span class="corso">Secondo</span>
         <h3>Agnello alla contadina</h3>
         <p>Cotto piano, come nelle masserie. Da accompagnare con l'Aglianico che Cosimo tiene da parte.</p>
       </article>
     </div>
-    <div class="menu-note" data-reveal>
+    <div class="menu-note" data-fm="sali">
       <p>E poi baccalà alla materana, tagliata, pecorino alla piastra, fiori di zucca, burrata. E la <strong>pizza a lievitazione lenta</strong> della tradizione napoletana. I prezzi li trovi in trattoria, esposti come si deve.</p>
     </div>
   </div>
@@ -542,18 +540,18 @@ footer .fine{font-size:.72rem;opacity:.9}  /* .75 dava 4,24:1 */
 
 <section class="section momenti" id="momenti">
   <div class="wrap">
-    <p class="eyebrow" data-reveal style="color:var(--persiana)">Il posto</p>
-    <h2 data-reveal style="font-size:clamp(1.9rem,4.6vw,3.2rem);margin-top:1.3rem;max-width:20ch">Tre momenti, prima ancora di sederti.</h2>
+    <p class="eyebrow" data-fm="sali" style="color:var(--persiana)">Il posto</p>
+    <h2 data-fm="sali" style="font-size:clamp(1.9rem,4.6vw,3.2rem);margin-top:1.3rem;max-width:20ch">Tre momenti, prima ancora di sederti.</h2>
     <div class="momenti-grid">
-      <figure class="momento" data-reveal>
+      <figure class="momento" data-fm="sali">
         <img src="img/facciata.jpg" alt="La facciata della trattoria con l'insegna e le persiane verdi" loading="lazy">
         <figcaption><strong>L'insegna</strong><span>Tufo, persiane verdi e la scritta che promette: cucina tipica.</span></figcaption>
       </figure>
-      <figure class="momento" data-reveal>
+      <figure class="momento" data-fm="sali">
         <img src="img/sala.jpg" alt="La sala interna con la volta in tufo e il lampadario in ferro battuto" loading="lazy">
         <figcaption><strong>La volta</strong><span>La sala scavata nel tufo, con le foto della vecchia Matera alle pareti.</span></figcaption>
       </figure>
-      <figure class="momento" data-reveal>
+      <figure class="momento" data-fm="sali">
         <img src="img/fiori.jpg" alt="Il muro fiorito lungo la via, col menù esposto in bacheca" loading="lazy">
         <figcaption><strong>La via</strong><span>Il muro fiorito dove il menù si legge in bacheca, come una volta.</span></figcaption>
       </figure>
@@ -566,15 +564,15 @@ footer .fine{font-size:.72rem;opacity:.9}  /* .75 dava 4,24:1 */
     <!-- 🪤 Citazione VERBATIM dal loro sito (homepage.html, sezione «Dove siamo»).
          Prima era una parafrasi dentro le virgolette — stessa sostanza, ma una
          citazione fra «» attribuita a loro dev'essere parola per parola. -->
-    <blockquote data-reveal>«Nel periodo estivo, la cena viene servita in terrazza panoramica, dalla quale è possibile ammirare un paesaggio di rara bellezza.»</blockquote>
-    <cite data-reveal>— il racconto della famiglia</cite>
+    <blockquote data-fm="sali">«Nel periodo estivo, la cena viene servita in terrazza panoramica, dalla quale è possibile ammirare un paesaggio di rara bellezza.»</blockquote>
+    <cite data-fm="sali">— il racconto della famiglia</cite>
   </div>
 </section>
 
 <section class="section gallery" id="gallery">
   <div class="wrap">
-    <p class="eyebrow" data-reveal style="color:var(--persiana)">Gallery</p>
-    <h2 data-reveal style="font-size:clamp(1.9rem,4.6vw,3.2rem);margin-top:1.3rem">La trattoria, com'è davvero.</h2>
+    <p class="eyebrow" data-fm="sali" style="color:var(--persiana)">Gallery</p>
+    <h2 data-fm="sali" style="font-size:clamp(1.9rem,4.6vw,3.2rem);margin-top:1.3rem">La trattoria, com'è davvero.</h2>
     <div class="gallery-grid">
       <button data-tag="La terrazza" data-caption="La terrazza panoramica sulla Gravina"><img src="img/terrazza.jpg" alt="Tavolo in terrazza con vista sulla Gravina" loading="lazy"></button>
       <button data-tag="L'insegna" data-caption="La facciata su Via Ospedale Vecchio"><img src="img/facciata.jpg" alt="Facciata della trattoria con insegna" loading="lazy"></button>
@@ -589,27 +587,27 @@ footer .fine{font-size:.72rem;opacity:.9}  /* .75 dava 4,24:1 */
 <section class="finale" id="contatti">
   <div class="finale-media"><img src="img/vicolo.jpg" alt="" loading="lazy"></div>
   <div class="wrap">
-    <p class="eyebrow" data-reveal>Prenota</p>
-    <h2 data-reveal>Il tavolo in terrazza si prenota con una telefonata.</h2>
+    <p class="eyebrow" data-fm="sali">Prenota</p>
+    <h2 data-fm="sali">Il tavolo in terrazza si prenota con una telefonata.</h2>
     <!-- 🪤 Prima diceva «in due minuti»: un tempo che loro non scrivono da nessuna
          parte. Qui ci sono due dati VERI presi dalle loro indicazioni stradali:
          a Piazza S. Pietro Caveoso «è possibile parcheggiare», e da lì «proseguite
          verso sinistra per altri 200 metri». Niente stime nostre. -->
-    <p class="serif-voice" data-reveal>Siamo nel cuore dei Sassi: da Piazza San Pietro Caveoso, dove si parcheggia, sono altri duecento metri a piedi.</p>
+    <p class="serif-voice" data-fm="sali">Siamo nel cuore dei Sassi: da Piazza San Pietro Caveoso, dove si parcheggia, sono altri duecento metri a piedi.</p>
     <div class="contatti">
-      <div class="contatto" data-reveal>
+      <div class="contatto" data-fm="sali">
         <span class="k">Telefono</span>
         <p><a href="tel:+3908351971131">0835 1971131</a><br><a href="tel:+393491621401">349 1621401</a> · <a href="tel:+393473928917">347 3928917</a></p>
       </div>
-      <div class="contatto" data-reveal>
+      <div class="contatto" data-fm="sali">
         <span class="k">Dove</span>
         <p>Via Ospedale Vecchio 1, 75100 Matera<br><a href="https://maps.google.com/?q=Via+Ospedale+Vecchio+1,+Matera" target="_blank" rel="noopener">Apri in Google Maps</a></p>
       </div>
-      <div class="contatto" data-reveal>
+      <div class="contatto" data-fm="sali">
         <span class="k">Scrivici</span>
         <p><a href="mailto:cosimorega@libero.it?subject=Richiesta%20prenotazione%20tavolo">cosimorega@libero.it</a></p>
       </div>
-      <div class="contatto" data-reveal>
+      <div class="contatto" data-fm="sali">
         <span class="k">Orari</span>
         <p>Telefonaci per orari e disponibilità</p>
       </div>
@@ -645,8 +643,6 @@ footer .fine{font-size:.72rem;opacity:.9}  /* .75 dava 4,24:1 */
 
   /* nav solid on scroll */
   var nav = document.getElementById('nav');
-  var onScroll = function(){ nav.classList.toggle('solid', window.scrollY > 40); };
-  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
 
   /* burger */
   var burger = document.querySelector('.burger');
@@ -701,16 +697,6 @@ footer .fine{font-size:.72rem;opacity:.9}  /* .75 dava 4,24:1 */
     if(e.key === 'Escape'){ chiudiMenu(); burger.focus(); return; }
     trappola(e, mm, burger);
   });
-
-  /* reveal on scroll */
-  if('IntersectionObserver' in window && !reduced){
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, {threshold:.14});
-    document.querySelectorAll('[data-reveal]').forEach(function(el){ io.observe(el); });
-  } else {
-    document.querySelectorAll('[data-reveal]').forEach(function(el){ el.classList.add('in'); });
-  }
 
   /* skyline draw */
   var sp = document.getElementById('skylinePath');
@@ -772,6 +758,6 @@ footer .fine{font-size:.72rem;opacity:.9}  /* .75 dava 4,24:1 */
   });
 })();
 </script>
-  <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

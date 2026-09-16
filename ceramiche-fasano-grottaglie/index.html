@@ -2,6 +2,11 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
+<!-- FAR Motion: il nucleo va senza defer (mette html.fm-js prima del primo disegno) -->
+<link rel="stylesheet" href="far-motion.min.css">
+<script src="far-motion.min.js"></script>
+<link rel="stylesheet" href="sceniche/vortice.css">
+<script src="sceniche/vortice.js" defer></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ceramiche Giuseppe Fasano · Grottaglie, città delle ceramiche</title>
 <meta name="description" content="Bottega di ceramica artistica a Grottaglie. Pumi e pigne, lampade e portacandela, gufi, cavalli e cavalieri, bomboniere d'autore. Una famiglia di ceramisti con scritti dal 1600.">
@@ -95,8 +100,8 @@ h1,h2,h3{font-family:'Bitter',Georgia,serif;line-height:1.1;font-weight:800}
   background:linear-gradient(180deg,rgba(10,14,24,.62),rgba(10,14,24,0));
   transition:opacity .3s ease;
 }
-.nav.solid::before{opacity:0}
-.nav.solid{background:rgba(246,242,233,.96);box-shadow:0 1px 0 rgba(25,31,43,.14)}
+.nav.fm-attaccata::before{opacity:0}
+.nav.fm-attaccata{background:rgba(246,242,233,.96);box-shadow:0 1px 0 rgba(25,31,43,.14)}
 .nav-inner{
   position:relative;z-index:1;
   max-width:1140px;margin:0 auto;
@@ -110,7 +115,7 @@ h1,h2,h3{font-family:'Bitter',Georgia,serif;line-height:1.1;font-weight:800}
   text-shadow:0 1px 6px rgba(0,0,0,.5);
   transition:color .3s ease;
 }
-.nav.solid .nav-brand{color:var(--ink);text-shadow:none}
+.nav.fm-attaccata .nav-brand{color:var(--ink);text-shadow:none}
 .nav-links{display:flex;gap:24px;margin-left:auto;list-style:none}
 .nav-links a{
   color:var(--calce);text-decoration:none;font-weight:600;font-size:.96rem;
@@ -118,13 +123,13 @@ h1,h2,h3{font-family:'Bitter',Georgia,serif;line-height:1.1;font-weight:800}
   text-shadow:0 1px 6px rgba(0,0,0,.5);
   transition:color .3s ease;
 }
-.nav.solid .nav-links a{color:var(--ink);text-shadow:none}
+.nav.fm-attaccata .nav-links a{color:var(--ink);text-shadow:none}
 .nav-links a::after{
   content:"";position:absolute;left:0;right:0;bottom:-2px;height:3px;
   background:var(--smalto);border-radius:2px;
   transform:scaleX(0);transform-origin:left;transition:transform .25s var(--ease-pen);
 }
-.nav.solid .nav-links a::after{background:var(--cobalto)}
+.nav.fm-attaccata .nav-links a::after{background:var(--cobalto)}
 .nav-links a:hover::after,.nav-links a:focus-visible::after{transform:scaleX(1)}
 .nav-cta{
   background:var(--terra);color:var(--bianco);text-decoration:none;
@@ -144,7 +149,7 @@ h1,h2,h3{font-family:'Bitter',Georgia,serif;line-height:1.1;font-weight:800}
   box-shadow:0 1px 4px rgba(0,0,0,.4);
   transition:transform .3s var(--ease-pen),opacity .2s ease,background-color .3s ease;
 }
-.nav.solid .burger span{background:var(--ink);box-shadow:none}
+.nav.fm-attaccata .burger span{background:var(--ink);box-shadow:none}
 .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(8px) rotate(45deg)}
 .burger[aria-expanded="true"] span:nth-child(2){opacity:0}
 .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
@@ -410,10 +415,6 @@ footer .f-ai{
   font-size:.87rem;color:rgba(246,242,233,.8);max-width:680px;
 }
 
-/* reveal (solo con JS attivo) */
-.js [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s var(--ease-pen)}
-.js [data-reveal].on{opacity:1;transform:translateY(0)}
-
 /* ---------- lightbox ---------- */
 .lightbox{
   position:fixed;inset:0;z-index:150;
@@ -460,17 +461,9 @@ footer .f-ai{
   .gallery-grid button.wide{grid-column:span 2;aspect-ratio:2/1}
   .hero-scrim{background:radial-gradient(ellipse 116% 50% at 50% 34%,rgba(5,9,17,.82) 0%,rgba(5,9,17,.54) 56%,rgba(5,9,17,0) 100%),linear-gradient(180deg,rgba(8,12,22,.66) 0%,rgba(8,12,22,.46) 30%,rgba(8,12,22,.66) 62%,rgba(8,12,22,.92) 100%)}
 }
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *,*::before,*::after{animation-duration:.01ms !important;animation-delay:0ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
-  .js .hero-eyebrow,.js .hero-pumo,.js .hero h1,.js .hero-tag,.js .hero-cta,.js .hero-ribbon{opacity:1;transform:none}
-  .js .hero-pumo path{stroke-dashoffset:0}
-  .js [data-reveal]{opacity:1;transform:none}
-  .js .hero-media img{animation:none}
-}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
 </style>
 <noscript><style>
-  [data-reveal]{opacity:1 !important;transform:none !important}
   .nav{position:static;background:var(--cobalto-fondo)}
   .nav::before{display:none}
   .nav-brand,.nav-links a{color:var(--calce);text-shadow:none}
@@ -491,7 +484,7 @@ footer .f-ai{
   </symbol>
 </svg>
 
-<nav class="nav" id="nav" aria-label="Navigazione principale">
+<nav class="nav fm-testata" id="nav" aria-label="Navigazione principale" data-fm-soglia="40">
   <div class="nav-inner">
     <a class="nav-brand" href="#top">Giuseppe Fasano</a>
     <ul class="nav-links">
@@ -553,7 +546,7 @@ footer .f-ai{
 
 <section class="chiaro" id="stirpe">
   <div class="wrap split">
-    <div data-reveal>
+    <div data-fm="sali">
       <span class="kicker">La bottega</span>
       <h2>Una stirpe di ceramisti</h2>
       <blockquote>
@@ -563,7 +556,7 @@ footer .f-ai{
       <p>La bottega sta a <strong>Grottaglie</strong>, nel paese che alla ceramica ha dedicato un quartiere intero. Qui i pezzi nascono al tornio, passano per il forno e prendono lo smalto uno per volta.</p>
       <p>Ogni pezzo è dipinto a mano: per questo due pumi dello stesso colore non sono mai identici.</p>
     </div>
-    <figure data-reveal>
+    <figure data-fm="sali">
       <div class="foto-cornice">
         <img src="img/pumi-turchesi.jpg" alt="Molti pumi di ceramica smaltata di turchese, accostati l'uno all'altro" width="1600" height="1192" loading="lazy">
       </div>
@@ -576,48 +569,48 @@ footer .f-ai{
 
 <section class="chiaro" id="repertorio">
   <div class="wrap">
-    <div class="rep-head" data-reveal>
+    <div class="rep-head" data-fm="sali">
       <span class="kicker">Il repertorio</span>
       <h2>Cosa esce dal forno</h2>
       <p class="sub">Le forme della tradizione di Grottaglie, più le bomboniere d'autore per sposi, comunioni, cresime e battesimi. In bottega i pezzi cambiano con le infornate.</p>
     </div>
     <div class="rep-grid">
-      <article class="rep-card" data-reveal>
+      <article class="rep-card" data-fm="sali">
         <div class="ph"><img src="img/pigne-colori.jpg" alt="Pigne di ceramica smaltata nei colori rosso, giallo e turchese" width="1920" height="1440" loading="lazy"></div>
         <div class="txt">
           <h3>Pumi e pigne</h3>
           <p>Il bocciolo portafortuna di Puglia e la pigna a scaglie, negli smalti pieni della tradizione.</p>
         </div>
       </article>
-      <article class="rep-card" data-reveal>
+      <article class="rep-card" data-fm="sali">
         <div class="ph"><img src="img/lampada-bianca-fiori.jpg" alt="Lampada di ceramica bianca traforata a motivi floreali" width="1200" height="1600" loading="lazy"></div>
         <div class="txt">
           <h3>Lampade e portacandela</h3>
           <p>Ceramica traforata che lascia passare la luce, in diversi colori e misure.</p>
         </div>
       </article>
-      <article class="rep-card" data-reveal>
+      <article class="rep-card" data-fm="sali">
         <div class="ph"><img src="img/gufi-azzurri.jpg" alt="Gufi portacandela in ceramica azzurra, allineati su un ripiano" width="1200" height="663" loading="lazy"></div>
         <div class="txt">
           <h3>Gufi portacandela</h3>
           <p>Il gufo della buona sorte, in fila sullo scaffale e in tutte le tinte dello smalto.</p>
         </div>
       </article>
-      <article class="rep-card" data-reveal>
+      <article class="rep-card" data-fm="sali">
         <div class="ph"><img src="img/cavalli-cavalieri.jpg" alt="Cavalli e cavalieri di ceramica dipinta allineati sullo scaffale della bottega" width="1600" height="607" loading="lazy"></div>
         <div class="txt">
           <h3>Cavalli e cavalieri</h3>
           <p>Le figure dipinte del repertorio popolare pugliese, modellate e decorate a mano.</p>
         </div>
       </article>
-      <article class="rep-card" data-reveal>
+      <article class="rep-card" data-fm="sali">
         <div class="ph"><img src="img/tete-a-tete-cuore.jpg" alt="Servizio tête-à-tête con vassoio a forma di cuore e due tazze" width="1200" height="1086" loading="lazy"></div>
         <div class="txt">
           <h3>Alzatine e tête-à-tête</h3>
           <p>Servizi da due, alzatine e vassoi, personalizzabili con la scritta che vuoi.</p>
         </div>
       </article>
-      <article class="rep-card" data-reveal>
+      <article class="rep-card" data-fm="sali">
         <div class="ph"><img src="img/bomboniere-frutta.jpg" alt="Bomboniere di ceramica a forma di frutta, appoggiate su scatole regalo" width="1200" height="900" loading="lazy"></div>
         <div class="txt">
           <h3>Bomboniere d'autore</h3>
@@ -630,12 +623,12 @@ footer .f-ai{
 
 <section class="chiaro" id="gallery">
   <div class="wrap">
-    <div class="rep-head" data-reveal>
+    <div class="rep-head" data-fm="sali">
       <span class="kicker">Le opere</span>
       <h2>Ventitré pezzi dalla bottega</h2>
       <p class="sub">Clicca una fotografia per vederla grande. Per sapere cosa c'è adesso in negozio, e per un pezzo su misura, scrivi o passa in Via Caravaggio.</p>
     </div>
-    <div class="gallery-grid" data-reveal>
+    <div class="gallery-grid" data-fms="vortice" data-fms-raggio="260" data-fms-passo="55">
       <button type="button" class="wide" data-src="img/pigne-colori.jpg" data-cap="Pigne a scaglie negli smalti rosso, giallo, turchese, verde e blu" aria-label="Ingrandisci: pigne a scaglie negli smalti della tradizione"><img src="img/pigne-colori.jpg" alt="Pigne di ceramica smaltata in cinque colori" width="1920" height="1440" loading="lazy"></button>
       <button type="button" data-src="img/pumo-turchese-traforato.jpg" data-cap="Pumo traforato, smalto turchese" aria-label="Ingrandisci: pumo traforato turchese"><img src="img/pumo-turchese-traforato.jpg" alt="Pumo di ceramica traforata con smalto turchese" width="1200" height="1465" loading="lazy"></button>
       <button type="button" data-src="img/pumo-arancio.jpg" data-cap="Pumo traforato, smalto arancio" aria-label="Ingrandisci: pumo traforato arancio"><img src="img/pumo-arancio.jpg" alt="Pumo di ceramica traforata con smalto arancio" width="1200" height="1758" loading="lazy"></button>
@@ -665,7 +658,7 @@ footer .f-ai{
 
 <section class="dark" id="mondo">
   <div class="wrap split">
-    <div data-reveal>
+    <div data-fm="sali">
       <span class="kicker">Nel mondo</span>
       <h2>Da Via Caravaggio a New York</h2>
       <blockquote>
@@ -674,7 +667,7 @@ footer .f-ai{
       </blockquote>
       <p>È il motivo per cui sull'insegna della bottega, sotto il nome e lo stemma di Grottaglie, ci sono scritte tre città.</p>
     </div>
-    <figure data-reveal>
+    <figure data-fm="sali">
       <div class="foto-cornice">
         <img src="img/insegna.jpg" alt="L'insegna della bottega con lo stemma di Grottaglie e la scritta New York, Francoforte, Tokyo" width="1600" height="1630" loading="lazy">
       </div>
@@ -685,22 +678,22 @@ footer .f-ai{
 
 <section class="dark" id="riconoscimenti">
   <div class="wrap">
-    <div class="rep-head" data-reveal>
+    <div class="rep-head" data-fm="sali">
       <span class="kicker">Riconoscimenti</span>
       <h2 style="color:var(--bianco)">Quello che è arrivato dopo</h2>
     </div>
     <div class="ric-grid">
-      <article class="ric" data-reveal>
+      <article class="ric" data-fm="sali">
         <span class="anno">2019</span>
         <h3>Eccellenza di Puglia</h3>
         <p>Targa di Eccellenza consegnata a Milano, a Palazzo Marino, il 10 novembre 2019, nella serata degli Ambasciatori Terre di Puglia.</p>
       </article>
-      <article class="ric" data-reveal>
+      <article class="ric" data-fm="sali">
         <span class="anno">2023</span>
         <h3>Fatto d'argilla</h3>
         <p>Il libro dedicato a Giuseppe Fasano, «l'uomo e l'artista della ceramica», presentato al Castello Dentice di Frasso.</p>
       </article>
-      <article class="ric" data-reveal>
+      <article class="ric" data-fm="sali">
         <span class="anno">7 edizioni</span>
         <h3>Premio Nicola Fasano</h3>
         <p>Il premio internazionale che la bottega dedica dal 2017 a Nicola Fasano, il padre di Giuseppe, e che porta il nome di Grottaglie città delle ceramiche.</p>
@@ -711,12 +704,12 @@ footer .f-ai{
 
 <section class="chiaro" id="cinema">
   <div class="wrap">
-    <div class="rep-head" data-reveal>
+    <div class="rep-head" data-fm="sali">
       <span class="kicker">Cinema e televisione</span>
       <h2>Le ceramiche sul set</h2>
       <p class="sub">Quando una produzione cerca la ceramica pugliese vera, arriva a Grottaglie.</p>
     </div>
-    <ul class="tv-list" data-reveal>
+    <ul class="tv-list" data-fm="sali">
       <li>
         <span class="tag">Cinema</span>
         <p><strong>«La vita davanti a sé»</strong>, il film girato in Puglia da Sofia Loren con la regia di Edoardo Ponti: le ceramiche dell'atelier Giuseppe Fasano tra gli oggetti di scena.</p>
@@ -737,7 +730,7 @@ footer .f-ai{
 
 <section class="chiaro cont" id="contatti">
   <div class="wrap cont-grid">
-    <div data-reveal>
+    <div data-fm="sali">
       <span class="kicker">Contatti</span>
       <h2>Vieni in bottega</h2>
       <p class="sub" style="margin-top:0">La bottega è a Grottaglie, in Via Caravaggio. Per sapere cosa c'è adesso, per una bomboniera o per un pezzo su misura, chiama o scrivi.</p>
@@ -757,7 +750,7 @@ footer .f-ai{
       </ul>
       <a class="btn btn-primary" href="tel:+393932004766">Chiama la bottega</a>
     </div>
-    <figure data-reveal>
+    <figure data-fm="sali">
       <div class="foto-cornice">
         <img src="img/pumo-turchese-traforato.jpg" alt="Pumo di ceramica traforata con smalto turchese, in primo piano" width="1200" height="1465" loading="lazy">
       </div>
@@ -801,22 +794,6 @@ footer .f-ai{
 
   /* nav solida allo scroll */
   var nav = document.getElementById('nav');
-  function onScroll(){ nav.classList.toggle('solid', window.scrollY > 40); }
-  window.addEventListener('scroll', onScroll, {passive:true});
-  onScroll();
-
-  /* reveal on scroll */
-  var revealed = document.querySelectorAll('[data-reveal]');
-  if ('IntersectionObserver' in window && !reduced){
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if (e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); }
-      });
-    }, {threshold:.08, rootMargin:'0px 0px -40px 0px'});
-    revealed.forEach(function(el){ io.observe(el); });
-  } else {
-    revealed.forEach(function(el){ el.classList.add('on'); });
-  }
 
   /* ------- inert condiviso + trap ------- */
   function setBackgroundInert(active){
@@ -931,6 +908,6 @@ footer .f-ai{
   });
 })();
 </script>
-  <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

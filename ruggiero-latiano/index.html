@@ -2,6 +2,11 @@
 <html lang="it">
 <head>
 <script>document.documentElement.classList.add('js')</script>
+<!-- FAR Motion: il nucleo va senza defer (mette html.fm-js prima del primo disegno) -->
+<link rel="stylesheet" href="far-motion.min.css">
+<script src="far-motion.min.js"></script>
+<link rel="stylesheet" href="sceniche/zoompan.css">
+<script src="sceniche/zoompan.js" defer></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ruggiero Acconciatori Hair & Beauty · Parrucchiere a Latiano (BR)</title>
@@ -82,7 +87,7 @@ h1,h2,h3{font-family:"Syne",sans-serif;line-height:1.08;font-weight:800}
 
 /* ---------- nav ---------- */
 .nav{position:fixed;inset-inline:0;top:0;z-index:100;height:var(--nav-h);display:flex;align-items:center;transition:background .3s,border-color .3s;border-bottom:1px solid transparent;background:transparent}
-.nav.solid{background:var(--antracite);border-color:var(--bordo-scuro)}
+.nav.fm-attaccata{background:var(--antracite);border-color:var(--bordo-scuro)}
 .nav-inner{width:100%;max-width:1200px;margin-inline:auto;padding-inline:clamp(16px,4vw,48px);display:flex;align-items:center;gap:16px}
 .nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--avorio);font-family:"Syne",sans-serif;font-weight:800;font-size:1.25rem;letter-spacing:.04em}
 .nav-brand svg{width:26px;height:26px;flex:none}
@@ -210,10 +215,6 @@ h2{font-size:clamp(1.9rem,4.4vw,3.1rem);letter-spacing:.005em;max-width:22ch}
 .scuro .divisore g{stroke:var(--oro-chiaro)}
 .scuro .divisore .perno{fill:var(--oro-chiaro)}
 
-/* reveal */
-.js [data-reveal]{opacity:0;transform:translateY(24px)}
-.js [data-reveal].in{opacity:1;transform:none;transition:opacity .7s var(--curva),transform .7s var(--curva)}
-
 /* ---------- intro ---------- */
 .intro{background:var(--avorio)}
 .intro-claim{font-family:"Syne",sans-serif;font-weight:700;font-size:clamp(1.5rem,3.4vw,2.5rem);line-height:1.25;max-width:26ch}
@@ -316,15 +317,7 @@ footer{background:var(--antracite-notte);color:var(--velina);padding:40px 0 50px
 body.no-scroll{overflow:hidden}
 
 /* ---------- reduced motion ---------- */
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .hero-media img{animation:none}
-  .marquee-track{animation:none}
-  .js .cascata{opacity:1;transform:none;transition:none}
-  .js [data-reveal]{opacity:1;transform:none;transition:none}
-  .js .mono-draw path,.js .mono-draw circle{transition:none}
-  .btn,.card,.nav-cta,.dittico img,.gallery-grid button img,.lb-btn{transition:none}
-}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
 </style>
 <noscript><style>
 .burger{display:none}
@@ -341,7 +334,7 @@ body.no-scroll{overflow:hidden}
 <body>
 <a class="skip-link" href="#contenuto">Salta al contenuto</a>
 
-<header class="nav" id="nav">
+<header class="nav fm-testata" id="nav" data-fm-soglia="32">
   <div class="nav-inner">
     <a class="nav-brand" href="#contenuto" aria-label="Ruggiero Acconciatori, torna all'inizio">
       <svg viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="#D9A85C" stroke-width="7" stroke-linecap="round"><path d="M30 14 L64 60"/><path d="M70 14 L36 60"/><circle cx="30" cy="71" r="10"/><circle cx="70" cy="71" r="10"/></g><circle cx="50" cy="41" r="5" fill="#D9A85C"/></svg>
@@ -430,7 +423,7 @@ body.no-scroll{overflow:hidden}
 
   <!-- ============ INTRO ============ -->
   <section class="intro" aria-label="Il principio del salone">
-    <div class="wrap" data-reveal>
+    <div class="wrap" data-fm="sali">
       <p class="eyebrow">Il principio</p>
       <p class="intro-claim">«Un servizio di qualità produce <em>risultati eccezionali</em>.»</p>
       <p class="intro-nota">È la promessa scritta sulla nostra pagina, ed è quello che si vede nei lavori qui sotto.</p>
@@ -445,44 +438,44 @@ body.no-scroll{overflow:hidden}
   <!-- ============ SERVIZI ============ -->
   <section class="servizi" id="servizi" aria-label="Servizi">
     <div class="wrap">
-      <div data-reveal>
+      <div data-fm="sali">
         <p class="eyebrow">Servizi</p>
         <h2>Tre cose, fatte bene</h2>
         <p class="sez-testo">Niente menù chilometrici: in salone si lavora su taglio, colore e piega. Il resto lo raccontano le foto.</p>
       </div>
       <div class="card-grid">
-        <article class="card" data-reveal>
+        <article class="card" data-fm="sali">
           <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M14 6 L32 30"/><path d="M34 6 L16 30"/><circle cx="13" cy="36" r="5.5"/><circle cx="35" cy="36" r="5.5"/></svg>
           <h3>Taglio</h3>
           <p>Linee nette e geometrie pulite, come il bob che vedi nei lavori: il taglio si decide insieme, davanti allo specchio.</p>
           <span class="tag-foto">Nella galleria: il bob</span>
         </article>
-        <article class="card" data-reveal>
+        <article class="card" data-fm="sali">
           <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 5 C24 5 12 20 12 29 a12 12 0 0 0 24 0 C36 20 24 5 24 5 Z"/><path d="M19 30 a5 5 0 0 0 5 5"/></svg>
           <h3>Tinta</h3>
           <p>Dal balayage biondo alle ciocche blu e verdi chiuse in una treccia: copertura piena, riflesso o colore fantasia.</p>
           <span class="tag-foto">Nella galleria: balayage e treccia</span>
         </article>
-        <article class="card" data-reveal>
+        <article class="card" data-fm="sali">
           <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 16 C14 10 22 22 30 16 S42 10 42 16"/><path d="M6 26 C14 20 22 32 30 26 S42 20 42 26"/><path d="M6 36 C14 30 22 42 30 36 S42 30 42 36"/></svg>
           <h3>Messa in piega</h3>
           <p>Onde morbide o liscio pieno, in base al taglio e alla giornata che ti aspetta.</p>
           <span class="tag-foto">Nella galleria: le onde</span>
         </article>
       </div>
-      <p class="nota-prezzi" data-reveal>I prezzi si concordano in salone, davanti allo specchio: ogni testa è un lavoro a sé.</p>
+      <p class="nota-prezzi" data-fm="sali">I prezzi si concordano in salone, davanti allo specchio: ogni testa è un lavoro a sé.</p>
     </div>
   </section>
 
   <!-- ============ TRASFORMAZIONI ============ -->
   <section class="trasformazioni scuro" id="trasformazioni" aria-label="I lavori">
     <div class="wrap">
-      <div data-reveal>
+      <div data-fm="sali">
         <p class="eyebrow">I lavori</p>
         <h2>Il taglio, da ogni lato</h2>
         <p class="sez-testo">Un bob si giudica girandoci intorno: la linea deve tenere di profilo e sulla nuca. Questo è uscito dalle nostre poltrone.</p>
       </div>
-      <div class="dittico" data-reveal>
+      <div class="dittico" data-fm="sali">
         <figure>
           <div class="foto-clip"><img src="img/bob-prima.jpg" width="1100" height="2200" loading="lazy" alt="Bob castano visto di profilo, con la linea del taglio in evidenza"></div>
           <figcaption>Di profilo</figcaption>
@@ -492,25 +485,25 @@ body.no-scroll{overflow:hidden}
           <figcaption>Sulla nuca</figcaption>
         </figure>
       </div>
-      <p class="trasf-nota" data-reveal>La stessa cura vale per il colore: nella galleria trovi il balayage, la treccia a spina di pesce su blu e verde e le onde con schiaritura sulle punte.</p>
+      <p class="trasf-nota" data-fm="sali">La stessa cura vale per il colore: nella galleria trovi il balayage, la treccia a spina di pesce su blu e verde e le onde con schiaritura sulle punte.</p>
     </div>
   </section>
 
   <!-- ============ SALONE ============ -->
   <section class="salone" id="salone" aria-label="Il salone">
     <div class="wrap salone-testo">
-      <div data-reveal>
+      <div data-fm="sali">
         <p class="eyebrow">Il salone</p>
         <h2>Via Francavilla 51</h2>
         <p class="sez-testo">Uno spazio chiaro e ordinato, dove aspettare è già stare comodi.</p>
       </div>
-      <ul class="salone-dettagli" data-reveal>
+      <ul class="salone-dettagli" data-fm="sali">
         <li>Specchiere retroilluminate a ogni postazione</li>
         <li>Bancone luminoso all'ingresso e divano per chi accompagna</li>
         <li>I prodotti in vista, sugli scaffali: quello che usiamo lo puoi vedere</li>
       </ul>
     </div>
-    <div class="salone-panorama" data-reveal>
+    <div class="salone-panorama" data-fm="sali" data-fms="zoompan" data-fms-zoom="2.2" data-fms-etichetta="Avvicinati al salone">
       <img src="img/salone.jpg" width="2200" height="684" loading="lazy" alt="Panoramica interna del salone: bancone luminoso, poltrone nere, specchiere retroilluminate e scaffali di prodotti">
     </div>
     <p class="salone-cap">Il salone, fotografato dall'ingresso</p>
@@ -519,37 +512,37 @@ body.no-scroll{overflow:hidden}
   <!-- ============ GALLERIA ============ -->
   <section class="galleria" id="galleria" aria-label="Galleria fotografica">
     <div class="wrap">
-      <div data-reveal>
+      <div data-fm="sali">
         <p class="eyebrow">Galleria</p>
         <h2>Foto vere, dalle nostre poltrone</h2>
         <p class="sez-testo">Nessuna foto d'archivio: sono i lavori e gli spazi del salone.</p>
       </div>
       <div class="gallery-grid" id="gallery">
-        <button data-src="img/balayage.jpg" data-cap="Balayage biondo su capelli lunghi e lisci" data-reveal>
+        <button data-src="img/balayage.jpg" data-cap="Balayage biondo su capelli lunghi e lisci" data-fm="sali">
           <img src="img/balayage.jpg" width="1400" height="1868" loading="lazy" alt="Balayage biondo su capelli lunghi e lisci">
           <span class="tile-tag">Tinta</span>
         </button>
-        <button data-src="img/treccia.jpg" data-cap="Treccia a spina di pesce su colore blu e verde" data-reveal>
+        <button data-src="img/treccia.jpg" data-cap="Treccia a spina di pesce su colore blu e verde" data-fm="sali">
           <img src="img/treccia.jpg" width="1400" height="1770" loading="lazy" alt="Treccia a spina di pesce su capelli scuri con ciocche blu e verdi">
           <span class="tile-tag">Tinta</span>
         </button>
-        <button data-src="img/onde.jpg" data-cap="Onde morbide con schiaritura sulle punte" data-reveal>
+        <button data-src="img/onde.jpg" data-cap="Onde morbide con schiaritura sulle punte" data-fm="sali">
           <img src="img/onde.jpg" width="1400" height="1750" loading="lazy" alt="Onde morbide castane con punte schiarite, davanti al fondale del salone">
           <span class="tile-tag">Messa in piega</span>
         </button>
-        <button data-src="img/bob-prima.jpg" data-cap="Il bob, di profilo" data-reveal>
+        <button data-src="img/bob-prima.jpg" data-cap="Il bob, di profilo" data-fm="sali">
           <img src="img/bob-prima.jpg" width="1100" height="2200" loading="lazy" alt="Bob castano visto di profilo">
           <span class="tile-tag">Taglio</span>
         </button>
-        <button data-src="img/bob-dopo.jpg" data-cap="Il bob, sulla nuca" data-reveal>
+        <button data-src="img/bob-dopo.jpg" data-cap="Il bob, sulla nuca" data-fm="sali">
           <img src="img/bob-dopo.jpg" width="1100" height="2200" loading="lazy" alt="Bob castano visto dalla nuca">
           <span class="tile-tag">Taglio</span>
         </button>
-        <button data-src="img/salone.jpg" data-cap="Il salone, dall'ingresso" data-reveal>
+        <button data-src="img/salone.jpg" data-cap="Il salone, dall'ingresso" data-fm="sali">
           <img src="img/salone.jpg" width="2200" height="684" loading="lazy" alt="Panoramica interna del salone">
           <span class="tile-tag">Il salone</span>
         </button>
-        <button data-src="img/editoriale.jpg" data-cap="Acconciatura scenica con trucco editoriale" data-reveal>
+        <button data-src="img/editoriale.jpg" data-cap="Acconciatura scenica con trucco editoriale" data-fm="sali">
           <img src="img/editoriale.jpg" width="1400" height="1400" loading="lazy" alt="Scatto editoriale con acconciatura scultorea e trucco scenico, ripetuto a specchio">
           <span class="tile-tag">Editoriale</span>
         </button>
@@ -559,7 +552,7 @@ body.no-scroll{overflow:hidden}
 
   <!-- ============ CITAZIONE ============ -->
   <section class="citazione scuro" aria-label="La citazione del salone">
-    <div class="wrap" data-reveal>
+    <div class="wrap" data-fm="sali">
       <blockquote>
         <p>«Diventiamo ciò che pensiamo»</p>
         <cite>— Budda</cite>
@@ -571,12 +564,12 @@ body.no-scroll{overflow:hidden}
   <!-- ============ CONTATTI ============ -->
   <section class="contatti scuro" id="contatti" aria-label="Contatti e orari">
     <div class="wrap">
-      <div data-reveal>
+      <div data-fm="sali">
         <p class="eyebrow">Contatti</p>
         <h2>Ti stiamo aspettando</h2>
       </div>
       <div class="contatti-grid">
-        <div data-reveal>
+        <div data-fm="sali">
           <a class="tel-grande" href="tel:+393461491242">346 149 1242</a>
           <div class="contatti-blocco">
             <strong>Indirizzo</strong>
@@ -592,7 +585,7 @@ body.no-scroll{overflow:hidden}
             <a href="https://www.instagram.com/ruggieroacconciatori_" rel="noopener" target="_blank">Instagram</a>
           </div>
         </div>
-        <div data-reveal>
+        <div data-fm="sali">
           <ul class="orari-tab">
             <li><span class="giorno">Lunedì</span><span class="ore">Chiuso</span></li>
             <li><span class="giorno">Martedì–Venerdì</span><span class="ore">9:00–13:00 · 15:00–19:00</span></li>
@@ -639,9 +632,6 @@ body.no-scroll{overflow:hidden}
 
   /* ---------- nav solid ---------- */
   var nav = document.getElementById('nav');
-  function suScroll(){ nav.classList.toggle('solid', window.scrollY > 32); }
-  window.addEventListener('scroll', suScroll, {passive:true});
-  suScroll();
 
   /* ---------- cascata hero ---------- */
   window.requestAnimationFrame(function(){
@@ -662,14 +652,6 @@ body.no-scroll{overflow:hidden}
       });
     });});
   }
-
-  /* ---------- reveal on scroll ---------- */
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-    });
-  }, {threshold:.12, rootMargin:'0px 0px -8% 0px'});
-  document.querySelectorAll('[data-reveal]').forEach(function(el){ io.observe(el); });
 
   /* ---------- chip orari vivo (orari reali del salone) ---------- */
   var orari = {0:null, 1:null, 2:[[9,0,13,0],[15,0,19,0]], 3:[[9,0,13,0],[15,0,19,0]], 4:[[9,0,13,0],[15,0,19,0]], 5:[[9,0,13,0],[15,0,19,0]], 6:[[8,0,19,0]]};

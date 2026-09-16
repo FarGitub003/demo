@@ -1,0 +1,9 @@
+/* odometro — le cifre rullano come un contachilometri. Il numero resta
+   leggibile dai lettori di schermo grazie all'aria-label sul contenitore. */
+.fmx-odometro { display: inline-flex; overflow: hidden; font-variant-numeric: tabular-nums; line-height: 1; }
+.fmx-rullo { display: block; overflow: hidden; height: 1em; }
+.fmx-rullo > span { display: block; transform: translateY(calc(var(--fmx-cifra, 0) * -1em)); }
+.fmx-rullo > span > i { display: block; height: 1em; font-style: normal; }
+@media (prefers-reduced-motion: no-preference) {
+  .fmx-rullo > span { transition: transform var(--fmx-durata, .9s) cubic-bezier(.22, 1, .36, 1) var(--fmx-ritardo, 0ms); }
+}

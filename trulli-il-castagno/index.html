@@ -2,6 +2,11 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
+<!-- FAR Motion: il nucleo va senza defer (mette html.fm-js prima del primo disegno) -->
+<link rel="stylesheet" href="far-motion.min.css">
+<script src="far-motion.min.js"></script>
+<link rel="stylesheet" href="sceniche/sipario.css">
+<script src="sceniche/sipario.js" defer></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Trulli il Castagno · Country house in quattro trulli · Martina Franca, Valle d'Itria</title>
 <meta name="description" content="Quattro trulli dei primi dell'Ottocento sulla collina che domina la Valle d'Itria. Piscina, vigna di famiglia da quattro generazioni, cucina pugliese di casa. Martina Franca (TA).">
@@ -54,6 +59,10 @@
 }
 </script>
 <style>
+/* pathLength="100" sui <path>: la lunghezza la NORMALIZZA il browser, quindi
+   qui non resta nessun numero misurato a mano da tenere aggiornato. Se il
+   disegno cambia, il tratto resta giusto. (Regola 7 del kit, senza JS.) */
+
 /* ============ TOKEN ============ */
 :root{
   --calce:#F6F1E6;          /* bianco calce dei muri */
@@ -75,7 +84,7 @@
 /* ============ BASE ============ */
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
 body{
   margin:0;
   font-family:'Karla',system-ui,sans-serif;
@@ -102,12 +111,7 @@ section{scroll-margin-top:96px}
 .eyebrow::before{content:"";width:26px;height:2px;background:var(--verdeca);flex-shrink:0}
 .dark .eyebrow,.vigna .eyebrow{color:var(--lume-chiaro)}
 .dark .eyebrow::before,.vigna .eyebrow::before{background:var(--lume)}
-/* ============ REVEAL ============ */
-[data-reveal]{opacity:0;transform:translateY(16px);transition:opacity .8s cubic-bezier(.22,.9,.3,1),transform .8s cubic-bezier(.22,.9,.3,1)}
-[data-reveal].in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){
-  [data-reveal]{opacity:1;transform:none;transition:none}
-}
+
 /* ============ NAV ============ */
 #nav{
   position:fixed;top:0;left:0;right:0;z-index:130;
@@ -120,8 +124,8 @@ section{scroll-margin-top:96px}
   background:linear-gradient(180deg,rgba(7,13,30,.72),rgba(7,13,30,.28) 78%,transparent);
   opacity:1;transition:opacity .35s ease;pointer-events:none;
 }
-#nav.solid{background:rgba(246,241,230,.96);box-shadow:0 1px 0 rgba(74,58,38,.14)}
-#nav.solid::before{opacity:0}
+#nav.fm-attaccata{background:rgba(246,241,230,.96);box-shadow:0 1px 0 rgba(74,58,38,.14)}
+#nav.fm-attaccata::before{opacity:0}
 .nav-in{
   position:relative;width:100%;max-width:1280px;margin:0 auto;
   padding:0 clamp(18px,3vw,40px);
@@ -136,8 +140,8 @@ section{scroll-margin-top:96px}
 }
 .nav-brand svg{flex-shrink:0}
 .nav-brand .b-coni{stroke:#fff;transition:stroke .35s ease}
-#nav.solid .nav-brand{color:var(--castagno);text-shadow:none}
-#nav.solid .nav-brand .b-coni{stroke:var(--castagno)}
+#nav.fm-attaccata .nav-brand{color:var(--castagno);text-shadow:none}
+#nav.fm-attaccata .nav-brand .b-coni{stroke:var(--castagno)}
 .nav-links{display:flex;align-items:center;gap:clamp(14px,1.7vw,26px);list-style:none;margin:0;padding:0}
 .nav-links a{
   color:#fff;text-decoration:none;font-weight:600;font-size:.95rem;
@@ -146,8 +150,8 @@ section{scroll-margin-top:96px}
   transition:border-color .25s ease,color .35s ease;
 }
 .nav-links a:hover{border-color:var(--lume)}
-#nav.solid .nav-links a{color:var(--castagno);text-shadow:none}
-#nav.solid .nav-links a:hover{border-color:var(--verdeca)}
+#nav.fm-attaccata .nav-links a{color:var(--castagno);text-shadow:none}
+#nav.fm-attaccata .nav-links a:hover{border-color:var(--verdeca)}
 .nav-cta{
   background:var(--verdeca);color:#fff !important;border-radius:999px;
   padding:.55em 1.25em !important;border-bottom:none !important;text-shadow:none !important;
@@ -163,7 +167,7 @@ section{scroll-margin-top:96px}
   transition:transform .3s ease,opacity .3s ease,background-color .35s ease;
 }
 .burger span+span{margin-top:6px}
-#nav.solid .burger span{background:var(--castagno)}
+#nav.fm-attaccata .burger span{background:var(--castagno)}
 body.menu-open .burger span{background:#fff}
 body.menu-open .burger span:nth-child(1){transform:translateY(8.5px) rotate(45deg)}
 body.menu-open .burger span:nth-child(2){opacity:0}
@@ -252,15 +256,12 @@ body.menu-open{overflow:hidden}
 }
 .firma .pin{fill:var(--lume);opacity:0}
 @media (prefers-reduced-motion:no-preference){
-  .firma .coni-path{stroke-dasharray:640;stroke-dashoffset:640;animation:draw 2.4s cubic-bezier(.5,0,.2,1) .35s forwards}
+  .firma .coni-path{stroke-dasharray:100;stroke-dashoffset:100;animation:draw 2.4s cubic-bezier(.5,0,.2,1) .35s forwards}
   @keyframes draw{to{stroke-dashoffset:0}}
   .firma .pin{animation:pinIn .6s ease 2.5s forwards}
   @keyframes pinIn{to{opacity:1}}
 }
-@media (prefers-reduced-motion:reduce){
-  .firma .coni-path{stroke-dasharray:none}
-  .firma .pin{opacity:1}
-}
+
 /* cascata hero */
 @media (prefers-reduced-motion:no-preference){
   .hero-in>*{opacity:0;transform:translateY(18px);animation:heroIn .9s cubic-bezier(.22,.9,.3,1) forwards}
@@ -456,9 +457,11 @@ footer{background:var(--castagno-fondo);color:rgba(255,255,255,.86);padding:44px
 </style>
 </head>
 <body>
+<div data-fms="sipario" data-fms-schermo="1" data-fms-marchio="Trulli il Castagno"
+     data-fms-fondo="#22371F" data-fms-sosta="620" data-fms-durata="820"></div>
 <a class="skip" href="#main">Salta al contenuto</a>
 
-<nav id="nav" aria-label="Principale">
+<nav id="nav" aria-label="Principale" class="fm-testata" data-fm-soglia="40">
   <div class="nav-in">
     <a class="nav-brand" href="#top" aria-label="Trulli il Castagno, torna su">
       <svg width="34" height="22" viewBox="0 0 64 40" aria-hidden="true"><path class="b-coni" d="M4 36 L16 12 L26 28 L34 6 L44 30 L52 14 L60 36" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -501,7 +504,7 @@ footer{background:var(--castagno-fondo);color:rgba(255,255,255,.86);padding:44px
   <div class="hero-in">
     <p class="firma" aria-hidden="true">
       <svg viewBox="0 0 240 84">
-        <path class="coni-path" d="M4 78 L40 22 L64 54 L96 12 L128 58 L156 18 L180 62 L208 30 L236 78" />
+        <path pathLength="100" class="coni-path" d="M4 78 L40 22 L64 54 L96 12 L128 58 L156 18 L180 62 L208 30 L236 78" />
         <circle class="pin" cx="40" cy="15" r="3.2"/>
         <circle class="pin" cx="96" cy="5" r="3.2"/>
         <circle class="pin" cx="156" cy="11" r="3.2"/>
@@ -526,10 +529,10 @@ footer{background:var(--castagno-fondo);color:rgba(255,255,255,.86);padding:44px
 <!-- ============ INTRO ============ -->
 <section class="sez" id="intro">
   <div class="wrap">
-    <p class="eyebrow" data-reveal>La casa dei nonni</p>
-    <p class="claim" data-reveal>Fino agli anni Settanta questi trulli erano la casa dei nonni di Beatrice. Oggi la famiglia Spalluto li apre <em>a chi arriva in Valle d'Itria</em>.</p>
-    <p class="sotto" data-reveal>Un antico trullo di campagna costruito agli inizi dell'Ottocento, al centro di una piccola contrada con la sua grande aia in pietra. Dopo una lunga ricostruzione, l'attività ha aperto le porte a Natale del 2007: quattro alloggi, ognuno col suo nome e il suo carattere.</p>
-    <ul class="numeri" data-reveal>
+    <p class="eyebrow" data-fm="sali">La casa dei nonni</p>
+    <p class="claim" data-fm="sali">Fino agli anni Settanta questi trulli erano la casa dei nonni di Beatrice. Oggi la famiglia Spalluto li apre <em>a chi arriva in Valle d'Itria</em>.</p>
+    <p class="sotto" data-fm="sali">Un antico trullo di campagna costruito agli inizi dell'Ottocento, al centro di una piccola contrada con la sua grande aia in pietra. Dopo una lunga ricostruzione, l'attività ha aperto le porte a Natale del 2007: quattro alloggi, ognuno col suo nome e il suo carattere.</p>
+    <ul class="numeri" data-fm="sali">
       <li><span class="n" data-count="1800">1800</span><span class="l">le origini del trullo</span></li>
       <li><span class="n" data-count="2007">2007</span><span class="l">la riapertura, a Natale</span></li>
       <li><span class="n" data-count="4">4</span><span class="l">trulli, ognuno col suo nome</span></li>
@@ -540,7 +543,7 @@ footer{background:var(--castagno-fondo);color:rgba(255,255,255,.86);padding:44px
 
 <div class="divisore" aria-hidden="true">
   <svg viewBox="0 0 240 84">
-    <path class="coni-path" d="M4 78 L40 22 L64 54 L96 12 L128 58 L156 18 L180 62 L208 30 L236 78"/>
+    <path pathLength="100" class="coni-path" d="M4 78 L40 22 L64 54 L96 12 L128 58 L156 18 L180 62 L208 30 L236 78"/>
     <circle class="pin" cx="40" cy="15" r="3"/>
     <circle class="pin" cx="96" cy="5" r="3"/>
     <circle class="pin" cx="156" cy="11" r="3"/>
@@ -552,17 +555,17 @@ footer{background:var(--castagno-fondo);color:rgba(255,255,255,.86);padding:44px
 <section class="sez dark" id="contrada">
   <div class="wrap split">
     <div>
-      <p class="eyebrow" data-reveal>La contrada</p>
-      <p class="claim" data-reveal>C'era un'aia grande, dove si lavoravano <em>il grano e i legumi dei vicini</em>.</p>
-      <p data-reveal>La contrada viveva attorno a quest'aia in pietra. Pietro ha guidato la ricostruzione dei trulli, pietra su pietra; Beatrice ha riportato in cucina i gesti di casa. La sera le luci si accendono sui coni e la campagna si ferma.</p>
-      <ul class="lista-fatti" data-reveal>
+      <p class="eyebrow" data-fm="sali">La contrada</p>
+      <p class="claim" data-fm="sali">C'era un'aia grande, dove si lavoravano <em>il grano e i legumi dei vicini</em>.</p>
+      <p data-fm="sali">La contrada viveva attorno a quest'aia in pietra. Pietro ha guidato la ricostruzione dei trulli, pietra su pietra; Beatrice ha riportato in cucina i gesti di casa. La sera le luci si accendono sui coni e la campagna si ferma.</p>
+      <ul class="lista-fatti" data-fm="sali">
         <li>Pietro segue la vigna e conosce ogni filare</li>
         <li>Beatrice e Vitina tengono le lezioni di cucina</li>
         <li>Alessandro prepara con Beatrice la cena pugliese</li>
         <li>Antoniana accompagna gli ospiti alla scoperta della Puglia</li>
       </ul>
     </div>
-    <div class="split-foto" data-reveal>
+    <div class="split-foto" data-fm="sali">
       <img src="img/sera-ulivo.jpg" alt="La contrada al crepuscolo: le luci calde sui trulli dietro il grande ulivo" loading="lazy" width="1600" height="960">
     </div>
   </div>
@@ -571,11 +574,11 @@ footer{background:var(--castagno-fondo);color:rgba(255,255,255,.86);padding:44px
 <!-- ============ I 4 TRULLI ============ -->
 <section class="sez" id="trulli">
   <div class="wrap">
-    <p class="eyebrow" data-reveal>Gli alloggi</p>
-    <h2 class="claim" data-reveal>Quattro trulli, quattro nomi, un'unica contrada.</h2>
-    <p class="sotto" data-reveal>Ogni trullo è indipendente e prende il nome da ciò che gli sta attorno. Biancheria, pulizie, Wi-Fi e Netflix sono compresi; la piscina è aperta da maggio a metà ottobre.</p>
+    <p class="eyebrow" data-fm="sali">Gli alloggi</p>
+    <h2 class="claim" data-fm="sali">Quattro trulli, quattro nomi, un'unica contrada.</h2>
+    <p class="sotto" data-fm="sali">Ogni trullo è indipendente e prende il nome da ciò che gli sta attorno. Biancheria, pulizie, Wi-Fi e Netflix sono compresi; la piscina è aperta da maggio a metà ottobre.</p>
     <div class="trulli-grid">
-      <article class="tcard" data-reveal>
+      <article class="tcard" data-fm="sali">
         <div class="tcard-foto"><img src="img/interno-pranzo.jpg" alt="Interno in pietra chiara con arco e tavolo apparecchiato" loading="lazy" width="1600" height="1063"></div>
         <div class="tcard-body">
           <h3><svg width="20" height="16" viewBox="0 0 24 20" aria-hidden="true"><path d="M2 18 L12 3 L22 18" fill="none" stroke="#3F5C3B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="1.8" r="1.4" fill="#3F5C3B"/></svg>Trullo del Ciliegeto</h3>
@@ -583,7 +586,7 @@ footer{background:var(--castagno-fondo);color:rgba(255,255,255,.86);padding:44px
           <p>Una camera con divano letto per un bambino, l'ingresso sul lato della piscina. Il trullo giusto per una coppia.</p>
         </div>
       </article>
-      <article class="tcard" data-reveal>
+      <article class="tcard" data-fm="sali">
         <div class="tcard-foto"><img src="img/aia-ingresso.jpg" alt="L'ingresso in pietra del Trullo dell'Aia, con la targa e i fichi d'India" loading="lazy" width="1600" height="1063"></div>
         <div class="tcard-body">
           <h3><svg width="20" height="16" viewBox="0 0 24 20" aria-hidden="true"><path d="M2 18 L12 3 L22 18" fill="none" stroke="#3F5C3B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="1.8" r="1.4" fill="#3F5C3B"/></svg>Trullo dell'Aia</h3>
@@ -591,7 +594,7 @@ footer{background:var(--castagno-fondo);color:rgba(255,255,255,.86);padding:44px
           <p>Affaccia sull'ingresso della contrada: l'aia in pietra, il gazebo e il forno a legna. Due divani letto per i più piccoli.</p>
         </div>
       </article>
-      <article class="tcard" data-reveal>
+      <article class="tcard" data-fm="sali">
         <div class="tcard-foto"><img src="img/camera-archi.jpg" alt="Camera in pietra con letto in ferro battuto e arco verso la sala" loading="lazy" width="1600" height="1063"></div>
         <div class="tcard-body">
           <h3><svg width="20" height="16" viewBox="0 0 24 20" aria-hidden="true"><path d="M2 18 L12 3 L22 18" fill="none" stroke="#3F5C3B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="1.8" r="1.4" fill="#3F5C3B"/></svg>Trullo degli Archi</h3>
@@ -599,7 +602,7 @@ footer{background:var(--castagno-fondo);color:rgba(255,255,255,.86);padding:44px
           <p>Sette archi in pietra e il camino: è il trullo che gli ospiti considerano il più bello della contrada.</p>
         </div>
       </article>
-      <article class="tcard" data-reveal>
+      <article class="tcard" data-fm="sali">
         <div class="tcard-foto"><img src="img/baule.jpg" alt="Il baule d'epoca in legno e ferro nel trullo, con la sala da pranzo sullo sfondo" loading="lazy" width="1600" height="1063"></div>
         <div class="tcard-body">
           <h3><svg width="20" height="16" viewBox="0 0 24 20" aria-hidden="true"><path d="M2 18 L12 3 L22 18" fill="none" stroke="#3F5C3B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="1.8" r="1.4" fill="#3F5C3B"/></svg>Trullo Panoramico</h3>
@@ -614,22 +617,22 @@ footer{background:var(--castagno-fondo);color:rgba(255,255,255,.86);padding:44px
 <!-- ============ ESPERIENZE ============ -->
 <section class="sez esper" id="esperienze">
   <div class="wrap">
-    <p class="eyebrow" data-reveal>Le giornate in contrada</p>
-    <h2 class="claim" data-reveal>Qui la Puglia non si visita soltanto: <em>si impasta, si versa, si racconta</em>.</h2>
+    <p class="eyebrow" data-fm="sali">Le giornate in contrada</p>
+    <h2 class="claim" data-fm="sali">Qui la Puglia non si visita soltanto: <em>si impasta, si versa, si racconta</em>.</h2>
     <div class="esper-grid">
-      <article class="esp" data-reveal>
+      <article class="esp" data-fm="sali">
         <svg class="cono-eco" width="22" height="17" viewBox="0 0 24 20" aria-hidden="true"><path d="M2 18 L12 3 L22 18" fill="none" stroke="#3F5C3B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="1.8" r="1.4" fill="#3F5C3B"/></svg>
         <span class="chi">Con Pietro</span>
         <h3>La vigna e la degustazione</h3>
         <p>Passeggiata fra i filari della vigna di famiglia e degustazione dei vini aziendali. Pietro la vigna la conosce pianta per pianta.</p>
       </article>
-      <article class="esp" data-reveal>
+      <article class="esp" data-fm="sali">
         <svg class="cono-eco" width="22" height="17" viewBox="0 0 24 20" aria-hidden="true"><path d="M2 18 L12 3 L22 18" fill="none" stroke="#3F5C3B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="1.8" r="1.4" fill="#3F5C3B"/></svg>
         <span class="chi">Con Beatrice e Vitina</span>
         <h3>Le lezioni di cucina</h3>
         <p>Focaccia, pane, purè di fave, orecchiette e involtini di vitello: le mani in pasta con chi questi piatti li fa da sempre.</p>
       </article>
-      <article class="esp" data-reveal>
+      <article class="esp" data-fm="sali">
         <svg class="cono-eco" width="22" height="17" viewBox="0 0 24 20" aria-hidden="true"><path d="M2 18 L12 3 L22 18" fill="none" stroke="#3F5C3B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="1.8" r="1.4" fill="#3F5C3B"/></svg>
         <span class="chi">Con Alessandro e Beatrice</span>
         <h3>La cena pugliese</h3>
@@ -642,17 +645,17 @@ footer{background:var(--castagno-fondo);color:rgba(255,255,255,.86);padding:44px
 <!-- ============ VINI ============ -->
 <section class="sez vigna" id="vini">
   <div class="wrap split">
-    <div class="vino-foto" data-reveal>
+    <div class="vino-foto" data-fm="sali">
       <img src="img/vino-pietra-viva.jpg" alt="La bottiglia di Pietra Viva, Verdeca IGP Valle d'Itria, adagiata sull'uva appena raccolta" loading="lazy" width="1100" height="1650">
     </div>
     <div>
-      <p class="eyebrow" data-reveal>La cantina di famiglia</p>
-      <blockquote style="margin:0" data-reveal>
+      <p class="eyebrow" data-fm="sali">La cantina di famiglia</p>
+      <blockquote style="margin:0" data-fm="sali">
         <p class="cit">«Avevo sete, bussai al trullo<br>apparve un angelo con un calice di Verdeca»</p>
         <footer class="cit-firma">Sen. Giuseppe Giacovazzo</footer>
       </blockquote>
-      <p style="margin-top:1.2em" data-reveal>Quattro generazioni in vigna, la gestione dal 2009, e una linea naturale, la 1929: senza lieviti aggiunti, non filtrata, con solfiti dieci volte sotto il limite di legge.</p>
-      <ul class="listino" data-reveal>
+      <p style="margin-top:1.2em" data-fm="sali">Quattro generazioni in vigna, la gestione dal 2009, e una linea naturale, la 1929: senza lieviti aggiunti, non filtrata, con solfiti dieci volte sotto il limite di legge.</p>
+      <ul class="listino" data-fm="sali">
         <li><span class="v-nome">Pietra Viva</span><span class="v-uva">Verdeca</span><span class="v-dots"></span><span class="v-prezzo">€ 10</span></li>
         <li><span class="v-nome">1° Luglio</span><span class="v-uva">rosato, Nero di Troia</span><span class="v-dots"></span><span class="v-prezzo">€ 11</span></li>
         <li><span class="v-nome">Terra Viva</span><span class="v-uva">rosso, Nero di Troia</span><span class="v-dots"></span><span class="v-prezzo">€ 14</span></li>
@@ -660,7 +663,7 @@ footer{background:var(--castagno-fondo);color:rgba(255,255,255,.86);padding:44px
         <li><span class="v-nome">Linea 1929</span><span class="v-uva">Verdeca · Moscato · Nero di Troia</span><span class="v-dots"></span><span class="v-prezzo">€ 13</span></li>
         <li><span class="v-nome">Pugno di Olive</span><span class="v-uva">olio extravergine</span><span class="v-dots"></span><span class="v-prezzo">€ 13,50</span></li>
       </ul>
-      <p class="nota-listino" data-reveal>Prezzi dal listino pubblicato sul sito dell'azienda.</p>
+      <p class="nota-listino" data-fm="sali">Prezzi dal listino pubblicato sul sito dell'azienda.</p>
     </div>
   </div>
 </section>
@@ -668,38 +671,38 @@ footer{background:var(--castagno-fondo);color:rgba(255,255,255,.86);padding:44px
 <!-- ============ SERVIZI ============ -->
 <section class="sez" id="servizi">
   <div class="wrap">
-    <p class="eyebrow" data-reveal>I servizi</p>
-    <h2 class="claim" data-reveal>Tutto quello che serve, e qualcosa che non vi aspettate.</h2>
+    <p class="eyebrow" data-fm="sali">I servizi</p>
+    <h2 class="claim" data-fm="sali">Tutto quello che serve, e qualcosa che non vi aspettate.</h2>
     <div class="servizi-grid">
-      <div class="serv" data-reveal>
+      <div class="serv" data-fm="sali">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#33502F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M2 19c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M6 11 V6 a6 6 0 0 1 12 0 v5"/></svg>
         <div><h3>Piscina fra gli ulivi</h3><p>Aperta da maggio a metà ottobre, con lettini e ombrelloni, senza orari di chiusura.</p></div>
       </div>
-      <div class="serv" data-reveal>
+      <div class="serv" data-fm="sali">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#33502F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 h16 l-2 9 H6 Z"/><path d="M8 11 V8 a4 4 0 0 1 8 0 v3"/></svg>
         <div><h3>La colazione nel cestino</h3><p>Su richiesta, €4 a persona: consegnata la sera prima con marmellate di casa, dolci, frutta e pane fresco. Anche per celiaci.</p></div>
       </div>
-      <div class="serv" data-reveal>
+      <div class="serv" data-fm="sali">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#33502F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="17" r="3.5"/><circle cx="18" cy="17" r="3.5"/><path d="M6 17 L10 8 h4 l4 9"/><path d="M10 8 L8 5 h3"/></svg>
         <div><h3>Bici ed e-bike</h3><p>Noleggio in loco: bici classica €12 al giorno, e-bike €25. La Valle d'Itria è fatta per pedalare.</p></div>
       </div>
-      <div class="serv" data-reveal>
+      <div class="serv" data-fm="sali">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#33502F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 a3 3 0 1 1 6 0 a3 3 0 0 1 -6 0"/><path d="M4 20 c0-4 3-7 7-7 h2 c4 0 7 3 7 7"/><path d="M4 12 c1.5-1 3-1 4 0"/></svg>
         <div><h3>Animali benvenuti</h3><p>Di piccola, media e grande taglia: la contrada è anche loro.</p></div>
       </div>
-      <div class="serv" data-reveal>
+      <div class="serv" data-fm="sali">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#33502F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17 h13"/><path d="M5 17 c0-3 2-8 6-8 h5 l3 4 v4"/><circle cx="7" cy="19" r="1.8"/><circle cx="16" cy="19" r="1.8"/></svg>
         <div><h3>In carrozza coi Lipizzani</h3><p>Passeggiata in carrozza trainata dai cavalli Lipizzani bianchi, fra i muretti a secco.</p></div>
       </div>
-      <div class="serv" data-reveal>
+      <div class="serv" data-fm="sali">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#33502F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12 h20"/><path d="M12 2 c3 3 3 17 0 20 c-3-3-3-17 0-20"/><circle cx="12" cy="12" r="10"/></svg>
         <div><h3>Transfer dagli aeroporti</h3><p>Da Bari o Brindisi: €60 a tratta fino a 4 persone, su prenotazione.</p></div>
       </div>
-      <div class="serv" data-reveal>
+      <div class="serv" data-fm="sali">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#33502F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10 a12 12 0 0 1 16 0"/><path d="M7 13.5 a8 8 0 0 1 10 0"/><path d="M10 17 a4 4 0 0 1 4 0"/><circle cx="12" cy="19.5" r="1.2" fill="#33502F"/></svg>
         <div><h3>Wi-Fi e Netflix</h3><p>Compresi nel soggiorno, in ogni trullo.</p></div>
       </div>
-      <div class="serv" data-reveal>
+      <div class="serv" data-fm="sali">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#33502F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14 h16 v3 a3 3 0 0 1 -3 3 H7 a3 3 0 0 1 -3 -3 Z"/><path d="M8 10 c0-2 2-2 2-4 M13 10 c0-2 2-2 2-4"/></svg>
         <div><h3>Barbecue e orto</h3><p>Barbecue con la legna e, di stagione, i prodotti dell'orto di casa.</p></div>
       </div>
@@ -709,7 +712,7 @@ footer{background:var(--castagno-fondo);color:rgba(255,255,255,.86);padding:44px
 
 <!-- ============ PROVA SOCIALE ============ -->
 <section class="sez prova" id="recensioni">
-  <div class="wrap" data-reveal>
+  <div class="wrap" data-fm="sali">
     <span class="voto">4,8<span style="font-size:.4em"> / 5</span></span>
     <span class="stelle" aria-hidden="true">★★★★★</span>
     <p class="rec">141 recensioni su <a href="http://www.tripadvisor.it/Hotel_Review-g616186-d2001180-Reviews-Trulli_il_Castagno-Martina_Franca_Province_of_Taranto_Puglia.html" target="_blank" rel="noopener">TripAdvisor</a></p>
@@ -719,9 +722,9 @@ footer{background:var(--castagno-fondo);color:rgba(255,255,255,.86);padding:44px
 <!-- ============ GALLERY ============ -->
 <section class="sez" id="galleria">
   <div class="wrap">
-    <p class="eyebrow" data-reveal>La contrada in foto</p>
-    <h2 class="claim" data-reveal>Pietra, acqua e luce di Puglia.</h2>
-    <div class="gal" data-reveal>
+    <p class="eyebrow" data-fm="sali">La contrada in foto</p>
+    <h2 class="claim" data-fm="sali">Pietra, acqua e luce di Puglia.</h2>
+    <div class="gal" data-fm="sali">
       <button data-src="img/piscina-trulli.jpg" data-did="La piscina davanti ai coni della contrada"><img src="img/piscina-trulli.jpg" alt="La piscina con i trulli e la palma sullo sfondo" loading="lazy" width="1600" height="1059"><span class="did">La piscina davanti ai coni</span></button>
       <button data-src="img/gazebo.jpg" data-did="Il gazebo in pietra e legno, apparecchiato"><img src="img/gazebo.jpg" alt="Il gazebo con tavolo in legno apparecchiato e fichi d'India in primo piano" loading="lazy" width="1600" height="1063"><span class="did">Il gazebo per cenare fuori</span></button>
       <button data-src="img/camera-lume.jpg" data-did="Il lume sul comodino, sotto la volta in pietra"><img src="img/camera-lume.jpg" alt="Camera da letto con lume d'epoca acceso e volta in pietra" loading="lazy" width="1600" height="1063"><span class="did">Il lume sulla pietra</span></button>
@@ -736,23 +739,23 @@ footer{background:var(--castagno-fondo);color:rgba(255,255,255,.86);padding:44px
 <section class="finale" id="contatti">
   <div class="finale-img"><img src="img/piscina-trulli.jpg" alt="" loading="lazy" aria-hidden="true"></div>
   <div class="wrap">
-    <p class="eyebrow" style="color:var(--lume-chiaro)" data-reveal>Prenota il tuo soggiorno</p>
-    <h2 data-reveal>La contrada vi aspetta.</h2>
-    <p data-reveal>Scriveteci o chiamateci: vi rispondiamo noi della famiglia, e troviamo insieme il trullo giusto per il vostro soggiorno.</p>
+    <p class="eyebrow" style="color:var(--lume-chiaro)" data-fm="sali">Prenota il tuo soggiorno</p>
+    <h2 data-fm="sali">La contrada vi aspetta.</h2>
+    <p data-fm="sali">Scriveteci o chiamateci: vi rispondiamo noi della famiglia, e troviamo insieme il trullo giusto per il vostro soggiorno.</p>
     <div class="contatti-grid">
-      <div class="cont" data-reveal>
+      <div class="cont" data-fm="sali">
         <span class="k">Email</span>
         <a href="mailto:trulli.ilcastagno@gmail.com">trulli.ilcastagno@gmail.com</a>
       </div>
-      <div class="cont" data-reveal>
+      <div class="cont" data-fm="sali">
         <span class="k">Telefono</span>
         <a href="tel:+393403735379">+39 340 3735379</a>
       </div>
-      <div class="cont" data-reveal>
+      <div class="cont" data-fm="sali">
         <span class="k">Dove siamo</span>
         <span class="v">Strada Noci Zona D 315 bis<br>74015 Martina Franca (TA)</span>
       </div>
-      <div class="cont" data-reveal>
+      <div class="cont" data-fm="sali">
         <span class="k">In auto</span>
         <a href="https://www.google.com/maps/search/?api=1&query=40.720407,17.242527" target="_blank" rel="noopener">Apri in Google Maps</a>
       </div>
@@ -804,9 +807,6 @@ footer{background:var(--castagno-fondo);color:rgba(255,255,255,.86);padding:44px
   var skip=document.querySelector('.skip');
 
   /* nav solid on scroll */
-  function onScroll(){ nav.classList.toggle('solid', window.scrollY>40); }
-  window.addEventListener('scroll', onScroll, {passive:true});
-  onScroll();
 
   /* ---- menu mobile: apertura, inert, focus-trap, Esc ---- */
   var menuOpen=false;
@@ -855,15 +855,7 @@ footer{background:var(--castagno-fondo);color:rgba(255,255,255,.86);padding:44px
     }
   });
 
-  /* ---- reveal on scroll ---- */
   var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var io=new IntersectionObserver(function(entries){
-    entries.forEach(function(en){
-      if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
-    });
-  },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
-  document.querySelectorAll('[data-reveal]').forEach(function(el){ io.observe(el); });
-
   /* ---- count-up (solo numeri veri) ---- */
   var cio=new IntersectionObserver(function(entries){
     entries.forEach(function(en){
@@ -945,6 +937,6 @@ footer{background:var(--castagno-fondo);color:rgba(255,255,255,.86);padding:44px
   });
 })();
 </script>
-  <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

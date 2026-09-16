@@ -1,0 +1,9 @@
+/* strisce — l'immagine si divide in strisce verticali che scorrono via a
+   velocita' diverse e scoprono cio' che c'e' sotto. */
+.fmx-strisce { position: relative; overflow: hidden; }
+.fmx-strisce-velo { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+.fmx-striscia {
+  position: absolute; top: 0; bottom: 0;
+  background-position: center; background-size: cover;
+  will-change: transform;
+}

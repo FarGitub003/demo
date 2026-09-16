@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>document.documentElement.classList.add('js')</script>
+<!-- FAR Motion: il nucleo va senza defer (mette html.fm-js prima del primo disegno) -->
+<link rel="stylesheet" href="far-motion.min.css">
+<script src="far-motion.min.js"></script>
+<link rel="stylesheet" href="sceniche/piega.css">
+<script src="sceniche/piega.js" defer></script>
 <title>T&amp;T Bottega di Restauro Mobili Antichi · Buccinasco (MI)</title>
 <meta name="description" content="Dai primi anni '90 a Gudo Gambaredo, Buccinasco: restauro di mobili antichi, icone e impagliature. Lucidatura a tampone con gommalacca, prodotti naturali, preventivi gratuiti. Visite su appuntamento.">
 <meta name="robots" content="noindex,nofollow">
@@ -96,11 +101,11 @@ a{color:inherit}
 /* col menu aperto la barra va inert: il numero non sarebbe premibile, quindi si
    nasconde (dentro al menu c'e' il suo bottone "Chiama", piu' grande). */
 .nav-links[inert]{visibility:hidden}
-.nav.solid{background:var(--noce);box-shadow:0 2px 24px rgba(20,10,5,.35)}
-.nav.solid .nav-brand,.nav.solid .nav-links a{text-shadow:none}
+.nav.fm-attaccata{background:var(--noce);box-shadow:0 2px 24px rgba(20,10,5,.35)}
+.nav.fm-attaccata .nav-brand,.nav.fm-attaccata .nav-links a{text-shadow:none}
 .burger{display:none;background:none;border:0;cursor:pointer;padding:.55rem;border-radius:8px}
 .burger span{display:block;width:26px;height:2.5px;background:var(--carta);margin:5.5px 0;border-radius:2px;transition:transform .3s var(--d),opacity .3s var(--d);box-shadow:0 1px 6px rgba(20,10,5,.5)}
-.nav.solid .burger span{box-shadow:none}
+.nav.fm-attaccata .burger span{box-shadow:none}
 .burger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
 .burger.open span:nth-child(2){opacity:0}
 .burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
@@ -139,8 +144,6 @@ a{color:inherit}
 @keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
 
 /* firma: il truciolo */
-.truciolo-svg path{stroke-dasharray:260;stroke-dashoffset:260;animation:truciolo 1.6s var(--d) .5s forwards}
-@keyframes truciolo{to{stroke-dashoffset:0}}
 .divider{display:flex;justify-content:center;padding:0 0 clamp(2rem,4vw,3rem)}
 .divider svg{width:72px;height:auto;color:var(--mogano)}
 
@@ -155,18 +158,7 @@ h2{font-size:clamp(2rem,4.6vw,3.2rem);margin-bottom:1rem}
 .lead{font-size:clamp(1.1rem,1.7vw,1.3rem);max-width:38em}
 /* la comparsa allo scroll si accende SOLO se il JS e' partito (html.js): senza JS
    il contenuto resta visibile, non invisibile per sempre. */
-.js [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .7s var(--d),transform .7s var(--d)}
-.js [data-reveal].revealed{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important}
-  .js [data-reveal]{opacity:1;transform:none}
-  /* l'hero e la firma compaiono con un'animazione, partendo da invisibili: spenta
-     l'animazione vanno rimessi visibili a mano, altrimenti restano invisibili per
-     sempre (bottone "Chiama" compreso). Vale per il testo dell'hero e per il truciolo. */
-  .hero-eyebrow,.hero h1,.hero-sub,.hero-tag,.hero-ctas,.hero-ribbon{opacity:1;transform:none}
-  .truciolo-svg path{stroke-dashoffset:0}
-  html{scroll-behavior:auto}
-}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
 
 /* ---------- intro ---------- */
 .intro .display{font-size:clamp(1.7rem,3.6vw,2.7rem);max-width:22em;line-height:1.25}
@@ -334,7 +326,7 @@ footer .wrap{display:flex;flex-direction:column;gap:1.1rem}
 <body id="top">
 <a class="skip" href="#main">Salta al contenuto</a>
 
-<nav class="nav" id="nav" aria-label="Principale">
+<nav class="nav fm-testata" id="nav" aria-label="Principale" data-fm-soglia="40">
   <div class="wrap">
     <a class="nav-brand" href="#top">T<span class="amp">&amp;</span>T <span class="nav-brand-sub">· Bottega di Restauro</span></a>
     <ul class="nav-links">
@@ -377,7 +369,7 @@ footer .wrap{display:flex;flex-direction:column;gap:1.1rem}
   <div class="hero-inner">
     <div class="wrap">
       <p class="hero-eyebrow">
-        <svg class="truciolo-svg" viewBox="0 0 100 52" aria-hidden="true"><path d="M4 46h44c22 0 34-10 34-22C82 13 73 6 63 6 53 6 46 13 46 22c0 7 5 12 12 12" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg>
+        <svg class="truciolo-svg" data-fm="traccia" viewBox="0 0 100 52" aria-hidden="true"><path d="M4 46h44c22 0 34-10 34-22C82 13 73 6 63 6 53 6 46 13 46 22c0 7 5 12 12 12" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg>
         Bottega di restauro · Buccinasco
       </p>
       <h1>T&amp;T</h1>
@@ -399,12 +391,12 @@ footer .wrap{display:flex;flex-direction:column;gap:1.1rem}
 <!-- INTRO -->
 <section class="sec intro" aria-label="La filosofia della bottega">
   <div class="wrap">
-    <p class="display" data-reveal>Un mobile antico non si rimette a nuovo. <em>Si riporta a com'era.</em></p>
-    <p class="lead" data-reveal style="margin-top:1.2rem">Prodotti naturali, recupero strutturale di falegnameria e una lucidatura che non cancella la storia del legno: il lavoro si giudica da vicino, in laboratorio.</p>
+    <p class="display" data-fm="sali">Un mobile antico non si rimette a nuovo. <em>Si riporta a com'era.</em></p>
+    <p class="lead" data-fm="sali" style="margin-top:1.2rem">Prodotti naturali, recupero strutturale di falegnameria e una lucidatura che non cancella la storia del legno: il lavoro si giudica da vicino, in laboratorio.</p>
     <div class="intro-facts">
-      <div class="fact" data-reveal><b>Preventivi gratuiti</b><span>La valutazione del restauro non si paga: si guarda il pezzo e si decide insieme.</span></div>
-      <div class="fact" data-reveal><b>Ritiro e riconsegna</b><span>Trasporto e imballaggio dei mobili, dal ritiro alla riconsegna a casa.</span></div>
-      <div class="fact" data-reveal><b>Anche sul posto</b><span>Portoni e balaustre si restaurano dove stanno, senza smontare nulla.</span></div>
+      <div class="fact" data-fm="sali"><b>Preventivi gratuiti</b><span>La valutazione del restauro non si paga: si guarda il pezzo e si decide insieme.</span></div>
+      <div class="fact" data-fm="sali"><b>Ritiro e riconsegna</b><span>Trasporto e imballaggio dei mobili, dal ritiro alla riconsegna a casa.</span></div>
+      <div class="fact" data-fm="sali"><b>Anche sul posto</b><span>Portoni e balaustre si restaurano dove stanno, senza smontare nulla.</span></div>
     </div>
   </div>
 </section>
@@ -416,7 +408,7 @@ footer .wrap{display:flex;flex-direction:column;gap:1.1rem}
 <!-- STORIA -->
 <section class="sec dark" id="storia">
   <div class="wrap split">
-    <div data-reveal>
+    <div data-fm="sali">
       <p class="eyebrow">La bottega</p>
       <h2>Il mestiere è di famiglia,<br>la mano è di Antonio</h2>
       <p>Antonio Santoro nasce perito tecnico industriale e comincia in un'azienda meccanica. Poi torna al mestiere di casa, quello che in famiglia si fa dai tempi del nonno: il restauro.</p>
@@ -430,7 +422,7 @@ footer .wrap{display:flex;flex-direction:column;gap:1.1rem}
         <span class="chip">Impagliature</span>
       </div>
     </div>
-    <div class="split-media" data-reveal>
+    <div class="split-media" data-fm="sali">
       <img src="img/restauro-in-corso.jpg" alt="Elemento in legno in lavorazione sul banco della bottega, con segnature a nastro sui punti da riprendere" loading="lazy">
     </div>
   </div>
@@ -439,30 +431,34 @@ footer .wrap{display:flex;flex-direction:column;gap:1.1rem}
 <!-- PRIMA / DOPO -->
 <section class="sec pd" id="prima-dopo">
   <div class="wrap">
-    <p class="eyebrow" data-reveal>L'argomento migliore</p>
-    <h2 data-reveal>Prima e dopo, lo stesso mobile</h2>
-    <p class="lead" data-reveal>Una panca a specchiera intagliata, arrivata in laboratorio segnata dagli anni. Nessun trucco: due fotografie della bottega, prima e dopo il restauro.</p>
+    <p class="eyebrow" data-fm="sali">L'argomento migliore</p>
+    <h2 data-fm="sali">Prima e dopo, lo stesso mobile</h2>
+    <p class="lead" data-fm="sali">Una panca a specchiera intagliata, arrivata in laboratorio segnata dagli anni. Nessun trucco: due fotografie della bottega, prima e dopo il restauro.</p>
     <div class="pd-grid">
-      <figure class="pd-panel" data-reveal>
+      <figure class="pd-panel" data-fm="sali">
         <img src="img/prima.jpg" alt="La panca a specchiera prima del restauro, opaca e segnata, nel laboratorio" loading="lazy">
         <figcaption class="pd-label">Prima</figcaption>
       </figure>
-      <figure class="pd-panel dopo" data-reveal>
+      <figure class="pd-panel dopo" data-fm="sali">
         <img src="img/dopo.jpg" alt="La stessa panca a specchiera dopo il restauro, con il legno lucidato e le tappezzerie rifatte" loading="lazy">
         <figcaption class="pd-label">Dopo</figcaption>
       </figure>
     </div>
-    <p class="pd-cap" data-reveal><b>Cosa è successo nel mezzo:</b> recupero strutturale di falegnameria, stuccatura, trattamento antitarlo, tappezzerie rifatte e lucidatura a tampone con gommalacca. La patina non si cancella: si rispetta.</p>
+    <p class="pd-cap" data-fm="sali"><b>Cosa è successo nel mezzo:</b> recupero strutturale di falegnameria, stuccatura, trattamento antitarlo, tappezzerie rifatte e lucidatura a tampone con gommalacca. La patina non si cancella: si rispetta.</p>
   </div>
 </section>
 
 <!-- METODO -->
 <section class="sec" id="metodo">
   <div class="wrap">
-    <p class="eyebrow" data-reveal>Il metodo</p>
-    <h2 data-reveal>Sei passaggi, nessuna scorciatoia</h2>
+    <p class="eyebrow" data-fm="sali">Il metodo</p>
+    <h2 data-fm="sali">Sei passaggi, nessuna scorciatoia</h2>
     <div class="metodo-grid">
-      <ol class="steps" data-reveal>
+      <!-- Il momento scenico del sito: i sei passaggi si aprono come pagine
+           incernierate, uno dopo l'altro. Sostituisce la comparsa `sali` che
+           c'era qui: `piega` fa gia' l'entrata, e due entrate sullo stesso
+           elemento si pestano i piedi. Uno scenico per sito (regola del kit). -->
+      <ol class="steps" data-fms="piega" data-fms-passo="150">
         <li><b>Valutazione e preventivo</b><span>Si guarda il pezzo dal vivo e si stima l'intervento. Il preventivo è gratuito.</span></li>
         <li><b>Ritiro e trasporto</b><span>Imballaggio e trasporto curati dalla bottega.</span></li>
         <li><b>Recupero strutturale</b><span>La falegnameria prima di tutto: incastri, parti mancanti, stabilità.</span></li>
@@ -470,7 +466,7 @@ footer .wrap{display:flex;flex-direction:column;gap:1.1rem}
         <li><b>Trattamento antitarlo</b><span>Disinfestazione dagli insetti xilofagi, per fermare il danno alla radice.</span></li>
         <li><b>Lucidatura a tampone</b><span>Gommalacca stesa a mano, strato su strato, con prodotti naturali.</span></li>
       </ol>
-      <figure class="metodo-media" data-reveal>
+      <figure class="metodo-media" data-fm="sali">
         <img src="img/stuccatura.jpg" alt="Piano in legno durante la stuccatura, con lo stucco chiaro steso sulle mancanze" loading="lazy">
         <figcaption>La stuccatura sul banco: lo stucco chiaro segna i punti da riprendere.</figcaption>
         <p class="metodo-note">Di norma si lavora in laboratorio. Per i pezzi che non si possono muovere, come portoni e balaustre, il restauro si fa sul posto.</p>
@@ -482,23 +478,23 @@ footer .wrap{display:flex;flex-direction:column;gap:1.1rem}
 <!-- COSA RESTAURIAMO -->
 <section class="sec paper2" id="restauro">
   <div class="wrap">
-    <p class="eyebrow" data-reveal>Il laboratorio</p>
-    <h2 data-reveal>Cosa passa dal banco di lavoro</h2>
-    <p class="lead" data-reveal>Mobili e oggetti lignei di epoche e tipologie diverse, dai pezzi di famiglia alle opere intagliate.</p>
+    <p class="eyebrow" data-fm="sali">Il laboratorio</p>
+    <h2 data-fm="sali">Cosa passa dal banco di lavoro</h2>
+    <p class="lead" data-fm="sali">Mobili e oggetti lignei di epoche e tipologie diverse, dai pezzi di famiglia alle opere intagliate.</p>
     <div class="cards">
-      <article class="card" data-reveal>
+      <article class="card" data-fm="sali">
         <img src="img/credenza.jpg" alt="Credenza antica a tre ante restaurata" loading="lazy">
         <div class="card-body"><h3>Mobili d'epoca</h3><p>Restauro conservativo di mobili di varie epoche: struttura, superfici, finitura a gommalacca.</p></div>
       </article>
-      <article class="card" data-reveal>
+      <article class="card" data-fm="sali">
         <img src="img/quadro-sacro.jpg" alt="Dipinto antico con cornice dorata intagliata" loading="lazy">
         <div class="card-body"><h3>Opere intagliate e cornici</h3><p>Intagli, dorature e cornici: il legno lavorato che chiede mani pazienti.</p></div>
       </article>
-      <article class="card" data-reveal>
+      <article class="card" data-fm="sali">
         <img src="img/icona-quadripartita.jpg" alt="Icona sacra quadripartita con quattro scene dipinte" loading="lazy">
         <div class="card-body"><h3>Icone e arte sacra</h3><p>Restauro di icone e oggetti di arte sacra, nel rispetto dei materiali originali.</p></div>
       </article>
-      <article class="card" data-reveal>
+      <article class="card" data-fm="sali">
         <img src="img/impagliatura.jpg" alt="Seduta di sedia impagliata a paglia di Vienna appena rifatta" loading="lazy">
         <div class="card-body"><h3>Impagliature e tappezzerie</h3><p>Paglia di Vienna, paglie naturali, corda di canapa, PVC sintetico e cordoncino.</p></div>
       </article>
@@ -509,58 +505,58 @@ footer .wrap{display:flex;flex-direction:column;gap:1.1rem}
 <!-- BOTTEGA / VENDITA -->
 <section class="sec velvet" id="bottega">
   <div class="wrap">
-    <p class="eyebrow" data-reveal>La vetrina</p>
-    <h2 data-reveal>In bottega non c'è solo il banco:<br>c'è anche la vetrina</h2>
-    <p class="lead" data-reveal>Mobili antichi e riproduzioni, quadri, stampe, libri antichi, icone originali d'epoca e oggettistica: pezzi scelti, in vendita direttamente in bottega.</p>
+    <p class="eyebrow" data-fm="sali">La vetrina</p>
+    <h2 data-fm="sali">In bottega non c'è solo il banco:<br>c'è anche la vetrina</h2>
+    <p class="lead" data-fm="sali">Mobili antichi e riproduzioni, quadri, stampe, libri antichi, icone originali d'epoca e oggettistica: pezzi scelti, in vendita direttamente in bottega.</p>
     <div class="shelf">
-      <article class="shelf-item" data-reveal>
+      <article class="shelf-item" data-fm="sali">
         <img src="img/cantinetta.jpg" alt="Cantinetta portabottiglie in legno con scomparti a griglia" loading="lazy">
         <div class="shelf-body"><h3>Mobili e complementi</h3><p>Mobili antichi, riproduzioni e complementi d'arredo.</p></div>
       </article>
-      <article class="shelf-item" data-reveal>
+      <article class="shelf-item" data-fm="sali">
         <img src="img/stampa-veliero.jpg" alt="Stampa incorniciata di un veliero norvegese del 1893" loading="lazy">
         <div class="shelf-body"><h3>Quadri e stampe</h3><p>Dipinti, stampe, acqueforti e serigrafie.</p></div>
       </article>
-      <article class="shelf-item" data-reveal>
+      <article class="shelf-item" data-fm="sali">
         <img src="img/libro-fattori.jpg" alt="Catalogo d'epoca dei disegni di Giovanni Fattori del Museo Civico di Livorno" loading="lazy">
         <div class="shelf-body"><h3>Libri antichi</h3><p>Volumi e cataloghi d'arte da collezione.</p></div>
       </article>
-      <article class="shelf-item" data-reveal>
+      <article class="shelf-item" data-fm="sali">
         <img src="img/icona-cristo.jpg" alt="Icona originale d'epoca del Cristo Pantocratore su fondo dorato" loading="lazy">
         <div class="shelf-body"><h3>Icone originali</h3><p>Icone d'epoca, con il loro vissuto.</p></div>
       </article>
     </div>
-    <p class="nota" data-reveal><b>Cerchi un pezzo in uno stile preciso?</b> Su richiesta la bottega riproduce mobili in stile, su misura.</p>
+    <p class="nota" data-fm="sali"><b>Cerchi un pezzo in uno stile preciso?</b> Su richiesta la bottega riproduce mobili in stile, su misura.</p>
   </div>
 </section>
 
 <!-- SERVIZI -->
 <section class="sec" id="servizi">
   <div class="wrap">
-    <p class="eyebrow" data-reveal>I servizi</p>
-    <h2 data-reveal>Tutto quello che serve, in un posto solo</h2>
+    <p class="eyebrow" data-fm="sali">I servizi</p>
+    <h2 data-fm="sali">Tutto quello che serve, in un posto solo</h2>
     <div class="servizi-grid">
-      <div class="servizio" data-reveal>
+      <div class="servizio" data-fm="sali">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7z"/><path d="M9.5 12l2 2 3.5-4"/></svg>
         <div><b>Trattamento antitarlo</b><span>Disinfestazione dagli insetti xilofagi, in laboratorio.</span></div>
       </div>
-      <div class="servizio" data-reveal>
+      <div class="servizio" data-fm="sali">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1.5"/><circle cx="15.5" cy="12" r="1"/></svg>
         <div><b>Restauro sul posto</b><span>Portoni, balaustre e pezzi che non si possono muovere.</span></div>
       </div>
-      <div class="servizio" data-reveal>
+      <div class="servizio" data-fm="sali">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="13" height="12" rx="1.5"/><path d="M8 7V5a1.5 1.5 0 0 1 1.5-1.5H19A1.5 1.5 0 0 1 20.5 5v9.5A1.5 1.5 0 0 1 19 16h-3"/></svg>
         <div><b>Riproduzioni in stile</b><span>Mobili in stile realizzati su richiesta, su misura.</span></div>
       </div>
-      <div class="servizio" data-reveal>
+      <div class="servizio" data-fm="sali">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 16V7h11v9"/><path d="M14 10h4l3 3v3h-3"/><circle cx="7" cy="18" r="2"/><circle cx="16.5" cy="18" r="2"/><path d="M3 16h1.5M9.5 18H14"/></svg>
         <div><b>Trasporto e imballaggio</b><span>Ritiro e riconsegna curati dalla bottega.</span></div>
       </div>
-      <div class="servizio" data-reveal>
+      <div class="servizio" data-fm="sali">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/><path d="M9 12h6M9 16h6"/></svg>
         <div><b>Preventivi gratuiti</b><span>La valutazione del restauro non costa nulla.</span></div>
       </div>
-      <div class="servizio" data-reveal>
+      <div class="servizio" data-fm="sali">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4v16M9 4v16M14 4v16M19 4v16"/><path d="M2 9h20M2 15h20"/></svg>
         <div><b>Impagliature</b><span>Paglia di Vienna, paglie naturali, canapa, PVC, cordoncino.</span></div>
       </div>
@@ -571,35 +567,35 @@ footer .wrap{display:flex;flex-direction:column;gap:1.1rem}
 <!-- PAVIA -->
 <section class="sec pavia" aria-label="Mercatino artigiano di Pavia">
   <div class="wrap">
-    <div data-reveal>
+    <div data-fm="sali">
       <p class="eyebrow" style="color:#F3DFC8">Fuori dalla bottega</p>
       <h2>Ogni prima domenica del mese, a Pavia</h2>
       <p>La bottega espone al mercatino artigiano di Pavia, in zona castello: l'occasione giusta per conoscersi dal vivo.</p>
     </div>
-    <a class="btn btn-primary" href="tel:+393394298828" data-reveal>Chiama la bottega</a>
+    <a class="btn btn-primary" href="tel:+393394298828" data-fm="sali">Chiama la bottega</a>
   </div>
 </section>
 
 <!-- GALLERIA -->
 <section class="sec" id="gallery">
   <div class="wrap">
-    <p class="eyebrow" data-reveal>La galleria</p>
-    <h2 data-reveal>Dal banco e dalla vetrina</h2>
+    <p class="eyebrow" data-fm="sali">La galleria</p>
+    <h2 data-fm="sali">Dal banco e dalla vetrina</h2>
     <div class="masonry gallery-grid">
-      <button class="tile" data-src="img/dopo.jpg" data-cap="La panca a specchiera dopo il restauro" data-reveal><img src="img/dopo.jpg" alt="Panca a specchiera restaurata con tappezzerie rifate" loading="lazy"><span class="tile-tag">Restauro</span></button>
-      <button class="tile" data-src="img/credenza.jpg" data-cap="Credenza a tre ante" data-reveal><img src="img/credenza.jpg" alt="Credenza antica a tre ante" loading="lazy"><span class="tile-tag">Mobili</span></button>
-      <button class="tile" data-src="img/icona-cristo.jpg" data-cap="Icona del Cristo Pantocratore, originale d'epoca" data-reveal><img src="img/icona-cristo.jpg" alt="Icona del Cristo Pantocratore su fondo dorato" loading="lazy"><span class="tile-tag">Icone</span></button>
-      <button class="tile" data-src="img/impagliatura.jpg" data-cap="Impagliatura a paglia di Vienna" data-reveal><img src="img/impagliatura.jpg" alt="Seduta impagliata a paglia di Vienna" loading="lazy"><span class="tile-tag">Impagliature</span></button>
-      <button class="tile" data-src="img/quadro-sacro.jpg" data-cap="Dipinto antico con cornice dorata" data-reveal><img src="img/quadro-sacro.jpg" alt="Dipinto antico con cornice dorata intagliata" loading="lazy"><span class="tile-tag">Quadri</span></button>
-      <button class="tile" data-src="img/stuccatura.jpg" data-cap="Stuccatura in corso sul banco" data-reveal><img src="img/stuccatura.jpg" alt="Piano in legno durante la stuccatura" loading="lazy"><span class="tile-tag">Lavorazione</span></button>
-      <button class="tile" data-src="img/cantinetta.jpg" data-cap="Cantinetta portabottiglie" data-reveal><img src="img/cantinetta.jpg" alt="Cantinetta portabottiglie in legno" loading="lazy"><span class="tile-tag">Mobili</span></button>
-      <button class="tile" data-src="img/icona-quadripartita.jpg" data-cap="Icona quadripartita, originale d'epoca" data-reveal><img src="img/icona-quadripartita.jpg" alt="Icona sacra quadripartita" loading="lazy"><span class="tile-tag">Icone</span></button>
-      <button class="tile" data-src="img/libro-monet.jpg" data-cap="Volume d'arte su Monet" data-reveal><img src="img/libro-monet.jpg" alt="Volume d'arte aperto sulle tavole di Monet" loading="lazy"><span class="tile-tag">Libri</span></button>
-      <button class="tile" data-src="img/restauro-in-corso.jpg" data-cap="Lavorazione sul banco della bottega" data-reveal><img src="img/restauro-in-corso.jpg" alt="Elemento ligneo in lavorazione con segnature a nastro" loading="lazy"><span class="tile-tag">Lavorazione</span></button>
-      <button class="tile" data-src="img/stampa-veliero.jpg" data-cap="Stampa di veliero norvegese, 1893" data-reveal><img src="img/stampa-veliero.jpg" alt="Stampa incorniciata di un veliero" loading="lazy"><span class="tile-tag">Quadri</span></button>
-      <button class="tile" data-src="img/libro-fattori.jpg" data-cap="Catalogo dei disegni di Giovanni Fattori" data-reveal><img src="img/libro-fattori.jpg" alt="Catalogo d'epoca dei disegni di Giovanni Fattori" loading="lazy"><span class="tile-tag">Libri</span></button>
-      <button class="tile" data-src="img/ferro-battuto.jpg" data-cap="Base di tavolo in ferro battuto" data-reveal><img src="img/ferro-battuto.jpg" alt="Base di tavolo in ferro battuto con volute" loading="lazy"><span class="tile-tag">Oggettistica</span></button>
-      <button class="tile" data-src="img/prima.jpg" data-cap="La panca a specchiera prima del restauro" data-reveal><img src="img/prima.jpg" alt="Panca a specchiera prima del restauro" loading="lazy"><span class="tile-tag">Restauro</span></button>
+      <button class="tile" data-src="img/dopo.jpg" data-cap="La panca a specchiera dopo il restauro" data-fm="sali"><img src="img/dopo.jpg" alt="Panca a specchiera restaurata con tappezzerie rifate" loading="lazy"><span class="tile-tag">Restauro</span></button>
+      <button class="tile" data-src="img/credenza.jpg" data-cap="Credenza a tre ante" data-fm="sali"><img src="img/credenza.jpg" alt="Credenza antica a tre ante" loading="lazy"><span class="tile-tag">Mobili</span></button>
+      <button class="tile" data-src="img/icona-cristo.jpg" data-cap="Icona del Cristo Pantocratore, originale d'epoca" data-fm="sali"><img src="img/icona-cristo.jpg" alt="Icona del Cristo Pantocratore su fondo dorato" loading="lazy"><span class="tile-tag">Icone</span></button>
+      <button class="tile" data-src="img/impagliatura.jpg" data-cap="Impagliatura a paglia di Vienna" data-fm="sali"><img src="img/impagliatura.jpg" alt="Seduta impagliata a paglia di Vienna" loading="lazy"><span class="tile-tag">Impagliature</span></button>
+      <button class="tile" data-src="img/quadro-sacro.jpg" data-cap="Dipinto antico con cornice dorata" data-fm="sali"><img src="img/quadro-sacro.jpg" alt="Dipinto antico con cornice dorata intagliata" loading="lazy"><span class="tile-tag">Quadri</span></button>
+      <button class="tile" data-src="img/stuccatura.jpg" data-cap="Stuccatura in corso sul banco" data-fm="sali"><img src="img/stuccatura.jpg" alt="Piano in legno durante la stuccatura" loading="lazy"><span class="tile-tag">Lavorazione</span></button>
+      <button class="tile" data-src="img/cantinetta.jpg" data-cap="Cantinetta portabottiglie" data-fm="sali"><img src="img/cantinetta.jpg" alt="Cantinetta portabottiglie in legno" loading="lazy"><span class="tile-tag">Mobili</span></button>
+      <button class="tile" data-src="img/icona-quadripartita.jpg" data-cap="Icona quadripartita, originale d'epoca" data-fm="sali"><img src="img/icona-quadripartita.jpg" alt="Icona sacra quadripartita" loading="lazy"><span class="tile-tag">Icone</span></button>
+      <button class="tile" data-src="img/libro-monet.jpg" data-cap="Volume d'arte su Monet" data-fm="sali"><img src="img/libro-monet.jpg" alt="Volume d'arte aperto sulle tavole di Monet" loading="lazy"><span class="tile-tag">Libri</span></button>
+      <button class="tile" data-src="img/restauro-in-corso.jpg" data-cap="Lavorazione sul banco della bottega" data-fm="sali"><img src="img/restauro-in-corso.jpg" alt="Elemento ligneo in lavorazione con segnature a nastro" loading="lazy"><span class="tile-tag">Lavorazione</span></button>
+      <button class="tile" data-src="img/stampa-veliero.jpg" data-cap="Stampa di veliero norvegese, 1893" data-fm="sali"><img src="img/stampa-veliero.jpg" alt="Stampa incorniciata di un veliero" loading="lazy"><span class="tile-tag">Quadri</span></button>
+      <button class="tile" data-src="img/libro-fattori.jpg" data-cap="Catalogo dei disegni di Giovanni Fattori" data-fm="sali"><img src="img/libro-fattori.jpg" alt="Catalogo d'epoca dei disegni di Giovanni Fattori" loading="lazy"><span class="tile-tag">Libri</span></button>
+      <button class="tile" data-src="img/ferro-battuto.jpg" data-cap="Base di tavolo in ferro battuto" data-fm="sali"><img src="img/ferro-battuto.jpg" alt="Base di tavolo in ferro battuto con volute" loading="lazy"><span class="tile-tag">Oggettistica</span></button>
+      <button class="tile" data-src="img/prima.jpg" data-cap="La panca a specchiera prima del restauro" data-fm="sali"><img src="img/prima.jpg" alt="Panca a specchiera prima del restauro" loading="lazy"><span class="tile-tag">Restauro</span></button>
     </div>
   </div>
 </section>
@@ -609,14 +605,14 @@ footer .wrap{display:flex;flex-direction:column;gap:1.1rem}
   <div class="contatti-bg" aria-hidden="true"><img src="img/hero.jpg" alt="" loading="lazy"></div>
   <div class="wrap">
     <div class="contatti-grid">
-      <div data-reveal>
+      <div data-fm="sali">
         <p class="eyebrow">Contatti</p>
         <h2>La bottega riceve<br>su appuntamento</h2>
         <p style="max-width:34em">Niente orari di negozio: si fissa una visita con una telefonata, e il tempo in laboratorio è tutto per il tuo pezzo.</p>
         <a class="tel-big" href="tel:+393394298828">339 4298828</a>
         <p><span class="badge-app">Visite solo su appuntamento</span></p>
       </div>
-      <div data-reveal>
+      <div data-fm="sali">
         <div class="c-item"><b>Dove siamo</b>
           <p>Località Molinetto, Gudo Gambaredo<br>20090 Buccinasco (MI)</p>
           <a href="https://www.google.com/maps/search/?api=1&amp;query=Localit%C3%A0+Molinetto%2C+Gudo+Gambaredo%2C+20090+Buccinasco+MI" target="_blank" rel="noopener">Apri in Google Maps</a>
@@ -660,17 +656,6 @@ footer .wrap{display:flex;flex-direction:column;gap:1.1rem}
 
   /* nav solid on scroll */
   var nav = document.getElementById('nav');
-  function onScroll(){ nav.classList.toggle('solid', window.scrollY > 40); }
-  window.addEventListener('scroll', onScroll, {passive:true});
-  onScroll();
-
-  /* reveal on scroll */
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){ e.target.classList.add('revealed'); io.unobserve(e.target); }
-    });
-  },{threshold:.12, rootMargin:'0px 0px -6% 0px'});
-  document.querySelectorAll('[data-reveal]').forEach(function(el){ io.observe(el); });
 
   /* ---- gestione modali: inert + focus trap condivisi ---- */
   function setInert(els, on){
@@ -780,6 +765,6 @@ footer .wrap{display:flex;flex-direction:column;gap:1.1rem}
   });
 })();
 </script>
-  <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

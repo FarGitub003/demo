@@ -4,6 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.classList.add('js')</script>
+<!-- FAR Motion: il nucleo va senza defer (mette html.fm-js prima del primo disegno) -->
+<link rel="stylesheet" href="far-motion.min.css">
+<script src="far-motion.min.js"></script>
+<link rel="stylesheet" href="sceniche/odometro.css">
+<script src="sceniche/odometro.js" defer></script>
 <title>Armonia Centro Estetico — Fabrizia Piergiacomo · Foggia, via Gabriele Pepe 49</title>
 <meta name="description" content="Il centro estetico di Fabrizia Piergiacomo a Foggia, aperto nel 2017. Trattamenti viso e sguardo, corpo, mani e piedi: il listino completo con i prezzi, gli orari invernali ed estivi. Sito dimostrativo.">
 <meta name="robots" content="noindex,nofollow">
@@ -130,10 +135,10 @@ h1,h2,h3,h4{font-family:'EB Garamond',Georgia,serif;font-weight:400;line-height:
   color:var(--inchiostro);
   transition:background .45s var(--ease-soft),box-shadow .45s;
 }
-.nav.solid{background:rgba(251,247,243,.95);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(43,37,40,.12)}
+.nav.fm-attaccata{background:rgba(251,247,243,.95);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(43,37,40,.12)}
 /* Col pannello aperto la barra resta SOPRA di esso: lasciata color inchiostro, il
    marchio dava 1,80:1 e la X del burger 1,33:1 — cioe' il comando per chiudere era
-   invisibile. Va DOPO .solid per vincere a parita' di specificita'. */
+   invisibile. Va DOPO .fm-attaccata per vincere a parita' di specificita'. */
 .nav.su-pannello{color:var(--crema);background:transparent;backdrop-filter:none;box-shadow:none}
 .nav.su-pannello .nav-brand svg{color:var(--cipria-chiara)}
 .nav-brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:'EB Garamond',Georgia,serif;font-size:1.18rem;letter-spacing:.24em;flex-shrink:0;white-space:nowrap}
@@ -249,8 +254,6 @@ h1,h2,h3,h4{font-family:'EB Garamond',Georgia,serif;font-weight:400;line-height:
 /* Il reveal vive SOLO a JS acceso: senza .js l'opacita' di partenza non viene mai
    scritta, quindi a JavaScript spento i 41 blocchi restano leggibili invece di
    restare a opacity:0 per sempre (nessuno potrebbe rimetterli a 1). */
-.js [data-reveal]{opacity:0;transform:translateY(30px);transition:opacity .9s var(--ease-soft),transform .9s var(--ease-soft)}
-.js [data-reveal].in{opacity:1;transform:none}
 
 /* ---------- intro ---------- */
 .intro{background:var(--crema);text-align:center}
@@ -460,15 +463,7 @@ footer .fine{font-size:.73rem;max-width:60ch}
   .stagione dd{margin-bottom:.55rem}
 }
 /* ---------- reduced motion ---------- */
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
-  html{scroll-behavior:auto}
-  /* .js perche' ora la regola da battere e' `.js [data-reveal]{opacity:0}`: una media
-     query non aggiunge specificita', quindi senza il prefisso questa riga perderebbe. */
-  .js [data-reveal]{opacity:1;transform:none}
-  .hero .cascade{opacity:1;transform:none}
-  .marquee-track{animation:none}
-}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
 </style>
 <noscript><style>
   /* Senza JS il burger non puo' aprire il pannello e la barra non puo' diventare
@@ -506,7 +501,7 @@ footer .fine{font-size:.73rem;max-width:60ch}
   </defs>
 </svg>
 
-<header class="nav" id="nav">
+<header class="nav fm-testata" id="nav" data-fm-soglia="40">
   <a class="nav-brand" href="#top" aria-label="Armonia Centro Estetico, torna su">
     <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 55 C15 43 15 22 32 6 C49 22 49 43 32 55 C32 39 32 20 32 6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     ARMONIA
@@ -561,22 +556,22 @@ footer .fine{font-size:.73rem;max-width:60ch}
 
 <section class="section intro">
   <div class="wrap">
-    <p class="eyebrow" data-reveal>Il centro</p>
-    <h2 data-reveal>Un centro estetico solo, con dentro una persona sola che risponde di tutto.</h2>
-    <p data-reveal>Armonia è il centro che Fabrizia Piergiacomo ha aperto nel 2017 in via Gabriele Pepe, dopo anni passati a lavorare nei centri di altri. Nove famiglie di trattamenti, dalla ceretta al laser a diodo, dalla ricostruzione delle unghie al trucco semipermanente: il prezzo di partenza è scritto qui sotto, per tutte.</p>
+    <p class="eyebrow" data-fm="sali">Il centro</p>
+    <h2 data-fm="sali">Un centro estetico solo, con dentro una persona sola che risponde di tutto.</h2>
+    <p data-fm="sali">Armonia è il centro che Fabrizia Piergiacomo ha aperto nel 2017 in via Gabriele Pepe, dopo anni passati a lavorare nei centri di altri. Nove famiglie di trattamenti, dalla ceretta al laser a diodo, dalla ricostruzione delle unghie al trucco semipermanente: il prezzo di partenza è scritto qui sotto, per tutte.</p>
     <div class="numeri">
-      <article data-reveal>
-        <span class="cifra">2009</span>
+      <article data-fm="sali">
+        <span class="cifra" data-fms="odometro">2009</span>
         <h3>Il titolo</h3>
         <p>L'anno in cui Fabrizia consegue il titolo di estetista specializzata, dopo il liceo scientifico e la formazione in ambito estetico.</p>
       </article>
-      <article data-reveal>
-        <span class="cifra">2017</span>
+      <article data-fm="sali">
+        <span class="cifra" data-fms="odometro">2017</span>
         <h3>Armonia apre</h3>
         <p>Dopo gli anni da dipendente e due anni dentro il salone di una parrucchiera, il centro diventa suo, con il suo nome sulla porta.</p>
       </article>
-      <article data-reveal>
-        <span class="cifra">1.032</span>
+      <article data-fm="sali">
+        <span class="cifra" data-fms="odometro">1.032</span>
         <h3>Persone su Facebook</h3>
         <p>Seguono la pagina di Armonia, dove Fabrizia annuncia promozioni e disponibilità. E 37 hanno segnato di esserci state.</p>
       </article>
@@ -587,43 +582,43 @@ footer .fine{font-size:.73rem;max-width:60ch}
 <section class="section dark grain storia" id="storia">
   <div class="wrap">
     <div>
-      <p class="eyebrow" data-reveal>La storia</p>
-      <h2 data-reveal>Fabrizia ha fatto il liceo scientifico. Poi ha scelto le mani.</h2>
-      <p class="corsivo" data-reveal>«La bellezza salverà il mondo» è la frase che Fabrizia ha messo sulla home del suo sito. Il resto della storia lo racconta lei, e comincia da un diploma che con l'estetica non c'entrava niente.</p>
-      <div class="storia-cita" data-reveal>
+      <p class="eyebrow" data-fm="sali">La storia</p>
+      <h2 data-fm="sali">Fabrizia ha fatto il liceo scientifico. Poi ha scelto le mani.</h2>
+      <p class="corsivo" data-fm="sali">«La bellezza salverà il mondo» è la frase che Fabrizia ha messo sulla home del suo sito. Il resto della storia lo racconta lei, e comincia da un diploma che con l'estetica non c'entrava niente.</p>
+      <div class="storia-cita" data-fm="sali">
         <p>Chi entra da Armonia trova sempre la stessa persona: quella che ha studiato il trattamento, quella che lo fa e quella che poi ne risponde.</p>
       </div>
     </div>
     <ol class="tappe">
-      <li class="tappa" data-reveal>
+      <li class="tappa" data-fm="sali">
         <span class="anno muto">Liceo</span>
         <div>
           <h3>Lo scientifico «G. Marconi»</h3>
           <p>Il diploma al liceo scientifico di Foggia: il punto da cui parte, e da cui poi decide di girare del tutto.</p>
         </div>
       </li>
-      <li class="tappa" data-reveal>
+      <li class="tappa" data-fm="sali">
         <span class="anno">2009</span>
         <div>
           <h3>Estetista specializzata</h3>
           <p>Segue la formazione in ambito estetico e consegue il titolo di estetista specializzata.</p>
         </div>
       </li>
-      <li class="tappa" data-reveal>
+      <li class="tappa" data-fm="sali">
         <span class="anno muto">Poi</span>
         <div>
           <h3>Anni nei centri degli altri</h3>
           <p>Lavora per anni come dipendente presso altri centri estetici: è lì che il mestiere si impara davvero, sulle clienti di qualcun altro.</p>
         </div>
       </li>
-      <li class="tappa" data-reveal>
+      <li class="tappa" data-fm="sali">
         <span class="anno muto">2 anni</span>
         <div>
           <h3>Un angolo dentro un salone</h3>
           <p>I primi due anni in proprio li passa in collaborazione con una parrucchiera, in un piccolo spazio dentro il suo salone.</p>
         </div>
       </li>
-      <li class="tappa" data-reveal>
+      <li class="tappa" data-fm="sali">
         <span class="anno">2017</span>
         <div>
           <h3>Armonia Centro Estetico</h3>
@@ -644,19 +639,19 @@ footer .fine{font-size:.73rem;max-width:60ch}
 <section class="section listino" id="listino">
   <div class="wrap">
     <div class="testa">
-      <p class="eyebrow" data-reveal>Il listino</p>
-      <h2 data-reveal>Tutti i trattamenti, con il prezzo da cui si parte.</h2>
-      <p data-reveal>Nove famiglie di trattamenti divise in tre aree. Accanto a ognuna c'è la cifra da cui parte: quanto costa esattamente il tuo dipende dalla zona e dal trattamento, e te lo diciamo prima di cominciare.</p>
+      <p class="eyebrow" data-fm="sali">Il listino</p>
+      <h2 data-fm="sali">Tutti i trattamenti, con il prezzo da cui si parte.</h2>
+      <p data-fm="sali">Nove famiglie di trattamenti divise in tre aree. Accanto a ognuna c'è la cifra da cui parte: quanto costa esattamente il tuo dipende dalla zona e dal trattamento, e te lo diciamo prima di cominciare.</p>
     </div>
 
     <div class="area">
-      <div class="tessera t-1" data-reveal>
+      <div class="tessera t-1" data-fm="sali">
         <svg class="pat" aria-hidden="true"><rect width="100%" height="100%" fill="url(#petali-1)"/></svg>
         <svg class="t-segno" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 55 C15 43 15 22 32 6 C49 22 49 43 32 55 C32 39 32 20 32 6"/></svg>
         <span class="t-nome">Viso e sguardo</span>
         <span class="t-sotto">Quattro trattamenti · da 20 €</span>
       </div>
-      <div class="area-voci" data-reveal>
+      <div class="area-voci" data-fm="sali">
         <ul class="voci">
           <li class="voce">
             <div class="voce-testa"><h4>Trucco semipermanente</h4><span class="punti" aria-hidden="true"></span><span class="prezzo">da 150 €</span></div>
@@ -679,13 +674,13 @@ footer .fine{font-size:.73rem;max-width:60ch}
     </div>
 
     <div class="area rovescia">
-      <div class="tessera t-2" data-reveal>
+      <div class="tessera t-2" data-fm="sali">
         <svg class="pat" aria-hidden="true"><rect width="100%" height="100%" fill="url(#petali-2)"/></svg>
         <svg class="t-segno" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 55 C15 43 15 22 32 6 C49 22 49 43 32 55 C32 39 32 20 32 6"/></svg>
         <span class="t-nome">Corpo</span>
         <span class="t-sotto">Tre trattamenti · da 5 €</span>
       </div>
-      <div class="area-voci" data-reveal>
+      <div class="area-voci" data-fm="sali">
         <ul class="voci">
           <li class="voce">
             <div class="voce-testa"><h4>Epilazione definitiva</h4><span class="punti" aria-hidden="true"></span><span class="prezzo">da 19 €</span></div>
@@ -704,13 +699,13 @@ footer .fine{font-size:.73rem;max-width:60ch}
     </div>
 
     <div class="area">
-      <div class="tessera t-3" data-reveal>
+      <div class="tessera t-3" data-fm="sali">
         <svg class="pat" aria-hidden="true"><rect width="100%" height="100%" fill="url(#petali-3)"/></svg>
         <svg class="t-segno" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 55 C15 43 15 22 32 6 C49 22 49 43 32 55 C32 39 32 20 32 6"/></svg>
         <span class="t-nome">Mani e piedi</span>
         <span class="t-sotto">Due trattamenti · da 12 €</span>
       </div>
-      <div class="area-voci" data-reveal>
+      <div class="area-voci" data-fm="sali">
         <ul class="voci">
           <li class="voce">
             <div class="voce-testa"><h4>Mani e unghie</h4><span class="punti" aria-hidden="true"></span><span class="prezzo">da 12 €</span></div>
@@ -724,7 +719,7 @@ footer .fine{font-size:.73rem;max-width:60ch}
       </div>
     </div>
 
-    <div class="nota-prezzi" data-reveal>
+    <div class="nota-prezzi" data-fm="sali">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4M12 8h.01"/></svg>
       <p>I prezzi qui sopra sono quelli di partenza. Per il laser, il trucco semipermanente e i trattamenti corpo la cifra cambia con la zona e con il numero di sedute: telefona e te la diciamo prima di fissare l'appuntamento.</p>
     </div>
@@ -733,24 +728,24 @@ footer .fine{font-size:.73rem;max-width:60ch}
 
 <section class="section quote">
   <div class="wrap">
-    <blockquote data-reveal>«La bellezza salverà il mondo.»</blockquote>
-    <cite data-reveal>Fëdor Dostoevskij</cite>
-    <p class="fonte" data-reveal>La frase che Armonia ha scelto per presentarsi.</p>
+    <blockquote data-fm="sali">«La bellezza salverà il mondo.»</blockquote>
+    <cite data-fm="sali">Fëdor Dostoevskij</cite>
+    <p class="fonte" data-fm="sali">La frase che Armonia ha scelto per presentarsi.</p>
   </div>
 </section>
 
 <section class="section orari" id="orari">
   <div class="wrap">
     <div class="testa">
-      <p class="eyebrow" data-reveal>Quando siamo aperti</p>
-      <h2 data-reveal>Due orari, uno per l'inverno e uno per l'estate.</h2>
-      <p data-reveal>Da settembre a maggio e da giugno ad agosto Armonia cambia orario. Qui sotto ci sono tutti e due, e quello valido adesso è in evidenza. La domenica è chiuso.</p>
+      <p class="eyebrow" data-fm="sali">Quando siamo aperti</p>
+      <h2 data-fm="sali">Due orari, uno per l'inverno e uno per l'estate.</h2>
+      <p data-fm="sali">Da settembre a maggio e da giugno ad agosto Armonia cambia orario. Qui sotto ci sono tutti e due, e quello valido adesso è in evidenza. La domenica è chiuso.</p>
     </div>
-    <div class="stato-riga" data-reveal>
+    <div class="stato-riga" data-fm="sali">
       <p class="stato" id="stato"><span class="pallino" aria-hidden="true"></span><span id="statoTesto">Orari di apertura</span></p>
     </div>
     <div class="stagioni">
-      <div class="stagione" id="st-inverno" data-reveal>
+      <div class="stagione" id="st-inverno" data-fm="sali">
         <div class="testa-st"><h3>Orario invernale</h3></div>
         <p class="mesi">Da settembre a maggio</p>
         <dl class="ora-ora">
@@ -763,7 +758,7 @@ footer .fine{font-size:.73rem;max-width:60ch}
           <dt data-g="0">Domenica</dt><dd class="chiuso" data-g="0">Chiuso</dd>
         </dl>
       </div>
-      <div class="stagione" id="st-estate" data-reveal>
+      <div class="stagione" id="st-estate" data-fm="sali">
         <div class="testa-st"><h3>Orario estivo</h3></div>
         <p class="mesi">Da giugno ad agosto</p>
         <dl class="ora-ora">
@@ -783,23 +778,23 @@ footer .fine{font-size:.73rem;max-width:60ch}
 <section class="section dark grain finale" id="contatti">
   <svg class="finale-firma" viewBox="0 0 260 96" aria-hidden="true"><path d="M10 86 C70 82 124 64 164 38 C196 17 224 8 252 6 C248 44 226 72 176 84 C132 95 58 94 10 86 C68 86 128 74 180 50 C216 33 238 17 252 6"/></svg>
   <div class="wrap">
-    <p class="eyebrow" data-reveal>Dove siamo</p>
-    <h2 data-reveal>Via Gabriele Pepe 49, a Foggia.</h2>
-    <p class="corsivo" data-reveal>Per fissare un appuntamento la strada più corta è il telefono: Fabrizia risponde e ti dice quando c'è posto.</p>
+    <p class="eyebrow" data-fm="sali">Dove siamo</p>
+    <h2 data-fm="sali">Via Gabriele Pepe 49, a Foggia.</h2>
+    <p class="corsivo" data-fm="sali">Per fissare un appuntamento la strada più corta è il telefono: Fabrizia risponde e ti dice quando c'è posto.</p>
     <div class="contatti">
-      <div class="contatto" data-reveal>
+      <div class="contatto" data-fm="sali">
         <span class="k">Telefono</span>
         <p><a href="tel:+393299615316">329 961 5316</a></p>
       </div>
-      <div class="contatto" data-reveal>
+      <div class="contatto" data-fm="sali">
         <span class="k">Dove</span>
         <p>Via Gabriele Pepe, 49<br>71121 Foggia (FG)<br><a href="https://maps.google.com/?q=Via+Gabriele+Pepe+49,+71121+Foggia" target="_blank" rel="noopener">Apri in Google Maps</a></p>
       </div>
-      <div class="contatto" data-reveal>
+      <div class="contatto" data-fm="sali">
         <span class="k">Scrivici</span>
         <p><a href="mailto:armonia.fabrizia@gmail.com?subject=Richiesta%20appuntamento">armonia.fabrizia@gmail.com</a></p>
       </div>
-      <div class="contatto" data-reveal>
+      <div class="contatto" data-fm="sali">
         <span class="k">Seguici</span>
         <p class="social">
           <a href="https://www.instagram.com/armoniabeautycenter" target="_blank" rel="noopener">
@@ -834,8 +829,6 @@ footer .fine{font-size:.73rem;max-width:60ch}
 
   /* ---- nav solida allo scroll ---- */
   var nav = document.getElementById('nav');
-  var onScroll = function(){ nav.classList.toggle('solid', window.scrollY > 40); };
-  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
 
   /* ---- burger + inert + trappola Tab ---- */
   var burger = document.querySelector('.burger');
@@ -881,16 +874,6 @@ footer .fine{font-size:.73rem;max-width:60ch}
     if(e.key === 'Escape'){ chiudiMenu(); burger.focus(); return; }
     trappola(e, mm, burger);
   });
-
-  /* ---- reveal allo scroll ---- */
-  if('IntersectionObserver' in window && !reduced){
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, {threshold:.14});
-    document.querySelectorAll('[data-reveal]').forEach(function(el){ io.observe(el); });
-  } else {
-    document.querySelectorAll('[data-reveal]').forEach(function(el){ el.classList.add('in'); });
-  }
 
   /* ---- la firma si disegna ---- */
   var fp = document.getElementById('firmaPath');
@@ -1001,6 +984,6 @@ footer .fine{font-size:.73rem;max-width:60ch}
   setInterval(function(){ aggiornaOrari(); }, 60000);
 })();
 </script>
-  <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

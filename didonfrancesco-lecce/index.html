@@ -2,6 +2,11 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
+<!-- FAR Motion: il nucleo va senza defer (mette html.fm-js prima del primo disegno) -->
+<link rel="stylesheet" href="far-motion.min.css">
+<script src="far-motion.min.js"></script>
+<link rel="stylesheet" href="sceniche/timbro.css">
+<script src="sceniche/timbro.js" defer></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>La bottega dell'arte — Mario Di Donfrancesco · Statuaria sacra e restauro della cartapesta a Lecce</title>
 <meta name="description" content="Il laboratorio di statuaria sacra e restauro della cartapesta di Mario Di Donfrancesco, nel centro storico di Lecce dal 1980. Catalogo di Cristi, Madonne, Santi, presepistica e maschere. Sito dimostrativo.">
@@ -96,7 +101,7 @@ h1,h2,h3{font-family:'Sorts Mill Goudy',serif;font-weight:400;line-height:1.08}
   color:var(--inchiostro);
   transition:background .45s var(--ease-soft),box-shadow .45s;
 }
-.nav.solid{background:rgba(242,234,214,.94);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(43,38,32,.12)}
+.nav.fm-attaccata{background:rgba(242,234,214,.94);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(43,38,32,.12)}
 .nav-brand{display:flex;align-items:center;gap:.65rem;text-decoration:none;font-family:'Sorts Mill Goudy',serif;font-size:1.06rem;letter-spacing:.13em;flex-shrink:0;white-space:nowrap}
 .nav-brand svg{width:32px;height:32px;flex:none;color:var(--cardinale)}
 .nav-links{display:flex;gap:2rem;list-style:none}
@@ -197,8 +202,6 @@ h1,h2,h3{font-family:'Sorts Mill Goudy',serif;font-weight:400;line-height:1.08}
 /* ---------- sezioni base ---------- */
 .section{padding:clamp(4.5rem,9vw,7.5rem) 0}
 .wrap{width:min(1200px,92vw);margin-inline:auto}
-[data-reveal]{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease-soft),transform .9s var(--ease-soft)}
-[data-reveal].in{opacity:1;transform:none}
 
 /* ---------- intro ---------- */
 .intro{background:var(--pergamena);text-align:center}
@@ -413,19 +416,13 @@ footer .fine{font-size:.72rem}
   .cat-figure{align-items:flex-start}
 }
 /* ---------- reduced motion ---------- */
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
-  html{scroll-behavior:auto}
-  [data-reveal]{opacity:1;transform:none}
-  .hero .cascade{opacity:1;transform:none}
-  .marquee-track{animation:none}
-}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
 </style>
 </head>
 <body>
 <a class="skip-link" href="#main">Salta al contenuto</a>
 
-<header class="nav" id="nav">
+<header class="nav fm-testata" id="nav" data-fm-soglia="40">
   <a class="nav-brand" href="#top" aria-label="La bottega dell'arte, torna su">
     <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 50 C 14 38 20 32 26 28 C 36 21 50 18 52 28 C 54 37 46 43 39 41 C 33 39 32 32 36 28 C 39 25 44 26 45 30 C 46 33 44 35 41 35" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
     LA BOTTEGA DELL'ARTE
@@ -480,21 +477,21 @@ footer .fine{font-size:.72rem}
 
 <section class="section intro" id="chi-siamo">
   <div class="wrap">
-    <p class="eyebrow" data-reveal>La bottega</p>
-    <h2 data-reveal>Le mani che fanno le statue, e le mani che le salvano.</h2>
-    <p data-reveal>Dal 1980 il laboratorio di via F. D'Amelio fa le due cose che una statua può chiedere: nascere e tornare com'era. Statuaria sacra di nuova fabbricazione e restauro della cartapesta e del legno, con l'abilitazione della Sovrintendenza alle Belle Arti.</p>
+    <p class="eyebrow" data-fm="sali">La bottega</p>
+    <h2 data-fm="sali">Le mani che fanno le statue, e le mani che le salvano.</h2>
+    <p data-fm="sali">Dal 1980 il laboratorio di via F. D'Amelio fa le due cose che una statua può chiedere: nascere e tornare com'era. Statuaria sacra di nuova fabbricazione e restauro della cartapesta e del legno, con l'abilitazione della Sovrintendenza alle Belle Arti.</p>
     <div class="intro-riga">
-      <article data-reveal>
+      <article data-fm="sali">
         <span class="cifra">1980</span>
         <h3>La bottega apre</h3>
         <p>Nel centro storico di Lecce, dove sta ancora oggi: via F. D'Amelio 1, a pochi passi da Piazza S. Oronzo.</p>
       </article>
-      <article data-reveal>
+      <article data-fm="sali">
         <span class="cifra">6</span>
         <h3>Paesi con le sue opere</h3>
         <p>Italia, Malta, Germania, Francia, Stati Uniti e Stato del Vaticano: dove sono collocate opere restaurate e di nuova fabbricazione.</p>
       </article>
-      <article data-reveal>
+      <article data-fm="sali">
         <span class="cifra">5</span>
         <h3>Famiglie di opere</h3>
         <p>Statue del Cristo, della Madonna e dei Santi, presepistica e maschere carnevalesche: il catalogo della bottega.</p>
@@ -508,12 +505,12 @@ footer .fine{font-size:.72rem}
 <section class="section catalogo" id="catalogo">
   <div class="wrap">
     <div class="cat-head">
-      <p class="eyebrow" data-reveal>Il catalogo</p>
-      <h2 data-reveal>Cinque famiglie di opere, coi loro nomi.</h2>
-      <p data-reveal>Le fotografie sono quelle del catalogo storico della bottega: ogni statua posa sulla carta di questa pagina come su un fondale da studio.</p>
+      <p class="eyebrow" data-fm="sali">Il catalogo</p>
+      <h2 data-fm="sali">Cinque famiglie di opere, coi loro nomi.</h2>
+      <p data-fm="sali">Le fotografie sono quelle del catalogo storico della bottega: ogni statua posa sulla carta di questa pagina come su un fondale da studio.</p>
     </div>
     <div class="categoria">
-      <div class="cat-testo" data-reveal>
+      <div class="cat-testo" data-fm="sali">
         <h3>Statue del Cristo</h3>
         <span class="num">Dal Sacro Cuore alla Via Crucis</span>
         <p>I soggetti della devozione: il Sacro Cuore, il Crocifisso, l'Ecce Homo, il Gesù bambino, fino alla scena di gruppo della Via Crucis.</p>
@@ -521,7 +518,7 @@ footer .fine{font-size:.72rem}
           <li>Sacro Cuore</li><li>Crocifisso</li><li>Ecce Homo</li><li>Gesù bambino</li><li>Via Crucis</li>
         </ul>
       </div>
-      <div class="cat-figure" data-reveal>
+      <div class="cat-figure" data-fm="sali">
         <figure>
           <img src="img/cristi_crocifisso_cristo2.jpg" alt="Crocifisso in cartapesta del catalogo della bottega" loading="lazy">
           <figcaption>Crocifisso</figcaption>
@@ -533,7 +530,7 @@ footer .fine{font-size:.72rem}
       </div>
     </div>
     <div class="categoria">
-      <div class="cat-testo" data-reveal>
+      <div class="cat-testo" data-fm="sali">
         <h3>Statue della Madonna</h3>
         <span class="num">Dodici Madonne in catalogo</span>
         <p>L'Addolorata, l'Assunta, la Pietà, la Madonna con Bambino, la Madonna del Buon Rimedio, Maria Ausiliatrice, l'Immacolata, il Cuore di Maria.</p>
@@ -541,7 +538,7 @@ footer .fine{font-size:.72rem}
           <li>Addolorata</li><li>Assunta</li><li>Pietà</li><li>Immacolata</li><li>Ausiliatrice</li><li>Buon Rimedio</li>
         </ul>
       </div>
-      <div class="cat-figure" data-reveal>
+      <div class="cat-figure" data-fm="sali">
         <figure>
           <img src="img/madonne_addolorata_madonna1.jpg" alt="Statua della Madonna Addolorata in cartapesta" loading="lazy">
           <figcaption>Madonna Addolorata</figcaption>
@@ -553,7 +550,7 @@ footer .fine{font-size:.72rem}
       </div>
     </div>
     <div class="categoria">
-      <div class="cat-testo" data-reveal>
+      <div class="cat-testo" data-fm="sali">
         <h3>Statue di Santi</h3>
         <span class="num">Da S. Oronzo, patrono di Lecce, in poi</span>
         <p>Sedici immagini in catalogo: S. Oronzo, S. Giorgio, S. Michele, S. Biagio, S. Filippo Smaldone, S. Rocco, S. Cataldo, S. Antonio da Padova e gli altri.</p>
@@ -561,7 +558,7 @@ footer .fine{font-size:.72rem}
           <li>S. Oronzo</li><li>S. Giorgio</li><li>S. Michele</li><li>S. Biagio</li><li>S. Rocco</li><li>S. Antonio</li>
         </ul>
       </div>
-      <div class="cat-figure" data-reveal>
+      <div class="cat-figure" data-fm="sali">
         <figure>
           <img src="img/santi_soronzo_santo29.jpg" alt="Statua di Sant'Oronzo, patrono di Lecce, in cartapesta" loading="lazy">
           <figcaption>S. Oronzo</figcaption>
@@ -573,7 +570,7 @@ footer .fine{font-size:.72rem}
       </div>
     </div>
     <div class="categoria">
-      <div class="cat-testo" data-reveal>
+      <div class="cat-testo" data-fm="sali">
         <h3>Presepistica</h3>
         <span class="num">Angeli, pastori, Natività</span>
         <p>Il presepe leccese di bottega: gli angeli, i tanti pastori, le Natività. La tradizione che ha fatto conoscere la cartapesta di Lecce nel mondo.</p>
@@ -581,7 +578,7 @@ footer .fine{font-size:.72rem}
           <li>Angeli</li><li>Pastori</li><li>Natività</li>
         </ul>
       </div>
-      <div class="cat-figure" data-reveal>
+      <div class="cat-figure" data-fm="sali">
         <figure>
           <img src="img/presepistica_angelo_presep1.jpg" alt="Angelo da presepe in cartapesta, veste rosa e ali brune" loading="lazy">
           <figcaption>Angelo</figcaption>
@@ -589,7 +586,7 @@ footer .fine{font-size:.72rem}
       </div>
     </div>
     <div class="categoria">
-      <div class="cat-testo" data-reveal>
+      <div class="cat-testo" data-fm="sali">
         <h3>Maschere carnevalesche</h3>
         <span class="num">La commedia dell'arte in cartapesta</span>
         <p>Arlecchino, Pulcinella, Pantalone, Colombina, Brighella, Balanzone, Beppe Nappa, Capitan Spaventa, Rosaura: dieci maschere in catalogo.</p>
@@ -597,7 +594,7 @@ footer .fine{font-size:.72rem}
           <li>Arlecchino</li><li>Pulcinella</li><li>Pantalone</li><li>Colombina</li><li>Brighella</li>
         </ul>
       </div>
-      <div class="cat-figure" data-reveal>
+      <div class="cat-figure" data-fm="sali">
         <figure>
           <img src="img/maschere_arlecchino_maschera3.jpg" alt="Statua di Arlecchino in cartapesta col costume a losanghe colorate" loading="lazy">
           <figcaption>Arlecchino</figcaption>
@@ -620,18 +617,18 @@ footer .fine{font-size:.72rem}
 
 <section class="section dark grain restauro" id="restauro">
   <div class="wrap">
-    <p class="eyebrow" data-reveal>Il restauro</p>
-    <h2 data-reveal>Abilitati dalla Sovrintendenza a salvare ciò che ha tre secoli.</h2>
-    <p class="serif-voice" data-reveal>Il laboratorio è abilitato dalla Sovrintendenza alle Belle Arti al restauro di opere in cartapesta e in legno.</p>
-    <p data-reveal style="margin-top:1rem">Il caso documentato dalla bottega: un Cristo morto in legno, databile intorno alla seconda metà del Settecento, di fattura chiaramente napoletana. Sotto un vecchio intervento maldestro c'era perfino carta di giornale incollata e ridipinta. Il lavoro, passo per passo:</p>
-    <ul class="passi" data-reveal>
+    <p class="eyebrow" data-fms="timbro" data-fms-durata="700" data-fms-giro="-9">Il restauro</p>
+    <h2 data-fm="sali">Abilitati dalla Sovrintendenza a salvare ciò che ha tre secoli.</h2>
+    <p class="serif-voice" data-fm="sali">Il laboratorio è abilitato dalla Sovrintendenza alle Belle Arti al restauro di opere in cartapesta e in legno.</p>
+    <p data-fm="sali" style="margin-top:1rem">Il caso documentato dalla bottega: un Cristo morto in legno, databile intorno alla seconda metà del Settecento, di fattura chiaramente napoletana. Sotto un vecchio intervento maldestro c'era perfino carta di giornale incollata e ridipinta. Il lavoro, passo per passo:</p>
+    <ul class="passi" data-fm="sali">
       <li>disinfestazione del legno dagli insetti xilofagi</li>
       <li>analisi con luce infrarossa e ultravioletta</li>
       <li>rimozione del vecchio restauro maldestro</li>
       <li>consolidamento, stuccature e reintegrazione pittorica</li>
     </ul>
     <div class="prove">
-      <div class="coppia" data-reveal>
+      <div class="coppia" data-fm="sali">
         <figure>
           <img src="img/restauro_cristomorto_PRIMA.jpg" alt="Il Cristo morto del Settecento prima del restauro" loading="lazy">
           <span class="chip">Prima</span>
@@ -642,7 +639,7 @@ footer .fine{font-size:.72rem}
         </figure>
         <p class="coppia-cap">Il Cristo morto del XVIII secolo, dall'archivio fotografico della bottega.</p>
       </div>
-      <div class="coppia" data-reveal>
+      <div class="coppia" data-fm="sali">
         <figure>
           <img src="img/restauro_madonna_PRIMA.jpg" alt="Statua della Madonna prima del restauro, con l'alterazione cromatica" loading="lazy">
           <span class="chip">Prima</span>
@@ -659,25 +656,25 @@ footer .fine{font-size:.72rem}
 
 <section class="section quote">
   <div class="wrap">
-    <blockquote data-reveal>«Il professor Mario Di Donfrancesco dirige il laboratorio di statuaria sacra e restauro della cartapesta La bottega dell'arte, sito in Lecce, fin dal 1980.»</blockquote>
-    <cite data-reveal>dal racconto della bottega</cite>
+    <blockquote data-fm="sali">«Il professor Mario Di Donfrancesco dirige il laboratorio di statuaria sacra e restauro della cartapesta La bottega dell'arte, sito in Lecce, fin dal 1980.»</blockquote>
+    <cite data-fm="sali">dal racconto della bottega</cite>
   </div>
 </section>
 
 <section class="section dark grain" id="maestro">
   <div class="wrap split">
     <div>
-      <p class="eyebrow" data-reveal>Il maestro</p>
-      <h2 data-reveal>Un professore con le mani nella carta.</h2>
-      <p class="serif-voice" data-reveal>Mario Di Donfrancesco, diplomato all'Accademia di Belle Arti di Lecce, il mestiere lo fa e lo insegna.</p>
-      <ul class="titoli" data-reveal>
+      <p class="eyebrow" data-fm="sali">Il maestro</p>
+      <h2 data-fm="sali">Un professore con le mani nella carta.</h2>
+      <p class="serif-voice" data-fm="sali">Mario Di Donfrancesco, diplomato all'Accademia di Belle Arti di Lecce, il mestiere lo fa e lo insegna.</p>
+      <ul class="titoli" data-fm="sali">
         <li>Accademia di Belle Arti di Lecce <small>la formazione</small></li>
         <li>Scuola d'arte «E. Maccagnani» <small>dirige il corso di Cartapesta</small></li>
         <li>Regione Basilicata <small>corsi professionali sull'arte della cartapesta</small></li>
       </ul>
-      <p data-reveal style="margin-top:1.4rem">In bottega le statue nascono, si restaurano e si affollano una accanto all'altra, in attesa di partire per le chiese e le case a cui sono destinate.</p>
+      <p data-fm="sali" style="margin-top:1.4rem">In bottega le statue nascono, si restaurano e si affollano una accanto all'altra, in attesa di partire per le chiese e le case a cui sono destinate.</p>
     </div>
-    <figure class="split-media" data-reveal>
+    <figure class="split-media" data-fm="sali">
       <img src="img/bottega_interno1.jpg" alt="L'interno della bottega, affollato di statue in lavorazione" loading="lazy">
       <figcaption>La bottega di via F. D'Amelio</figcaption>
     </figure>
@@ -687,8 +684,8 @@ footer .fine{font-size:.72rem}
 <section class="section gallery" id="gallery">
   <div class="wrap">
     <div class="cat-head">
-      <p class="eyebrow" data-reveal>Gallery</p>
-      <h2 data-reveal>Il catalogo, da vicino.</h2>
+      <p class="eyebrow" data-fm="sali">Gallery</p>
+      <h2 data-fm="sali">Il catalogo, da vicino.</h2>
     </div>
     <div class="gallery-grid">
       <button data-src="img/cristi_sacrocuore_cristo1.jpg" data-tag="Cristi" data-caption="Il Sacro Cuore di Gesù"><img src="img/cristi_sacrocuore_cristo1.jpg" alt="Statua del Sacro Cuore in cartapesta" loading="lazy"></button>
@@ -708,23 +705,23 @@ footer .fine{font-size:.72rem}
 <section class="section dark grain finale" id="contatti">
   <svg class="finale-voluta" viewBox="0 0 150 60" aria-hidden="true"><path d="M4 54 C 14 44 26 38 38 33 C 62 23 104 12 122 20 C 138 27 136 44 122 49 C 110 53 100 45 102 35 C 104 27 113 24 119 29 C 124 33 122 40 116 41"/></svg>
   <div class="wrap">
-    <p class="eyebrow" data-reveal>Dove siamo</p>
-    <h2 data-reveal>La prima traversa a destra di via Rubichi.</h2>
-    <p class="serif-voice" data-reveal>Nel cuore del centro storico di Lecce: da piazzetta Castromediano verso Porta Napoli, a pochi passi da Piazza S. Oronzo.</p>
+    <p class="eyebrow" data-fm="sali">Dove siamo</p>
+    <h2 data-fm="sali">La prima traversa a destra di via Rubichi.</h2>
+    <p class="serif-voice" data-fm="sali">Nel cuore del centro storico di Lecce: da piazzetta Castromediano verso Porta Napoli, a pochi passi da Piazza S. Oronzo.</p>
     <div class="contatti">
-      <div class="contatto" data-reveal>
+      <div class="contatto" data-fm="sali">
         <span class="k">Telefono</span>
         <p><a href="tel:+393683086300">368 3086300</a></p>
       </div>
-      <div class="contatto" data-reveal>
+      <div class="contatto" data-fm="sali">
         <span class="k">Dove</span>
         <p>Via F. D'Amelio 1, 73100 Lecce<br><a href="https://maps.google.com/?q=Via+F.+D'Amelio+1,+Lecce" target="_blank" rel="noopener">Apri in Google Maps</a></p>
       </div>
-      <div class="contatto" data-reveal>
+      <div class="contatto" data-fm="sali">
         <span class="k">Scrivici</span>
         <p><a href="mailto:mariodidonfrancescoddn@gmail.com?subject=Richiesta%20informazioni">mariodidonfrancescoddn@gmail.com</a></p>
       </div>
-      <div class="contatto" data-reveal>
+      <div class="contatto" data-fm="sali">
         <span class="k">In bottega</span>
         <p>Telefonaci per un appuntamento, per un'opera nuova o per il restauro di una statua.</p>
       </div>
@@ -760,8 +757,6 @@ footer .fine{font-size:.72rem}
 
   /* nav solid on scroll */
   var nav = document.getElementById('nav');
-  var onScroll = function(){ nav.classList.toggle('solid', window.scrollY > 40); };
-  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
 
   /* burger + inert + trappola Tab (pattern provato sulle demo firmate) */
   var burger = document.querySelector('.burger');
@@ -807,16 +802,6 @@ footer .fine{font-size:.72rem}
     if(e.key === 'Escape'){ chiudiMenu(); burger.focus(); return; }
     trappola(e, mm, burger);
   });
-
-  /* reveal on scroll */
-  if('IntersectionObserver' in window && !reduced){
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, {threshold:.14});
-    document.querySelectorAll('[data-reveal]').forEach(function(el){ io.observe(el); });
-  } else {
-    document.querySelectorAll('[data-reveal]').forEach(function(el){ el.classList.add('in'); });
-  }
 
   /* voluta che si disegna */
   var vp = document.getElementById('volutaPath');
@@ -875,6 +860,6 @@ footer .fine{font-size:.72rem}
   });
 })();
 </script>
-  <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
