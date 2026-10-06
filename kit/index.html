@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kit FAR AI — automazioni n8n in italiano, installate in 20 minuti</title>
+<meta name="description" content="Tre kit n8n pronti per piccole imprese italiane: preventivi automatici, risposte alle recensioni, mini-CRM con follow-up. Guida in italiano, video di installazione, 30 minuti di aiuto.">
+<meta name="robots" content="noindex">
+<style>
+  :root{
+    --sfondo:#f7f6f2; --carta:#ffffff; --inchiostro:#17161a; --tenue:#5c5a63; --filo:#e3e0d8;
+    --accento:#d9541e; --accento-scuro:#b4430f; --verde:#1f7a4d; --codice:#f1efe9;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --sfondo:#131317; --carta:#1c1c22; --inchiostro:#f1efe9; --tenue:#a7a4ad; --filo:#2c2b33;
+      --accento:#ff7a45; --accento-scuro:#ff9a6e; --verde:#5fd39a; --codice:#23232b;
+    }
+  }
+  :root[data-theme="dark"]{
+    --sfondo:#131317; --carta:#1c1c22; --inchiostro:#f1efe9; --tenue:#a7a4ad; --filo:#2c2b33;
+    --accento:#ff7a45; --accento-scuro:#ff9a6e; --verde:#5fd39a; --codice:#23232b;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--sfondo);color:var(--inchiostro);font:400 17px/1.6 ui-sans-serif,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  .foglio{max-width:66rem;margin:0 auto;padding:3rem 1rem 4rem}
+  header{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;margin-bottom:3rem}
+  .marchio{font-weight:700;letter-spacing:.02em;text-decoration:none;color:var(--inchiostro)}
+  .marchio span{color:var(--accento)}
+  nav a{color:var(--tenue);text-decoration:none;margin-left:1.1rem;font-size:.95rem}
+  nav a:hover{color:var(--inchiostro)}
+  h1{font-size:clamp(1.9rem,4.6vw,3rem);line-height:1.12;letter-spacing:-.02em;margin:0 0 1rem;max-width:40rem}
+  .sotto{font-size:1.15rem;color:var(--tenue);max-width:38rem;margin:0 0 1.6rem}
+  .bottone{display:inline-block;background:var(--accento);color:#fff;text-decoration:none;font-weight:600;padding:.8rem 1.3rem;border-radius:.6rem;border:0;cursor:pointer}
+  .bottone:hover{background:var(--accento-scuro)}
+  .bottone.secondario{background:transparent;color:var(--inchiostro);border:1.5px solid var(--filo)}
+  .bottone.secondario:hover{border-color:var(--inchiostro);background:transparent}
+  .etichette{display:flex;gap:.6rem;flex-wrap:wrap;margin:1.4rem 0 0;padding:0;list-style:none;font-size:.9rem;color:var(--tenue)}
+  .etichette li::before{content:"✓ ";color:var(--verde)}
+  h2{font-size:1.5rem;letter-spacing:-.01em;margin:3.5rem 0 .4rem}
+  .intro{color:var(--tenue);margin:0 0 1.5rem;max-width:40rem}
+  .kit{display:grid;grid-template-columns:1.1fr .9fr;gap:1.6rem;background:var(--carta);border:1px solid var(--filo);border-radius:1rem;padding:1.4rem;margin:0 0 1.4rem}
+  .kit h3{margin:0 0 .3rem;font-size:1.3rem}
+  .kit .per{color:var(--accento);font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin:0 0 .6rem}
+  .kit p{margin:0 0 .8rem}
+  .kit ul{margin:0 0 .8rem;padding-left:1.1rem}
+  .kit li{margin:.2rem 0}
+  video{width:100%;border-radius:.6rem;border:1px solid var(--filo);background:#000;display:block}
+  .did{font-size:.85rem;color:var(--tenue);margin:.5rem 0 0}
+  details{margin-top:.6rem}
+  summary{cursor:pointer;color:var(--accento);font-weight:600}
+  pre{white-space:pre-wrap;background:var(--codice);border-radius:.6rem;padding:.9rem 1rem;font:400 .86rem/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;margin:.6rem 0 0;color:var(--inchiostro)}
+  .pacchetti{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+  .pacchetto{background:var(--carta);border:1px solid var(--filo);border-radius:1rem;padding:1.4rem;display:flex;flex-direction:column}
+  .pacchetto h3{margin:0;font-size:1.1rem}
+  .prezzo{font-size:2.1rem;font-weight:700;letter-spacing:-.02em;margin:.5rem 0 .2rem}
+  .prezzo small{font-size:.9rem;font-weight:400;color:var(--tenue)}
+  .pacchetto ul{padding-left:1.1rem;margin:.6rem 0 1.2rem;flex:1}
+  .pacchetto li{margin:.25rem 0}
+  .pacchetto .bottone{text-align:center}
+  .nota{font-size:.9rem;color:var(--tenue);margin:1rem 0 0}
+  .faq dt{font-weight:600;margin-top:1.1rem}
+  .faq dd{margin:.2rem 0 0;color:var(--tenue)}
+  footer{border-top:1px solid var(--filo);margin-top:4rem;padding-top:1.5rem;font-size:.9rem;color:var(--tenue)}
+  footer a{color:var(--accento)}
+  @media (max-width:860px){.kit{grid-template-columns:1fr}.pacchetti{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="foglio">
+<header>
+  <a class="marchio" href="/kit/">FAR <span>AI</span> · Kit n8n</a>
+  <nav><a href="#kit">I tre kit</a><a href="#prezzi">Prezzi</a><a href="#faq">Domande</a><a href="/">Siti demo</a></nav>
+</header>
+
+<h1>Automazioni n8n in italiano per la tua attività, installate in 20 minuti.</h1>
+<p class="sotto">Tre kit pronti: il preventivo che si scrive da solo, le risposte alle recensioni, il mini-CRM che non dimentica nessuno. Ognuno con guida in italiano, video di installazione passo per passo e 30 minuti di aiuto con me.</p>
+<a class="bottone" href="#prezzi">Vedi i prezzi</a> <a class="bottone secondario" href="#kit">Guarda come funzionano</a>
+<ul class="etichette">
+  <li>Girano sul tuo n8n, i dati restano tuoi</li>
+  <li>Nessun abbonamento a me: paghi una volta</li>
+  <li>Provati davvero: i video sotto sono l'installazione reale</li>
+</ul>
+
+<h2 id="kit">I tre kit</h2>
+<p class="intro">Ogni video è la registrazione dell'installazione su un n8n pulito: import del file, dati, pubblicazione, prova con un cliente finto e l'email che arriva. Quello che vedi è quello che ottieni.</p>
+
+<section class="kit">
+  <div>
+    <p class="per">Per artigiani, imprese edili, servizi a preventivo</p>
+    <h3>Preventivo Lampo</h3>
+    <p>Un cliente compila il modulo «Richiedi un preventivo» sul tuo sito e in meno di un minuto riceve un preventivo indicativo scritto in base al <strong>tuo listino</strong> e alle <strong>tue regole</strong>. Il preventivo parte al cliente da solo; tu ricevi subito l'avviso con la copia (se vuoi approvarlo prima dell'invio, lo aggiungiamo nei 30 minuti di aiuto).</p>
+    <ul>
+      <li>Modulo pronto da mettere sul sito (link o pulsante)</li>
+      <li>Listino e regole li scrivi tu, una volta, in un solo nodo</li>
+      <li>È istruito a usare solo le tue voci e a rimandare «a sopralluogo» ciò che manca; più preciso è il listino, più preciso il preventivo</li>
+    </ul>
+    <details><summary>Esempio reale di email al cliente (dall'ultima prova registrata)</summary>
+<pre>Gentile Sig.ra Verdi,
+
+La ringraziamo per averci contattato. Di seguito le proponiamo un preventivo indicativo per la tinteggiatura delle pareti del soggiorno e della cucina, come da sua richiesta.
+
+Tinteggiatura pareti (materiali inclusi):  
+Soggiorno 45 mq x 8 €/mq = 360 €  
+Cucina 30 mq x 8 €/mq = 240 €  
+Totale tinteggiatura: 600 €
+
+Ritocchi di stucco: questa voce verrà quotata dopo un sopralluogo, in quanto non è presente nel nostro listino.
+
+Sopralluogo: 50 € (gratuito se si conferma il lavoro)  
+Trasporto entro 30 km: 40 €  
+
+Totale stimato (esclusi ritocchi stucco): 690 €
+
+Il preventivo è indicativo e valido per 30 giorni. La invitiamo a rispondere a questa email per concordare una data per il sopralluogo e definire insieme tutti i dettagli.
+
+Resto a disposizione per qualsiasi chiarimento.
+
+Cordiali saluti,  
+Mario Rossi · La Tua Azienda · 095 000000</pre></details>
+  </div>
+  <div>
+    <video controls preload="metadata" poster="video/preventivo-lampo.jpg" src="video/preventivo-lampo.mp4"></video>
+    <p class="did">Installazione completa, 1 min 41 s. Voce sintetica italiana.</p>
+  </div>
+</section>
+
+<section class="kit">
+  <div>
+    <p class="per">Per ristoranti, hotel, B&amp;B, negozi, studi</p>
+    <h3>Recensioni Pronte</h3>
+    <p>Incolli una recensione (Google, TripAdvisor, Facebook) in un modulo privato e ricevi via email <strong>due risposte pronte da copiare</strong>, nel tono che hai scelto tu. Alle negative risponde con le scuse e l'invito a scrivere in privato: niente discussioni, niente rimborsi promessi.</p>
+    <ul>
+      <li>Modulo privato: solo tu lo usi</li>
+      <li>Tono, firma e contatto privato li decidi tu</li>
+      <li>Non pubblica niente da solo: l'ultima parola è sempre tua</li>
+    </ul>
+    <details><summary>Esempio reale: recensione da 2 stelle (dalla prova)</summary>
+<pre>RECENSIONE (Google, 2 stelle): Cibo buono ma abbiamo aspettato 50 minuti per i primi e nessuno si è scusato. Peccato.
+
+RISPOSTA 1 (breve):
+Grazie per averci scelto e per il complimento sul cibo. Ci scusiamo sinceramente per l'attesa e per non averla gestita al meglio. Il vostro feedback è importante per migliorare il servizio. Se desidera, ci contatti in privato a info@tuaazienda.it per parlarne meglio.
+Mario e lo staff della Trattoria Da Mario
+
+RISPOSTA 2 (più personale):
+Caro Marco, grazie per aver condiviso la tua esperienza. Siamo felici che il cibo ti sia piaciuto, ma ci dispiace molto per l'attesa e la mancanza di scuse da parte nostra. Non è il servizio che vogliamo offrire ai nostri ospiti. [...]</pre></details>
+  </div>
+  <div>
+    <video controls preload="metadata" poster="video/recensioni-pronte.jpg" src="video/recensioni-pronte.mp4"></video>
+    <p class="did">Installazione completa, 1 min 47 s. Voce sintetica italiana.</p>
+  </div>
+</section>
+
+<section class="kit">
+  <div>
+    <p class="per">Per studi professionali, agenzie, consulenti, chi riceve contatti dal sito</p>
+    <h3>Mini-CRM Follow-up</h3>
+    <p>Ogni contatto dal sito finisce in una tabella, riceve subito una conferma e tu l'avviso. <strong>Ogni mattina alle 9</strong> ricevi la lista di chi aspetta ancora una risposta da più di 2 giorni, ciascuno con un messaggio di follow-up già scritto: copi, incolli, mandi.</p>
+    <ul>
+      <li>Tabella «Contatti» dentro n8n: niente Google Sheets da configurare</li>
+      <li>Giorni di attesa e ora del promemoria li scegli tu</li>
+      <li>Niente parte verso i tuoi contatti senza di te (a parte la conferma, che puoi spegnere)</li>
+    </ul>
+    <details><summary>Esempio reale del promemoria del mattino (dalla prova)</summary>
+<pre>Questi contatti sono in stato «nuovo» da più di 2 giorni:
+
+- Luca Neri &lt;luca.neri@example.com&gt; · ricevuto il 03/10/2026 · "Avrei bisogno di un preventivo per la dichiarazione dei redditi di una ditta individuale."
+
+===== MESSAGGI PRONTI =====
+LUCA NERI &lt;luca.neri@example.com&gt;
+Gentile Sig. Neri,
+La contatto per sapere se ha già a disposizione i documenti necessari per la dichiarazione dei redditi della sua ditta individuale, così da poterle fornire un preventivo preciso.
+Resto a disposizione per ogni chiarimento.
+Laura Bianchi · Studio Bianchi · 095 000000</pre></details>
+  </div>
+  <div>
+    <video controls preload="metadata" poster="video/mini-crm-follow-up.jpg" src="video/mini-crm-follow-up.mp4"></video>
+    <p class="did">Installazione completa, 2 min 06 s. Voce sintetica italiana.</p>
+  </div>
+</section>
+
+<h2 id="prezzi">Prezzi</h2>
+<p class="intro">Paghi una volta. Ogni kit comprende il file del workflow da importare, la guida in italiano (PDF), il video di installazione e il mio aiuto. Ciò che paghi è l'installazione guidata: il materiale resta tuo.</p>
+<div class="pacchetti">
+  <article class="pacchetto">
+    <h3>Un kit</h3>
+    <p class="prezzo">59 € <small>una tantum</small></p>
+    <ul>
+      <li>1 kit a scelta (workflow + guida + video)</li>
+      <li>30 minuti di aiuto con me, per iscritto o in videochiamata</li>
+      <li>Domande veloci via email comprese</li>
+      <li>Aggiornamenti del kit per 12 mesi</li>
+    </ul>
+    <a class="bottone" href="mailto:lavoro@francescoar.com?subject=Kit%20FAR%20AI%20%E2%80%94%20un%20kit%20(59%20%E2%82%AC)">Scrivimi per averlo</a>
+  </article>
+  <article class="pacchetto">
+    <h3>I tre kit</h3>
+    <p class="prezzo">99 € <small>una tantum</small></p>
+    <ul>
+      <li>Tutti e tre i kit (workflow + guida + video)</li>
+      <li>60 minuti di aiuto con me, anche in due sessioni</li>
+      <li>Domande veloci via email comprese</li>
+      <li>Aggiornamenti dei kit per 12 mesi</li>
+    </ul>
+    <a class="bottone" href="mailto:lavoro@francescoar.com?subject=Kit%20FAR%20AI%20%E2%80%94%20i%20tre%20kit%20(99%20%E2%82%AC)">Scrivimi per averli</a>
+  </article>
+  <article class="pacchetto">
+    <h3>I tre kit, installati insieme</h3>
+    <p class="prezzo">249 € <small>una tantum</small></p>
+    <ul>
+      <li>Tutti e tre i kit (workflow + guida + video)</li>
+      <li>Installazione fatta insieme in videochiamata (fino a 2 ore): account, credenziali, modulo sul sito</li>
+      <li>Listino, tono e firma scritti con me, sul tuo caso</li>
+      <li>30 giorni di assistenza scritta dopo l'installazione</li>
+    </ul>
+    <a class="bottone" href="mailto:lavoro@francescoar.com?subject=Kit%20FAR%20AI%20%E2%80%94%20tre%20kit%20installati%20insieme%20(249%20%E2%82%AC)">Scrivimi per fissare</a>
+  </article>
+</div>
+<p class="nota">Il pagamento con carta arriva a breve su questa pagina; nel frattempo si fa con bonifico e fattura (partita IVA italiana, regime forfettario: nessuna IVA esposta). I costi di n8n Cloud (prova gratuita, poi da 20 €/mese) e del modello AI (pochi centesimi al mese per un'attività normale) sono a tuo carico e non passano da me.</p>
+
+<h2 id="faq">Domande frequenti</h2>
+<dl class="faq">
+  <dt>Cosa mi serve per usarli?</dt>
+  <dd>Un account n8n (n8n Cloud con prova gratuita, oppure n8n installato da te), una chiave OpenRouter per l'intelligenza artificiale (si paga a consumo, con carta) e una casella email con SMTP (Gmail, Aruba, Register, Outlook…). La guida spiega tutto passo per passo.</dd>
+  <dt>Non so cos'è n8n: ce la faccio?</dt>
+  <dd>Sì, se sai seguire una guida con screenshot e un video. Se preferisci, il terzo pacchetto lo installiamo insieme in videochiamata.</dd>
+  <dt>Dove vanno i dati dei miei clienti?</dt>
+  <dd>Restano sul tuo n8n, passano dal modello AI che hai scelto con la tua chiave e dalla tua casella email. Io non li vedo e non li conservo.</dd>
+  <dt>Posso modificarli?</dt>
+  <dd>Sì: sono workflow n8n normali, aperti. Il nodo «Impostazioni» raccoglie tutto ciò che cambia da un'azienda all'altra; il resto lo puoi adattare come vuoi.</dd>
+  <dt>Cosa non posso fare?</dt>
+  <dd>Rivenderli, pubblicarli o offrirli come servizio ad altre aziende. L'uso è per la tua attività (anche più sedi tue).</dd>
+  <dt>E se non funziona?</dt>
+  <dd>Scrivimi: i 30 minuti di aiuto servono a questo. Partiamo dall'elenco delle esecuzioni di n8n, che dice sempre dove si è fermato.</dd>
+  <dt>Chi sei?</dt>
+  <dd>Francesco Russo, FAR AI, Catania. Dal 2023 costruisco automazioni n8n e agenti AI in produzione per una testata online in tre lingue e per l'app del circolo di padel che ho co-fondato. Siti demo: <a href="/">demo.francescoar.com</a>.</dd>
+</dl>
+
+<footer>
+  <p>FAR AI · Francesco Russo · <a href="mailto:lavoro@francescoar.com">lavoro@francescoar.com</a> · <a href="https://francescoar.com">francescoar.com</a></p>
+  <p>I kit, le guide, i video e questa pagina sono realizzati con l'aiuto dell'intelligenza artificiale e supervisione umana; la voce dei video è sintetica. n8n è un marchio di n8n GmbH; questi kit non sono affiliati a n8n.</p>
+</footer>
+</div>
+</body>
+</html>
