@@ -70,6 +70,11 @@
   footer{border-top:1px solid var(--filo);margin-top:4rem;padding-top:1.5rem;font-size:.9rem;color:var(--tenue)}
   footer a{color:var(--accento-scuro);display:inline-block;padding:.35rem 0}
   @media (max-width:860px){.kit{grid-template-columns:1fr}.pacchetti{grid-template-columns:1fr}}
+  .nota-n8n{font-size:.9rem;color:var(--tenue);margin:.3rem 0 1.2rem}
+  .servono{font-size:.9rem;color:var(--tenue);margin:.9rem 0 0;max-width:46rem}
+  .prova-hero{display:flex;flex-direction:column;gap:.35rem;margin:1.4rem 0 0;padding:1rem 1.2rem;max-width:34rem;background:var(--carta);border:1px solid var(--filo);border-left:4px solid var(--accento);border-radius:10px;font-size:.95rem}
+  .prova-hero b{font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accento-scuro)}
+  .prova-hero a{color:var(--accento-scuro);font-weight:600}
 </style>
 </head>
 <body>
@@ -80,9 +85,12 @@
 </header>
 
 <main>
-<h1>Preventivi, recensioni e contatti clienti: tre automazioni pronte per la tua attività, in italiano.</h1>
-<p class="sotto">Preventivo Lampo, Recensioni Pronte e Mini-CRM Follow-up girano sul tuo n8n (lo strumento di automazione): guida in italiano, video di installazione passo per passo e 30 minuti di aiuto con me. Da 59 €, una volta sola.</p>
+<h1>Preventivi, risposte alle recensioni e follow-up dei clienti: tre automazioni pronte per la tua attività.</h1>
+<p class="sotto">Le installi in circa 20 minuti con guida in italiano e video, con 30 minuti di aiuto da me; oppure le installiamo insieme in videochiamata. Da 59 €, una volta sola.</p>
+<p class="nota-n8n">Girano su n8n, lo strumento di automazione che fa partire i flussi da solo.</p>
 <a class="bottone" href="#prezzi">Vedi i prezzi</a> <a class="bottone secondario" href="#kit">Guarda come funzionano</a>
+<p class="servono">Servono: un account n8n (prova gratuita), una chiave OpenRouter e una casella email. Non li hai? Con il pacchetto da 249 € li configuriamo insieme.</p>
+<div class="prova-hero"><b>Dall'ultima prova registrata</b><span>Il cliente chiede la tinteggiatura di soggiorno e cucina dal modulo.</span><span>In un paio di minuti riceve: 600 € + sopralluogo 50 € + trasporto 40 € = <strong>690 €</strong>, sul listino scritto dal titolare.</span><a href="#kit">Guarda l'installazione vera (1 min 41 s) →</a></div>
 <ul class="etichette">
   <li>Girano sul tuo n8n, i dati restano tuoi</li>
   <li>Nessun abbonamento a me: paghi una volta</li>
@@ -96,13 +104,13 @@
   <div>
     <p class="per">Per artigiani, imprese edili, servizi a preventivo</p>
     <h3>Preventivo Lampo</h3>
-    <p>Un cliente compila il modulo «Richiedi un preventivo» sul tuo sito e in meno di un minuto riceve un preventivo indicativo scritto in base al <strong>tuo listino</strong> e alle <strong>tue regole</strong>. Il preventivo parte al cliente da solo; tu ricevi subito l'avviso con la copia (se vuoi approvarlo prima dell'invio, lo aggiungiamo nei 30 minuti di aiuto).</p>
+    <p>Un cliente compila il modulo «Richiedi un preventivo» sul tuo sito e in un paio di minuti riceve un preventivo indicativo scritto in base al <strong>tuo listino</strong> e alle <strong>tue regole</strong>. Il preventivo parte al cliente da solo; tu ricevi subito l'avviso con la copia (se vuoi approvarlo prima dell'invio, lo aggiungiamo nei 30 minuti di aiuto).</p>
     <ul>
       <li>Modulo pronto da mettere sul sito (link o pulsante)</li>
       <li>Listino e regole li scrivi tu, una volta, in un solo nodo</li>
       <li>È istruito a usare solo le tue voci e a rimandare «a sopralluogo» ciò che manca; più preciso è il listino, più preciso il preventivo</li>
     </ul>
-    <details open><summary>Esempio reale di email al cliente (dall'ultima prova registrata)</summary>
+    <details><summary>Esempio reale di email al cliente (dall'ultima prova registrata)</summary>
 <pre>Gentile Sig.ra Verdi,
 
 La ringraziamo per averci contattato. Di seguito le proponiamo un preventivo indicativo per la tinteggiatura delle pareti del soggiorno e della cucina, come da sua richiesta.
@@ -129,6 +137,7 @@ Mario Rossi · La Tua Azienda · 095 000000</pre></details>
   <div>
     <video controls playsinline preload="metadata" poster="video/preventivo-lampo.jpg" src="video/preventivo-lampo.mp4"></video>
     <p class="did">Installazione completa, 1 min 41 s. Voce sintetica italiana.</p>
+    <p class="did"><a href="#prezzi">Prezzi e come averlo →</a></p>
   </div>
 </section>
 
@@ -138,7 +147,7 @@ Mario Rossi · La Tua Azienda · 095 000000</pre></details>
     <h3>Recensioni Pronte</h3>
     <p>Incolli una recensione (Google, TripAdvisor, Facebook) in un modulo privato e ricevi via email <strong>due risposte pronte da copiare</strong>, nel tono che hai scelto tu. Alle negative risponde con le scuse e l'invito a scrivere in privato: niente discussioni, niente rimborsi promessi.</p>
     <ul>
-      <li>Modulo privato: solo tu lo usi</li>
+      <li>Modulo tuo, non pubblicato sul sito</li>
       <li>Tono, firma e contatto privato li decidi tu</li>
       <li>Non pubblica niente da solo: l'ultima parola è sempre tua</li>
     </ul>
@@ -150,11 +159,14 @@ Grazie per averci scelto e per il complimento sul cibo. Ci scusiamo sinceramente
 Mario e lo staff della Trattoria Da Mario
 
 RISPOSTA 2 (più personale):
-Caro Marco, grazie per aver condiviso la tua esperienza. Siamo felici che il cibo ti sia piaciuto, ma ci dispiace molto per l'attesa e la mancanza di scuse da parte nostra. Non è il servizio che vogliamo offrire ai nostri ospiti. [...]</pre></details>
+Caro Marco, grazie per aver condiviso la tua esperienza. Siamo felici che il cibo ti sia piaciuto, ma ci dispiace molto per l'attesa e la mancanza di scuse da parte nostra. Non è il servizio che vogliamo offrire ai nostri ospiti. Ti invitiamo a scriverci in privato a info@tuaazienda.it per approfondire e migliorare. Grazie ancora per il tuo prezioso feedback.
+Mario e lo staff della Trattoria Da Mario</pre>
+<p class="did">Testo identico all'email della prova, con le impostazioni di base. Il tono, il «Lei» o il «tu» e le frasi da evitare li scrivi tu nelle Impostazioni.</p></details>
   </div>
   <div>
     <video controls playsinline preload="metadata" poster="video/recensioni-pronte.jpg" src="video/recensioni-pronte.mp4"></video>
     <p class="did">Installazione completa, 1 min 47 s. Voce sintetica italiana.</p>
+    <p class="did"><a href="#prezzi">Prezzi e come averlo →</a></p>
   </div>
 </section>
 
@@ -183,6 +195,7 @@ Laura Bianchi · Studio Bianchi · 095 000000</pre></details>
   <div>
     <video controls playsinline preload="metadata" poster="video/mini-crm-follow-up.jpg" src="video/mini-crm-follow-up.mp4"></video>
     <p class="did">Installazione completa, 2 min 06 s. Voce sintetica italiana.</p>
+    <p class="did"><a href="#prezzi">Prezzi e come averlo →</a></p>
   </div>
 </section>
 
