@@ -3,23 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kit FAR AI — automazioni n8n in italiano, installate in 20 minuti</title>
+<title>Kit n8n in italiano per PMI: preventivi, recensioni, follow-up | FAR AI</title>
 <meta name="description" content="Tre kit n8n pronti per piccole imprese italiane: preventivi automatici, risposte alle recensioni, mini-CRM con follow-up. Guida in italiano, video di installazione, 30 minuti di aiuto.">
 <meta name="robots" content="noindex">
 <style>
   :root{
     --sfondo:#f7f6f2; --carta:#ffffff; --inchiostro:#17161a; --tenue:#5c5a63; --filo:#e3e0d8;
-    --accento:#d9541e; --accento-scuro:#b4430f; --verde:#1f7a4d; --codice:#f1efe9;
+    --accento:#b4430f; --accento-scuro:#8f340b; --su-accento:#ffffff; --verde:#1f7a4d; --codice:#f1efe9;
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
       --sfondo:#131317; --carta:#1c1c22; --inchiostro:#f1efe9; --tenue:#a7a4ad; --filo:#2c2b33;
-      --accento:#ff7a45; --accento-scuro:#ff9a6e; --verde:#5fd39a; --codice:#23232b;
+      --accento:#ff7a45; --accento-scuro:#ff9a6e; --su-accento:#131317; --verde:#5fd39a; --codice:#23232b;
     }
   }
   :root[data-theme="dark"]{
     --sfondo:#131317; --carta:#1c1c22; --inchiostro:#f1efe9; --tenue:#a7a4ad; --filo:#2c2b33;
-    --accento:#ff7a45; --accento-scuro:#ff9a6e; --verde:#5fd39a; --codice:#23232b;
+    --accento:#ff7a45; --accento-scuro:#ff9a6e; --su-accento:#131317; --verde:#5fd39a; --codice:#23232b;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -28,11 +28,11 @@
   header{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;margin-bottom:3rem}
   .marchio{font-weight:700;letter-spacing:.02em;text-decoration:none;color:var(--inchiostro)}
   .marchio span{color:var(--accento)}
-  nav a{color:var(--tenue);text-decoration:none;margin-left:1.1rem;font-size:.95rem}
+  nav a{color:var(--tenue);text-decoration:none;margin-left:.5rem;font-size:.95rem;display:inline-block;padding:.5rem .4rem}
   nav a:hover{color:var(--inchiostro)}
   h1{font-size:clamp(1.9rem,4.6vw,3rem);line-height:1.12;letter-spacing:-.02em;margin:0 0 1rem;max-width:40rem}
   .sotto{font-size:1.15rem;color:var(--tenue);max-width:38rem;margin:0 0 1.6rem}
-  .bottone{display:inline-block;background:var(--accento);color:#fff;text-decoration:none;font-weight:600;padding:.8rem 1.3rem;border-radius:.6rem;border:0;cursor:pointer}
+  .bottone{margin:.2rem 0;display:inline-block;background:var(--accento);color:var(--su-accento);text-decoration:none;font-weight:600;padding:.8rem 1.3rem;border-radius:.6rem;border:0;cursor:pointer}
   .bottone:hover{background:var(--accento-scuro)}
   .bottone.secondario{background:transparent;color:var(--inchiostro);border:1.5px solid var(--filo)}
   .bottone.secondario:hover{border-color:var(--inchiostro);background:transparent}
@@ -49,21 +49,26 @@
   video{width:100%;border-radius:.6rem;border:1px solid var(--filo);background:#000;display:block}
   .did{font-size:.85rem;color:var(--tenue);margin:.5rem 0 0}
   details{margin-top:.6rem}
-  summary{cursor:pointer;color:var(--accento);font-weight:600}
+  summary{cursor:pointer;color:var(--accento-scuro);font-weight:600}
+  .faq a{color:var(--accento-scuro)}
+  video{aspect-ratio:16/9}
   pre{white-space:pre-wrap;background:var(--codice);border-radius:.6rem;padding:.9rem 1rem;font:400 .86rem/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;margin:.6rem 0 0;color:var(--inchiostro)}
   .pacchetti{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
   .pacchetto{background:var(--carta);border:1px solid var(--filo);border-radius:1rem;padding:1.4rem;display:flex;flex-direction:column}
   .pacchetto h3{margin:0;font-size:1.1rem}
   .prezzo{font-size:2.1rem;font-weight:700;letter-spacing:-.02em;margin:.5rem 0 .2rem}
   .prezzo small{font-size:.9rem;font-weight:400;color:var(--tenue)}
+  .prezzo .ancora{display:block;margin-top:.1rem}
   .pacchetto ul{padding-left:1.1rem;margin:.6rem 0 1.2rem;flex:1}
   .pacchetto li{margin:.25rem 0}
   .pacchetto .bottone{text-align:center}
   .nota{font-size:.9rem;color:var(--tenue);margin:1rem 0 0}
+  .dietro{background:var(--carta);border:1px solid var(--filo);border-radius:1rem;padding:1.1rem 1.4rem;margin:1.6rem 0 0;max-width:46rem}
+  .dietro a{color:var(--accento-scuro)}
   .faq dt{font-weight:600;margin-top:1.1rem}
   .faq dd{margin:.2rem 0 0;color:var(--tenue)}
   footer{border-top:1px solid var(--filo);margin-top:4rem;padding-top:1.5rem;font-size:.9rem;color:var(--tenue)}
-  footer a{color:var(--accento)}
+  footer a{color:var(--accento-scuro);display:inline-block;padding:.35rem 0}
   @media (max-width:860px){.kit{grid-template-columns:1fr}.pacchetti{grid-template-columns:1fr}}
 </style>
 </head>
@@ -71,11 +76,12 @@
 <div class="foglio">
 <header>
   <a class="marchio" href="/kit/">FAR <span>AI</span> · Kit n8n</a>
-  <nav><a href="#kit">I tre kit</a><a href="#prezzi">Prezzi</a><a href="#faq">Domande</a><a href="/">Siti demo</a></nav>
+  <nav aria-label="Sezioni della pagina"><a href="#kit">I tre kit</a><a href="#prezzi">Prezzi</a><a href="#faq">Domande</a><a href="/">Siti demo</a></nav>
 </header>
 
-<h1>Automazioni n8n in italiano per la tua attività, installate in 20 minuti.</h1>
-<p class="sotto">Tre kit pronti: il preventivo che si scrive da solo, le risposte alle recensioni, il mini-CRM che non dimentica nessuno. Ognuno con guida in italiano, video di installazione passo per passo e 30 minuti di aiuto con me.</p>
+<main>
+<h1>Preventivi, recensioni e contatti clienti: tre automazioni pronte per la tua attività, in italiano.</h1>
+<p class="sotto">Preventivo Lampo, Recensioni Pronte e Mini-CRM Follow-up girano sul tuo n8n (lo strumento di automazione): guida in italiano, video di installazione passo per passo e 30 minuti di aiuto con me. Da 59 €, una volta sola.</p>
 <a class="bottone" href="#prezzi">Vedi i prezzi</a> <a class="bottone secondario" href="#kit">Guarda come funzionano</a>
 <ul class="etichette">
   <li>Girano sul tuo n8n, i dati restano tuoi</li>
@@ -96,7 +102,7 @@
       <li>Listino e regole li scrivi tu, una volta, in un solo nodo</li>
       <li>È istruito a usare solo le tue voci e a rimandare «a sopralluogo» ciò che manca; più preciso è il listino, più preciso il preventivo</li>
     </ul>
-    <details><summary>Esempio reale di email al cliente (dall'ultima prova registrata)</summary>
+    <details open><summary>Esempio reale di email al cliente (dall'ultima prova registrata)</summary>
 <pre>Gentile Sig.ra Verdi,
 
 La ringraziamo per averci contattato. Di seguito le proponiamo un preventivo indicativo per la tinteggiatura delle pareti del soggiorno e della cucina, come da sua richiesta.
@@ -121,7 +127,7 @@ Cordiali saluti,
 Mario Rossi · La Tua Azienda · 095 000000</pre></details>
   </div>
   <div>
-    <video controls preload="metadata" poster="video/preventivo-lampo.jpg" src="video/preventivo-lampo.mp4"></video>
+    <video controls playsinline preload="metadata" poster="video/preventivo-lampo.jpg" src="video/preventivo-lampo.mp4"></video>
     <p class="did">Installazione completa, 1 min 41 s. Voce sintetica italiana.</p>
   </div>
 </section>
@@ -147,7 +153,7 @@ RISPOSTA 2 (più personale):
 Caro Marco, grazie per aver condiviso la tua esperienza. Siamo felici che il cibo ti sia piaciuto, ma ci dispiace molto per l'attesa e la mancanza di scuse da parte nostra. Non è il servizio che vogliamo offrire ai nostri ospiti. [...]</pre></details>
   </div>
   <div>
-    <video controls preload="metadata" poster="video/recensioni-pronte.jpg" src="video/recensioni-pronte.mp4"></video>
+    <video controls playsinline preload="metadata" poster="video/recensioni-pronte.jpg" src="video/recensioni-pronte.mp4"></video>
     <p class="did">Installazione completa, 1 min 47 s. Voce sintetica italiana.</p>
   </div>
 </section>
@@ -175,13 +181,13 @@ Resto a disposizione per ogni chiarimento.
 Laura Bianchi · Studio Bianchi · 095 000000</pre></details>
   </div>
   <div>
-    <video controls preload="metadata" poster="video/mini-crm-follow-up.jpg" src="video/mini-crm-follow-up.mp4"></video>
+    <video controls playsinline preload="metadata" poster="video/mini-crm-follow-up.jpg" src="video/mini-crm-follow-up.mp4"></video>
     <p class="did">Installazione completa, 2 min 06 s. Voce sintetica italiana.</p>
   </div>
 </section>
 
 <h2 id="prezzi">Prezzi</h2>
-<p class="intro">Paghi una volta. Ogni kit comprende il file del workflow da importare, la guida in italiano (PDF), il video di installazione e il mio aiuto. Ciò che paghi è l'installazione guidata: il materiale resta tuo.</p>
+<p class="intro">Paghi una volta. Restano a parte, a tuo carico, solo n8n (prova gratuita, poi da 20 €/mese) e il modello AI (pochi centesimi al mese per un'attività normale): non passano da me. Ogni kit comprende il file del workflow da importare, la guida in italiano (PDF), il video di installazione e il mio aiuto. Ciò che paghi è l'installazione guidata: il materiale resta tuo.</p>
 <div class="pacchetti">
   <article class="pacchetto">
     <h3>Un kit</h3>
@@ -196,7 +202,7 @@ Laura Bianchi · Studio Bianchi · 095 000000</pre></details>
   </article>
   <article class="pacchetto">
     <h3>I tre kit</h3>
-    <p class="prezzo">99 € <small>una tantum</small></p>
+    <p class="prezzo">99 € <small>una tantum</small><small class="ancora">invece di 177 € presi uno a uno</small></p>
     <ul>
       <li>Tutti e tre i kit (workflow + guida + video)</li>
       <li>60 minuti di aiuto con me, anche in due sessioni</li>
@@ -217,7 +223,9 @@ Laura Bianchi · Studio Bianchi · 095 000000</pre></details>
     <a class="bottone" href="mailto:lavoro@francescoar.com?subject=Kit%20FAR%20AI%20%E2%80%94%20tre%20kit%20installati%20insieme%20(249%20%E2%82%AC)">Scrivimi per fissare</a>
   </article>
 </div>
-<p class="nota">Il pagamento con carta arriva a breve su questa pagina; nel frattempo si fa con bonifico e fattura (partita IVA italiana, regime forfettario: nessuna IVA esposta). I costi di n8n Cloud (prova gratuita, poi da 20 €/mese) e del modello AI (pochi centesimi al mese per un'attività normale) sono a tuo carico e non passano da me.</p>
+<p class="nota">Il pagamento con carta arriva a breve su questa pagina; nel frattempo si fa con bonifico e fattura (partita IVA italiana, regime forfettario: nessuna IVA esposta).</p>
+
+<p class="dietro"><strong>Chi c'è dietro:</strong> Francesco Russo, FAR AI, Catania. Dal 2023 costruisco automazioni n8n e agenti AI in produzione per una testata online in tre lingue e per l'app del circolo di padel che ho co-fondato (più di 330 utenti registrati e oltre 800 prenotazioni confermate). Scrivimi: <a href="mailto:lavoro@francescoar.com">lavoro@francescoar.com</a>.</p>
 
 <h2 id="faq">Domande frequenti</h2>
 <dl class="faq">
@@ -236,6 +244,7 @@ Laura Bianchi · Studio Bianchi · 095 000000</pre></details>
   <dt>Chi sei?</dt>
   <dd>Francesco Russo, FAR AI, Catania. Dal 2023 costruisco automazioni n8n e agenti AI in produzione per una testata online in tre lingue e per l'app del circolo di padel che ho co-fondato. Siti demo: <a href="/">demo.francescoar.com</a>.</dd>
 </dl>
+</main>
 
 <footer>
   <p>FAR AI · Francesco Russo · <a href="mailto:lavoro@francescoar.com">lavoro@francescoar.com</a> · <a href="https://francescoar.com">francescoar.com</a></p>
