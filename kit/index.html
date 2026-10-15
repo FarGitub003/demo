@@ -69,7 +69,8 @@
   .faq dd{margin:.2rem 0 0;color:var(--tenue)}
   footer{border-top:1px solid var(--filo);margin-top:4rem;padding-top:1.5rem;font-size:.9rem;color:var(--tenue)}
   footer a{color:var(--accento-scuro);display:inline-block;padding:.35rem 0}
-  @media (max-width:860px){.kit{grid-template-columns:1fr}.pacchetti{grid-template-columns:1fr}}
+  .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:2rem;align-items:center}.hero-video{margin:0}.hero-video video{width:100%;border-radius:12px;display:block}.hero-video figcaption{font-size:.85rem;color:var(--tenue);margin-top:.4rem}
+  @media (max-width:860px){.hero{grid-template-columns:1fr}.hero-video{display:none}.kit{grid-template-columns:1fr}.pacchetti{grid-template-columns:1fr}}
   .nota-n8n{font-size:.9rem;color:var(--tenue);margin:.3rem 0 1.2rem}
   .servono{font-size:.9rem;color:var(--tenue);margin:.9rem 0 0;max-width:46rem}
   .prova-hero{display:flex;flex-direction:column;gap:.35rem;margin:1.4rem 0 0;padding:1rem 1.2rem;max-width:34rem;background:var(--carta);border:1px solid var(--filo);border-left:4px solid var(--accento);border-radius:10px;font-size:.95rem}
@@ -85,12 +86,16 @@
 </header>
 
 <main>
+<div class="hero"><div class="hero-testo">
 <h1>Preventivi, risposte alle recensioni e follow-up dei clienti: tre automazioni pronte per la tua attività.</h1>
 <p class="sotto">Le installi in circa 20 minuti con guida in italiano e video, con 30 minuti di aiuto da me; oppure le installiamo insieme in videochiamata. Da 59 €, una volta sola.</p>
 <p class="nota-n8n">Girano su n8n, lo strumento di automazione che fa partire i flussi da solo.</p>
 <a class="bottone" href="#prezzi">Vedi i prezzi</a> <a class="bottone secondario" href="#kit">Guarda come funzionano</a>
-<p class="servono">Servono: un account n8n (prova gratuita), una chiave OpenRouter e una casella email. Non li hai? Con il pacchetto da 249 € li configuriamo insieme.</p>
+<p class="servono">Servono: un account n8n (prova gratuita, poi da 20 €/mese), una chiave OpenRouter e una casella email. Non li hai? Con il pacchetto da 249 € li configuriamo insieme.</p>
 <div class="prova-hero"><b>Dall'ultima prova registrata</b><span>Il cliente chiede la tinteggiatura di soggiorno e cucina dal modulo.</span><span>In un paio di minuti riceve: 600 € + sopralluogo 50 € + trasporto 40 € = <strong>690 €</strong>, sul listino scritto dal titolare.</span><a href="#kit">Guarda l'installazione vera (1 min 41 s) →</a></div>
+</div>
+<figure class="hero-video"><video controls playsinline preload="metadata" poster="video/preventivo-lampo.jpg" src="video/preventivo-lampo.mp4" aria-label="Installazione reale di Preventivo Lampo, 1 min 41 s"></video><figcaption>Installazione reale di Preventivo Lampo (1 min 41 s)</figcaption></figure>
+</div>
 <ul class="etichette">
   <li>Girano sul tuo n8n, i dati restano tuoi</li>
   <li>Nessun abbonamento a me: paghi una volta</li>
@@ -145,7 +150,7 @@ Mario Rossi · La Tua Azienda · 095 000000</pre></details>
   <div>
     <p class="per">Per ristoranti, hotel, B&amp;B, negozi, studi</p>
     <h3>Recensioni Pronte</h3>
-    <p>Incolli una recensione (Google, TripAdvisor, Facebook) in un modulo privato e ricevi via email <strong>due risposte pronte da copiare</strong>, nel tono che hai scelto tu. Alle negative risponde con le scuse e l'invito a scrivere in privato: niente discussioni, niente rimborsi promessi.</p>
+    <p>Incolli una recensione (Google, TripAdvisor, Facebook) in un tuo modulo (non va sul sito) e ricevi via email <strong>due risposte pronte da copiare</strong>, nel tono che hai scelto tu. Alle negative risponde con le scuse e l'invito a scrivere in privato: niente discussioni, niente rimborsi promessi.</p>
     <ul>
       <li>Modulo tuo, non pubblicato sul sito</li>
       <li>Tono, firma e contatto privato li decidi tu</li>
@@ -252,10 +257,10 @@ Laura Bianchi · Studio Bianchi · 095 000000</pre></details>
   <dd>Sì: sono workflow n8n normali, aperti. Il nodo «Impostazioni» raccoglie tutto ciò che cambia da un'azienda all'altra; il resto lo puoi adattare come vuoi.</dd>
   <dt>Cosa non posso fare?</dt>
   <dd>Rivenderli, pubblicarli o offrirli come servizio ad altre aziende. L'uso è per la tua attività (anche più sedi tue).</dd>
+  <dt>E se l'AI sbaglia un prezzo?</dt>
+  <dd>Il preventivo usa solo le voci del tuo listino, è scritto come «indicativo» e rimanda «a sopralluogo» ciò che nel listino non c'è. Tu ricevi subito la copia; se preferisci approvarlo prima dell'invio, lo aggiungiamo nei 30 minuti di aiuto.</dd>
   <dt>E se non funziona?</dt>
   <dd>Scrivimi: i 30 minuti di aiuto servono a questo. Partiamo dall'elenco delle esecuzioni di n8n, che dice sempre dove si è fermato. Se il kit non funziona come descritto, lo sistemo io.</dd>
-  <dt>Chi sei?</dt>
-  <dd>Francesco Russo, FAR AI, Catania. Dal 2023 costruisco automazioni n8n e agenti AI in produzione per una testata online in tre lingue e per l'app del circolo di padel che ho co-fondato. Siti demo: <a href="/">demo.francescoar.com</a>.</dd>
 </dl>
 </main>
 
