@@ -40,7 +40,7 @@
   "@id": "https://crialesiespositoma.wixsite.com/website/#oasibeautystudio",
   "name": "Oasi Beauty Studio di Crialesi Marinella",
   "description": "Centro estetico a Lamezia Terme: epilazione definitiva con laser a diodo 808 nm, luce pulsata ed elettrocoagulazione, trattamenti viso e corpo, mani e piedi, dermopigmentazione.",
-  "image": "img/og-oasi-beauty-studio.jpg",
+  "image": "https://demo.francescoar.com/crialesi-lamezia/img/og-oasi-beauty-studio.jpg",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Via Sen. Arturo Perugini",
@@ -110,7 +110,7 @@ h1,h2,h3{font-family:'Prata',Georgia,serif;font-weight:400;line-height:1.1}
 
 /* ---------- occhiello ---------- */
 .eyebrow{
-  font-size:.71rem;letter-spacing:.34em;text-transform:uppercase;font-weight:700;
+  font-size:max(.8125rem,.71rem);letter-spacing:.34em;text-transform:uppercase;font-weight:700;
   display:flex;align-items:center;gap:.9rem;color:var(--bergamotto-vivo);
 }
 .eyebrow::before{content:"";width:2.1rem;height:1px;background:currentColor;opacity:.7}
@@ -138,7 +138,7 @@ h1,h2,h3{font-family:'Prata',Georgia,serif;font-weight:400;line-height:1.1}
 .nav-cta{
   border:1px solid var(--scorza);color:var(--scorza);background:none;
   padding:.5rem 1.15rem;border-radius:99px;text-decoration:none;
-  font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;white-space:nowrap;
+  font-size:max(.8125rem,.75rem);letter-spacing:.18em;text-transform:uppercase;font-weight:700;white-space:nowrap;
   transition:background .3s,color .3s,border-color .3s;
 }
 .nav-cta:hover{background:var(--scorza);color:var(--bergamotto)}
@@ -182,7 +182,7 @@ h1,h2,h3{font-family:'Prata',Georgia,serif;font-weight:400;line-height:1.1}
   .nav{gap:.55rem;padding-inline:.95rem}
   .nav-brand{font-size:.78rem;letter-spacing:.09em;gap:.45rem}
   .nav-brand svg{width:24px;height:24px}
-  .nav-tel .nav-cta{padding:.5rem .8rem;font-size:.72rem;letter-spacing:.06em}
+  .nav-tel .nav-cta{padding:.5rem .8rem;font-size:max(.8125rem,.72rem);letter-spacing:.06em}
 }
 @media (max-width:560px){
   .brand-testo{display:none}
@@ -232,7 +232,7 @@ h1,h2,h3{font-family:'Prata',Georgia,serif;font-weight:400;line-height:1.1}
 .btn{
   display:inline-flex;align-items:center;gap:.6rem;
   padding:.95rem 1.85rem;border-radius:99px;text-decoration:none;
-  font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:800;
+  font-size:max(.8125rem,.78rem);letter-spacing:.2em;text-transform:uppercase;font-weight:800;
   transition:transform .3s var(--ease-soft),background .3s,color .3s,border-color .3s;
 }
 .btn:hover{transform:translateY(-2px)}
@@ -248,13 +248,13 @@ h1,h2,h3{font-family:'Prata',Georgia,serif;font-weight:400;line-height:1.1}
 }
 .hero-ribbon div{
   padding:1rem clamp(1.1rem,3.4vw,2.4rem);
-  font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--crema);
+  font-size:max(.8125rem,.72rem);letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--crema);
   display:flex;align-items:center;gap:.7rem;flex:1 1 auto;justify-content:center;
 }
 .hero-ribbon div+div{border-left:1px solid rgba(217,178,58,.32)}
 .hero-ribbon svg{width:15px;height:15px;flex:none;color:var(--scorza)}
 .hero-ribbon b{color:var(--scorza);font-weight:800}
-.cascade{opacity:0;transform:translateY(26px);animation:rise 1s var(--ease-hero) forwards}
+@media (prefers-reduced-motion:no-preference){.cascade{opacity:0;transform:translateY(26px);animation:rise 1s var(--ease-hero) forwards;}}
 @keyframes rise{to{opacity:1;transform:none}}
 .cascade:nth-child(1){animation-delay:.1s}
 .cascade:nth-child(2){animation-delay:.24s}
@@ -284,8 +284,8 @@ h1,h2,h3{font-family:'Prata',Georgia,serif;font-weight:400;line-height:1.1}
 .cifre{display:flex;justify-content:center;gap:clamp(1.6rem,6vw,5rem);flex-wrap:wrap;margin-top:3.4rem}
 .cifre article{max-width:17rem}
 .cifre .cifra{font-family:'Prata',serif;font-size:clamp(2.7rem,6vw,3.6rem);line-height:1;color:var(--terracotta);display:block}
-.cifre h3{font-size:.98rem;letter-spacing:.04em;margin:.7rem 0 .35rem;font-family:'Mulish',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:.76rem;color:var(--bergamotto-vivo)}
-.cifre p{font-size:.93rem;color:var(--fumo)}
+.cifre h3{font-size:.98rem;letter-spacing:.04em;margin:.7rem 0 .35rem;font-family:'Mulish',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:max(.8125rem,.76rem);color:var(--bergamotto-vivo)}
+.cifre p{font-size:max(1rem,.93rem);color:var(--fumo)}
 
 /* ---------- listino ---------- */
 .listino{background:var(--sabbia)}
@@ -300,8 +300,8 @@ h1,h2,h3{font-family:'Prata',Georgia,serif;font-weight:400;line-height:1.1}
 }
 .blocco+.blocco{border-top:1px solid rgba(90,79,66,.24)}
 .blocco-testa h3{font-size:clamp(1.55rem,3.2vw,2.1rem);margin-bottom:.5rem}
-.blocco-testa .conta{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;font-weight:800;color:var(--terracotta)}
-.blocco-testa p{font-size:.94rem;color:var(--fumo);margin-top:.8rem;max-width:34ch}
+.blocco-testa .conta{font-size:max(.8125rem,.72rem);letter-spacing:.24em;text-transform:uppercase;font-weight:800;color:var(--terracotta)}
+.blocco-testa p{font-size:max(1rem,.94rem);color:var(--fumo);margin-top:.8rem;max-width:34ch}
 .voci{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.1rem 2.2rem}
 .voci li{
   display:flex;align-items:baseline;gap:.85rem;
@@ -309,7 +309,7 @@ h1,h2,h3{font-family:'Prata',Georgia,serif;font-weight:400;line-height:1.1}
 }
 .voci .n{font-family:'Prata',serif;font-size:.85rem;color:var(--terracotta);flex:none;min-width:1.6rem}
 .voci .v{font-size:.99rem}
-.voci small{display:block;font-size:.79rem;color:var(--fumo);line-height:1.4}
+.voci small{display:block;font-size:max(.8125rem,.79rem);color:var(--fumo);line-height:1.4}
 .nota-prezzi{
   margin-top:2.6rem;text-align:center;font-size:.95rem;color:var(--fumo);
   border-top:1px solid rgba(90,79,66,.24);padding-top:2rem;
@@ -333,13 +333,13 @@ h1,h2,h3{font-family:'Prata',Georgia,serif;font-weight:400;line-height:1.1}
   transition:transform .45s var(--ease-soft),border-color .45s;
 }
 .tec:hover{transform:translateY(-4px);border-color:var(--scorza)}
-.tec .k{font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;font-weight:800;color:var(--scorza);display:block;margin-bottom:.8rem}
+.tec .k{font-size:max(.8125rem,.68rem);letter-spacing:.26em;text-transform:uppercase;font-weight:800;color:var(--scorza);display:block;margin-bottom:.8rem}
 .tec h3{font-size:1.34rem;margin-bottom:.6rem}
 /* «Epilazione permanente e progressiva» va su due righe, gli altri due titoli su una:
    senza questo i tre paragrafi partivano a quote diverse. Solo quando le card sono
    affiancate: impilate, il min-height sarebbe spazio morto. */
 @media (min-width:820px){ .tec h3{min-height:2.2em} }
-.tec p{font-size:.94rem;color:var(--sabbia-cupa);font-weight:300}
+.tec p{font-size:max(1rem,.94rem);color:var(--sabbia-cupa);font-weight:300}
 .dermo{
   margin-top:3rem;border-top:1px solid rgba(217,178,58,.3);padding-top:2.4rem;
   display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(1.2rem,4vw,3rem);align-items:baseline;
@@ -352,7 +352,7 @@ h1,h2,h3{font-family:'Prata',Georgia,serif;font-weight:400;line-height:1.1}
 .quote blockquote{font-family:'Prata',serif;font-size:clamp(1.3rem,3.1vw,2.05rem);max-width:26ch;margin:0 auto;line-height:1.42;text-wrap:balance;color:var(--inchiostro)}
 .quote .stelle{display:flex;justify-content:center;gap:.28rem;margin-bottom:1.6rem;color:var(--terracotta)}
 .quote .stelle svg{width:19px;height:19px}
-.quote cite{display:block;margin-top:1.6rem;font-style:normal;font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;color:var(--fumo);font-weight:800}
+.quote cite{display:block;margin-top:1.6rem;font-style:normal;font-size:max(.8125rem,.74rem);letter-spacing:.26em;text-transform:uppercase;color:var(--fumo);font-weight:800}
 
 /* ---------- metodo + marchi ---------- */
 .metodo{background:var(--crema)}
@@ -362,10 +362,10 @@ h1,h2,h3{font-family:'Prata',Georgia,serif;font-weight:400;line-height:1.1}
 .metodo p+p{margin-top:1rem}
 .marchi{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.6rem}
 .marchi li{
-  font-size:.76rem;letter-spacing:.13em;text-transform:uppercase;font-weight:800;color:var(--bergamotto-vivo);
+  font-size:max(.8125rem,.76rem);letter-spacing:.13em;text-transform:uppercase;font-weight:800;color:var(--bergamotto-vivo);
   border:1px solid rgba(42,92,70,.42);border-radius:99px;padding:.4rem .9rem;
 }
-.marchi-testa{font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;font-weight:800;color:var(--terracotta)}
+.marchi-testa{font-size:max(.8125rem,.72rem);letter-spacing:.26em;text-transform:uppercase;font-weight:800;color:var(--terracotta)}
 
 /* ---------- contatti ---------- */
 .finale{position:relative;overflow:hidden;padding:clamp(5rem,11vw,8rem) 0}
@@ -386,7 +386,7 @@ h1,h2,h3{font-family:'Prata',Georgia,serif;font-weight:400;line-height:1.1}
 .ingresso{margin-top:2.8rem}
 .ingresso img{width:100%;height:auto;border-radius:10px;border:1px solid rgba(217,178,58,.28)}
 .ingresso figcaption{
-  margin-top:.9rem;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+  margin-top:.9rem;font-size:max(.8125rem,.72rem);letter-spacing:.22em;text-transform:uppercase;
   font-weight:700;color:var(--sabbia-cupa);
 }
 
@@ -395,8 +395,8 @@ footer{background:var(--bergamotto-fondo);color:var(--sabbia-cupa);padding:2.9re
 .footer-inner{display:flex;flex-direction:column;gap:1.1rem;align-items:center;text-align:center}
 .footer-brand{display:flex;align-items:center;gap:.6rem;font-family:'Prata',serif;color:var(--crema);font-size:.98rem;letter-spacing:.14em}
 .footer-brand svg{width:26px;height:26px;color:var(--scorza)}
-.ai-label{border:1px solid rgba(217,178,58,.5);color:var(--scorza);padding:.6rem 1.1rem;border-radius:99px;font-size:.73rem;letter-spacing:.04em;max-width:92vw;line-height:1.55}
-footer .fine{font-size:.73rem;max-width:70ch}
+.ai-label{border:1px solid rgba(217,178,58,.5);color:var(--scorza);padding:.6rem 1.1rem;border-radius:99px;font-size:max(.8125rem,.73rem);letter-spacing:.04em;max-width:92vw;line-height:1.55}
+footer .fine{font-size:max(.8125rem,.73rem);max-width:70ch}
 
 /* ---------- responsive ---------- */
 @media (max-width:980px){
@@ -415,7 +415,7 @@ footer .fine{font-size:.73rem;max-width:70ch}
   .hero-tag{line-height:1.55}
   .hero-ctas{margin-top:1.45rem}
   .btn{padding:.85rem 1.6rem}
-  .hero-ribbon div{flex:1 1 100%;justify-content:flex-start;padding:.7rem clamp(1.1rem,3.4vw,2.4rem);font-size:.68rem}
+  .hero-ribbon div{flex:1 1 100%;justify-content:flex-start;padding:.7rem clamp(1.1rem,3.4vw,2.4rem);font-size:max(.8125rem,.68rem)}
   .hero-ribbon div+div{border-left:0;border-top:1px solid rgba(217,178,58,.3)}
   .voci{grid-template-columns:1fr}
 }
@@ -444,7 +444,7 @@ footer .fine{font-size:.73rem;max-width:70ch}
     .nav-brand{font-size:.72rem}
     .nav-links{gap:.15rem .9rem}
     .nav-links a{font-size:.66rem;letter-spacing:.1em;padding-bottom:0}
-    .nav-tel .nav-cta{min-height:0;padding:.3rem .8rem;font-size:.68rem}
+    .nav-tel .nav-cta{min-height:0;padding:.3rem .8rem;font-size:max(.8125rem,.68rem)}
   }
   .hero{padding-top:2.2rem}
   #listino,#epilazione,#metodo,#contatti{scroll-margin-top:8px}
@@ -821,6 +821,13 @@ footer .fine{font-size:.73rem;max-width:70ch}
     cifre.forEach(function(el){ io2.observe(el); });
   }
 })();
+</script>
+<script>
+/* overlay chiusi (menu, lightbox): fuori dall'albero di accessibilita'; aria-hidden segue lo stato reale */
+(function(){function s(e){var c=getComputedStyle(e),h=c.visibility==="hidden"||c.display==="none"||(+c.opacity<.1&&c.pointerEvents==="none");e.setAttribute("aria-hidden",h?"true":"false")}
+["mobileMenu"].forEach(function(i){var e=document.getElementById(i);if(!e)return;var f=function(){s(e)};f();
+new MutationObserver(f).observe(e,{attributes:true,attributeFilter:["class","hidden"]});new MutationObserver(f).observe(document.body,{attributes:true,attributeFilter:["class"]});
+e.addEventListener("transitionend",f);addEventListener("resize",f)})})();
 </script>
 <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
