@@ -27,7 +27,7 @@
   "@id": "https://demo.francescoar.com/foresteria-ceriola-monteisola/#attivita",
   "name": "Foresteria Lombarda La Ceriola",
   "description": "Quattro camere nella parte alta di Monte Isola, nell'abitato di Cure, poco distante dalla Madonna della Ceriola. Pranzo e cena su richiesta.",
-  "image": "img/vista-lago-dallalto.jpg",
+  "image": "https://demo.francescoar.com/foresteria-ceriola-monteisola/img/vista-lago-dallalto.jpg",
   "telephone": "+393333971019",
   "email": "vacanze@foresterialombardalaceriola.it",
   "url": "https://foresterialombardalaceriola.it/",
@@ -87,7 +87,7 @@ a{color:inherit}
 .marchio{display:flex;align-items:center;gap:.6rem;text-decoration:none;flex-shrink:0}
 .marchio svg{width:30px;height:30px;flex-shrink:0}
 .brand-nome{font-size:1.02rem;font-weight:600;letter-spacing:.01em;line-height:1.12}
-.brand-nome small{display:block;font-family:'Onest',sans-serif;font-size:.66rem;font-weight:500;
+.brand-nome small{display:block;font-family:'Onest',sans-serif;font-size:max(.8125rem,.66rem);font-weight:500;
   letter-spacing:.13em;text-transform:uppercase;color:var(--noce)}
 .nav-links{display:flex;gap:1.5rem;margin-left:auto;list-style:none}
 .nav-links a{text-decoration:none;font-size:.93rem;font-weight:500;padding:.3rem 0;
@@ -117,7 +117,7 @@ a{color:inherit}
 .hero-foto{width:100%;max-width:1400px;margin:0 auto;position:relative;overflow:hidden}
 .hero-foto img{width:100%;height:auto}
 .hero-testo{max-width:1000px;margin:0 auto;padding:2.4rem 1.5rem 2.8rem;text-align:center}
-.hero-occhiello{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;
+.hero-occhiello{font-size:max(.8125rem,.78rem);letter-spacing:.2em;text-transform:uppercase;font-weight:600;
   color:var(--noce);margin-bottom:.9rem}
 .hero h1{font-size:clamp(2.1rem,5.6vw,3.5rem);font-weight:600;margin-bottom:.85rem}
 .hero-sotto{font-size:clamp(1rem,2.2vw,1.2rem);max-width:62ch;margin:0 auto 1.7rem;color:var(--noce)}
@@ -135,7 +135,7 @@ section{scroll-margin-top:calc(var(--barra-h) + 15px)}
 .fascia-lago h2,.fascia-lago h3{color:var(--foglio)}
 .dentro{max-width:1120px;margin:0 auto}
 .testa{max-width:64ch;margin-bottom:2.4rem}
-.occhiello{font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;
+.occhiello{font-size:max(.8125rem,.76rem);letter-spacing:.2em;text-transform:uppercase;font-weight:600;
   color:var(--noce);margin-bottom:.7rem}
 .fascia-lago .occhiello{color:var(--lago-chiaro)}
 h2{font-size:clamp(1.7rem,3.6vw,2.4rem);font-weight:600;margin-bottom:1rem}
@@ -161,7 +161,7 @@ h2{font-size:clamp(1.7rem,3.6vw,2.4rem);font-weight:600;margin-bottom:1rem}
 .camera img{width:100%;aspect-ratio:3/2;object-fit:cover}
 .camera-corpo{padding:1.4rem 1.5rem 1.6rem;display:flex;flex-direction:column;flex:1}
 .camera-nome{font-size:1.5rem;font-weight:600;margin-bottom:.5rem}
-.camera-testo{font-size:.98rem;margin-bottom:1.1rem;flex:1}
+.camera-testo{font-size:max(1rem,.98rem);margin-bottom:1.1rem;flex:1}
 .dotazione{list-style:none;display:flex;flex-wrap:wrap;gap:.45rem;margin-top:auto}
 .dotazione li{font-size:.83rem;font-weight:500;background:var(--crema);color:var(--inchiostro);
   padding:.3rem .7rem;border-radius:999px}
@@ -197,7 +197,7 @@ h2{font-size:clamp(1.7rem,3.6vw,2.4rem);font-weight:600;margin-bottom:1rem}
 .duetto>*,.camere>*,.dove-griglia>*,.piede-griglia>*,.gallery-grid>*{min-width:0}
 .dato dd,.piede li,.nota,.camera-testo{overflow-wrap:anywhere}
 .dato{border-top:1px solid rgba(250,246,238,.25);padding:.95rem 0}
-.dato dt{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;
+.dato dt{font-size:max(.8125rem,.76rem);letter-spacing:.16em;text-transform:uppercase;font-weight:600;
   color:var(--lago-chiaro);margin-bottom:.25rem}
 .dato dd{font-size:1.05rem}
 .dato a{color:var(--foglio)}
@@ -215,7 +215,7 @@ footer a{color:var(--crema-luce)}
 .piede ul{list-style:none}
 .piede li{padding:.2rem 0}
 .nota{max-width:1120px;margin:2.4rem auto 0;padding-top:1.4rem;
-  border-top:1px solid rgba(202,193,180,.28);font-size:.83rem;line-height:1.6}
+  border-top:1px solid rgba(202,193,180,.28);font-size:max(1rem,.83rem);line-height:1.6}
 
 /* ───────── telefono ───────── */
 @media (max-width:920px){
@@ -232,7 +232,7 @@ footer a{color:var(--crema-luce)}
 }
 @media (max-width:560px){
   .brand-nome{font-size:.9rem}
-  .brand-nome small{font-size:.6rem;letter-spacing:.1em}
+  .brand-nome small{font-size:max(.8125rem,.6rem);letter-spacing:.1em}
   .nav-cta{padding:.5rem .85rem;font-size:.86rem}
   .gallery-grid{grid-template-columns:1fr 1fr;gap:.7rem}
 }
@@ -635,6 +635,13 @@ footer a{color:var(--crema-luce)}
     }
   });
 })();
+</script>
+<script>
+/* overlay chiusi (menu, lightbox): fuori dall'albero di accessibilita'; aria-hidden segue lo stato reale */
+(function(){function s(e){var c=getComputedStyle(e),h=c.visibility==="hidden"||c.display==="none"||(+c.opacity<.1&&c.pointerEvents==="none");e.setAttribute("aria-hidden",h?"true":"false")}
+["mobileMenu","lightbox"].forEach(function(i){var e=document.getElementById(i);if(!e)return;var f=function(){s(e)};f();
+new MutationObserver(f).observe(e,{attributes:true,attributeFilter:["class","hidden"]});new MutationObserver(f).observe(document.body,{attributes:true,attributeFilter:["class"]});
+e.addEventListener("transitionend",f);addEventListener("resize",f)})})();
 </script>
 <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
