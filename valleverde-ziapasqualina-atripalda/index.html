@@ -142,7 +142,7 @@ h1,h2,h3,.insegna{font-synthesis-weight:none}
 @media (max-width:560px){
   #nav{padding:0 14px;gap:10px}
   .nav-brand b{font-size:16px}
-  .nav-brand b span{font-size:11.5px}
+  .nav-brand b span{font-size:max(.8125rem,11.5px)}
   .nav-brand img{height:36px}
   .nav-tel a.nav-cta{padding:9px 12px}
 }
@@ -184,7 +184,7 @@ section{padding:54px 0}
 .scura .fascia figcaption{color:var(--tufo)}  /* 7,48:1 sul fondo scuro ✅ */
 .scura a{color:var(--tufo)}
 .etichetta{
-  font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;
+  font-size:max(.8125rem,12.5px);letter-spacing:.2em;text-transform:uppercase;
   color:var(--pietra-testo);margin:0 0 12px;
 }
 h2{font-size:clamp(25px,3.5vw,38px);margin:0 0 20px}
@@ -194,13 +194,13 @@ blockquote{
   margin:0;padding:0 0 0 20px;border-left:2px solid var(--boiserie);
   font-family:var(--display);font-size:clamp(19px,2.4vw,25px);line-height:1.44;
 }
-.fonte{font-size:14px;color:var(--pietra-testo);margin-top:14px}
+.fonte{font-size:max(1rem,14px);color:var(--pietra-testo);margin-top:14px}
 
 /* ── la sala: fotografia a fascia, TITOLO SOTTO (§0.2 modo 1) ──────────── */
 .fascia figure{margin:0}
 .fascia img{width:100%;height:auto;border:1px solid var(--boiserie)}
 .fascia figcaption{
-  margin-top:14px;font-size:14.5px;color:var(--pietra-testo);max-width:70ch;
+  margin-top:14px;font-size:max(1rem,14.5px);color:var(--pietra-testo);max-width:70ch;
 }
 
 /* ── le due stampe d'archivio ────────────────────────────────────────────
@@ -230,7 +230,7 @@ blockquote{
   display:block;margin:18px auto 0;font-size:13px;letter-spacing:.09em;text-transform:uppercase;
   color:var(--noce-testo);max-width:167px;
 }
-.nota-stampe{margin:0;font-size:15px;color:var(--noce-testo);max-width:44ch}
+.nota-stampe{margin:0;font-size:max(1rem,15px);color:var(--noce-testo);max-width:44ch}
 .nota-stampe em{color:var(--pietra-testo)}
 
 /* ── i tre piatti ─────────────────────────────────────────────────────── */
@@ -256,7 +256,7 @@ blockquote{
 /* ── piede ────────────────────────────────────────────────────────────── */
 footer{background:var(--foglio-2);padding:38px 0 44px;font-size:14px;color:var(--noce-testo)}
 footer p{margin:0 0 10px;max-width:78ch}
-.avviso{color:var(--pietra-testo);font-size:13.5px}
+.avviso{color:var(--pietra-testo);font-size:max(1rem,13.5px)}
 
 /* ── lightbox ─────────────────────────────────────────────────────────── */
 #lightbox{
@@ -575,6 +575,13 @@ footer p{margin:0 0 10px;max-width:78ch}
     trappola(e, [].slice.call(lb.querySelectorAll('button')));
   });
 })();
+</script>
+<script>
+/* overlay chiusi (menu, lightbox): fuori dall'albero di accessibilita'; aria-hidden segue lo stato reale */
+(function(){function s(e){var c=getComputedStyle(e),h=c.visibility==="hidden"||c.display==="none"||(+c.opacity<.1&&c.pointerEvents==="none");e.setAttribute("aria-hidden",h?"true":"false")}
+["mobileMenu","lightbox"].forEach(function(i){var e=document.getElementById(i);if(!e)return;var f=function(){s(e)};f();
+new MutationObserver(f).observe(e,{attributes:true,attributeFilter:["class","hidden"]});new MutationObserver(f).observe(document.body,{attributes:true,attributeFilter:["class"]});
+e.addEventListener("transitionend",f);addEventListener("resize",f)})})();
 </script>
 <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
