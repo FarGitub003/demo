@@ -27,7 +27,7 @@
   "@id": "https://demo.francescoar.com/dimeo-salza-irpina/#attivita",
   "name": "Azienda Agricola Di Meo s.a.s.",
   "description": "Azienda vitivinicola di famiglia a Salza Irpina (Avellino). Solo uve autoctone nei tre areali DOCG dell'Irpinia: Fiano di Avellino, Greco di Tufo e Taurasi.",
-  "image": "img/marchio-fuoco-testata-botte.jpg",
+  "image": "https://demo.francescoar.com/dimeo-salza-irpina/img/marchio-fuoco-testata-botte.jpg",
   "telephone": "+390825981419",
   "email": "info@dimeo.it",
   "url": "https://www.dimeo.it/",
@@ -87,7 +87,7 @@ a{color:inherit}
 .stretto{max-width:760px}
 section{scroll-margin-top:calc(var(--barra) + 15px)}
 .occhiello{
-  font-family:var(--testo);font-size:12px;font-weight:600;letter-spacing:.18em;
+  font-family:var(--testo);font-size:max(.8125rem,12px);font-weight:600;letter-spacing:.18em;
   text-transform:uppercase;color:var(--vigna-scuro);margin:0 0 14px;
 }
 .scuro .occhiello{color:var(--vigna-chiaro)}
@@ -156,7 +156,7 @@ section{scroll-margin-top:calc(var(--barra) + 15px)}
 .hero-foto figure{margin:0}
 .hero-foto img{width:100%;height:auto;border-radius:2px}
 .didascalia{
-  font-size:13.5px;line-height:1.5;color:var(--pietra-scuro);margin-top:11px;
+  font-size:max(1rem,13.5px);line-height:1.5;color:var(--pietra-scuro);margin-top:11px;
   border-left:2px solid var(--rovere-scuro);padding-left:12px;
 }
 .scuro .didascalia{color:var(--pietra-chiaro);border-left-color:var(--vigna-chiaro)}
@@ -184,18 +184,18 @@ h2{font-size:clamp(28px,4.1vw,42px);margin:0 0 10px}
 .nome img{width:auto;height:210px;margin:0 auto 18px;object-fit:contain}
 .nome h3{font-size:24px;margin:0 0 4px}
 .nome .ruolo{
-  font-family:var(--testo);font-size:12px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;
+  font-family:var(--testo);font-size:max(.8125rem,12px);font-weight:600;letter-spacing:.15em;text-transform:uppercase;
   color:var(--vigna-scuro);margin:0 0 12px;
 }
 .nome blockquote{
-  margin:0;font-size:15px;line-height:1.6;color:var(--pietra-scuro);font-style:italic;
+  margin:0;font-size:max(1rem,15px);line-height:1.6;color:var(--pietra-scuro);font-style:italic;
   border-left:2px solid var(--rovere-scuro);padding-left:13px;
 }
 
 /* ── mensola delle bottiglie ───────────────────────────────────────────── */
 .linea{margin-bottom:clamp(34px,5vw,58px)}
 .linea h3{font-size:22px;margin:0 0 4px}
-.linea .linea-nota{font-size:14.5px;color:var(--pietra-scuro);margin:0 0 22px;max-width:46em}
+.linea .linea-nota{font-size:max(1rem,14.5px);color:var(--pietra-scuro);margin:0 0 22px;max-width:46em}
 .mensola{
   display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));
   gap:clamp(16px,2.4vw,30px) clamp(10px,1.6vw,20px);align-items:start;
@@ -208,7 +208,7 @@ h2{font-size:clamp(28px,4.1vw,42px);margin:0 0 10px}
   font-family:var(--display);font-size:15.5px;font-weight:600;line-height:1.24;
   margin:12px 0 3px;color:var(--bottaia);min-height:2.48em;
 }
-.bott .b-dato{font-size:12.5px;line-height:1.42;color:var(--pietra-scuro)}
+.bott .b-dato{font-size:max(.8125rem,12.5px);line-height:1.42;color:var(--pietra-scuro)}
 
 /* ── scheda per esteso ─────────────────────────────────────────────────── */
 .scheda{display:grid;grid-template-columns:1fr;gap:clamp(28px,4vw,52px);align-items:start}
@@ -225,7 +225,7 @@ h2{font-size:clamp(28px,4.1vw,42px);margin:0 0 10px}
 .dati span{font-weight:600;text-align:right;color:var(--avorio);font-variant-numeric:tabular-nums}
 .premi{list-style:none;margin:0;padding:0;display:grid;gap:14px}
 .premi li{
-  border-left:2px solid var(--vigna-chiaro);padding:2px 0 2px 15px;font-size:15px;line-height:1.55;
+  border-left:2px solid var(--vigna-chiaro);padding:2px 0 2px 15px;font-size:max(1rem,15px);line-height:1.55;
   color:var(--pietra-chiaro);
 }
 .premi b{color:var(--avorio);font-weight:600}
@@ -280,7 +280,7 @@ h2{font-size:clamp(28px,4.1vw,42px);margin:0 0 10px}
 @media(min-width:760px){.contatti{grid-template-columns:1fr 1fr}}
 .dl{margin:0}
 .dl dt{
-  font-size:12px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;
+  font-size:max(.8125rem,12px);font-weight:600;letter-spacing:.15em;text-transform:uppercase;
   color:var(--vigna-chiaro);margin-top:20px;
 }
 .dl dt:first-child{margin-top:0}
@@ -293,7 +293,7 @@ h2{font-size:clamp(28px,4.1vw,42px);margin:0 0 10px}
 .bottone:hover{background:#fff}
 
 /* ── piede ─────────────────────────────────────────────────────────────── */
-footer{background:var(--bottaia);color:var(--pietra-chiaro);padding:44px 0 52px;font-size:13.5px;line-height:1.62;
+footer{background:var(--bottaia);color:var(--pietra-chiaro);padding:44px 0 52px;font-size:max(1rem,13.5px);line-height:1.62;
   border-top:1px solid rgba(245,245,219,.14)}
 footer a{color:var(--avorio)}
 footer .marchio-piede{width:150px;height:auto;margin-bottom:20px;opacity:.94}
@@ -866,6 +866,13 @@ footer .ai{margin-top:22px;padding-top:20px;border-top:1px solid rgba(245,245,21
     if(e.key==='ArrowRight') mostra(i+1);
   });
 })();
+</script>
+<script>
+/* overlay chiusi (menu, lightbox): fuori dall'albero di accessibilita'; aria-hidden segue lo stato reale */
+(function(){function s(e){var c=getComputedStyle(e),h=c.visibility==="hidden"||c.display==="none"||(+c.opacity<.1&&c.pointerEvents==="none");e.setAttribute("aria-hidden",h?"true":"false")}
+["mobileMenu"].forEach(function(i){var e=document.getElementById(i);if(!e)return;var f=function(){s(e)};f();
+new MutationObserver(f).observe(e,{attributes:true,attributeFilter:["class","hidden"]});new MutationObserver(f).observe(document.body,{attributes:true,attributeFilter:["class"]});
+e.addEventListener("transitionend",f);addEventListener("resize",f)})})();
 </script>
 <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
