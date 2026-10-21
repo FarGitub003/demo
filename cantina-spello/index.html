@@ -60,7 +60,7 @@ a{color:inherit}
 img{max-width:100%;height:auto;display:block}
 .wrap{width:min(1180px,92vw);margin-inline:auto}
 section,#hero{scroll-margin-top:calc(var(--barra) + 15px)}
-.occhiello{font-size:.8rem;font-weight:600;letter-spacing:.19em;text-transform:uppercase;color:var(--fiamma);margin:0 0 .85rem}
+.occhiello{font-size:max(.8125rem,.8rem);font-weight:600;letter-spacing:.19em;text-transform:uppercase;color:var(--fiamma);margin:0 0 .85rem}
 
 /* ---------- skip link ---------- */
 .skip{position:absolute;left:-9999px;top:0;z-index:400;background:var(--fiamma);color:#150F07;
@@ -104,7 +104,7 @@ section,#hero{scroll-margin-top:calc(var(--barra) + 15px)}
 /* la foto sta alla misura NATIVA (1170x650) e non viene mai ingrandita oltre 1,3x */
 .hero-foto{margin:0;max-width:626px}
 .hero-foto img{border-radius:3px;border:1px solid #3A2A15}
-.hero-foto figcaption{font-size:.78rem;color:var(--tufo);margin-top:.55rem}
+.hero-foto figcaption{font-size:max(.8125rem,.78rem);color:var(--tufo);margin-top:.55rem}
 .hero-testo h1{margin-bottom:.7rem}
 .hero-firma{width:34px;height:45px;margin-bottom:1rem}
 .hero-sotto{font-size:1.15rem;color:var(--tufo);max-width:34ch}
@@ -129,7 +129,7 @@ section,#hero{scroll-margin-top:calc(var(--barra) + 15px)}
 .chio-segno{width:56px;height:56px;color:var(--fiamma);flex:0 0 auto}
 .chio h2{margin-bottom:.7rem}
 .chio p:last-child{margin-bottom:0}
-.chio .fonte{font-size:.84rem;color:var(--tufo)}
+.chio .fonte{font-size:max(1rem,.84rem);color:var(--tufo)}
 
 /* ---------- cosa si mangia: fascia CHIARA per l'informazione pratica ---------- */
 #cucina{background:var(--avorio);color:#2A1B0C;padding:3.8rem 0}
@@ -146,7 +146,7 @@ section,#hero{scroll-margin-top:calc(var(--barra) + 15px)}
 .loro-voce footer{font-size:.84rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--bronzo-scuro)}
 .cucina-note{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:1.5rem;margin-top:2.6rem}
 .cucina-note h3{color:var(--terracotta-scuro);margin-bottom:.4rem;font-size:1.1rem}
-.cucina-note p{margin:0;color:#3A2A16;font-size:.99rem}
+.cucina-note p{margin:0;color:#3A2A16;font-size:max(1rem,.99rem)}
 .cucina-foto{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:1rem;margin-top:2.8rem}
 .cucina-foto figure{margin:0}
 .cucina-foto img{border-radius:3px}
@@ -157,7 +157,7 @@ section,#hero{scroll-margin-top:calc(var(--barra) + 15px)}
 .sala-testa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(1.6rem,4vw,3rem);align-items:center;margin-bottom:2.6rem}
 .sala-testa figure{margin:0}
 .sala-testa img{border-radius:3px;border:1px solid #3A2A15}
-.sala-testa figcaption{font-size:.8rem;color:var(--tufo);margin-top:.5rem}
+.sala-testa figcaption{font-size:max(.8125rem,.8rem);color:var(--tufo);margin-top:.5rem}
 .gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.85rem}
 .gallery-grid button{padding:0;border:1px solid #3A2A15;background:var(--pietra);cursor:pointer;
   border-radius:3px;overflow:hidden;display:block;line-height:0}
@@ -195,7 +195,7 @@ section,#hero{scroll-margin-top:calc(var(--barra) + 15px)}
   text-decoration:none;color:var(--fiamma);display:inline-block}
 .tel-grande:hover{color:var(--ambra)}
 
-body>footer{border-top:1px solid #3A2A15;margin-top:2.6rem;padding:2rem 0 2.6rem;font-size:.86rem;color:var(--tufo)}
+body>footer{border-top:1px solid #3A2A15;margin-top:2.6rem;padding:2rem 0 2.6rem;font-size:max(1rem,.86rem);color:var(--tufo)}
 body>footer p{margin:0 0 .5rem;max-width:82ch}
 body>footer .ai{color:var(--bronzo-chiaro)}
 
@@ -592,6 +592,13 @@ body>footer .ai{color:var(--bronzo-chiaro)}
     else if (menu.classList.contains('open')) menuChiudi(true);
   });
 })();
+</script>
+<script>
+/* overlay chiusi (menu, lightbox): fuori dall'albero di accessibilita'; aria-hidden segue lo stato reale */
+(function(){function s(e){var c=getComputedStyle(e),h=c.visibility==="hidden"||c.display==="none"||(+c.opacity<.1&&c.pointerEvents==="none");e.setAttribute("aria-hidden",h?"true":"false")}
+["mobileMenu","lightbox"].forEach(function(i){var e=document.getElementById(i);if(!e)return;var f=function(){s(e)};f();
+new MutationObserver(f).observe(e,{attributes:true,attributeFilter:["class","hidden"]});new MutationObserver(f).observe(document.body,{attributes:true,attributeFilter:["class"]});
+e.addEventListener("transitionend",f);addEventListener("resize",f)})})();
 </script>
 <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
