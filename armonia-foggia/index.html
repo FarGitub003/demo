@@ -33,7 +33,7 @@
   "@id": "https://armoniabeautycenter.wixsite.com/armoniacentroestetic#armonia",
   "name": "Armonia Centro Estetico",
   "description": "Centro estetico di Fabrizia Piergiacomo a Foggia, aperto nel 2017: trattamenti viso e sguardo, corpo, mani e piedi.",
-  "image": "img/og-armonia.jpg",
+  "image": "https://demo.francescoar.com/armonia-foggia/img/og-armonia.jpg",
   "founder": { "@type": "Person", "name": "Fabrizia Piergiacomo" },
   "foundingDate": "2017",
   "address": {
@@ -122,7 +122,7 @@ h1,h2,h3,h4{font-family:'EB Garamond',Georgia,serif;font-weight:400;line-height:
 
 /* ---------- occhiello ---------- */
 .eyebrow{
-  font-size:.71rem;letter-spacing:.3em;text-transform:uppercase;font-weight:700;
+  font-size:max(.8125rem,.71rem);letter-spacing:.3em;text-transform:uppercase;font-weight:700;
   display:flex;align-items:center;gap:.85rem;color:var(--rosa-cupa);
 }
 .eyebrow::before{content:"";width:2rem;height:1px;background:currentColor;opacity:.65}
@@ -153,7 +153,7 @@ h1,h2,h3,h4{font-family:'EB Garamond',Georgia,serif;font-weight:400;line-height:
 .nav-cta{
   background:var(--rosa-cupa);color:var(--crema);border:1px solid var(--rosa-cupa);
   padding:.55rem 1.15rem;border-radius:99px;text-decoration:none;
-  font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;
+  font-size:max(.8125rem,.75rem);letter-spacing:.16em;text-transform:uppercase;font-weight:700;
   transition:background .3s,border-color .3s;white-space:nowrap;
 }
 .nav-cta:hover{background:var(--inchiostro);border-color:var(--inchiostro)}
@@ -201,7 +201,7 @@ h1,h2,h3,h4{font-family:'EB Garamond',Georgia,serif;font-weight:400;line-height:
 }
 .hero h1 .sotto{
   display:block;font-family:'Manrope',sans-serif;font-weight:300;
-  font-size:clamp(.72rem,2.3vw,1.05rem);letter-spacing:.52em;text-transform:uppercase;
+  font-size:max(.8125rem,clamp(.72rem,2.3vw,1.05rem));letter-spacing:.52em;text-transform:uppercase;
   color:var(--fumo);margin-top:1.1rem;padding-left:.52em;
 }
 .hero-firma{width:min(430px,72vw);height:auto;overflow:visible;color:var(--salvia);margin:1.9rem 0 1.6rem}
@@ -214,7 +214,7 @@ h1,h2,h3,h4{font-family:'EB Garamond',Georgia,serif;font-weight:400;line-height:
 .btn{
   display:inline-flex;align-items:center;gap:.55rem;
   padding:.95rem 1.85rem;border-radius:99px;text-decoration:none;
-  font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;
+  font-size:max(.8125rem,.78rem);letter-spacing:.18em;text-transform:uppercase;font-weight:700;
   transition:transform .3s var(--ease-soft),background .3s,color .3s,border-color .3s;
 }
 .btn:hover{transform:translateY(-2px)}
@@ -229,12 +229,12 @@ h1,h2,h3,h4{font-family:'EB Garamond',Georgia,serif;font-weight:400;line-height:
   background:var(--crema-2);border-top:1px solid rgba(126,57,55,.2);
 }
 .hero-ribbon div{
-  padding:.9rem 1.9rem;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;
+  padding:.9rem 1.9rem;font-size:max(.8125rem,.72rem);letter-spacing:.2em;text-transform:uppercase;font-weight:600;
   color:var(--inchiostro);display:flex;align-items:center;gap:.65rem;
 }
 .hero-ribbon div+div{border-left:1px solid rgba(126,57,55,.2)}
 .hero-ribbon svg{width:15px;height:15px;flex:none;color:var(--rosa-cupa)}
-.hero .cascade{opacity:0;transform:translateY(24px);animation:sali 1s var(--ease-firma) forwards}
+@media (prefers-reduced-motion:no-preference){.hero .cascade{opacity:0;transform:translateY(24px);animation:sali 1s var(--ease-firma) forwards;}}
 @keyframes sali{to{opacity:1;transform:none}}
 .hero .cascade:nth-child(1){animation-delay:.1s}
 .hero .cascade:nth-child(2){animation-delay:.24s}
@@ -265,7 +265,7 @@ h1,h2,h3,h4{font-family:'EB Garamond',Georgia,serif;font-weight:400;line-height:
 .numeri article{max-width:17rem}
 .numeri .cifra{font-family:'EB Garamond',Georgia,serif;font-size:3rem;line-height:1;color:var(--rosa)}
 .numeri h3{font-size:1.15rem;letter-spacing:.03em;margin:.55rem 0 .35rem}
-.numeri p{font-size:.92rem;color:var(--fumo)}
+.numeri p{font-size:max(1rem,.92rem);color:var(--fumo)}
 
 /* ---------- fondi scuri ---------- */
 .dark{background:var(--salvia-notte);color:var(--crema);position:relative}
@@ -289,7 +289,7 @@ h1,h2,h3,h4{font-family:'EB Garamond',Georgia,serif;font-weight:400;line-height:
 }
 .tappa .anno.muto{font-size:1.5rem;color:var(--salvia-chiara)}
 .tappa h3{font-size:1.3rem;margin-bottom:.25rem;color:var(--crema)}
-.tappa p{font-size:.95rem;margin:0;max-width:46ch}
+.tappa p{font-size:max(1rem,.95rem);margin:0;max-width:46ch}
 .storia-cita{
   border-left:2px solid var(--cipria-chiara);padding-left:1.3rem;margin-top:2rem;
 }
@@ -340,7 +340,7 @@ h1,h2,h3,h4{font-family:'EB Garamond',Georgia,serif;font-weight:400;line-height:
 .tessera .t-segno{position:absolute;top:1.3rem;left:1.5rem;z-index:2;width:24px;height:29px}
 .tessera .t-segno path{stroke:currentColor;stroke-width:2.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
 .tessera .t-nome{position:relative;z-index:2;font-family:'EB Garamond',Georgia,serif;font-size:1.85rem;line-height:1.15}
-.tessera .t-sotto{position:relative;z-index:2;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;margin-top:.5rem}
+.tessera .t-sotto{position:relative;z-index:2;font-size:max(.8125rem,.74rem);letter-spacing:.2em;text-transform:uppercase;font-weight:700;margin-top:.5rem}
 .t-1{background:var(--cipria);--velo-0:rgba(235,201,194,.82);--velo-1:var(--cipria)}
 .t-2{--velo-0:rgba(50,65,54,.86);--velo-1:#2A382E}
 .t-3{--velo-0:rgba(243,234,227,.84);--velo-1:var(--crema-2)}
@@ -357,18 +357,18 @@ h1,h2,h3,h4{font-family:'EB Garamond',Georgia,serif;font-weight:400;line-height:
 .voce h4{font-size:1.32rem;flex:0 1 auto}
 .voce .punti{flex:1 1 auto;min-width:1.5rem;border-bottom:1px dotted rgba(107,92,94,.6);transform:translateY(-.3rem)}
 .voce .prezzo{font-family:'EB Garamond',Georgia,serif;font-size:1.28rem;color:var(--rosa);white-space:nowrap;flex:none}
-.voce p{color:var(--fumo);font-size:.95rem;margin-top:.15rem;max-width:52ch}
+.voce p{color:var(--fumo);font-size:max(1rem,.95rem);margin-top:.15rem;max-width:52ch}
 .nota-prezzi{
   margin-top:2.8rem;background:var(--cipria-velo);border-radius:4px;
   padding:1.3rem 1.5rem;display:flex;gap:1rem;align-items:flex-start;
 }
 .nota-prezzi svg{width:20px;height:20px;flex:none;color:var(--rosa-cupa);margin-top:.28rem}
-.nota-prezzi p{font-size:.95rem;color:var(--inchiostro);max-width:74ch}
+.nota-prezzi p{font-size:max(1rem,.95rem);color:var(--inchiostro);max-width:74ch}
 
 /* ---------- citazione ---------- */
 .quote{background:var(--cipria-velo);text-align:center}
 .quote blockquote{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:clamp(1.5rem,4vw,2.7rem);max-width:22ch;margin:0 auto;line-height:1.32;text-wrap:balance;color:var(--inchiostro)}
-.quote cite{display:block;margin-top:1.5rem;font-style:normal;font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;color:var(--rosa-cupa);font-weight:700}
+.quote cite{display:block;margin-top:1.5rem;font-style:normal;font-size:max(.8125rem,.74rem);letter-spacing:.26em;text-transform:uppercase;color:var(--rosa-cupa);font-weight:700}
 .quote .fonte{margin-top:.7rem;font-size:.9rem;color:var(--fumo)}
 
 /* ---------- orari ---------- */
@@ -388,11 +388,11 @@ h1,h2,h3,h4{font-family:'EB Garamond',Georgia,serif;font-weight:400;line-height:
 .stagione.attiva{background:var(--crema-2);border-color:var(--rosa-cupa)}
 .stagione .testa-st{display:flex;align-items:baseline;gap:.75rem;flex-wrap:wrap}
 .vigore{
-  font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;
+  font-size:max(.8125rem,.62rem);letter-spacing:.16em;text-transform:uppercase;font-weight:700;
   color:var(--crema);background:var(--rosa-cupa);border-radius:99px;padding:.18rem .62rem;
 }
 .stagione h3{font-size:1.5rem;margin-bottom:.2rem}
-.stagione .mesi{font-size:.73rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--rosa-cupa);margin-bottom:1.2rem}
+.stagione .mesi{font-size:max(.8125rem,.73rem);letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--rosa-cupa);margin-bottom:1.2rem}
 .stagione .ora-ora{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.1rem;font-size:.95rem}
 .stagione dt{font-weight:700}
 .stagione dd{color:var(--fumo);text-align:right}
@@ -428,8 +428,8 @@ footer{background:#26332B;color:var(--salvia-chiara);padding:2.7rem 0 2.3rem;fon
 .footer-inner{display:flex;flex-direction:column;gap:1rem;align-items:center;text-align:center}
 .footer-brand{display:flex;align-items:center;gap:.55rem;font-family:'EB Garamond',Georgia,serif;color:var(--crema);font-size:1.05rem;letter-spacing:.2em}
 .footer-brand svg{width:20px;height:24px;color:var(--cipria-chiara)}
-.ai-label{border:1px solid rgba(240,207,200,.45);color:var(--cipria-chiara);padding:.55rem 1.1rem;border-radius:99px;font-size:.72rem;letter-spacing:.05em;max-width:92vw}
-footer .fine{font-size:.73rem;max-width:60ch}
+.ai-label{border:1px solid rgba(240,207,200,.45);color:var(--cipria-chiara);padding:.55rem 1.1rem;border-radius:99px;font-size:max(.8125rem,.72rem);letter-spacing:.05em;max-width:92vw}
+footer .fine{font-size:max(.8125rem,.73rem);max-width:60ch}
 
 /* ---------- responsive ---------- */
 @media (max-width:940px){
@@ -450,7 +450,7 @@ footer .fine{font-size:.73rem;max-width:60ch}
     width:min(1080px,90vw);margin:2.4rem auto 4rem;
     border:1px solid rgba(126,57,55,.2);border-radius:4px;background:var(--crema-2);
   }
-  .hero-ribbon div{padding:.8rem 1.1rem;font-size:.69rem;justify-content:center;text-align:center}
+  .hero-ribbon div{padding:.8rem 1.1rem;font-size:max(.8125rem,.69rem);justify-content:center;text-align:center}
   .hero-ribbon div+div{border-left:0;border-top:1px solid rgba(126,57,55,.2)}
 }
 @media (max-width:560px){
@@ -983,6 +983,13 @@ footer .fine{font-size:.73rem;max-width:60ch}
   aggiornaOrari();
   setInterval(function(){ aggiornaOrari(); }, 60000);
 })();
+</script>
+<script>
+/* overlay chiusi (menu, lightbox): fuori dall'albero di accessibilita'; aria-hidden segue lo stato reale */
+(function(){function s(e){var c=getComputedStyle(e),h=c.visibility==="hidden"||c.display==="none"||(+c.opacity<.1&&c.pointerEvents==="none");e.setAttribute("aria-hidden",h?"true":"false")}
+["mobileMenu"].forEach(function(i){var e=document.getElementById(i);if(!e)return;var f=function(){s(e)};f();
+new MutationObserver(f).observe(e,{attributes:true,attributeFilter:["class","hidden"]});new MutationObserver(f).observe(document.body,{attributes:true,attributeFilter:["class"]});
+e.addEventListener("transitionend",f);addEventListener("resize",f)})})();
 </script>
 <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
