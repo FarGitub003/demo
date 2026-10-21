@@ -8,6 +8,7 @@
 --fm-secco:       cubic-bezier(.4, 0, .2, 1);
 --fm-spinta:      22px;
 }
+@media (prefers-reduced-motion: no-preference) {
 html.fm-js [data-fm^="sali"],
 html.fm-js [data-fm^="scendi"],
 html.fm-js [data-fm^="destra"],
@@ -54,6 +55,7 @@ filter  var(--fm-durata) var(--fm-molla) var(--fm-ritardo, 0ms),
 transform var(--fm-durata) var(--fm-molla) var(--fm-ritardo, 0ms);
 }
 html.fm-js [data-fm="sfoca"].fm-dentro { opacity: 1; filter: none; transform: none; }
+}
 .fm-riga { display: block; overflow: hidden; }
 .fm-riga > i {
 display: block; font-style: inherit;
@@ -283,6 +285,7 @@ transition: none !important;
 .fm-parallasse > * { transform: none !important; }
 * { scroll-behavior: auto !important; }
 }
+@media (prefers-reduced-motion: no-preference) {
 html.fm-js [data-fm-passo][data-fm="sfalsa"] > *,
 html.fm-js [data-fm-passo][data-fm="sali"] > *,
 html.fm-js [data-fm-passo][data-fm="scendi"] > *,
@@ -297,6 +300,7 @@ html.fm-js [data-fm-passo][data-fm="apri"] > *,
 html.fm-js [data-fm-passo][data-fm="tenda"] > *,
 html.fm-js [data-fm-passo][data-fm="sipario-su"] > *,
 html.fm-js [data-fm-passo][data-fm="sfoca"] > * { opacity: 0; }
+}
 .fm-parola { display: inline-block; white-space: nowrap; }
 .fm-filo { left: 0; width: 100%; }
 .fm-filo > svg { display: block; width: 100%; height: auto; overflow: visible; }
