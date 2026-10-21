@@ -96,7 +96,7 @@ section{scroll-margin-top:calc(var(--barra) + 15px)}
   letter-spacing:.06em;line-height:1.15;padding:.5em .7em;text-align:left;
 }
 .occhiello{
-  font-family:'Asap',sans-serif;font-weight:600;font-size:.78rem;
+  font-family:'Asap',sans-serif;font-weight:600;font-size:max(.8125rem,.78rem);
   letter-spacing:.16em;text-transform:uppercase;color:var(--grigio);margin:0 0 .7em
 }
 
@@ -142,7 +142,7 @@ section{scroll-margin-top:calc(var(--barra) + 15px)}
 .hero-griglia{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);gap:clamp(26px,4vw,54px);align-items:center}
 .hero-foto{margin:0}
 .hero-foto img{width:100%;border-radius:2px}
-.hero-foto figcaption{font-size:.8rem;color:var(--grigio);margin-top:.55em}
+.hero-foto figcaption{font-size:max(.8125rem,.8rem);color:var(--grigio);margin-top:.55em}
 .hero-testo h1{font-size:clamp(2.1rem,5.1vw,3.5rem);letter-spacing:-.005em}
 .hero-dove{font-family:'Unna',Georgia,serif;font-style:italic;font-size:clamp(1.08rem,2.4vw,1.35rem);color:var(--grigio);margin:.5em 0 1.1em}
 .hero-testo p.intro{font-size:1.06rem;max-width:44ch}
@@ -171,7 +171,7 @@ section{scroll-margin-top:calc(var(--barra) + 15px)}
 .piatti{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;list-style:none;padding:0;margin:0}
 .piatti li{background:var(--foglio-2);border:1px solid var(--beige-bordo);border-radius:3px;padding:20px 20px 22px}
 .piatti h3{font-size:1.22rem;margin-bottom:.3em}
-.piatti p{margin:0;font-size:.96rem;color:var(--grigio)}
+.piatti p{margin:0;font-size:max(1rem,.96rem);color:var(--grigio)}
 .nota-menu{margin-top:1.6em;font-size:.95rem;color:var(--grigio);max-width:64ch}
 
 /* chi cucina */
@@ -181,7 +181,7 @@ section{scroll-margin-top:calc(var(--barra) + 15px)}
 .chi-griglia h2{margin-bottom:.5em}
 .chi-foto{margin:0}
 .chi-foto img{width:100%;border-radius:3px;border:1px solid var(--beige-bordo)}
-.chi-foto figcaption{font-size:.8rem;color:var(--grigio);margin-top:.55em}
+.chi-foto figcaption{font-size:max(.8125rem,.8rem);color:var(--grigio);margin-top:.55em}
 .fonti{font-size:.85rem}
 
 /* cronologia */
@@ -194,7 +194,7 @@ section{scroll-margin-top:calc(var(--barra) + 15px)}
   background:var(--foglio-2);border:1px solid var(--beige-bordo);
   border-radius:3px;padding:16px 18px;
 }
-.tappa p{margin:0;font-size:.98rem;color:var(--grigio)}
+.tappa p{margin:0;font-size:max(1rem,.98rem);color:var(--grigio)}
 /* 🪤 RIMEDIO a una trappola nota del kit: attenua le tappe spente con
    opacity:.66, e un testo attenuato perde CONTRASTO in uno stato che nessuno
    strumento misura. Qui l'opacità del testo resta 1 in TUTTI gli stati: ad
@@ -257,7 +257,7 @@ html.fm-js .fmx-tappa.fmx-accesa .anno{color:var(--pomodoro)}
 /* dove siamo */
 .dove{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
 .dove h3{font-size:1.15rem;margin-bottom:.4em}
-.dove p{font-size:.99rem;color:var(--grigio)}
+.dove p{font-size:max(1rem,.99rem);color:var(--grigio)}
 .dove .grande{font-size:1.28rem;color:var(--inchiostro);font-weight:600}
 
 /* piede */
@@ -265,7 +265,7 @@ html.fm-js .fmx-tappa.fmx-accesa .anno{color:var(--pomodoro)}
 #piede a{color:#E8C9A0}
 #piede .piede-top{display:flex;flex-wrap:wrap;gap:26px;justify-content:space-between;align-items:flex-start}
 #piede h3{font-family:'Unna',Georgia,serif;color:#F4EFE6;font-size:1.2rem;margin-bottom:.35em}
-#piede .nota{margin-top:28px;padding-top:20px;border-top:1px solid rgba(244,239,230,.34);color:#DFD5C2;font-size:.85rem;line-height:1.6}
+#piede .nota{margin-top:28px;padding-top:20px;border-top:1px solid rgba(244,239,230,.34);color:#DFD5C2;font-size:max(1rem,.85rem);line-height:1.6}
 
 @media (max-width:920px){
   .nav-links{display:none}
@@ -640,6 +640,13 @@ html.fm-js .fmx-tappa.fmx-accesa .anno{color:var(--pomodoro)}
     if(window.innerWidth>920 && menu.classList.contains('open')) chiudiMenu();
   });
 })();
+</script>
+<script>
+/* overlay chiusi (menu, lightbox): fuori dall'albero di accessibilita'; aria-hidden segue lo stato reale */
+(function(){function s(e){var c=getComputedStyle(e),h=c.visibility==="hidden"||c.display==="none"||(+c.opacity<.1&&c.pointerEvents==="none");e.setAttribute("aria-hidden",h?"true":"false")}
+["mobileMenu"].forEach(function(i){var e=document.getElementById(i);if(!e)return;var f=function(){s(e)};f();
+new MutationObserver(f).observe(e,{attributes:true,attributeFilter:["class","hidden"]});new MutationObserver(f).observe(document.body,{attributes:true,attributeFilter:["class"]});
+e.addEventListener("transitionend",f);addEventListener("resize",f)})})();
 </script>
 <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
