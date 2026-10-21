@@ -55,7 +55,7 @@ p{margin:0 0 1.05em}
 a{color:inherit}
 .wrap{width:min(1180px,92vw);margin-inline:auto}
 section{padding:clamp(56px,7.5vw,104px) 0;scroll-margin-top:calc(var(--barra) + 15px)}
-.occhiello{font-family:var(--testo);font-size:.79rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ocra-testo);margin:0 0 .85em}
+.occhiello{font-family:var(--testo);font-size:max(.8125rem,.79rem);font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ocra-testo);margin:0 0 .85em}
 .scuro{background:var(--notte);color:var(--calce-chiara)}
 .scuro h1,.scuro h2,.scuro h3{color:var(--luce)}
 .scuro .occhiello{color:var(--pietra)}
@@ -92,7 +92,7 @@ section{padding:clamp(56px,7.5vw,104px) 0;scroll-margin-top:calc(var(--barra) + 
 .hero{padding-top:calc(var(--barra) + clamp(40px,6vw,76px));padding-bottom:clamp(44px,6vw,84px)}
 .hero-in{display:grid;grid-template-columns:1fr .92fr;gap:clamp(30px,4.4vw,62px);align-items:center}
 .hero-testo p.sotto{font-size:1.12rem;max-width:33ch;color:var(--legno-testo)}
-.hero-chiocciola{display:inline-flex;align-items:center;gap:9px;background:var(--bosco);color:var(--foglio);font-size:.79rem;font-weight:600;letter-spacing:.06em;padding:7px 15px;border-radius:999px;margin-bottom:18px}
+.hero-chiocciola{display:inline-flex;align-items:center;gap:9px;background:var(--bosco);color:var(--foglio);font-size:max(.8125rem,.79rem);font-weight:600;letter-spacing:.06em;padding:7px 15px;border-radius:999px;margin-bottom:18px}
 .hero-dove{font-family:var(--display);font-size:1.06rem;font-weight:500;color:var(--legno-testo);margin:0 0 26px}
 .bottoni{display:flex;flex-wrap:wrap;gap:13px}
 .btn{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-weight:700;font-size:1rem;padding:15px 26px;border-radius:999px}
@@ -102,7 +102,7 @@ section{padding:clamp(56px,7.5vw,104px) 0;scroll-margin-top:calc(var(--barra) + 
 .btn-2:hover,.btn-2:focus-visible{background:var(--calce)}
 .hero-foto{margin:0}
 .hero-foto img{width:100%;height:auto;border-radius:4px}
-.didascalia{font-size:.8rem;color:var(--ghiaia-testo);margin:9px 0 0;line-height:1.5}
+.didascalia{font-size:max(.8125rem,.8rem);color:var(--ghiaia-testo);margin:9px 0 0;line-height:1.5}
 .scuro .didascalia{color:var(--pietra)}
 
 /* ---------- la firma: la macina a tratto singolo ---------- */
@@ -116,14 +116,14 @@ section{padding:clamp(56px,7.5vw,104px) 0;scroll-margin-top:calc(var(--barra) + 
 .due{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,58px);align-items:center}
 blockquote.loro{margin:0;padding:0 0 0 22px;border-left:3px solid var(--pietra);font-family:var(--display);font-size:clamp(1.1rem,2.2vw,1.32rem);font-style:italic;line-height:1.5}
 .scuro blockquote.loro{border-left-color:var(--pietra);color:var(--calce-chiara)}
-.fonte{font-size:.8rem;color:var(--ghiaia-testo);font-style:normal;margin-top:10px}
+.fonte{font-size:max(.8125rem,.8rem);color:var(--ghiaia-testo);font-style:normal;margin-top:10px}
 .scuro .fonte{color:var(--pietra)}
 
 /* ---------- capitoli (scenica) ---------- */
 .capitoli-griglia{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(22px,3vw,40px);margin-top:clamp(28px,3.6vw,48px)}
 .capitolo{background:rgba(227,214,161,.07);border:1px solid rgba(227,214,161,.2);border-radius:6px;padding:clamp(22px,2.6vw,32px)}
 .capitolo h3{color:var(--luce)}
-.capitolo p{margin-bottom:0;font-size:.98rem}
+.capitolo p{margin-bottom:0;font-size:max(1rem,.98rem)}
 .grani{list-style:none;padding:0;margin:clamp(26px,3.4vw,44px) 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(178px,1fr));gap:14px}
 .grani li{background:rgba(201,170,107,.1);border:1px solid rgba(201,170,107,.3);border-radius:5px;padding:15px 17px}
 .grani b{display:block;font-family:var(--display);font-size:1.04rem;color:var(--luce);margin-bottom:3px}
@@ -173,7 +173,7 @@ footer h2{color:var(--luce);font-size:1.5rem}
 .foot-griglia{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:clamp(26px,3.4vw,48px)}
 footer a{color:var(--pietra)}
 .foot-logo{width:170px;margin-bottom:16px}
-.etichetta{border-top:1px solid rgba(227,214,161,.2);margin-top:clamp(34px,4vw,52px);padding-top:22px;font-size:.81rem;line-height:1.6;color:var(--calce-chiara)}
+.etichetta{border-top:1px solid rgba(227,214,161,.2);margin-top:clamp(34px,4vw,52px);padding-top:22px;font-size:max(.8125rem,.81rem);line-height:1.6;color:var(--calce-chiara)}
 .etichetta p{margin:0 0 .5em}
 .etichetta p:last-child{margin-bottom:0}
 
@@ -568,6 +568,13 @@ footer a{color:var(--pietra)}
 }
 </script>
 
+<script>
+/* overlay chiusi (menu, lightbox): fuori dall'albero di accessibilita'; aria-hidden segue lo stato reale */
+(function(){function s(e){var c=getComputedStyle(e),h=c.visibility==="hidden"||c.display==="none"||(+c.opacity<.1&&c.pointerEvents==="none");e.setAttribute("aria-hidden",h?"true":"false")}
+["mobileMenu"].forEach(function(i){var e=document.getElementById(i);if(!e)return;var f=function(){s(e)};f();
+new MutationObserver(f).observe(e,{attributes:true,attributeFilter:["class","hidden"]});new MutationObserver(f).observe(document.body,{attributes:true,attributeFilter:["class"]});
+e.addEventListener("transitionend",f);addEventListener("resize",f)})})();
+</script>
 <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
