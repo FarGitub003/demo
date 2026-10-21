@@ -51,7 +51,7 @@ a{color:var(--arco)}
 .avvolge{width:min(1180px,92vw);margin-inline:auto}
 .stretto{width:min(760px,92vw);margin-inline:auto}
 section{scroll-margin-top:calc(var(--barra) + 15px)}
-.occhiello{font-family:var(--sans);font-size:.76rem;font-weight:600;letter-spacing:.19em;
+.occhiello{font-family:var(--sans);font-size:max(.8125rem,.76rem);font-weight:600;letter-spacing:.19em;
   text-transform:uppercase;color:var(--trave);margin:0 0 .55rem}
 .scuro .occhiello{color:var(--luce)}
 
@@ -93,7 +93,7 @@ section{scroll-margin-top:calc(var(--barra) + 15px)}
 .hero-testo{padding:2.6rem 0 2.2rem;text-align:center}
 .hero-testo h1{font-size:clamp(2.4rem,6.6vw,4.5rem);margin:0 0 .35rem;letter-spacing:.01em}
 .hero-dove{font-size:clamp(1rem,2.1vw,1.2rem);color:var(--trave);margin:0 0 .3rem}
-.hero-sotto{font-family:var(--sans);font-size:.78rem;font-weight:600;letter-spacing:.22em;
+.hero-sotto{font-family:var(--sans);font-size:max(.8125rem,.78rem);font-weight:600;letter-spacing:.22em;
   text-transform:uppercase;color:var(--arco);margin:0 0 1.5rem}
 .chiama{display:inline-flex;align-items:center;gap:.5rem;background:var(--arco);color:var(--foglio);
   text-decoration:none;font-weight:600;padding:.85rem 1.6rem;border-radius:3px;font-size:1.02rem}
@@ -143,7 +143,7 @@ section{scroll-margin-top:calc(var(--barra) + 15px)}
 .dittico-guscio img{width:100%;height:100%;object-fit:cover}
 .dittico-eti{display:flex;justify-content:space-between;margin-top:.7rem;
   font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--luce)}
-.dittico-aiuto{margin:.55rem 0 0;font-size:.94rem;color:var(--luce)}
+.dittico-aiuto{margin:.55rem 0 0;font-size:max(1rem,.94rem);color:var(--luce)}
 
 /* galleria */
 .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(228px,1fr));gap:.7rem;
@@ -177,9 +177,9 @@ section{scroll-margin-top:calc(var(--barra) + 15px)}
 /* come si arriva */
 .strade{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.4rem;margin-top:1.5rem}
 .strade h3{font-size:1.12rem;color:var(--luce);margin-bottom:.3rem}
-.strade p{font-size:.96rem;margin:0}
+.strade p{font-size:max(1rem,.96rem);margin:0}
 .gps{font-family:var(--sans);font-variant-numeric:tabular-nums;letter-spacing:.04em;
-  color:var(--pietra);font-size:.95rem;margin-top:1.6rem}
+  color:var(--pietra);font-size:max(1rem,.95rem);margin-top:1.6rem}
 
 /* contatti */
 .contatti-griglia{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.6rem;margin-top:1.4rem}
@@ -192,7 +192,7 @@ section{scroll-margin-top:calc(var(--barra) + 15px)}
 footer{background:var(--notte);color:var(--pietra);padding:2.8rem 0 2.2rem;font-size:.9rem}
 footer a{color:var(--luce)}
 footer .marchio{height:66px;width:auto;margin:0 auto 1.3rem}
-.nota{color:var(--pietra);font-size:.85rem;line-height:1.6;max-width:64ch;margin-inline:auto;text-align:center}
+.nota{color:var(--pietra);font-size:max(1rem,.85rem);line-height:1.6;max-width:64ch;margin-inline:auto;text-align:center}
 .nota a{color:var(--luce)}
 .piede-riga{text-align:center;margin-top:1.5rem;padding-top:1.3rem;border-top:1px solid #2E3038}
 
@@ -631,6 +631,13 @@ footer .marchio{height:66px;width:auto;margin:0 auto 1.3rem}
     }
   });
 })();
+</script>
+<script>
+/* overlay chiusi (menu, lightbox): fuori dall'albero di accessibilita'; aria-hidden segue lo stato reale */
+(function(){function s(e){var c=getComputedStyle(e),h=c.visibility==="hidden"||c.display==="none"||(+c.opacity<.1&&c.pointerEvents==="none");e.setAttribute("aria-hidden",h?"true":"false")}
+["mobileMenu"].forEach(function(i){var e=document.getElementById(i);if(!e)return;var f=function(){s(e)};f();
+new MutationObserver(f).observe(e,{attributes:true,attributeFilter:["class","hidden"]});new MutationObserver(f).observe(document.body,{attributes:true,attributeFilter:["class"]});
+e.addEventListener("transitionend",f);addEventListener("resize",f)})})();
 </script>
 <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
