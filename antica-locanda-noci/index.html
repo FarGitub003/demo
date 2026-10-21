@@ -77,7 +77,7 @@ section{scroll-margin-top:calc(var(--barra) + 15px)}
 /* ---------- apertura ---------- */
 #apre{padding:calc(var(--barra) + 54px) 0 46px}
 .apre-griglia{display:grid;grid-template-columns:1fr .92fr;gap:44px;align-items:center}
-.occhiello{font-size:12.5px;letter-spacing:.19em;text-transform:uppercase;
+.occhiello{font-size:max(.8125rem,12.5px);letter-spacing:.19em;text-transform:uppercase;
   color:var(--pietra-testo);font-weight:600;margin:0 0 16px}
 #apre h1{font-size:clamp(40px,6.1vw,70px);letter-spacing:-.005em}
 .apre-sotto{font-size:clamp(19px,2.1vw,23px);color:var(--legno);margin:14px 0 0;
@@ -90,10 +90,10 @@ section{scroll-margin-top:calc(var(--barra) + 15px)}
 .bottone-pieno:hover{background:var(--brace)}
 .bottone-vuoto{border:1.5px solid var(--pietra-testo);color:var(--pietra-testo)}
 .bottone-vuoto:hover{background:var(--carta)}
-.apre-orari{margin:24px 0 0;font-size:15.5px;color:var(--pietra-testo)}
+.apre-orari{margin:24px 0 0;font-size:max(1rem,15.5px);color:var(--pietra-testo)}
 .apre-foto{position:relative}
 .apre-foto img{border-radius:2px}
-.didascalia{font-size:13px;color:var(--pietra-testo);margin:9px 0 0;line-height:1.5}
+.didascalia{font-size:max(1rem,13px);color:var(--pietra-testo);margin:9px 0 0;line-height:1.5}
 .firma-arco{display:block;width:120px;margin:0 0 20px}
 .firma-arco path{fill:none;stroke:var(--pietra-testo);stroke-width:5;stroke-linecap:square}
 
@@ -190,7 +190,7 @@ footer h2{font-size:26px;margin:0 0 14px}
 footer a{color:var(--pietra-chiaro)}
 .piede-griglia{display:grid;grid-template-columns:1.3fr 1fr;gap:36px}
 .etichetta-ai{margin:34px 0 0;padding:20px 0 0;border-top:1px solid #4a3524;
-  color:var(--pietra-ch);font-size:13px;line-height:1.6;max-width:78ch}
+  color:var(--pietra-ch);font-size:max(1rem,13px);line-height:1.6;max-width:78ch}
 
 /* ---------- comparse: SOLO col JS attivo (gate .fm-js) ---------- */
 .fm-js [data-fm]{will-change:opacity,transform}
@@ -626,6 +626,13 @@ footer a{color:var(--pietra-chiaro)}
 }
 </script>
 
+<script>
+/* overlay chiusi (menu, lightbox): fuori dall'albero di accessibilita'; aria-hidden segue lo stato reale */
+(function(){function s(e){var c=getComputedStyle(e),h=c.visibility==="hidden"||c.display==="none"||(+c.opacity<.1&&c.pointerEvents==="none");e.setAttribute("aria-hidden",h?"true":"false")}
+["mobileMenu","lightbox"].forEach(function(i){var e=document.getElementById(i);if(!e)return;var f=function(){s(e)};f();
+new MutationObserver(f).observe(e,{attributes:true,attributeFilter:["class","hidden"]});new MutationObserver(f).observe(document.body,{attributes:true,attributeFilter:["class"]});
+e.addEventListener("transitionend",f);addEventListener("resize",f)})})();
+</script>
 <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
