@@ -144,7 +144,7 @@ section{scroll-margin-top:calc(var(--barra) + 15px)}
 /* ---------- hero ---------- */
 .hero{padding:clamp(46px,8vw,96px) 0 clamp(38px,6vw,72px)}
 .hero-griglia{display:grid;grid-template-columns:1fr auto;gap:clamp(24px,5vw,64px);align-items:start}
-.occhiello{font-size:.79rem;letter-spacing:.19em;text-transform:uppercase;font-weight:600;color:var(--oro-testo);margin:0 0 18px}
+.occhiello{font-size:max(.8125rem,.79rem);letter-spacing:.19em;text-transform:uppercase;font-weight:600;color:var(--oro-testo);margin:0 0 18px}
 .hero h1{font-size:clamp(2.5rem,7.4vw,4.6rem);letter-spacing:-.012em}
 .hero h1 > span{display:block}
 .hero h1 em{display:block;font-style:normal;font-size:.42em;letter-spacing:.15em;text-transform:uppercase;
@@ -212,7 +212,7 @@ h2{font-size:clamp(1.85rem,4.2vw,3rem);letter-spacing:-.006em;margin-bottom:.55e
 .gallery-grid img{width:100%;height:clamp(224px,27vw,330px);object-fit:cover;background:var(--sabbia)}
 .tessera-testo{padding:15px 17px 19px}
 .tessera-testo b{display:block;font-family:var(--display);font-weight:400;font-size:1.12rem;margin-bottom:5px}
-.tessera-testo span{display:block;font-size:.9rem;color:var(--argento-testo);line-height:1.5}
+.tessera-testo span{display:block;font-size:max(1rem,.9rem);color:var(--argento-testo);line-height:1.5}
 
 /* ---------- l'anello delle famiglie ---------- */
 .famiglie{list-style:none;margin:clamp(28px,4vw,44px) 0 0;padding:0;
@@ -234,7 +234,7 @@ h2{font-size:clamp(1.85rem,4.2vw,3rem);letter-spacing:-.006em;margin-bottom:.55e
 .fascia.scura .pratico .nota{color:var(--argento)}
 
 /* ---------- piede ---------- */
-footer{background:var(--inchiostro);color:var(--foglio);padding:clamp(40px,6vw,64px) 0 clamp(30px,4vw,44px);font-size:.9rem}
+footer{background:var(--inchiostro);color:var(--foglio);padding:clamp(40px,6vw,64px) 0 clamp(30px,4vw,44px);font-size:max(1rem,.9rem)}
 footer a{color:var(--mare-chiaro)}
 .piede-righe{max-width:74ch;color:var(--argento);line-height:1.6}
 .piede-righe p{margin-bottom:.7em}
@@ -590,6 +590,13 @@ footer a{color:var(--mare-chiaro)}
     else if(!e.shiftKey && document.activeElement===ultimo){ e.preventDefault(); primo.focus(); }
   });
 })();
+</script>
+<script>
+/* overlay chiusi (menu, lightbox): fuori dall'albero di accessibilita'; aria-hidden segue lo stato reale */
+(function(){function s(e){var c=getComputedStyle(e),h=c.visibility==="hidden"||c.display==="none"||(+c.opacity<.1&&c.pointerEvents==="none");e.setAttribute("aria-hidden",h?"true":"false")}
+["mobileMenu","lightbox"].forEach(function(i){var e=document.getElementById(i);if(!e)return;var f=function(){s(e)};f();
+new MutationObserver(f).observe(e,{attributes:true,attributeFilter:["class","hidden"]});new MutationObserver(f).observe(document.body,{attributes:true,attributeFilter:["class"]});
+e.addEventListener("transitionend",f);addEventListener("resize",f)})})();
 </script>
 <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
