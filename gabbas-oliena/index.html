@@ -60,7 +60,7 @@ a{color:inherit}
 .stretto{width:min(760px,calc(100% - 44px));margin-inline:auto}
 section{scroll-margin-top:calc(var(--barra) + 15px)}
 .scuro{background:var(--vetro);color:var(--foglio)}
-.occhiello{font-size:12px;letter-spacing:.2em;text-transform:uppercase;
+.occhiello{font-size:max(.8125rem,12px);letter-spacing:.2em;text-transform:uppercase;
   font-weight:600;color:var(--studio-testo)}
 .scuro .occhiello{color:var(--grigio)}
 .titolo{font-size:clamp(30px,4.6vw,52px);letter-spacing:.005em}
@@ -178,13 +178,13 @@ section{scroll-margin-top:calc(var(--barra) + 15px)}
 .vino-foto img{width:100%;height:100%;object-fit:cover}
 .vino-corpo{padding:22px 22px 24px;display:flex;flex-direction:column;gap:9px;flex:1}
 .vino-corpo h3{font-size:31px;color:var(--vino)}
-.vino-den{font-size:12.5px;letter-spacing:.13em;text-transform:uppercase;
+.vino-den{font-size:max(.8125rem,12.5px);letter-spacing:.13em;text-transform:uppercase;
   font-weight:700;color:var(--studio-testo)}
-.vino-testo{margin:4px 0 0;font-size:15.6px;line-height:1.62;color:var(--vetro)}
+.vino-testo{margin:4px 0 0;font-size:max(1rem,15.6px);line-height:1.62;color:var(--vetro)}
 .vino-testo em{font-style:italic}
 .vino-dato{margin-top:auto;padding-top:14px;border-top:1px solid rgba(120,80,49,.2);
-  font-size:13.5px;color:var(--studio-testo);font-weight:600}
-.vini-nota{margin-top:30px;font-size:14.5px;color:var(--grigio-testo);max-width:78ch}
+  font-size:max(1rem,13.5px);color:var(--studio-testo);font-weight:600}
+.vini-nota{margin-top:30px;font-size:max(1rem,14.5px);color:var(--grigio-testo);max-width:78ch}
 
 /* ---------- la linea del tempo (scenica cronologia) ---------- */
 .linea{--fmx-colore:var(--oro-chiaro);max-width:940px;margin-inline:auto;
@@ -211,7 +211,7 @@ html.fm-js .linea .fmx-tappa{opacity:1}
   background:#2B2320}
 .tappa .anno{font-size:13px;letter-spacing:.18em;font-weight:700;color:#C2AC88}
 .tappa h3{font-size:26px;margin:7px 0 0;color:var(--foglio)}
-.tappa p{margin:9px 0 0;color:var(--grigio);font-size:15.6px}
+.tappa p{margin:9px 0 0;color:var(--grigio);font-size:max(1rem,15.6px)}
 .tappa blockquote{margin:14px 0 0;padding-left:16px;border-left:2px solid rgba(182,156,112,.55);
   font-family:var(--display);font-size:18px;line-height:1.5;color:var(--foglio)}
 .tappa cite{display:block;margin-top:9px;font-family:var(--testo);font-style:normal;
@@ -222,7 +222,7 @@ html.fm-js .linea .fmx-tappa{opacity:1}
 @media(max-width:880px){.terr{grid-template-columns:1fr}}
 .terr p{color:var(--grigio);margin:0 0 1em}
 .terr figure{margin:0}
-.terr figcaption{font-size:13.5px;color:var(--grigio);margin-top:9px}
+.terr figcaption{font-size:max(1rem,13.5px);color:var(--grigio);margin-top:9px}
 .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(248px,100%),1fr));
   gap:12px;margin-top:34px;padding:0;list-style:none}
 .gallery-grid button{padding:0;border:0;background:none;cursor:zoom-in;display:block;
@@ -269,7 +269,7 @@ footer img.parola{height:26px;width:auto}
 footer img.fregio{height:13px;width:auto;margin-top:8px}
 footer a{color:var(--calcare)}
 .f-righe{margin-top:34px;padding-top:22px;border-top:1px solid rgba(171,172,174,.22);
-  display:flex;flex-direction:column;gap:8px;font-size:13.5px;line-height:1.6}
+  display:flex;flex-direction:column;gap:8px;font-size:max(1rem,13.5px);line-height:1.6}
 
 /* ---------- responsive ---------- */
 @media(max-width:920px){
