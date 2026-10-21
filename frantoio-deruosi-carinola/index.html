@@ -164,7 +164,7 @@ figcaption{font-family:var(--display);font-size:17px;letter-spacing:.07em;text-t
   color:var(--oliva-logo);display:block;margin-bottom:6px;letter-spacing:.02em}
 .passi .n small{font-size:.46em;font-weight:600;letter-spacing:.12em;margin-left:.28em}
 .passi h3{font-size:21px;margin-bottom:4px}
-.passi p{font-size:15.5px;margin:0;color:var(--acciaio-chiaro)}
+.passi p{font-size:max(1rem,15.5px);margin:0;color:var(--acciaio-chiaro)}
 
 /* oli */
 .oli{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:34px}
@@ -183,7 +183,7 @@ figcaption{font-family:var(--display);font-size:17px;letter-spacing:.07em;text-t
 .altri{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:22px}
 .altro{border:1px solid rgba(32,38,29,.17);border-radius:4px;padding:18px 18px}
 .altro h3{font-size:21px}
-.altro p{font-size:15.5px;margin:0}
+.altro p{font-size:max(1rem,15.5px);margin:0}
 
 /* riconoscimenti (scenica vortice) */
 .premi{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:34px}
@@ -192,7 +192,7 @@ figcaption{font-family:var(--display);font-size:17px;letter-spacing:.07em;text-t
 .premio-card .a{font-family:var(--display);font-size:32px;font-weight:800;line-height:1;
   color:var(--oliva-logo);display:block;margin-bottom:6px}
 .premio-card h3{font-size:19px;margin-bottom:4px}
-.premio-card p{font-size:14.5px;margin:0;color:var(--acciaio-chiaro)}
+.premio-card p{font-size:max(1rem,14.5px);margin:0;color:var(--acciaio-chiaro)}
 
 /* galleria */
 .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;
@@ -234,7 +234,7 @@ figcaption{font-family:var(--display);font-size:17px;letter-spacing:.07em;text-t
 .scura .dati li{border-bottom-color:rgba(245,243,233,.18)}
 .scura .dati .et{color:var(--oliva-logo)}
 .scura .dati a{color:var(--luce);border-bottom-color:var(--verde-chiaro)}
-.strada{background:var(--carta);padding:22px 24px;border-radius:4px;font-size:15.5px}
+.strada{background:var(--carta);padding:22px 24px;border-radius:4px;font-size:max(1rem,15.5px)}
 .strada h3{font-size:19px;margin-bottom:6px}
 .strada p:last-child{margin-bottom:0}
 
@@ -243,7 +243,7 @@ footer{background:var(--inchiostro);color:var(--acciaio-chiaro);padding:38px 0 3
 footer a{color:var(--verde-chiaro)}
 footer .marchio{display:flex;align-items:center;gap:12px;margin-bottom:14px}
 footer .marchio img{height:44px;width:auto}
-footer .ai{margin-top:18px;padding-top:16px;border-top:1px solid rgba(245,243,233,.18);font-size:13.5px}
+footer .ai{margin-top:18px;padding-top:16px;border-top:1px solid rgba(245,243,233,.18);font-size:max(1rem,13.5px)}
 </style>
 <noscript><style>
 /* Senza JS il burger non può aprire niente: la barra diventa statica e i link
@@ -650,6 +650,13 @@ footer .ai{margin-top:18px;padding-top:16px;border-top:1px solid rgba(245,243,23
     "addressCountry": "IT"
   }
 }
+</script>
+<script>
+/* overlay chiusi (menu, lightbox): fuori dall'albero di accessibilita'; aria-hidden segue lo stato reale */
+(function(){function s(e){var c=getComputedStyle(e),h=c.visibility==="hidden"||c.display==="none"||(+c.opacity<.1&&c.pointerEvents==="none");e.setAttribute("aria-hidden",h?"true":"false")}
+["mobileMenu","lightbox"].forEach(function(i){var e=document.getElementById(i);if(!e)return;var f=function(){s(e)};f();
+new MutationObserver(f).observe(e,{attributes:true,attributeFilter:["class","hidden"]});new MutationObserver(f).observe(document.body,{attributes:true,attributeFilter:["class"]});
+e.addEventListener("transitionend",f);addEventListener("resize",f)})})();
 </script>
 <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
