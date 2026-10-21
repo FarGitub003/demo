@@ -16,13 +16,13 @@
 <meta property="og:title" content="La Pignatta · Gustoteca Mediterranea · Locorotondo">
 <meta property="og:description" content="La cucina della Valle d'Itria servita sul coccio: pasta fatta in casa, carni alla griglia, pesce e pizza dal forno a legna, anche d'asporto. Centro storico di Locorotondo (BA).">
 <meta property="og:image" content="https://demo.francescoar.com/la-pignatta-locorotondo/img/hero.jpg">
+<meta property="og:locale" content="it_IT">
 <meta property="og:image:width" content="1920">
 <meta property="og:image:height" content="1280">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:url" content="https://demo.francescoar.com/la-pignatta-locorotondo/">
 <meta property="og:site_name" content="Gustoteca Mediterranea La Pignatta">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="og:locale" content="it_IT">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -39,7 +39,7 @@
   "telephone": "+39 080 431 6391",
   "vatID": "02249530748",
   "servesCuisine": ["Cucina pugliese", "Pizza"],
-  "image": ["img/hero.jpg", "img/cozze-crude-con-limone.jpg", "img/capicollo-affettato.jpg"],
+  "image": ["https://demo.francescoar.com/la-pignatta-locorotondo/img/hero.jpg", "https://demo.francescoar.com/la-pignatta-locorotondo/img/cozze-crude-con-limone.jpg", "https://demo.francescoar.com/la-pignatta-locorotondo/img/capicollo-affettato.jpg"],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Via Vittorio Veneto, 110",
@@ -249,7 +249,7 @@ body.menu-open .burger span:nth-child(3){transform:translateY(-8.5px) rotate(-45
 .tondo:hover .tondo-img{transform:scale(1.03) rotate(1.5deg)}
 .tondo-img img{width:100%;height:100%;object-fit:cover}
 .tondo h3{font-size:1.28rem;margin-bottom:6px}
-.tondo p{margin:0;color:#5C5348;font-size:.98rem;max-width:26em;margin-inline:auto}
+.tondo p{margin:0;color:#5C5348;font-size:max(1rem,.98rem);max-width:26em;margin-inline:auto}
 @media (max-width:900px){
   .tondi{grid-template-columns:repeat(2,1fr)}
 }
@@ -281,7 +281,7 @@ body.menu-open .burger span:nth-child(3){transform:translateY(-8.5px) rotate(-45
 .serv{display:flex;gap:16px;align-items:flex-start}
 .serv svg{flex:none;color:var(--oliva-scura);margin-top:3px}
 .serv h3{font-size:1.08rem;font-family:'Archivo',sans-serif;font-weight:700;margin-bottom:4px}
-.serv p{margin:0;font-size:.96rem;color:#4A4238}
+.serv p{margin:0;font-size:max(1rem,.96rem);color:#4A4238}
 @media (max-width:860px){
   .servizi-grid{grid-template-columns:1fr 1fr}
 }
@@ -351,7 +351,7 @@ body.menu-open .burger span:nth-child(3){transform:translateY(-8.5px) rotate(-45
 @media (max-width:560px){.contatti-grid{grid-template-columns:1fr}}
 
 /* ============ FOOTER ============ */
-footer{background:#1C2030;color:rgba(255,255,255,.86);padding:44px 0 34px;font-size:.92rem}
+footer{background:#1C2030;color:rgba(255,255,255,.86);padding:44px 0 34px;font-size:max(1rem,.92rem)}
 .foot-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:22px;align-items:center;margin-bottom:26px}
 .foot-brand{font-family:'Libre Caslon Text',serif;font-weight:700;font-size:1.15rem;color:#fff;display:flex;align-items:center;gap:10px}
 .foot-social{display:flex;gap:16px;list-style:none;margin:0;padding:0}
@@ -794,6 +794,13 @@ footer{background:#1C2030;color:rgba(255,255,255,.86);padding:44px 0 34px;font-s
     }
   });
 })();
+</script>
+<script>
+/* overlay chiusi (menu, lightbox): fuori dall'albero di accessibilita'; aria-hidden segue lo stato reale */
+(function(){function s(e){var c=getComputedStyle(e),h=c.visibility==="hidden"||c.display==="none"||(+c.opacity<.1&&c.pointerEvents==="none");e.setAttribute("aria-hidden",h?"true":"false")}
+["mobileMenu"].forEach(function(i){var e=document.getElementById(i);if(!e)return;var f=function(){s(e)};f();
+new MutationObserver(f).observe(e,{attributes:true,attributeFilter:["class","hidden"]});new MutationObserver(f).observe(document.body,{attributes:true,attributeFilter:["class"]});
+e.addEventListener("transitionend",f);addEventListener("resize",f)})})();
 </script>
 <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
