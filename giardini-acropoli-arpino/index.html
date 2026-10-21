@@ -120,7 +120,7 @@ h1{font-size:clamp(2.3rem,6.4vw,4.15rem)}
 
 /* --- sezioni ------------------------------------------------------------- */
 .sez{padding:62px 0}
-.sez-occhiello{font-size:12.5px;letter-spacing:.15em;text-transform:uppercase;
+.sez-occhiello{font-size:max(.8125rem,12.5px);letter-spacing:.15em;text-transform:uppercase;
   font-weight:700;color:var(--verde);margin:0 0 12px}
 h2{font-size:clamp(1.72rem,3.9vw,2.62rem);margin-bottom:20px}
 h3{font-size:1.16rem;margin-bottom:8px}
@@ -137,13 +137,13 @@ h3{font-size:1.16rem;margin-bottom:8px}
   font-family:var(--display);font-size:2.85em;line-height:1;color:var(--rosso);
   opacity:.34;pointer-events:none}
 .scuro .citazione::before{color:var(--rosso-luce);opacity:.42}
-.nota{font-size:14.5px;color:var(--pietra)}
+.nota{font-size:max(1rem,14.5px);color:var(--pietra)}
 
 /* --- fascia foto larga --------------------------------------------------- */
 .fascia{width:100%;max-width:1560px;margin:0 auto}
 .fascia img{width:100%;height:auto}
 .fascia figcaption{width:min(1140px,100% - 44px);margin:12px auto 0;padding-bottom:22px;
-  font-size:14px;color:var(--pietra)}
+  font-size:max(1rem,14px);color:var(--pietra)}
 .scuro .fascia figcaption{color:var(--pietra-luce)}
 
 /* --- i numeri ------------------------------------------------------------ */
@@ -207,7 +207,7 @@ h3{font-size:1.16rem;margin-bottom:8px}
 .piede a{color:var(--verde-luce)}
 .piede .nota{color:var(--pietra-luce)}
 .piede .fine{margin-top:26px;padding-top:22px;border-top:1px solid #454733;
-  font-size:13.5px;color:var(--pietra-luce)}
+  font-size:max(1rem,13.5px);color:var(--pietra-luce)}
 .piede .fine p{color:var(--pietra-luce);margin:0 0 7px}
 
 /* --- lightbox (nomi convenzionali) -------------------------------------- */
@@ -686,6 +686,13 @@ h3{font-size:1.16rem;margin-bottom:8px}
     }
   });
 })();
+</script>
+<script>
+/* overlay chiusi (menu, lightbox): fuori dall'albero di accessibilita'; aria-hidden segue lo stato reale */
+(function(){function s(e){var c=getComputedStyle(e),h=c.visibility==="hidden"||c.display==="none"||(+c.opacity<.1&&c.pointerEvents==="none");e.setAttribute("aria-hidden",h?"true":"false")}
+["mobileMenu"].forEach(function(i){var e=document.getElementById(i);if(!e)return;var f=function(){s(e)};f();
+new MutationObserver(f).observe(e,{attributes:true,attributeFilter:["class","hidden"]});new MutationObserver(f).observe(document.body,{attributes:true,attributeFilter:["class"]});
+e.addEventListener("transitionend",f);addEventListener("resize",f)})})();
 </script>
 <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
