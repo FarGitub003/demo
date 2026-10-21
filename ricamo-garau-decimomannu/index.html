@@ -156,11 +156,11 @@ a{color:var(--blu-testo)}
 .hero-testo{background:var(--lino);padding:44px 0 60px;text-align:center}
 .hero-testo h1{font-size:clamp(2.15rem,6.2vw,3.7rem)}
 .hero-mest{
-  font-family:var(--testo);font-size:.78rem;font-weight:600;letter-spacing:.2em;
+  font-family:var(--testo);font-size:max(.8125rem,.78rem);font-weight:600;letter-spacing:.2em;
   text-transform:uppercase;color:var(--oro-testo);margin:1.1rem 0 0;
 }
 .hero-luogo{margin:.45rem 0 0;color:var(--cuoio-testo);font-size:1.02rem}
-.hero-cred{margin:1.5rem 0 0;font-size:.78rem;color:var(--cuoio-testo)}
+.hero-cred{margin:1.5rem 0 0;font-size:max(.8125rem,.78rem);color:var(--cuoio-testo)}
 
 /* ---------- griglie ---------- */
 .due{display:grid;grid-template-columns:0.85fr 1.15fr;gap:clamp(26px,4.5vw,62px);align-items:center}
@@ -175,7 +175,7 @@ a{color:var(--blu-testo)}
     var(--cuoio-testo) 0 7px, transparent 7px 12px);
   background-size:1px 100%;background-repeat:no-repeat;background-position:left top;
 }
-.cit-fonte{font-size:.83rem;color:var(--cuoio-testo);margin:0 0 2rem;padding-left:22px}
+.cit-fonte{font-size:max(1rem,.83rem);color:var(--cuoio-testo);margin:0 0 2rem;padding-left:22px}
 .sez--scura .cit{background-image:repeating-linear-gradient(to bottom,
     var(--oro) 0 7px, transparent 7px 12px);color:var(--luce)}
 .sez--scura .cit-fonte{color:var(--oro)}
@@ -183,7 +183,7 @@ a{color:var(--blu-testo)}
 .mano{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
 .mano figure{margin:0}
 .mano img{width:100%;aspect-ratio:3/2;object-fit:cover}
-.mano figcaption,.cap-larga{font-size:.86rem;color:var(--oro);margin-top:.6rem;line-height:1.5}
+.mano figcaption,.cap-larga{font-size:max(1rem,.86rem);color:var(--oro);margin-top:.6rem;line-height:1.5}
 @media (max-width:820px){.mano{grid-template-columns:1fr}.mano img{aspect-ratio:16/10}}
 
 /* ---------- i punti ---------- */
@@ -214,7 +214,7 @@ a{color:var(--blu-testo)}
    un filo, invece di far sembrare un errore una scelta del fotografo. */
 .gallery-grid button img.ha-fondo{outline:1px solid rgba(27,19,16,.16);outline-offset:-1px}
 .gg-tit{display:block;font-weight:600;margin-top:.75rem;font-size:.99rem}
-.gg-tec{display:block;font-size:.86rem;color:var(--cuoio-testo);margin-top:.16rem;line-height:1.5}
+.gg-tec{display:block;font-size:max(1rem,.86rem);color:var(--cuoio-testo);margin-top:.16rem;line-height:1.5}
 
 /* ---------- lightbox ---------- */
 #lightbox{
@@ -251,7 +251,7 @@ a{color:var(--blu-testo)}
 @media (max-width:760px){.contatti{grid-template-columns:1fr}}
 .rec{list-style:none;padding:0;margin:0}
 .rec li{padding:13px 0;border-bottom:1px solid rgba(233,230,219,.2)}
-.rec b{display:block;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--oro);font-weight:600;margin-bottom:.22rem}
+.rec b{display:block;font-size:max(.8125rem,.76rem);letter-spacing:.16em;text-transform:uppercase;color:var(--oro);font-weight:600;margin-bottom:.22rem}
 .rec a{color:var(--blu-chiaro);text-decoration:none;font-size:1.14rem}
 .rec a:hover{text-decoration:underline}
 /* ⚠️ selettore COMPOSTO apposta: `.sez--scura a` (classe+elemento) batte
@@ -264,12 +264,12 @@ a{color:var(--blu-testo)}
 .sez--scura a.cta-tel:hover,.cta-tel:hover{background:var(--oro);color:var(--bottega)}
 
 /* ---------- footer ---------- */
-footer{background:var(--lino);padding:52px 0 46px;font-size:.86rem;color:var(--cuoio-testo)}
+footer{background:var(--lino);padding:52px 0 46px;font-size:max(1rem,.86rem);color:var(--cuoio-testo)}
 footer p{margin:0 0 .7em}
 .f-marchio{display:flex;align-items:center;gap:12px;margin-bottom:20px}
 .f-marchio img{width:40px;height:40px}
 .f-marchio b{font-family:var(--display);font-weight:400;font-size:1.16rem;color:var(--inchiostro)}
-.f-ai{margin-top:22px;padding-top:20px;border-top:1px solid rgba(27,19,16,.18);font-size:.8rem}
+.f-ai{margin-top:22px;padding-top:20px;border-top:1px solid rgba(27,19,16,.18);font-size:max(.8125rem,.8rem)}
 
 /* ---------- movimento: OPT-IN, mai opt-out (P-023) ----------
    Il movimento si AGGIUNGE dentro `no-preference`. Così, con «riduci
@@ -684,6 +684,13 @@ footer p{margin:0 0 .7em}
     else if(!e.shiftKey && document.activeElement===ultimo){ e.preventDefault(); primo.focus(); }
   });
 })();
+</script>
+<script>
+/* overlay chiusi (menu, lightbox): fuori dall'albero di accessibilita'; aria-hidden segue lo stato reale */
+(function(){function s(e){var c=getComputedStyle(e),h=c.visibility==="hidden"||c.display==="none"||(+c.opacity<.1&&c.pointerEvents==="none");e.setAttribute("aria-hidden",h?"true":"false")}
+["mobileMenu","lightbox"].forEach(function(i){var e=document.getElementById(i);if(!e)return;var f=function(){s(e)};f();
+new MutationObserver(f).observe(e,{attributes:true,attributeFilter:["class","hidden"]});new MutationObserver(f).observe(document.body,{attributes:true,attributeFilter:["class"]});
+e.addEventListener("transitionend",f);addEventListener("resize",f)})})();
 </script>
 <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
