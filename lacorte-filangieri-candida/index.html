@@ -27,7 +27,7 @@
   "@id": "https://demo.francescoar.com/lacorte-filangieri-candida/#attivita",
   "name": "La Corte dei Filangieri",
   "description": "Osteria a Candida, in Irpinia. Chiocciola di Osterie d'Italia 2026 di Slow Food.",
-  "image": "img/sala-credenza-lampada.jpg",
+  "image": "https://demo.francescoar.com/lacorte-filangieri-candida/img/sala-credenza-lampada.jpg",
   "servesCuisine": "Irpina",
   "telephone": "+390825986414",
   "email": "info@lacortedeifilangieri.com",
@@ -79,7 +79,7 @@ a{color:inherit}
 .wrap{max-width:1160px;margin:0 auto;padding-inline:var(--gutter)}
 .stretto{max-width:740px}
 section{scroll-margin-top:calc(var(--barra) + 15px)}
-.occhiello{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+.occhiello{font-size:max(.8125rem,12px);font-weight:700;letter-spacing:.18em;text-transform:uppercase;
   color:var(--rame-scuro);margin:0 0 14px}
 .scuro .occhiello{color:var(--rame-chiaro)}
 .skip{position:absolute;left:12px;top:-70px;z-index:250;background:var(--sala);color:var(--foglio);
@@ -147,7 +147,7 @@ h2{font-size:clamp(27px,3.9vw,40px);margin:0 0 10px}
 .premio{background:var(--sala);color:var(--foglio);border-radius:3px;
   padding:clamp(28px,4vw,46px);display:grid;gap:18px;justify-items:start}
 .premio .chio{font-family:var(--display);font-size:clamp(26px,3.6vw,38px);line-height:1.15;color:var(--foglio)}
-.premio .fonte{font-size:14.5px;color:var(--pietra-chiaro);margin:0}
+.premio .fonte{font-size:max(1rem,14.5px);color:var(--pietra-chiaro);margin:0}
 .premio .fonte a{color:var(--lampada)}
 
 /* ── menu ──────────────────────────────────────────────────────────── */
@@ -157,7 +157,7 @@ h2{font-size:clamp(27px,3.9vw,40px);margin:0 0 10px}
 .portata .nota{font-size:14px;color:var(--pietra-scuro);margin:0 0 16px}
 .portata ul{list-style:none;margin:0;padding:0}
 .portata li{padding:11px 0;border-bottom:1px solid rgba(28,12,9,.14);font-size:16.5px;line-height:1.45}
-.portata li i{display:block;font-style:normal;font-size:14px;color:var(--pietra-scuro);margin-top:3px}
+.portata li i{display:block;font-style:normal;font-size:max(1rem,14px);color:var(--pietra-scuro);margin-top:3px}
 
 /* ── galleria: 3 COLONNE (parametro di struttura, §3.6) ────────────── */
 .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
@@ -202,7 +202,7 @@ h2{font-size:clamp(27px,3.9vw,40px);margin:0 0 10px}
   border-bottom:1px solid rgba(251,248,243,.18);font-size:16.5px}
 .orari b{font-weight:400;color:var(--pietra-chiaro)}
 .orari span{font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
-.avviso{font-size:14.5px;color:var(--pietra-chiaro);border-left:2px solid var(--rame-chiaro);
+.avviso{font-size:max(1rem,14.5px);color:var(--pietra-chiaro);border-left:2px solid var(--rame-chiaro);
   padding-left:13px;max-width:38em}
 .contatti{display:grid;grid-template-columns:1fr;gap:clamp(26px,4vw,50px)}
 @media(min-width:760px){.contatti{grid-template-columns:1fr 1fr}}
@@ -214,7 +214,7 @@ h2{font-size:clamp(27px,3.9vw,40px);margin:0 0 10px}
 .dl dd a{color:var(--foglio)}
 
 /* ── piede ─────────────────────────────────────────────────────────── */
-footer{background:var(--pece);color:var(--pietra-chiaro);padding:42px 0 50px;font-size:13.5px;
+footer{background:var(--pece);color:var(--pietra-chiaro);padding:42px 0 50px;font-size:max(1rem,13.5px);
   line-height:1.62;border-top:1px solid rgba(251,248,243,.14)}
 footer a{color:var(--foglio)}
 footer .ai{margin-top:20px;padding-top:18px;border-top:1px solid rgba(251,248,243,.16)}
@@ -574,6 +574,13 @@ footer .ai{margin-top:20px;padding-top:18px;border-top:1px solid rgba(251,248,24
     if(e.key==='ArrowRight') mostra(i+1);
   });
 })();
+</script>
+<script>
+/* overlay chiusi (menu, lightbox): fuori dall'albero di accessibilita'; aria-hidden segue lo stato reale */
+(function(){function s(e){var c=getComputedStyle(e),h=c.visibility==="hidden"||c.display==="none"||(+c.opacity<.1&&c.pointerEvents==="none");e.setAttribute("aria-hidden",h?"true":"false")}
+["mobileMenu"].forEach(function(i){var e=document.getElementById(i);if(!e)return;var f=function(){s(e)};f();
+new MutationObserver(f).observe(e,{attributes:true,attributeFilter:["class","hidden"]});new MutationObserver(f).observe(document.body,{attributes:true,attributeFilter:["class"]});
+e.addEventListener("transitionend",f);addEventListener("resize",f)})})();
 </script>
 <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
