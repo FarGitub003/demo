@@ -54,7 +54,7 @@ a{color:var(--vino)}
 .avvolge{width:min(1140px,100% - 44px);margin-inline:auto}
 .stretto{width:min(720px,100% - 44px);margin-inline:auto}
 section{scroll-margin-top:calc(var(--barra) + 15px)}
-.occhiello{font-size:.76rem;letter-spacing:.17em;text-transform:uppercase;
+.occhiello{font-size:max(.8125rem,.76rem);letter-spacing:.17em;text-transform:uppercase;
   font-weight:600;margin:0 0 .7em}
 
 /* --- salta al contenuto -------------------------------------------------- */
@@ -73,7 +73,7 @@ section{scroll-margin-top:calc(var(--barra) + 15px)}
 .nav-marchio img{width:29px;height:40px}       /* 78×107 nativi → 0,37×, mai ingrandito */
 .nav-marchio b{font-family:var(--display);font-weight:400;font-size:1.06rem;
   line-height:1.05;letter-spacing:.01em;display:block}
-.nav-marchio-testo>span{display:block;font-size:.66rem;letter-spacing:.16em;
+.nav-marchio-testo>span{display:block;font-size:max(.8125rem,.66rem);letter-spacing:.16em;
   text-transform:uppercase;color:var(--oro);font-weight:600}
 .nav-links{display:flex;gap:22px;margin-left:auto;list-style:none;padding:0;margin-block:0}
 .nav-links a{color:var(--luce);text-decoration:none;font-size:.93rem;font-weight:500;
@@ -138,7 +138,7 @@ section{scroll-margin-top:calc(var(--barra) + 15px)}
 /* la foto sta alla sua misura nativa: 800×450. Mai ingrandita (dossier §0.1) */
 .hero-foto{max-width:800px;justify-self:end;width:100%}
 .hero-foto img{border-radius:10px}
-.hero-foto figcaption{font-size:.8rem;color:#B7AA98;margin-top:9px}
+.hero-foto figcaption{font-size:max(.8125rem,.8rem);color:#B7AA98;margin-top:9px}
 
 /* --- targa Chiocciola ---------------------------------------------------- */
 .chiocciola{display:inline-flex;align-items:center;gap:10px;
@@ -159,14 +159,14 @@ section{scroll-margin-top:calc(var(--barra) + 15px)}
   pointer-events:none}
 @media (max-width:560px){.citazione{padding-left:1.5em}.citazione::before{font-size:2.2em}}
 .citazione cite{display:block;font-family:var(--testo);font-style:normal;
-  font-size:.8rem;letter-spacing:.05em;color:var(--tovaglia-testo);margin-top:.7em;
+  font-size:max(.8125rem,.8rem);letter-spacing:.05em;color:var(--tovaglia-testo);margin-top:.7em;
   text-transform:uppercase;font-weight:600}
 
 /* --- tris di foto -------------------------------------------------------- */
 .tris{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
 .tris figure{margin:0}
 .tris img{border-radius:9px;width:100%}
-.tris figcaption{font-size:.79rem;color:var(--tovaglia-testo);margin-top:8px;line-height:1.4}
+.tris figcaption{font-size:max(.8125rem,.79rem);color:var(--tovaglia-testo);margin-top:8px;line-height:1.4}
 @media (max-width:700px){.tris{grid-template-columns:1fr 1fr;gap:12px}}
 
 /* --- galleria: due colonne, scenica `cascata` ---------------------------- */
@@ -189,7 +189,7 @@ section{scroll-margin-top:calc(var(--barra) + 15px)}
 
 /* --- griglia semplice (Antica Caffetteria) ------------------------------- */
 .griglia4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px}
-.nota-verticali{margin:34px 0 0;font-size:.95rem;color:var(--tovaglia-testo)}
+.nota-verticali{margin:34px 0 0;font-size:max(1rem,.95rem);color:var(--tovaglia-testo)}
 @media (max-width:820px){.griglia4{grid-template-columns:repeat(2,1fr)}}
 
 /* --- schede informative -------------------------------------------------- */
@@ -198,7 +198,7 @@ section{scroll-margin-top:calc(var(--barra) + 15px)}
 .scheda{background:var(--carta);border:1px solid #E7DFD2;border-radius:11px;padding:22px 24px}
 .fascia.carta .scheda{background:var(--foglio)}
 .scheda h3{font-size:1.22rem;margin-bottom:.35em}
-.scheda p{margin:0 0 .55em;font-size:.97rem}
+.scheda p{margin:0 0 .55em;font-size:max(1rem,.97rem)}
 .scheda .dato{font-weight:600}
 .scheda a{font-weight:600}
 
@@ -211,7 +211,7 @@ section{scroll-margin-top:calc(var(--barra) + 15px)}
 #dove .scheda p{color:#E4DCCF}
 #dove .scheda a{color:var(--oro)}
 .avviso{border:1px dashed #5A4A38;border-radius:10px;padding:18px 20px;margin-top:24px;
-  color:#E4DCCF;font-size:.97rem}
+  color:#E4DCCF;font-size:max(1rem,.97rem)}
 .avviso b{color:var(--oro)}
 /* il rosso globale dei link (8,34:1 sul foglio) su fondo scuro fa 2,06:1:
    dentro la fascia scura i link prendono l'oro, che lì fa 13,19:1. */
@@ -227,7 +227,7 @@ footer a{color:var(--oro)}
 .piede-marchio b{font-family:var(--display);font-weight:400;color:var(--luce);
   font-size:1.1rem;display:block;line-height:1.15}
 .etichetta{border-top:1px solid #2A2219;margin-top:28px;padding-top:18px;
-  font-size:.79rem;line-height:1.6;color:#9C907F}
+  font-size:max(.8125rem,.79rem);line-height:1.6;color:#9C907F}
 
 /* --- lightbox ------------------------------------------------------------ */
 #lightbox{position:fixed;inset:0;z-index:200;background:rgba(10,8,6,.94);
@@ -675,6 +675,13 @@ footer a{color:var(--oro)}
 }
 </script>
 
+<script>
+/* overlay chiusi (menu, lightbox): fuori dall'albero di accessibilita'; aria-hidden segue lo stato reale */
+(function(){function s(e){var c=getComputedStyle(e),h=c.visibility==="hidden"||c.display==="none"||(+c.opacity<.1&&c.pointerEvents==="none");e.setAttribute("aria-hidden",h?"true":"false")}
+["mobileMenu"].forEach(function(i){var e=document.getElementById(i);if(!e)return;var f=function(){s(e)};f();
+new MutationObserver(f).observe(e,{attributes:true,attributeFilter:["class","hidden"]});new MutationObserver(f).observe(document.body,{attributes:true,attributeFilter:["class"]});
+e.addEventListener("transitionend",f);addEventListener("resize",f)})})();
+</script>
 <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
