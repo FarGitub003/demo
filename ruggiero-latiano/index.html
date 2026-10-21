@@ -30,7 +30,7 @@
   "@id": "https://ruggierohair.wixsite.com/ruggierohair#hairsalon",
   "name": "Ruggiero Acconciatori Hair & Beauty",
   "url": "https://ruggierohair.wixsite.com/ruggierohair",
-  "image": "img/balayage.jpg",
+  "image": "https://demo.francescoar.com/ruggiero-latiano/img/balayage.jpg",
   "telephone": "+393461491242",
   "email": "ruggierohair@libero.it",
   "address": {
@@ -91,7 +91,7 @@ h1,h2,h3{font-family:"Syne",sans-serif;line-height:1.08;font-weight:800}
 .nav-inner{width:100%;max-width:1200px;margin-inline:auto;padding-inline:clamp(16px,4vw,48px);display:flex;align-items:center;gap:16px}
 .nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--avorio);font-family:"Syne",sans-serif;font-weight:800;font-size:1.25rem;letter-spacing:.04em}
 .nav-brand svg{width:26px;height:26px;flex:none}
-.nav-brand small{display:block;font-family:"Albert Sans",sans-serif;font-weight:500;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--velina)}
+.nav-brand small{display:block;font-family:"Albert Sans",sans-serif;font-weight:500;font-size:max(.8125rem,.6rem);letter-spacing:.22em;text-transform:uppercase;color:var(--velina)}
 .nav-links{list-style:none;display:flex;gap:clamp(14px,2vw,28px);margin-left:auto;align-items:center}
 .nav-links a{color:var(--avorio);text-decoration:none;font-size:.95rem;font-weight:500;letter-spacing:.02em;padding:6px 2px;border-bottom:2px solid transparent;transition:border-color .25s}
 .nav-links a:hover{border-color:var(--oro-chiaro)}
@@ -153,7 +153,7 @@ h1,h2,h3{font-family:"Syne",sans-serif;line-height:1.08;font-weight:800}
 .hero{background:var(--antracite);color:var(--avorio);min-height:100svh;display:flex;flex-direction:column;padding-top:var(--nav-h)}
 .hero-testata{max-width:1200px;width:100%;margin-inline:auto;padding:clamp(14px,2.6vh,28px) clamp(20px,4vw,48px) 0}
 .hero-testata .mono{width:clamp(42px,4.5vw,54px);height:auto;margin-bottom:clamp(10px,1.6vh,16px)}
-.hero-eyebrow{font-size:.8rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--oro-chiaro);margin-bottom:12px}
+.hero-eyebrow{font-size:max(.8125rem,.8rem);font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--oro-chiaro);margin-bottom:12px}
 .hero h1{font-size:clamp(1.85rem,9vw,7.1rem);text-transform:uppercase;letter-spacing:.015em;color:var(--avorio);white-space:nowrap}
 .hero-sub{font-family:"Syne",sans-serif;font-weight:700;font-size:clamp(.95rem,1.9vw,1.3rem);letter-spacing:.3em;text-transform:uppercase;color:var(--velina);margin-top:8px}
 .hero-sotto{flex:1;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,4vw,64px);align-items:center;max-width:1200px;width:100%;margin-inline:auto;padding:clamp(14px,2.2vh,24px) clamp(20px,4vw,48px) clamp(16px,2.8vh,30px)}
@@ -181,7 +181,7 @@ h1,h2,h3{font-family:"Syne",sans-serif;line-height:1.08;font-weight:800}
 }
 
 /* cascata hero */
-.js .cascata{opacity:0;transform:translateY(26px)}
+@media (prefers-reduced-motion:no-preference){.js .cascata{opacity:0;transform:translateY(26px);}}
 .js .cascata.via{opacity:1;transform:none;transition:opacity .8s var(--curva),transform .8s var(--curva)}
 .js .cascata.c2.via{transition-delay:.12s}
 .js .cascata.c3.via{transition-delay:.24s}
@@ -203,7 +203,7 @@ h1,h2,h3{font-family:"Syne",sans-serif;line-height:1.08;font-weight:800}
 
 /* ---------- sezioni comuni ---------- */
 section{padding-block:clamp(64px,10vh,110px)}
-.eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--oro-scuro);margin-bottom:14px}
+.eyebrow{font-size:max(.8125rem,.78rem);font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--oro-scuro);margin-bottom:14px}
 .scuro .eyebrow{color:var(--oro-chiaro)}
 h2{font-size:clamp(1.9rem,4.4vw,3.1rem);letter-spacing:.005em;max-width:22ch}
 .sez-testo{max-width:62ch;margin-top:18px;color:var(--grigio-caldo)}
@@ -219,7 +219,7 @@ h2{font-size:clamp(1.9rem,4.4vw,3.1rem);letter-spacing:.005em;max-width:22ch}
 .intro{background:var(--avorio)}
 .intro-claim{font-family:"Syne",sans-serif;font-weight:700;font-size:clamp(1.5rem,3.4vw,2.5rem);line-height:1.25;max-width:26ch}
 .intro-claim em{font-style:normal;color:var(--oro-scuro)}
-.intro-nota{margin-top:14px;color:var(--grigio-caldo);font-size:.95rem}
+.intro-nota{margin-top:14px;color:var(--grigio-caldo);font-size:max(1rem,.95rem)}
 .chip-orari{display:inline-flex;align-items:center;gap:10px;margin-top:26px;background:var(--antracite);color:var(--avorio);padding:10px 18px;border-radius:999px;font-size:.95rem;font-weight:600}
 .chip-orari:empty{display:none}
 .chip-orari .pallino{width:9px;height:9px;border-radius:50%;flex:none}
@@ -233,9 +233,9 @@ h2{font-size:clamp(1.9rem,4.4vw,3.1rem);letter-spacing:.005em;max-width:22ch}
 .card:hover{transform:translateY(-5px);border-color:var(--oro);box-shadow:0 18px 40px -22px rgba(36,36,42,.35)}
 .card svg{width:38px;height:38px;color:var(--oro-scuro);margin-bottom:18px}
 .card h3{font-size:1.35rem;font-weight:700;margin-bottom:10px}
-.card p{color:var(--grigio-caldo);font-size:.98rem}
-.card .tag-foto{display:inline-block;margin-top:16px;font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--oro-scuro)}
-.nota-prezzi{margin-top:26px;color:var(--grigio-caldo);font-size:.95rem;max-width:58ch}
+.card p{color:var(--grigio-caldo);font-size:max(1rem,.98rem)}
+.card .tag-foto{display:inline-block;margin-top:16px;font-size:max(.8125rem,.75rem);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--oro-scuro)}
+.nota-prezzi{margin-top:26px;color:var(--grigio-caldo);font-size:max(1rem,.95rem);max-width:58ch}
 @media (max-width:820px){.card-grid{grid-template-columns:1fr}}
 
 /* ---------- trasformazioni ---------- */
@@ -265,7 +265,7 @@ h2{font-size:clamp(1.9rem,4.4vw,3.1rem);letter-spacing:.005em;max-width:22ch}
 .gallery-grid button{display:block;width:100%;border:0;padding:0;margin-bottom:16px;cursor:pointer;background:var(--antracite);border-radius:3px;overflow:hidden;break-inside:avoid;position:relative}
 .gallery-grid button img{width:100%;transition:transform .45s var(--curva),opacity .45s}
 .gallery-grid button:hover img{transform:scale(1.045);opacity:.92}
-.tile-tag{position:absolute;left:10px;bottom:10px;background:rgba(36,36,42,.92);color:var(--avorio);font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:6px 12px;border-radius:999px;pointer-events:none}
+.tile-tag{position:absolute;left:10px;bottom:10px;background:rgba(36,36,42,.92);color:var(--avorio);font-size:max(.8125rem,.72rem);font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:6px 12px;border-radius:999px;pointer-events:none}
 
 /* ---------- lightbox ---------- */
 .lightbox{position:fixed;inset:0;z-index:180;background:rgba(23,23,27,.96);visibility:hidden;opacity:0;transition:opacity .3s var(--curva),visibility .3s;display:flex;align-items:center;justify-content:center;padding:clamp(12px,3vw,40px)}
@@ -287,7 +287,7 @@ h2{font-size:clamp(1.9rem,4.4vw,3.1rem);letter-spacing:.005em;max-width:22ch}
 .citazione{background:var(--antracite);color:var(--avorio);text-align:center}
 .citazione blockquote p{font-family:"Syne",sans-serif;font-weight:700;font-size:clamp(1.7rem,4.5vw,3rem);line-height:1.2;max-width:20ch;margin-inline:auto}
 .citazione cite{display:block;margin-top:18px;font-style:normal;font-size:.85rem;letter-spacing:.24em;text-transform:uppercase;color:var(--oro-chiaro)}
-.citazione .fonte{margin-top:10px;font-size:.8rem;color:var(--velina)}
+.citazione .fonte{margin-top:10px;font-size:max(.8125rem,.8rem);color:var(--velina)}
 
 /* ---------- contatti ---------- */
 .contatti{background:var(--antracite-fondo);color:var(--avorio);border-top:1px solid var(--bordo-scuro)}
@@ -306,7 +306,7 @@ h2{font-size:clamp(1.9rem,4.4vw,3.1rem);letter-spacing:.005em;max-width:22ch}
 @media (max-width:820px){.contatti-grid{grid-template-columns:1fr}}
 
 /* ---------- footer ---------- */
-footer{background:var(--antracite-notte);color:var(--velina);padding:40px 0 50px;font-size:.85rem}
+footer{background:var(--antracite-notte);color:var(--velina);padding:40px 0 50px;font-size:max(1rem,.85rem)}
 .footer-flex{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-start}
 .footer-brand{font-family:"Syne",sans-serif;font-weight:800;color:var(--avorio);font-size:1.1rem;letter-spacing:.05em;display:flex;align-items:center;gap:10px}
 .footer-brand svg{width:22px;height:22px}
@@ -786,6 +786,13 @@ body.no-scroll{overflow:hidden}
   });
 })();
 </script>
-  <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script>
+/* overlay chiusi (menu, lightbox): fuori dall'albero di accessibilita'; aria-hidden segue lo stato reale */
+(function(){function s(e){var c=getComputedStyle(e),h=c.visibility==="hidden"||c.display==="none"||(+c.opacity<.1&&c.pointerEvents==="none");e.setAttribute("aria-hidden",h?"true":"false")}
+["mobileMenu","lightbox"].forEach(function(i){var e=document.getElementById(i);if(!e)return;var f=function(){s(e)};f();
+new MutationObserver(f).observe(e,{attributes:true,attributeFilter:["class","hidden"]});new MutationObserver(f).observe(document.body,{attributes:true,attributeFilter:["class"]});
+e.addEventListener("transitionend",f);addEventListener("resize",f)})})();
+</script>
+<script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
