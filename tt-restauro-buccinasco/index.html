@@ -15,14 +15,14 @@
 <meta property="og:title" content="T&amp;T Bottega di Restauro Mobili Antichi · Buccinasco">
 <meta property="og:description" content="Restauro di mobili antichi, icone e impagliature. Lucidatura a tampone con gommalacca. Visite su appuntamento, dai primi anni '90 a Gudo Gambaredo.">
 <meta property="og:image" content="https://demo.francescoar.com/tt-restauro-buccinasco/img/hero.jpg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
 <meta property="og:image:width" content="1920">
 <meta property="og:image:height" content="1440">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:url" content="https://demo.francescoar.com/tt-restauro-buccinasco/">
 <meta property="og:site_name" content="T&amp;T Bottega di Restauro">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="it_IT">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2337241B'/%3E%3Cpath d='M8 46h22c12 0 18-6 18-14s-6-12-12-12--10 4-10 10c0 5 4 8 8 8' fill='none' stroke='%23C08A45' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +35,7 @@
   "name": "T&T Bottega di Restauro Mobili Antichi",
   "legalName": "T&T di Santoro A e C sas",
   "url": "http://www.tt-restauro.com/",
-  "image": "img/hero.jpg",
+  "image": "https://demo.francescoar.com/tt-restauro-buccinasco/img/hero.jpg",
   "description": "Bottega di restauro di mobili antichi a Buccinasco (MI): falegnameria, lucidatura a tampone con gommalacca, restauro di icone e arte sacra, impagliature. Vendita di mobili antichi, quadri, libri e oggettistica. Visite su appuntamento.",
   "telephone": "+39 339 4298828",
   "email": "tt.restauro@virgilio.it",
@@ -126,19 +126,19 @@ a{color:inherit}
   linear-gradient(180deg,rgba(20,11,6,.58) 0px,rgba(20,11,6,.34) 92px,rgba(20,11,6,0) 175px),
   linear-gradient(180deg,rgba(24,14,9,.62) 0%,rgba(24,14,9,.28) 24%,rgba(24,14,9,.54) 40%,rgba(24,14,9,.86) 52%,rgba(24,14,9,.96) 100%)}
 .hero-inner{position:relative;z-index:2;width:100%;padding-bottom:clamp(2.2rem,5vh,4rem)}
-.hero-eyebrow{display:flex;align-items:center;gap:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.82rem;color:var(--ambra-chiara);opacity:0;animation:rise .8s var(--d) .15s forwards}
+.hero-eyebrow{display:flex;align-items:center;gap:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.82rem;color:var(--ambra-chiara);}@media (prefers-reduced-motion:no-preference){.hero-eyebrow{opacity:0;animation:rise .8s var(--d) .15s forwards;}}
 .hero-eyebrow .truciolo-svg{width:44px;height:auto;flex:none}
-.hero h1{font-size:clamp(3.4rem,11vw,7.5rem);letter-spacing:.01em;margin:.35rem 0 .2rem;opacity:0;animation:rise .8s var(--d) .3s forwards}
-.hero-sub{font-family:Cardo,serif;font-size:clamp(1.25rem,2.6vw,1.8rem);font-style:italic;color:var(--paglia);opacity:0;animation:rise .8s var(--d) .45s forwards}
-.hero-tag{max-width:34em;margin:.9rem 0 1.4rem;font-size:clamp(1rem,1.5vw,1.15rem);opacity:0;animation:rise .8s var(--d) .6s forwards}
-.hero-ctas{display:flex;gap:.8rem;flex-wrap:wrap;opacity:0;animation:rise .8s var(--d) .75s forwards}
+.hero h1{font-size:clamp(3.4rem,11vw,7.5rem);letter-spacing:.01em;margin:.35rem 0 .2rem;}@media (prefers-reduced-motion:no-preference){.hero h1{opacity:0;animation:rise .8s var(--d) .3s forwards;}}
+.hero-sub{font-family:Cardo,serif;font-size:clamp(1.25rem,2.6vw,1.8rem);font-style:italic;color:var(--paglia);}@media (prefers-reduced-motion:no-preference){.hero-sub{opacity:0;animation:rise .8s var(--d) .45s forwards;}}
+.hero-tag{max-width:34em;margin:.9rem 0 1.4rem;font-size:clamp(1rem,1.5vw,1.15rem);}@media (prefers-reduced-motion:no-preference){.hero-tag{opacity:0;animation:rise .8s var(--d) .6s forwards;}}
+.hero-ctas{display:flex;gap:.8rem;flex-wrap:wrap;}@media (prefers-reduced-motion:no-preference){.hero-ctas{opacity:0;animation:rise .8s var(--d) .75s forwards;}}
 .btn{display:inline-block;text-decoration:none;font-weight:700;border-radius:999px;padding:.85rem 1.7rem;font-size:1rem;transition:transform .25s var(--d),background-color .25s var(--d),color .25s var(--d)}
 .btn:hover{transform:translateY(-2px)}
 .btn-primary{background:var(--ambra);color:var(--inchiostro)}
 .btn-primary:hover{background:var(--ambra-chiara)}
 .btn-ghost{border:1.5px solid var(--carta);color:var(--carta)}
 .btn-ghost:hover{background:rgba(246,239,225,.14)}
-.hero-ribbon{display:flex;gap:clamp(1rem,3vw,2.6rem);flex-wrap:wrap;margin-top:clamp(1.6rem,4vh,2.6rem);padding-top:1.1rem;border-top:1px solid rgba(246,239,225,.28);opacity:0;animation:rise .8s var(--d) .9s forwards}
+.hero-ribbon{display:flex;gap:clamp(1rem,3vw,2.6rem);flex-wrap:wrap;margin-top:clamp(1.6rem,4vh,2.6rem);padding-top:1.1rem;border-top:1px solid rgba(246,239,225,.28);}@media (prefers-reduced-motion:no-preference){.hero-ribbon{opacity:0;animation:rise .8s var(--d) .9s forwards;}}
 .hero-ribbon span{font-size:.92rem;font-weight:600;color:var(--carta);display:flex;align-items:center;gap:.5rem}
 .hero-ribbon b{color:var(--ambra-chiara);font-weight:700}
 @keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
@@ -150,7 +150,7 @@ a{color:inherit}
 /* ---------- sezioni comuni ---------- */
 section{scroll-margin-top:76px}
 .sec{padding:clamp(3.5rem,8vw,6.5rem) 0}
-.eyebrow{font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.8rem;color:var(--ambra-scura);display:flex;align-items:center;gap:.6rem;margin-bottom:.9rem}
+.eyebrow{font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:max(.8125rem,.8rem);color:var(--ambra-scura);display:flex;align-items:center;gap:.6rem;margin-bottom:.9rem}
 .eyebrow::before{content:"";width:34px;height:1.5px;background:var(--mogano);flex:none}
 .dark .eyebrow,.velvet .eyebrow,.pd .eyebrow,.contatti .eyebrow{color:var(--ambra-chiara)}
 .dark .eyebrow::before,.velvet .eyebrow::before,.pd .eyebrow::before,.contatti .eyebrow::before{background:var(--ambra)}
@@ -165,7 +165,7 @@ h2{font-size:clamp(2rem,4.6vw,3.2rem);margin-bottom:1rem}
 .intro-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:2.4rem}
 .fact{background:#fff9;border:1px solid #d9cbb0;border-radius:14px;padding:1.2rem 1.4rem}
 .fact b{display:block;font-family:Cardo,serif;font-size:1.2rem;margin-bottom:.25rem}
-.fact span{color:#5c4a33;font-size:.98rem}
+.fact span{color:#5c4a33;font-size:max(1rem,.98rem)}
 
 /* ---------- storia (split scuro) ---------- */
 .dark{background:linear-gradient(180deg,var(--noce) 0%,var(--noce-fondo) 100%);color:var(--carta)}
@@ -196,10 +196,10 @@ h2{font-size:clamp(2rem,4.6vw,3.2rem);margin-bottom:1rem}
 .steps li::before{content:counter(step,decimal-leading-zero);position:absolute;left:0;top:.1rem;font-family:Cardo,serif;font-weight:700;font-size:1.15rem;color:var(--mogano)}
 .steps li:not(:last-child)::after{content:"";position:absolute;left:1.05rem;top:2rem;bottom:.4rem;width:1.5px;background:#d9cbb0}
 .steps b{display:block;font-family:Cardo,serif;font-size:1.25rem;margin-bottom:.15rem}
-.steps span{color:#5c4a33;font-size:.98rem}
+.steps span{color:#5c4a33;font-size:max(1rem,.98rem)}
 .metodo-media img{border-radius:16px;width:100%;object-fit:cover;aspect-ratio:4/3}
-.metodo-media figcaption{font-size:.9rem;color:#5c4a33;margin-top:.6rem;font-style:italic}
-.metodo-note{margin-top:1.4rem;background:#fff9;border:1px solid #d9cbb0;border-radius:12px;padding:1rem 1.2rem;font-size:.98rem}
+.metodo-media figcaption{font-size:max(1rem,.9rem);color:#5c4a33;margin-top:.6rem;font-style:italic}
+.metodo-note{margin-top:1.4rem;background:#fff9;border:1px solid #d9cbb0;border-radius:12px;padding:1rem 1.2rem;font-size:max(1rem,.98rem)}
 
 /* ---------- restauro cards ---------- */
 .paper2{background:var(--carta-2)}
@@ -209,7 +209,7 @@ h2{font-size:clamp(2rem,4.6vw,3.2rem);margin-bottom:1rem}
 .card img{aspect-ratio:4/3;object-fit:cover;width:100%}
 .card-body{padding:1.2rem 1.3rem 1.4rem}
 .card-body h3{font-size:1.35rem;margin-bottom:.35rem}
-.card-body p{font-size:.97rem;color:#5c4a33}
+.card-body p{font-size:max(1rem,.97rem);color:#5c4a33}
 
 /* ---------- bottega (velluto) ---------- */
 .velvet{background:linear-gradient(180deg,var(--velluto) 0%,#1B2B24 100%);color:var(--carta)}
@@ -221,7 +221,7 @@ h2{font-size:clamp(2rem,4.6vw,3.2rem);margin-bottom:1rem}
 .shelf-body{padding:1rem 1.15rem 1.2rem}
 .shelf-body h3{font-size:1.2rem;color:var(--carta);margin-bottom:.2rem}
 .shelf-body p{font-size:.92rem;color:var(--paglia)}
-.velvet .nota{margin-top:1.8rem;color:var(--paglia);font-size:.98rem}
+.velvet .nota{margin-top:1.8rem;color:var(--paglia);font-size:max(1rem,.98rem)}
 .velvet .nota b{color:var(--ambra-chiara)}
 
 /* ---------- servizi ---------- */
@@ -244,7 +244,7 @@ h2{font-size:clamp(2rem,4.6vw,3.2rem);margin-bottom:1rem}
 .tile{display:block;width:100%;border:0;background:none;padding:0;margin:0 0 1rem;cursor:zoom-in;border-radius:14px;overflow:hidden;position:relative}
 .tile img{width:100%;border-radius:14px;transition:transform .45s var(--d)}
 .tile:hover img{transform:scale(1.045)}
-.tile-tag{position:absolute;left:.8rem;bottom:.8rem;background:var(--noce);color:var(--carta);font-size:.78rem;font-weight:700;letter-spacing:.08em;padding:.3rem .75rem;border-radius:999px}
+.tile-tag{position:absolute;left:.8rem;bottom:.8rem;background:var(--noce);color:var(--carta);font-size:max(.8125rem,.78rem);font-weight:700;letter-spacing:.08em;padding:.3rem .75rem;border-radius:999px}
 
 /* ---------- lightbox ---------- */
 .lightbox{position:fixed;inset:0;z-index:250;background:rgba(24,14,9,.94);display:flex;flex-direction:column;justify-content:center;align-items:center;opacity:0;visibility:hidden;transition:opacity .3s var(--d),visibility .3s var(--d)}
@@ -276,7 +276,7 @@ h2{font-size:clamp(2rem,4.6vw,3.2rem);margin-bottom:1rem}
 .badge-app{display:inline-block;background:var(--ambra);color:var(--inchiostro);font-weight:700;border-radius:999px;padding:.45rem 1.1rem;font-size:.92rem;margin-bottom:1rem}
 
 /* ---------- footer ---------- */
-footer{background:#241511;color:var(--paglia);padding:2.6rem 0 2.2rem;font-size:.92rem}
+footer{background:#241511;color:var(--paglia);padding:2.6rem 0 2.2rem;font-size:max(1rem,.92rem)}
 footer .wrap{display:flex;flex-direction:column;gap:1.1rem}
 .f-brand{font-family:Cardo,serif;font-size:1.3rem;font-weight:700;color:var(--carta)}
 .f-brand .amp{color:var(--ambra-chiara)}
@@ -764,6 +764,13 @@ footer .wrap{display:flex;flex-direction:column;gap:1.1rem}
     }
   });
 })();
+</script>
+<script>
+/* overlay chiusi (menu, lightbox): fuori dall'albero di accessibilita'; aria-hidden segue lo stato reale */
+(function(){function s(e){var c=getComputedStyle(e),h=c.visibility==="hidden"||c.display==="none"||(+c.opacity<.1&&c.pointerEvents==="none");e.setAttribute("aria-hidden",h?"true":"false")}
+["mobileMenu"].forEach(function(i){var e=document.getElementById(i);if(!e)return;var f=function(){s(e)};f();
+new MutationObserver(f).observe(e,{attributes:true,attributeFilter:["class","hidden"]});new MutationObserver(f).observe(document.body,{attributes:true,attributeFilter:["class"]});
+e.addEventListener("transitionend",f);addEventListener("resize",f)})})();
 </script>
 <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
