@@ -34,7 +34,7 @@
   "@id": "https://osteriadelborgosavoca.eatbu.com/#osteria-del-borgo",
   "name": "Osteria del Borgo",
   "description": "Osteria a Savoca (ME) con terrazza panoramica e venti coperti. Cucina siciliana di tradizione, aperta a pranzo dal venerdì alla domenica.",
-  "image": "img/insegna.jpg",
+  "image": "https://demo.francescoar.com/osteria-del-borgo-savoca/img/insegna.jpg",
   "url": "https://osteriadelborgosavoca.eatbu.com/?lang=it",
   "telephone": "+39 333 1843877",
   "email": "lorypulce70@hotmail.it",
@@ -161,14 +161,14 @@ body.menu-aperto .nav-brand .arco path{stroke:var(--boug-chiara)}
 .arco-wrap{position:relative;width:clamp(300px,44vw,560px);aspect-ratio:440/520;container-type:inline-size}
 .arco-wrap .arco{position:absolute;inset:0;width:100%;height:100%}
 .arco-testo{position:absolute;inset:20% 8% 6%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem}
-.hero-eyebrow{font-size:min(3.4cqw,.78rem);font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--boug-scura)}
+.hero-eyebrow{font-size:max(.8125rem,min(3.4cqw,.78rem));font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--boug-scura)}
 .hero h1{font-size:11.2cqw;font-weight:700;letter-spacing:.02em;text-transform:uppercase;color:var(--inchiostro);margin:.18em 0 .1em}
 .hero h1 span{display:block}
 .hero-filo{width:min(46cqw,190px);height:1px;background:var(--calce-3);margin:.5em 0}
 .hero-payoff{font-family:var(--display);font-size:min(4.6cqw,1.28rem);font-weight:400;letter-spacing:.09em;color:var(--vino)}
 .hero-sotto{margin:clamp(1.4rem,3.4vh,2.6rem) auto 0;max-width:34rem;font-size:1.06rem;color:var(--fumo)}
 .hero-ribbon{display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem 1.9rem;margin-bottom:1.9rem;
-  font-size:.79rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--inchiostro)}
+  font-size:max(.8125rem,.79rem);font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--inchiostro)}
 .hero-ribbon i{font-style:normal;color:var(--vino)}
 .hero-cta{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem}
 .btn{display:inline-block;text-decoration:none;padding:.92rem 1.7rem;font-size:.82rem;font-weight:700;
@@ -188,7 +188,7 @@ section{padding:clamp(4.4rem,9vh,7.4rem) 0}
 .su-scuro{background:var(--ionio);color:var(--calce)}
 .su-scuro-2{background:var(--ionio-2);color:var(--calce)}
 .su-vino{background:var(--vino);color:var(--calce)}
-.occhiello{font-size:.76rem;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--boug-scura);margin-bottom:1rem}
+.occhiello{font-size:max(.8125rem,.76rem);font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--boug-scura);margin-bottom:1rem}
 .su-scuro .occhiello,.su-scuro-2 .occhiello,.su-vino .occhiello{color:var(--boug-chiara)}
 h2{font-size:clamp(2rem,4.6vw,3.15rem);text-transform:uppercase;letter-spacing:.015em}
 .sommario{font-size:1.08rem;color:var(--fumo);max-width:38rem}
@@ -209,7 +209,7 @@ h2{font-size:clamp(2rem,4.6vw,3.15rem);text-transform:uppercase;letter-spacing:.
 .numeri{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--calce-3);border-block:1px solid var(--calce-3)}
 .numeri div{background:var(--calce);padding:2.1rem 1rem;text-align:center}
 .numeri b{display:block;font-family:var(--display);font-size:clamp(2.4rem,5vw,3.3rem);font-weight:700;color:var(--vino);line-height:1}
-.numeri small{display:block;margin-top:.5rem;font-size:.75rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--fumo)}
+.numeri small{display:block;margin-top:.5rem;font-size:max(.8125rem,.75rem);font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--fumo)}
 .claim{font-family:var(--display);font-size:clamp(1.5rem,3.5vw,2.35rem);line-height:1.32;text-align:center;
   max-width:24ch;margin:0 auto clamp(2.6rem,5vh,3.6rem);text-transform:uppercase;letter-spacing:.01em}
 
@@ -235,7 +235,7 @@ h2{font-size:clamp(2rem,4.6vw,3.15rem);text-transform:uppercase;letter-spacing:.
 .gallery-grid button img{width:100%;height:auto}
 .lente{position:absolute;right:0;bottom:0;background:var(--vino);color:var(--calce);
   font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:.55rem .9rem}
-figcaption.dida{margin-top:.9rem;font-size:.88rem;color:var(--fumo)}
+figcaption.dida{margin-top:.9rem;font-size:max(1rem,.88rem);color:var(--fumo)}
 .virgolettato{font-family:var(--testo);font-style:italic;font-weight:400;font-size:clamp(1.3rem,2.6vw,1.85rem);line-height:1.52;margin:0 0 1.1rem}
 
 /* ---------- piatti ---------- */
@@ -243,15 +243,15 @@ figcaption.dida{margin-top:.9rem;font-size:.88rem;color:var(--fumo)}
 .piatto{background:var(--calce);padding:clamp(2rem,3.4vw,2.9rem)}
 .piatto .num{font-family:var(--display);font-size:.9rem;font-weight:700;letter-spacing:.3em;color:var(--vino);display:block;margin-bottom:1.4rem}
 .piatto h3{font-size:clamp(1.22rem,2.1vw,1.5rem);text-transform:uppercase;letter-spacing:.02em;margin-bottom:.8rem}
-.piatto p{font-size:.98rem;color:var(--fumo);margin:0}
-.nota{margin-top:1.9rem;font-size:.92rem;color:var(--fumo);text-align:center}
+.piatto p{font-size:max(1rem,.98rem);color:var(--fumo);margin:0}
+.nota{margin-top:1.9rem;font-size:max(1rem,.92rem);color:var(--fumo);text-align:center}
 
 /* ---------- servizi ---------- */
 .servizi{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.6rem,3vw,2.6rem)}
 .servizio{display:flex;gap:1rem;align-items:flex-start}
 .servizio svg{flex:0 0 auto;width:30px;height:30px;stroke:var(--vino);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .servizio h3{font-family:var(--testo);font-size:.86rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.3rem}
-.servizio p{font-size:.94rem;color:var(--fumo);margin:0}
+.servizio p{font-size:max(1rem,.94rem);color:var(--fumo);margin:0}
 
 /* ---------- recensioni ---------- */
 .voto{display:flex;align-items:baseline;justify-content:center;gap:.8rem;font-family:var(--display);font-weight:700;line-height:1}
@@ -268,7 +268,7 @@ figcaption.dida{margin-top:.9rem;font-size:.88rem;color:var(--fumo)}
 .contatto a{border-bottom:1.5px solid var(--calce-3);transition:border-color .25s var(--curva),color .25s var(--curva)}
 .contatto a:hover{color:var(--vino);border-color:var(--vino)}
 .contatto small{display:block;margin-top:.45rem;font-family:var(--testo);font-size:.85rem;font-weight:400;color:var(--fumo);letter-spacing:0;text-transform:none}
-.pagamenti{margin-top:2.8rem;padding-top:1.6rem;border-top:1px solid var(--calce-3);font-size:.9rem;color:var(--fumo)}
+.pagamenti{margin-top:2.8rem;padding-top:1.6rem;border-top:1px solid var(--calce-3);font-size:max(1rem,.9rem);color:var(--fumo)}
 
 /* ---------- footer ---------- */
 footer{background:var(--ionio);color:var(--calce);padding:clamp(3.4rem,6vh,4.6rem) 0 2.6rem;text-align:center}
@@ -277,7 +277,7 @@ footer{background:var(--ionio);color:var(--calce);padding:clamp(3.4rem,6vh,4.6re
 .f-nome{font-family:var(--display);font-size:1.3rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
 .f-riga{font-size:.95rem;color:rgba(247,240,225,.86)}
 .f-riga a{color:var(--boug-chiara);text-decoration:none;border-bottom:1px solid rgba(240,156,189,.5)}
-.f-ai{margin-top:2.4rem;padding-top:1.7rem;border-top:1px solid rgba(247,240,225,.2);font-size:.82rem;color:rgba(247,240,225,.78);line-height:1.7}
+.f-ai{margin-top:2.4rem;padding-top:1.7rem;border-top:1px solid rgba(247,240,225,.2);font-size:max(1rem,.82rem);color:rgba(247,240,225,.78);line-height:1.7}
 
 /* ---------- lightbox ---------- */
 .lightbox{position:fixed;inset:0;z-index:250;background:rgba(20,16,13,.95);display:flex;align-items:center;justify-content:center;
@@ -315,7 +315,7 @@ footer{background:var(--ionio);color:var(--calce);padding:clamp(3.4rem,6vh,4.6re
   .settimana{grid-template-columns:1fr}
   .settimana div{display:flex;justify-content:space-between;align-items:baseline;padding:.8rem 1.1rem;text-align:left}
   .settimana .o{margin-top:0}
-  .hero-ribbon{gap:.35rem 1.2rem;font-size:.72rem}
+  .hero-ribbon{gap:.35rem 1.2rem;font-size:max(.8125rem,.72rem)}
   .hero{padding-top:calc(var(--nav-h) + 1.5vh)}
 }
 @media(max-width:360px){
@@ -799,6 +799,13 @@ footer{background:var(--ionio);color:var(--calce);padding:clamp(3.4rem,6vh,4.6re
     else trappola(e, lb);
   });
 })();
+</script>
+<script>
+/* overlay chiusi (menu, lightbox): fuori dall'albero di accessibilita'; aria-hidden segue lo stato reale */
+(function(){function s(e){var c=getComputedStyle(e),h=c.visibility==="hidden"||c.display==="none"||(+c.opacity<.1&&c.pointerEvents==="none");e.setAttribute("aria-hidden",h?"true":"false")}
+["mobileMenu","lightbox"].forEach(function(i){var e=document.getElementById(i);if(!e)return;var f=function(){s(e)};f();
+new MutationObserver(f).observe(e,{attributes:true,attributeFilter:["class","hidden"]});new MutationObserver(f).observe(document.body,{attributes:true,attributeFilter:["class"]});
+e.addEventListener("transitionend",f);addEventListener("resize",f)})})();
 </script>
 <script data-goatcounter="https://francescoar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
